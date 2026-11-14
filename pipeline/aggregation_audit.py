@@ -23,7 +23,7 @@ def summarize(frame):
 
 
 def run():
- check_deadline();protected=list((ROOT/'web/public/data').rglob('*.json'))
+ check_deadline();protected=list((ROOT/'web/public/data').rglob('*.json'))+[ROOT/'observed/dist/data/communes.json']
  protected += [DATA/x for x in ['detections.parquet','cells_comuna.parquet','celldays.parquet','static_mask.parquet','params.json','gates.csv','eval_loso.csv','eval_final.csv','inventory.csv']]
  for _,directory in STAGES:protected+=list((DATA/directory).glob('*'))
  before={str(p.relative_to(ROOT)):sha(p) for p in protected if p.is_file()}
@@ -51,7 +51,7 @@ def run():
  check_deadline();OUT.mkdir(parents=True,exist_ok=True);pd.concat(records,ignore_index=True).to_csv(OUT/'commune_errors.csv',index=False)
  (OUT/'summary.json').write_text(json.dumps({'scope':'Retrospective aggregation diagnosis; no new policy or independent validation','tolerance':TOL,'global_controls_reconciled':True,'policies':summary},indent=2,allow_nan=False)+'\n')
  manifest={'source_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'code_sha256':sha(Path(__file__)),
-  'protocol_sha256':sha(ROOT/'docs/reviews/2026-11-14-aggregation-protocol.md'),'protected_sha256':before,'original_unchanged':True,
+  'protocol_sha256':sha(ROOT/'docs/reviews/2026-11-14-aggregation-protocol.md'),'helpers_sha256':{name:sha(ROOT/'pipeline'/name) for name in ['scientific_audit.py','frozen_temporal_audit.py','reproduce_research.py','robust_affine_experiment.py']},'environment_sha256':{name:sha(ROOT/name) for name in ['pyproject.toml','uv.lock']},'protected_sha256':before,'original_unchanged':True,
   'output_sha256':{p.name:sha(p) for p in OUT.glob('*') if p.name!='manifest.json'}}
  (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2,allow_nan=False)+'\n');print(json.dumps(summary,indent=2))
  return summary
