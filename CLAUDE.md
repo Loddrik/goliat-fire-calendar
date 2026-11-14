@@ -1,6 +1,6 @@
 # GOLIAT — repo de entrega · NASA Space Apps 2026 (Concepción)
 
-Calendario de actividad de fuego detectada, MODIS + VIIRS armonizados (NASA FIRMS), para las 54 comunas de Biobío y Ñuble. **Entrega: domingo 15-11-2026 a las 23:59 (hora de Chile), sin prórroga.** App en vivo: https://goliat-fire-calendar-production.up.railway.app (cada push a `main` despliega solo).
+Calendario de actividad de fuego detectada, MODIS + VIIRS armonizados (NASA FIRMS), para las 54 comunas de Biobío y Ñuble. **Entrega: domingo 15-11-2026 a las 23:59 (hora de Chile), sin prórroga.** App en vivo: https://goliat-fire-calendar-production.up.railway.app (cada push a `main` despliega solo). **Se trabaja en `dev`; `main` solo recibe merges de `dev` cuando se quiere desplegar** (ver `docs/alcances.md` §3).
 
 ## Lee primero
 
