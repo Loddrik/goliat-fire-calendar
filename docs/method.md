@@ -55,7 +55,7 @@ Why the other 40 are not: 14 have too little Aqua (coastal/urban communes: Penco
 | Other gate | Rule | Result |
 |---|---|---|
 | Uncertainty | band = ± the commune's mean absolute LOSO error of M1 in active months | shown on every estimated cell as **"typical error"**. Empirical coverage of ±1·MAE: 70 % of active months (88 % at ±2·MAE); median relative error 35 % in months with ≥ 10 cell-days. **It is not a confidence band.** |
-| Recent platform | NOAA-20 vs S-NPP, seasons 2018–2025: annual ratio 0.93–1.06; monthly 0.96–1.20 (1.20 in July, where counts are tiny) | pass; factor 1.0 declared |
+| Recent platform | NOAA-20 vs S-NPP, complete seasons 2018–2025: annual ratio 0.935–1.063. The [iteration 7 audit](reviews/2026-11-14-scientific-review-7.md) finds pooled calendar-month ratios 0.831–1.170 (January–July); the previously quoted 0.96–1.20 range is not reproduced under this explicit window/mask. | factor 1.0 remains a declared regional approximation; local equivalence is not established (monthly commune WAPE 28.84 %) |
 | Categories | anomaly labels would need an 80 %-stability test we did not run | **no categories**; values and percentiles only (p90 over 14 seasons is weak and labelled as such) |
 | Territory | cell → single commune; regional totals are sums of communes | pass |
 | Integrity | screen, print view and CSV read the same JSON | by construction |
