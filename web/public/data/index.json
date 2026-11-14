@@ -1,0 +1,529 @@
+{
+"generated": "2026-11-14T13:43:43.579446-03:00",
+"cutoff": "2026-11-13",
+"current_season": 2026,
+"r_const": 2.337,
+"params": {
+"kappa": 100.0,
+"train": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019
+],
+"test": [
+2020,
+2021
+],
+"r_const": 2.336630362302734,
+"rR": {
+"1": 2.1808622502628814,
+"10": 3.6884422110552766,
+"11": 3.550387596899225,
+"12": 2.778409090909091,
+"2": 2.240875912408759,
+"3": 1.8146627565982405,
+"4": 2.326936496859735,
+"5": 2.1477069684335914,
+"9": 4.2770562770562774,
+"JJA": 3.2782101167315174
+},
+"excluded": [
+"2020-08",
+"2020-09"
+],
+"frozen_at": "2026-11-14T14:20-03:00"
+},
+"comunas": [
+{
+"cut": "08101",
+"comuna": "Concepción",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 258,
+"current": 5,
+"median": 2
+},
+{
+"cut": "08102",
+"comuna": "Coronel",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 200,
+"current": 0,
+"median": 2
+},
+{
+"cut": "08103",
+"comuna": "Chiguayante",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 28,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08104",
+"comuna": "Florida",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 901,
+"current": 7,
+"median": 7
+},
+{
+"cut": "08105",
+"comuna": "Hualqui",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 537,
+"current": 3,
+"median": 5
+},
+{
+"cut": "08106",
+"comuna": "Lota",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 65,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08107",
+"comuna": "Penco",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 141,
+"current": 3,
+"median": 0
+},
+{
+"cut": "08108",
+"comuna": "San Pedro de la Paz",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 31,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08109",
+"comuna": "Santa Juana",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 773,
+"current": 1,
+"median": 4
+},
+{
+"cut": "08110",
+"comuna": "Talcahuano",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 23,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08111",
+"comuna": "Tomé",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 868,
+"current": 12,
+"median": 7
+},
+{
+"cut": "08112",
+"comuna": "Hualpén",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 11,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08201",
+"comuna": "Lebu",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 300,
+"current": 2,
+"median": 3
+},
+{
+"cut": "08202",
+"comuna": "Arauco",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 605,
+"current": 4,
+"median": 8
+},
+{
+"cut": "08203",
+"comuna": "Cañete",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 1361,
+"current": 4,
+"median": 16
+},
+{
+"cut": "08204",
+"comuna": "Contulmo",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 502,
+"current": 3,
+"median": 6
+},
+{
+"cut": "08205",
+"comuna": "Curanilahue",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 227,
+"current": 3,
+"median": 4
+},
+{
+"cut": "08206",
+"comuna": "Los Álamos",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 259,
+"current": 2,
+"median": 3
+},
+{
+"cut": "08207",
+"comuna": "Tirúa",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 1655,
+"current": 6,
+"median": 16
+},
+{
+"cut": "08301",
+"comuna": "Los Ángeles",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 1673,
+"current": 9,
+"median": 50
+},
+{
+"cut": "08302",
+"comuna": "Antuco",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 209,
+"current": 1,
+"median": 1
+},
+{
+"cut": "08303",
+"comuna": "Cabrero",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 330,
+"current": 2,
+"median": 10
+},
+{
+"cut": "08304",
+"comuna": "Laja",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 192,
+"current": 0,
+"median": 2
+},
+{
+"cut": "08305",
+"comuna": "Mulchén",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 3426,
+"current": 56,
+"median": 44
+},
+{
+"cut": "08306",
+"comuna": "Nacimiento",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 841,
+"current": 2,
+"median": 6
+},
+{
+"cut": "08307",
+"comuna": "Negrete",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 231,
+"current": 2,
+"median": 9
+},
+{
+"cut": "08308",
+"comuna": "Quilaco",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 430,
+"current": 3,
+"median": 6
+},
+{
+"cut": "08309",
+"comuna": "Quilleco",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 558,
+"current": 3,
+"median": 4
+},
+{
+"cut": "08310",
+"comuna": "San Rosendo",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 29,
+"current": 0,
+"median": 0
+},
+{
+"cut": "08311",
+"comuna": "Santa Bárbara",
+"region": "Biobío",
+"enabled": false,
+"observed_2012_2025": 840,
+"current": 5,
+"median": 15
+},
+{
+"cut": "08312",
+"comuna": "Tucapel",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 941,
+"current": 1,
+"median": 5
+},
+{
+"cut": "08313",
+"comuna": "Yumbel",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 413,
+"current": 2,
+"median": 4
+},
+{
+"cut": "08314",
+"comuna": "Alto Biobío",
+"region": "Biobío",
+"enabled": true,
+"observed_2012_2025": 748,
+"current": 6,
+"median": 14
+},
+{
+"cut": "16101",
+"comuna": "Chillán",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 679,
+"current": 7,
+"median": 9
+},
+{
+"cut": "16102",
+"comuna": "Chillán Viejo",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 250,
+"current": 1,
+"median": 4
+},
+{
+"cut": "16103",
+"comuna": "Quillón",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 475,
+"current": 4,
+"median": 3
+},
+{
+"cut": "16104",
+"comuna": "Bulnes",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 753,
+"current": 8,
+"median": 13
+},
+{
+"cut": "16105",
+"comuna": "San Ignacio",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 1294,
+"current": 8,
+"median": 12
+},
+{
+"cut": "16106",
+"comuna": "El Carmen",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 2455,
+"current": 5,
+"median": 11
+},
+{
+"cut": "16107",
+"comuna": "Pinto",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 1273,
+"current": 14,
+"median": 7
+},
+{
+"cut": "16108",
+"comuna": "Pemuco",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 1071,
+"current": 0,
+"median": 5
+},
+{
+"cut": "16109",
+"comuna": "Yungay",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 1468,
+"current": 8,
+"median": 8
+},
+{
+"cut": "16201",
+"comuna": "Quirihue",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 748,
+"current": 4,
+"median": 6
+},
+{
+"cut": "16202",
+"comuna": "Cobquecura",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 607,
+"current": 10,
+"median": 8
+},
+{
+"cut": "16203",
+"comuna": "Ninhue",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 334,
+"current": 12,
+"median": 4
+},
+{
+"cut": "16204",
+"comuna": "Treguaco",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 200,
+"current": 0,
+"median": 2
+},
+{
+"cut": "16205",
+"comuna": "Coelemu",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 479,
+"current": 5,
+"median": 4
+},
+{
+"cut": "16206",
+"comuna": "Portezuelo",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 241,
+"current": 1,
+"median": 2
+},
+{
+"cut": "16207",
+"comuna": "Ránquil",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 368,
+"current": 0,
+"median": 2
+},
+{
+"cut": "16301",
+"comuna": "San Carlos",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 1489,
+"current": 9,
+"median": 22
+},
+{
+"cut": "16302",
+"comuna": "Ñiquén",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 799,
+"current": 5,
+"median": 12
+},
+{
+"cut": "16303",
+"comuna": "Coihueco",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 2201,
+"current": 7,
+"median": 21
+},
+{
+"cut": "16304",
+"comuna": "San Fabián",
+"region": "Ñuble",
+"enabled": false,
+"observed_2012_2025": 486,
+"current": 5,
+"median": 4
+},
+{
+"cut": "16305",
+"comuna": "San Nicolás",
+"region": "Ñuble",
+"enabled": true,
+"observed_2012_2025": 685,
+"current": 0,
+"median": 14
+}
+]
+}
