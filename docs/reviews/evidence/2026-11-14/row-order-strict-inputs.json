@@ -1,0 +1,58 @@
+[
+  {
+    "path": "data/processed/detections.parquet",
+    "seed": 20261114,
+    "rng": "numpy.default_rng PCG64",
+    "rows": 274926,
+    "arrow_schema": "lat: double not null\nlon: double not null\nacq_date: date32[day] not null\nacq_time: string not null\nsat: string not null\ninstrument: string not null\nconfidence: string not null\nfrp: double not null\ntype: int32\nversion: string not null\nsource_kind: string not null\ncell_x: int32 not null\ncell_y: int32 not null",
+    "schema_and_metadata_identical": true,
+    "original_sha256": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+    "permuted_sha256": "573e41ffd5f2f45e3ffdc74e6bbc781c40e5598ecbe72ea73daf9f3bd9cee037",
+    "multiset_differences": [
+      0,
+      0
+    ]
+  },
+  {
+    "path": "data/processed/cells_comuna.parquet",
+    "seed": 20261115,
+    "rng": "numpy.default_rng PCG64",
+    "rows": 21730,
+    "arrow_schema": "cell_x: int32 not null\ncell_y: int32 not null\ncut: string not null",
+    "schema_and_metadata_identical": true,
+    "original_sha256": "44bf64ebf0c51437b5587eb6f16adb5f6157bb107fed81923e7b4df86eaf98cc",
+    "permuted_sha256": "b8f192b4d14551c641fcde1aa4d9ae04ca2d004a0a2947184a83242bbf73c232",
+    "multiset_differences": [
+      0,
+      0
+    ]
+  },
+  {
+    "path": "data/processed/celldays.parquet",
+    "seed": 20261116,
+    "rng": "numpy.default_rng PCG64",
+    "rows": 116413,
+    "arrow_schema": "sat: string not null\ncut: string not null\ncell_x: int32 not null\ncell_y: int32 not null\nacq_date: date32[day] not null\ny: int64 not null\nm: int64 not null\nseason: int64 not null\nn_det: int64 not null\nany_nrt: bool not null",
+    "schema_and_metadata_identical": true,
+    "original_sha256": "8f0c93119162b11db5c6cd46aa9a6cf6391eba0baa250d1dbe7196bd1983318f",
+    "permuted_sha256": "c26eba66000bad313218c8c734b836f80d1a1ca6e7c2328a3de5f0dd6f8aabea",
+    "multiset_differences": [
+      0,
+      0
+    ]
+  },
+  {
+    "path": "data/processed/static_mask.parquet",
+    "seed": 20261117,
+    "rng": "numpy.default_rng PCG64",
+    "rows": 223,
+    "arrow_schema": "cell_x: int64 not null\ncell_y: int64 not null\nrule: string not null",
+    "schema_and_metadata_identical": true,
+    "original_sha256": "a7c7961d0ff3f809600bd64c5705a8b5d6ea03d24ff9e103d5bd5f1be16f2cd4",
+    "permuted_sha256": "9c0c5289851e3197a3b2563dd02e5b90a9b90bf5e65510b54bed37d2c6d34550",
+    "multiset_differences": [
+      0,
+      0
+    ]
+  }
+]

@@ -1,0 +1,310 @@
+[
+  {
+    "path": "data/processed/detections.parquet",
+    "seed": 20261114,
+    "rows": 274926,
+    "columns": [
+      "lat",
+      "lon",
+      "acq_date",
+      "acq_time",
+      "sat",
+      "instrument",
+      "confidence",
+      "frp",
+      "type",
+      "version",
+      "source_kind",
+      "cell_x",
+      "cell_y"
+    ],
+    "original_sha256": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+    "permuted_sha256": "af6706cd12492075d8b202e53537e48ea47df25cd67214a8c6a864c6a699aa1a",
+    "multiset_differences": [
+      0,
+      0
+    ],
+    "scope": "Combined row-order and representation perturbation; does not satisfy order-only setup",
+    "schema_and_metadata_identical": false,
+    "original_arrow_schema": "lat: double not null\nlon: double not null\nacq_date: date32[day] not null\nacq_time: string not null\nsat: string not null\ninstrument: string not null\nconfidence: string not null\nfrp: double not null\ntype: int32\nversion: string not null\nsource_kind: string not null\ncell_x: int32 not null\ncell_y: int32 not null",
+    "permuted_arrow_schema": "lat: double\nlon: double\nacq_date: date32[day]\nacq_time: large_string\nsat: large_string\ninstrument: large_string\nconfidence: large_string\nfrp: double\ntype: double\nversion: large_string\nsource_kind: large_string\ncell_x: int32\ncell_y: int32\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1528",
+    "schema_changes": [
+      {
+        "column": "lat",
+        "original_type": "double",
+        "new_type": "double",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "lon",
+        "original_type": "double",
+        "new_type": "double",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "acq_date",
+        "original_type": "date32[day]",
+        "new_type": "date32[day]",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "acq_time",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "sat",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "instrument",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "confidence",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "frp",
+        "original_type": "double",
+        "new_type": "double",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "type",
+        "original_type": "int32",
+        "new_type": "double",
+        "original_nullable": true,
+        "new_nullable": true
+      },
+      {
+        "column": "version",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "source_kind",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_x",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_y",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      }
+    ]
+  },
+  {
+    "path": "data/processed/cells_comuna.parquet",
+    "seed": 20261115,
+    "rows": 21730,
+    "columns": [
+      "cell_x",
+      "cell_y",
+      "cut"
+    ],
+    "original_sha256": "44bf64ebf0c51437b5587eb6f16adb5f6157bb107fed81923e7b4df86eaf98cc",
+    "permuted_sha256": "d676bb185ee55b11a072169101cf463a7cdc82ea6aa0f201d6af8396e3d8aab7",
+    "multiset_differences": [
+      0,
+      0
+    ],
+    "scope": "Combined row-order and representation perturbation; does not satisfy order-only setup",
+    "schema_and_metadata_identical": false,
+    "original_arrow_schema": "cell_x: int32 not null\ncell_y: int32 not null\ncut: string not null",
+    "permuted_arrow_schema": "cell_x: int32\ncell_y: int32\ncut: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 413",
+    "schema_changes": [
+      {
+        "column": "cell_x",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_y",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cut",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      }
+    ]
+  },
+  {
+    "path": "data/processed/celldays.parquet",
+    "seed": 20261116,
+    "rows": 116413,
+    "columns": [
+      "sat",
+      "cut",
+      "cell_x",
+      "cell_y",
+      "acq_date",
+      "y",
+      "m",
+      "season",
+      "n_det",
+      "any_nrt"
+    ],
+    "original_sha256": "8f0c93119162b11db5c6cd46aa9a6cf6391eba0baa250d1dbe7196bd1983318f",
+    "permuted_sha256": "21d5527b09f1b3cbb1e8251fb9f3feaa6c80bc5dc1e68f12757f579e139ed60f",
+    "multiset_differences": [
+      0,
+      0
+    ],
+    "scope": "Combined row-order and representation perturbation; does not satisfy order-only setup",
+    "schema_and_metadata_identical": false,
+    "original_arrow_schema": "sat: string not null\ncut: string not null\ncell_x: int32 not null\ncell_y: int32 not null\nacq_date: date32[day] not null\ny: int64 not null\nm: int64 not null\nseason: int64 not null\nn_det: int64 not null\nany_nrt: bool not null",
+    "permuted_arrow_schema": "sat: large_string\ncut: large_string\ncell_x: int32\ncell_y: int32\nacq_date: date32[day]\ny: int64\nm: int64\nseason: int64\nn_det: int64\nany_nrt: bool\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1151",
+    "schema_changes": [
+      {
+        "column": "sat",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cut",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_x",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_y",
+        "original_type": "int32",
+        "new_type": "int32",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "acq_date",
+        "original_type": "date32[day]",
+        "new_type": "date32[day]",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "y",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "m",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "season",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "n_det",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "any_nrt",
+        "original_type": "bool",
+        "new_type": "bool",
+        "original_nullable": false,
+        "new_nullable": true
+      }
+    ]
+  },
+  {
+    "path": "data/processed/static_mask.parquet",
+    "seed": 20261117,
+    "rows": 223,
+    "columns": [
+      "cell_x",
+      "cell_y",
+      "rule"
+    ],
+    "original_sha256": "a7c7961d0ff3f809600bd64c5705a8b5d6ea03d24ff9e103d5bd5f1be16f2cd4",
+    "permuted_sha256": "b7c5c1cb43521079fbc0d0c1a55410b63771a9c1303cc1c879bedb60315da5d4",
+    "multiset_differences": [
+      0,
+      0
+    ],
+    "scope": "Combined row-order and representation perturbation; does not satisfy order-only setup",
+    "schema_and_metadata_identical": false,
+    "original_arrow_schema": "cell_x: int64 not null\ncell_y: int64 not null\nrule: string not null",
+    "permuted_arrow_schema": "cell_x: int64\ncell_y: int64\nrule: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 415",
+    "schema_changes": [
+      {
+        "column": "cell_x",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "cell_y",
+        "original_type": "int64",
+        "new_type": "int64",
+        "original_nullable": false,
+        "new_nullable": true
+      },
+      {
+        "column": "rule",
+        "original_type": "string",
+        "new_type": "large_string",
+        "original_nullable": false,
+        "new_nullable": true
+      }
+    ]
+  }
+]

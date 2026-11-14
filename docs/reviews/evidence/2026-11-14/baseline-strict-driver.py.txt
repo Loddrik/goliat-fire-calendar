@@ -1,0 +1,56 @@
+import json,hashlib,subprocess,os,time
+from pathlib import Path
+from datetime import datetime,timezone
+import duckdb,pandas as pd,numpy as np
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar');DEST=Path('/private/tmp/goliat-baseline-repro-20261114');OUT=ROOT/'.runtime/baseline-repro';OUT.mkdir(exist_ok=True)
+DEADLINE=datetime.fromisoformat('2026-11-15T00:00:00+00:00').timestamp()
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+protected=list((ROOT/'web/public/data').rglob('*.json'))+list((ROOT/'data/processed').glob('*.*'))
+before={str(p.relative_to(ROOT)):sha(p) for p in protected}
+r={'source_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=DEST,text=True).strip(),'scope':'Rebuild from pinned detections and cell assignments, not raw FIRMS CSV','started_utc':datetime.now(timezone.utc).isoformat(),'steps':[]}
+def save():(OUT/'summary.json').write_text(json.dumps(r,indent=2,allow_nan=False)+'\n')
+c=duckdb.connect(str(DEST/'data/processed/goliat.duckdb'))
+for table,file in [('det','detections.parquet'),('cells_comuna','cells_comuna.parquet')]:c.execute(f"create table {table} as select * from read_parquet('{DEST}/data/processed/{file}')")
+c.close()
+for script in ['build_monthly','build_mask','experiment','publish']:
+ remaining=DEADLINE-time.time()
+ if remaining<30:raise RuntimeError('Deadline reserve')
+ start=time.time()
+ with (OUT/(script+'.log')).open('w') as log:
+  p=subprocess.run(['/private/tmp/goliat-science-venv-20261114/bin/python','pipeline/'+script+'.py'],cwd=DEST,stdout=log,stderr=subprocess.STDOUT,timeout=remaining-20)
+ r['steps'].append({'script':script,'exit_code':p.returncode,'seconds':round(time.time()-start,3)});save();print(script,p.returncode,flush=True)
+ if p.returncode:raise RuntimeError('Rebuild failed: '+script)
+c=duckdb.connect();r['parquet_comparisons']=[]
+for name in ['celldays.parquet','celldays_comuna_month.parquet','static_mask.parquet','celldays_comuna_month_masked.parquet']:
+ a=ROOT/'data/processed'/name;b=DEST/'data/processed'/name
+ n1=c.execute(f"select count(*) from (select * from read_parquet('{a}') except all select * from read_parquet('{b}'))").fetchone()[0]
+ n2=c.execute(f"select count(*) from (select * from read_parquet('{b}') except all select * from read_parquet('{a}'))").fetchone()[0]
+ r['parquet_comparisons'].append({'path':str(a.relative_to(ROOT)),'original_sha256':sha(a),'rebuilt_sha256':sha(b),'original_only_rows':n1,'rebuilt_only_rows':n2,'semantically_identical':n1==n2==0})
+r['csv_comparisons']=[]
+for name in ['eval_loso.csv','eval_final.csv','gates.csv']:
+ a=ROOT/'data/processed'/name;b=DEST/'data/processed'/name;fa=pd.read_csv(a,dtype={'cut':str});fb=pd.read_csv(b,dtype={'cut':str})
+ pd.testing.assert_frame_equal(fa,fb,check_exact=False,atol=1e-10,rtol=0)
+ r['csv_comparisons'].append({'path':str(a.relative_to(ROOT)),'identical_bytes':sha(a)==sha(b),'values_equal_atol':1e-10,'rows':len(fa)})
+# Legacy diagnostic JSON intentionally contains Infinity. Equality is structural;
+# every numeric leaf is also checked when physical serialization differs.
+a=ROOT/'data/processed/params.json';b=DEST/'data/processed/params.json'
+def compare(a,b,path=''):
+ if isinstance(a,dict):
+  assert isinstance(b,dict) and a.keys()==b.keys(),path
+  for k in a:compare(a[k],b[k],path+'/'+k)
+ elif isinstance(a,list):
+  assert isinstance(b,list) and len(a)==len(b),path
+  for i,(x,y) in enumerate(zip(a,b)):compare(x,y,path+'/'+str(i))
+ elif isinstance(a,(float,int)) and not isinstance(a,bool):
+  assert a==b or abs(a-b)<=1e-10,(path,a,b)
+ else:assert a==b,(path,a,b)
+compare(json.loads(a.read_text()),json.loads(b.read_text()));r['params_identical_bytes']=sha(a)==sha(b);r['params_equal_atol']=1e-10
+r['publication_comparisons']=[]
+for a in sorted((ROOT/'web/public/data/comunas').glob('*.json'))+[ROOT/'web/public/data/index.json']:
+ b=DEST/a.relative_to(ROOT);x=json.loads(a.read_text());y=json.loads(b.read_text());excluded=[]
+ if a.name=='index.json':x.pop('generated');y.pop('generated');excluded=['generated']
+ assert x==y,a
+ r['publication_comparisons'].append({'path':str(a.relative_to(ROOT)),'identical_bytes':sha(a)==sha(b),'semantic_equal':True,'excluded_fields':excluded})
+r['original_unchanged']=before=={str(p.relative_to(ROOT)):sha(p) for p in protected};assert r['original_unchanged']
+assert all(x['semantically_identical'] for x in r['parquet_comparisons'])
+r['finished_utc']=datetime.now(timezone.utc).isoformat();r['original_protected_sha256']=before;save();print('Baseline reconstruction complete',flush=True)

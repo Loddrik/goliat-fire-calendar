@@ -1,0 +1,10 @@
+{
+  "head": "27a3cc651f6ed9277d99e7df87a869d997ec0253",
+  "run_id": 43653588142,
+  "url": "https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43653588142",
+  "conclusion": "success",
+  "test_count": 90,
+  "python": "3.14.7",
+  "uv": "0.11.7",
+  "scope": "Linux regression tests only; full 14-stage fits reproduced locally"
+}

@@ -91,3 +91,11 @@ La corrección aislada del orden está disponible para revisión en el [PR #31](
 Se añadieron dos regresiones sobre todos los destinos reales guardados, sin reajustar parámetros ni calcular nuevos scores de desempeño. Se restauran las 3.780 estimaciones y los 37.800 intervalos; permutar, reemplazar por cero, volver desconocidas o eliminar las etiquetas de referencia no cambia puntos ni extremos. Barajar las filas tampoco cambia los resultados emparejados por clave. Las firmas y calibraciones permanecen intactas. El conjunto actual de **90 tests pasa** en el entorno reconstruido. Las reproducciones completas anteriores ejecutaron los 85/88 tests presentes en sus respectivos commits.
 
 El workflow científico nuevo instala Python 3.14.7, uv 0.11.7 y dependencias fijadas para ejecutar las regresiones en Linux. Tras corregir un error inicial de configuración, la [ejecución del commit 29d9d99](https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43653044330) completó el job científico y su paso de tests. Esto añade evidencia de ejecución entre sistemas para las regresiones; no significa que todos los experimentos completos se hayan recalculado en Linux.
+
+## Distribución del beneficio y control de orden
+
+El [desglose comunal](2026-11-14-aggregation-review.md) confirma que la mejora media no es uniforme: B mejora 22 comunas, empeora 17 y empata 15; su mediana de beneficio absoluto es cero. Las cinco mayores mejoras reúnen 49,14 % de la ganancia bruta positiva. La mejora B en las 14 publicadas es 3,45 % en este anidamiento, frente a 7,04 % global; no confundirla con el 0,69 % de su bloque posterior descriptivo.
+
+El [control de orden físico](2026-11-14-row-order-review.md) conserva los multiconjuntos y el esquema Arrow completo en una copia temporal. Reproduce exactamente 117 de los 118 archivos; el resumen geográfico cambia sus listas de diez ejemplos, seleccionadas con `head(10)` según el orden de entrada. Las métricas, parámetros y restantes valores del resumen coinciden, y pasan 90 tests. Se registra que la igualdad estricta de 118 archivos **no pasó**, sin relajar el criterio para declararla aprobada.
+
+La [CI de 27a3cc6](https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43653588142) ejecutó y pasó los 90 tests científicos en Linux; el log se conserva con la evidencia.

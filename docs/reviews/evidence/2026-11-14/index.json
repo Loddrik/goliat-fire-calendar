@@ -1,7 +1,10 @@
 {
-  "scope": "Reproducción técnica y diagnóstico; no validación científica externa",
+  "scope": "Technical reproducibility and diagnostics, not independent scientific validation",
+  "driver_snapshots": "Exact executed source; contains local paths that must be adapted for replay",
   "files_sha256": {
     "baseline-reconstruction.json": "dd00cd485068bb02ff4ef30d5d13f14a367d7d8a6992d48e262e52eaf121af30",
+    "baseline-strict-driver.py.txt": "59e142193b8dfcbdafd7ba19762de922d7d6f1538a998a83aeb08c95fc6954b5",
+    "clean-checkout-driver.py.txt": "a069a6389aeb90c061926294993f9a3c226d21ff14154dbf227d2fd82555eb5e",
     "clean-checkout-manifest-differences.json": "628725bbb3fba609a70afdb2b8fdb7e7d1950e0e7a5dbb25fd50d8a0957db8f5",
     "clean-checkout-reproduction.json": "52d78214406db5b571f619551fff9245a5684548930148d8da6a8db29bbc6b9a",
     "clean-checkout-tests.log": "3e7f7c9872d93cbc7019a15d5058ed5675243b10a4a59a6a6c17a371fcc71969",
@@ -10,7 +13,22 @@
     "fresh-environment-reproduction.json": "323d6f9f95e815f7f4fbc43807faa8500b9dbb0187360af8eca452d1863182d5",
     "fresh-environment-tests.log": "286f435e45a225becbf8752aeaed26d1e0308411325743d37633f59e54cf7bbd",
     "historical-integrity.json": "2d5c86a077b00f415aa38fa91b0ca0bf5d0305624543ba910383e46560149f0b",
+    "linux-ci-90-metadata.json": "703b01b82249843939f18faf83778bb7e72788a0bc4f1241d2b2bcfadc886792",
+    "linux-ci-90-tests.log": "46f0e93a7b4838b2a67944cbac390d98b5f4f673312933e3518aee605a5a6815",
+    "original-geography-summary.json": "5eb0efa504c2cef6fea1b4ef0c97cbc2cfa4d36ccd86b5bf9049fe7ba62aa132",
     "raw-availability.json": "f0a61c255834f90bff306a1fa2af799b70cee196686527678321554f171da49c",
+    "row-and-representation-driver.py.txt": "9b022c367ae2b9fae955f6997f766faf93584da149df40128dbc0ff807fa2550",
+    "row-and-representation-geography-summary.json": "53970a220df7f5fa25bf2d8c32eb9d063aedf1b9cfd77c754eb2f692be4ceadf",
+    "row-and-representation-inputs.json": "cc5188b5bee3995832254c1dbcfaca4959159e76e77f42e982f5fc9f463a9709",
+    "row-and-representation-manifest-differences.json": "d2a984329cb5cf73094cc957c7e6e0b6c43cfd8c24266151ca15d4976cc660c8",
+    "row-and-representation-reproduction.json": "639431c033a39e45ff5578f8e35c465825df7f589144526056b9d35c6c9f22c8",
+    "row-and-representation-tests.log": "440bff1be0ce6d2dedfee0768b992e6cea1e666d886138a24aab153b408965f9",
+    "row-order-strict-driver.py.txt": "e4d5c400a8ab25c95ecfe5be1a67588dc9df026b57ae5b892e19647477e0c443",
+    "row-order-strict-geography-summary.json": "2dad24b6b7886981fb28220eefa34fa8a184907e2aefa71050deef0b1e72fcbf",
+    "row-order-strict-inputs.json": "a4cef563b82e8cf1c6893a24d6b2b72ffdf29402a7fe0dce2b870c504902ed6f",
+    "row-order-strict-manifest-differences.json": "d2a984329cb5cf73094cc957c7e6e0b6c43cfd8c24266151ca15d4976cc660c8",
+    "row-order-strict-reproduction.json": "8e38f8f1a6398b3c8aa8a87d85259896cf90497d63eac697722d230db3a362a7",
+    "row-order-strict-tests.log": "5c0ebc60ec7f5bdf8ddfefebd481a97b94fd95c088257041ffda3685993c9352",
     "saved-model-invariance-tests.log": "1590f99519e0c26520f6b538e9a261004076747f70a7bf23012772e43faa3aab"
   }
 }
