@@ -1,0 +1,539 @@
+{
+  "status": "retrospective-training-size-diagnostic",
+  "external_validation": false,
+  "production_changed": false,
+  "cases": 64,
+  "fixed_mask_size": 7,
+  "primary_targets_identical": true,
+  "primary_target_sha256": {
+    "backward": "68967b53ecafed6bfcae7061b5eeb75a682b47ea928523b7d36256df84c82d16",
+    "forward": "d2752095546c1d72025d153760e557502104e77550d65b883ea7c466bc3c9a19"
+  },
+  "comparisons": {
+    "fold_fitted_backward": {
+      "target_identical_across_origins": false,
+      "methods": {
+        "M0": {
+          "six_seasons": {
+            "mae": 2.16820987654321,
+            "bias": -2.0540123456790123,
+            "delta_mae_vs_M1": 0.3588849154532028,
+            "improvement_pct_vs_M1": -19.835293447617985
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.173611111111111,
+            "mae_min": 2.1666666666666665,
+            "mae_max": 2.1766975308641974,
+            "improvement_pct_median": -20.00972153594671,
+            "improvement_pct_min": -21.236439332363943,
+            "improvement_pct_max": -19.023562246289917,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1": {
+          "six_seasons": {
+            "mae": 1.8093249610900073,
+            "bias": -0.3794606349583203,
+            "delta_mae_vs_M1": 0.0,
+            "improvement_pct_vs_M1": 0.0
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8121669148973898,
+            "mae_min": 1.7896872412026865,
+            "mae_max": 1.826850646219136,
+            "improvement_pct_median": 0.0,
+            "improvement_pct_min": 0.0,
+            "improvement_pct_max": 0.0,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1_B": {
+          "six_seasons": {
+            "mae": 1.7162980541750419,
+            "bias": -0.2674998126044664,
+            "delta_mae_vs_M1": -0.0930269069149654,
+            "improvement_pct_vs_M1": 5.141525647163037
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.819557553307924,
+            "mae_min": 1.7250199238250716,
+            "mae_max": 1.908909086773699,
+            "improvement_pct_median": -0.26814086046000885,
+            "improvement_pct_min": -5.245512843576883,
+            "improvement_pct_max": 5.461709021944006,
+            "subsets_better_than_M1": 6
+          }
+        },
+        "M1_B_P": {
+          "six_seasons": {
+            "mae": 1.7700429252106697,
+            "bias": -0.254506440371612,
+            "delta_mae_vs_M1": -0.03928203587933754,
+            "improvement_pct_vs_M1": 2.1710879319142617
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.825766037662801,
+            "mae_min": 1.7257854161000645,
+            "mae_max": 1.9142559315494707,
+            "improvement_pct_median": -0.35308874520223466,
+            "improvement_pct_min": -5.540304997074452,
+            "improvement_pct_max": 5.4197568505892075,
+            "subsets_better_than_M1": 6
+          }
+        },
+        "M1_H": {
+          "six_seasons": {
+            "mae": 1.7303214932656519,
+            "bias": -0.2735278254863992,
+            "delta_mae_vs_M1": -0.07900346782435541,
+            "improvement_pct_vs_M1": 4.366460946670447
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8256430163448647,
+            "mae_min": 1.7320168543415124,
+            "mae_max": 1.880306453785577,
+            "improvement_pct_median": -0.5829092742725361,
+            "improvement_pct_min": -3.6685394830491047,
+            "improvement_pct_max": 5.078248028838628,
+            "subsets_better_than_M1": 6
+          }
+        },
+        "M1_P": {
+          "six_seasons": {
+            "mae": 1.7991226437426209,
+            "bias": -0.37795003128327104,
+            "delta_mae_vs_M1": -0.010202317347386414,
+            "improvement_pct_vs_M1": 0.5638742385580153
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8177906915903168,
+            "mae_min": 1.7333515681331193,
+            "mae_max": 1.9658264681028512,
+            "improvement_pct_median": -0.808850604404765,
+            "improvement_pct_min": -8.383587374839351,
+            "improvement_pct_max": 5.005100142799401,
+            "subsets_better_than_M1": 5
+          }
+        },
+        "M2": {
+          "six_seasons": {
+            "mae": 2.4737654320987654,
+            "bias": -0.3341049382716049,
+            "delta_mae_vs_M1": 0.6644404710087581,
+            "improvement_pct_vs_M1": -36.72311416123246
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.7137345679012346,
+            "mae_min": 2.494598765432099,
+            "mae_max": 2.9621913580246915,
+            "improvement_pct_median": -49.61864255296868,
+            "improvement_pct_min": -64.66040239299254,
+            "improvement_pct_max": -37.65833295623049,
+            "subsets_better_than_M1": 0
+          }
+        }
+      }
+    },
+    "fold_fitted_forward": {
+      "target_identical_across_origins": false,
+      "methods": {
+        "M0": {
+          "six_seasons": {
+            "mae": 2.4560185185185186,
+            "bias": -2.3016975308641974,
+            "delta_mae_vs_M1": 0.4003213258921021,
+            "improvement_pct_vs_M1": -19.47374970049165
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.4575617283950617,
+            "mae_min": 2.45679012345679,
+            "mae_max": 2.4598765432098766,
+            "improvement_pct_median": -17.01030724908805,
+            "improvement_pct_min": -20.458384811275575,
+            "improvement_pct_max": -12.29366804164318,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1": {
+          "six_seasons": {
+            "mae": 2.0556971926264165,
+            "bias": 0.13337349906984636,
+            "delta_mae_vs_M1": 0.0,
+            "improvement_pct_vs_M1": 0.0
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.100295081837088,
+            "mae_min": 2.0401748971193414,
+            "mae_max": 2.189887445265094,
+            "improvement_pct_median": 0.0,
+            "improvement_pct_min": 0.0,
+            "improvement_pct_max": 0.0,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1_B": {
+          "six_seasons": {
+            "mae": 1.9310629924759513,
+            "bias": 0.13501546555593666,
+            "delta_mae_vs_M1": -0.12463420015046522,
+            "improvement_pct_vs_M1": 6.062867653734017
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0328865930229267,
+            "mae_min": 1.9466144536919514,
+            "mae_max": 2.1926906573396963,
+            "improvement_pct_median": 3.2749858092709916,
+            "improvement_pct_min": -4.399171159406401,
+            "improvement_pct_max": 6.898019855362758,
+            "subsets_better_than_M1": 13
+          }
+        },
+        "M1_B_P": {
+          "six_seasons": {
+            "mae": 1.9221711844861094,
+            "bias": 0.06734971052801028,
+            "delta_mae_vs_M1": -0.13352600814030713,
+            "improvement_pct_vs_M1": 6.495412292201975
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0300150929541547,
+            "mae_min": 1.9468971508581834,
+            "mae_max": 2.169153626241686,
+            "improvement_pct_median": 2.6828107735151208,
+            "improvement_pct_min": -3.2785176235507363,
+            "improvement_pct_max": 7.009889575341488,
+            "subsets_better_than_M1": 14
+          }
+        },
+        "M1_H": {
+          "six_seasons": {
+            "mae": 1.8806865533865935,
+            "bias": 0.12612159191300165,
+            "delta_mae_vs_M1": -0.17501063923982296,
+            "improvement_pct_vs_M1": 8.513444483339716
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0269550537274057,
+            "mae_min": 1.9144648434704405,
+            "mae_max": 2.186919430118095,
+            "improvement_pct_median": 3.008074880999767,
+            "improvement_pct_min": -4.124389426519937,
+            "improvement_pct_max": 7.849585382225921,
+            "subsets_better_than_M1": 12
+          }
+        },
+        "M1_P": {
+          "six_seasons": {
+            "mae": 1.9281140434770943,
+            "bias": -0.1159056251894152,
+            "delta_mae_vs_M1": -0.12758314914932223,
+            "improvement_pct_vs_M1": 6.206320152936451
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0087452424946832,
+            "mae_min": 1.9238519838914858,
+            "mae_max": 2.1273828756725366,
+            "improvement_pct_median": 3.8370792195131287,
+            "improvement_pct_min": -1.289713720214758,
+            "improvement_pct_max": 10.251898143063631,
+            "subsets_better_than_M1": 14
+          }
+        },
+        "M2": {
+          "six_seasons": {
+            "mae": 3.056327160493827,
+            "bias": -1.2669753086419753,
+            "delta_mae_vs_M1": 1.0006299678674107,
+            "improvement_pct_vs_M1": -48.67594174164229
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 3.1751543209876543,
+            "mae_min": 2.955246913580247,
+            "mae_max": 3.5277777777777777,
+            "improvement_pct_median": -48.105771212462535,
+            "improvement_pct_min": -71.06889529873033,
+            "improvement_pct_max": -34.94971716331765,
+            "subsets_better_than_M1": 0
+          }
+        }
+      }
+    },
+    "pre_overlap_backward": {
+      "target_identical_across_origins": true,
+      "methods": {
+        "M0": {
+          "six_seasons": {
+            "mae": 2.185956790123457,
+            "bias": -1.9868827160493827,
+            "delta_mae_vs_M1": 0.34379676538023296,
+            "improvement_pct_vs_M1": -18.66269817836017
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.185956790123457,
+            "mae_min": 2.185956790123457,
+            "mae_max": 2.185956790123457,
+            "improvement_pct_median": -18.663364507593982,
+            "improvement_pct_min": -19.885558683372917,
+            "improvement_pct_max": -17.315348799447673,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1": {
+          "six_seasons": {
+            "mae": 1.842160024743224,
+            "bias": -0.3961710356305482,
+            "delta_mae_vs_M1": 0.0,
+            "improvement_pct_vs_M1": 0.0
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.842149680479997,
+            "mae_min": 1.8233695652173911,
+            "mae_max": 1.8633169593693852,
+            "improvement_pct_median": 0.0,
+            "improvement_pct_min": 0.0,
+            "improvement_pct_max": 0.0,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1_B": {
+          "six_seasons": {
+            "mae": 1.7679655650304849,
+            "bias": -0.31639900094677065,
+            "delta_mae_vs_M1": -0.07419445971273908,
+            "improvement_pct_vs_M1": 4.0275795108017824
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.821971881397103,
+            "mae_min": 1.7487395131835508,
+            "mae_max": 1.9227180473186964,
+            "improvement_pct_median": 0.7525862423480634,
+            "improvement_pct_min": -4.190415513290446,
+            "improvement_pct_max": 5.828685588017191,
+            "subsets_better_than_M1": 11
+          }
+        },
+        "M1_B_P": {
+          "six_seasons": {
+            "mae": 1.77399461772559,
+            "bias": -0.3470139927066,
+            "delta_mae_vs_M1": -0.06816540701763385,
+            "improvement_pct_vs_M1": 3.700297808119868
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8316566921898454,
+            "mae_min": 1.7562865121803457,
+            "mae_max": 2.0148140572474507,
+            "improvement_pct_median": 0.478441011317432,
+            "improvement_pct_min": -9.181018038176681,
+            "improvement_pct_max": 5.422272391519877,
+            "subsets_better_than_M1": 9
+          }
+        },
+        "M1_H": {
+          "six_seasons": {
+            "mae": 1.7657740545953928,
+            "bias": -0.3146735169579802,
+            "delta_mae_vs_M1": -0.0763859701478311,
+            "improvement_pct_vs_M1": 4.146543683601999
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8467114212699356,
+            "mae_min": 1.7552291593448104,
+            "mae_max": 1.907636031082761,
+            "improvement_pct_median": 0.30276436156990716,
+            "improvement_pct_min": -3.373134196047012,
+            "improvement_pct_max": 5.479211864533973,
+            "subsets_better_than_M1": 9
+          }
+        },
+        "M1_P": {
+          "six_seasons": {
+            "mae": 1.770911728414842,
+            "bias": -0.4858318671291332,
+            "delta_mae_vs_M1": -0.07124829632838203,
+            "improvement_pct_vs_M1": 3.8676496814283645
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 1.8233892496256687,
+            "mae_min": 1.7504428770125657,
+            "mae_max": 1.9945258257543634,
+            "improvement_pct_median": 0.6104183883206105,
+            "improvement_pct_min": -8.081616452883189,
+            "improvement_pct_max": 5.736957798091447,
+            "subsets_better_than_M1": 9
+          }
+        },
+        "M2": {
+          "six_seasons": {
+            "mae": 2.4891975308641974,
+            "bias": -0.32253086419753085,
+            "delta_mae_vs_M1": 0.6470375061209734,
+            "improvement_pct_vs_M1": -35.12384903755379
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.7253086419753085,
+            "mae_min": 2.5108024691358026,
+            "mae_max": 2.9768518518518516,
+            "improvement_pct_median": -47.68210045427577,
+            "improvement_pct_min": -62.851421018506315,
+            "improvement_pct_max": -36.20150032938507,
+            "subsets_better_than_M1": 0
+          }
+        }
+      }
+    },
+    "pre_overlap_forward": {
+      "target_identical_across_origins": true,
+      "methods": {
+        "M0": {
+          "six_seasons": {
+            "mae": 2.488425925925926,
+            "bias": -2.1628086419753085,
+            "delta_mae_vs_M1": 0.2905796627014108,
+            "improvement_pct_vs_M1": -13.221109572745737
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.488425925925926,
+            "mae_min": 2.488425925925926,
+            "mae_max": 2.488425925925926,
+            "improvement_pct_median": -13.506914603974085,
+            "improvement_pct_min": -15.973933200180767,
+            "improvement_pct_max": -8.91831676463417,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1": {
+          "six_seasons": {
+            "mae": 2.1978462632245153,
+            "bias": 0.2423450158979579,
+            "delta_mae_vs_M1": 0.0,
+            "improvement_pct_vs_M1": 0.0
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.1923121905022707,
+            "mae_min": 2.145676926926927,
+            "mae_max": 2.284671669415588,
+            "improvement_pct_median": 0.0,
+            "improvement_pct_min": 0.0,
+            "improvement_pct_max": 0.0,
+            "subsets_better_than_M1": 0
+          }
+        },
+        "M1_B": {
+          "six_seasons": {
+            "mae": 1.945376938261623,
+            "bias": 0.09781125271934152,
+            "delta_mae_vs_M1": -0.2524693249628922,
+            "improvement_pct_vs_M1": 11.487123971650693
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.049490395977344,
+            "mae_min": 1.9836177370202681,
+            "mae_max": 2.248277025150674,
+            "improvement_pct_median": 6.900623428974651,
+            "improvement_pct_min": -0.35502733926011665,
+            "improvement_pct_max": 9.913295350016805,
+            "subsets_better_than_M1": 14
+          }
+        },
+        "M1_B_P": {
+          "six_seasons": {
+            "mae": 1.9584117157615895,
+            "bias": 0.006629122418479555,
+            "delta_mae_vs_M1": -0.2394345474629258,
+            "improvement_pct_vs_M1": 10.89405348632736
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0527885038428435,
+            "mae_min": 1.9903474482338905,
+            "mae_max": 2.17886275372876,
+            "improvement_pct_median": 6.574556827226818,
+            "improvement_pct_min": 0.6134818221500415,
+            "improvement_pct_max": 10.149518142012049,
+            "subsets_better_than_M1": 15
+          }
+        },
+        "M1_H": {
+          "six_seasons": {
+            "mae": 1.9065064288383542,
+            "bias": 0.11936970014670885,
+            "delta_mae_vs_M1": -0.29133983438616107,
+            "improvement_pct_vs_M1": 13.255696690938201
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0233358746928767,
+            "mae_min": 1.9360209848222283,
+            "mae_max": 2.1989396345065653,
+            "improvement_pct_median": 6.532458165703192,
+            "improvement_pct_min": 0.7029725853402669,
+            "improvement_pct_max": 12.524464652271927,
+            "subsets_better_than_M1": 15
+          }
+        },
+        "M1_P": {
+          "six_seasons": {
+            "mae": 1.9449828795465038,
+            "bias": -0.1265226792727605,
+            "delta_mae_vs_M1": -0.2528633836780114,
+            "improvement_pct_vs_M1": 11.505053283710087
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 2.0310968223336987,
+            "mae_min": 1.923146170139465,
+            "mae_max": 2.1494455449284438,
+            "improvement_pct_median": 7.65180575861436,
+            "improvement_pct_min": 1.9553166633628938,
+            "improvement_pct_max": 14.157648580336657,
+            "subsets_better_than_M1": 15
+          }
+        },
+        "M2": {
+          "six_seasons": {
+            "mae": 3.070216049382716,
+            "bias": -1.2623456790123457,
+            "delta_mae_vs_M1": 0.8723697861582007,
+            "improvement_pct_vs_M1": -39.69202945424968
+          },
+          "four_season_subsets": {
+            "n": 15,
+            "mae_median": 3.1867283950617282,
+            "mae_min": 2.9699074074074074,
+            "mae_max": 3.54320987654321,
+            "improvement_pct_median": -42.06861632992509,
+            "improvement_pct_min": -63.588551205236165,
+            "improvement_pct_max": -29.99274456653549,
+            "subsets_better_than_M1": 0
+          }
+        }
+      }
+    }
+  },
+  "final_huber_max_kkt": 9.999653031791955e-07
+}
