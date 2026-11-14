@@ -46,3 +46,10 @@ export interface IndexDoc { generated: string; cutoff: string; current_season: n
 
 export const MONTHS_SEASON = [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
 export const seasonLabel = (s: number) => `${s}-${String(s + 1).slice(2)}`;
+
+// Capa derivada para la web (pipeline/publish_web.py → /data/derived/). Solo reordena lo publicado por publish.py.
+export interface SeasonTotal { season: number; value: number | null; state: State; n_months: number; complete: boolean; provisional: boolean }
+export interface MonthClimatology { m: number; n: number; median: number | null; p25: number | null; p75: number | null; max: number | null; seasons_with: number }
+export interface DerivedDoc { cut: string; comuna: string; region: string; cutoff: string; current_season: number; seasons: number[]; season_totals: SeasonTotal[]; month_climatology: MonthClimatology[] }
+export interface RegionCell { cut: string; x: number; y: number; n: number; d: number; s: number[] }
+export interface RegionDoc { cutoff: string; current_season: number; seasons: number[]; cells: RegionCell[] }
