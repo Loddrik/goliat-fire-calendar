@@ -1,0 +1,130 @@
+{
+  "status": "descriptive-platform-audit",
+  "observation_coverage": "unknown",
+  "fixed_published_mask": true,
+  "pairs": {
+    "NOAA20_vs_SNPP": {
+      "reference_platform": "SNPP",
+      "comparator_platform": "NOAA20",
+      "included_seasons": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "excluded_requested_seasons": [],
+      "aggregate": {
+        "months": 5184,
+        "reference": 23283.0,
+        "comparator": 23260.0,
+        "ratio": 0.9990121547910492,
+        "relative_bias": -0.0009878452089507365,
+        "wape": 0.2884078512219216,
+        "active_pairs": 2978,
+        "provisional_months": 0
+      },
+      "regional_ratio_bootstrap": {
+        "blocks": 8,
+        "replicates": 5000,
+        "seed": 20261114,
+        "valid_replicates": 5000,
+        "interval": [
+          0.9678631691977297,
+          1.03417691482186
+        ]
+      },
+      "positive_cell_day_overlap": {
+        "reference_cell_days": 23283,
+        "comparator_cell_days": 23260,
+        "intersection": 9848,
+        "union": 36695,
+        "jaccard": 0.2683744379343235
+      },
+      "annual_ratio_min": 0.9349276974416018,
+      "annual_ratio_max": 1.0625,
+      "screening": {
+        "minimum_reference_total": 100,
+        "ratio_limits": [
+          0.8,
+          1.25
+        ],
+        "sufficient_signal_communes": 47,
+        "flagged": [
+          {
+            "cut": "08101",
+            "commune": "Concepción",
+            "reference": 181.0,
+            "comparator": 122.0,
+            "ratio": 0.6740331491712708
+          },
+          {
+            "cut": "08304",
+            "commune": "Laja",
+            "reference": 122.0,
+            "comparator": 90.0,
+            "ratio": 0.7377049180327869
+          },
+          {
+            "cut": "16103",
+            "commune": "Chillán Viejo",
+            "reference": 152.0,
+            "comparator": 117.0,
+            "ratio": 0.7697368421052632
+          }
+        ]
+      }
+    },
+    "NOAA21_vs_NOAA20": {
+      "reference_platform": "NOAA20",
+      "comparator_platform": "NOAA21",
+      "included_seasons": [
+        2023,
+        2024,
+        2025
+      ],
+      "excluded_requested_seasons": [],
+      "aggregate": {
+        "months": 1944,
+        "reference": 7704.0,
+        "comparator": 7599.0,
+        "ratio": 0.9863707165109035,
+        "relative_bias": -0.013629283489096573,
+        "wape": 0.30360851505711317,
+        "active_pairs": 1031,
+        "provisional_months": 0
+      },
+      "regional_ratio_bootstrap": {
+        "blocks": 3,
+        "replicates": 5000,
+        "seed": 20261114,
+        "valid_replicates": 5000,
+        "interval": [
+          0.9280629449231922,
+          1.0202260559190959
+        ]
+      },
+      "positive_cell_day_overlap": {
+        "reference_cell_days": 7704,
+        "comparator_cell_days": 7599,
+        "intersection": 3109,
+        "union": 12194,
+        "jaccard": 0.25496145645399376
+      },
+      "annual_ratio_min": 0.9280629449231922,
+      "annual_ratio_max": 1.0202260559190959,
+      "screening": {
+        "minimum_reference_total": 100,
+        "ratio_limits": [
+          0.8,
+          1.25
+        ],
+        "sufficient_signal_communes": 26,
+        "flagged": []
+      }
+    }
+  }
+}
