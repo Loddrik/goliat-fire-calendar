@@ -1,0 +1,62 @@
+{
+  "scope": "Internal consistency of canonical processed outputs, not validation from absent raw CSVs",
+  "checks": {
+    "modis_below_confidence_30": {
+      "violations": 0,
+      "query": "select count(*) from det where instrument='MODIS' and (try_cast(confidence as integer) is null or try_cast(confidence as integer)<30)"
+    },
+    "viirs_low_or_missing_confidence": {
+      "violations": 0,
+      "query": "select count(*) from det where instrument='VIIRS' and (confidence is null or confidence='l')"
+    },
+    "unknown_platform_or_instrument": {
+      "violations": 0,
+      "query": "select count(*) from det where sat is null or instrument is null or not ((sat in ('Aqua','Terra') and instrument='MODIS') or (sat in ('SNPP','NOAA20','NOAA21') and instrument='VIIRS'))"
+    },
+    "nonfinite_or_outside_declared_bbox": {
+      "violations": 0,
+      "query": "select count(*) from det where lat is null or lon is null or not isfinite(lat) or not isfinite(lon) or lon not between -74.0 and -70.9 or lat not between -38.6 and -35.9"
+    },
+    "grid_not_matching_declared_binary_floor": {
+      "violations": 0,
+      "query": "select count(*) from det where cell_x is null or cell_y is null or cell_x != floor(lon/0.01)::integer or cell_y != floor(lat/0.01)::integer"
+    },
+    "duplicate_canonical_keys": {
+      "violations": 0,
+      "query": "select coalesce(sum(n-1),0)::bigint from (select count(*) n from det group by sat,round(lat,4),round(lon,4),acq_date,acq_time having count(*)>1)"
+    },
+    "malformed_time_or_missing_date": {
+      "violations": 0,
+      "query": "select count(*) from det where acq_date is null or acq_time is null or not regexp_full_match(acq_time,'[0-2][0-9][0-5][0-9]') or try_cast(substr(acq_time,1,2) as integer)>23"
+    },
+    "dates_after_published_cutoff": {
+      "violations": 0,
+      "query": "select count(*) from det where acq_date>date '2026-11-13'"
+    },
+    "unknown_source_kind": {
+      "violations": 0,
+      "query": "select count(*) from det where source_kind is null or source_kind not in ('country_sp','api_sp','nrt')"
+    },
+    "duplicate_cell_assignments": {
+      "violations": 0,
+      "query": "select coalesce(sum(n-1),0)::bigint from (select count(*) n from cells group by cell_x,cell_y having count(*)>1)"
+    },
+    "unknown_cut_assignment": {
+      "violations": 0,
+      "query": "select count(*) from cells where cut is null or not regexp_full_match(cut,'(08|16)[0-9]{3}')"
+    }
+  },
+  "all_checked_invariants_passed": true,
+  "cutoff": "2026-11-13",
+  "not_verifiable_here": [
+    "daynight filter against original observations",
+    "correct source-priority choice among discarded raw duplicates",
+    "observational opportunity/cloud cover",
+    "complete or accurate omission/retention of original records"
+  ],
+  "inputs_sha256": {
+    "data/processed/detections.parquet": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+    "data/processed/cells_comuna.parquet": "44bf64ebf0c51437b5587eb6f16adb5f6157bb107fed81923e7b4df86eaf98cc",
+    "web/public/data/index.json": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174"
+  }
+}

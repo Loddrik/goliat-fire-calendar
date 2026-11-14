@@ -4,6 +4,7 @@
   "files_sha256": {
     "baseline-reconstruction.json": "dd00cd485068bb02ff4ef30d5d13f14a367d7d8a6992d48e262e52eaf121af30",
     "baseline-strict-driver.py.txt": "59e142193b8dfcbdafd7ba19762de922d7d6f1538a998a83aeb08c95fc6954b5",
+    "canonical-contract-audit.json": "ad039c659a8ba2b66f0fdcdb6310699c2b11ab0f36d41c146f3242d483c9a5f4",
     "clean-checkout-driver.py.txt": "a069a6389aeb90c061926294993f9a3c226d21ff14154dbf227d2fd82555eb5e",
     "clean-checkout-manifest-differences.json": "628725bbb3fba609a70afdb2b8fdb7e7d1950e0e7a5dbb25fd50d8a0957db8f5",
     "clean-checkout-reproduction.json": "52d78214406db5b571f619551fff9245a5684548930148d8da6a8db29bbc6b9a",
