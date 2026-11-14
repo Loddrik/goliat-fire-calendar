@@ -74,7 +74,7 @@ for cm in index["comunas"]:
         vals = [r["value"] for r in doc["series"] if r["m"] == m and r["state"] == "observed" and r["value"] is not None
                 and 2012 <= r["season"] < cur_season and not r.get("partial")]
         clim.append(dict(m=m, n=len(vals), median=quantile(vals, 0.5), p25=quantile(vals, 0.25), p75=quantile(vals, 0.75),
-                         max=(max(vals) if vals else None)))
+                         max=(max(vals) if vals else None), seasons_with=sum(1 for v in vals if v > 0)))
     out = dict(cut=cut, comuna=cm["comuna"], region=cm["region"], cutoff=cutoff, current_season=cur_season,
                generated_from=["data/processed/celldays.parquet", "data/processed/static_mask.parquet", f"web/public/data/comunas/{cut}.json"],
                platform_rule="S-NPP hasta 2017, NOAA-20 desde 2018; diurno; sin celdas estáticas (igual que publish.py)",
