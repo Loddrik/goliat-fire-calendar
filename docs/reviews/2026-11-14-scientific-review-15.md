@@ -25,6 +25,14 @@ El ajuste IS supera a su control empírico de igual cohorte en 8/8 temporadas, t
 
 Para M1/B, IS óptimo con todos los meses reduce IS global 10,63431→9,08305 frente al empírico, pero su cobertura activa es 75,81 %, frente a 82,17 % al calibrar solo activos. La referencia simétrica/activa obtiene IS global 9,34861 y cobertura activa 78,31 %. El ajuste activo IS alcanza IS activo 15,99931 y cobertura 82,17 %, con anchura activa 10,15804 frente a 8,94065 de la referencia: la mejora exige intervalos más anchos en esa población. No elegir la cohorte al conocer la actividad del destino.
 
+## Estratos y población publicada
+
+La ventaja agregada no se extiende a todos los estados. Para M1/B y calibración activa, ajustar IS mejora frente al empírico la pérdida de los 74 meses S-NPP≥50 de 112,47511 a 100,18054, con anchura 39,61907→50,87824 y cobertura 56,76→64,86 %. Esa cobertura sigue por debajo del 80 % nominal. En Aqua=0/S-NPP>0, la pérdida empeora 6,13430→6,66992 y la cobertura baja 83,16→80,73 %. No se omite este deterioro al presentar el promedio.
+
+En las 14 comunas publicadas, M1/B IS activo tiene IS global 14,57687 frente a 14,77608 simétrico/activo; su cobertura activa sube 78,04→81,30 % y la anchura activa 11,38397→12,83417. En los 40 meses S-NPP≥50 de esas comunas la cobertura es solo 62,50 %. Las 14 se seleccionaron con evidencia del mismo desarrollo; esta comparación es condicionada a esa selección, no una validación externa de compuertas.
+
+Sin clipping, IS en unidades originales equivale a IS normalizado multiplicado por la escala de cada observación. Por eso los cuantiles no ponderados de residuos normalizados y el ajuste directo no optimizan exactamente el mismo criterio. El clipping añade puntos de quiebre; ambos efectos se incluyen en el solver. Esta explicación matemática no garantiza transporte.
+
 ## Transporte posterior descriptivo
 
 M1/B IS global de la referencia simétrica/activa frente al ajuste IS/todos: 10,01800 frente a 10,06561 en 2020–2021 y 12,34151 frente a 12,07790 en 2022–2025. La primera comparación empeora y la segunda mejora. Los períodos posteriores ya fueron consultados; se conservan la exclusión agosto/septiembre 2020 y la transición enero–junio 2022. No se reajusta con esas etiquetas.

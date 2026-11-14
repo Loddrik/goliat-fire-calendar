@@ -96,3 +96,8 @@ An automated, read-only scientific review (checklist C1–C20 of the preparation
 ## Ajuste de extremos por pérdida — etapa 15
 
 [Revisión completa](reviews/2026-11-14-scientific-review-15.md): la optimización directa de intervalos raíz mejora los cuantiles asimétricos de igual cohorte en 8/8 folds, pero no domina la referencia simétrica en todos los destinos. Diez recetas conservadas, 85 tests y controles anteriores reproducidos; sin cambio de publicación ni cobertura garantizada.
+
+
+## Decisión y reproducción acumulada
+
+[Decisión científica](reviews/2026-11-14-research-decision.md): conservar M1 y las 14 compuertas; mejoras retrospectivas no equivalen a transporte ni cobertura garantizada. Dos checkouts reproducen 118 resultados de las etapas 2–15, el segundo con entorno nuevo desde uv.lock y 88 tests. [Reconstrucción adicional](reviews/2026-11-14-baseline-reconstruction.md): agregados y parámetros coinciden; el orden no determinado de recurrencia impide igualdad estricta de los 54 JSON comunales. La ingestión FIRMS cruda no se ha reproducido porque faltan sus 1.071 CSV.

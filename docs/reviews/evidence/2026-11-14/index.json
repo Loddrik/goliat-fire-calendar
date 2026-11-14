@@ -1,0 +1,14 @@
+{
+  "scope": "Reproducción técnica y diagnóstico; no validación científica externa",
+  "files_sha256": {
+    "baseline-reconstruction.json": "dd00cd485068bb02ff4ef30d5d13f14a367d7d8a6992d48e262e52eaf121af30",
+    "clean-checkout-manifest-differences.json": "628725bbb3fba609a70afdb2b8fdb7e7d1950e0e7a5dbb25fd50d8a0957db8f5",
+    "clean-checkout-reproduction.json": "52d78214406db5b571f619551fff9245a5684548930148d8da6a8db29bbc6b9a",
+    "clean-checkout-tests.log": "3e7f7c9872d93cbc7019a15d5058ed5675243b10a4a59a6a6c17a371fcc71969",
+    "fresh-environment-manifest-differences.json": "628725bbb3fba609a70afdb2b8fdb7e7d1950e0e7a5dbb25fd50d8a0957db8f5",
+    "fresh-environment-reproduction.json": "323d6f9f95e815f7f4fbc43807faa8500b9dbb0187360af8eca452d1863182d5",
+    "fresh-environment-tests.log": "286f435e45a225becbf8752aeaed26d1e0308411325743d37633f59e54cf7bbd",
+    "historical-integrity.json": "2d5c86a077b00f415aa38fa91b0ca0bf5d0305624543ba910383e46560149f0b",
+    "raw-availability.json": "f0a61c255834f90bff306a1fa2af799b70cee196686527678321554f171da49c"
+  }
+}
