@@ -1,6 +1,6 @@
 # Protocolo 9 — contraste externo de patrones estacionales con CONAF
 
-Fijado antes de calcular correlaciones o consultar los conteos numéricos de resultado. Base 0823eb1. El esquema y la completitud ya fueron inspeccionados: las 54 comunas se emparejan por nombre sin alias ni duplicados; tres celdas de conteo están vacías (Alto Biobío en 2012–2013 y 2016–2017; Hualqui en 2023–2024). Los blancos se mantienen desconocidos, nunca cero.
+Fijado antes de calcular correlaciones o consultar los conteos numéricos de resultado. Base 0823eb1. El esquema y la completitud ya fueron inspeccionados: las 54 comunas se emparejan por nombre sin alias ni duplicados; tres celdas de conteo están vacías (Alto Biobío en 2012–2013 y 2016–2017; Chiguayante en 2023–2024). Los blancos se mantienen desconocidos, nunca cero.
 
 ## Pregunta y límites
 
@@ -29,3 +29,7 @@ Las definiciones administrativas/operacionales de CONAF y la cartografía fija d
 ## Artefactos y verificación
 
 Directorio nuevo `data/processed/conaf_external_audit/`: extracción con procedencia, panel anual emparejado, panel primario y sensibilidad, correlaciones locales, influencia, resumen y manifiesto. Hash antes/después del XLSX y de producción/auditorías anteriores; metadata con fuente y versiones. Tests de nombres, ambigüedad, blancos vs cero, temporada/encabezados, conteos inválidos, empates, series constantes, panel territorial constante y bootstrap reproducible. El XLSX crudo queda fuera de Git; añadir el parser requerido a dependencias. Todos los PR a dev, Daniel Quinteros sin firma; investigación hasta 21:00 de Santiago.
+
+## Fe de erratas de identidad, posterior a la primera ejecución
+
+El protocolo original del commit 7b1e35b llamó Hualqui al CUT 08103. La DPA y el emparejamiento por nombres lo identifican como **Chiguayante**; Hualqui es 08105. Se corrige únicamente esa etiqueta en este documento. El parser, el panel completo, los CUT excluidos y todas las reglas se mantuvieron idénticos; el cambio no modifica correlaciones. La primera ejecución usó el SHA de protocolo registrado antes de esta fe de erratas; se conserva en el historial de Git. Los informes usan siempre nombres obtenidos de la tabla oficial de CUT.
