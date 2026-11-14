@@ -35,7 +35,13 @@ with c as (
 select cut, cell_x, cell_y, season, m, count(*) as n_days from c group by all order by cut, cell_x, cell_y, season, m""").df()
 
 def quantile(vals, p):
-    v = sorted(vals); return v[min(len(v) - 1, int(p * len(v)))] if v else None
+    """Cuantil con interpolación lineal (método 'inclusive', igual que numpy por defecto).
+    Con 14 temporadas la mediana es el promedio del 7.º y el 8.º valor ordenado."""
+    v = sorted(vals)
+    if not v: return None
+    if len(v) == 1: return v[0]
+    q = {0.25: 0, 0.5: 1, 0.75: 2}[p]
+    return round(statistics.quantiles(v, n=4, method="inclusive")[q], 1)
 
 region = []; problems = 0
 for cm in index["comunas"]:
