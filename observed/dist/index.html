@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FireChronos · Historia comunal observada</title><meta name="description" content="Historia de actividad térmica observada por comuna en Biobío y Ñuble, con archivos FIRMS y geografía fija DPA 2023. Sin armonización."><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head>
+<body><a class="skip" href="#main">Saltar al contenido</a>
+<header><a class="brand" href="/?view=observed"><span aria-hidden="true"></span>GOLIAT + FireChronos</a><div class="stage"><a href="/?view=observed">Volver a la vista integrada</a> · HISTORIA OBSERVADA</div></header>
+<main id="main">
+<section class="hero"><div class="eyebrow">Biobío y Ñuble · geografía fija DPA 2023</div><h1>La historia observada,<br>comuna por comuna.</h1><p>Consulta los registros MODIS Aqua, VIIRS S-NPP y NOAA-20 por separado. El calendario muestra actividad térmica detectada, con fuentes y filtros reproducibles.</p><div class="badge">Sin armonización · no comparar magnitudes entre sensores</div><a class="query-jump" href="#query-title">Consultar una comuna ↓</a></section>
+<section aria-labelledby="sources-title"><div class="section-heading"><div><div class="eyebrow">01 / Disponibilidad</div><h2 id="sources-title">Fuentes y períodos identificados.</h2></div><span id="snapshot-date" class="small">Comprobando archivos…</span></div>
+<div id="source-list" class="source-grid" aria-live="polite"></div>
+<div class="missing"><strong>La siguiente prueba</strong><span>Comparabilidad MODIS–VIIRS</span><span>Estabilidad e incertidumbre</span><span>Máscara adicional de estáticas</span></div>
+<p class="note" id="geography-summary">Los históricos usan la DPA 2023 para todos los años. Las muestras recientes siguen siendo recortes rectangulares separados y no se concatenan con la serie histórica.</p></section>
+<section aria-labelledby="query-title"><div class="section-heading"><div><div class="eyebrow">02 / Consulta observada</div><h2 id="query-title">Revisar antes de interpretar.</h2></div></div>
+<div class="workspace"><aside class="query-panel">
+<label for="source-select">Fuente</label><select id="source-select"><option value="">Sin fuente seleccionada</option></select>
+<div id="commune-controls" hidden><label for="commune-select">Comuna y CUT</label><select id="commune-select"></select><p class="small">Asignación por centro de celda de 0,01°. Geografía 2023 fija, aplicada retrospectivamente.</p></div>
+<div class="date-controls"><div><label for="start-month">Desde</label><input id="start-month" type="month"></div><div><label for="end-month">Hasta</label><input id="end-month" type="month"></div></div>
+<label class="upload-label" for="file-input">O cargar un CSV FIRMS</label><input id="file-input" type="file" accept=".csv,text/csv"><p class="small">Se procesa en este navegador. No se sube a un servidor. Máximo 15 MB.</p>
+<div id="scope-controls">
+<label for="scope-select">Área de consulta</label><select id="scope-select"><option value="pilot">Rectángulo piloto aproximado</option><option value="all">Todo el archivo cargado</option></select>
+<p class="small" id="scope-description">−73,9 a −71,0° lon · −38,9 a −35,8° lat. No es un límite administrativo.</p>
+</div>
+<label class="check"><input id="day-only" type="checkbox" checked>Solo observaciones diurnas</label>
+<p class="small" id="filter-description">Confianza: MODIS ≥ 30; VIIRS nominal/alta. Se conservan las plataformas por separado.</p>
+<a class="source-link" href="https://firms.modaps.eosdis.nasa.gov/download/" target="_blank" rel="noopener noreferrer">Archivo histórico oficial FIRMS ↗</a>
+</aside><div class="results"><div id="message" class="message" role="status" aria-live="polite">Cargando el estado de las fuentes…</div>
+<div id="file-summary" class="file-summary" hidden></div>
+<div class="stats"><div><span>Detecciones seleccionadas</span><strong id="count">—</strong></div><div><span>Primer día seleccionado</span><strong id="date-min">—</strong></div><div><span>Último día seleccionado</span><strong id="date-max">—</strong></div></div>
+<div id="calendar-wrap" hidden><h3>Calendario observado por temporada</h3><p class="small">Celdas-día por mes, de julio a junio. 0 = sin detecciones registradas; no demuestra ausencia de fuego. — = fuera del período solicitado o archivo no disponible.</p><div class="table-wrap"><table id="calendar-table" class="calendar"><caption id="calendar-caption" class="small"></caption><thead><tr><th>Temporada</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dic</th><th>Ene</th><th>Feb</th><th>Mar</th><th>Abr</th><th>May</th><th>Jun</th></tr></thead><tbody id="calendar-body"></tbody></table></div></div>
+<div class="result-heading"><h3>Agregación mensual por plataforma</h3><div class="actions"><button id="export-csv" disabled>Detecciones CSV</button><button id="export-monthly" disabled>Serie mensual CSV</button><button id="export-manifest" disabled>Metadatos JSON</button></div></div>
+<p id="monthly-note" class="small"></p>
+<div class="table-wrap"><table><caption class="small">Las celdas-día se cuentan por plataforma. No se suman sensores para construir una serie comparable.</caption><thead><tr><th>Mes UTC</th><th>Instrumento</th><th>Plataforma</th><th>Detecciones</th><th>Celdas-día</th></tr></thead><tbody id="monthly-body"><tr><td colspan="5" class="empty">Sin datos cargados.</td></tr></tbody></table></div>
+<details><summary>Ver detecciones seleccionadas</summary><p class="small">Vista previa de hasta 100 filas; la descarga incluye toda la selección cargada.</p><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>UTC</th><th>Latitud</th><th>Longitud</th><th>Satélite</th><th>Confianza</th></tr></thead><tbody id="records-body"><tr><td colspan="6" class="empty">Sin datos cargados.</td></tr></tbody></table></div></details>
+</div></div></section>
+<section aria-labelledby="limits-title"><div class="section-heading"><div><div class="eyebrow">03 / Alcance</div><h2 id="limits-title">Lo que esta versión permite afirmar.</h2></div></div>
+<div class="limits"><article><h3>Observaciones, no incendios</h3><p>Una detección térmica no equivale a un incendio individual. Sin detecciones no significa ausencia de fuego ni cobertura suficiente. Type=0 identifica focos de vegetación presumidos por el producto, sin distinguir causas.</p></article><article><h3>Geografía fija y explícita</h3><p>Las consultas históricas usan los polígonos DPA 2023 de SUBDERE / IDE Chile, incluso antes de la creación de Ñuble. La comuna se asigna por centro de celda; los bordes tienen una regla única.</p></article><article><h3>Comparabilidad pendiente</h3><p>Los sensores se muestran por separado. El filtro Type=0 del archivo anual no está disponible en las muestras NRT. No se evalúan aún tendencias, anomalías ni cambios entre sensores.</p></article></div></section>
+<footer><span>FireChronos · Historia observada</span><span>Fuentes: NASA FIRMS y SUBDERE / IDE Chile. Aplicación experimental; sin respaldo institucional implícito.</span></footer>
+</main><script type="module" src="app.mjs"></script></body></html>

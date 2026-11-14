@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "url": "https://geoportal.cl/geoportal/catalog/download/912598ad-ac92-35f6-8045-098f214bd9c2",
+  "metadata_url": "https://geoportal.cl/geoportal/catalog/36391/division-politica-administrativa-2023",
+  "provider": "SUBDERE / IDE Chile",
+  "version": "DPA 2023",
+  "retrieved_at": "2026-11-14T16:28:02.320372+00:00",
+  "local_path": "data/raw/boundaries/dpa-2023.zip",
+  "bytes": 310992026,
+  "sha256": "8ac1ce872230b645c3cf04db2d980c1968e78f602144347f4513119dc9b945db",
+  "cached": false,
+  "status": "downloaded"
+}

@@ -10,15 +10,10 @@ Comparación de temporada: acumulado de la temporada en curso hasta el día de c
 truncada AL MISMO DÍA DEL MES (misma plataforma que la serie).
 Recurrencia: celdas 0,01° con detección diurna por temporada, misma regla de plataforma que la serie (S-NPP ≤ 2017, NOAA-20 ≥ 2018).
 """
-import json, os, glob, math, shutil, pathlib, duckdb, pandas as pd
+import json, os, glob, shutil, pathlib, duckdb, pandas as pd
+from publication_contract import finite_json, season_window_predicate
 ROOT = pathlib.Path(__file__).resolve().parents[1]; OUT = ROOT / "data/processed"; WEB = ROOT / "web/public/data"
 (WEB / "comunas").mkdir(parents=True, exist_ok=True)
-def finite(o):
-    """JSON estricto: inf/nan (p. ej. MAE de A con kappa=0 en params.json) → null. JSON.parse del navegador rechaza Infinity."""
-    if isinstance(o, dict): return {k: finite(v) for k, v in o.items()}
-    if isinstance(o, (list, tuple)): return [finite(v) for v in o]
-    if isinstance(o, float) and not math.isfinite(o): return None
-    return o
 params = json.load(open(OUT / "params.json")); r = params["r_const"]
 gates = pd.read_csv(OUT / "gates.csv", index_col=0, dtype={0: str}); gates.index = gates.index.astype(str).str.zfill(5)
 def connect():
@@ -32,7 +27,15 @@ def connect():
         if (OUT / f).exists(): c.execute(f"create view {t} as select * from read_parquet('{OUT / f}')")
     return c
 con = connect()
-comunas = pd.read_csv(ROOT / "data/raw/dpa/comunas_cut.csv", dtype={"cut": str})
+communes_csv = ROOT / "data/raw/dpa/comunas_cut.csv"
+if communes_csv.exists():
+    comunas = pd.read_csv(communes_csv, dtype={"cut": str})
+else:
+    # A fresh clone has versioned geometries/CUT, but no ignored raw downloads.
+    fc = json.load(open(OUT / "comunas_biobio_nuble.geojson"))
+    comunas = pd.DataFrame([f["properties"] for f in fc["features"]])[["cut", "comuna", "region"]]
+if len(comunas) != 54 or comunas.cut.nunique() != 54 or not comunas.cut.str.fullmatch(r"\d{5}").all():
+    raise ValueError("Expected 54 unique official commune CUT codes")
 cutoff = con.execute("select max(acq_date) from det").fetchone()[0]
 cur_season = cutoff.year if cutoff.month >= 7 else cutoff.year - 1
 PLATFORM_RULE = "case when season <= 2017 then 'SNPP' else 'NOAA20' end"
@@ -63,15 +66,8 @@ with c as (select cell_x, cell_y, acq_date, season, sat, cut from celldays
            where sat = {PLATFORM_RULE} and season >= 2012
              and not exists (select 1 from static_mask s where s.cell_x=celldays.cell_x and s.cell_y=celldays.cell_y))
 select cut, season, count(*) acc from c
-where (month(acq_date), day(acq_date)) <= ({cutoff.month}, {cutoff.day}) or month(acq_date) >= 7 and ({cutoff.month} < 7 or (month(acq_date), day(acq_date)) <= ({cutoff.month}, {cutoff.day}))
+where {season_window_predicate(cutoff.month, cutoff.day)}
 group by 1, 2""").df()
-# la condición de arriba: meses jul→corte del mismo año de inicio; para cortes en ene–jun hay que incluir jul–dic completos
-if cutoff.month < 7:
-    sc_all = con.execute(f"""
-    with c as (select acq_date, season, sat, cut from celldays
-               where sat = {PLATFORM_RULE} and season >= 2012
-                 and not exists (select 1 from static_mask s where s.cell_x=celldays.cell_x and s.cell_y=celldays.cell_y))
-    select cut, season, count(*) acc from c where month(acq_date) >= 7 or (month(acq_date), day(acq_date)) <= ({cutoff.month}, {cutoff.day}) group by 1, 2""").df()
 
 def season_compare(cut):
     x = sc_all[sc_all.cut == cut].set_index("season").acc
@@ -100,12 +96,15 @@ for _, cm in comunas.iterrows():
                           band_mae=round(float(g.band_mae), 1), band_coverage_1=params["band_coverage_1mae"], band_coverage_2=params["band_coverage_2mae"]),
                series=rows, season_compare=sc,
                recurrence=[dict(x=int(a.cell_x), y=int(a.cell_y), n=int(a.n_seasons), d=int(a.n_days), f=int(a.first_season), l=int(a.last_season)) for a in rc.itertuples()])
-    json.dump(finite(doc), open(WEB / "comunas" / f"{cut}.json", "w"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
+    json.dump(doc, open(WEB / "comunas" / f"{cut}.json", "w"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
     index.append(dict(cut=cut, comuna=cm.comuna, region=cm.region, enabled=bool(g.enabled),
                       observed_2012_2025=sum((x["value"] or 0) for x in rows if x["state"] == "observed" and 2012 <= x["season"] <= 2025),
                       current=sc["current"], median=sc["median"]))
+unavailable_metrics = []
+params_for_web = finite_json(params, "params", unavailable_metrics)
 json.dump(dict(generated=pd.Timestamp.now(tz="America/Santiago").isoformat(), cutoff=str(cutoff), current_season=cur_season,
-               r_const=round(r, 3), params=finite(params), comunas=finite(index)), open(WEB / "index.json", "w"), ensure_ascii=False, indent=0, allow_nan=False)
+               r_const=round(r, 3), params=params_for_web, unavailable_metrics=unavailable_metrics, comunas=index),
+          open(WEB / "index.json", "w"), ensure_ascii=False, indent=0, allow_nan=False)
 print("corte:", cutoff, "temporada:", cur_season, "| habilitadas:", sum(i["enabled"] for i in index), "de", len(index))
 print("Penco:", {k: v for k, v in season_compare("08107").items() if k != "observed_seasons"})
 

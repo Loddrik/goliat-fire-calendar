@@ -68,6 +68,27 @@ main { padding: 16px 20px 30px; max-width: 1100px; }
 footer { margin-top: 24px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
 .disclaimer { font-weight: 600; color: #444; }
 .print-only { display: none; }
+.audience { margin-top: 8px; max-width: 680px; }
+.view-switch { display: flex; gap: 8px; padding: 12px 20px; background: #eef3f3; flex-wrap: wrap; }
+.view-switch button[aria-pressed=true] { background: #1d5d70; color: white; border-color: #1d5d70; }
+.observed-controls { display: grid; grid-template-columns: minmax(180px, 2fr) minmax(140px, 1fr) minmax(140px, 1fr); gap: 12px; margin: 18px 0; }
+.observed-controls label { display: flex; flex-direction: column; gap: 5px; min-width: 0; font-size: 13px; }
+.observed-controls select, .observed-controls input { width: 100%; min-width: 0; font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: white; color: var(--fg); }
+.observed-exports { flex-wrap: wrap; margin: 12px 0; }
+.observed-history li { margin: 8px 0; font-size: 13px; }
+.observed-table { margin-top: 16px; overflow-x: auto; font-size: 12px; }
+.observed-table summary { cursor: pointer; padding: 8px 0; }
+.observed-table table { width: 100%; border-collapse: collapse; }
+.observed-table td, .observed-table th { padding: 6px; text-align: left; border-bottom: 1px solid var(--line); }
+.layout > main { min-width: 0; width: 100%; }
+header > div { min-width: 0; }
+.tools { flex-wrap: wrap; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #b4560a; outline-offset: 2px; }
+@media (max-width: 600px) {
+  header { flex-direction: column; }
+  .observed-controls { grid-template-columns: 1fr; }
+  main { padding: 12px; }
+}
 
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }

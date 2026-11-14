@@ -12,8 +12,8 @@ export function seriesCsv(doc: ComunaDoc): string {
   return [...meta, head.join(","), ...lines].join("\n");
 }
 
-export function download(name: string, text: string) {
+export function download(name: string, text: string, type = "text/csv;charset=utf-8") {
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
-  a.download = name; a.click(); URL.revokeObjectURL(a.href);
+  a.href = URL.createObjectURL(new Blob([text], { type }));
+  a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }

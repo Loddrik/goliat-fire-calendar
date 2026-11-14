@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": 29701,
+  "communes": 54,
+  "monthly_rows": 29322,
+  "sources": {
+    "aqua-history": {
+      "detections": 26356,
+      "unique_cell_days": 25385
+    },
+    "snpp-history": {
+      "detections": 58853,
+      "unique_cell_days": 38005
+    },
+    "noaa20-history": {
+      "detections": 34023,
+      "unique_cell_days": 21840
+    }
+  },
+  "regional_sum_matches_unique_cell_days": true,
+  "harmonization_validated": false
+}

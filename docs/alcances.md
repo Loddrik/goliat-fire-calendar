@@ -28,6 +28,8 @@ Regla simple: **los números los produce `pipeline/` y los muestra `web/`.** Nad
 **Cambios compatibles** (los puede hacer cualquiera de los dos sin avisar): agregar campos nuevos.
 **Cambios incompatibles** (requieren issue y PR revisado por el otro): renombrar o quitar campos, cambiar el significado de `state`, cambiar la unidad.
 
+**Extensión FireChronos (14-11):** la vista de historia por plataforma consume un contrato separado generado por `pipeline/publish_observed.py` en `observed/dist/data/publication/`, servido bajo `/observed/data/publication/`. Unidad `cell_days_per_platform`, `harmonization: none`, DPA 2023 y Type=0. No modifica la unidad ni los estados del contrato armonizado. No trasladar coeficientes, máscaras o compuertas entre publicaciones; ver `docs/integracion-firechronos.md`. Los números de ambas vistas salen de publicadores deterministas; React solo los muestra. El build sincroniza `observed/dist/` a los activos web.
+
 Si Daniel cambia el método (p. ej. issue #1: método por comuna), agrega `method: "M1" | "A"` a `gates` y actualiza `docs/method.md`; Rubén decide cómo mostrarlo. Los textos de la app que citan números del método (2,35; 14 de 54; 70 %/88 %) **se actualizan en el mismo PR** que cambia los números, o se marcan como pendientes en el issue.
 
 ## 3. Cómo trabajamos en git
