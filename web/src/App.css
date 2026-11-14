@@ -36,12 +36,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .map-notice { position: absolute; top: 0; left: 0; right: 0; z-index: 2; margin: 0; padding: 8px 16px 8px 400px; background: rgba(255,255,255,.95); border-bottom: 1px solid var(--line); font-size: 13px; }
 .panel { position: absolute; z-index: 3; top: 52px; left: 16px; max-height: calc(100% - 68px); width: 370px; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
 .panel .hint { margin: 10px 2px; }
-.season-bar { position: absolute; z-index: 2; left: 400px; right: 16px; bottom: 16px; display: flex; flex-direction: column; align-items: center; gap: 4px; pointer-events: none; }
+.season-bar { position: absolute; z-index: 2; left: 400px; right: 16px; bottom: 30px; display: flex; flex-direction: column; align-items: center; gap: 4px; pointer-events: none; }
 .chips { display: flex; gap: 2px; padding: 4px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; pointer-events: auto; }
 .chips button { border: 0; border-radius: 999px; padding: 5px 9px; font-size: 13px; white-space: nowrap; background: transparent; }
 .chips button.on { background: var(--accent); color: #fff; }
 .chips-label { margin: 0; padding: 3px 10px; background: rgba(255,255,255,.92); border-radius: 6px; font-size: 12px; color: var(--muted); text-align: center; pointer-events: auto; }
-.map-legend { position: absolute; z-index: 2; right: 16px; bottom: 96px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
+.map-legend { position: absolute; z-index: 2; right: 16px; bottom: 112px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
 .map-legend b { display: block; font-weight: 600; margin-bottom: 5px; }
 .map-legend .sw-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .map-legend span { display: inline-flex; align-items: center; gap: 4px; }
@@ -95,6 +95,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 500; padding: 9px 12px; }
 .share-preview { background: #f4f3ee; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
 .share-preview p { margin: 4px 0; }
+.share-preview .row { display: flex; gap: 8px; }
+.share-preview .btn, .share-preview button { flex: 1; text-align: center; }
+.btn.whatsapp { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 500; }
 .links { margin: 0; font-size: 13px; }
 .links a { color: var(--accent); }
 .fold { border-top: 1px solid var(--line); padding-top: 8px; font-size: 13px; }
@@ -160,10 +163,10 @@ footer { margin: 16px 20px 24px; font-size: 12px; color: var(--muted); border-to
   .panel > .search-box { order: 1; margin: 10px 12px; }
   .explore-map { position: relative; order: 2; height: 62vh; min-height: 380px; }
   .panel > .ficha, .panel > p { order: 3; margin: 12px; }
-  .map-notice { padding: 6px 10px; font-size: 12px; }
-  .season-bar { left: 8px; right: 8px; bottom: 8px; }
+  .map-notice { padding: 6px 48px 6px 10px; font-size: 12px; }
+  .season-bar { left: 8px; right: 8px; bottom: 26px; }
   .chips-label { font-size: 11px; }
-  .map-legend { right: 8px; left: auto; top: auto; bottom: 86px; padding: 5px 7px; font-size: 10px; max-width: 62%; }
+  .map-legend { right: 8px; left: auto; top: auto; bottom: 104px; padding: 5px 7px; font-size: 10px; max-width: 62%; }
   .map-legend .sw-row { gap: 5px; }
   .map-legend small { display: none; }
   .map-unavailable { margin: 60px 12px 0; }

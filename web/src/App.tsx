@@ -153,7 +153,7 @@ export default function App() {
             <section className={`card serie${tableOpen ? "" : " print-only"}`} id="serie">
               <h2>{t.calendar} · {current.comuna} · 2002–2026</h2>
               <p className="help">{t.calendarHelp}</p>
-              <Calendar series={current.series} totals={derived?.season_totals ?? []} lang={lang} />
+              <Calendar series={current.series} totals={derived?.season_totals ?? []} bandMae={current.reconstruction_enabled ? current.gates.band_mae : undefined} lang={lang} />
             </section>
           )}
           {current && <section className="card print-only">{method}</section>}
@@ -163,6 +163,7 @@ export default function App() {
       <footer>
         <p className="disclaimer">{t.disclaimer}</p>
         <p className="sources">{view === "reconstruction" ? t.sources : (lang === "es" ? "Historia por plataforma: NASA FIRMS · DPA 2023, SUBDERE / IDE Chile · Sin armonización ni máscara persistente adicional." : "Platform history: NASA FIRMS · DPA 2023, SUBDERE / IDE Chile · No harmonization or additional persistence mask.")}</p>
+        <p className="sources">{lang === "es" ? "Datos FIRMS entregados «tal cual»; NASA no los recomienda para decisiones tácticas:" : "FIRMS data are provided as is; NASA does not recommend them for tactical decisions:"} <a href="https://www.earthdata.nasa.gov/data/projects/lance/disclaimer">earthdata.nasa.gov/data/projects/lance/disclaimer</a></p>
         <p className="sources">We acknowledge the use of data and/or imagery from NASA's Fire Information for Resource Management System (FIRMS) (https://earthdata.nasa.gov/firms), part of NASA's Earth Science Data and Information System (ESDIS).</p>
       </footer>
     </div>

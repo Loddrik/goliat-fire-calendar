@@ -39,12 +39,17 @@ export const join = (xs: string[], lang: Lang) =>
 
 /** Qué meses nombrar. Si hay un mes típico con actividad (mediana ≥ 5), los dos de mayor mediana.
  *  Si no (comunas con pocas temporadas grandes, como Hualqui), los dos de mayor máximo y el que más temporadas tuvo. */
-export type ActivityMonths = { mode: "typical"; months: number[] } | { mode: "rare"; big: number[]; frequent: number } | { mode: "none" };
+export type ActivityMonths = { mode: "typical"; months: number[]; peak: number | null } | { mode: "rare"; big: number[]; frequent: number } | { mode: "none" };
 const seasonOrder = (m: number) => (m + 5) % 12; // jul=0 … jun=11
 export function activityMonths(clim: MonthClimatology[]): ActivityMonths {
   const byMedian = [...clim].sort((a, b) => (b.median ?? 0) - (a.median ?? 0));
-  if ((byMedian[0]?.median ?? 0) >= 5) return { mode: "typical", months: byMedian.slice(0, 2).map((c) => c.m).sort((a, b) => seasonOrder(a) - seasonOrder(b)) };
   const byMax = [...clim].sort((a, b) => (b.max ?? 0) - (a.max ?? 0));
+  if ((byMedian[0]?.median ?? 0) >= 5) {
+    const months = byMedian.slice(0, 2).map((c) => c.m).sort((a, b) => seasonOrder(a) - seasonOrder(b));
+    // Si la temporada más grande cayó en otro mes (p. ej. el febrero de 2023 en Santa Juana), se nombra también.
+    const peak = byMax[0] && !months.includes(byMax[0].m) ? byMax[0].m : null;
+    return { mode: "typical", months, peak };
+  }
   if ((byMax[0]?.max ?? 0) === 0) return { mode: "none" };
   const big = byMax.slice(0, 2).filter((c) => (c.max ?? 0) > 0).map((c) => c.m).sort((a, b) => seasonOrder(a) - seasonOrder(b));
   const frequent = [...clim].sort((a, b) => b.seasons_with - a.seasons_with)[0].m;
@@ -90,6 +95,7 @@ export const UI = {
     catRange: (p25: string, p75: string, n: number) => `(entre ${p25} y ${p75} en la mitad de las ${n} temporadas anteriores).`,
     tooFew: (p25: string, p75: string) => `A esta fecha suele haber muy pocas detecciones aquí (entre ${p25} y ${p75}), así que todavía no se puede comparar.`,
     typical: (ms: string) => `No anticipa cómo seguirá: aquí la mayor actividad suele llegar en ${ms}.`,
+    typicalPeak: (ms: string, peak: string) => `No anticipa cómo seguirá: aquí lo más frecuente es que aparezca en ${ms}, pero la temporada más grande fue en ${peak}.`,
     rare: (big: string, freq: string) => `No anticipa cómo seguirá: las temporadas más grandes fueron en ${big}; en ${freq} es cuando más seguido aparece.`,
     noneMonths: "No anticipa cómo seguirá.",
     source: "Fuente: NASA FIRMS. Cifra preliminar: puede cambiar en los próximos meses.",
@@ -104,11 +110,13 @@ export const UI = {
     hideTable: "Ocultar la serie",
     print: "Imprimir / guardar PDF",
     share: "Compartir",
-    shareTitle: "Esto es lo que se enviará:",
+    shareTitle: "Para compartir con tu junta o tu equipo, esto es lo que se enviará:",
+    shareWhatsapp: "Compartir por WhatsApp",
+    copy: "Copiar texto",
     copied: "Copiado. Pégalo en WhatsApp o en un correo.",
     csv: "CSV de la serie",
     csvDet: "CSV de detecciones",
-    shareMsg: (comuna: string, months: string, cutoff: string, url: string) => `${comuna}: los satélites de la NASA han detectado fuego en nuestra comuna sobre todo en ${months}. Datos hasta el ${cutoff}. No es una alerta: si ves fuego, llama al 130 o al 132. ${url}`,
+    shareMsg: (comuna: string, months: string, big: string | null, cutoff: string, url: string) => `${comuna}: los satélites de la NASA han detectado fuego en nuestra comuna con más frecuencia en ${months}${big ? `; las temporadas más grandes fueron en ${big}` : ""}. Datos hasta el ${cutoff}. No es una alerta: si ves fuego, llama al 130 o al 132. ${url}`,
     shareMsgNone: (comuna: string, cutoff: string, url: string) => `${comuna}: actividad de fuego detectada por los satélites de la NASA, datos hasta el ${cutoff}. No es una alerta: si ves fuego, llama al 130 o al 132. ${url}`,
     planTitle: "Para el plan comunal",
     plan: (comuna: string, cutoff: string) => [
@@ -149,6 +157,7 @@ export const UI = {
     catRange: (p25: string, p75: string, n: number) => `(between ${p25} and ${p75} in half of the previous ${n} seasons).`,
     tooFew: (p25: string, p75: string) => `By this date there are usually very few detections here (between ${p25} and ${p75}), so it is too early to compare.`,
     typical: (ms: string) => `It does not anticipate what comes next: here most activity usually arrives in ${ms}.`,
+    typicalPeak: (ms: string, peak: string) => `It does not anticipate what comes next: here it most often shows up in ${ms}, but the largest season peaked in ${peak}.`,
     rare: (big: string, freq: string) => `It does not anticipate what comes next: the largest seasons peaked in ${big}; ${freq} is when it shows up most often.`,
     noneMonths: "It does not anticipate what comes next.",
     source: "Source: NASA FIRMS. Preliminary figure: it may change in the coming months.",
@@ -163,11 +172,13 @@ export const UI = {
     hideTable: "Hide the series",
     print: "Print / save PDF",
     share: "Share",
-    shareTitle: "This is what will be sent:",
+    shareTitle: "To share with your neighbours or team, this is what will be sent:",
+    shareWhatsapp: "Share on WhatsApp",
+    copy: "Copy text",
     copied: "Copied. Paste it in WhatsApp or an email.",
     csv: "Series CSV",
     csvDet: "Detections CSV",
-    shareMsg: (comuna: string, months: string, cutoff: string, url: string) => `${comuna}: NASA satellites have detected fire in our commune mostly in ${months}. Data through ${cutoff}. Not an alert: if you see fire, call 130 or 132. ${url}`,
+    shareMsg: (comuna: string, months: string, big: string | null, cutoff: string, url: string) => `${comuna}: NASA satellites have detected fire in our commune most often in ${months}${big ? `; the largest seasons peaked in ${big}` : ""}. Data through ${cutoff}. Not an alert: if you see fire, call 130 or 132. ${url}`,
     shareMsgNone: (comuna: string, cutoff: string, url: string) => `${comuna}: fire activity detected by NASA satellites, data through ${cutoff}. Not an alert: if you see fire, call 130 or 132. ${url}`,
     planTitle: "For the communal plan",
     plan: (comuna: string, cutoff: string) => [

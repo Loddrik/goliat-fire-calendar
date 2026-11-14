@@ -12,7 +12,6 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
   tableOpen: boolean; toggleTable: () => void; method: ReactNode;
 }) {
   const T = UI[lang];
-  const [shareOpen, setShareOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const sc = doc.season_compare;
   const cutoff = dmy(doc.cutoff);
@@ -24,20 +23,17 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
   const p25 = num(sc.p25, lang), p75 = num(sc.p75, lang);
   const compare = cat === "too_few" ? T.tooFew(p25, p75)
     : SHOW_CATEGORY ? `${T.cat[cat]} ${T.catRange(p25, p75, sc.n)}` : T.range(p25, p75, sc.n);
-  const months = !act ? "" : act.mode === "typical" ? T.typical(names(act.months))
+  const months = !act ? "" : act.mode === "typical" ? (act.peak ? T.typicalPeak(names(act.months), monthName(act.peak, lang)) : T.typical(names(act.months)))
     : act.mode === "rare" ? T.rare(names(act.big), monthName(act.frequent, lang)) : T.noneMonths;
 
   const url = `${location.origin}/explorar?cut=${doc.cut}`;
-  const shareMonths = !act || act.mode === "none" ? null
-    : act.mode === "typical" ? names(act.months) : names([...new Set([...act.big, act.frequent])]);
-  const shareText = shareMonths ? T.shareMsg(doc.comuna, shareMonths, cutoff, url) : T.shareMsgNone(doc.comuna, cutoff, url);
-  async function share() {
-    setShareOpen(true);
-    try {
-      if (navigator.share) { await navigator.share({ text: shareText }); return; }
-      await navigator.clipboard.writeText(shareText); setCopied(true);
-    } catch { /* el usuario canceló o no hay portapapeles: queda el texto a la vista para copiarlo a mano */ }
+  const shareText = !act || act.mode === "none" ? T.shareMsgNone(doc.comuna, cutoff, url)
+    : act.mode === "typical" ? T.shareMsg(doc.comuna, names(act.months), act.peak ? monthName(act.peak, lang) : null, cutoff, url)
+    : T.shareMsg(doc.comuna, monthName(act.frequent, lang), names(act.big), cutoff, url);
+  async function copy() {
+    try { await navigator.clipboard.writeText(shareText); setCopied(true); } catch { /* sin portapapeles: el texto queda a la vista para copiarlo a mano */ }
   }
+  const whatsapp = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
   const totals = (derived?.season_totals ?? []).filter((t) => t.season >= 2012);
   const tMax = Math.max(1, ...totals.map((t) => t.value ?? 0));
@@ -100,17 +96,16 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
 
       <div className="actions no-print">
         <button className="primary" onClick={toggleTable} aria-expanded={tableOpen}>{tableOpen ? T.hideTable : T.table}</button>
-        <div className="row">
-          <button onClick={() => window.print()}>{T.print}</button>
-          <button onClick={share}>{T.share}</button>
-        </div>
-        {shareOpen && (
-          <div className="share-preview">
-            <b>{T.shareTitle}</b>
-            <p>{shareText}</p>
-            {copied && <small>{T.copied}</small>}
+        <div className="share-preview">
+          <b>{T.shareTitle}</b>
+          <p>{shareText}</p>
+          <div className="row">
+            <a className="btn whatsapp" href={whatsapp} target="_blank" rel="noopener noreferrer">{T.shareWhatsapp}</a>
+            <button onClick={copy}>{T.copy}</button>
           </div>
-        )}
+          {copied && <small>{T.copied}</small>}
+        </div>
+        <button onClick={() => window.print()}>{T.print}</button>
         <p className="links">
           <button className="link" onClick={() => download(`goliat_${doc.cut}_${doc.comuna}.csv`, seriesCsv(doc))}>{T.csv}</button>
           {" · "}

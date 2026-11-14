@@ -8,7 +8,7 @@ export function color(v: number) {
   return i < 0 ? "#ffffff" : BLUES[i];
 }
 
-export function Calendar({ series, totals, lang }: { series: MonthRow[]; totals: SeasonTotal[]; lang: Lang }) {
+export function Calendar({ series, totals, bandMae, lang }: { series: MonthRow[]; totals: SeasonTotal[]; bandMae?: number; lang: Lang }) {
   const t = dict[lang];
   const seasons = Array.from(new Set(series.map((r) => r.season))).sort((a, b) => b - a);
   const totalBy = new Map(totals.map((x) => [x.season, x]));
@@ -54,8 +54,8 @@ export function Calendar({ series, totals, lang }: { series: MonthRow[]; totals:
       </table>
       <div className="legend" aria-label="Leyenda">
         <span><i className="sw observed" /> {t.observed}</span>
-        <span><i className="sw estimated" /> {t.estimated}</span>
-        <span><i className="sw not_enabled">∅</i> {t.notEnabled}</span>
+        {series.some((r) => r.state === "estimated") && <span><i className="sw estimated" /> {t.estimated}{bandMae != null && series.some((r) => r.state === "estimated") ? (lang === "es" ? `: ± ${num(bandMae, lang)} celdas-día por mes en esta comuna. Un total con ± incluye meses aproximados.` : `: ± ${num(bandMae, lang)} cell-days per month in this commune. A total with ± includes approximate months.`) : ""}</span>}
+        {series.some((r) => r.state === "not_enabled") && <span><i className="sw not_enabled">∅</i> {t.notEnabled}</span>}
         <span><i className="sw provisional" /> {t.provisional}</span>
         <span className="ramp"><i className="zero" />0</span>
         {BLUES.map((c, i) => <span key={c} className="ramp"><i style={{ background: c }} />{i < MONTH_LABELS.length ? MONTH_LABELS[i] : (lang === "es" ? "más de 100" : "over 100")}</span>)}
