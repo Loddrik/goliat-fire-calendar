@@ -1,6 +1,6 @@
 """Máscara de fuentes estáticas (industrias, volcanes), propia y fija para toda la serie.
 
-Regla congelada (v1, 14-11-2026 14:10), calculada sobre detecciones diurnas 2002-07 → 2020-06 (período de entrenamiento;
+Regla congelada (v1, 14-11-2026 14:10), calculada sobre todas las detecciones diurnas disponibles anteriores a 2020-07 (incluye Terra antes de 2002-07;
 no usa las temporadas reservadas) de todas las plataformas:
   A. Persistencia industrial: celda con ≥ 30 días distintos de detección y ≥ 8 temporadas distintas.
   B. Volcán: celda con ≥ 10 días y ≥ 50 % de sus detecciones tipificadas (MODIS/VIIRS SP) con type = 1.
