@@ -40,7 +40,7 @@ En cada partición externa, los siete años restantes se dividieron de nuevo par
 
 **[Hecho]** La mejora puntual es **0,63 %**. Un bootstrap pareado de 5.000 réplicas por temporadas completas, semilla 20261114, da un intervalo percentil de **−0,0695 a +0,0384** para la diferencia de MAE medio «selección − M1». Incluye cero. Con solo ocho bloques, no respalda una mejora consistente ni es una prueba externa. M1 fue elegido en 237 de las 432 decisiones comuna/temporada; el resto se distribuyó entre siete κ de A.
 
-Las compuertas diagnósticas pasan de 14 a 12: entra Chillán Viejo (16106) y salen Bulnes (16102), El Carmen (16104) y San Ignacio (16108). Cambiar de método para aumentar el número de comunas no está justificado por este resultado.
+Las compuertas diagnósticas pasan de 14 a 12: entra Pinto (16106) y salen Bulnes (16102), El Carmen (16104) y San Ignacio (16108). Cambiar de método para aumentar el número de comunas no está justificado por este resultado.
 
 **Mulchén (08305):** el ΣMAE mejora de 57,57 con M1 a 49,88 con selección anidada en la comparación con máscara por partición. Sin embargo, sigue ganando a Aqua crudo en solo 5/8 temporadas y a la climatología en 6/8. No pasa la regla predefinida de 6/8 en ambos controles. No habilitar su reconstrucción para facilitar una demo.
 

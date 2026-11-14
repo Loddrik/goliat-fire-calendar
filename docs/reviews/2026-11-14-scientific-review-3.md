@@ -53,7 +53,7 @@ Por tanto, no corresponde presentar este resultado como «recuperamos los focos 
 
 Las reglas no cambiaron: Aqua ≥ 50 celdas-día en entrenamiento, mejora frente a M0 y M2 en ≥ 6/8 temporadas. Las compuertas siguen siendo diagnósticas: utilizar los mismos resultados de desarrollo para elegir el subconjunto no proporciona una validación independiente de ese subconjunto.
 
-Para M1/B pasan 15 comunas. Frente a las 14 actuales, entran Mulchén (08305), Chillán (16101), Chillán Viejo (16106) y Cobquecura (16202); salen El Carmen (16104), San Ignacio (16108) y Quirihue (16201). No consiste en añadir Mulchén y conservar automáticamente todas las habilitaciones anteriores.
+Para M1/B pasan 15 comunas. Frente a las 14 actuales, entran Mulchén (08305), Chillán (16101), Pinto (16106) y Cobquecura (16202); salen El Carmen (16104), San Ignacio (16108) y Quirihue (16201). No consiste en añadir Mulchén y conservar automáticamente todas las habilitaciones anteriores.
 
 **Mulchén:** M1/B gana a Aqua crudo en **7/8** temporadas y a la climatología en **6/8**. Su MAE medio baja de **7,1968 a 5,7413**, y el sesgo medio de **+2,8171 a +0,0971**. Pasa las compuertas diagnósticas sin alterar umbrales. Esto justifica revisar su reconstrucción candidata; no habilita por sí solo una serie histórica publicada.
 
