@@ -9,7 +9,11 @@ import { ObservedHistory } from "./ObservedHistory";
 import "./App.css";
 
 export default function App() {
-  const [lang, setLang] = useState<Lang>(() => (navigator.language.startsWith("es") ? "es" : "en"));
+  const [lang, setLang] = useState<Lang>(() => {
+    const fromUrl = new URLSearchParams(location.search).get("lang");
+    if (fromUrl === "es" || fromUrl === "en") return fromUrl;
+    return navigator.language.startsWith("es") ? "es" : "en";
+  });
   const [index, setIndex] = useState<IndexDoc | null>(null);
   const [cut, setCut] = useState<string>(() => new URLSearchParams(location.search).get("cut") ?? "08107");
   const [doc, setDoc] = useState<ComunaDoc | null>(null);
