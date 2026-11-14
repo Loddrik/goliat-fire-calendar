@@ -94,3 +94,9 @@ uv run python pipeline/scaled_band_audit.py
 ```
 
 Seis tests nuevos cubren fórmula de IS y ambos tipos de exceso, escala en cero, normalización, falta de calibración, independencia de etiquetas futuras y exclusión de la temporada externa de todos los ajustes. **66 tests Python pasan**. La figura fue inspeccionada y los resultados numéricos se contrastaron con los CSV. Las decisiones de selección para producción siguen pendientes de evidencia y revisión, no se deducen de una sola métrica favorable.
+
+## Sincronización posterior con producto
+
+Después del experimento se incorporó `dev` hasta `f49a9af` en las tres ramas científicas. Incluye cuartiles derivados con interpolación, número de temporadas con detección por mes y respeto de `?lang`. Se verificaron los 648 resúmenes comuna/mes contra la serie observada y sus celdas contra la recurrencia. Los 13 tests JS, build y lint pasan; solo persisten advertencias ya existentes.
+
+Los 54 JSON comunales de `derived/` cambian legítimamente por ese trabajo de producto. Por eso los hashes de protección de esos archivos en el manifiesto del experimento corresponden a su instantánea **anterior** a la integración (`source_head=f8c6e07`), no a los nuevos metadatos. Los Parquet científicos, parámetros, compuertas, JSON principales de las comunas y todos los artefactos de investigación siguen idénticos. No se reescribió el manifiesto histórico ni se recalculó una puntuación con la nueva climatología de producto.
