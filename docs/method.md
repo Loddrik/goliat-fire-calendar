@@ -91,3 +91,8 @@ An automated, read-only scientific review (checklist C1–C20 of the preparation
 **Calibration population × shape, iteration 13:** [`2026-11-14-scientific-review-13.md`](reviews/2026-11-14-scientific-review-13.md) compares all eight predeclared combinations for M1 and M1/B with fixed square-root scale and unchanged points. Neither empirical asymmetry nor switching to calibration on all months improves the primary all-month interval loss over the symmetric/active control. Asymmetry helps some Aqua=0/S-NPP>0 months but loses coverage in zero-detection months. These recipes remain development only; no public interval semantics change.
 
 **Separate Terra predictor, iteration 14:** [`2026-11-14-scientific-review-14.md`](reviews/2026-11-14-scientific-review-14.md) tests Aqua+Terra as two regularized predictors, with a seasonal-Terra ablation and strict nested/blocked controls. Adding the tested C family to M1/B increases nested MAE by 1.21 % and is unfavorable in seven of eight seasons; small later-period gains do not justify replacing B or M1. Terra is never summed with Aqua as event counts. All existing publication gates and values remain unchanged.
+
+
+## Ajuste de extremos por pérdida — etapa 15
+
+[Revisión completa](reviews/2026-11-14-scientific-review-15.md): la optimización directa de intervalos raíz mejora los cuantiles asimétricos de igual cohorte en 8/8 folds, pero no domina la referencia simétrica en todos los destinos. Diez recetas conservadas, 85 tests y controles anteriores reproducidos; sin cambio de publicación ni cobertura garantizada.
