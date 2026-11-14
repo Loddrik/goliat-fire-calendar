@@ -37,6 +37,7 @@ export default function App() {
         <div className="tools no-print">
           <button onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label="Language">{lang === "es" ? "EN" : "ES"}</button>
           {doc && <button onClick={() => download(`goliat_${doc.cut}_${doc.comuna}.csv`, seriesCsv(doc))}>{t.csv}</button>}
+          {doc && <a className="btn" href={`/data/detections/${doc.cut}.csv`} download>{t.csvDet}</a>}
           <button onClick={() => window.print()}>{t.print}</button>
         </div>
       </header>

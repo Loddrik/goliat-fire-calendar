@@ -76,3 +76,18 @@ json.dump(dict(generated=pd.Timestamp.now(tz="America/Santiago").isoformat(), cu
 print("corte:", cutoff, "temporada en curso:", cur_season, "| comunas:", len(index), "| habilitadas:", sum(i["enabled"] for i in index))
 print("ejemplo Penco:", {k: v for k, v in json.load(open(WEB / "comunas/08107.json"))["season_compare"].items() if k != "observed_seasons"})
 import os; print("tamaño total KB:", round(sum(os.path.getsize(p) for p in (WEB / "comunas").glob("*.json")) / 1e3))
+
+# Detecciones filtradas usadas (por comuna), para la exportación cruda
+DET = OUT / "detections_csv"; DET.mkdir(exist_ok=True)
+con.execute(f"""
+copy (
+  select c.cut, d.acq_date, d.acq_time, d.lat, d.lon, d.sat, d.instrument, d.confidence, d.frp, d.source_kind,
+         d.cell_x, d.cell_y,
+         exists(select 1 from static_mask s where s.cell_x=d.cell_x and s.cell_y=d.cell_y) masked_static
+  from det d join cells_comuna c using (cell_x, cell_y) order by c.cut, d.acq_date, d.acq_time
+) to '{DET}' (format csv, partition_by (cut), overwrite_or_ignore, header)
+""")
+import glob, shutil
+for p in glob.glob(str(DET / "cut=*/*.csv")):
+    cut = p.split("cut=")[1].split("/")[0]; shutil.move(p, DET / f"{cut}.csv"); shutil.rmtree(DET / f"cut={cut}", ignore_errors=True)
+print("CSV de detecciones por comuna:", len(list(DET.glob("*.csv"))), "archivos,", round(sum(os.path.getsize(p) for p in DET.glob("*.csv")) / 1e6, 1), "MB")
