@@ -20,11 +20,12 @@ BBOX = (-74.0, -38.6, -70.9, -35.9)  # oeste, sur, este, norte (con margen sobre
 con = duckdb.connect(str(OUT / "goliat.duckdb"))
 con.execute("install spatial; load spatial;") if False else None
 
-def read(glob, source_kind):
+def read(glob, source_kind, has_type=True):
+    type_expr = "try_cast(type as integer)" if has_type else "null::integer"
     return f"""
     select latitude::double lat, longitude::double lon, acq_date::date acq_date, lpad(acq_time::varchar, 4, '0') acq_time,
            satellite, instrument, confidence::varchar confidence, frp::double frp, daynight,
-           try_cast(type as integer) type, version::varchar version, '{source_kind}' source_kind, filename
+           {type_expr} type, version::varchar version, '{source_kind}' source_kind, filename
     from read_csv('{glob}', header=true, union_by_name=true, filename=true, all_varchar=true)
     where daynight = 'D' and longitude::double between {BBOX[0]} and {BBOX[2]} and latitude::double between {BBOX[1]} and {BBOX[3]}
     """
@@ -36,10 +37,10 @@ parts = [
     read(RAW / "firms_api/VIIRS_SNPP_SP/*.csv", "api_sp"),
     read(RAW / "firms_api/VIIRS_NOAA20_SP/*.csv", "api_sp"),
     read(RAW / "firms_api/VIIRS_NOAA21_SP/*.csv", "api_sp"),
-    read(RAW / "firms_api/MODIS_NRT/*.csv", "nrt"),
-    read(RAW / "firms_api/VIIRS_SNPP_NRT/*.csv", "nrt"),
-    read(RAW / "firms_api/VIIRS_NOAA20_NRT/*.csv", "nrt"),
-    read(RAW / "firms_api/VIIRS_NOAA21_NRT/*.csv", "nrt"),
+    read(RAW / "firms_api/MODIS_NRT/*.csv", "nrt", has_type=False),
+    read(RAW / "firms_api/VIIRS_SNPP_NRT/*.csv", "nrt", has_type=False),
+    read(RAW / "firms_api/VIIRS_NOAA20_NRT/*.csv", "nrt", has_type=False),
+    read(RAW / "firms_api/VIIRS_NOAA21_NRT/*.csv", "nrt", has_type=False),
 ]
 con.execute("create or replace table raw_all as " + " union all ".join(parts))
 print("filas crudas en bbox:", con.execute("select count(*) from raw_all").fetchone()[0])
