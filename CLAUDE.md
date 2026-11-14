@@ -5,6 +5,7 @@ Calendario de actividad de fuego detectada, MODIS + VIIRS armonizados (NASA FIRM
 ## Lee primero
 
 - **Manifiesto v2** (problema, usuario, producto mínimo, alcance, compuertas, plan hora a hora): `/Users/loddrik/projects/personal/nasa-space-challenge/docs/manifiesto.md`. Si una tarea no sirve a lo que dice, no se hace.
+- **`docs/alcances.md`: reparto Daniel/Rubén, contrato pipeline↔web, flujo git y cortes. Leerlo antes de tocar algo del otro lado.**
 - `docs/method.md`: el método congelado, con números y divulgaciones. `docs/reviews/`: revisiones y qué se cambió.
 - Investigación de usuarios con fuentes: `/Users/loddrik/projects/personal/nasa-space-challenge/docs/investigacion/usuarios/*.md`.
 - Decisiones y su porqué: `/Users/loddrik/projects/personal/nasa-space-challenge/docs/decisiones.md` (las del 14-11).
