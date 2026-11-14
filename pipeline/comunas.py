@@ -1,5 +1,5 @@
 """Polígonos de las 54 comunas de Biobío + Ñuble con CUT.
-Fuente: geoBoundaries CHL ADM3 (gbOpen, año 2020, derivado de la BCN) + tabla CUT.
+Fuente: geoBoundaries CHL ADM3 (gbOpen, año 2020, derivado de la BCN) + tabla CUT (DPA oficial SUBDERE/INE; los códigos de Ñuble se corrigieron el 14-11 tras revisión: el paquete npm los traía corridos).
 Salida: data/processed/comunas_biobio_nuble.geojson (completo) y web/public/data/comunas.geojson (simplificado)."""
 import csv, json, pathlib, unicodedata
 from shapely.geometry import shape, mapping

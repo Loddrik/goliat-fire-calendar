@@ -37,13 +37,13 @@ export function Calendar({ series, lang }: { series: MonthRow[]; lang: Lang }) {
                 <th scope="row">{seasonLabel(s)}</th>
                 {rows.map((r, i) => {
                   if (!r) return <td key={i} className="cell future" aria-label="—"></td>;
-                  const cls = `cell ${r.state}${r.provisional ? " provisional" : ""}`;
+                  const cls = `cell ${r.state}${r.provisional ? " provisional" : ""}${r.partial ? " partial" : ""}`;
                   const label = r.state === "not_enabled" ? t.notEnabled : `${r.value}${r.state === "estimated" ? ` ± ${r.band}` : ""}`;
                   const light = r.value != null && r.value > 0 && Math.sqrt(r.value / max) > 0.45;
                   return (
                     <td key={i} className={cls} style={{ background: r.state === "not_enabled" ? undefined : color(r.value ?? 0, max), color: light ? "#fff" : "#222" }}
-                        title={`${t.monthsLong[r.m - 1]} ${r.y}: ${label}${r.provisional ? " · NRT" : ""}`}>
-                      {r.state === "not_enabled" ? "∅" : r.value}
+                        title={`${t.monthsLong[r.m - 1]} ${r.y}: ${label}${r.provisional ? " · NRT" : ""}${r.partial ? (lang === "es" ? " · mes incompleto" : " · partial month") : ""}`}>
+                      {r.state === "not_enabled" ? "∅" : r.partial ? `${r.value}…` : r.value}
                     </td>
                   );
                 })}

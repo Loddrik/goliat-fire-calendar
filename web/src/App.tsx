@@ -88,8 +88,9 @@ export default function App() {
                 <h2><button className="link" onClick={() => setShowMethod(!showMethod)} aria-expanded={showMethod}>{showMethod ? "▾" : "▸"} {t.method}</button></h2>
                 <div className={showMethod ? "" : "print-only"}>
                   <ul className="gates">
-                    <li>MAE {lang === "es" ? "factor constante" : "constant factor"}: <b>{doc.gates.mae_const}</b> · MAE {lang === "es" ? "climatología" : "climatology"}: <b>{doc.gates.mae_clim}</b> · {lang === "es" ? "gana en" : "wins in"} <b>{doc.gates.wins_vs_clim}/{doc.gates.of}</b> {t.seasons}</li>
-                    <li>Aqua 2012–2019: {doc.gates.aqua_train} · S-NPP 2012–2019: {doc.gates.snpp_train} · r = {doc.r_const}</li>
+                    <li>{lang === "es" ? "Validación cruzada 2012–2019, error absoluto medio mensual" : "Cross-validation 2012–2019, monthly mean absolute error"}: Aqua {lang === "es" ? "crudo" : "raw"} <b>{doc.gates.loso_mae_raw}</b> · Aqua × {doc.r_const} <b>{doc.gates.loso_mae_const}</b> · {lang === "es" ? "climatología" : "climatology"} <b>{doc.gates.loso_mae_clim}</b></li>
+                    <li>{lang === "es" ? "Gana a la climatología en" : "Beats climatology in"} <b>{doc.gates.wins_vs_clim}/{doc.gates.of}</b> {t.seasons} {doc.gates.gate_vs_clim ? "✓" : "✗"} · {lang === "es" ? "gana a Aqua crudo en" : "beats raw Aqua in"} <b>{doc.gates.wins_vs_raw}/{doc.gates.of}</b> {doc.gates.gate_vs_raw ? "✓" : "✗"} · Aqua 2012–2019: <b>{doc.gates.aqua_train}</b> (≥ {doc.gates.min_aqua} {doc.gates.gate_aqua ? "✓" : "✗"}) · S-NPP: {doc.gates.snpp_train}</li>
+                    {doc.reconstruction_enabled && <li>{lang === "es" ? "Error típico del estimado" : "Typical error of estimates"}: ± {doc.gates.band_mae} ({lang === "es" ? "cubre" : "covers"} {Math.round(doc.gates.band_coverage_1 * 100)} % {lang === "es" ? "de los meses activos" : "of active months"}; {Math.round(doc.gates.band_coverage_2 * 100)} % {lang === "es" ? "con" : "at"} ±2)</li>}
                   </ul>
                   {t.methodBody.map((p, i) => <p key={i}>{p}</p>)}
                 </div>

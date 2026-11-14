@@ -5,7 +5,10 @@ no usa las temporadas reservadas) de todas las plataformas:
   A. Persistencia industrial: celda con ≥ 30 días distintos de detección y ≥ 8 temporadas distintas.
   B. Volcán: celda con ≥ 10 días y ≥ 50 % de sus detecciones tipificadas (MODIS/VIIRS SP) con type = 1.
   C. Estática declarada por FIRMS: celda con ≥ 15 días y ≥ 60 % de sus detecciones tipificadas con type = 2.
-  Buffer: las 8 celdas vecinas de cualquier celda A o B con ≥ 100 días (el desfase geométrico entre sensores es de 1–3 celdas).
+  Buffer: las 8 celdas vecinas de cualquier celda A con ≥ 100 días, y los 2 anillos (24 celdas) de toda celda B (volcán), porque la
+  actividad volcánica se desplaza entre celdas vecinas (fuga detectada en Nevados de Chillán por el revisor, 14-11).
+  Nota: las celdas A fuera del polo Talcahuano–Hualpén son centros urbanos (San Carlos, Curanilahue, Cabrero, Mulchén, Quirihue) con
+  100–300 días solo en Terra y casi ninguno en VIIRS: falsas alarmas urbanas de la pasada matinal de MODIS, no industrias.
 `type` solo sirve como evidencia para construir la máscara; la máscara se aplica igual a SP y NRT (que no trae `type`).
 Salida: data/processed/static_mask.parquet, tabla monthly_masked, y el efecto por plataforma."""
 import pathlib, duckdb
@@ -32,7 +35,11 @@ create or replace table static_mask as
 select cell_x, cell_y, rule from static_core
 union
 select s.cell_x+dx, s.cell_y+dy, 'buffer' from static_core s, (values (-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)) v(dx,dy)
-where s.n_days>=100 and s.rule in ('A_persistente','B_volcan')
+where s.n_days>=100 and s.rule = 'A_persistente'
+  and not exists (select 1 from static_core c where c.cell_x=s.cell_x+dx and c.cell_y=s.cell_y+dy)
+union
+select s.cell_x+dx, s.cell_y+dy, 'buffer_volcan' from static_core s, range(-2,3) rx(dx), range(-2,3) ry(dy)
+where s.rule = 'B_volcan' and not (dx=0 and dy=0)
   and not exists (select 1 from static_core c where c.cell_x=s.cell_x+dx and c.cell_y=s.cell_y+dy)
 """)
 print("celdas enmascaradas por regla:", con.execute("select rule, count(*) from static_mask group by 1 order by 1").fetchall())

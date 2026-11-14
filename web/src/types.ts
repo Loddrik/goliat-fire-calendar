@@ -10,6 +10,7 @@ export interface MonthRow {
   provisional?: boolean;
   band?: number;
   aqua?: number;
+  partial?: boolean;
 }
 
 export interface SeasonCompare {
@@ -21,6 +22,8 @@ export interface SeasonCompare {
   p25: number | null;
   p75: number | null;
   p90: number | null;
+  n: number;
+  cutoff_day: number;
 }
 
 export interface RecurrenceCell { x: number; y: number; n: number; d: number; f: number; l: number }
@@ -32,7 +35,7 @@ export interface ComunaDoc {
   cutoff: string;
   r_const: number;
   reconstruction_enabled: boolean;
-  gates: { mae_const: number; mae_clim: number; wins_vs_clim: number; of: number; aqua_train: number; snpp_train: number };
+  gates: { aqua_train: number; snpp_train: number; min_aqua: number; loso_mae_raw: number; loso_mae_const: number; loso_mae_clim: number; wins_vs_clim: number; wins_vs_raw: number; of: number; min_wins: number; gate_aqua: boolean; gate_vs_clim: boolean; gate_vs_raw: boolean; band_mae: number; band_coverage_1: number; band_coverage_2: number };
   series: MonthRow[];
   season_compare: SeasonCompare;
   recurrence: RecurrenceCell[];

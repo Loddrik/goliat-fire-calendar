@@ -2,31 +2,31 @@
 
 Particiones congeladas (14-11-2026 14:20), temporadas jul–jun nombradas por el año de inicio:
   entrenamiento + selección interna (LOSO): 2012–2019 (8 temporadas)
-  prueba final (se mira una sola vez): 2020–2021
-  2022→ : deriva orbital de Aqua; solo diagnóstico, no se usa.
+  prueba final (se miró una vez con A(κ); después se eligió M1 por parsimonia → sus cifras 2020–2021 son DESCRIPTIVAS)
+  2022→ : deriva orbital de Aqua; solo diagnóstico.
   Excluidos en ambos sensores: 2020-08 y 2020-09 (falla de Aqua 16-08 a 02-09-2020).
-Métodos: M0 Aqua sin corregir · M1 factor regional constante · M2 climatología VIIRS (sin Aqua)
+Métodos: M0 Aqua sin corregir · M1 factor regional constante · M2 climatología VIIRS por comuna y mes (MEDIANA, sin Aqua)
          A(κ) factor por grupo de meses con encogimiento regional: r = (V + κ r_R)/(A + κ)
-Grupos de meses: sep..may individuales, jun–ago juntos.
+Compuertas por comuna (SOLO con LOSO, revisión científica 14-11 16:30):
+  M1 gana a M2 en ≥ 6 de 8 temporadas, M1 gana a M0 en ≥ 6 de 8 temporadas, y Aqua 2012–2019 ≥ 50 celdas-día.
 Salida: data/processed/eval_loso.csv, eval_final.csv, gates.csv, params.json
 """
-import json, pathlib, itertools, duckdb, pandas as pd, numpy as np
+import json, pathlib, duckdb, pandas as pd, numpy as np
 ROOT = pathlib.Path(__file__).resolve().parents[1]; OUT = ROOT / "data/processed"
 TRAIN = list(range(2012, 2020)); TEST = [2020, 2021]; KAPPAS = [0, 10, 30, 50, 100, 300, 1e9]
+MIN_AQUA, MIN_WINS = 50, 6
 con = duckdb.connect(str(OUT / "goliat.duckdb"), read_only=True)
 cuts = [r[0] for r in con.execute("select distinct cut from cells_comuna order by 1").fetchall()]
 m = con.execute("""select cut, season, m, sum(case when sat='Aqua' then celldays end) aqua, sum(case when sat='SNPP' then celldays end) snpp
-                   from monthly_masked where season between 2012 and 2021 group by all""").df()
-grid = pd.MultiIndex.from_product([cuts, TRAIN + TEST, range(1, 13)], names=["cut", "season", "m"]).to_frame(index=False)
+                   from monthly_masked where season between 2012 and 2025 group by all""").df()
+grid = pd.MultiIndex.from_product([cuts, range(2012, 2026), range(1, 13)], names=["cut", "season", "m"]).to_frame(index=False)
 d = grid.merge(m, how="left").fillna({"aqua": 0, "snpp": 0})
-d = d[~((d.season == 2020) & d.m.isin([8, 9]))]           # falla de Aqua
-d = d[~((d.season == 2012) & d.m.isin([7, 8, 9, 10, 11, 12]))]  # S-NPP parte 2012-01-20 pero la temporada 2012 empieza en jul-2012: completa. (se deja)
+d = d[~((d.season == 2020) & d.m.isin([8, 9]))]  # falla de Aqua
 d["g"] = d.m.map(lambda x: "JJA" if x in (6, 7, 8) else str(x))
 
 def fit(tr):
-    """Devuelve los parámetros aprendidos con las filas de entrenamiento tr."""
     r_const = tr.snpp.sum() / tr.aqua.sum()
-    clim = tr.groupby(["cut", "m"]).snpp.mean().rename("clim")
+    clim = tr.groupby(["cut", "m"]).snpp.median().rename("clim")
     reg = tr.groupby("g").agg(A=("aqua", "sum"), V=("snpp", "sum")); reg["rR"] = reg.V / reg.A
     loc = tr.groupby(["cut", "g"]).agg(A=("aqua", "sum"), V=("snpp", "sum"))
     return dict(r_const=r_const, clim=clim, reg=reg, loc=loc)
@@ -44,67 +44,65 @@ def score(x, cols):
     for cut, grp in x.groupby("cut"):
         for c in cols:
             e = grp[c] - grp.snpp
-            rows.append(dict(cut=cut, method=c, mae=e.abs().mean(), bias=e.mean(), n=len(grp), snpp_mean=grp.snpp.mean(), aqua_sum=grp.aqua.sum()))
+            rows.append(dict(cut=cut, method=c, mae=e.abs().mean(), bias=e.mean(), n=len(grp), aqua_sum=grp.aqua.sum()))
     return pd.DataFrame(rows)
 
-# 1) LOSO en entrenamiento para elegir κ
-loso = []
+# 1) LOSO en entrenamiento
+loso, preds = [], []
 for s in TRAIN:
     tr, te = d[d.season.isin([t for t in TRAIN if t != s])], d[d.season == s]
     p = fit(tr)
     for k in KAPPAS:
         x = predict(te, p, k); sc = score(x, ["M0", "M1", "M2", "A_k"]); sc["kappa"] = k; sc["held_out"] = s; loso.append(sc)
-loso = pd.concat(loso)
+        if k == KAPPAS[0]: preds.append(x[["cut", "season", "m", "aqua", "snpp", "M0", "M1", "M2"]])
+loso = pd.concat(loso); preds = pd.concat(preds)
 tot = loso[loso.method == "A_k"].groupby("kappa").mae.sum()
-ctrl = loso[(loso.kappa == KAPPAS[0])].groupby("method").mae.sum()
-print("MAE total LOSO (suma sobre comunas y temporadas):")
-print("  controles:", {k: round(v, 1) for k, v in ctrl.items() if k != "A_k"})
-print("  A(κ):", {k: round(v, 1) for k, v in tot.items()})
-kappa_sel = float(tot.idxmin()); print("κ elegido:", kappa_sel)
+ctrl = loso[loso.kappa == KAPPAS[0]].groupby("method").mae.sum()
+print("MAE total LOSO:", {k: round(v, 1) for k, v in ctrl.items() if k != "A_k"}, "| A(κ):", {k: round(v, 1) for k, v in tot.items()})
+kappa_best = float(tot.idxmin())
 loso.to_csv(OUT / "eval_loso.csv", index=False)
 
-# estabilidad: en cuántas temporadas LOSO A gana a M1 y a M2, por comuna
-a = loso[(loso.kappa == kappa_sel) & (loso.method == "A_k")].set_index(["cut", "held_out"]).mae
-m1 = loso[(loso.kappa == KAPPAS[0]) & (loso.method == "M1")].set_index(["cut", "held_out"]).mae
-m2 = loso[(loso.kappa == KAPPAS[0]) & (loso.method == "M2")].set_index(["cut", "held_out"]).mae
-stab = pd.DataFrame({"wins_vs_M1": (a < m1).groupby("cut").sum(), "wins_vs_M2": (a < m2).groupby("cut").sum()})
-
-# 2) Prueba final: una sola configuración, se mira una vez
-p = fit(d[d.season.isin(TRAIN)])
-x = predict(d[d.season.isin(TEST)], p, kappa_sel)
-final = score(x, ["M0", "M1", "M2", "A_k"]); final.to_csv(OUT / "eval_final.csv", index=False)
-f = final.pivot(index="cut", columns="method", values=["mae", "bias"])
+# 2) Compuertas por comuna, solo LOSO
+piv = loso[loso.kappa == KAPPAS[0]].pivot_table(index=["cut", "held_out"], columns="method", values="mae")
+wins = pd.DataFrame({"wins_vs_M2": (piv.M1 < piv.M2).groupby("cut").sum(), "wins_vs_M0": (piv.M1 < piv.M0).groupby("cut").sum()})
 g = pd.DataFrame(index=cuts)
-g["aqua_train"] = d[d.season.isin(TRAIN)].groupby("cut").aqua.sum()
-g["snpp_train"] = d[d.season.isin(TRAIN)].groupby("cut").snpp.sum()
-g["mae_M1"], g["mae_M2"], g["mae_A"] = f["mae"]["M1"], f["mae"]["M2"], f["mae"]["A_k"]
-g["bias_M1"], g["bias_A"] = f["bias"]["M1"], f["bias"]["A_k"]
-g = g.join(stab)
-g["gate_vs_const"] = (g.mae_A < g.mae_M1) & (g.bias_A.abs() <= g.bias_M1.abs() * 1.1 + 0.05)
-g["gate_vs_clim"] = g.mae_A < g.mae_M2
-g["gate_stable"] = (g.wins_vs_M1 >= 5) & (g.wins_vs_M2 >= 5)
-g["enabled"] = g.gate_vs_const & g.gate_vs_clim & g.gate_stable
-g.round(3).to_csv(OUT / "gates.csv")
-reg = x.groupby(["season", "m"])[["snpp", "M0", "M1", "M2", "A_k"]].sum()
-print("\nPrueba final 2020–2021, suma regional por método: MAE mensual")
-print({c: round((reg[c] - reg.snpp).abs().mean(), 1) for c in ["M0", "M1", "M2", "A_k"]})
-print("\nComunas habilitadas:", int(g.enabled.sum()), "de", len(g))
-print(g.sort_values("snpp_train", ascending=False).head(15).round(2).to_string())
-json.dump(dict(kappa=kappa_sel, train=TRAIN, test=TEST, r_const=p["r_const"], rR=p["reg"].rR.to_dict(),
-               excluded=["2020-08", "2020-09"], frozen_at="2026-11-14T14:20-03:00"), open(OUT / "params.json", "w"), indent=1)
+tr_all = d[d.season.isin(TRAIN)]
+g["aqua_train"] = tr_all.groupby("cut").aqua.sum(); g["snpp_train"] = tr_all.groupby("cut").snpp.sum()
+lm = loso[loso.kappa == KAPPAS[0]].groupby(["cut", "method"]).mae.mean().unstack()
+g["loso_mae_M0"], g["loso_mae_M1"], g["loso_mae_M2"] = lm.M0, lm.M1, lm.M2
+g = g.join(wins)
+g["gate_aqua"] = g.aqua_train >= MIN_AQUA
+g["gate_vs_clim"] = g.wins_vs_M2 >= MIN_WINS
+g["gate_vs_raw"] = g.wins_vs_M0 >= MIN_WINS
+g["enabled"] = g.gate_aqua & g.gate_vs_clim & g.gate_vs_raw
 
-# 3) Lectura de parsimonia: en LOSO, A(κ*) y M1 empatan (diferencia < 0,2 %). Se evalúa M1 (factor constante) como
-#    método publicable, con las mismas compuertas contra la climatología y la misma regla de estabilidad.
-#    DIVULGACIÓN: esta evaluación se decidió DESPUÉS de mirar el bloque final con A(κ*). Las métricas de M1 en 2020–2021
-#    ya no son una prueba independiente estricta; la elección de M1 se apoya en el LOSO (solo entrenamiento).
-m1w = pd.DataFrame({"wins_vs_M2_M1": (m1 < m2).groupby("cut").sum()})
-g = g.join(m1w)
-g["M1_gate_vs_clim"] = g.mae_M1 < g.mae_M2
-g["M1_gate_stable"] = g.wins_vs_M2_M1 >= 6
-g["M1_enabled"] = g.M1_gate_vs_clim & g.M1_gate_stable
+# error típico y cobertura empírica de la banda (LOSO, M1), por comuna, en meses activos (snpp > 0)
+act = preds[preds.snpp > 0].copy(); act["err"] = (act.M1 - act.snpp).abs()
+mae_act = act.groupby("cut").err.mean().rename("band_mae")
+act = act.merge(mae_act, on="cut")
+cov1 = (act.err <= act.band_mae).mean(); cov2 = (act.err <= 2 * act.band_mae).mean()
+g = g.join(mae_act); g["band_mae"] = g.band_mae.fillna(0)
+rel = (act.err / act.snpp)[act.snpp >= 10].median()
+print(f"cobertura de ±MAE en meses activos: {cov1:.0%}; ±2·MAE: {cov2:.0%}; error relativo mediano (≥10 celdas-día): {rel:.0%}")
+
+# 3) Prueba final: DESCRIPTIVA para M1 (ver docstring)
+p = fit(tr_all)
+x = predict(d[d.season.isin(TEST)], p, kappa_best)
+final = score(x, ["M0", "M1", "M2", "A_k"]); final.to_csv(OUT / "eval_final.csv", index=False)
+reg = x.groupby(["season", "m"])[["snpp", "M0", "M1", "M2", "A_k"]].sum()
+print("prueba 2020–2021 (descriptiva), MAE regional mensual:", {c: round((reg[c] - reg.snpp).abs().mean(), 1) for c in ["M0", "M1", "M2", "A_k"]})
 g.round(3).to_csv(OUT / "gates.csv")
-print("\nM1 (factor constante r =", round(p["r_const"], 3), ") habilitado en", int(g.M1_enabled.sum()), "de", len(g), "comunas")
-print("  habilitadas:", sorted(g.index[g.M1_enabled].tolist()))
-print("  no habilitadas:", sorted(g.index[~g.M1_enabled].tolist()))
-print("  LOSO M1 vs M2 por temporada (suma comunas):", {s: (round(v1, 1), round(v2, 1)) for s, v1, v2 in
-      zip(TRAIN, m1.groupby("held_out").sum().values, m2.groupby("held_out").sum().values)})
+
+# diagnósticos para el método
+r_season = d[d.season.isin(TRAIN)].groupby("season").agg(a=("aqua", "sum"), v=("snpp", "sum")); r_season = (r_season.v / r_season.a)
+r_drift = d[d.season >= 2020].groupby("season").agg(a=("aqua", "sum"), v=("snpp", "sum")); r_drift = (r_drift.v / r_drift.a)
+print("r por temporada 2012–2019:", r_season.round(2).to_dict(), f"CV {r_season.std()/r_season.mean():.1%}")
+print("r 2020→ (diagnóstico):", r_drift.round(2).to_dict())
+print("\nComunas habilitadas:", int(g.enabled.sum()), "de", len(g), "→", sorted(g.index[g.enabled]))
+print(g.sort_values("snpp_train", ascending=False).round(2).to_string())
+json.dump(dict(r_const=p["r_const"], kappa_best_A=kappa_best, train=TRAIN, test=TEST, min_aqua=MIN_AQUA, min_wins=MIN_WINS,
+               loso_total_mae={k: float(v) for k, v in ctrl.items()}, loso_total_mae_A={str(k): float(v) for k, v in tot.items()},
+               band_coverage_1mae=float(cov1), band_coverage_2mae=float(cov2), rel_err_median_active=float(rel),
+               r_by_season_train={int(k): float(v) for k, v in r_season.items()}, r_by_season_after={int(k): float(v) for k, v in r_drift.items()},
+               excluded=["2020-08", "2020-09"], frozen_at="2026-11-14T14:20-03:00", gates_revised_at="2026-11-14T16:40-03:00"),
+          open(OUT / "params.json", "w"), indent=1)
