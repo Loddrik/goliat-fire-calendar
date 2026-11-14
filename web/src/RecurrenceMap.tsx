@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+// MapLibre ≥ 6 carga su worker como módulo aparte; Vite no lo emite solo, así que se le pasa la URL del archivo copiado.
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
+maplibregl.setWorkerUrl(maplibreWorkerUrl);
 import type { ComunaDoc } from "./types";
 
 const STYLE = "https://tiles.openfreemap.org/styles/positron";

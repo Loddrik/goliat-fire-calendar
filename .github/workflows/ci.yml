@@ -1,0 +1,64 @@
+# CI de GOLIAT: lo mismo que exige docs/alcances.md §3 antes de mergear ("nada se mergea a main si npm run build falla"),
+# más los dos errores que ya nos pasaron: JSON inválido en web/public/data (Infinity) y el servidor que no levanta.
+name: CI
+
+on:
+  pull_request:
+    branches: [main, dev]
+  push:
+    branches: [main, dev]
+
+jobs:
+  web:
+    name: Web (lint, tipos, build, datos, servidor)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+
+      - name: Dependencias (servidor y web)
+        run: |
+          npm ci
+          npm --prefix web ci
+
+      - name: Lint
+        run: npm --prefix web run lint
+
+      - name: Tipos y build (tsc -b && vite build)
+        run: npm --prefix web run build
+
+      - name: Datos de la web son JSON válido
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            const dir = "web/public/data"; let n = 0;
+            const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => {
+              const p = path.join(d, e.name);
+              if (e.isDirectory()) return walk(p);
+              if (!p.endsWith(".json")) return;
+              try { JSON.parse(fs.readFileSync(p, "utf8")); n++; }
+              catch (err) { console.error("JSON inválido:", p, err.message); process.exitCode = 1; }
+            });
+            walk(dir);
+            const idx = JSON.parse(fs.readFileSync(path.join(dir, "index.json"), "utf8"));
+            if (!Array.isArray(idx.comunas) || idx.comunas.length !== 54) { console.error("index.json: se esperaban 54 comunas, hay", idx.comunas?.length); process.exitCode = 1; }
+            console.log(n, "JSON válidos;", idx.comunas?.length, "comunas");
+          '
+
+      - name: El servidor levanta y sirve la app y los datos
+        run: |
+          PORT=3999 node server.mjs & echo $! > server.pid
+          for i in $(seq 1 20); do curl -sf localhost:3999/health >/dev/null && break; sleep 0.5; done
+          curl -sf localhost:3999/health
+          curl -sf localhost:3999/ | grep -q '<div id="root">'
+          curl -sf localhost:3999/data/index.json | head -c 200; echo
+          curl -sfI localhost:3999/data/detections/08107.csv | head -1
+          kill "$(cat server.pid)"
