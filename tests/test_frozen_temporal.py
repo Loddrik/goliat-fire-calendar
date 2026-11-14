@@ -89,6 +89,9 @@ class FrozenTemporalTests(unittest.TestCase):
         previous=pd.DataFrame({'cut':['A']*3,'method':['M0','M1','M2'],
             'mae':[1.5,0.,1.],'bias':[-1.5,0.,0.],'n':[2]*3,'aqua_sum':[3.]*3})
         verify_legacy_controls(frame,previous)
+        frame['A_100']=frame.M1
+        extra=pd.DataFrame({'cut':['A'],'method':['A_k'],'mae':[0.],'bias':[0.],'n':[2],'aqua_sum':[3.]})
+        verify_legacy_controls(frame,pd.concat([previous,extra]),100.)
         frame.loc[0,'snpp']=3.
         with self.assertRaisesRegex(ValueError,'controls'):verify_legacy_controls(frame,previous)
 

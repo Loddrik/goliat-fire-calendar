@@ -144,8 +144,10 @@ def metrics(frame,regional=True):
     return report
 
 
-def verify_legacy_controls(frame,previous):
+def verify_legacy_controls(frame,previous,kappa=None):
     methods=['M0','M1','M2'];records=[]
+    if kappa is not None:
+        frame=frame.copy();frame['A_k']=frame[f'A_{kappa:g}'];methods.append('A_k')
     for cut,g in frame.groupby('cut'):
         for method in methods:
             error=g[method]-g.snpp
@@ -155,6 +157,10 @@ def verify_legacy_controls(frame,previous):
     expected=previous[previous.method.isin(methods)].set_index(['cut','method']).sort_index()
     if not actual.index.equals(expected.index) or not np.allclose(actual,expected[actual.columns],atol=1e-10,rtol=0):
         raise ValueError('Legacy published controls do not reproduce')
+    if not {'y','m'}<=set(frame):return []
+    totals=frame.groupby(['y','m'])[[*methods,'snpp']].sum()
+    return [{'method':m,'regional_monthly_mae':float((totals[m]-totals.snpp).abs().mean()),
+             'commune_controls_reproduced':True} for m in methods]
 
 
 def publication_metadata(cuts):
@@ -230,7 +236,7 @@ def run():
                  pd.read_csv(DATA/'robust_affine_audit/outer_predictions.csv',dtype={'cut':str}))
     if len(oof)!=5184:raise ValueError('OOF grid mismatch')
     model=freeze(training,oof)
-    published=json.loads((DATA/'params.json').read_text())['r_const']
+    published_params=json.loads((DATA/'params.json').read_text());published=published_params['r_const']
     if abs(model['reference']['ratio']-published)>1e-12:raise ValueError('Published M1 factor not reproduced')
     fingerprint=signature(model);write_frozen(model)
     restored=load_frozen()
@@ -243,7 +249,7 @@ def run():
     enabled,published_radii=publication_metadata(data.cuts);x['published_mae_radius']=x.cut.map(published_radii)
     periods={name:g.copy() for name,g in x.groupby('block')}
     legacy=x[x.block=='legacy_2020_2021']
-    verify_legacy_controls(legacy,pd.read_csv(DATA/'eval_final.csv',dtype={'cut':str}))
+    legacy_reproduction=verify_legacy_controls(legacy,pd.read_csv(DATA/'eval_final.csv',dtype={'cut':str}),float(published_params['kappa_best_A']))
     periods['legacy_before_calendar_2022']=legacy[legacy.y<2022]
     periods['legacy_jan_jun_2022']=legacy[legacy.y==2022]
     reports={};coverage=[]
@@ -266,7 +272,7 @@ def run():
     season_scores=pd.DataFrame([dict(season=int(s),method=m,**v) for s,g in x.groupby('season') for m,v in metrics(g).items()])
     season_scores.to_csv(OUT/'season_aggregates.csv',index=False)
     pd.DataFrame(coverage).to_csv(OUT/'commune_band_coverage.csv',index=False)
-    summary={'status':'frozen-fit-descriptive-temporal-audit','independent_validation':False,'published_factor_reproduced':True,'legacy_controls_reproduced':True,
+    summary={'status':'frozen-fit-descriptive-temporal-audit','independent_validation':False,'published_factor_reproduced':True,'legacy_controls_reproduced':True,'legacy_documentation_metrics':legacy_reproduction,
         'model_signature_unchanged_after_evaluation':True,'saved_model_restored_exactly':True,'signature':fingerprint,'published14':enabled,
         'n_pairs':len(x),'requested_product_windows_complete':True,'observation_coverage_known':False,
         'provisional_cell_days':0,'periods':reports,'choice_counts':{p:pd.Series(c).value_counts().astype(int).to_dict() for p,c in model['choices'].items()}}
