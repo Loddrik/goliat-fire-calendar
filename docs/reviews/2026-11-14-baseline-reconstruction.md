@@ -19,3 +19,5 @@ La consulta de recurrencia agrupa las celdas sin `ORDER BY`. DuckDB puede devolv
 El inventario histórico enumera 1.071 CSV, 101.477.474 bytes. Los 1.071 faltan en el checkout actual. Por tanto, esta prueba empieza en detecciones procesadas y no valida desde los crudos el filtro diurno, la confianza, la prioridad entre fuentes o la deduplicación. No se intentó reemplazar archivos históricos por descargas actuales potencialmente distintas.
 
 [Evidencia de reconstrucción](evidence/2026-11-14/baseline-reconstruction.json) y [disponibilidad de crudos](evidence/2026-11-14/raw-availability.json). Los archivos originales se conservaron; los resultados nuevos quedaron en el checkout temporal.
+
+La corrección aislada del orden está disponible para revisión en el [PR #31](https://github.com/Loddrik/goliat-fire-calendar/pull/31), con base `dev`. El nuevo test falla con el publicador anterior y pasa al ordenar; los cuatro tests de publicación pasan. No se regeneraron los archivos públicos.
