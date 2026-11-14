@@ -15,7 +15,17 @@ import json, pathlib, duckdb, pandas as pd, numpy as np
 ROOT = pathlib.Path(__file__).resolve().parents[1]; OUT = ROOT / "data/processed"
 TRAIN = list(range(2012, 2020)); TEST = [2020, 2021]; KAPPAS = [0, 10, 30, 50, 100, 300, 1e9]
 MIN_AQUA, MIN_WINS = 50, 6
-con = duckdb.connect(str(OUT / "goliat.duckdb"), read_only=True)
+def connect():
+    """Usa goliat.duckdb si existe; si no (clon fresco), reconstruye las tablas necesarias desde los parquet versionados."""
+    db = OUT / "goliat.duckdb"
+    if db.exists():
+        return duckdb.connect(str(db), read_only=True)
+    c = duckdb.connect()
+    for t, f in [("monthly_masked", "celldays_comuna_month_masked.parquet"), ("monthly", "celldays_comuna_month.parquet"), ("cells_comuna", "cells_comuna.parquet"),
+                 ("celldays", "celldays.parquet"), ("static_mask", "static_mask.parquet"), ("det", "detections.parquet")]:
+        if (OUT / f).exists(): c.execute(f"create view {t} as select * from read_parquet('{OUT / f}')")
+    return c
+con = connect()
 cuts = [r[0] for r in con.execute("select distinct cut from cells_comuna order by 1").fetchall()]
 m = con.execute("""select cut, season, m, sum(case when sat='Aqua' then celldays end) aqua, sum(case when sat='SNPP' then celldays end) snpp
                    from monthly_masked where season between 2012 and 2025 group by all""").df()

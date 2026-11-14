@@ -15,7 +15,17 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]; OUT = ROOT / "data/processed
 (WEB / "comunas").mkdir(parents=True, exist_ok=True)
 params = json.load(open(OUT / "params.json")); r = params["r_const"]
 gates = pd.read_csv(OUT / "gates.csv", index_col=0, dtype={0: str}); gates.index = gates.index.astype(str).str.zfill(5)
-con = duckdb.connect(str(OUT / "goliat.duckdb"), read_only=True)
+def connect():
+    """Usa goliat.duckdb si existe; si no (clon fresco), reconstruye las tablas necesarias desde los parquet versionados."""
+    db = OUT / "goliat.duckdb"
+    if db.exists():
+        return duckdb.connect(str(db), read_only=True)
+    c = duckdb.connect()
+    for t, f in [("monthly_masked", "celldays_comuna_month_masked.parquet"), ("monthly", "celldays_comuna_month.parquet"), ("cells_comuna", "cells_comuna.parquet"),
+                 ("celldays", "celldays.parquet"), ("static_mask", "static_mask.parquet"), ("det", "detections.parquet")]:
+        if (OUT / f).exists(): c.execute(f"create view {t} as select * from read_parquet('{OUT / f}')")
+    return c
+con = connect()
 comunas = pd.read_csv(ROOT / "data/raw/dpa/comunas_cut.csv", dtype={"cut": str})
 cutoff = con.execute("select max(acq_date) from det").fetchone()[0]
 cur_season = cutoff.year if cutoff.month >= 7 else cutoff.year - 1
