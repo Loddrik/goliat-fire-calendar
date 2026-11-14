@@ -1,0 +1,46 @@
+name: Scientific regression tests
+
+on:
+  pull_request:
+    branches: [main, dev]
+    paths:
+      - 'pipeline/**'
+      - 'tests/**'
+      - 'data/processed/**'
+      - 'observed/data/processed/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/science.yml'
+  push:
+    branches: [main, dev]
+    paths:
+      - 'pipeline/**'
+      - 'tests/**'
+      - 'data/processed/**'
+      - 'observed/data/processed/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/science.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  science:
+    name: Python scientific regression tests (locked dependencies)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      MPLBACKEND: Agg
+      MPLCONFIGDIR: ${{ runner.temp }}/goliat-matplotlib
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14.7'
+      - name: Install the reproduction tool version
+        run: python -m pip install uv==0.11.7
+      - name: Install the locked scientific environment
+        run: uv sync --frozen
+      - name: Run scientific and publication regression tests
+        run: uv run --frozen python -m unittest discover -s tests -p 'test_*.py' -v
