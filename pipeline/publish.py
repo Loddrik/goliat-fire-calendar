@@ -10,9 +10,15 @@ Comparación de temporada: acumulado de la temporada en curso hasta el día de c
 truncada AL MISMO DÍA DEL MES (misma plataforma que la serie).
 Recurrencia: celdas 0,01° con detección diurna por temporada, misma regla de plataforma que la serie (S-NPP ≤ 2017, NOAA-20 ≥ 2018).
 """
-import json, os, glob, shutil, pathlib, duckdb, pandas as pd
+import json, os, glob, math, shutil, pathlib, duckdb, pandas as pd
 ROOT = pathlib.Path(__file__).resolve().parents[1]; OUT = ROOT / "data/processed"; WEB = ROOT / "web/public/data"
 (WEB / "comunas").mkdir(parents=True, exist_ok=True)
+def finite(o):
+    """JSON estricto: inf/nan (p. ej. MAE de A con kappa=0 en params.json) → null. JSON.parse del navegador rechaza Infinity."""
+    if isinstance(o, dict): return {k: finite(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)): return [finite(v) for v in o]
+    if isinstance(o, float) and not math.isfinite(o): return None
+    return o
 params = json.load(open(OUT / "params.json")); r = params["r_const"]
 gates = pd.read_csv(OUT / "gates.csv", index_col=0, dtype={0: str}); gates.index = gates.index.astype(str).str.zfill(5)
 def connect():
@@ -94,12 +100,12 @@ for _, cm in comunas.iterrows():
                           band_mae=round(float(g.band_mae), 1), band_coverage_1=params["band_coverage_1mae"], band_coverage_2=params["band_coverage_2mae"]),
                series=rows, season_compare=sc,
                recurrence=[dict(x=int(a.cell_x), y=int(a.cell_y), n=int(a.n_seasons), d=int(a.n_days), f=int(a.first_season), l=int(a.last_season)) for a in rc.itertuples()])
-    json.dump(doc, open(WEB / "comunas" / f"{cut}.json", "w"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(finite(doc), open(WEB / "comunas" / f"{cut}.json", "w"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
     index.append(dict(cut=cut, comuna=cm.comuna, region=cm.region, enabled=bool(g.enabled),
                       observed_2012_2025=sum((x["value"] or 0) for x in rows if x["state"] == "observed" and 2012 <= x["season"] <= 2025),
                       current=sc["current"], median=sc["median"]))
 json.dump(dict(generated=pd.Timestamp.now(tz="America/Santiago").isoformat(), cutoff=str(cutoff), current_season=cur_season,
-               r_const=round(r, 3), params=params, comunas=index), open(WEB / "index.json", "w"), ensure_ascii=False, indent=0)
+               r_const=round(r, 3), params=finite(params), comunas=finite(index)), open(WEB / "index.json", "w"), ensure_ascii=False, indent=0, allow_nan=False)
 print("corte:", cutoff, "temporada:", cur_season, "| habilitadas:", sum(i["enabled"] for i in index), "de", len(index))
 print("Penco:", {k: v for k, v in season_compare("08107").items() if k != "observed_seasons"})
 

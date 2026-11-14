@@ -23,8 +23,10 @@ export default function App() {
   }, [cut]);
 
   const list = useMemo(() => {
-    const n = q.trim().toLowerCase();
-    return (index?.comunas ?? []).filter((c) => !n || c.comuna.toLowerCase().includes(n)).sort((a, b) => a.region.localeCompare(b.region) || a.comuna.localeCompare(b.comuna));
+    // Sin tildes ni mayúsculas: "chillan" encuentra Chillán; también se puede buscar por CUT.
+    const fold = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const n = fold(q.trim());
+    return (index?.comunas ?? []).filter((c) => !n || fold(c.comuna).includes(n) || c.cut.startsWith(n)).sort((a, b) => a.region.localeCompare(b.region) || a.comuna.localeCompare(b.comuna));
   }, [index, q]);
 
   return (
