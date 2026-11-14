@@ -80,12 +80,15 @@ def signature(model):
 
 
 def estimate(frame,model):
-    x=predict_piecewise(predict_huber(predict_affine(predict(frame,model['reference']),model['affine']),model['huber']),model['piecewise'])
+    if frame.duplicated(KEYS).any():raise ValueError('Duplicate estimation keys')
+    features=frame[[*KEYS,'g','aqua']].copy()
+    x=predict_piecewise(predict_huber(predict_affine(predict(features,model['reference']),model['affine']),model['huber']),model['piecewise'])
     x=apply_choices(x,model['choices'])
     for policy in BAND_POLICIES:
         radii=model['radii'][model['radii'].policy==policy].set_index('cut').abs80_radius
         x[policy+'_abs80_radius']=x.cut.map(radii)
-    return x
+    diagnostic=[c for c in frame if c not in x]
+    return x.merge(frame[[*KEYS,*diagnostic]],on=KEYS,how='left',validate='one_to_one') if diagnostic else x
 
 
 def calendar_labels(frame):

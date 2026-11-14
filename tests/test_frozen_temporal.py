@@ -32,9 +32,13 @@ class FrozenTemporalTests(unittest.TestCase):
         tr,oof=past_fixture();model=freeze(tr,oof);before=signature(model)
         future=tr[tr.season==2012].copy();future.season=2020
         a=estimate(future,model);future.snpp=1e9;b=estimate(future,model)
+        absent=estimate(future.drop(columns='snpp'),model)
+        future.snpp=np.nan;unknown=estimate(future,model)
         self.assertEqual(signature(model),before)
         for col in [*BAND_POLICIES,*[p+'_abs80_radius' for p in BAND_POLICIES]]:
             np.testing.assert_array_equal(a[col],b[col])
+            np.testing.assert_array_equal(a[col],absent[col])
+            np.testing.assert_array_equal(a[col],unknown[col])
 
     def test_saved_coefficients_restore_exactly_and_reject_tampering(self):
         tr,oof=past_fixture();model=freeze(tr,oof)
