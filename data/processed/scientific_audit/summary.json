@@ -1,0 +1,488 @@
+{
+  "status": "development-audit",
+  "production_changed": false,
+  "external_validation": false,
+  "seasons": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "excluded_from_analysis": "seasons 2020 onward (Jan-Jun 2020 belongs to season 2019)",
+  "mask_cells_published": 223,
+  "mask_policies": {
+    "none": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1118.25,
+          "mean_monthly_mae": 2.5885416666666665,
+          "mean_bias": -2.2964891975308643
+        },
+        "M1": {
+          "sum_commune_season_mae": 953.3290651003292,
+          "mean_monthly_mae": 2.206780243287799,
+          "mean_bias": 0.008876246265644469
+        },
+        "M2": {
+          "sum_commune_season_mae": 1356.25,
+          "mean_monthly_mae": 3.1394675925925926,
+          "mean_bias": -1.390625
+        }
+      },
+      "enabled_diagnostic": [
+        "08111",
+        "08203",
+        "08207",
+        "08301",
+        "08308",
+        "08309",
+        "16102",
+        "16104",
+        "16108",
+        "16203",
+        "16302",
+        "16303"
+      ],
+      "target_cell_days_evaluated": 21933,
+      "aqua_cell_days_evaluated": 10028
+    },
+    "published_fixed": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1080.5833333333335,
+          "mean_monthly_mae": 2.5013503086419755,
+          "mean_bias": -2.3809799382716053
+        },
+        "M1": {
+          "sum_commune_season_mae": 881.1695405675188,
+          "mean_monthly_mae": 2.0397443068692565,
+          "mean_bias": 0.009556128280305864
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.1666666666665,
+          "mean_monthly_mae": 3.0906635802469133,
+          "mean_bias": -1.3738425925925926
+        }
+      },
+      "enabled_diagnostic": [
+        "08111",
+        "08202",
+        "08203",
+        "08207",
+        "08301",
+        "08308",
+        "16102",
+        "16104",
+        "16108",
+        "16201",
+        "16203",
+        "16301",
+        "16302",
+        "16303"
+      ],
+      "target_cell_days_evaluated": 21466,
+      "aqua_cell_days_evaluated": 9123
+    },
+    "fold_fitted": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1081.6666666666665,
+          "mean_monthly_mae": 2.5038580246913575,
+          "mean_bias": -2.3719135802469133
+        },
+        "M1": {
+          "sum_commune_season_mae": 884.4096401651681,
+          "mean_monthly_mae": 2.0472445374193704,
+          "mean_bias": 0.014950375570626132
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.75,
+          "mean_monthly_mae": 3.092013888888889,
+          "mean_bias": -1.376350308641975
+        }
+      },
+      "enabled_diagnostic": [
+        "08111",
+        "08202",
+        "08203",
+        "08207",
+        "08301",
+        "08308",
+        "16102",
+        "16104",
+        "16108",
+        "16201",
+        "16203",
+        "16301",
+        "16302",
+        "16303"
+      ],
+      "target_cell_days_evaluated": 21489,
+      "aqua_cell_days_evaluated": 9193
+    },
+    "pre_overlap": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1095.5833333333333,
+          "mean_monthly_mae": 2.5360725308641974,
+          "mean_bias": -2.2768132716049383
+        },
+        "M1": {
+          "sum_commune_season_mae": 918.3393159662576,
+          "mean_monthly_mae": 2.1257854536255962,
+          "mean_bias": 0.00777840347446222
+        },
+        "M2": {
+          "sum_commune_season_mae": 1345.6666666666665,
+          "mean_monthly_mae": 3.1149691358024687,
+          "mean_bias": -1.3850308641975309
+        }
+      },
+      "enabled_diagnostic": [
+        "08111",
+        "08203",
+        "08207",
+        "08301",
+        "08308",
+        "08309",
+        "16102",
+        "16104",
+        "16108",
+        "16203",
+        "16301",
+        "16302",
+        "16303"
+      ],
+      "target_cell_days_evaluated": 21704,
+      "aqua_cell_days_evaluated": 9901
+    }
+  },
+  "nested": {
+    "scores": {
+      "M0": {
+        "sum_commune_season_mae": 1081.6666666666665,
+        "mean_monthly_mae": 2.5038580246913575,
+        "mean_bias": -2.3719135802469133
+      },
+      "M1": {
+        "sum_commune_season_mae": 884.4096401651681,
+        "mean_monthly_mae": 2.0472445374193704,
+        "mean_bias": 0.014950375570626132
+      },
+      "M2": {
+        "sum_commune_season_mae": 1335.75,
+        "mean_monthly_mae": 3.092013888888889,
+        "mean_bias": -1.376350308641975
+      },
+      "selected": {
+        "sum_commune_season_mae": 878.8689665515326,
+        "mean_monthly_mae": 2.0344189040544736,
+        "mean_bias": -0.07151734430271567
+      }
+    },
+    "enabled_diagnostic": [
+      "08111",
+      "08202",
+      "08203",
+      "08207",
+      "08301",
+      "08308",
+      "16106",
+      "16201",
+      "16203",
+      "16301",
+      "16302",
+      "16303"
+    ],
+    "choice_counts": {
+      "M1": 237,
+      "A_0": 71,
+      "A_1000000000": 38,
+      "A_10": 34,
+      "A_30": 16,
+      "A_50": 15,
+      "A_100": 13,
+      "A_300": 8
+    },
+    "paired_delta_mae_selected_minus_M1": {
+      "mean": -0.012825633364896777,
+      "percentile_interval": [
+        -0.06950192815913592,
+        0.03843182488765218
+      ],
+      "blocks": 8,
+      "replicates": 5000,
+      "seed": 20261114
+    }
+  },
+  "bands": {
+    "all_communes": {
+      "apparent_fixed_mask": {
+        "all_months": {
+          "n": 5184,
+          "missing_calibration": 0,
+          "coverage": 0.8460648148148148,
+          "mean_width": 4.579539041552039
+        },
+        "active_months": {
+          "n": 2559,
+          "missing_calibration": 0,
+          "coverage": 0.7026182102383743,
+          "mean_width": 6.007038092691678
+        }
+      },
+      "external_fold_fitted_mae": {
+        "all_months": {
+          "n": 5184,
+          "missing_calibration": 0,
+          "coverage": 0.8414351851851852,
+          "mean_width": 4.571742827602186
+        },
+        "active_months": {
+          "n": 2563,
+          "missing_calibration": 0,
+          "coverage": 0.6960593055013656,
+          "mean_width": 5.993440578552399
+        }
+      },
+      "external_fold_fitted_scaled80": {
+        "all_months": {
+          "n": 5184,
+          "missing_calibration": 0,
+          "coverage": 0.9128086419753086,
+          "mean_width": 13.356410014927574
+        },
+        "active_months": {
+          "n": 2563,
+          "missing_calibration": 0,
+          "coverage": 0.8236441669918064,
+          "mean_width": 24.961642007028154
+        }
+      }
+    },
+    "previously_enabled_14": {
+      "apparent_fixed_mask": {
+        "all_months": {
+          "n": 1344,
+          "missing_calibration": 0,
+          "coverage": 0.7819940476190477,
+          "mean_width": 6.006763930394423
+        },
+        "active_months": {
+          "n": 917,
+          "missing_calibration": 0,
+          "coverage": 0.6870229007633588,
+          "mean_width": 6.816626865078501
+        }
+      },
+      "external_fold_fitted_mae": {
+        "all_months": {
+          "n": 1344,
+          "missing_calibration": 0,
+          "coverage": 0.7790178571428571,
+          "mean_width": 6.029285657573656
+        },
+        "active_months": {
+          "n": 920,
+          "missing_calibration": 0,
+          "coverage": 0.683695652173913,
+          "mean_width": 6.839496368870549
+        }
+      },
+      "external_fold_fitted_scaled80": {
+        "all_months": {
+          "n": 1344,
+          "missing_calibration": 0,
+          "coverage": 0.8720238095238095,
+          "mean_width": 22.633689933664485
+        },
+        "active_months": {
+          "n": 920,
+          "missing_calibration": 0,
+          "coverage": 0.8130434782608695,
+          "mean_width": 31.891546550691167
+        }
+      }
+    }
+  },
+  "zero_aqua_positive_viirs": {
+    "months": 1152,
+    "evaluated_months": 5184,
+    "target_cell_days": 2477,
+    "target_cell_days_total": 21489,
+    "note": "Structural diagnostic: every multiplicative candidate predicts zero here; not an affine-model evaluation."
+  },
+  "aqua_version_diagnostic_scope": "Aqua canonical daytime detections assigned to the 54 communes, before static mask; seasons before 2020",
+  "aqua_version_diagnostic": [
+    {
+      "year": 2002,
+      "version": "6.2",
+      "n": 42,
+      "type2": 0
+    },
+    {
+      "year": 2003,
+      "version": "6.2",
+      "n": 837,
+      "type2": 0
+    },
+    {
+      "year": 2004,
+      "version": "6.2",
+      "n": 1156,
+      "type2": 0
+    },
+    {
+      "year": 2005,
+      "version": "6.2",
+      "n": 886,
+      "type2": 0
+    },
+    {
+      "year": 2006,
+      "version": "6.2",
+      "n": 1086,
+      "type2": 0
+    },
+    {
+      "year": 2007,
+      "version": "6.2",
+      "n": 1261,
+      "type2": 1
+    },
+    {
+      "year": 2008,
+      "version": "6.2",
+      "n": 1122,
+      "type2": 1
+    },
+    {
+      "year": 2009,
+      "version": "6.2",
+      "n": 1073,
+      "type2": 0
+    },
+    {
+      "year": 2010,
+      "version": "6.2",
+      "n": 939,
+      "type2": 3
+    },
+    {
+      "year": 2011,
+      "version": "6.2",
+      "n": 817,
+      "type2": 4
+    },
+    {
+      "year": 2012,
+      "version": "6.2",
+      "n": 1019,
+      "type2": 20
+    },
+    {
+      "year": 2013,
+      "version": "6.2",
+      "n": 958,
+      "type2": 26
+    },
+    {
+      "year": 2014,
+      "version": "6.2",
+      "n": 902,
+      "type2": 19
+    },
+    {
+      "year": 2015,
+      "version": "6.2",
+      "n": 1751,
+      "type2": 27
+    },
+    {
+      "year": 2016,
+      "version": "6.2",
+      "n": 921,
+      "type2": 37
+    },
+    {
+      "year": 2017,
+      "version": "6.2",
+      "n": 1809,
+      "type2": 70
+    },
+    {
+      "year": 2018,
+      "version": "6.03",
+      "n": 1469,
+      "type2": 190
+    },
+    {
+      "year": 2019,
+      "version": "6.03",
+      "n": 1474,
+      "type2": 169
+    },
+    {
+      "year": 2020,
+      "version": "6.03",
+      "n": 915,
+      "type2": 39
+    }
+  ],
+  "mulchen": {
+    "none": [
+      {
+        "cut": "08305",
+        "aqua_train": 902.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "policy": "none"
+      }
+    ],
+    "published_fixed": [
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "policy": "published_fixed"
+      }
+    ],
+    "fold_fitted": [
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "policy": "fold_fitted"
+      }
+    ],
+    "pre_overlap": [
+      {
+        "cut": "08305",
+        "aqua_train": 902.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "policy": "pre_overlap"
+      }
+    ],
+    "nested_fold_fitted": [
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "policy": "nested_fold_fitted"
+      }
+    ]
+  }
+}
