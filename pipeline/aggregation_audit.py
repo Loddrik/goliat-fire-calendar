@@ -34,7 +34,7 @@ def run():
  for c in ['aqua','snpp','M1','M1_B']:
   if not np.allclose(frame[c],affine[c],rtol=0,atol=TOL):raise ValueError('OOF control changed '+c)
  index=json.loads((ROOT/'web/public/data/index.json').read_text());enabled={c['cut'] for c in index['comunas'] if c['enabled']}
- names={c['cut']:c['name'] for c in json.loads((ROOT/'observed/dist/data/communes.json').read_text())}
+ names={c['cut']:c['name'] for c in json.loads((ROOT/'observed/dist/data/communes.json').read_text())['communes']}
  records=[];summary={}
  sources={'M1_B':'affine_audit','M1_H':'robust_affine_audit','M1_B_P':'piecewise_audit'}
  for policy,directory in sources.items():
