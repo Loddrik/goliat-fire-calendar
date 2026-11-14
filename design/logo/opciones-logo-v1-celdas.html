@@ -1,0 +1,322 @@
+<title>Logo GOLIAT</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: hoja de prueba de marca — una fila por variante, cada una puesta a prueba en sus usos reales */
+:root {
+  --bg: #FCFBF7; --fg: #1A1A1A; --muted: #5F5F5F; --line: #E2E2DC; --card: #FFFFFF; --accent: #1F6F8B;
+  --tile-light: #FCFBF7; --tile-navy: #07173F; --tile-print: #FFFFFF;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161A; --fg: #ECEBE6; --muted: #A3A6A8; --line: #2B3238; --card: #181D22; --accent: #6BAED6; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #12161A; --fg: #ECEBE6; --muted: #A3A6A8; --line: #2B3238; --card: #181D22; --accent: #6BAED6; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; display: grid; gap: 40px; }
+header { display: grid; gap: 10px; max-width: 70ch; }
+header h1 { margin: 0; font-size: 28px; font-weight: 600; letter-spacing: .02em; text-wrap: balance; }
+header p { margin: 0; color: var(--muted); }
+.tests { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--mono); font-size: 12px; color: var(--muted); padding: 0; margin: 4px 0 0; list-style: none; }
+.tests li::before { content: "□ "; }
+section.opt { display: grid; gap: 16px; padding-top: 28px; border-top: 1px solid var(--line); }
+.opt-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.opt-head .code { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 500; }
+.opt-head h2 { margin: 0; font-size: 21px; font-weight: 600; }
+.opt-head .family { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 28px; max-width: 980px; }
+.notes p { margin: 0; font-size: 14px; }
+.notes b { font-weight: 600; }
+.grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; }
+.grid > * { min-width: 0; }
+@media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+.tile { border-radius: 6px; padding: 28px 24px; display: flex; align-items: center; justify-content: flex-start; min-height: 150px; position: relative; overflow: hidden; }
+.tile .tag { position: absolute; top: 8px; left: 10px; font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; opacity: .7; }
+.tile.light { background: var(--tile-light); border: 1px solid #E2E2DC; color: #1A1A1A; }
+.tile.navy { background: var(--tile-navy); color: #FFFFFF; }
+.tile.print { background: var(--tile-print); border: 1px solid #D0D0D0; color: #000; }
+.stack { display: grid; gap: 12px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
+.lockup { display: flex; align-items: center; gap: 16px; }
+.lockup svg.icon { flex: none; }
+.wm { display: grid; gap: 2px; }
+.wm .name { font-family: var(--sans); font-weight: 600; letter-spacing: .09em; line-height: 1; }
+.wm .tagl { white-space: nowrap; font-size: 12.5px; letter-spacing: .01em; opacity: .75; }
+.lockup.v { flex-direction: column; align-items: flex-start; gap: 8px; }
+.sizes { display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap; }
+.sizes figure { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.sizes figcaption { font-family: var(--mono); font-size: 10.5px; opacity: .7; }
+.browser { display: inline-flex; align-items: center; gap: 8px; background: #ECEAE4; border-radius: 8px 8px 0 0; padding: 7px 12px; font-size: 12px; color: #333; font-family: system-ui, sans-serif; }
+.cobrand { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.cobrand .sep { width: 1px; align-self: stretch; background: currentColor; opacity: .25; }
+.cobrand .sa svg { height: 44px; width: auto; display: block; }
+.months { font-family: var(--mono); font-size: 9.5px; display: grid; grid-template-columns: repeat(12, 1fr); text-align: center; opacity: .7; margin-top: 3px; }
+/* datos */
+.data { display: grid; gap: 14px; padding-top: 28px; border-top: 1px solid var(--line); }
+.data h2 { margin: 0; font-size: 19px; font-weight: 600; }
+.data p { margin: 0; color: var(--muted); max-width: 72ch; font-size: 14px; }
+.bars { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; align-items: end; height: 190px; max-width: 760px; }
+.bar { display: grid; grid-template-rows: auto 1fr auto; height: 100%; align-items: end; text-align: center; gap: 4px; }
+.bar .v { font-family: var(--mono); font-size: 10.5px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.bar .b { border-radius: 2px 2px 0 0; }
+.bar .m { font-family: var(--mono); font-size: 11px; }
+.warn { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 18px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); max-width: 900px; }
+.warn svg { height: 56px; width: auto; }
+.warn p { margin: 0; font-size: 14px; }
+@media (max-width: 520px) { .warn { grid-template-columns: 1fr; } }
+footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>GOLIAT · cinco caminos para el logo</h1>
+    <p>Tres variantes del <b>calendario de celdas</b> (A) y dos de la <b>órbita sobre el territorio</b> (B). Todas usan la rampa azul de la app y ninguna usa llamas, rojo ni naranjo: la marca no puede verse como una alerta. Cada una se prueba en los usos que pide la investigación de usuarios:</p>
+    <ul class="tests">
+      <li>favicon 16 px</li><li>impresión B/N (plan comunal A4)</li><li>imagen de WhatsApp (junta de vecinos)</li><li>fondo oscuro</li><li>junto al logo de Space Apps</li>
+    </ul>
+  </header>
+
+  <div id="options"></div>
+
+  <section class="data">
+    <h2>El logo A es un dato real</h2>
+    <p>Las 12 celdas de A1 y A2 siguen el perfil mensual de la región: suma de celdas-día observadas (VIIRS) en las 54 comunas, temporadas 2012-13 a 2025-26, de julio a junio. El invierno es claro y el peak de abril coincide con las quemas agrícolas de otoño. La intensidad se agrupa en los mismos 5 pasos azules del calendario.</p>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section class="data">
+    <h2>Por qué la órbita B no puede ser un anillo</h2>
+    <div class="warn">
+      <div><svg width="561" height="221" viewBox="0 0 561 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_13096_144)">
+<path d="M160.877 1.39358C161.488 0.155688 162.987 -0.352256 164.225 0.258812C165.463 0.869956 165.971 2.36937 165.36 3.60744L144.532 45.8057C147.819 44.2817 151.399 43.5941 154.95 43.7432L169.522 23.6055C170.332 22.4872 171.895 22.2365 173.013 23.0459C174.132 23.8554 174.382 25.4186 173.573 26.5371L160.455 44.6651C163.159 45.4721 165.741 46.7977 168.045 48.6426L187.239 29.4492C188.215 28.473 189.798 28.4729 190.774 29.4492C191.75 30.4255 191.75 32.0081 190.774 32.9844L171.581 52.1787C173.426 54.4822 174.751 57.0647 175.558 59.7686L193.686 46.6504C194.805 45.8411 196.367 46.0916 197.177 47.21C197.986 48.3285 197.736 49.8918 196.617 50.7012L176.48 65.2735C176.629 68.8244 175.942 72.4041 174.418 75.6914L216.616 54.8623C217.854 54.2513 219.354 54.76 219.965 55.9981C220.575 57.2361 220.067 58.7346 218.829 59.3457L172.809 82.0606C193.048 117.394 188.086 163.229 157.907 193.408C121.784 229.532 63.216 229.532 27.0925 193.408C-9.0309 157.285 -9.03079 98.7173 27.0925 62.5938C57.1794 32.5069 102.827 27.4826 138.116 47.5059L160.877 1.39358ZM134.569 54.6914C102.278 36.133 60.3412 40.6576 32.7488 68.25C-0.250243 101.249 -0.250132 154.752 32.7488 187.751C65.7481 220.75 119.251 220.75 152.251 187.751C179.935 160.066 184.396 117.942 165.621 85.6084L163.798 86.5088C163.683 86.5656 163.565 86.6126 163.446 86.6504C155.129 90.4957 144.947 88.9899 138.09 82.1328C131.233 75.2757 129.727 65.0937 133.572 56.7764C133.61 56.6579 133.657 56.5407 133.714 56.4258L134.569 54.6914ZM166.374 53.8487C159.54 47.0149 148.46 47.0149 141.626 53.8487C134.792 60.6828 134.792 71.7635 141.626 78.5977C148.46 85.4316 159.54 85.4316 166.374 78.5977C173.208 71.7635 173.208 60.6828 166.374 53.8487Z" fill="black"/>
+<path d="M365.371 50.3675H358.683L352.283 33.1835C352.497 34.8688 352.657 36.3621 352.763 37.6635C352.891 38.9435 352.955 40.4688 352.955 42.2395V50.3675H348.283V28.1915H354.811L361.371 45.4075C360.902 42.4848 360.667 39.7328 360.667 37.1515V28.1915H365.371V50.3675Z" fill="#DB240B"/>
+<path d="M389.182 50.3675L388.03 45.5995H381.566L380.446 50.3675H375.006L381.694 28.1915H388.062L394.75 50.3675H389.182ZM382.462 41.7915H387.134L384.798 31.9995L382.462 41.7915Z" fill="#DB240B"/>
+<path d="M411.513 27.6475C413.177 27.6475 414.617 27.8821 415.833 28.3515C417.07 28.8208 418.19 29.5355 419.193 30.4955L416.761 33.3435C415.246 32.1061 413.625 31.4875 411.897 31.4875C410.98 31.4875 410.254 31.6795 409.721 32.0635C409.188 32.4261 408.921 32.9595 408.921 33.6635C408.921 34.1541 409.038 34.5595 409.273 34.8795C409.508 35.1781 409.924 35.4661 410.521 35.7435C411.118 36.0208 412.014 36.3515 413.209 36.7355C415.47 37.4608 417.134 38.3568 418.201 39.4235C419.268 40.4688 419.801 41.9621 419.801 43.9035C419.801 45.2901 419.449 46.5168 418.745 47.5835C418.041 48.6288 417.028 49.4501 415.705 50.0475C414.382 50.6235 412.814 50.9115 411.001 50.9115C409.188 50.9115 407.577 50.6235 406.169 50.0475C404.782 49.4715 403.588 48.7035 402.585 47.7435L405.241 44.8315C406.094 45.5568 406.969 46.1008 407.865 46.4635C408.782 46.8261 409.774 47.0075 410.841 47.0075C411.929 47.0075 412.782 46.7728 413.401 46.3035C414.041 45.8128 414.361 45.1408 414.361 44.2875C414.361 43.7328 414.244 43.2741 414.009 42.9115C413.774 42.5275 413.369 42.1861 412.793 41.8875C412.217 41.5888 411.385 41.2688 410.297 40.9275C407.844 40.1808 406.094 39.2635 405.049 38.1755C404.025 37.0875 403.513 35.7115 403.513 34.0475C403.513 32.7675 403.854 31.6475 404.537 30.6875C405.22 29.7061 406.169 28.9595 407.385 28.4475C408.601 27.9141 409.977 27.6475 411.513 27.6475Z" fill="#DB240B"/>
+<path d="M442.213 50.3675L441.061 45.5995H434.597L433.477 50.3675H428.037L434.725 28.1915H441.093L447.781 50.3675H442.213ZM435.493 41.7915H440.165L437.829 31.9995L435.493 41.7915Z" fill="#DB240B"/>
+<path d="M254.816 137.937C254.816 142.032 253.241 144.341 249.356 144.341C244.946 144.341 243.581 141.402 243.581 136.782V119.562H235.916V137.937C235.916 147.282 240.011 152.216 249.461 152.216C259.016 152.216 262.796 147.072 262.796 137.937V125.547C262.796 117.987 261.851 115.361 259.016 111.791C255.761 107.696 249.671 102.656 245.891 97.7215C244.316 95.7265 244.001 94.6765 244.001 91.0015V78.1915C244.001 74.0965 245.891 71.9965 249.566 71.9965C253.871 71.9965 255.026 74.9365 255.026 79.2415V93.9415H262.481V78.1915C262.481 68.6365 259.016 63.9115 249.671 63.9115C240.431 63.9115 235.916 68.5315 235.916 78.1915V91.1065C235.916 96.8815 236.126 98.9815 238.751 102.341C241.796 106.226 247.781 111.266 252.191 116.726C254.291 119.351 254.816 120.401 254.816 125.651V137.937Z" fill="black"/>
+<path d="M292.466 94.8865C292.466 100.241 290.261 102.446 285.641 102.446H280.076V72.9415H285.536C290.576 72.9415 292.466 75.3565 292.466 80.5015V94.8865ZM280.076 151.271V110.216H285.641C295.721 110.216 300.341 105.596 300.341 94.6765V80.5015C300.341 69.5815 295.616 64.8565 285.536 64.8565H272.096V151.271H280.076Z" fill="black"/>
+<path d="M333.38 151.271L322.145 64.8565H312.8L300.935 151.271H308.705L310.595 136.782H323.51L325.4 151.271H333.38ZM311.54 129.431C313.535 114.626 315.425 100.347 317.21 85.1215C318.89 100.347 320.78 114.626 322.565 129.431H311.54Z" fill="black"/>
+<path d="M358.298 137.516C358.298 142.136 356.828 144.341 352.943 144.341C349.163 144.341 347.273 142.031 347.273 137.516V78.7165C347.273 74.2015 349.163 71.9965 352.943 71.9965C357.038 71.9965 358.298 74.0965 358.298 78.7165V93.9415H365.543V78.6115C365.543 68.8465 361.343 63.9115 352.943 63.9115C343.808 63.9115 339.188 68.8465 339.188 78.8215V137.621C339.188 147.386 343.808 152.216 352.943 152.216C361.763 152.216 365.543 147.491 365.543 137.411V119.562H358.298V137.516Z" fill="black"/>
+<path d="M398.26 151.271V143.396H382.825V111.266H393.325V103.286H382.825V72.9415H397.735V64.8565H374.845V151.271H398.26Z" fill="black"/>
+<path d="M453.699 151.271L442.464 64.8565H433.119L421.254 151.271H429.024L430.914 136.782H443.829L445.719 151.271H453.699ZM431.859 129.431C433.854 114.626 435.744 100.347 437.529 85.1215C439.209 100.347 441.099 114.626 442.884 129.431H431.859Z" fill="black"/>
+<path d="M482.045 94.8865C482.045 100.241 479.84 102.446 475.22 102.446H469.655V72.9415H475.115C480.155 72.9415 482.045 75.3565 482.045 80.5015V94.8865ZM469.655 151.271V110.216H475.22C485.3 110.216 489.92 105.596 489.92 94.6765V80.5015C489.92 69.5815 485.195 64.8565 475.115 64.8565H461.675V151.271H469.655Z" fill="black"/>
+<path d="M518.508 94.8865C518.508 100.241 516.303 102.446 511.683 102.446H506.118V72.9415H511.578C516.618 72.9415 518.508 75.3565 518.508 80.5015V94.8865ZM506.118 151.271V110.216H511.683C521.763 110.216 526.383 105.596 526.383 94.6765V80.5015C526.383 69.5815 521.658 64.8565 511.578 64.8565H498.138V151.271H506.118Z" fill="black"/>
+<path d="M553.169 137.937C553.169 142.032 551.594 144.341 547.709 144.341C543.299 144.341 541.934 141.402 541.934 136.782V119.562H534.269V137.937C534.269 147.282 538.364 152.216 547.814 152.216C557.369 152.216 561.149 147.072 561.149 137.937V125.547C561.149 117.987 560.204 115.361 557.369 111.791C554.114 107.696 548.024 102.656 544.244 97.7215C542.669 95.7265 542.354 94.6765 542.354 91.0015V78.1915C542.354 74.0965 544.244 71.9965 547.919 71.9965C552.224 71.9965 553.379 74.9365 553.379 79.2415V93.9415H560.834V78.1915C560.834 68.6365 557.369 63.9115 548.024 63.9115C538.784 63.9115 534.269 68.5315 534.269 78.1915V91.1065C534.269 96.8815 534.479 98.9815 537.104 102.341C540.149 106.226 546.134 111.266 550.544 116.726C552.644 119.351 553.169 120.401 553.169 125.651V137.937Z" fill="black"/>
+<path d="M247.439 165.22C250.376 165.147 253.235 166.176 255.451 168.106L252.492 171.636C251.787 171.077 251.008 170.618 250.177 170.273C249.396 169.963 248.562 169.808 247.721 169.819C246.886 169.802 246.06 169.998 245.322 170.389C244.584 170.781 243.958 171.353 243.503 172.054C242.496 173.552 241.99 175.856 241.986 178.967C241.982 182.078 242.488 184.356 243.503 185.801C243.973 186.503 244.615 187.073 245.367 187.457C246.119 187.842 246.957 188.028 247.801 187.999C248.703 188.014 249.597 187.834 250.423 187.471C251.32 187.023 252.171 186.488 252.965 185.875L255.74 189.442C254.698 190.477 253.474 191.309 252.13 191.898C250.673 192.545 249.094 192.87 247.5 192.85C245.28 192.903 243.088 192.351 241.157 191.253C239.315 190.139 237.848 188.499 236.945 186.544C235.899 184.167 235.392 181.588 235.46 178.992C235.397 176.43 235.924 173.888 237.001 171.563C237.926 169.611 239.404 167.974 241.25 166.853C243.124 165.752 245.265 165.187 247.439 165.22V165.22Z" fill="black"/>
+<path d="M288.877 192.18V180.901H280.981V192.18H274.749V165.865H280.981V176.045H288.877V165.865H295.103V192.18H288.877Z" fill="black"/>
+<path d="M330.106 192.18L328.743 186.519H321.074L319.742 192.18H313.289L321.222 165.865H328.78L336.713 192.18H330.106ZM322.124 182H327.65L324.875 170.384L322.124 182Z" fill="black"/>
+<path d="M361.082 165.865V187.226H371.336L370.722 192.137H354.887V165.865H361.082Z" fill="black"/>
+<path d="M396.761 165.865V187.226H407.009L406.395 192.137H390.535V165.865H396.761Z" fill="black"/>
+<path d="M442.35 165.865L441.699 170.31H432.44V176.61H440.526V180.981H432.44V187.698H442.35V192.18H426.214V165.865H442.35Z" fill="black"/>
+<path d="M482.683 192.18H474.751L467.155 171.79C467.407 173.791 467.598 175.56 467.726 177.107C467.855 178.654 467.954 180.435 467.954 182.535V192.18H462.428V165.865H470.17L477.956 186.292C477.416 183.045 477.136 179.76 477.121 176.468V165.865H482.702L482.683 192.18Z" fill="black"/>
+<path d="M515.188 165.22C518.412 165.163 521.54 166.315 523.956 168.45L520.806 171.753C520.009 171.125 519.126 170.615 518.184 170.236C517.316 169.889 516.387 169.72 515.452 169.739C514.543 169.714 513.642 169.912 512.828 170.315C512.013 170.719 511.31 171.316 510.78 172.054C509.621 173.576 509.04 175.893 509.036 179.004C509.036 182.369 509.478 184.761 510.362 186.182C510.803 186.867 511.419 187.422 512.147 187.789C512.874 188.156 513.687 188.322 514.5 188.269C515.744 188.284 516.971 187.984 518.068 187.397V181.436H514.654L514.04 177.027H524.103V190.05C522.706 190.952 521.183 191.643 519.584 192.101C517.99 192.576 516.336 192.82 514.672 192.825C510.677 192.825 507.665 191.661 505.634 189.332C503.604 187.002 502.593 183.56 502.601 179.004C502.53 176.428 503.089 173.874 504.228 171.563C505.246 169.588 506.816 167.952 508.747 166.853C510.715 165.756 512.935 165.192 515.188 165.22Z" fill="black"/>
+<path d="M560.611 165.865L559.997 170.31H550.701V176.61H558.794V180.981H550.701V187.698H560.611V192.18H544.476V165.865H560.611Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_13096_144">
+<rect width="560.841" height="220.501" fill="white"/>
+</clipPath>
+</defs>
+</svg></div>
+      <p>El logo de Space Apps es un anillo de órbita con un satélite redondo encima. Si GOLIAT usa un círculo cerrado con un punto, al ponerlos juntos parecerá una copia o un logo del evento. Por eso B1 usa un arco abierto y bajo con un satélite de paneles, y B2 no tiene ningún arco. La guía de Space Apps también pide no usar el emblema ni el logotipo de NASA.</p>
+    </div>
+  </section>
+
+  <footer>Rampa: #C6DBEF · #9ECAE1 · #6BAED6 · #3182BD · #08519C — impresión: #EBEBEB → #333333 — tipografía: IBM Plex Sans 600 · logos de Space Apps: kit oficial 2026, sin modificar</footer>
+</div>
+
+<script>
+const BLUE  = ['#C6DBEF','#9ECAE1','#6BAED6','#3182BD','#08519C'];
+const NAVY  = ['#173A66','#1F5A92','#3182BD','#6BAED6','#C6DBEF']; // en fondo oscuro, más = más claro
+const GREY  = ['#EBEBEB','#C2C2C2','#969696','#636363','#333333'];
+// Perfil regional jul→jun (celdas-día observadas, 54 comunas, 2012-13 a 2025-26)
+const MONTHS = ['Jul','Ago','Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun'];
+const TOTALS = [833,945,1979,1669,941,1101,2767,4618,4773,11290,6881,1689];
+const LEVELS = [1,1,2,2,1,1,2,3,3,5,4,2];
+const C = 12, G = 3, R = 2; // celda, separación, radio
+
+function cell(x, y, fill, stroke, sw) {
+  return `<rect x="${x}" y="${y}" width="${C}" height="${C}" rx="${R}" fill="${fill}"${stroke ? ` stroke="${stroke}" stroke-width="${sw}"` : ''}/>`;
+}
+function gridCells(ox, oy, colorFor) {
+  let s = '';
+  for (let i = 0; i < 12; i++) {
+    const col = i % 4, row = Math.floor(i / 4);
+    const x = ox + col * (C + G), y = oy + row * (C + G);
+    s += colorFor(i, x, y);
+  }
+  return s;
+}
+function satellite(x, y, deg, body, panel) {
+  return `<g transform="translate(${x} ${y}) rotate(${deg})">
+    <rect x="-7.2" y="-1.1" width="4.6" height="2.2" rx=".4" fill="${panel}"/>
+    <rect x="2.6" y="-1.1" width="4.6" height="2.2" rx=".4" fill="${panel}"/>
+    <rect x="-2.4" y="-2.4" width="4.8" height="4.8" rx=".8" fill="${body}"/></g>`;
+}
+// tema: {ramp, fg, empty, line}
+const THEMES = {
+  light: { ramp: BLUE, fg: '#1A1A1A', empty: '#FFFFFF', line: '#BFD3E3', accent: '#1F6F8B' },
+  navy:  { ramp: NAVY, fg: '#FFFFFF', empty: 'transparent', line: '#2F4F7A', accent: '#9ECAE1' },
+  print: { ramp: GREY, fg: '#000000', empty: '#FFFFFF', line: '#9A9A9A', accent: '#000000' },
+};
+
+const ICONS = {
+  A1: t => ({ vb: '0 0 57 42', body: gridCells(0, 0, (i, x, y) => cell(x, y, t.ramp[LEVELS[i]-1])) }),
+  A3: t => ({ vb: '-1 -1 59 44', body: gridCells(0, 0, (i, x, y) => i === 9
+      ? cell(x, y, t.ramp[4])
+      : cell(x, y, 'none', t.fg, 1.6)) }),
+  B1: t => {
+    const oy = 24, ox = 4;
+    const arc = `<path d="M 1 22 Q 27 -5 58 9" fill="none" stroke="${t.fg}" stroke-width="2.2" stroke-linecap="round"/>`;
+    // tangente al final: 2*(P2-P1) = (62, 28)
+    return { vb: '-1 -2 70 68', body: arc + satellite(60.5, 10.2, 24, t.fg, t.accent) +
+      gridCells(ox, oy, (i, x, y) => cell(x, y, t.ramp[LEVELS[i]-1])) };
+  },
+  B2: t => {
+    // franja de barrido: recta por Feb y Abr, pendiente -0,5; media banda 9
+    const ox = 2, oy = 8;
+    const m = -0.5, x0 = ox + 51, y0 = oy + 21; // centro de Feb
+    const nx = 0.5 / Math.hypot(1, 0.5), ny = 1 / Math.hypot(1, 0.5); // normal unitaria (0.447, 0.894)
+    const half = 9.5;
+    const line = (off) => {
+      const ax = 4, bx = 66;
+      const ya = y0 + m * (ax - x0), yb = y0 + m * (bx - x0);
+      return `<line x1="${ax + nx*off}" y1="${ya + ny*off}" x2="${bx + nx*off}" y2="${yb + ny*off}" stroke="${t.fg}" stroke-width="1.4" stroke-linecap="round"/>`;
+    };
+    const cells = gridCells(ox, oy, (i, x, y) => {
+      const cx = x + C/2, cy = y + C/2;
+      const d = ((cx - x0) * nx + (cy - y0) * ny);
+      return Math.abs(d) <= half ? cell(x, y, t.ramp[Math.max(LEVELS[i], 2) - 1]) : cell(x, y, t.empty, t.line, 1.2);
+    });
+    // satélite arriba a la derecha, sobre el eje de la franja
+    const sx = 70, sy = y0 + m * (sx - x0);
+    return { vb: '-3 -1 82 60', body: cells + line(-half - 1.5) + line(half + 1.5) + satellite(sx, sy, -26.6, t.fg, t.accent) };
+  },
+};
+ICONS.A2 = ICONS.A1;
+
+function icon(key, theme, h) {
+  const { vb, body } = ICONS[key](THEMES[theme]);
+  const [, , w, hh] = vb.split(' ').map(Number);
+  return `<svg class="icon" viewBox="${vb}" height="${h}" width="${(h * w / hh).toFixed(1)}" role="img" aria-label="Ícono GOLIAT ${key}">${body}</svg>`;
+}
+function squareIcon(key, theme, size) { // para favicon: centrado en un cuadrado
+  const { vb, body } = ICONS[key](THEMES[theme]);
+  const [x, y, w, h] = vb.split(' ').map(Number);
+  const s = Math.max(w, h);
+  const vb2 = `${x - (s - w)/2} ${y - (s - h)/2} ${s} ${s}`;
+  return `<svg viewBox="${vb2}" width="${size}" height="${size}" role="img" aria-label="Favicon ${key}">${body}</svg>`;
+}
+function strip(theme) {
+  const t = THEMES[theme];
+  let s = '';
+  for (let i = 0; i < 12; i++) s += `<rect x="${i * 15}" y="0" width="12" height="12" rx="2" fill="${t.ramp[LEVELS[i]-1]}"/>`;
+  return `<svg viewBox="0 0 177 12" width="100%" style="display:block" role="img" aria-label="Franja de 12 meses">${s}</svg>`;
+}
+function wordmark(size, tag) {
+  return `<div class="wm"><div class="name" style="font-size:${size}px">GOLIAT</div>${tag ? `<div class="tagl">Actividad de fuego detectada por satélite</div>` : ''}</div>`;
+}
+function lockup(key, theme, size, tag = true) {
+  if (key === 'A2') {
+    return `<div class="lockup v" style="width:${size * 4.15}px"><div class="name wm" style="width:100%"><div class="name" style="font-size:${size * 1.25}px">GOLIAT</div></div>
+      <div style="width:100%">${strip(theme)}<div class="months">${'JASONDEFMAMJ'.split('').map(m => `<span>${m}</span>`).join('')}</div></div>
+      ${tag ? `<div class="wm"><div class="tagl">Actividad de fuego detectada por satélite</div></div>` : ''}</div>`;
+  }
+  return `<div class="lockup">${icon(key, theme, size * 1.35)}${wordmark(size, tag)}</div>`;
+}
+
+const OPTS = [
+  { key: 'A1', fam: 'Calendario de celdas', name: 'Temporada',
+    idea: 'Una grilla de 4 × 3: los 12 meses de la temporada, de julio a junio, pintados con el perfil real de la región.',
+    tells: 'Que el producto es un calendario y que el color es cantidad. Es lo mismo que la persona ve al abrir la app.',
+    risk: 'Sin la palabra al lado puede leerse como "un gráfico cualquiera".' },
+  { key: 'A2', fam: 'Calendario de celdas', name: 'Franja',
+    idea: 'Una fila de 12 celdas bajo el nombre, con las iniciales de los meses. El ícono chico usa la grilla de A1.',
+    tells: 'Que GOLIAT lee el año mes a mes. Es la variante más clara para una portada, un encabezado impreso o una slide.',
+    risk: 'Son dos piezas (franja y grilla); hay que cuidar que se vean como una sola marca.' },
+  { key: 'A3', fam: 'Calendario de celdas', name: 'El mes que pesa',
+    idea: 'Doce celdas solo con contorno y una sola llena: abril, el mes con más actividad detectada en la región.',
+    tells: 'La pregunta del producto: "¿en qué meses se concentra?". Es la más sobria y la que mejor imprime en B/N.',
+    risk: 'Destacar un solo mes puede leerse como que siempre es abril; en la landing hay que decir que es el perfil regional.' },
+  { key: 'B1', fam: 'Órbita sobre el territorio', name: 'Pasada',
+    idea: 'Un arco abierto con un satélite de paneles pasa sobre la grilla de la temporada.',
+    tells: '"Visto desde el espacio" más el calendario. Es la que más dice NASA sin usar marcas de NASA.',
+    risk: 'Es la más cercana a la órbita de Space Apps. En 16 px el arco y el satélite casi desaparecen.' },
+  { key: 'B2', fam: 'Órbita sobre el territorio', name: 'Barrido',
+    idea: 'La franja que escanea el satélite cruza la grilla en diagonal y solo se llenan las celdas que caen dentro.',
+    tells: 'Cómo nace el dato: el satélite barre una franja y marca dónde vio calor. Se aleja bien de la órbita de Space Apps.',
+    risk: 'Es la más técnica. Las celdas vacías pueden leerse como "sin datos", que en la app significa otra cosa (∅).' },
+];
+
+const SA_BLACK = document.querySelector('.warn svg').outerHTML;
+const SA_WHITE = `<svg width="561" height="221" viewBox="0 0 561 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clipw_13096_163)">
+<path d="M160.877 1.39358C161.488 0.155688 162.987 -0.352256 164.225 0.258812C165.463 0.869956 165.971 2.36937 165.36 3.60744L144.532 45.8057C147.819 44.2817 151.399 43.5941 154.95 43.7432L169.522 23.6055C170.332 22.4872 171.895 22.2365 173.013 23.0459C174.132 23.8554 174.382 25.4186 173.573 26.5371L160.455 44.6651C163.159 45.4721 165.741 46.7977 168.045 48.6426L187.239 29.4492C188.215 28.473 189.798 28.4729 190.774 29.4492C191.75 30.4255 191.75 32.0081 190.774 32.9844L171.581 52.1787C173.426 54.4822 174.751 57.0647 175.558 59.7686L193.686 46.6504C194.805 45.8411 196.367 46.0916 197.177 47.21C197.986 48.3285 197.736 49.8918 196.617 50.7012L176.48 65.2735C176.629 68.8244 175.942 72.4041 174.418 75.6914L216.616 54.8623C217.854 54.2513 219.354 54.76 219.965 55.9981C220.575 57.2361 220.067 58.7346 218.829 59.3457L172.809 82.0606C193.048 117.394 188.086 163.229 157.907 193.408C121.784 229.532 63.216 229.532 27.0925 193.408C-9.0309 157.285 -9.03079 98.7173 27.0925 62.5938C57.1794 32.5069 102.827 27.4826 138.116 47.5059L160.877 1.39358ZM134.569 54.6914C102.278 36.133 60.3412 40.6576 32.7488 68.25C-0.250243 101.249 -0.250132 154.752 32.7488 187.751C65.7481 220.75 119.251 220.75 152.251 187.751C179.935 160.066 184.396 117.942 165.621 85.6084L163.798 86.5088C163.683 86.5656 163.565 86.6126 163.446 86.6504C155.129 90.4957 144.947 88.9899 138.09 82.1328C131.233 75.2757 129.727 65.0937 133.572 56.7764C133.61 56.6579 133.657 56.5407 133.714 56.4258L134.569 54.6914ZM166.374 53.8487C159.54 47.0149 148.46 47.0149 141.626 53.8487C134.792 60.6828 134.792 71.7635 141.626 78.5977C148.46 85.4316 159.54 85.4316 166.374 78.5977C173.208 71.7635 173.208 60.6828 166.374 53.8487Z" fill="white"/>
+<path d="M365.371 50.3675H358.683L352.283 33.1835C352.497 34.8688 352.657 36.3621 352.763 37.6635C352.891 38.9435 352.955 40.4688 352.955 42.2395V50.3675H348.283V28.1915H354.811L361.371 45.4075C360.902 42.4848 360.667 39.7328 360.667 37.1515V28.1915H365.371V50.3675Z" fill="#DB240B"/>
+<path d="M389.182 50.3675L388.03 45.5995H381.566L380.446 50.3675H375.006L381.694 28.1915H388.062L394.75 50.3675H389.182ZM382.462 41.7915H387.134L384.798 31.9995L382.462 41.7915Z" fill="#DB240B"/>
+<path d="M411.513 27.6475C413.177 27.6475 414.617 27.8821 415.833 28.3515C417.07 28.8208 418.19 29.5355 419.193 30.4955L416.761 33.3435C415.246 32.1061 413.625 31.4875 411.897 31.4875C410.98 31.4875 410.254 31.6795 409.721 32.0635C409.188 32.4261 408.921 32.9595 408.921 33.6635C408.921 34.1541 409.038 34.5595 409.273 34.8795C409.508 35.1781 409.924 35.4661 410.521 35.7435C411.118 36.0208 412.014 36.3515 413.209 36.7355C415.47 37.4608 417.134 38.3568 418.201 39.4235C419.268 40.4688 419.801 41.9621 419.801 43.9035C419.801 45.2901 419.449 46.5168 418.745 47.5835C418.041 48.6288 417.028 49.4501 415.705 50.0475C414.382 50.6235 412.814 50.9115 411.001 50.9115C409.188 50.9115 407.577 50.6235 406.169 50.0475C404.782 49.4715 403.588 48.7035 402.585 47.7435L405.241 44.8315C406.094 45.5568 406.969 46.1008 407.865 46.4635C408.782 46.8261 409.774 47.0075 410.841 47.0075C411.929 47.0075 412.782 46.7728 413.401 46.3035C414.041 45.8128 414.361 45.1408 414.361 44.2875C414.361 43.7328 414.244 43.2741 414.009 42.9115C413.774 42.5275 413.369 42.1861 412.793 41.8875C412.217 41.5888 411.385 41.2688 410.297 40.9275C407.844 40.1808 406.094 39.2635 405.049 38.1755C404.025 37.0875 403.513 35.7115 403.513 34.0475C403.513 32.7675 403.854 31.6475 404.537 30.6875C405.22 29.7061 406.169 28.9595 407.385 28.4475C408.601 27.9141 409.977 27.6475 411.513 27.6475Z" fill="#DB240B"/>
+<path d="M442.213 50.3675L441.061 45.5995H434.597L433.477 50.3675H428.037L434.725 28.1915H441.093L447.781 50.3675H442.213ZM435.493 41.7915H440.165L437.829 31.9995L435.493 41.7915Z" fill="#DB240B"/>
+<path d="M254.816 137.937C254.816 142.032 253.241 144.341 249.356 144.341C244.946 144.341 243.581 141.402 243.581 136.782V119.562H235.916V137.937C235.916 147.282 240.011 152.216 249.461 152.216C259.016 152.216 262.796 147.072 262.796 137.937V125.547C262.796 117.987 261.851 115.361 259.016 111.791C255.761 107.696 249.671 102.656 245.891 97.7215C244.316 95.7265 244.001 94.6765 244.001 91.0015V78.1915C244.001 74.0965 245.891 71.9965 249.566 71.9965C253.871 71.9965 255.026 74.9365 255.026 79.2415V93.9415H262.481V78.1915C262.481 68.6365 259.016 63.9115 249.671 63.9115C240.431 63.9115 235.916 68.5315 235.916 78.1915V91.1065C235.916 96.8815 236.126 98.9815 238.751 102.341C241.796 106.226 247.781 111.266 252.191 116.726C254.291 119.351 254.816 120.401 254.816 125.651V137.937Z" fill="white"/>
+<path d="M292.466 94.8865C292.466 100.241 290.261 102.446 285.641 102.446H280.076V72.9415H285.536C290.576 72.9415 292.466 75.3565 292.466 80.5015V94.8865ZM280.076 151.271V110.216H285.641C295.721 110.216 300.341 105.596 300.341 94.6765V80.5015C300.341 69.5815 295.616 64.8565 285.536 64.8565H272.096V151.271H280.076Z" fill="white"/>
+<path d="M333.38 151.271L322.145 64.8565H312.8L300.935 151.271H308.705L310.595 136.782H323.51L325.4 151.271H333.38ZM311.54 129.431C313.535 114.626 315.425 100.347 317.21 85.1215C318.89 100.347 320.78 114.626 322.565 129.431H311.54Z" fill="white"/>
+<path d="M358.298 137.516C358.298 142.136 356.828 144.341 352.943 144.341C349.163 144.341 347.273 142.031 347.273 137.516V78.7165C347.273 74.2015 349.163 71.9965 352.943 71.9965C357.038 71.9965 358.298 74.0965 358.298 78.7165V93.9415H365.543V78.6115C365.543 68.8465 361.343 63.9115 352.943 63.9115C343.808 63.9115 339.188 68.8465 339.188 78.8215V137.621C339.188 147.386 343.808 152.216 352.943 152.216C361.763 152.216 365.543 147.491 365.543 137.411V119.562H358.298V137.516Z" fill="white"/>
+<path d="M398.26 151.271V143.396H382.825V111.266H393.325V103.286H382.825V72.9415H397.735V64.8565H374.845V151.271H398.26Z" fill="white"/>
+<path d="M453.699 151.271L442.464 64.8565H433.119L421.254 151.271H429.024L430.914 136.782H443.829L445.719 151.271H453.699ZM431.859 129.431C433.854 114.626 435.744 100.347 437.529 85.1215C439.209 100.347 441.099 114.626 442.884 129.431H431.859Z" fill="white"/>
+<path d="M482.045 94.8865C482.045 100.241 479.84 102.446 475.22 102.446H469.655V72.9415H475.115C480.155 72.9415 482.045 75.3565 482.045 80.5015V94.8865ZM469.655 151.271V110.216H475.22C485.3 110.216 489.92 105.596 489.92 94.6765V80.5015C489.92 69.5815 485.195 64.8565 475.115 64.8565H461.675V151.271H469.655Z" fill="white"/>
+<path d="M518.508 94.8865C518.508 100.241 516.303 102.446 511.683 102.446H506.118V72.9415H511.578C516.618 72.9415 518.508 75.3565 518.508 80.5015V94.8865ZM506.118 151.271V110.216H511.683C521.763 110.216 526.383 105.596 526.383 94.6765V80.5015C526.383 69.5815 521.658 64.8565 511.578 64.8565H498.138V151.271H506.118Z" fill="white"/>
+<path d="M553.169 137.937C553.169 142.032 551.594 144.341 547.709 144.341C543.299 144.341 541.934 141.402 541.934 136.782V119.562H534.269V137.937C534.269 147.282 538.364 152.216 547.814 152.216C557.369 152.216 561.149 147.072 561.149 137.937V125.547C561.149 117.987 560.204 115.361 557.369 111.791C554.114 107.696 548.024 102.656 544.244 97.7215C542.669 95.7265 542.354 94.6765 542.354 91.0015V78.1915C542.354 74.0965 544.244 71.9965 547.919 71.9965C552.224 71.9965 553.379 74.9365 553.379 79.2415V93.9415H560.834V78.1915C560.834 68.6365 557.369 63.9115 548.024 63.9115C538.784 63.9115 534.269 68.5315 534.269 78.1915V91.1065C534.269 96.8815 534.479 98.9815 537.104 102.341C540.149 106.226 546.134 111.266 550.544 116.726C552.644 119.351 553.169 120.401 553.169 125.651V137.937Z" fill="white"/>
+<path d="M247.439 165.22C250.376 165.147 253.235 166.176 255.451 168.106L252.492 171.636C251.787 171.077 251.008 170.618 250.177 170.273C249.396 169.963 248.562 169.808 247.721 169.819C246.886 169.802 246.06 169.998 245.322 170.389C244.584 170.781 243.958 171.353 243.503 172.054C242.496 173.552 241.99 175.856 241.986 178.967C241.982 182.078 242.488 184.356 243.503 185.801C243.973 186.503 244.615 187.073 245.367 187.457C246.119 187.842 246.957 188.028 247.801 187.999C248.703 188.014 249.597 187.834 250.423 187.471C251.32 187.023 252.171 186.488 252.965 185.875L255.74 189.442C254.698 190.477 253.474 191.309 252.13 191.898C250.673 192.545 249.094 192.87 247.5 192.85C245.28 192.903 243.088 192.351 241.157 191.253C239.315 190.139 237.848 188.499 236.945 186.544C235.899 184.167 235.392 181.588 235.46 178.992C235.397 176.43 235.924 173.888 237.001 171.563C237.926 169.611 239.404 167.974 241.25 166.853C243.124 165.752 245.265 165.187 247.439 165.22V165.22Z" fill="white"/>
+<path d="M288.877 192.18V180.901H280.981V192.18H274.749V165.865H280.981V176.045H288.877V165.865H295.103V192.18H288.877Z" fill="white"/>
+<path d="M330.106 192.18L328.743 186.519H321.074L319.742 192.18H313.289L321.222 165.865H328.78L336.713 192.18H330.106ZM322.124 182H327.65L324.875 170.384L322.124 182Z" fill="white"/>
+<path d="M361.082 165.865V187.226H371.336L370.722 192.137H354.887V165.865H361.082Z" fill="white"/>
+<path d="M396.761 165.865V187.226H407.009L406.395 192.137H390.535V165.865H396.761Z" fill="white"/>
+<path d="M442.35 165.865L441.699 170.31H432.44V176.61H440.526V180.981H432.44V187.698H442.35V192.18H426.214V165.865H442.35Z" fill="white"/>
+<path d="M482.683 192.18H474.751L467.155 171.79C467.407 173.791 467.598 175.56 467.726 177.107C467.855 178.654 467.954 180.435 467.954 182.535V192.18H462.428V165.865H470.17L477.956 186.292C477.416 183.045 477.136 179.76 477.121 176.468V165.865H482.702L482.683 192.18Z" fill="white"/>
+<path d="M515.188 165.22C518.412 165.163 521.54 166.315 523.956 168.45L520.806 171.753C520.009 171.125 519.126 170.615 518.184 170.236C517.316 169.889 516.387 169.72 515.452 169.739C514.543 169.714 513.642 169.912 512.828 170.315C512.013 170.719 511.31 171.316 510.78 172.054C509.621 173.576 509.04 175.893 509.036 179.004C509.036 182.369 509.478 184.761 510.362 186.182C510.803 186.867 511.419 187.422 512.147 187.789C512.874 188.156 513.687 188.322 514.5 188.269C515.744 188.284 516.971 187.984 518.068 187.397V181.436H514.654L514.04 177.027H524.103V190.05C522.706 190.952 521.183 191.643 519.584 192.101C517.99 192.576 516.336 192.82 514.672 192.825C510.677 192.825 507.665 191.661 505.634 189.332C503.604 187.002 502.593 183.56 502.601 179.004C502.53 176.428 503.089 173.874 504.228 171.563C505.246 169.588 506.816 167.952 508.747 166.853C510.715 165.756 512.935 165.192 515.188 165.22Z" fill="white"/>
+<path d="M560.611 165.865L559.997 170.31H550.701V176.61H558.794V180.981H550.701V187.698H560.611V192.18H544.476V165.865H560.611Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clipw_13096_163">
+<rect width="560.841" height="220.501" fill="white"/>
+</clipPath>
+</defs>
+</svg>`;
+
+document.getElementById('options').innerHTML = OPTS.map(o => `
+  <section class="opt" aria-labelledby="h-${o.key}">
+    <div class="opt-head"><span class="code">${o.key}</span><h2 id="h-${o.key}">${o.name}</h2><span class="family">${o.fam}</span></div>
+    <div class="notes">
+      <p><b>Idea.</b> ${o.idea}</p>
+      <p><b>Qué cuenta.</b> ${o.tells}</p>
+      <p><b>Riesgo.</b> ${o.risk}</p>
+    </div>
+    <div class="grid">
+      <div class="tile light"><span class="tag">PANTALLA · CLARO</span>${lockup(o.key, 'light', 40)}</div>
+      <div class="tile navy"><span class="tag">FONDO OSCURO</span>${lockup(o.key, 'navy', 32)}</div>
+      <div class="tile print"><span class="tag">IMPRESIÓN B/N</span>${lockup(o.key, 'print', 30)}</div>
+      <div class="tile light"><span class="tag">TAMAÑOS DEL ÍCONO</span>
+        <div class="sizes">
+          <figure>${squareIcon(o.key === 'A2' ? 'A1' : o.key, 'light', 96)}<figcaption>96</figcaption></figure>
+          <figure>${squareIcon(o.key === 'A2' ? 'A1' : o.key, 'light', 48)}<figcaption>48</figcaption></figure>
+          <figure>${squareIcon(o.key === 'A2' ? 'A1' : o.key, 'light', 32)}<figcaption>32</figcaption></figure>
+          <figure>${squareIcon(o.key === 'A2' ? 'A1' : o.key, 'light', 16)}<figcaption>16</figcaption></figure>
+          <figure><span class="browser">${squareIcon(o.key === 'A2' ? 'A1' : o.key, 'light', 16)} GOLIAT · Coihueco</span><figcaption>pestaña</figcaption></figure>
+        </div></div>
+    </div>
+    <div class="row2">
+      <div class="tile light"><span class="tag">CON SPACE APPS · CLARO</span>
+        <div class="cobrand">${lockup(o.key, 'light', 26, false)}<span class="sep"></span><span class="sa">${SA_BLACK}</span></div></div>
+      <div class="tile navy"><span class="tag">CON SPACE APPS · OSCURO</span>
+        <div class="cobrand">${lockup(o.key, 'navy', 26, false)}<span class="sep"></span><span class="sa">${SA_WHITE}</span></div></div>
+    </div>
+  </section>`).join('');
+
+const max = Math.max(...TOTALS);
+document.getElementById('bars').innerHTML = TOTALS.map((v, i) => `
+  <div class="bar"><span class="v">${v.toLocaleString('es-CL')}</span>
+    <span class="b" style="height:${(v / max * 100).toFixed(1)}%;background:${BLUE[LEVELS[i]-1]}"></span>
+    <span class="m">${MONTHS[i]}</span></div>`).join('');
+</script>
