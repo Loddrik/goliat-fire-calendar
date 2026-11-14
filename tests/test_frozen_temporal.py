@@ -1,11 +1,12 @@
 import sys
 import unittest
+import tempfile
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'pipeline'))
-from frozen_temporal_audit import freeze,signature,estimate,join_oof,calibrate_radii,calendar_labels,requested_modis_days,BAND_POLICIES,bands,verify_legacy_controls
+from frozen_temporal_audit import freeze,signature,estimate,join_oof,calibrate_radii,calendar_labels,requested_modis_days,BAND_POLICIES,bands,verify_legacy_controls,write_frozen,load_frozen
 from scientific_audit import TRAIN,KAPPAS
 from affine_experiment import LAMBDAS as B_LAMBDAS,b_name
 from robust_affine_experiment import LAMBDAS as H_LAMBDAS,DELTAS,name as h_name
@@ -34,6 +35,16 @@ class FrozenTemporalTests(unittest.TestCase):
         self.assertEqual(signature(model),before)
         for col in [*BAND_POLICIES,*[p+'_abs80_radius' for p in BAND_POLICIES]]:
             np.testing.assert_array_equal(a[col],b[col])
+
+    def test_saved_coefficients_restore_exactly_and_reject_tampering(self):
+        tr,oof=past_fixture();model=freeze(tr,oof)
+        future=tr[tr.season==2012].copy();future.season=2020
+        with tempfile.TemporaryDirectory() as d:
+            write_frozen(model,d);restored=load_frozen(d)
+            self.assertEqual(signature(model),signature(restored))
+            pd.testing.assert_frame_equal(estimate(future,model),estimate(future,restored))
+            p=Path(d)/'frozen_affine.csv';p.write_text(p.read_text()+'\n')
+            with self.assertRaisesRegex(ValueError,'hash mismatch'):load_frozen(d)
 
     def test_training_or_selection_cannot_contain_future_seasons(self):
         tr,oof=past_fixture();bad=tr.copy();bad.loc[0,'season']=2020

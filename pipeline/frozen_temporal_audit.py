@@ -1,5 +1,6 @@
 """Protocol 11: fit on 2012–19 once; descriptive future discrepancy and bands."""
 import calendar
+import csv
 import hashlib
 import json
 import re
@@ -177,17 +178,42 @@ def bands(frame,enabled):
     return result
 
 
-def write_frozen(model):
-    OUT.mkdir(parents=True,exist_ok=True)
+def write_frozen(model,directory=OUT):
+    directory=Path(directory);directory.mkdir(parents=True,exist_ok=True)
     files=[]
     for name in ['regional','local','climatology']:
-        p=OUT/('reference_'+name+'.csv');model['reference'][name].to_csv(p);files.append(p)
+        p=directory/('reference_'+name+'.csv');model['reference'][name].to_csv(p);files.append(p)
     for name in ['affine','huber','piecewise','radii','selection']:
-        p=OUT/('frozen_'+name+'.csv');model[name].to_csv(p,index=name in ['affine','huber','piecewise']);files.append(p)
-    frozen={'training_seasons':list(TRAIN),'r_const':model['reference']['ratio'],'choices':model['choices'],
+        p=directory/('frozen_'+name+'.csv');model[name].to_csv(p,index=name in ['affine','huber','piecewise']);files.append(p)
+    frozen={'schema_version':1,'training_seasons':list(TRAIN),'r_const':model['reference']['ratio'],'choices':model['choices'],
             'signature':signature(model),'artifacts_sha256':{p.name:sha(p) for p in files},'huber_numerics':model['numerics']}
-    (OUT/'frozen_model.json').write_text(json.dumps(frozen,indent=2,allow_nan=False)+'\n')
+    (directory/'frozen_model.json').write_text(json.dumps(frozen,indent=2,allow_nan=False)+'\n')
     print('Model frozen before destination query:',frozen['signature'],flush=True)
+
+
+def load_frozen(directory=OUT):
+    directory=Path(directory)
+    frozen=json.loads((directory/'frozen_model.json').read_text())
+    if frozen.get('schema_version')!=1:raise ValueError('Unknown frozen model schema')
+    for filename,expected in frozen['artifacts_sha256'].items():
+        if Path(filename).name!=filename or sha(directory/filename)!=expected:raise ValueError('Frozen artifact hash mismatch')
+    def read(name):
+        with (directory/name).open(newline='') as stream:header=next(csv.reader(stream))
+        # Python float parses the saved decimal representation exactly. Preserve
+        # counts and identifiers separately; avoid pandas' deprecated float_precision.
+        nonfloat={'cut','g','m','n','policy','candidate','n_active_calibration'}
+        converters={c:(lambda v:float(v) if v else np.nan) for c in header if c not in nonfloat}
+        return pd.read_csv(directory/name,dtype={'cut':str,'g':str},converters=converters)
+    reference={'ratio':frozen['r_const'],
+        'regional':read('reference_regional.csv').set_index('g'),
+        'local':read('reference_local.csv').set_index(['cut','g']),
+        'climatology':read('reference_climatology.csv').set_index(['cut','m'])['clim']}
+    model={'reference':reference,'choices':frozen['choices'],'numerics':frozen['huber_numerics']}
+    for name in ['affine','huber','piecewise']:
+        model[name]=read('frozen_'+name+'.csv').set_index(['cut','g'])
+    for name in ['radii','selection']:model[name]=read('frozen_'+name+'.csv')
+    if signature(model)!=frozen['signature']:raise ValueError('Restored model signature differs')
+    return model
 
 
 def run():
@@ -207,11 +233,13 @@ def run():
     published=json.loads((DATA/'params.json').read_text())['r_const']
     if abs(model['reference']['ratio']-published)>1e-12:raise ValueError('Published M1 factor not reproduced')
     fingerprint=signature(model);write_frozen(model)
+    restored=load_frozen()
+    if signature(restored)!=fingerprint:raise ValueError('Frozen model cannot be restored exactly')
     paths=pd.read_csv(DATA/'inventory.csv').path
     snpp_days=requested_days(paths,'SNPP');modis_days=requested_modis_days(paths)
     if any(not season_dates(s)<=snpp_days or not season_dates(s)<=modis_days for s in range(2020,2026)):
         raise ValueError('Incomplete requested SP product windows')
-    frame=future_monthly(data);x=estimate(frame,model)
+    frame=future_monthly(data);x=estimate(frame,restored)
     enabled,published_radii=publication_metadata(data.cuts);x['published_mae_radius']=x.cut.map(published_radii)
     periods={name:g.copy() for name,g in x.groupby('block')}
     legacy=x[x.block=='legacy_2020_2021']
@@ -228,7 +256,7 @@ def run():
                 population=populations.get('published14') if label=='M1_published_rounded_typical_error' else populations['all54']
                 if label=='M1_published_rounded_typical_error' and cut not in enabled:continue
                 for state,values in population.items():coverage.append(dict(period=period,cut=cut,band=label,population=state,**values))
-    if signature(model)!=fingerprint:raise ValueError('Frozen model changed during destination evaluation')
+    if signature(model)!=fingerprint or signature(restored)!=fingerprint:raise ValueError('Frozen model changed during destination evaluation')
     check_deadline()
     if before!={str(p.relative_to(ROOT)):sha(p) for p in protected}:raise ValueError('Protected production/previous data changed')
     selected_cols=['cut','season','y','m','g','aqua','snpp','provisional_cell_days','block','orbit_epoch',*METHODS,
@@ -239,7 +267,7 @@ def run():
     season_scores.to_csv(OUT/'season_aggregates.csv',index=False)
     pd.DataFrame(coverage).to_csv(OUT/'commune_band_coverage.csv',index=False)
     summary={'status':'frozen-fit-descriptive-temporal-audit','independent_validation':False,'published_factor_reproduced':True,'legacy_controls_reproduced':True,
-        'model_signature_unchanged_after_evaluation':True,'signature':fingerprint,'published14':enabled,
+        'model_signature_unchanged_after_evaluation':True,'saved_model_restored_exactly':True,'signature':fingerprint,'published14':enabled,
         'n_pairs':len(x),'requested_product_windows_complete':True,'observation_coverage_known':False,
         'provisional_cell_days':0,'periods':reports,'choice_counts':{p:pd.Series(c).value_counts().astype(int).to_dict() for p,c in model['choices'].items()}}
     (OUT/'summary.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n')
