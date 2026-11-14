@@ -29,7 +29,7 @@ Calendario de actividad de fuego detectada, MODIS + VIIRS armonizados (NASA FIRM
 ## Estructura y comandos
 
 ```
-pipeline/   Python + DuckDB (uv). Orden: download_firms → inventory → comunas → build_detections → build_monthly → build_mask → experiment → publish
+pipeline/   Python + DuckDB (uv). Orden: download_firms → inventory → comunas → build_detections → build_monthly → build_mask → experiment → publish → publish_web (derivados para la web: mapa por temporada/mes, totales, climatología mensual; de producto)
             experiment.py y publish.py corren también desde los parquet versionados en data/processed/ (sin goliat.duckdb).
 web/        React 19 + Vite + TypeScript + MapLibre (basemap OpenFreeMap). Lee /data/index.json y /data/comunas/<cut>.json.
 server.mjs  Express: sirve web/dist, /data (web/public/data) y /data/detections/<cut>.csv (data/processed/detections_csv).
