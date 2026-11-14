@@ -32,8 +32,8 @@ Si Daniel cambia el método (p. ej. issue #1: método por comuna), agrega `metho
 
 ## 3. Cómo trabajamos en git
 
-- `main` despliega solo a Railway. **Nada se mergea a `main` si `npm run build` falla** (lo verifica quien mergea; no hay CI).
-- Daniel trabaja en ramas `ciencia/<issue>-<tema>` y abre PR; Rubén revisa que el contrato (§2) y los textos sigan coherentes y mergea. Rubén trabaja en `main` directo para la app (es una persona, va rápido) o en `producto/<tema>` si el cambio es grande.
+- `main` despliega solo a Railway; **solo se toca para desplegar**. Los cambios se acumulan en `dev` (desde el 14-11 a las 15:30) y, cuando se quiere desplegar, se mergea `dev` → `main`. **Nada se mergea a `main` si `npm run build` falla** (lo verifica quien mergea; no hay CI).
+- Daniel trabaja en ramas `ciencia/<issue>-<tema>` y abre PR **contra `dev`**; Rubén revisa que el contrato (§2) y los textos sigan coherentes y mergea. Rubén trabaja en `dev` directo para la app (es una persona, va rápido) o en `producto/<tema>` con PR a `dev` si el cambio es grande.
 - Un PR de ciencia que cambie números publicados **corre `publish.py` y versiona los JSON** en el mismo PR, para que la app y el método cambien juntos.
 - Commits en español, con el porqué. `Co-Authored-By` cuando lo escribe Claude.
 - Datos: `data/raw/` no se versiona (cada uno baja lo suyo con su `FIRMS_MAP_KEY`, o pide los parquet). `data/processed/*.parquet`, `gates.csv`, `params.json` y los JSON **sí** se versionan: son el resultado reproducible. `goliat.duckdb` no: `experiment.py` y `publish.py` corren desde los parquet si no existe.
