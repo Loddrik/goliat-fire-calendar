@@ -1,4 +1,5 @@
 import datetime as dt
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -22,6 +23,15 @@ def prior():
 
 
 class RobustAffineTests(unittest.TestCase):
+    def test_real_slow_irls_case_converges_with_acceleration(self):
+        fixture=json.loads((Path(__file__).parent/'fixtures/huber_slow_case.json').read_text())
+        self.assertGreater(fixture['pure_irls_1000_kkt'],1e-6)
+        training=pd.DataFrame(fixture['training'])
+        params=pd.DataFrame([fixture['parameters']],index=pd.MultiIndex.from_tuples([(fixture['cut'],fixture['group'])],names=['cut','g']))
+        _,diag=fit_huber(training,params)
+        self.assertTrue(all(d['max_kkt']<=1e-6 for d in diag))
+        self.assertLess(max(d['iterations'] for d in diag),1000)
+
     def test_huber_matches_quadratic_when_residuals_are_small(self):
         tr=sample([0,1,2,3],[4,6,8,10]);b=fit_affine(tr,prior());h,diag=fit_huber(tr,b)
         for lam in LAMBDAS:
