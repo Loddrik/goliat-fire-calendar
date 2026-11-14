@@ -54,7 +54,7 @@ export function Calendar({ series, totals, bandMae, lang }: { series: MonthRow[]
       </table>
       <div className="legend" aria-label="Leyenda">
         <span><i className="sw observed" /> {t.observed}</span>
-        {series.some((r) => r.state === "estimated") && <span><i className="sw estimated" /> {t.estimated}{bandMae != null && series.some((r) => r.state === "estimated") ? (lang === "es" ? `: ± ${num(bandMae, lang)} celdas-día por mes en esta comuna. Un total con ± incluye meses aproximados.` : `: ± ${num(bandMae, lang)} cell-days per month in this commune. A total with ± includes approximate months.`) : ""}</span>}
+        {series.some((r) => r.state === "estimated") && <span><i className="sw estimated" /> {t.estimated}{bandMae != null && series.some((r) => r.state === "estimated") ? (lang === "es" ? `: ± ${num(bandMae, lang)} celdas-día por mes en esta comuna. Un total con ± incluye meses aproximados; su error puede ser mayor que el ± de un mes.` : `: ± ${num(bandMae, lang)} cell-days per month in this commune. A total with ± includes approximate months; its error can exceed the monthly ±.`) : ""}</span>}
         {series.some((r) => r.state === "not_enabled") && <span><i className="sw not_enabled">∅</i> {t.notEnabled}</span>}
         <span><i className="sw provisional" /> {t.provisional}</span>
         <span className="ramp"><i className="zero" />0</span>
