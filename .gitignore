@@ -1,0 +1,15 @@
+# datos (se bajan con los scripts de pipeline/)
+data/raw/
+data/processed/*.duckdb
+data/processed/*.duckdb.wal
+.env
+# python
+.venv/
+__pycache__/
+*.pyc
+# node
+node_modules/
+dist/
+.wrangler/
+# so
+.DS_Store
