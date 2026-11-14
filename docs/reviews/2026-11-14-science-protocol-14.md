@@ -20,7 +20,7 @@ Usar normalización de entrenamiento sA=max(1,RMS regional Aqua en g) y sT=max(1
 
 con r_g la referencia regional Aqua/S-NPP de entrenamiento. Mismos λ de B: {0,01;0,1;1;10}, sin ampliar la grilla. El prior de Terra es cero: debe aportar evidencia para separarse del modelo sin esa señal. Intercepto libre, estimación recortada a cero; no interpretar pendientes como conversión física ni causalidad.
 
-Resolver exactamente las ecuaciones normales de tres variables y enumerar las cuatro caras posibles de las dos restricciones de pendiente. Seleccionar la solución factible con menor objetivo, exigir finitud y KKT≤1e-6. Con Terra idénticamente cero, C debe reducirse numéricamente a B para cada λ.
+Como en B, el ajuste minimiza la pérdida de la respuesta lineal antes del recorte; el recorte a cero se aplica al estimar, no dentro del objetivo cuadrático. Resolver exactamente las ecuaciones normales de tres variables y enumerar las cuatro caras posibles de las dos restricciones de pendiente. Seleccionar la solución factible con menor objetivo, exigir finitud y KKT≤1e-6. Con Terra idénticamente cero, C debe reducirse numéricamente a B para cada λ.
 
 **Ablación D:** reemplazar Terra por su mediana comunal de mes calendario aprendida exclusivamente en el entrenamiento, tanto al ajustar como al evaluar. Mantener las normalizaciones calculadas con Terra real del entrenamiento, mismos priors y λ. D añade patrón estacional sin información Terra del mes destino; no debe acceder a su valor real. Comparar C y D como diagnóstico de aportación temporal, sin afirmar identificación causal de ese aporte.
 
