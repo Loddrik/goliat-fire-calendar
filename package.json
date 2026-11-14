@@ -1,0 +1,15 @@
+{
+  "name": "goliat-fire-calendar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix web install && npm --prefix web run build",
+    "start": "node server.mjs",
+    "dev": "npm --prefix web run dev"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": { "node": ">=20" }
+}

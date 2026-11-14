@@ -13,3 +13,4 @@ dist/
 .wrangler/
 # so
 .DS_Store
+web/node_modules
