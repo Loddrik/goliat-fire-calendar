@@ -1,0 +1,8 @@
+latitude,longitude,acq_date,acq_time,satellite,instrument,confidence,version,brightness,bright_ti4,bright_t31,bright_ti5,scan,track,frp,daynight,type,cut_com,comuna,grid_x,grid_y,source_file
+-36.78201,-73.12161,2020-09-12,1938,N20,VIIRS,n,2,,326.9,,287.7,0.48,0.65,3.1,D,0,08112,Hualpén,10687,5321,viirs-jpss1_2020_Chile.csv
+-36.78413,-73.12462,2021-03-04,1855,N20,VIIRS,n,2,,335.92,,309.53,0.43,0.38,16.02,D,0,08112,Hualpén,10687,5321,viirs-jpss1_2021_Chile.csv
+-36.78477,-73.12529,2021-03-27,1823,N20,VIIRS,n,2,,333.27,,303.75,0.51,0.41,2.67,D,0,08112,Hualpén,10687,5321,viirs-jpss1_2021_Chile.csv
+-36.77151,-73.13351,2023-11-24,1939,N20,VIIRS,n,2,,328.63,,291.77,0.48,0.65,3.19,D,0,08112,Hualpén,10686,5322,viirs-jpss1_2023_Chile.csv
+-36.77602,-73.13258,2023-11-24,1939,N20,VIIRS,n,2,,335.86,,292.75,0.49,0.65,2.89,D,0,08112,Hualpén,10686,5322,viirs-jpss1_2023_Chile.csv
+-36.78049,-73.12186,2025-01-22,1944,N20,VIIRS,n,2,,329.78,,298.86,0.59,0.7,5.88,D,0,08112,Hualpén,10687,5321,viirs-jpss1_2025_Chile.csv
+-36.77546,-73.13377,2025-03-11,1943,N20,VIIRS,n,2,,332.35,,296.2,0.58,0.69,3.71,D,0,08112,Hualpén,10686,5322,viirs-jpss1_2025_Chile.csv

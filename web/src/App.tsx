@@ -5,6 +5,7 @@ import { Calendar } from "./Calendar";
 import { SeasonCompare } from "./SeasonCompare";
 import { RecurrenceMap } from "./RecurrenceMap";
 import { download, seriesCsv } from "./csv";
+import { ObservedHistory } from "./ObservedHistory";
 import "./App.css";
 
 export default function App() {
@@ -14,13 +15,32 @@ export default function App() {
   const [doc, setDoc] = useState<ComunaDoc | null>(null);
   const [q, setQ] = useState("");
   const [showMethod, setShowMethod] = useState(false);
+  const [view, setView] = useState(() => new URLSearchParams(location.search).get("view") === "observed" ? "observed" : "reconstruction");
+  const [error, setError] = useState(false);
   const t = dict[lang];
 
-  useEffect(() => { fetch("/data/index.json").then((r) => r.json()).then(setIndex); }, []);
   useEffect(() => {
-    fetch(`/data/comunas/${cut}.json`).then((r) => r.json()).then(setDoc);
-    const u = new URL(location.href); u.searchParams.set("cut", cut); history.replaceState(null, "", u);
+    const controller = new AbortController();
+    fetch("/data/index.json", { signal: controller.signal, cache: "no-cache" })
+      .then(r => { if (!r.ok) throw new Error("index"); return r.json(); })
+      .then(setIndex).catch(() => { if (!controller.signal.aborted) setError(true); });
+    return () => controller.abort();
+  }, []);
+  useEffect(() => {
+    const controller = new AbortController();
+    setDoc(null); setError(false);
+    if (!/^\d{5}$/.test(cut)) { setError(true); return; }
+    fetch(`/data/comunas/${cut}.json`, { signal: controller.signal, cache: "no-cache" })
+      .then(r => { if (!r.ok) throw new Error("commune"); return r.json(); })
+      .then(result => { if (result.cut !== cut) throw new Error("commune"); if (!controller.signal.aborted) setDoc(result); })
+      .catch(() => { if (!controller.signal.aborted) setError(true); });
+    return () => controller.abort();
   }, [cut]);
+  useEffect(() => {
+    const u = new URL(location.href); u.searchParams.set("cut", cut); u.searchParams.set("view", view); history.replaceState(null, "", u);
+  }, [cut, view]);
+  useEffect(() => { document.documentElement.lang = lang; document.title = lang === "es" ? "GOLIAT · Actividad de fuego detectada" : "GOLIAT · Detected fire activity"; }, [lang]);
+  const currentDoc = doc?.cut === cut ? doc : null;
 
   const list = useMemo(() => {
     const n = q.trim().toLowerCase();
@@ -33,14 +53,19 @@ export default function App() {
         <div>
           <h1>{t.title}</h1>
           <p className="sub">{t.subtitle}</p>
+          <p className="sub audience">{lang === "es" ? "Antecedentes históricos para equipos municipales de emergencias y planificación. No es una alerta ni un pronóstico." : "Historical background for municipal emergency and planning teams. Not an alert or a forecast."}</p>
         </div>
         <div className="tools no-print">
           <button onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label="Language">{lang === "es" ? "EN" : "ES"}</button>
-          {doc && <button onClick={() => download(`goliat_${doc.cut}_${doc.comuna}.csv`, seriesCsv(doc))}>{t.csv}</button>}
-          {doc && <a className="btn" href={`/data/detections/${doc.cut}.csv`} download>{t.csvDet}</a>}
+          {currentDoc && view === "reconstruction" && <button onClick={() => download(`goliat_${currentDoc.cut}_${currentDoc.comuna}.csv`, seriesCsv(currentDoc))}>{t.csv}</button>}
+          {currentDoc && view === "reconstruction" && <a className="btn" href={`/data/detections/${currentDoc.cut}.csv`} download>{t.csvDet}</a>}
           <button onClick={() => window.print()}>{t.print}</button>
         </div>
       </header>
+      <nav className="view-switch no-print" aria-label={lang === "es" ? "Vistas de datos" : "Data views"}>
+        <button aria-pressed={view === "reconstruction"} onClick={() => setView("reconstruction")}>{lang === "es" ? "Calendario armonizado · GOLIAT" : "Harmonized calendar · GOLIAT"}</button>
+        <button aria-pressed={view === "observed"} onClick={() => setView("observed")}>{lang === "es" ? "Historial por plataforma · FireChronos" : "Platform history · FireChronos"}</button>
+      </nav>
 
       <div className="layout">
         <aside className="no-print">
@@ -51,7 +76,7 @@ export default function App() {
             {list.map((c) => (
               <li key={c.cut}>
                 <button role="option" aria-selected={c.cut === cut} className={c.cut === cut ? "sel" : ""} onClick={() => setCut(c.cut)}>
-                  <span>{c.comuna}</span><small>{c.region}{c.enabled ? "" : " · ∅"}</small>
+                  <span>{c.comuna}</span><small>{c.region}{view === "reconstruction" ? (c.enabled ? " · 2002→" : " · 2012→") : ""}</small>
                 </button>
               </li>
             ))}
@@ -59,7 +84,7 @@ export default function App() {
         </aside>
 
         <main>
-          {doc ? (
+          {view === "observed" ? <ObservedHistory cut={cut} lang={lang} /> : error ? <p role="alert">{lang === "es" ? "No se pudieron cargar los datos de esta comuna. Selecciona otra comuna o recarga la página." : "Could not load this commune. Select another commune or reload the page."}</p> : doc?.cut === cut ? (
             <>
               <div className="titlebar">
                 <h2>{doc.comuna} <small>{doc.region} · CUT {doc.cut}</small></h2>
@@ -70,13 +95,13 @@ export default function App() {
               </div>
               {!doc.reconstruction_enabled && <p className="why">{t.reconNotWhy}</p>}
 
-              <SeasonCompare sc={doc.season_compare} lang={lang} />
-
               <section className="card">
                 <h2>{t.calendar}</h2>
                 <p className="help">{t.calendarHelp}</p>
                 <Calendar series={doc.series} lang={lang} />
               </section>
+
+              <SeasonCompare sc={doc.season_compare} lang={lang} />
 
               <section className="card">
                 <h2>{t.recurrence}</h2>
@@ -99,7 +124,7 @@ export default function App() {
           ) : <p>…</p>}
           <footer>
             <p className="disclaimer">{t.disclaimer}</p>
-            <p className="sources">{t.sources}</p>
+            <p className="sources">{view === "reconstruction" ? t.sources : (lang === "es" ? "Historia por plataforma: NASA FIRMS · DPA 2023, SUBDERE / IDE Chile · Sin armonización ni máscara persistente adicional." : "Platform history: NASA FIRMS · DPA 2023, SUBDERE / IDE Chile · No harmonization or additional persistence mask.")}</p>
           </footer>
         </main>
       </div>

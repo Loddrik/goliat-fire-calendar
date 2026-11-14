@@ -14,3 +14,12 @@ dist/
 # so
 .DS_Store
 web/node_modules
+# FireChronos: originals stay local; only reviewed derived products are published.
+observed/data/raw/
+observed/.venv/
+observed/data/processed/dpa-source/
+observed/.sites-runtime/
+web/public/observed/
+.runtime/
+!observed/dist/
+!observed/dist/**

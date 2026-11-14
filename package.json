@@ -4,12 +4,16 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "build": "npm --prefix web install && npm --prefix web run build",
+    "build": "node scripts/sync-observed.mjs && npm --prefix web install && npm --prefix web run build",
     "start": "node server.mjs",
-    "dev": "npm --prefix web run dev"
+    "dev": "npm --prefix web run dev",
+    "test": "node --test observed/tests/core.test.mjs tests/*.test.mjs",
+    "publish:observed": "python3 pipeline/publish_observed.py"
   },
   "dependencies": {
     "express": "^4.21.2"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

@@ -1,0 +1,21 @@
+latitude,longitude,acq_date,acq_time,satellite,instrument,confidence,version,brightness,bright_ti4,bright_t31,bright_ti5,scan,track,frp,daynight,type,cut_com,comuna,grid_x,grid_y,source_file
+-36.8476,-73.12698,2018-12-20,1848,N20,VIIRS,n,2,,344.2,,306.46,0.39,0.36,11.78,D,0,08108,San Pedro de la Paz,10687,5315,viirs-jpss1_2018_Chile.csv
+-36.85865,-73.13586,2019-12-15,1938,N20,VIIRS,n,2,,337.55,,294.4,0.48,0.64,6.19,D,0,08108,San Pedro de la Paz,10686,5314,viirs-jpss1_2019_Chile.csv
+-36.90856,-73.13619,2020-01-06,1745,N20,VIIRS,n,2,,329.07,,294.17,0.56,0.68,5.65,D,0,08108,San Pedro de la Paz,10686,5309,viirs-jpss1_2020_Chile.csv
+-36.87823,-73.14159,2020-04-11,1927,N20,VIIRS,n,2,,348.15,,294.67,0.33,0.55,3.23,D,0,08108,San Pedro de la Paz,10685,5312,viirs-jpss1_2020_Chile.csv
+-36.87325,-73.14351,2020-04-11,1927,N20,VIIRS,n,2,,325.19,,292.71,0.33,0.55,1.92,D,0,08108,San Pedro de la Paz,10685,5312,viirs-jpss1_2020_Chile.csv
+-36.90426,-73.12817,2021-12-20,1938,N20,VIIRS,n,2,,330.25,,297.35,0.47,0.64,3.6,D,0,08108,San Pedro de la Paz,10687,5309,viirs-jpss1_2021_Chile.csv
+-36.89155,-73.11966,2022-01-31,1950,N20,VIIRS,n,2,,347.92,,292.9,0.68,0.74,8.65,D,0,08108,San Pedro de la Paz,10688,5310,viirs-jpss1_2022_Chile.csv
+-36.84763,-73.12712,2022-03-02,1849,N20,VIIRS,n,2,,347.17,,313.56,0.39,0.36,38.65,D,0,08108,San Pedro de la Paz,10687,5315,viirs-jpss1_2022_Chile.csv
+-36.97168,-73.06242,2023-02-20,1752,N20,VIIRS,n,2,,331.27,,289.81,0.45,0.63,13.13,D,0,08108,San Pedro de la Paz,10693,5302,viirs-jpss1_2023_Chile.csv
+-36.97751,-73.06075,2023-02-20,1752,N20,VIIRS,n,2,,337.57,,292.06,0.45,0.63,13.13,D,0,08108,San Pedro de la Paz,10693,5302,viirs-jpss1_2023_Chile.csv
+-36.95665,-73.07181,2023-02-21,1914,N20,VIIRS,n,2,,330.05,,294.94,0.45,0.47,5.14,D,0,08108,San Pedro de la Paz,10692,5304,viirs-jpss1_2023_Chile.csv
+-36.95785,-73.07712,2023-02-21,1914,N20,VIIRS,n,2,,341.96,,299.7,0.45,0.47,8.4,D,0,08108,San Pedro de la Paz,10692,5304,viirs-jpss1_2023_Chile.csv
+-36.95577,-73.07491,2023-02-21,1914,N20,VIIRS,n,2,,343.41,,297.11,0.45,0.47,11.86,D,0,08108,San Pedro de la Paz,10692,5304,viirs-jpss1_2023_Chile.csv
+-36.83108,-73.14248,2023-03-19,1926,N20,VIIRS,n,2,,328.96,,298.94,0.33,0.55,1.87,D,0,08108,San Pedro de la Paz,10685,5316,viirs-jpss1_2023_Chile.csv
+-36.83384,-73.13998,2024-02-17,1805,N20,VIIRS,n,2,,356.26,,305.39,0.6,0.53,20.5,D,0,08108,San Pedro de la Paz,10686,5316,viirs-jpss1_2024_Chile.csv
+-36.83457,-73.13943,2024-02-17,1805,N20,VIIRS,n,2,,356.28,,304.19,0.6,0.53,13.03,D,0,08108,San Pedro de la Paz,10686,5316,viirs-jpss1_2024_Chile.csv
+-36.84319,-73.14786,2025-11-10,1830,N20,VIIRS,n,2,,335.31,,302.67,0.44,0.39,2.06,D,0,08108,San Pedro de la Paz,10685,5315,viirs-jpss1_2025_Chile.csv
+-36.83013,-73.12848,2025-12-14,1753,N20,VIIRS,n,2,,338.43,,292.21,0.44,0.63,7.49,D,0,08108,San Pedro de la Paz,10687,5316,viirs-jpss1_2025_Chile.csv
+-36.83036,-73.13351,2025-12-14,1753,N20,VIIRS,n,2,,354.94,,297.7,0.44,0.63,7.49,D,0,08108,San Pedro de la Paz,10686,5316,viirs-jpss1_2025_Chile.csv
+-36.83405,-73.13126,2025-12-14,1933,N20,VIIRS,h,2,,367,,298.19,0.4,0.6,6.56,D,0,08108,San Pedro de la Paz,10686,5316,viirs-jpss1_2025_Chile.csv

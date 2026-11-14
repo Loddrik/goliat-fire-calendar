@@ -1,0 +1,2 @@
+# Preserve FIRMS-derived CSV bytes: their published SHA-256 includes CRLF.
+observed/dist/data/history/**/*.csv -text whitespace=cr-at-eol

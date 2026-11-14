@@ -1,0 +1,8 @@
+latitude,longitude,acq_date,acq_time,satellite,instrument,confidence,version,brightness,bright_ti4,bright_t31,bright_ti5,scan,track,frp,daynight,type,cut_com,comuna,grid_x,grid_y,source_file
+-36.8944,-73.1313,2010-10-07,1855,Aqua,MODIS,33,6.2,306.6,,294.9,,1,1,6.6,D,0,08108,San Pedro de la Paz,10686,5310,modis_2010_Chile.csv
+-36.8839,-73.0898,2014-04-29,1830,Aqua,MODIS,70,6.2,310.8,,288.2,,1.6,1.2,21.6,D,0,08108,San Pedro de la Paz,10691,5311,modis_2014_Chile.csv
+-36.8823,-73.0724,2014-04-29,1830,Aqua,MODIS,47,6.2,306.1,,287.7,,1.6,1.2,15.6,D,0,08108,San Pedro de la Paz,10692,5311,modis_2014_Chile.csv
+-36.969,-73.0641,2015-02-20,1824,Aqua,MODIS,68,6.2,320.6,,297.2,,2,1.4,38.1,D,0,08108,San Pedro de la Paz,10693,5303,modis_2015_Chile.csv
+-36.9659,-73.0697,2015-02-21,1907,Aqua,MODIS,74,6.2,328.2,,298.9,,1.2,1.1,27.5,D,0,08108,San Pedro de la Paz,10693,5303,modis_2015_Chile.csv
+-36.8926,-73.1267,2022-12-15,1904,Aqua,MODIS,94,6.03,372.6,,306.8,,1,1,121.5,D,0,08108,San Pedro de la Paz,10687,5310,modis_2022_Chile.csv
+-36.9722,-73.0641,2023-02-20,1903,Aqua,MODIS,92,61.03,346,,298.1,,1,1,48.8,D,0,08108,San Pedro de la Paz,10693,5302,modis_2023_Chile.csv
