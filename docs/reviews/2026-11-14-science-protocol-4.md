@@ -27,4 +27,6 @@ Resolver por mínimos cuadrados iterativamente reponderados con restricciones de
 
 ## Integridad y límite temporal
 
+**Corrección numérica previa a los resultados externos (19:52 UTC):** el primer ajuste interno con IRLS puro llegó a 1.000 iteraciones con KKT=0,000335797 para δ=1, λ=0,01. La ejecución se detuvo sin calcular puntuaciones externas. Se mantiene el objetivo, grilla, tolerancia y límite de iteraciones, y se acelera el solucionador: diez pasos IRLS seguidos de Newton semisuave amortiguado con búsqueda Armijo y la misma restricción de pendiente. La aceptación sigue dependiendo de KKT≤10⁻⁶, no de los errores de validación.
+
 Directorio de salida nuevo `data/processed/robust_affine_audit/`; conservar predicciones, selección, diagnósticos numéricos, resumen y hashes. No modificar iteraciones anteriores ni producción. Registrar protocolo y código antes de dar por válidos los resultados. No iniciar experimentos que no puedan detenerse al plazo autorizado; la última fase antes de las 21:00 consolidará resultados y propuestas revisables.
