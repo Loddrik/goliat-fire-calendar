@@ -1,19 +1,17 @@
-import { MONTHS_SEASON, seasonLabel, type MonthRow } from "./types";
+import { MONTHS_SEASON, seasonLabel, type MonthRow, type SeasonTotal } from "./types";
 import { dict, type Lang } from "./i18n";
+import { BLUES, MONTH_BREAKS, MONTH_LABELS, num, tramo } from "./ui";
 
-// Rampa secuencial apta para daltónicos (viridis, 6 pasos)
-const RAMP = ["#fde725", "#7ad151", "#22a884", "#2a788e", "#414487", "#440154"];
-
-export function color(v: number, max: number) {
-  if (v <= 0) return "#f1f1f1";
-  const t = Math.min(1, Math.sqrt(v / Math.max(1, max)));
-  return RAMP[Math.min(RAMP.length - 1, Math.floor(t * RAMP.length))];
+// Tramos fijos iguales en las 54 comunas (brief §11): 0 · 1–5 · 6–20 · 21–50 · 51–100 · más de 100 celdas-día.
+export function color(v: number) {
+  const i = tramo(v, MONTH_BREAKS);
+  return i < 0 ? "#ffffff" : BLUES[i];
 }
 
-export function Calendar({ series, lang }: { series: MonthRow[]; lang: Lang }) {
+export function Calendar({ series, totals, bandMae, lang }: { series: MonthRow[]; totals: SeasonTotal[]; bandMae?: number; lang: Lang }) {
   const t = dict[lang];
   const seasons = Array.from(new Set(series.map((r) => r.season))).sort((a, b) => b - a);
-  const max = Math.max(1, ...series.filter((r) => r.value != null).map((r) => r.value as number));
+  const totalBy = new Map(totals.map((x) => [x.season, x]));
   const byKey = new Map(series.map((r) => [`${r.season}-${r.m}`, r]));
   return (
     <div className="calendar">
@@ -24,30 +22,31 @@ export function Calendar({ series, lang }: { series: MonthRow[]; lang: Lang }) {
             {MONTHS_SEASON.map((m) => (
               <th key={m} scope="col">{t.months[m - 1]}</th>
             ))}
-            <th scope="col">Σ</th>
+            <th scope="col">{lang === "es" ? "Total" : "Total"}</th>
           </tr>
         </thead>
         <tbody>
           {seasons.map((s) => {
             const rows = MONTHS_SEASON.map((m) => byKey.get(`${s}-${m}`));
-            const total = rows.reduce((a, r) => a + (r?.value ?? 0), 0);
-            const anyEnabled = rows.some((r) => r && r.state !== "not_enabled");
+            const tot = totalBy.get(s);
             return (
               <tr key={s}>
                 <th scope="row">{seasonLabel(s)}</th>
                 {rows.map((r, i) => {
                   if (!r) return <td key={i} className="cell future" aria-label="—"></td>;
                   const cls = `cell ${r.state}${r.provisional ? " provisional" : ""}${r.partial ? " partial" : ""}`;
-                  const label = r.state === "not_enabled" ? t.notEnabled : `${r.value}${r.state === "estimated" ? ` ± ${r.band}` : ""}`;
-                  const light = r.value != null && r.value > 0 && Math.sqrt(r.value / max) > 0.45;
+                  const label = r.state === "not_enabled" ? t.notEnabled : `${num(r.value, lang)}${r.state === "estimated" ? ` ± ${num(r.band ?? null, lang)}` : ""}`;
+                  const light = r.value != null && tramo(r.value, MONTH_BREAKS) >= 3;
                   return (
-                    <td key={i} className={cls} style={{ background: r.state === "not_enabled" ? undefined : color(r.value ?? 0, max), color: light ? "#fff" : "#222" }}
+                    <td key={i} className={cls} style={{ background: r.state === "not_enabled" ? undefined : color(r.value ?? 0), color: light ? "#fff" : "#1A1A1A" }}
                         title={`${t.monthsLong[r.m - 1]} ${r.y}: ${label}${r.provisional ? " · NRT" : ""}${r.partial ? (lang === "es" ? " · mes incompleto" : " · partial month") : ""}`}>
-                      {r.state === "not_enabled" ? "∅" : r.partial ? `${r.value}…` : r.value}
+                      {r.state === "not_enabled" ? "∅" : r.partial ? `${num(r.value, lang)}…` : num(r.value, lang)}
                     </td>
                   );
                 })}
-                <td className="cell total">{anyEnabled ? Math.round(total) : "∅"}</td>
+                <td className="cell total" title={tot && !tot.complete ? (lang === "es" ? "temporada incompleta" : "incomplete season") : undefined}>
+                  {!tot || tot.value == null ? "∅" : `${num(tot.value, lang)}${tot.state === "estimated" ? "±" : ""}${tot.complete ? "" : "…"}`}
+                </td>
               </tr>
             );
           })}
@@ -55,10 +54,12 @@ export function Calendar({ series, lang }: { series: MonthRow[]; lang: Lang }) {
       </table>
       <div className="legend" aria-label="Leyenda">
         <span><i className="sw observed" /> {t.observed}</span>
-        <span><i className="sw estimated" /> {t.estimated}</span>
-        <span><i className="sw not_enabled">∅</i> {t.notEnabled}</span>
+        {series.some((r) => r.state === "estimated") && <span><i className="sw estimated" /> {t.estimated}{bandMae != null && series.some((r) => r.state === "estimated") ? (lang === "es" ? `: ± ${num(bandMae, lang)} celdas-día por mes en esta comuna. Un total con ± incluye meses aproximados; su error puede ser mayor que el ± de un mes.` : `: ± ${num(bandMae, lang)} cell-days per month in this commune. A total with ± includes approximate months; its error can exceed the monthly ±.`) : ""}</span>}
+        {series.some((r) => r.state === "not_enabled") && <span><i className="sw not_enabled">∅</i> {t.notEnabled}</span>}
         <span><i className="sw provisional" /> {t.provisional}</span>
-        <span className="ramp">0 {RAMP.map((c) => <i key={c} style={{ background: c }} />)} {max}</span>
+        <span className="ramp"><i className="zero" />0</span>
+        {BLUES.map((c, i) => <span key={c} className="ramp"><i style={{ background: c }} />{i < MONTH_LABELS.length ? MONTH_LABELS[i] : (lang === "es" ? "más de 100" : "over 100")}</span>)}
+        <span>{lang === "es" ? "celdas-día por mes · mismos tramos en las 54 comunas" : "cell-days per month · same bands in all 54 communes"}</span>
       </div>
     </div>
   );

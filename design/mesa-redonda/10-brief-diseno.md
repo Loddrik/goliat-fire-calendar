@@ -123,3 +123,9 @@ El PR #22 (mergeado directo a `main` y desplegado) corrigió el truncado de `sea
 - **Control de tiempo por temporada** (jul–jun): "Todas 2012→" + un botón por temporada 12-13 … 26-27. Sin mes, sin animación.
 - **Frase de temporada con categoría** (pedido de Patricio y Rosa, `13-usuario-final-eval-actual.md`): "por debajo / parecido / por encima de lo habitual para esta fecha", **solo en diseño hasta que el issue #4 (estabilidad de categorías, ciencia) lo apruebe**. Resguardo: sin categoría cuando p75 < 10 (34 de 54 comunas al 13-11). Siempre con "No anticipa cómo seguirá la temporada" y los meses donde suele llegar la actividad.
 - **Perfil de 12 meses**: barra = mediana observada; marca = máximo; rótulo "en X de 14 temporadas" (`month_climatology.seasons_with`, agregado a `publish_web.py`). La mediana sola aplana comunas como Hualqui.
+
+## 13. Aprobado para implementar (Rubén, 14-11 noche)
+
+- Se implementa el "mapa primero" de `design/mapa.pen` (evaluación final en `17-usuario-final-eval-mapa-v2.md`: Patricio "lo usaría"; Rosa "lo usaría si" el mapa trae nombres de lugares).
+- **Nombres de lugares del mapa base permitidos** (pueblos, caminos, ríos, tal como los trae OpenFreeMap). Siguen prohibidos predios, empresas y personas (regla 4), y el zoom máximo no llega a nivel de parcela.
+- La frase con categoría sigue condicionada al issue #4: en la app se implementa con el resguardo (sin categoría si p75 < 10) y queda detrás de una bandera hasta que Daniel la apruebe.
