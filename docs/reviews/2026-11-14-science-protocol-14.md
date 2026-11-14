@@ -18,7 +18,7 @@ Usar normalización de entrenamiento sA=max(1,RMS regional Aqua en g) y sT=max(1
 
 `λ * [a² + (βA − r_g*sA)² + βT²]`,
 
-con r_g la referencia regional Aqua/S-NPP de entrenamiento. Mismos λ de B: {0,01;0,1;1;10}, sin ampliar la grilla. El prior de Terra es cero: debe aportar evidencia para separarse del modelo sin esa señal. Intercepto libre, pronóstico recortado a cero; no interpretar pendientes como conversión física ni causalidad.
+con r_g la referencia regional Aqua/S-NPP de entrenamiento. Mismos λ de B: {0,01;0,1;1;10}, sin ampliar la grilla. El prior de Terra es cero: debe aportar evidencia para separarse del modelo sin esa señal. Intercepto libre, estimación recortada a cero; no interpretar pendientes como conversión física ni causalidad.
 
 Resolver exactamente las ecuaciones normales de tres variables y enumerar las cuatro caras posibles de las dos restricciones de pendiente. Seleccionar la solución factible con menor objetivo, exigir finitud y KKT≤1e-6. Con Terra idénticamente cero, C debe reducirse numéricamente a B para cada λ.
 
