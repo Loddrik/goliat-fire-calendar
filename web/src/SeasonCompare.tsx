@@ -4,7 +4,7 @@ import { dict, type Lang } from "./i18n";
 export function SeasonCompare({ sc, lang }: { sc: SC; lang: Lang }) {
   const t = dict[lang];
   const n = sc.n;
-  const first = sc.months[0], last = sc.months[sc.months.length - 1];
+  const last = sc.months[sc.months.length - 1];
   const range = `${sc.cutoff_day} ${lang === "es" ? "de" : ""} ${t.monthsLong[last - 1]}`.replace(/\s+/g, " ");
   const max = Math.max(1, sc.current, ...Object.values(sc.observed_seasons));
   const bars = Object.entries(sc.observed_seasons).map(([s, v]) => ({ s: Number(s), v }));
