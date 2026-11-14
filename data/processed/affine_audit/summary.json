@@ -1,0 +1,878 @@
+{
+  "status": "development-experiment",
+  "external_validation": false,
+  "production_changed": false,
+  "training_seasons": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "excluded": "seasons 2020 onward",
+  "control_predictions_reproduced": true,
+  "scores": {
+    "M0": {
+      "sum_commune_season_mae": 1081.6666666666665,
+      "mean_monthly_mae": 2.5038580246913575,
+      "mean_bias": -2.3719135802469133
+    },
+    "M1": {
+      "sum_commune_season_mae": 884.4096401651681,
+      "mean_monthly_mae": 2.0472445374193704,
+      "mean_bias": 0.014950375570626132
+    },
+    "M1_A": {
+      "sum_commune_season_mae": 878.8689665515326,
+      "mean_monthly_mae": 2.0344189040544736,
+      "mean_bias": -0.07151734430271567
+    },
+    "M1_A_B": {
+      "sum_commune_season_mae": 825.4207012699183,
+      "mean_monthly_mae": 1.9106960677544405,
+      "mean_bias": -0.08774791502034043
+    },
+    "M1_B": {
+      "sum_commune_season_mae": 822.1797857576776,
+      "mean_monthly_mae": 1.9031939485131426,
+      "mean_bias": -0.08718942174175401
+    },
+    "M2": {
+      "sum_commune_season_mae": 1335.75,
+      "mean_monthly_mae": 3.092013888888889,
+      "mean_bias": -1.376350308641975
+    }
+  },
+  "enabled_diagnostic": {
+    "M1": [
+      "08111",
+      "08202",
+      "08203",
+      "08207",
+      "08301",
+      "08308",
+      "16102",
+      "16104",
+      "16108",
+      "16201",
+      "16203",
+      "16301",
+      "16302",
+      "16303"
+    ],
+    "M1_A": [
+      "08111",
+      "08202",
+      "08203",
+      "08207",
+      "08301",
+      "08308",
+      "16106",
+      "16201",
+      "16203",
+      "16301",
+      "16302",
+      "16303"
+    ],
+    "M1_B": [
+      "08111",
+      "08202",
+      "08203",
+      "08207",
+      "08301",
+      "08305",
+      "08308",
+      "16101",
+      "16102",
+      "16106",
+      "16202",
+      "16203",
+      "16301",
+      "16302",
+      "16303"
+    ],
+    "M1_A_B": [
+      "08111",
+      "08202",
+      "08203",
+      "08207",
+      "08301",
+      "08305",
+      "08308",
+      "16101",
+      "16106",
+      "16202",
+      "16203",
+      "16301",
+      "16302",
+      "16303"
+    ]
+  },
+  "choice_counts": {
+    "M1_A": {
+      "M1": 237,
+      "A_0": 71,
+      "A_1000000000": 38,
+      "A_10": 34,
+      "A_30": 16,
+      "A_50": 15,
+      "A_100": 13,
+      "A_300": 8
+    },
+    "M1_B": {
+      "M1": 176,
+      "B_0.1": 108,
+      "B_0.01": 90,
+      "B_10": 31,
+      "B_1": 27
+    },
+    "M1_A_B": {
+      "M1": 158,
+      "B_0.1": 96,
+      "B_0.01": 72,
+      "A_0": 48,
+      "B_1": 22,
+      "A_1000000000": 20,
+      "A_100": 7,
+      "A_10": 4,
+      "A_300": 2,
+      "A_30": 2,
+      "A_50": 1
+    }
+  },
+  "contrasts": [
+    {
+      "candidate": "M1_B",
+      "reference": "M1",
+      "mean_delta_mae": -0.144050588906228,
+      "interval_95_percentile": [
+        -0.2646388871004115,
+        -0.044442307334393825
+      ],
+      "per_season_delta": {
+        "2012": -0.08759068822544892,
+        "2013": -0.0932352485354795,
+        "2014": -0.05330249492374496,
+        "2015": 0.02971310306591033,
+        "2016": -0.25214585174880866,
+        "2017": -0.5112591940537397,
+        "2018": -0.18263255081383192,
+        "2019": -0.0019517860146805721
+      },
+      "blocks": 8,
+      "replicates": 5000,
+      "seed": 20261114
+    },
+    {
+      "candidate": "M1_A_B",
+      "reference": "M1_A",
+      "mean_delta_mae": -0.1237228363000335,
+      "interval_95_percentile": [
+        -0.20292571363505815,
+        -0.06073463552794881
+      ],
+      "per_season_delta": {
+        "2012": -0.11623037958161854,
+        "2013": -0.11370619438380074,
+        "2014": -0.07102309891760793,
+        "2015": 0.015331867263948078,
+        "2016": -0.07692520308876552,
+        "2017": -0.36726076549893377,
+        "2018": -0.1541936792167865,
+        "2019": -0.10577523697670316
+      },
+      "blocks": 8,
+      "replicates": 5000,
+      "seed": 20261114
+    },
+    {
+      "candidate": "M1_A_B",
+      "reference": "M1",
+      "mean_delta_mae": -0.13654846966493028,
+      "interval_95_percentile": [
+        -0.2555295888936454,
+        -0.03801511832372333
+      ],
+      "per_season_delta": {
+        "2012": -0.07143480844990466,
+        "2013": -0.09735228589236554,
+        "2014": -0.05637498854501222,
+        "2015": 0.05317343283927773,
+        "2016": -0.22058065373659252,
+        "2017": -0.5000565286475508,
+        "2018": -0.1818570806858712,
+        "2019": -0.0179048442014231
+      },
+      "blocks": 8,
+      "replicates": 5000,
+      "seed": 20261114
+    }
+  ],
+  "subgroups": {
+    "aqua_zero_viirs_positive": {
+      "n": 1152,
+      "target_sum": 2477.0,
+      "methods": {
+        "M0": {
+          "mae": 2.150173611111111,
+          "bias": -2.150173611111111,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M1": {
+          "mae": 2.150173611111111,
+          "bias": -2.150173611111111,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M2": {
+          "mae": 1.9166666666666667,
+          "bias": -0.2743055555555556,
+          "prediction_sum": 2161.0,
+          "months_positive_estimate": 650
+        },
+        "M1_A": {
+          "mae": 2.150173611111111,
+          "bias": -2.150173611111111,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M1_B": {
+          "mae": 1.8033051651577807,
+          "bias": -1.6561514509588215,
+          "prediction_sum": 569.1135284954373,
+          "months_positive_estimate": 543
+        },
+        "M1_A_B": {
+          "mae": 1.8268646498996364,
+          "bias": -1.6799706549300124,
+          "prediction_sum": 541.6738055206254,
+          "months_positive_estimate": 447
+        }
+      }
+    },
+    "both_observed_zero": {
+      "n": 2491,
+      "target_sum": 0.0,
+      "methods": {
+        "M0": {
+          "mae": 0.0,
+          "bias": 0.0,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M1": {
+          "mae": 0.0,
+          "bias": 0.0,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M2": {
+          "mae": 0.4452027298273786,
+          "bias": 0.4452027298273786,
+          "prediction_sum": 1109.0,
+          "months_positive_estimate": 613
+        },
+        "M1_A": {
+          "mae": 0.0,
+          "bias": 0.0,
+          "prediction_sum": 0.0,
+          "months_positive_estimate": 0
+        },
+        "M1_B": {
+          "mae": 0.15974620868281203,
+          "bias": 0.15974620868281203,
+          "prediction_sum": 397.92780582888474,
+          "months_positive_estimate": 882
+        },
+        "M1_A_B": {
+          "mae": 0.1437914110368042,
+          "bias": 0.1437914110368042,
+          "prediction_sum": 358.1844048926793,
+          "months_positive_estimate": 609
+        }
+      }
+    },
+    "aqua_positive": {
+      "n": 1541,
+      "target_sum": 19012.0,
+      "methods": {
+        "M0": {
+          "mae": 6.81570408825438,
+          "bias": -6.371836469824789,
+          "prediction_sum": 9193.0,
+          "months_positive_estimate": 1541
+        },
+        "M1": {
+          "mae": 5.279633797522399,
+          "bias": 1.657691594392035,
+          "prediction_sum": 21566.502746958125,
+          "months_positive_estimate": 1541
+        },
+        "M2": {
+          "mae": 8.249188838416613,
+          "bias": -5.144711226476314,
+          "prediction_sum": 11084.0,
+          "months_positive_estimate": 1169
+        },
+        "M1_A": {
+          "mae": 5.236487734340293,
+          "bias": 1.366809920269125,
+          "prediction_sum": 21118.254087134723,
+          "months_positive_estimate": 1537
+        },
+        "M1_B": {
+          "mae": 4.796120748216407,
+          "bias": 0.6865468548776282,
+          "prediction_sum": 20069.968703366427,
+          "months_positive_estimate": 1541
+        },
+        "M1_A_B": {
+          "mae": 4.8295366214548725,
+          "bias": 0.7282651512792022,
+          "prediction_sum": 20134.25659812125,
+          "months_positive_estimate": 1538
+        }
+      }
+    }
+  },
+  "bands": {
+    "M1": {
+      "all54": {
+        "abs80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.8921682098765432,
+            "mean_width": 5.98469672353019
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.7908700741318767,
+            "mean_width": 7.936264680641927
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.9128086419753086,
+            "mean_width": 13.356410014927574
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.8236441669918064,
+            "mean_width": 24.961642007028154
+          }
+        }
+      },
+      "previously_enabled14": {
+        "abs80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8578869047619048,
+            "mean_width": 8.472418961476741
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.7945652173913044,
+            "mean_width": 9.657892296423094
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8720238095238095,
+            "mean_width": 22.633689933664485
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.8130434782608695,
+            "mean_width": 31.891546550691167
+          }
+        }
+      }
+    },
+    "M1_A": {
+      "all54": {
+        "abs80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.8902391975308642,
+            "mean_width": 5.842691226541317
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.7838470542333204,
+            "mean_width": 7.833313714514761
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.9131944444444444,
+            "mean_width": 12.960235170354016
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.8244245025360906,
+            "mean_width": 24.1660386052942
+          }
+        }
+      },
+      "previously_enabled14": {
+        "abs80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8519345238095238,
+            "mean_width": 8.5911389674579
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.7858695652173913,
+            "mean_width": 9.798114833400628
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8727678571428571,
+            "mean_width": 22.578166612227864
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.8141304347826087,
+            "mean_width": 31.8240970346303
+          }
+        }
+      }
+    },
+    "M1_B": {
+      "all54": {
+        "abs80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.8873456790123457,
+            "mean_width": 5.4387324813281674
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.7822863831447523,
+            "mean_width": 7.23629409383494
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.8985339506172839,
+            "mean_width": 9.999806420973705
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.8053062817011315,
+            "mean_width": 18.23467495230486
+          }
+        }
+      },
+      "previously_enabled14": {
+        "abs80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8497023809523809,
+            "mean_width": 8.127405693257993
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.782608695652174,
+            "mean_width": 9.215478083387804
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8511904761904762,
+            "mean_width": 17.233654784566408
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.8010869565217391,
+            "mean_width": 24.09189505030413
+          }
+        }
+      }
+    },
+    "M1_A_B": {
+      "all54": {
+        "abs80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.8859953703703703,
+            "mean_width": 5.461704528044351
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.7795552087397581,
+            "mean_width": 7.2689377637509205
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 5184,
+            "missing_calibration": 0,
+            "coverage": 0.9000771604938271,
+            "mean_width": 10.107509176014622
+          },
+          "active_months": {
+            "n": 2563,
+            "missing_calibration": 0,
+            "coverage": 0.8084276238782676,
+            "mean_width": 18.459978674089992
+          }
+        }
+      },
+      "previously_enabled14": {
+        "abs80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8489583333333334,
+            "mean_width": 8.142810738881698
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.7815217391304348,
+            "mean_width": 9.233141380801376
+          }
+        },
+        "scaled80": {
+          "all_months": {
+            "n": 1344,
+            "missing_calibration": 0,
+            "coverage": 0.8519345238095238,
+            "mean_width": 17.30161156843825
+          },
+          "active_months": {
+            "n": 920,
+            "missing_calibration": 0,
+            "coverage": 0.8021739130434783,
+            "mean_width": 24.194442835638405
+          }
+        }
+      }
+    }
+  },
+  "mulchen": {
+    "gates": [
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "method": "M1"
+      },
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 5,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": false,
+        "method": "M1_A"
+      },
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 7,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": true,
+        "method": "M1_B"
+      },
+      {
+        "cut": "08305",
+        "aqua_train": 750.0,
+        "wins_vs_raw": 7,
+        "wins_vs_clim": 6,
+        "enabled_diagnostic": true,
+        "method": "M1_A_B"
+      }
+    ],
+    "scores": {
+      "M0": {
+        "sum_commune_season_mae": 63.75,
+        "mean_monthly_mae": 7.96875,
+        "mean_bias": -7.697916666666666
+      },
+      "M1": {
+        "sum_commune_season_mae": 57.57414074261704,
+        "mean_monthly_mae": 7.19676759282713,
+        "mean_bias": 2.8171213192023425
+      },
+      "M1_A": {
+        "sum_commune_season_mae": 49.88352167709766,
+        "mean_monthly_mae": 6.235440209637208,
+        "mean_bias": 0.9915540990900202
+      },
+      "M1_A_B": {
+        "sum_commune_season_mae": 45.93021792929132,
+        "mean_monthly_mae": 5.741277241161415,
+        "mean_bias": 0.09710435607880008
+      },
+      "M1_B": {
+        "sum_commune_season_mae": 45.93021792929132,
+        "mean_monthly_mae": 5.741277241161415,
+        "mean_bias": 0.09710435607880008
+      },
+      "M2": {
+        "sum_commune_season_mae": 73.08333333333334,
+        "mean_monthly_mae": 9.135416666666668,
+        "mean_bias": -3.177083333333333
+      }
+    },
+    "choices": [
+      {
+        "held_out": 2012,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_50",
+        "internal_mae_M1": 7.450054791136955,
+        "internal_mae_selected": 6.178577871641755,
+        "training_seasons": "2013;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2012,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.450054791136955,
+        "internal_mae_selected": 5.6497129240722685,
+        "training_seasons": "2013;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2012,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.450054791136955,
+        "internal_mae_selected": 5.6497129240722685,
+        "training_seasons": "2013;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2013,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_100",
+        "internal_mae_M1": 7.2696707951679835,
+        "internal_mae_selected": 6.399599389069725,
+        "training_seasons": "2012;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2013,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.2696707951679835,
+        "internal_mae_selected": 5.9740757882462345,
+        "training_seasons": "2012;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2013,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.2696707951679835,
+        "internal_mae_selected": 5.9740757882462345,
+        "training_seasons": "2012;2014;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2014,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_100",
+        "internal_mae_M1": 7.2497367952335745,
+        "internal_mae_selected": 6.03613527421155,
+        "training_seasons": "2012;2013;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2014,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.2497367952335745,
+        "internal_mae_selected": 5.6721961107043795,
+        "training_seasons": "2012;2013;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2014,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.2497367952335745,
+        "internal_mae_selected": 5.6721961107043795,
+        "training_seasons": "2012;2013;2015;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2015,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_50",
+        "internal_mae_M1": 7.187881891829634,
+        "internal_mae_selected": 6.354872040090159,
+        "training_seasons": "2012;2013;2014;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2015,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.187881891829634,
+        "internal_mae_selected": 5.603189509117487,
+        "training_seasons": "2012;2013;2014;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2015,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.187881891829634,
+        "internal_mae_selected": 5.603189509117487,
+        "training_seasons": "2012;2013;2014;2016;2017;2018;2019"
+      },
+      {
+        "held_out": 2016,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_10",
+        "internal_mae_M1": 7.050657946407848,
+        "internal_mae_selected": 5.982760791985903,
+        "training_seasons": "2012;2013;2014;2015;2017;2018;2019"
+      },
+      {
+        "held_out": 2016,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.050657946407848,
+        "internal_mae_selected": 4.505728178098545,
+        "training_seasons": "2012;2013;2014;2015;2017;2018;2019"
+      },
+      {
+        "held_out": 2016,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 7.050657946407848,
+        "internal_mae_selected": 4.505728178098545,
+        "training_seasons": "2012;2013;2014;2015;2017;2018;2019"
+      },
+      {
+        "held_out": 2017,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_30",
+        "internal_mae_M1": 6.711433514657431,
+        "internal_mae_selected": 5.951543496981013,
+        "training_seasons": "2012;2013;2014;2015;2016;2018;2019"
+      },
+      {
+        "held_out": 2017,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 6.711433514657431,
+        "internal_mae_selected": 5.762381585084465,
+        "training_seasons": "2012;2013;2014;2015;2016;2018;2019"
+      },
+      {
+        "held_out": 2017,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.1",
+        "internal_mae_M1": 6.711433514657431,
+        "internal_mae_selected": 5.762381585084465,
+        "training_seasons": "2012;2013;2014;2015;2016;2018;2019"
+      },
+      {
+        "held_out": 2018,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_100",
+        "internal_mae_M1": 6.789347268220887,
+        "internal_mae_selected": 6.118306303515063,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2019"
+      },
+      {
+        "held_out": 2018,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_0.01",
+        "internal_mae_M1": 6.789347268220887,
+        "internal_mae_selected": 5.365575973761678,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2019"
+      },
+      {
+        "held_out": 2018,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_0.01",
+        "internal_mae_M1": 6.789347268220887,
+        "internal_mae_selected": 5.365575973761678,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2019"
+      },
+      {
+        "held_out": 2019,
+        "cut": "08305",
+        "policy": "M1_A",
+        "candidate": "A_30",
+        "internal_mae_M1": 7.753826873584496,
+        "internal_mae_selected": 5.681899171583107,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2018"
+      },
+      {
+        "held_out": 2019,
+        "cut": "08305",
+        "policy": "M1_B",
+        "candidate": "B_1",
+        "internal_mae_M1": 7.753826873584496,
+        "internal_mae_selected": 5.411007104698184,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2018"
+      },
+      {
+        "held_out": 2019,
+        "cut": "08305",
+        "policy": "M1_A_B",
+        "candidate": "B_1",
+        "internal_mae_M1": 7.753826873584496,
+        "internal_mae_selected": 5.411007104698184,
+        "training_seasons": "2012;2013;2014;2015;2016;2017;2018"
+      }
+    ]
+  }
+}
