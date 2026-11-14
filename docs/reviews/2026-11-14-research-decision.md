@@ -10,6 +10,8 @@ La figura se genera con `pipeline/render_research_overview.py` desde los resulta
 
 El objetivo es actividad satelital diurna, agregada en celdas-día de 0,01° por plataforma y mes, para 54 comunas de Biobío y Ñuble. La referencia es S-NPP; no es un catálogo exhaustivo de incendios. Los parámetros se ajustan a Aqua y no autorizan sumar Terra u otras plataformas como eventos independientes.
 
+La publicación observada usa S-NPP en temporadas 2012–2017 y NOAA-20 desde 2018, mientras que estos errores de calibración se calculan frente a S-NPP. Por tanto, una mejora frente al objetivo S-NPP no demuestra por sí misma una mejora frente a la serie publicada de NOAA-20. El puente regional declarado con factor 1,0 no establece equivalencia comunal; conservar M1 tampoco certifica ese puente.
+
 Entrenamiento: temporadas 2012–2019, julio–junio según el año inicial. La evaluación anidada excluye cada temporada externa del ajuste de máscaras, normalizaciones y selección. Las ocho temporadas constituyen un conjunto de desarrollo reutilizado para proponer familias sucesivas. El anidamiento limita fuga dentro de cada experimento; **no elimina la adaptación entre experimentos**.
 
 El M1 publicado tiene factor completo 2,352954072125397. En las tablas anidadas M1 se vuelve a ajustar en cada origen: su MAE no debe describirse como resultado de aplicar ese único factor completo sobre el mismo entrenamiento.
