@@ -3,7 +3,8 @@ import type { ComunaDoc, IndexDoc } from "./types";
 import { dict, type Lang } from "./i18n";
 import { Calendar } from "./Calendar";
 import { SeasonCompare } from "./SeasonCompare";
-import { RecurrenceMap } from "./RecurrenceMap";
+import { RecurrenceMap, MAP_UNAVAILABLE } from "./RecurrenceMap";
+import { MapBoundary } from "./MapBoundary";
 import { download, seriesCsv } from "./csv";
 import { ObservedHistory } from "./ObservedHistory";
 import "./App.css";
@@ -117,7 +118,7 @@ export default function App() {
               <section className="card">
                 <h2>{t.recurrence}</h2>
                 <p className="help">{t.recurrenceHelp}</p>
-                <RecurrenceMap doc={doc} onPick={setCut} />
+                <MapBoundary fallback={<p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>}><RecurrenceMap doc={doc} onPick={setCut} lang={lang} /></MapBoundary>
               </section>
 
               <section className="card method">

@@ -1,22 +1,46 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 // MapLibre ≥ 6 carga su worker como módulo aparte; Vite no lo emite solo, así que se le pasa la URL del archivo copiado.
 import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 maplibregl.setWorkerUrl(maplibreWorkerUrl);
 import type { ComunaDoc } from "./types";
+import type { Lang } from "./i18n";
+
+// Computadores municipales viejos o con la aceleración gráfica desactivada no tienen WebGL:
+// MapLibre lanza al crear el mapa y, sin este resguardo, la app entera quedaba en blanco.
+function webglAvailable(): boolean {
+  try {
+    const c = document.createElement("canvas");
+    return !!(c.getContext("webgl2") || c.getContext("webgl"));
+  } catch {
+    return false;
+  }
+}
+
+export const MAP_UNAVAILABLE = {
+  es: "El mapa no se puede mostrar en este navegador (le falta aceleración gráfica). El calendario y las descargas funcionan igual.",
+  en: "The map cannot be shown in this browser (graphics acceleration is missing). The calendar and downloads still work.",
+};
 
 const STYLE = "https://tiles.openfreemap.org/styles/positron";
 const REC_RAMP: [number, string][] = [[1, "#fee5d9"], [2, "#fcae91"], [3, "#fb6a4a"], [5, "#de2d26"], [8, "#a50f15"]];
 
-export function RecurrenceMap({ doc, onPick }: { doc: ComunaDoc | null; onPick: (cut: string) => void }) {
+export function RecurrenceMap({ doc, onPick, lang = "es" }: { doc: ComunaDoc | null; onPick: (cut: string) => void; lang?: Lang }) {
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
   const ready = useRef(false);
+  const [failed, setFailed] = useState(() => !webglAvailable());
 
   useEffect(() => {
-    if (!el.current || map.current) return;
-    const m = new maplibregl.Map({ container: el.current, style: STYLE, center: [-72.6, -37.0], zoom: 6.3, attributionControl: { compact: true }, canvasContextAttributes: { preserveDrawingBuffer: true } });
+    if (failed || !el.current || map.current) return;
+    let m: maplibregl.Map;
+    try {
+      m = new maplibregl.Map({ container: el.current, style: STYLE, center: [-72.6, -37.0], zoom: 6.3, attributionControl: { compact: true }, canvasContextAttributes: { preserveDrawingBuffer: true } });
+    } catch {
+      setFailed(true);
+      return;
+    }
     m.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     m.on("load", () => {
       m.addSource("comunas", { type: "geojson", data: "/data/comunas.geojson", promoteId: "cut" });
@@ -39,6 +63,8 @@ export function RecurrenceMap({ doc, onPick }: { doc: ComunaDoc | null; onPick: 
   }, []);
 
   useEffect(() => { if (map.current && ready.current && doc) paint(map.current, doc); }, [doc]);
+
+  if (failed) return <p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>;
 
   return (
     <div className="map-wrap">
