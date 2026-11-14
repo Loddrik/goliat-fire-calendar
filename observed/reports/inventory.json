@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-14T16:49:06.365644+00:00",
+  "files": [
+    {
+      "path": "data/raw/modis-24h.csv",
+      "bytes": 245786,
+      "sha256": "7eec06042931b97141907ad7ebd6eb3121a89733440df03073d4502c2d838480",
+      "rows": 3154,
+      "invalid_rows": 0,
+      "duplicate_rows": 0,
+      "date_min": "2026-11-13",
+      "date_max": "2026-11-14",
+      "platforms": [
+        "A",
+        "T"
+      ],
+      "instruments": [],
+      "daynight": [
+        "D",
+        "N"
+      ],
+      "columns": [
+        "latitude",
+        "longitude",
+        "brightness",
+        "scan",
+        "track",
+        "acq_date",
+        "acq_time",
+        "satellite",
+        "confidence",
+        "version",
+        "bright_t31",
+        "frp",
+        "daynight"
+      ],
+      "issues": [],
+      "administrative_assignment": "not-performed"
+    },
+    {
+      "path": "data/raw/noaa20-24h.csv",
+      "bytes": 861753,
+      "sha256": "e5d6bbe91d1943fabe03cbd1ff4e4480c7108bf24423f15b90647c1e5b7d1181",
+      "rows": 10244,
+      "invalid_rows": 0,
+      "duplicate_rows": 0,
+      "date_min": "2026-11-13",
+      "date_max": "2026-11-14",
+      "platforms": [
+        "N20"
+      ],
+      "instruments": [],
+      "daynight": [
+        "D",
+        "N"
+      ],
+      "columns": [
+        "latitude",
+        "longitude",
+        "bright_ti4",
+        "scan",
+        "track",
+        "acq_date",
+        "acq_time",
+        "satellite",
+        "confidence",
+        "version",
+        "bright_ti5",
+        "frp",
+        "daynight"
+      ],
+      "issues": [],
+      "administrative_assignment": "not-performed"
+    }
+  ],
+  "history": {
+    "source_report": "reports/history-download.json",
+    "files": 46,
+    "missing": [],
+    "processing_report": "reports/history-processing.json"
+  },
+  "geography": {
+    "report": "reports/boundaries.json",
+    "communes": 54,
+    "geometry_sha256": "134981d8b085157d7e88ab5fa465d89935554640746b66129d63843a16e70602"
+  },
+  "availability": {
+    "recent_firms_snapshot": "available",
+    "modis_historical": "downloaded",
+    "viirs_historical": "downloaded",
+    "noaa20_historical": "downloaded",
+    "current_year_2026_history": "not-downloaded-annual-catalog-ends-2025",
+    "communal_boundaries": "prepared-DPA-2023",
+    "static_source_mask": "product-type-0-only-additional-mask-pending",
+    "harmonization": "not-started"
+  },
+  "notes": [
+    "La muestra reciente no sustituye las series históricas.",
+    "Las consultas comunales preparadas usan DPA 2023 fija y centro de celda; las cargas locales no se asignan automáticamente.",
+    "Los originales en data/raw no se publican automáticamente."
+  ]
+}

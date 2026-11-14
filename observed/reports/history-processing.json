@@ -1,0 +1,1185 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-14T16:44:02.856207+00:00",
+  "communes": 54,
+  "geography_sha256": "134981d8b085157d7e88ab5fa465d89935554640746b66129d63843a16e70602",
+  "source_summary": [
+    {
+      "id": "aqua-history",
+      "input_rows": 187987,
+      "rows": 26356,
+      "counts": {
+        "input": 187987,
+        "before_source_start": 1212,
+        "other_platform": 70130,
+        "outside": 18475,
+        "selected": 26356,
+        "outside_pilot_bbox": 41815,
+        "confidence": 4959,
+        "night_or_unknown": 16954,
+        "non_vegetation_or_unknown_type": 8086
+      },
+      "available_years": [
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_years": [],
+      "versions": [
+        "6.03",
+        "6.2",
+        "61.03"
+      ]
+    },
+    {
+      "id": "snpp-history",
+      "input_rows": 416813,
+      "rows": 58853,
+      "counts": {
+        "input": 416813,
+        "night_or_unknown": 173423,
+        "confidence": 35022,
+        "non_vegetation_or_unknown_type": 14413,
+        "outside": 38642,
+        "outside_pilot_bbox": 96460,
+        "selected": 58853
+      },
+      "available_years": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_years": [],
+      "versions": [
+        "2"
+      ]
+    },
+    {
+      "id": "noaa20-history",
+      "input_rows": 215009,
+      "rows": 34023,
+      "counts": {
+        "input": 215009,
+        "night_or_unknown": 89031,
+        "outside": 20635,
+        "selected": 34023,
+        "confidence": 22091,
+        "outside_pilot_bbox": 42438,
+        "non_vegetation_or_unknown_type": 6791
+      },
+      "available_years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_years": [],
+      "versions": [
+        "2"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "filename": "modis_2002_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2002/modis_2002_Chile.csv",
+      "sha256": "af647b0adc85282cc101280f489e8cb61f249b602be8bd424f567c9a2462af34",
+      "bytes": 165069,
+      "year": 2002,
+      "counts": {
+        "input": 2066,
+        "before_source_start": 1212,
+        "other_platform": 409,
+        "outside": 9,
+        "selected": 42,
+        "outside_pilot_bbox": 216,
+        "confidence": 18,
+        "night_or_unknown": 105,
+        "non_vegetation_or_unknown_type": 55
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2003_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2003/modis_2003_Chile.csv",
+      "sha256": "fbb8ffaff18f6346fc80c1adf589674dcd2b9a479ae45d149018ce4caf20960d",
+      "bytes": 443906,
+      "year": 2003,
+      "counts": {
+        "input": 5606,
+        "other_platform": 1806,
+        "confidence": 128,
+        "outside": 551,
+        "outside_pilot_bbox": 1725,
+        "selected": 837,
+        "night_or_unknown": 389,
+        "non_vegetation_or_unknown_type": 170
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2004_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2004/modis_2004_Chile.csv",
+      "sha256": "6e46386aad27380b89e015e4d6e9787150c95f9d92c397f2557eba7a9d209f8e",
+      "bytes": 510965,
+      "year": 2004,
+      "counts": {
+        "input": 6451,
+        "other_platform": 1777,
+        "selected": 1155,
+        "confidence": 135,
+        "outside_pilot_bbox": 2133,
+        "outside": 669,
+        "night_or_unknown": 383,
+        "non_vegetation_or_unknown_type": 199
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2005_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2005/modis_2005_Chile.csv",
+      "sha256": "62e61ba9d1fdd7093672a0dd130fbfc2715e67961f044fa81d2a9c90c4e7e929",
+      "bytes": 565559,
+      "year": 2005,
+      "counts": {
+        "input": 7141,
+        "other_platform": 2394,
+        "outside_pilot_bbox": 2090,
+        "night_or_unknown": 550,
+        "selected": 883,
+        "confidence": 168,
+        "non_vegetation_or_unknown_type": 206,
+        "outside": 850
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2006_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2006/modis_2006_Chile.csv",
+      "sha256": "f85f90f3db646fdfd7af85d4209040e7ee913d1de451b4afb6664051f312b8f2",
+      "bytes": 480654,
+      "year": 2006,
+      "counts": {
+        "input": 6072,
+        "other_platform": 1982,
+        "outside_pilot_bbox": 1606,
+        "night_or_unknown": 402,
+        "non_vegetation_or_unknown_type": 205,
+        "confidence": 110,
+        "selected": 1086,
+        "outside": 681
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2007_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2007/modis_2007_Chile.csv",
+      "sha256": "9234abaf0e8484c476f88f08f325f748d2b671b634ff5d782f84cc2d65823b55",
+      "bytes": 539375,
+      "year": 2007,
+      "counts": {
+        "input": 6807,
+        "other_platform": 2209,
+        "outside": 542,
+        "confidence": 184,
+        "outside_pilot_bbox": 1902,
+        "night_or_unknown": 496,
+        "non_vegetation_or_unknown_type": 215,
+        "selected": 1259
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2008_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2008/modis_2008_Chile.csv",
+      "sha256": "eab901ec9f71c01e852e00e14df3b17fe3067767d1b3fed6cca6e6ac1686d7b2",
+      "bytes": 668400,
+      "year": 2008,
+      "counts": {
+        "input": 8441,
+        "other_platform": 2944,
+        "night_or_unknown": 851,
+        "outside_pilot_bbox": 2349,
+        "selected": 1120,
+        "outside": 661,
+        "confidence": 193,
+        "non_vegetation_or_unknown_type": 323
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2009_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2009/modis_2009_Chile.csv",
+      "sha256": "481e500dd44ccec19fd2c4cda3e2598d8476cbd196ae4d15c69b5768296fbdf1",
+      "bytes": 654555,
+      "year": 2009,
+      "counts": {
+        "input": 8256,
+        "other_platform": 2901,
+        "night_or_unknown": 806,
+        "non_vegetation_or_unknown_type": 283,
+        "outside_pilot_bbox": 2368,
+        "outside": 659,
+        "confidence": 168,
+        "selected": 1071
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2010_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2010/modis_2010_Chile.csv",
+      "sha256": "2b7a9652c5962315e31eed6908a4c701206bcbd3c157714a1d75a1e60038a777",
+      "bytes": 559031,
+      "year": 2010,
+      "counts": {
+        "input": 7083,
+        "other_platform": 2258,
+        "selected": 935,
+        "confidence": 210,
+        "outside_pilot_bbox": 2117,
+        "non_vegetation_or_unknown_type": 225,
+        "night_or_unknown": 508,
+        "outside": 830
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2011_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2011/modis_2011_Chile.csv",
+      "sha256": "2305add869fdd5b598633711dec3f4fb4a61067c50658380ad06eedd269ddbda",
+      "bytes": 600489,
+      "year": 2011,
+      "counts": {
+        "input": 7577,
+        "night_or_unknown": 758,
+        "other_platform": 2678,
+        "selected": 813,
+        "outside_pilot_bbox": 1958,
+        "non_vegetation_or_unknown_type": 302,
+        "confidence": 218,
+        "outside": 850
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2012_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2012/modis_2012_Chile.csv",
+      "sha256": "8ef73f85e4f81191ddc82c12c29f8569b126e98186f4e83f3b0629d8a7851f44",
+      "bytes": 586878,
+      "year": 2012,
+      "counts": {
+        "input": 7411,
+        "other_platform": 2659,
+        "night_or_unknown": 664,
+        "selected": 999,
+        "outside_pilot_bbox": 1778,
+        "outside": 814,
+        "confidence": 201,
+        "non_vegetation_or_unknown_type": 296
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2013_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2013/modis_2013_Chile.csv",
+      "sha256": "1427ffc32505176703811a7e8e914f93e666e82fa4956c926d9db8363de78725",
+      "bytes": 529441,
+      "year": 2013,
+      "counts": {
+        "input": 6713,
+        "night_or_unknown": 362,
+        "other_platform": 2190,
+        "outside_pilot_bbox": 2046,
+        "non_vegetation_or_unknown_type": 239,
+        "confidence": 226,
+        "selected": 932,
+        "outside": 718
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2014_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2014/modis_2014_Chile.csv",
+      "sha256": "c53edb3a3310bcf28c5ef8eff16eca5d42bf5e3a7105f07a8707ea25b9d5dd50",
+      "bytes": 566674,
+      "year": 2014,
+      "counts": {
+        "input": 7147,
+        "night_or_unknown": 680,
+        "other_platform": 2732,
+        "selected": 883,
+        "confidence": 202,
+        "outside_pilot_bbox": 1665,
+        "outside": 713,
+        "non_vegetation_or_unknown_type": 272
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2015_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2015/modis_2015_Chile.csv",
+      "sha256": "30fe437e28ea7289f7f25c827f08006432df1b3236babc6a78ae0476310e3cfa",
+      "bytes": 756992,
+      "year": 2015,
+      "counts": {
+        "input": 9559,
+        "other_platform": 3310,
+        "outside_pilot_bbox": 1898,
+        "outside": 1164,
+        "selected": 1726,
+        "confidence": 255,
+        "non_vegetation_or_unknown_type": 264,
+        "night_or_unknown": 942
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2016_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2016/modis_2016_Chile.csv",
+      "sha256": "14e3c5bb212d4c8f4846e77becec475d6e5b73ff3e2c89a2a1da87101e27a40b",
+      "bytes": 558505,
+      "year": 2016,
+      "counts": {
+        "input": 7069,
+        "other_platform": 2668,
+        "selected": 883,
+        "outside_pilot_bbox": 1833,
+        "night_or_unknown": 555,
+        "confidence": 180,
+        "non_vegetation_or_unknown_type": 252,
+        "outside": 698
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2017_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2017/modis_2017_Chile.csv",
+      "sha256": "386b8fbb1934d5b0981549d27ebc10df8f273ac6542492b282371aa25e9a53cc",
+      "bytes": 1315453,
+      "year": 2017,
+      "counts": {
+        "input": 16504,
+        "other_platform": 6619,
+        "selected": 1738,
+        "confidence": 290,
+        "outside_pilot_bbox": 3957,
+        "non_vegetation_or_unknown_type": 245,
+        "night_or_unknown": 2606,
+        "outside": 1049
+      },
+      "input_versions": [
+        "6.2"
+      ],
+      "selected_versions": [
+        "6.2"
+      ]
+    },
+    {
+      "filename": "modis_2018_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2018/modis_2018_Chile.csv",
+      "sha256": "12ad07011b09def899da75dd793e5a954a11a82d32ca59299a53f862c697db8a",
+      "bytes": 573150,
+      "year": 2018,
+      "counts": {
+        "input": 7172,
+        "night_or_unknown": 382,
+        "other_platform": 2629,
+        "outside_pilot_bbox": 1292,
+        "non_vegetation_or_unknown_type": 588,
+        "confidence": 287,
+        "outside": 716,
+        "selected": 1278
+      },
+      "input_versions": [
+        "6.03"
+      ],
+      "selected_versions": [
+        "6.03"
+      ]
+    },
+    {
+      "filename": "modis_2019_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2019/modis_2019_Chile.csv",
+      "sha256": "725a48a8531514edeb619351b10496ecbf883a4dc604e21c10b816536f40f5b7",
+      "bytes": 611853,
+      "year": 2019,
+      "counts": {
+        "input": 7635,
+        "other_platform": 3003,
+        "non_vegetation_or_unknown_type": 527,
+        "outside_pilot_bbox": 1432,
+        "confidence": 258,
+        "night_or_unknown": 545,
+        "selected": 1300,
+        "outside": 570
+      },
+      "input_versions": [
+        "6.03"
+      ],
+      "selected_versions": [
+        "6.03"
+      ]
+    },
+    {
+      "filename": "modis_2020_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2020/modis_2020_Chile.csv",
+      "sha256": "a64eae582638e4b646a56962e4d496401e061d7d0e0afe98406ab062250b42a8",
+      "bytes": 677635,
+      "year": 2020,
+      "counts": {
+        "input": 8456,
+        "other_platform": 3746,
+        "night_or_unknown": 729,
+        "outside": 792,
+        "selected": 1063,
+        "non_vegetation_or_unknown_type": 567,
+        "outside_pilot_bbox": 1313,
+        "confidence": 246
+      },
+      "input_versions": [
+        "6.03"
+      ],
+      "selected_versions": [
+        "6.03"
+      ]
+    },
+    {
+      "filename": "modis_2021_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2021/modis_2021_Chile.csv",
+      "sha256": "4f223ff2e3a181246ed618227a4a6961d58c96a46eec5e47b6ab758ad93f0643",
+      "bytes": 605538,
+      "year": 2021,
+      "counts": {
+        "input": 7564,
+        "other_platform": 3245,
+        "confidence": 273,
+        "non_vegetation_or_unknown_type": 600,
+        "outside_pilot_bbox": 1228,
+        "selected": 1035,
+        "night_or_unknown": 492,
+        "outside": 691
+      },
+      "input_versions": [
+        "6.03"
+      ],
+      "selected_versions": [
+        "6.03"
+      ]
+    },
+    {
+      "filename": "modis_2022_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2022/modis_2022_Chile.csv",
+      "sha256": "189a11be2cf269fe6de0eb14c297cb60ba3bc9d1ebd658ccb87a499fb4d380ea",
+      "bytes": 605800,
+      "year": 2022,
+      "counts": {
+        "input": 7552,
+        "other_platform": 3248,
+        "night_or_unknown": 659,
+        "outside_pilot_bbox": 1225,
+        "non_vegetation_or_unknown_type": 537,
+        "confidence": 245,
+        "selected": 864,
+        "outside": 774
+      },
+      "input_versions": [
+        "6.03"
+      ],
+      "selected_versions": [
+        "6.03"
+      ]
+    },
+    {
+      "filename": "modis_2023_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2023/modis_2023_Chile.csv",
+      "sha256": "75224614c69d06d3c10c07f19d3ca65db4cd62c9614f4771fc37d04eff3efc64",
+      "bytes": 1341774,
+      "year": 2023,
+      "counts": {
+        "input": 16473,
+        "other_platform": 7403,
+        "night_or_unknown": 2275,
+        "outside": 1748,
+        "non_vegetation_or_unknown_type": 591,
+        "confidence": 347,
+        "selected": 2593,
+        "outside_pilot_bbox": 1516
+      },
+      "input_versions": [
+        "61.03"
+      ],
+      "selected_versions": [
+        "61.03"
+      ]
+    },
+    {
+      "filename": "modis_2024_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2024/modis_2024_Chile.csv",
+      "sha256": "c1c86ecebc767911bd35b18bba1f33cb8a6f1443baf2139555bc902e61338700",
+      "bytes": 526327,
+      "year": 2024,
+      "counts": {
+        "input": 6495,
+        "other_platform": 2764,
+        "night_or_unknown": 402,
+        "non_vegetation_or_unknown_type": 542,
+        "outside_pilot_bbox": 1046,
+        "confidence": 229,
+        "selected": 866,
+        "outside": 646
+      },
+      "input_versions": [
+        "61.03"
+      ],
+      "selected_versions": [
+        "61.03"
+      ]
+    },
+    {
+      "filename": "modis_2025_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2025/modis_2025_Chile.csv",
+      "sha256": "c225abab2d48f6f52644d1b7295ef3cdabf3ce492bb21d960087acea530cf2ca",
+      "bytes": 547628,
+      "year": 2025,
+      "counts": {
+        "input": 6737,
+        "night_or_unknown": 413,
+        "other_platform": 2556,
+        "non_vegetation_or_unknown_type": 383,
+        "confidence": 188,
+        "outside_pilot_bbox": 1122,
+        "outside": 1080,
+        "selected": 995
+      },
+      "input_versions": [
+        "61.03"
+      ],
+      "selected_versions": [
+        "61.03"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2012_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2012/viirs-snpp_2012_Chile.csv",
+      "sha256": "60e8d51b189a89c6aa8f4f46e2e8b7d280a0a8cfdab9562174af7cf53626b138",
+      "bytes": 1737573,
+      "year": 2012,
+      "counts": {
+        "input": 21642,
+        "night_or_unknown": 8406,
+        "confidence": 1220,
+        "non_vegetation_or_unknown_type": 1314,
+        "outside": 2115,
+        "outside_pilot_bbox": 6142,
+        "selected": 2445
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2013_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2013/viirs-snpp_2013_Chile.csv",
+      "sha256": "59ca55abd316aaf13202affd64ac33fbc25bd7a5038c3d213e1c21c0883c5957",
+      "bytes": 1907758,
+      "year": 2013,
+      "counts": {
+        "input": 23764,
+        "night_or_unknown": 8332,
+        "non_vegetation_or_unknown_type": 1239,
+        "confidence": 1342,
+        "outside_pilot_bbox": 7453,
+        "outside": 2425,
+        "selected": 2973
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2014_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2014/viirs-snpp_2014_Chile.csv",
+      "sha256": "129ff951cc85afd8e9de7e1d8b68d146f991dc462ff8ea6167d44b653cb0cbc8",
+      "bytes": 2009133,
+      "year": 2014,
+      "counts": {
+        "input": 25021,
+        "night_or_unknown": 10773,
+        "confidence": 1371,
+        "selected": 2895,
+        "outside_pilot_bbox": 6634,
+        "non_vegetation_or_unknown_type": 1178,
+        "outside": 2170
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2015_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2015/viirs-snpp_2015_Chile.csv",
+      "sha256": "d9a2923f7eaa5ab65d7fea38c5001356023ae6e29cabdd15961de1b7b50f4190",
+      "bytes": 2766725,
+      "year": 2015,
+      "counts": {
+        "input": 34469,
+        "night_or_unknown": 14883,
+        "outside_pilot_bbox": 7009,
+        "non_vegetation_or_unknown_type": 1106,
+        "selected": 5524,
+        "confidence": 1905,
+        "outside": 4042
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2016_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2016/viirs-snpp_2016_Chile.csv",
+      "sha256": "1189f8b200217b8cdbbbf14008b561242ef39c2fc56ece8eed663f4e3693dcde",
+      "bytes": 2004658,
+      "year": 2016,
+      "counts": {
+        "input": 24967,
+        "night_or_unknown": 10090,
+        "non_vegetation_or_unknown_type": 1070,
+        "outside_pilot_bbox": 6807,
+        "confidence": 1764,
+        "selected": 3059,
+        "outside": 2177
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2017_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2017/viirs-snpp_2017_Chile.csv",
+      "sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc",
+      "bytes": 4398957,
+      "year": 2017,
+      "counts": {
+        "input": 54842,
+        "night_or_unknown": 24943,
+        "outside_pilot_bbox": 15214,
+        "selected": 6467,
+        "confidence": 3799,
+        "outside": 3351,
+        "non_vegetation_or_unknown_type": 1068
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2018_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2018/viirs-snpp_2018_Chile.csv",
+      "sha256": "adbe875112d2cc6e51696133098c4c443806db755ca5682dbd9aff307f383b6f",
+      "bytes": 1849971,
+      "year": 2018,
+      "counts": {
+        "input": 23042,
+        "night_or_unknown": 8334,
+        "outside_pilot_bbox": 5139,
+        "confidence": 1771,
+        "non_vegetation_or_unknown_type": 1088,
+        "selected": 4266,
+        "outside": 2444
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2019_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2019/viirs-snpp_2019_Chile.csv",
+      "sha256": "249d99a517ec826c81972e249869c654af0de39d65f084700b3ed35f8e0c9758",
+      "bytes": 1990774,
+      "year": 2019,
+      "counts": {
+        "input": 24791,
+        "night_or_unknown": 10241,
+        "outside_pilot_bbox": 5873,
+        "selected": 4133,
+        "non_vegetation_or_unknown_type": 905,
+        "confidence": 1874,
+        "outside": 1765
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2020_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2020/viirs-snpp_2020_Chile.csv",
+      "sha256": "b7fa9a8730acbedcbdac3afd9d92c5690004ff28e29ec3e3f3130147ac25304b",
+      "bytes": 2224611,
+      "year": 2020,
+      "counts": {
+        "input": 27707,
+        "night_or_unknown": 12363,
+        "selected": 3678,
+        "confidence": 2169,
+        "outside": 2682,
+        "non_vegetation_or_unknown_type": 1130,
+        "outside_pilot_bbox": 5685
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2021_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2021/viirs-snpp_2021_Chile.csv",
+      "sha256": "6b6354496f5317eef183226dcc8ac01517f5e58c94e8d926a05c07ec3406185a",
+      "bytes": 1980639,
+      "year": 2021,
+      "counts": {
+        "input": 24669,
+        "night_or_unknown": 10053,
+        "non_vegetation_or_unknown_type": 1264,
+        "confidence": 2356,
+        "outside_pilot_bbox": 5300,
+        "selected": 3554,
+        "outside": 2142
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2022_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2022/viirs-snpp_2022_Chile.csv",
+      "sha256": "6b5255b0f5f2cae3cb3a9fd4c71b2ea16b48b025f1352622c44ded794ab5f453",
+      "bytes": 2360998,
+      "year": 2022,
+      "counts": {
+        "input": 29420,
+        "night_or_unknown": 11952,
+        "confidence": 3263,
+        "selected": 3728,
+        "non_vegetation_or_unknown_type": 934,
+        "outside_pilot_bbox": 6528,
+        "outside": 3015
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2023_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2023/viirs-snpp_2023_Chile.csv",
+      "sha256": "ced287dac1f1dd4503a5649dbf92afb719595eefbb69e78f6cddd3a81cbc14af",
+      "bytes": 4409079,
+      "year": 2023,
+      "counts": {
+        "input": 54947,
+        "night_or_unknown": 27822,
+        "selected": 9275,
+        "outside": 5366,
+        "non_vegetation_or_unknown_type": 786,
+        "outside_pilot_bbox": 6743,
+        "confidence": 4955
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2024_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2024/viirs-snpp_2024_Chile.csv",
+      "sha256": "bbf8704aeeb4ca02a2a4ff8057bad2c524ccd7ffd8d4790ed558cc15b1a4ccc5",
+      "bytes": 1737186,
+      "year": 2024,
+      "counts": {
+        "input": 21647,
+        "night_or_unknown": 7207,
+        "outside_pilot_bbox": 5608,
+        "outside": 1728,
+        "confidence": 3550,
+        "non_vegetation_or_unknown_type": 691,
+        "selected": 2863
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-snpp_2025_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp/2025/viirs-snpp_2025_Chile.csv",
+      "sha256": "c6ad5e85bcb65e7a49f3aa60446dcceedf835bcd3f0ee86769be7df79a3e89cf",
+      "bytes": 2078518,
+      "year": 2025,
+      "counts": {
+        "input": 25885,
+        "night_or_unknown": 8024,
+        "confidence": 3683,
+        "non_vegetation_or_unknown_type": 640,
+        "selected": 3993,
+        "outside": 3220,
+        "outside_pilot_bbox": 6325
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2018_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2018/viirs-jpss1_2018_Chile.csv",
+      "sha256": "e4fe8198fdd96757faa73c09a80bfed2f2004150fc7e4f62ae4cd4766d05d47c",
+      "bytes": 1070908,
+      "year": 2018,
+      "counts": {
+        "input": 13009,
+        "night_or_unknown": 5006,
+        "outside": 779,
+        "selected": 2507,
+        "confidence": 904,
+        "outside_pilot_bbox": 3124,
+        "non_vegetation_or_unknown_type": 689
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2019_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2019/viirs-jpss1_2019_Chile.csv",
+      "sha256": "3360a3f3b39dc60595508cf1ce7b308aca3e53cc86dc6ce9f91549ece70f9579",
+      "bytes": 2022884,
+      "year": 2019,
+      "counts": {
+        "input": 24579,
+        "night_or_unknown": 10030,
+        "outside_pilot_bbox": 5473,
+        "confidence": 2044,
+        "non_vegetation_or_unknown_type": 898,
+        "outside": 1883,
+        "selected": 4251
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2020_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2020/viirs-jpss1_2020_Chile.csv",
+      "sha256": "6c7102cb48be4feae3633b3d7449b65574e8b3d3cf1a3d4c16a333b900a3dbcb",
+      "bytes": 2204998,
+      "year": 2020,
+      "counts": {
+        "input": 26798,
+        "night_or_unknown": 12051,
+        "selected": 3871,
+        "confidence": 2205,
+        "non_vegetation_or_unknown_type": 1014,
+        "outside_pilot_bbox": 5278,
+        "outside": 2379
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2021_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2021/viirs-jpss1_2021_Chile.csv",
+      "sha256": "8315c76db8dc5e81c4c27e1e74c6b0924e9ebf6c70757cda3a4505f7cffb6752",
+      "bytes": 2034314,
+      "year": 2021,
+      "counts": {
+        "input": 24713,
+        "night_or_unknown": 9825,
+        "confidence": 2419,
+        "outside": 2361,
+        "selected": 3564,
+        "non_vegetation_or_unknown_type": 1213,
+        "outside_pilot_bbox": 5331
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2022_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2022/viirs-jpss1_2022_Chile.csv",
+      "sha256": "6b92a7a9020f5a25085da65a82093ad036a28305f9b5ebc625d81dd64369f4ea",
+      "bytes": 2300860,
+      "year": 2022,
+      "counts": {
+        "input": 27967,
+        "night_or_unknown": 11396,
+        "non_vegetation_or_unknown_type": 917,
+        "outside": 2933,
+        "outside_pilot_bbox": 6048,
+        "selected": 3757,
+        "confidence": 2916
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2023_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2023/viirs-jpss1_2023_Chile.csv",
+      "sha256": "e4abaa9bd61932f0fe5237d39184b76b1105887d0f4e4ae5dfe4cd7520598a98",
+      "bytes": 4213684,
+      "year": 2023,
+      "counts": {
+        "input": 51222,
+        "night_or_unknown": 25197,
+        "outside": 5473,
+        "confidence": 4748,
+        "outside_pilot_bbox": 5956,
+        "non_vegetation_or_unknown_type": 733,
+        "selected": 9115
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2024_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2024/viirs-jpss1_2024_Chile.csv",
+      "sha256": "74a0d83a261c9bd273c46300c97a5b998e16002e8048c8463631964948cf1428",
+      "bytes": 1771440,
+      "year": 2024,
+      "counts": {
+        "input": 21526,
+        "night_or_unknown": 7500,
+        "outside_pilot_bbox": 5463,
+        "confidence": 3165,
+        "non_vegetation_or_unknown_type": 685,
+        "outside": 1766,
+        "selected": 2947
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    },
+    {
+      "filename": "viirs-jpss1_2025_Chile.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2025/viirs-jpss1_2025_Chile.csv",
+      "sha256": "93fef398c4b4923ed51733b706d9a042d7223fed1b156cf270d432b86d92b9bf",
+      "bytes": 2073080,
+      "year": 2025,
+      "counts": {
+        "input": 25195,
+        "night_or_unknown": 8026,
+        "outside": 3061,
+        "selected": 4011,
+        "confidence": 3690,
+        "non_vegetation_or_unknown_type": 642,
+        "outside_pilot_bbox": 5765
+      },
+      "input_versions": [
+        "2"
+      ],
+      "selected_versions": [
+        "2"
+      ]
+    }
+  ],
+  "monthly_rows": 29322,
+  "harmonization": "not-started",
+  "filters": {
+    "daynight": "D",
+    "modis_min_confidence": 30,
+    "viirs_confidence": [
+      "n",
+      "h"
+    ],
+    "type": "0",
+    "type_meaning": "presumed vegetation fire, not confirmation",
+    "additional_static_mask": "not-applied"
+  },
+  "grid": {
+    "degrees": 0.01,
+    "longitude_origin": -180,
+    "latitude_origin": -90,
+    "time_basis": "UTC",
+    "assignment": "cell-centre",
+    "counting": "per-platform-cell-day"
+  },
+  "limitations": [
+    "Geografía fija DPA 2023 aplicada retrospectivamente.",
+    "Type=0 es una clasificación del producto, no identificación de incendios ni de causa.",
+    "Cero detecciones no demuestra ausencia de fuego ni cobertura suficiente.",
+    "Los meses sin archivo no se rellenan con ceros.",
+    "La cola NRT reciente no se concatena con los archivos anuales."
+  ]
+}

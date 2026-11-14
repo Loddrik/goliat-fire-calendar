@@ -14,7 +14,7 @@ Calendario de actividad de fuego detectada, MODIS + VIIRS armonizados (NASA FIRM
 
 - **Ciencia y algoritmo = Daniel.** Todo lo que toque `pipeline/experiment.py`, `build_mask.py`, compuertas, factor, bandas, particiones o `docs/method.md` §2–4 se le levanta como **issue de GitHub** (etiqueta `ciencia`) y **no se cambia desde esta sesión**. Si la app necesita un dato nuevo del pipeline, se abre un issue y mientras tanto se trabaja con lo que hay.
 - **Producto y app = esta sesión** (Rubén + Claude): `web/`, `server.mjs`, textos, CSV, impresión, página del proyecto, demo, README.
-- Los números que muestra la app salen **solo** de `web/public/data/` (generado por `pipeline/publish.py`). Nunca se calcula ni se corrige un número en la web ni con IA.
+- Los números del calendario armonizado salen **solo** de `web/public/data/` (generado por `pipeline/publish.py`). La vista FireChronos por plataforma lee el contrato separado de `pipeline/publish_observed.py` en `observed/dist/data/publication/`, copiado a la web en build. Nunca se calcula ni se corrige un número en la web ni con IA. Ver `docs/integracion-firechronos.md`; las dos publicaciones usan geografías y filtros distintos y no se concatenan.
 
 ## Reglas que no se negocian (vienen del manifiesto y de los revisores)
 

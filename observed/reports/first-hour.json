@@ -1,0 +1,49 @@
+{
+  "stage": "first-hour",
+  "status": "ready-for-private-deployment",
+  "initial_state": "empty-workspace-no-data-user-confirmed",
+  "started_at": "2026-11-14T15:41:58Z",
+  "data": {
+    "type": "recent-public-NRT-snapshots-not-history",
+    "sources": 2,
+    "source_rows": 13398,
+    "pilot_bbox_rows": {
+      "modis": 31,
+      "noaa20": 18
+    },
+    "default_selected_diurnal_confidence_filtered": {
+      "modis": 15,
+      "noaa20": 4
+    },
+    "acquisition_dates": [
+      "2026-11-13",
+      "2026-11-14"
+    ],
+    "administrative_assignment": "not-performed"
+  },
+  "verification": {
+    "unit_tests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "browser_checks": {
+      "sample_and_filters": 10,
+      "upload_and_exports": 7,
+      "failed": 0
+    },
+    "responsive_widths": [
+      1280,
+      390
+    ],
+    "real_csv_upload": true,
+    "display_csv_metadata_consistent": true
+  },
+  "pending": [
+    "historical_MODIS",
+    "historical_VIIRS",
+    "validated_communal_DPA_with_CUT",
+    "static_source_mask",
+    "harmonization"
+  ],
+  "deployment_receipt": ".sites-runtime/deployment.json"
+}

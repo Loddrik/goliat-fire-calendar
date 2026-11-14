@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "stage": "first-hour-observed-only",
+  "time_basis": "UTC",
+  "daynight": "D",
+  "modis_min_confidence": 30,
+  "viirs_excluded_confidence": [
+    "l",
+    "low"
+  ],
+  "grid": {
+    "degrees": 0.01,
+    "longitude_origin": -180,
+    "latitude_origin": -90,
+    "counting": "per-platform-cell-day"
+  },
+  "pilot_bbox": {
+    "west": -73.9,
+    "south": -38.9,
+    "east": -71,
+    "north": -35.8,
+    "label": "Rectángulo preliminar Biobío y Ñuble; no corresponde a límites administrativos"
+  },
+  "administrative_assignment": "unavailable-until-boundaries-validated",
+  "harmonization": "not-started"
+}
