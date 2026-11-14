@@ -108,3 +108,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .cell { height: 20px; width: 40px; }
   body { background: #fff; }
 }
+
+.alert-note { margin-top: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; max-width: 680px; color: var(--fg); }

@@ -59,7 +59,12 @@ export default function App() {
         <div>
           <h1>{t.title}</h1>
           <p className="sub">{t.subtitle}</p>
-          <p className="sub audience">{lang === "es" ? "Antecedentes históricos para equipos municipales de emergencias y planificación. No es una alerta ni un pronóstico." : "Historical background for municipal emergency and planning teams. Not an alert or a forecast."}</p>
+          <p className="sub audience">{lang === "es"
+            ? `Cuándo y dónde los satélites de la NASA han detectado fuego en tu comuna: desde 2012, y desde 2002 en ${index ? index.comunas.filter((c) => c.enabled).length : "…"} comunas.`
+            : `When and where NASA satellites have detected fire in your commune: since 2012, and since 2002 in ${index ? index.comunas.filter((c) => c.enabled).length : "…"} communes.`}</p>
+          <p className="sub alert-note">{lang === "es"
+            ? "No es una alerta. Si ves fuego, llama al 130 (CONAF) o al 132 (Bomberos). Sigue los avisos de SENAPRED."
+            : "Not an alert. If you see fire in Chile, call 130 (CONAF) or 132 (Firefighters). Follow SENAPRED notices."}</p>
         </div>
         <div className="tools no-print">
           <button onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label="Language">{lang === "es" ? "EN" : "ES"}</button>
