@@ -1,0 +1,171 @@
+<div class="wrap">
+  <header>
+    <h1>GOLIAT · satélite y calor, segunda vuelta</h1>
+    <p>Cinco caminos con un satélite y una llama. La llama usa la paleta de una cámara térmica (ámbar, naranjo y ciruela) y no el rojo de una alerta. Así se entiende que se mide calor y no que hay una emergencia. El satélite tiene paneles rectos para no parecerse al anillo de Space Apps. Cada camino se prueba en los mismos usos que antes:</p>
+    <ul class="tests">
+      <li>favicon 16 px</li><li>impresión B/N (plan comunal A4)</li><li>imagen de WhatsApp (junta de vecinos)</li><li>fondo oscuro</li><li>junto al logo de Space Apps</li>
+    </ul>
+  </header>
+
+  <div id="options"></div>
+
+  <section class="data">
+    <h2>Lo que el logo puede contar sin mentir</h2>
+    <p>VIIRS y MODIS no envían ningún rayo hacia abajo. Son sensores pasivos: <b>reciben</b> el calor que emite el suelo en el infrarrojo medio (cerca de 4 µm) y marcan una detección cuando un píxel está bastante más caliente que lo que lo rodea. Por eso C1 dibuja las ondas subiendo desde la llama hacia el satélite, y C3 dibuja el campo de visión del sensor y no un haz. Un jurado que sabe de teledetección lo va a notar.</p>
+    <p>Una llama puede leerse como "incendio", y la regla 1 dice que una detección no es un incendio. El nombre ayuda a corregirlo: debajo del logo siempre va "Actividad de fuego detectada por satélite".</p>
+  </section>
+
+  <section class="data">
+    <h2>Por qué el satélite no puede ir sobre un anillo</h2>
+    <div class="warn">
+      <div>%%SA_BLACK%%</div>
+      <p>El logo de Space Apps es un anillo de órbita con un satélite redondo encima. Ningún camino usa círculos cerrados ni un satélite redondo sobre una curva, para que al ponerlos juntos no parezca una copia ni un logo del evento. La guía de Space Apps también pide no usar el emblema ni el logotipo de NASA.</p>
+    </div>
+  </section>
+
+  <footer>Llama: #FFE29A · #FDB022 · #F06A1D · #C7302A · #6B1D5C — satélite: #0B2545 · #1F6F8B — tipografía: IBM Plex Sans 600 · logos de Space Apps: kit oficial 2026, sin modificar</footer>
+</div>
+
+<script>
+// ---- paletas por tema ----
+const THEMES = {
+  light: { fg: '#1A1A1A', sat: '#0B2545', panel: '#1F6F8B', panelLine: '#9ECAE1', hot: ['#FFE29A','#FDB022','#F06A1D','#C7302A','#6B1D5C'], wave: '#F06A1D', cone: 'rgba(31,111,139,.14)', coneLine: '#1F6F8B', ground: '#1A1A1A' },
+  navy:  { fg: '#FFFFFF', sat: '#E6F0F8', panel: '#6BAED6', panelLine: '#0B2545', hot: ['#FFF1C4','#FFC24B','#FF8A3D','#F0553F','#B04A8F'], wave: '#FFB04B', cone: 'rgba(158,202,225,.16)', coneLine: '#9ECAE1', ground: '#FFFFFF' },
+  print: { flat: '#000000', fg: '#000000', sat: '#000000', panel: '#000000', panelLine: '#FFFFFF', hot: ['#FFFFFF','#BDBDBD','#7A7A7A','#3A3A3A','#000000'], wave: '#000000', cone: 'rgba(0,0,0,.08)', coneLine: '#000000', ground: '#000000' },
+};
+
+// ---- llama: origen en la base al centro; alto 40, ancho ~31, punta inclinada a la derecha ----
+const F_OUT  = 'M4 -40 C10 -30 16 -24 16 -13 C16 -5 9 0 0 0 C-9 0 -15 -6 -15 -14 C-15 -22 -9 -26 -7 -33 C-4.5 -27 -3 -23.5 0.6 -21.5 C-0.6 -28.5 0.8 -35 4 -40 Z';
+const F_CORE = 'M 2.08 -19.20 C 4.60 -15.00 7.12 -12.48 7.12 -7.86 C 7.12 -4.50 4.18 -2.40 0.40 -2.40 C -3.38 -2.40 -5.90 -4.92 -5.90 -8.28 C -5.90 -11.64 -3.38 -13.32 -2.54 -16.26 C -1.49 -13.74 -0.86 -12.27 0.65 -11.43 C 0.15 -14.37 0.74 -17.10 2.08 -19.20 Z';
+let uid = 0;
+function grad(t, dir = 'v') {
+  const id = 'g' + (uid++);
+  return [id, `<linearGradient id="${id}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${t.hot[1]}"/><stop offset=".55" stop-color="${t.hot[2]}"/><stop offset="1" stop-color="${t.hot[3]}"/></linearGradient>`];
+}
+function flame(t, x, y, s, mode = 'solid') {
+  const tr = `transform="translate(${x} ${y}) scale(${s})"`;
+  if (mode === 'iso') {
+    const ring = (k, c, w) => `<path d="${F_OUT}" transform="scale(${k})" fill="none" stroke="${c}" stroke-width="${w / k}" stroke-linejoin="round"/>`;
+    return `<g ${tr}>${ring(1, t.hot[3], 2.3)}${ring(0.68, t.hot[2], 2.3)}<path d="${F_OUT}" transform="scale(.36)" fill="${t.hot[1]}"/></g>`;
+  }
+  if (mode === 'scan') {
+    const id = 'c' + (uid++);
+    const cols = [t.hot[3], t.hot[3], t.hot[3], t.hot[2], t.hot[2], t.hot[2], t.hot[1], t.hot[1], t.hot[0]];
+    const n = cols.length, step = 40 / n, gap = 1.25;
+    const rows = cols.map((c, i) => `<rect x="-17" y="${(-40 + i * step).toFixed(2)}" width="34" height="${(step - gap).toFixed(2)}" fill="${c}"/>`).join('');
+    return `<g ${tr}><clipPath id="${id}"><path d="${F_OUT}"/></clipPath><g clip-path="url(#${id})">${rows}</g></g>`;
+  }
+  if (t.flat) return `<g ${tr}><path d="${F_OUT} ${F_CORE}" fill-rule="evenodd" fill="${t.flat}"/></g>`;
+  const [id, def] = grad(t);
+  return `<g ${tr}><defs>${def}</defs><path d="${F_OUT} ${F_CORE}" fill-rule="evenodd" fill="url(#${id})"/></g>`;
+}
+// ---- satélite: cuerpo + dos paneles rectos + sensor (el sensor mira hacia +y local) ----
+function satellite(t, x, y, s, deg) {
+  return `<g transform="translate(${x} ${y}) rotate(${deg}) scale(${s})">
+    <line x1="-7" y1="0" x2="7" y2="0" stroke="${t.sat}" stroke-width="1.6"/>
+    <rect x="-20" y="-5" width="13" height="10" rx="1.2" fill="${t.panel}"/>
+    <rect x="7" y="-5" width="13" height="10" rx="1.2" fill="${t.panel}"/>
+    <line x1="-13.5" y1="-5" x2="-13.5" y2="5" stroke="${t.panelLine}" stroke-width="1"/>
+    <line x1="13.5" y1="-5" x2="13.5" y2="5" stroke="${t.panelLine}" stroke-width="1"/>
+    <rect x="-5" y="-6.5" width="10" height="13" rx="2" fill="${t.sat}"/>
+    <rect x="-2.6" y="6.5" width="5.2" height="3" rx=".8" fill="${t.sat}"/></g>`;
+}
+function arc(cx, cy, r, a0, a1) { // grados, 0 = derecha, sentido antihorario visual (y hacia arriba)
+  const p = a => [cx + r * Math.cos(a * Math.PI / 180), cy - r * Math.sin(a * Math.PI / 180)];
+  const [x0, y0] = p(a0), [x1, y1] = p(a1);
+  return `M${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 0 0 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
+}
+
+const ICONS = {
+  // C1: ondas de calor que suben de la llama al satélite
+  C1: t => ({ vb: '0 0 64 64', body:
+      flame(t, 19, 61, 1) +
+      [0, 1, 2].map(i => `<path d="${arc(25, 25, 8 + i * 6.5, 18, 72)}" fill="none" stroke="${t.wave}" stroke-width="${3 - i * 0.5}" stroke-linecap="round" opacity="${1 - i * 0.2}"/>`).join('') +
+      satellite(t, 52, 12, 0.6, 45) }),
+  // C2: llama hecha de isotermas
+  C2: t => ({ vb: '0 0 64 64', body: flame(t, 26, 61, 1.1, 'iso') + satellite(t, 50, 14, 0.55, 38) }),
+  // C3: campo de visión del sensor sobre el horizonte
+  C3: t => ({ vb: '0 0 64 64', body:
+      `<path d="M32 18 L10 57 L54 57 Z" fill="${t.cone}"/>` +
+      `<path d="M32 18 L10 57 M32 18 L54 57" stroke="${t.coneLine}" stroke-width="1.2" stroke-dasharray="2.4 2.2" fill="none"/>` +
+      `<line x1="3" y1="57.5" x2="61" y2="57.5" stroke="${t.ground}" stroke-width="2.2" stroke-linecap="round"/>` +
+      flame(t, 32, 57, 0.6) + satellite(t, 32, 9, 0.72, 0) }),
+  // C4: llama sola con satélite chico (ícono del logotipo con llama)
+  C4: t => ({ vb: '0 0 64 64', body: flame(t, 27, 61, 1.12) + satellite(t, 51, 13, 0.5, 38) }),
+  // C5: llama leída en líneas de barrido
+  C5: t => ({ vb: '0 0 64 64', body: flame(t, 26, 61, 1.1, 'scan') + satellite(t, 50, 14, 0.55, 38) }),
+};
+
+function icon(key, theme, h) {
+  const { vb, body } = ICONS[key](THEMES[theme]);
+  const [, , w, hh] = vb.split(' ').map(Number);
+  return `<svg class="icon" viewBox="${vb}" height="${h}" width="${(h * w / hh).toFixed(1)}" role="img" aria-label="Ícono GOLIAT ${key}">${body}</svg>`;
+}
+function squareIcon(key, theme, size) { return icon(key, theme, size); }
+function wordmark(size, tag, theme) {
+  return `<div class="wm"><div class="name" style="font-size:${size}px">GOLIAT</div>${tag ? `<div class="tagl">Actividad de fuego detectada por satélite</div>` : ''}</div>`;
+}
+function flameWord(size, tag, theme) { // GOL + llama en lugar de la I + AT
+  const t = THEMES[theme];
+  const h = size * 0.98;
+  const f = `<svg viewBox="-16 -41 33 42" height="${h}" width="${(h * 33 / 42).toFixed(1)}" style="display:inline-block;vertical-align:baseline;margin:0 ${size * 0.06}px ${-size * 0.02}px ${-size * 0.05}px" aria-hidden="true">${flame(t, 0, 0, 1)}</svg>`;
+  const sat = `<svg viewBox="-21 -12 42 24" height="${size * 0.42}" width="${(size * 0.42 * 42 / 24).toFixed(1)}" style="position:absolute;left:${size * 1.62}px;top:${-size * 0.18}px" aria-hidden="true">${satellite(t, 0, 0, 0.85, 20)}</svg>`;
+  return `<div class="wm"><div class="name" style="font-size:${size}px;position:relative;display:flex;align-items:baseline;padding-top:${size * 0.3}px">GOL${f}AT${sat}</div>${tag ? `<div class="tagl">Actividad de fuego detectada por satélite</div>` : ''}</div>`;
+}
+function lockup(key, theme, size, tag = true) {
+  if (key === 'C4') return `<div class="lockup">${flameWord(size * 1.1, tag, theme)}</div>`;
+  return `<div class="lockup">${icon(key, theme, size * 1.9)}${wordmark(size, tag, theme)}</div>`;
+}
+
+const OPTS = [
+  { key: 'C1', name: 'Señal de calor',
+    idea: 'La llama abajo, el satélite arriba y tres ondas que suben de una al otro.',
+    tells: 'Cómo funciona el sensor: el satélite recibe el calor que sube. Es la más fácil de explicar en el pitch.',
+    risk: 'Las ondas se parecen al ícono de wifi; en 16 px quedan como una mancha naranja.' },
+  { key: 'C2', name: 'Isotermas',
+    idea: 'La llama dibujada como tres curvas de igual temperatura, igual que en un mapa térmico.',
+    tells: '"Esto mide temperatura" sin decirlo. Es liviana y se ve técnica sin perder la llama.',
+    risk: 'Con trazo fino pierde fuerza en tamaño chico y en impresión de baja calidad.' },
+  { key: 'C3', name: 'Campo de visión',
+    idea: 'El satélite arriba y su campo de visión, en un cono punteado, cubre la llama sobre el horizonte.',
+    tells: 'Desde dónde se mira y qué se ve. Es la más literal y la que un vecino entiende sin explicación.',
+    risk: 'La llama queda chica. Un cono que baja puede leerse como vigilancia; hay que cuidar el tono.' },
+  { key: 'C4', name: 'La llama en el nombre',
+    idea: 'La I de GOLIAT se cambia por una llama y un satélite chico pasa sobre la palabra. El ícono es la llama con el satélite.',
+    tells: 'Es la más memorable como marca y se lee primero como nombre. Funciona bien en una portada.',
+    risk: 'Sin el texto, el ícono es "una llama", lo más cercano a un logo de alerta. Necesita la palabra al lado.' },
+  { key: 'C5', name: 'Barrido térmico',
+    idea: 'La llama aparece en franjas horizontales, como la imagen que arma el sensor línea a línea, de más fría arriba a más caliente abajo.',
+    tells: 'Que es una lectura de un instrumento, no una foto. Es la que más se parece a una cámara térmica.',
+    risk: 'Las franjas se juntan en 16 px y la llama se lee bien; en impresión B/N las franjas claras se pierden.' },
+];
+
+const SA_BLACK = document.querySelector('.warn svg').outerHTML;
+const SA_WHITE = `%%SA_WHITE%%`;
+
+document.getElementById('options').innerHTML = OPTS.map(o => `
+  <section class="opt" aria-labelledby="h-${o.key}">
+    <div class="opt-head"><span class="code">${o.key}</span><h2 id="h-${o.key}">${o.name}</h2><span class="family">Satélite y calor</span></div>
+    <div class="notes">
+      <p><b>Idea.</b> ${o.idea}</p>
+      <p><b>Qué cuenta.</b> ${o.tells}</p>
+      <p><b>Riesgo.</b> ${o.risk}</p>
+    </div>
+    <div class="grid">
+      <div class="tile light"><span class="tag">PANTALLA · CLARO</span>${lockup(o.key, 'light', 40)}</div>
+      <div class="tile navy"><span class="tag">FONDO OSCURO</span>${lockup(o.key, 'navy', 32)}</div>
+      <div class="tile print"><span class="tag">IMPRESIÓN B/N</span>${lockup(o.key, 'print', 30)}</div>
+      <div class="tile light"><span class="tag">TAMAÑOS DEL ÍCONO</span>
+        <div class="sizes">
+          ${[96, 48, 32, 16].map(s => `<figure>${squareIcon(o.key, 'light', s)}<figcaption>${s}</figcaption></figure>`).join('')}
+          <figure><span class="browser">${squareIcon(o.key, 'light', 16)} GOLIAT · Coihueco</span><figcaption>pestaña</figcaption></figure>
+        </div></div>
+    </div>
+    <div class="row2">
+      <div class="tile light"><span class="tag">CON SPACE APPS · CLARO</span>
+        <div class="cobrand">${lockup(o.key, 'light', 26, false)}<span class="sep"></span><span class="sa">${SA_BLACK}</span></div></div>
+      <div class="tile navy"><span class="tag">CON SPACE APPS · OSCURO</span>
+        <div class="cobrand">${lockup(o.key, 'navy', 26, false)}<span class="sep"></span><span class="sa">${SA_WHITE}</span></div></div>
+    </div>
+  </section>`).join('');
+</script>

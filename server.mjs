@@ -1,10 +1,13 @@
 import express from "express";
+import compression from "compression";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = process.env.PORT || 3000;
+// Comprime JSON/HTML/JS: region.json baja de 1,3 MB a ~100 KB, importante en celular con señal rural.
+app.use(compression());
 
 app.get("/health", (_req, res) => res.json({ ok: true, version: process.env.RAILWAY_GIT_COMMIT_SHA ?? "local" }));
 // Revalidate mutable publication JSON so old and new releases are not mixed.

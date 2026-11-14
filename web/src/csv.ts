@@ -7,6 +7,7 @@ export function seriesCsv(doc: ComunaDoc): string {
     "# GOLIAT - detected fire activity (cell-days, 0.01 deg, daytime, VIIRS scale). NOT fires, NOT hectares.",
     "# observed = VIIRS S-NPP (seasons 2012-2017) / NOAA-20 (2018+); estimated = MODIS Aqua x r_const; not_enabled = reconstruction did not pass gates.",
     "# Source: NASA FIRMS (MODIS C6.1, VIIRS 375 m). We acknowledge the use of data from NASA FIRMS, part of NASA EOSDIS.",
+    "# FIRMS data are provided as is and are not recommended for tactical decisions: https://www.earthdata.nasa.gov/data/projects/lance/disclaimer",
     `# Method: https://github.com/Loddrik/goliat-fire-calendar · cutoff ${doc.cutoff}`,
   ];
   return [...meta, head.join(","), ...lines].join("\n");
