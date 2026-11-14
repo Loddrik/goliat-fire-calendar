@@ -78,7 +78,7 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
           <h3>{T.profileTitle}</h3>
           <div className="profile" role="img" aria-label={clim.map((c) => `${monthName(c.m, lang)}: ${num(c.median, lang)}`).join("; ")}>
             {clim.map((c) => (
-              <div key={c.m} className="pcol" title={`${monthName(c.m, lang)} · ${lang === "es" ? "típico" : "typical"} ${num(c.median, lang)} · ${lang === "es" ? "máximo" : "max"} ${num(c.max, lang)} · ${c.seasons_with} ${T.of(c.n)}`}>
+              <div key={c.m} className="pcol" title={`${monthName(c.m, lang)} · ${lang === "es" ? "mediana" : "median"} ${num(c.median, lang)} · ${lang === "es" ? "máximo" : "max"} ${num(c.max, lang)} · ${c.seasons_with} ${T.of(c.n)}`}>
                 <span className="v">{num(c.median, lang)}</span>
                 <div className="track">
                   <div className="max" style={{ bottom: `${(100 * (c.max ?? 0)) / cMax}%` }} />
