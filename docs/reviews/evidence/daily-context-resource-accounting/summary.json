@@ -1,0 +1,16 @@
+{
+  "scope": "Observed controlled attempt37, independent reconstruction and one root regression; no experiment driver rerun. Later CI is separate validation, not new candidate variants.",
+  "original_fit_calls": 21,
+  "independent_reconstructed_complete_models": 8,
+  "root_synthetic_fit_calls": 5,
+  "total_observed_fit_calls": 34,
+  "fit_cap": 64,
+  "original_solver_calls": 768,
+  "independent_solver_calls": 0,
+  "root_new37_solver_calls": 0,
+  "total_solver_calls": 768,
+  "solver_cap": 3000,
+  "root_regression_tests": 343,
+  "original_producer_manifest_sha256": "21b16ec5d559a3546004fa868125357e4a7a0e9d0b3fb84e8ea4256542900286",
+  "independent_manifest_sha256": "e9c481a6b32472be70d00d8f267e6bca28b4d11242d70e917a0da846bd50b9ec"
+}

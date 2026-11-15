@@ -1,0 +1,92 @@
+{
+  "status": "independent_full_pass",
+  "completed_utc": "2026-11-15T08:21:28.108102+00:00",
+  "producer_manifest_sha256_before_and_after": "21b16ec5d559a3546004fa868125357e4a7a0e9d0b3fb84e8ea4256542900286",
+  "reviewer_freeze_sha256": "c76cf22910468efbc3955bf3c378f2a09d1969b3b8d4e939c72640b5ca65d011",
+  "producer_artifacts_modified": false,
+  "complete_candidate_reconstructions": 8,
+  "reconcile_calls": 0,
+  "repeated_synthetic_tests": 0,
+  "producer_fit_calls": 21,
+  "producer_solver_calls": 768,
+  "combined_fits_producer_plus_review": 29,
+  "scope_guarantee": "SOURCE filtering and no target leakage per regime; other regimes may legitimately use these same labels as SOURCE.",
+  "mechanics": [
+    {
+      "regime": "08_forward",
+      "source_rows": 1584,
+      "B_G_exact": true,
+      "models_rebuilt_from_source_only": 2,
+      "queries": 2592
+    },
+    {
+      "regime": "08_backward",
+      "source_rows": 1584,
+      "B_G_exact": true,
+      "models_rebuilt_from_source_only": 2,
+      "queries": 2592
+    },
+    {
+      "regime": "16_forward",
+      "source_rows": 1008,
+      "B_G_exact": true,
+      "models_rebuilt_from_source_only": 2,
+      "queries": 2592
+    },
+    {
+      "regime": "16_backward",
+      "source_rows": 1008,
+      "B_G_exact": true,
+      "models_rebuilt_from_source_only": 2,
+      "queries": 2592
+    }
+  ],
+  "candidate_CDF_query_checks": 20736,
+  "constant_CDF_query_checks": 20736,
+  "own_CDF_risk_KKT_budget_checks": 768,
+  "max_independent_KKT_residual": 2.220446049250313e-16,
+  "max_absolute_budget_residual": 2.2737367544323206e-13,
+  "population_reports_verified": 216,
+  "method_report_sets_verified": 864,
+  "all_per_CUT_and_historical_G_worst_verified": true,
+  "prediction_evaluation_join_exact": true,
+  "primary": {
+    "regimes": [
+      {
+        "regime": "08_backward",
+        "n": 1008,
+        "delta_real_minus_placebo": -0.03688613479973357,
+        "delta_real_minus_G": 0.006596946217436894
+      },
+      {
+        "regime": "08_forward",
+        "n": 1008,
+        "delta_real_minus_placebo": 0.0013414056506775296,
+        "delta_real_minus_G": 0.028438029017589184
+      },
+      {
+        "regime": "16_backward",
+        "n": 1584,
+        "delta_real_minus_placebo": 0.013144883428317877,
+        "delta_real_minus_G": 0.010847490445559327
+      },
+      {
+        "regime": "16_forward",
+        "n": 1584,
+        "delta_real_minus_placebo": 0.0026926924249499606,
+        "delta_real_minus_G": -0.0027059147409027595
+      }
+    ],
+    "equal_four_real_minus_placebo": -0.004926788323947051,
+    "equal_four_real_minus_G": 0.010794137734920661,
+    "both_required_contrasts_negative": false
+  },
+  "limitations": [
+    "Retrospective known targets, overlapping regimes, no fresh holdout or IID uncertainty.",
+    "Conditional empirical CDFs reuse SOURCE observations also contained in old parent prior; not Bayesian posterior.",
+    "Own-CDF risk optimality cannot compare expected risks across different distributions.",
+    "Registered SNPP cell-days are reference, not physical fires or observation opportunity.",
+    "G1 physical false; 30B failed and 35 negative unchanged."
+  ],
+  "RSS_bytes": 169492480
+}

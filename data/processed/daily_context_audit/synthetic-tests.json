@@ -1,0 +1,8 @@
+{
+  "tests": 4,
+  "passed": true,
+  "candidate_fit_calls": 5,
+  "solver_calls": 0,
+  "code_freeze_sha256": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6",
+  "completed_utc": "2026-11-15T08:15:11.533854+00:00"
+}

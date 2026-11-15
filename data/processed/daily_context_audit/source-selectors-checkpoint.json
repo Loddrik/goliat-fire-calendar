@@ -1,0 +1,246 @@
+[
+  {
+    "regime": "08_forward",
+    "first_source_response_read_utc": "2026-11-15T08:15:49.825627+00:00",
+    "columns": [
+      "cut",
+      "season",
+      "m",
+      "snpp"
+    ],
+    "parquet_filters": [
+      [
+        "cut",
+        "in",
+        [
+          "08101",
+          "08102",
+          "08103",
+          "08104",
+          "08105",
+          "08106",
+          "08107",
+          "08108",
+          "08109",
+          "08110",
+          "08111",
+          "08112",
+          "08201",
+          "08202",
+          "08203",
+          "08204",
+          "08205",
+          "08206",
+          "08207",
+          "08301",
+          "08302",
+          "08303",
+          "08304",
+          "08305",
+          "08306",
+          "08307",
+          "08308",
+          "08309",
+          "08310",
+          "08311",
+          "08312",
+          "08313",
+          "08314"
+        ]
+      ],
+      [
+        "season",
+        "in",
+        [
+          2012,
+          2013,
+          2014,
+          2015
+        ]
+      ]
+    ],
+    "filter_applied_before_materialization": true,
+    "duplicates_exact": true,
+    "raw_rows": 3168,
+    "unique_rows": 1584,
+    "roster_sha256": "c3cb2629186c9a623555e8180a1f066fb4b161d8a14944d4e43841e67dcf87ae",
+    "source_only_per_regime_not_global_no_held_claim": true
+  },
+  {
+    "regime": "08_backward",
+    "first_source_response_read_utc": "2026-11-15T08:15:57.041090+00:00",
+    "columns": [
+      "cut",
+      "season",
+      "m",
+      "snpp"
+    ],
+    "parquet_filters": [
+      [
+        "cut",
+        "in",
+        [
+          "08101",
+          "08102",
+          "08103",
+          "08104",
+          "08105",
+          "08106",
+          "08107",
+          "08108",
+          "08109",
+          "08110",
+          "08111",
+          "08112",
+          "08201",
+          "08202",
+          "08203",
+          "08204",
+          "08205",
+          "08206",
+          "08207",
+          "08301",
+          "08302",
+          "08303",
+          "08304",
+          "08305",
+          "08306",
+          "08307",
+          "08308",
+          "08309",
+          "08310",
+          "08311",
+          "08312",
+          "08313",
+          "08314"
+        ]
+      ],
+      [
+        "season",
+        "in",
+        [
+          2016,
+          2017,
+          2018,
+          2019
+        ]
+      ]
+    ],
+    "filter_applied_before_materialization": true,
+    "duplicates_exact": true,
+    "raw_rows": 3168,
+    "unique_rows": 1584,
+    "roster_sha256": "fb0e9704baf08542f1091dcf67ac417e8e912c36fa901e19d56e1ed61c8260f3",
+    "source_only_per_regime_not_global_no_held_claim": true
+  },
+  {
+    "regime": "16_forward",
+    "first_source_response_read_utc": "2026-11-15T08:16:04.177903+00:00",
+    "columns": [
+      "cut",
+      "season",
+      "m",
+      "snpp"
+    ],
+    "parquet_filters": [
+      [
+        "cut",
+        "in",
+        [
+          "16101",
+          "16102",
+          "16103",
+          "16104",
+          "16105",
+          "16106",
+          "16107",
+          "16108",
+          "16109",
+          "16201",
+          "16202",
+          "16203",
+          "16204",
+          "16205",
+          "16206",
+          "16207",
+          "16301",
+          "16302",
+          "16303",
+          "16304",
+          "16305"
+        ]
+      ],
+      [
+        "season",
+        "in",
+        [
+          2012,
+          2013,
+          2014,
+          2015
+        ]
+      ]
+    ],
+    "filter_applied_before_materialization": true,
+    "duplicates_exact": true,
+    "raw_rows": 2016,
+    "unique_rows": 1008,
+    "roster_sha256": "e43b837b6c53c255d536a052d8c77e368a1cc474672ecb9e1b37b6c55d0039fe",
+    "source_only_per_regime_not_global_no_held_claim": true
+  },
+  {
+    "regime": "16_backward",
+    "first_source_response_read_utc": "2026-11-15T08:16:09.484946+00:00",
+    "columns": [
+      "cut",
+      "season",
+      "m",
+      "snpp"
+    ],
+    "parquet_filters": [
+      [
+        "cut",
+        "in",
+        [
+          "16101",
+          "16102",
+          "16103",
+          "16104",
+          "16105",
+          "16106",
+          "16107",
+          "16108",
+          "16109",
+          "16201",
+          "16202",
+          "16203",
+          "16204",
+          "16205",
+          "16206",
+          "16207",
+          "16301",
+          "16302",
+          "16303",
+          "16304",
+          "16305"
+        ]
+      ],
+      [
+        "season",
+        "in",
+        [
+          2016,
+          2017,
+          2018,
+          2019
+        ]
+      ]
+    ],
+    "filter_applied_before_materialization": true,
+    "duplicates_exact": true,
+    "raw_rows": 2016,
+    "unique_rows": 1008,
+    "roster_sha256": "c90ef3c304b439b3259e61da0088dee3984c30ba291e8aa3eb4318ddfe30a9a4",
+    "source_only_per_regime_not_global_no_held_claim": true
+  }
+]
