@@ -1,0 +1,11 @@
+# Protocolo descriptivo: presupuesto de incertidumbre temporal que falta justificar
+
+Fijadoantesdetablasnuevas. Noevalúafuego,nuevogeometryniG1. UsarSOLOresúmenesexistentesdelasreferenciasdeescaneoen2019/2023(absmin/maxdelasASOCIACIONEScentrosqueYAseconstruyeron);noabrirrawniaplicarresultadosautomáticamenteapareadosdepíxeles/footprintsfuturos.
+
+ModeloCONDICIONAL:si adquisiciónA/Vestuvieradentro±m_A/±m_VdesureferenciatemporalenmismaescalaTAI93,lagapestaríadentro[max(0,δ−m_A−m_V),δ+m_A+m_V]. Esos márgenesSONSUPUESTOS,noerroresfísicosacreditadosniCI. Períodosescanobandlatencypendientes no seimputan0.Si márgenesfísicosnoacotados,estadofísiconoidentificadoconmétricasnull; tablas hipotéticasnodeclaranexposiciónvalidada.
+
+UmbralesW300/600/900s(600primariodelconsejo),márgenesigualesporinstrumentom∈{0,1,2,5,10,30,60,120,180,300}s;tablaporsiempredeclaram_A+m_V=2m. Paracaso:upper=max_abs_ref+2m,lower=max(0,min_abs_ref−2m);forall_within siupper≤W,forall_outsidesilower>W,restono_resuelto_uniformemente(noinventarfracciónpareados). Estotampocoimplicaestabilidadelfuegoentrepasadas.
+
+Presupuestotipping:slack_within=W−maxδ;si≥0,m_equal_max=slack/2 conlímitecerrado;si<0,None(noobtenermargenfísiconegativo). Paraalloutside, si minδ>W,m_equal_boundary=(minδ−W)/2ycondiciónm<boundaryestricta;sinocorrespondeNone. Separarigualdadabierta/cerradaparaevitaroffbyboundary. Sinprobabilidadocostenoafirmarexpectedvalueofinformation;estosonrequisitoscuantitativosaacreditar, no ranking deurgenciasobligatorio.
+
+Salida códigoreproductor+CSV/JSON/MDneuvos `scan_reference_margins`,protocolo/sourcehash/sameunits;contrastes sonaritméticos,ningúnmodelo seelige. Validarnúmerosfinite,min≤max,m≥0,reusartemporal_relationparaejemploslímitessintéticos,monotoníamárgenesysourceshapes,unknown≠0. Protegertodoevidenciaprevia,nodescargas,fitsniG1/physical_exposure_verifiedtrue. No trasplantar nearest-centers a comunes físicos.

@@ -1,0 +1,1 @@
+acq_date,acq_time,latitude,longitude,scan_km,track_km,state,source_state,association_state,distance_m,native_row,native_col,native_scan,detector,aggregation_factor,mesh_scan_m,mesh_track_m,mesh_area_m2,scan_relative_error,track_relative_error,area_relative_error,source_files,source_csvs,duplicate_count

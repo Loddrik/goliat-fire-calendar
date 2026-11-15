@@ -1,0 +1,9 @@
+{
+  "python": "3.14.7",
+  "numpy": "2.5.4",
+  "shapely": "2.2.0",
+  "GEOS": "3.14.1",
+  "pyproj": "3.8.0",
+  "PROJ": "9.8.1",
+  "no_new_dependencies_or_network": true
+}
