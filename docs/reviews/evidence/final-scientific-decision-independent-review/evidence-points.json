@@ -1,0 +1,326 @@
+{
+  "created_utc": "2026-11-15T09:35:30.998905+00:00",
+  "scope": "Independent scientific-communication audit; existing frozen results read only. No refits, new losses, scientific acquisition, GOES web queries or remote publication actions.",
+  "input_sha256": {
+    "docs/reviews/2026-11-15-final-scientific-decision.md": "b952bee49f3ffea975a5822b1057bb3a5d7fc77bc2568b11b34ef421cf023a92",
+    "docs/method.md": "da6d40e5a2d1d180043247102bf4d7541ba3e38c08edbe51a6f8e114181293a1",
+    "docs/integracion-firechronos.md": "b848e9a1a3c79cb94757c01a7ae11095ebd013b6d5154cf99d6dfdb5f2aeaa43",
+    "pipeline/hurdle_experiment.py": "5a2e3965c3189312d0445226e4957ef1c97987225f535d7ec6d13c8390bb9bd2",
+    "pipeline/scientific_audit.py": "f5b4dfcac376de518da9783c306f16f59d996e4380897dfaa2d05105ff0e9e32",
+    "pipeline/publish.py": "287bae9ddd68326a46222f547490777e9d5661a7486117c1497fe34cfbfee8c8",
+    "data/processed/params.json": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd",
+    "data/processed/gates.csv": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+    "web/public/data/index.json": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174",
+    "data/processed/coherent_audit/summary.json": "1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501",
+    "data/processed/cold_region_audit/models.json": "3b049145d00c4e15aac84de7c8e24150a1895584798584945bae4cffc1eb8c6e",
+    "data/processed/cold_region_audit/summary.json": "5cb57b073ea4ddbe20f7dd586e16e157036cf52bb9b264ab175c44ca1c4c30ae",
+    "data/processed/context_cdf_audit/summary.json": "0daf314fccd8ec4003306dab36d22456c2cf3acd39a03229ecec36c61d9a276f",
+    "data/processed/contract_model_sensitivity_audit/summary.json": "2ff16a1cf2240669469056a1c15538edae75de427825326478570227533d52d5",
+    "data/processed/group_budget_audit/summary.json": "6e2e9db1424f808a8c1c9831a5f7ba94624de40a5d85363d47e911e16529af0c",
+    "data/processed/daily_adjacency_audit/summary.json": "0adc140387f4e37c545f7f8c4cbe4de530caae4516c7cab8ee7b2015168a6b18",
+    "data/processed/daily_context_audit/summary.json": "cd54d7484907afaeed0ea483380f5a8ef3f97d5ca5b61c6e1e2ce1f6a0409cd9",
+    "data/processed/crps_audit/summary.json": "1d8af62a1aab4e8b124dab92f4438cf158ac606aa97d13a85072b3682d306ad6",
+    "docs/reviews/2026-11-14-science-review-18.md": "b84acc6e468eecc7e6de6fa10126ebaeae6d466e30bede6b9fa956111d2ff6e9",
+    "docs/reviews/2026-11-14-science-review-21.md": "682f4cc6d16fef38246524a6819ddd2f3adfe710df9880feff999fd23919cfb2",
+    "docs/reviews/2026-11-15-centered-ledger-revalidation-review.md": "c63352e55597a298d1f0439c4232b827e98e37de996a95f69abe6b69280aed20",
+    "docs/reviews/2026-11-15-exact-witness-review.md": "8a241f5ca22176895472364da1394702e983b8b92e2aa5165d4404f55bed82d1",
+    "docs/reviews/2026-11-15-exact-local-overlay-review.md": "85bd4a10295c17c219f9c850392ccf2fff1fcf2a2729f817e902e56d38612413",
+    "docs/reviews/2026-11-15-point-ownership-audit-review.md": "9ea34c31deb9eb633a76da8e296a178cb3b1bee5081bb368d069fa4af06a2fae",
+    "docs/reviews/2026-11-15-discrete-state-comparison-report.md": "eddf38c8f3d4ef6cdbf9e0c623bf8790f6c1791d43b01f12ac956165f94be3ca",
+    "docs/reviews/2026-11-14-baseline-reconstruction.md": "d92b42ae235572a8c59406fc9cca026abec1b6d4431f127573a42ddec2d30256"
+  },
+  "original_manifesto_sha256": "3c903431735609a0dc063e9930f02f66c8a17ce466ef750e69465fd9859fe7bd",
+  "original_manifesto_copied": false,
+  "checked_common_endpoint18": {
+    "n": 5184,
+    "M1_existing_mae": "2.0472445374193704",
+    "E_coherent_existing_mae": "1.7979391785450523",
+    "composed_percent_reduction_from_existing_endpoints_only": "12.17760527956161926877235179",
+    "not_sum_of_improvements": true
+  },
+  "published_artifacts": {
+    "universe": 54,
+    "enabled": 14,
+    "r_const_exact_params": 2.352954072125397,
+    "r_const_display_index": 2.353,
+    "gate_requirements": "Aqua>=50 and separate wins_vs_M2>=6, wins_vs_M0>=6, not joint-six-season intersection."
+  },
+  "existing39_guardrails": [
+    {
+      "regime": "08_backward",
+      "population": "held",
+      "stratum": "both_zero",
+      "n": 465,
+      "existing_mean_difference": 0.12662814780745976
+    },
+    {
+      "regime": "08_backward",
+      "population": "held",
+      "stratum": "reference_50_plus",
+      "n": 21,
+      "existing_mean_difference": -1.8878203248414145
+    },
+    {
+      "regime": "08_backward",
+      "population": "held_published14",
+      "stratum": "all_months",
+      "n": 384,
+      "existing_mean_difference": -0.5447890984032603
+    },
+    {
+      "regime": "08_forward",
+      "population": "held",
+      "stratum": "both_zero",
+      "n": 396,
+      "existing_mean_difference": 0.1597467839337386
+    },
+    {
+      "regime": "08_forward",
+      "population": "held",
+      "stratum": "reference_50_plus",
+      "n": 29,
+      "existing_mean_difference": -13.334947857122536
+    },
+    {
+      "regime": "08_forward",
+      "population": "held_published14",
+      "stratum": "all_months",
+      "n": 384,
+      "existing_mean_difference": -1.4972482004028695
+    },
+    {
+      "regime": "16_backward",
+      "population": "held",
+      "stratum": "both_zero",
+      "n": 705,
+      "existing_mean_difference": 0.2481392458049856
+    },
+    {
+      "regime": "16_backward",
+      "population": "held",
+      "stratum": "reference_50_plus",
+      "n": 11,
+      "existing_mean_difference": 10.076069829767288
+    },
+    {
+      "regime": "16_backward",
+      "population": "held_published14",
+      "stratum": "all_months",
+      "n": 288,
+      "existing_mean_difference": -0.07506607524387308
+    },
+    {
+      "regime": "16_forward",
+      "population": "held",
+      "stratum": "both_zero",
+      "n": 759,
+      "existing_mean_difference": 0.23256158264951873
+    },
+    {
+      "regime": "16_forward",
+      "population": "held",
+      "stratum": "reference_50_plus",
+      "n": 14,
+      "existing_mean_difference": 15.602548381825063
+    },
+    {
+      "regime": "16_forward",
+      "population": "held_published14",
+      "stratum": "all_months",
+      "n": 288,
+      "existing_mean_difference": 0.2762319393832213
+    }
+  ],
+  "source_region_prefixes_per21_model": {
+    "08_forward": [
+      "08"
+    ],
+    "08_backward": [
+      "08"
+    ],
+    "16_forward": [
+      "16"
+    ],
+    "16_backward": [
+      "16"
+    ]
+  },
+  "local_links": [
+    {
+      "label": "método publicado",
+      "target": "../method.md",
+      "exists": true
+    },
+    {
+      "label": "decisión anterior",
+      "target": "2026-11-14-research-decision.md",
+      "exists": true
+    },
+    {
+      "label": "integración de los dos proyectos",
+      "target": "../integracion-firechronos.md",
+      "exists": true
+    },
+    {
+      "label": "24",
+      "target": "2026-11-15-joint-plan-24.md",
+      "exists": true
+    },
+    {
+      "label": "31",
+      "target": "2026-11-15-joint-plan-31.md",
+      "exists": true
+    },
+    {
+      "label": "35",
+      "target": "2026-11-15-joint-plan-35.md",
+      "exists": true
+    },
+    {
+      "label": "38",
+      "target": "2026-11-15-joint-plan-38.md",
+      "exists": true
+    },
+    {
+      "label": "estudio 9",
+      "target": "2026-11-14-scientific-review-9.md",
+      "exists": true
+    },
+    {
+      "label": "método",
+      "target": "../method.md",
+      "exists": true
+    },
+    {
+      "label": "etapas 11–15",
+      "target": "2026-11-14-scientific-review-11.md",
+      "exists": true
+    },
+    {
+      "label": "integración",
+      "target": "../integracion-firechronos.md",
+      "exists": true
+    },
+    {
+      "label": "estudio 18",
+      "target": "2026-11-14-science-review-18.md",
+      "exists": true
+    },
+    {
+      "label": "resumen congelado 18",
+      "target": "../../data/processed/coherent_audit/summary.json",
+      "exists": true
+    },
+    {
+      "label": "transporte 21",
+      "target": "2026-11-14-science-review-21.md",
+      "exists": true
+    },
+    {
+      "label": "23: contexto territorial",
+      "target": "2026-11-15-science-review-23.md",
+      "exists": true
+    },
+    {
+      "label": "24C: contratos científico/publicado",
+      "target": "2026-11-15-science-review-24c.md",
+      "exists": true
+    },
+    {
+      "label": "35A: presupuestos por regiones",
+      "target": "2026-11-15-group-budget-report.md",
+      "exists": true
+    },
+    {
+      "label": "36: cubo diario",
+      "target": "2026-11-15-daily-adjacency-report.md",
+      "exists": true
+    },
+    {
+      "label": "37: CDF condicionada por D",
+      "target": "2026-11-15-daily-context-independent-review.md",
+      "exists": true
+    },
+    {
+      "label": "independiente",
+      "target": "2026-11-15-daily-context-independent-review.md",
+      "exists": true
+    },
+    {
+      "label": "estudio 39",
+      "target": "2026-11-15-crps-report.md",
+      "exists": true
+    },
+    {
+      "label": "revisión independiente completa",
+      "target": "2026-11-15-crps-independent-review.md",
+      "exists": true
+    },
+    {
+      "label": "revalidación 30B",
+      "target": "2026-11-15-centered-ledger-revalidation-review.md",
+      "exists": true
+    },
+    {
+      "label": "30A",
+      "target": "2026-11-15-exact-witness-review.md",
+      "exists": true
+    },
+    {
+      "label": "32B",
+      "target": "2026-11-15-exact-local-overlay-review.md",
+      "exists": true
+    },
+    {
+      "label": "32A",
+      "target": "2026-11-15-point-ownership-audit-review.md",
+      "exists": true
+    },
+    {
+      "label": "33",
+      "target": "2026-11-15-discrete-state-comparison-report.md",
+      "exists": true
+    },
+    {
+      "label": "estudio 7",
+      "target": "2026-11-14-scientific-review-7.md",
+      "exists": true
+    },
+    {
+      "label": "sensibilidad 19",
+      "target": "2026-11-14-science-review-19.md",
+      "exists": true
+    },
+    {
+      "label": "20A",
+      "target": "2026-11-14-science-review-20a.md",
+      "exists": true
+    },
+    {
+      "label": "reconstrucción de base",
+      "target": "2026-11-14-baseline-reconstruction.md",
+      "exists": true
+    },
+    {
+      "label": "HTML explicativo",
+      "target": "../artifacts/science-observation-plan-2026-11-15.html",
+      "exists": true
+    }
+  ],
+  "local_links_all_exist": true,
+  "remote_PR_metadata_independently_requeried": false,
+  "PR_status_scope": "Reviewed as time-stamped root-reported metadata, not an independent remote-state verification.",
+  "pending_required_clarifications": [
+    "forecast is conditional registered SNP activity of the same historical month given observed Aqua, not future operational prediction",
+    "223 is published full mask; nested18 uses origin/fold-fitted masks",
+    "two LOSO wins conditions are separate thresholds, not necessarily the same six seasons"
+  ],
+  "recommended_counterexample18": "Existing review18: published14 2020-2021 E_coherent MAE2.97949 vs B2.95671 despite all54 improvement.",
+  "C40_scope": "Pending DOC-only study; no extra sources accessed and no result anticipated.",
+  "fits": 0,
+  "new_losses": 0,
+  "science_downloads": 0,
+  "GOES_web_queries": 0,
+  "credential_values_extracted_or_emitted": false,
+  "original_manifesto_access": "Bytes hashed and selected non-secret phrase-presence checks performed; no original text or credential values copied to review evidence."
+}

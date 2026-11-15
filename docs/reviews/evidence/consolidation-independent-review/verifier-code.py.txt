@@ -1,0 +1,61 @@
+from pathlib import Path
+import re,hashlib,json,html,datetime,xml.etree.ElementTree as ET
+from html.parser import HTMLParser
+R=Path('/Users/dquinteros/nasa/goliat-fire-calendar');H=R/'docs/artifacts/science-observation-plan-2026-11-15.html';A=R/'docs/reviews/2026-11-15-final-scientific-decision-addendum.md';O=R/'docs/reviews/evidence/consolidation-independent-review'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+class Text(HTMLParser):
+ def __init__(self):super().__init__();self.parts=[]
+ def handle_data(self,d):self.parts.append(d)
+def text(s):p=Text();p.feed(s);return ''.join(p.parts).strip()
+def n(x,d):return f'{x:.{d}f}'.replace('.',',')
+s=H.read_text();expected='6b97c9b929c59f139d7125c185ce9f6ed7eb617a2d408943a924ef39598c8ddc';assert sha(H)==expected
+assert sha(R/'docs/reviews/2026-11-15-final-scientific-decision.md')=='d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934'
+svgs=re.findall(r'<svg\b.*?</svg>',s,re.S);assert len(svgs)==7
+svginfo=[]
+for block in svgs:
+ root=ET.fromstring(block);assert root.attrib.get('role')=='img' and root.attrib.get('aria-label') and root.attrib.get('viewBox');svginfo.append({'aria_label':root.attrib['aria-label'],'viewBox':root.attrib['viewBox'],'XML_valid':True})
+ids=re.findall(r'\bid="([^"]+)"',s);assert len(ids)==len(set(ids))
+assert not re.search(r'<script\b|<iframe\b|<img\b|<image\b|<link[^>]+stylesheet',s,re.I)
+links=[]
+for href in re.findall(r'\bhref="([^"]+)"',s):
+ href=html.unescape(href)
+ if href.startswith(('https:','http:')):continue
+ if href.startswith('#'):assert href[1:] in ids
+ else:assert (H.parent/href.split('#')[0]).resolve().exists(),href
+ links.append(href)
+sourcehash=[]
+for name,h in re.findall(r'<li><code>([^<]+)</code><br><small>SHA256 ([a-f0-9]{64})</small></li>',s):
+ assert sha(R/name)==h,name;sourcehash.append({'path':name,'sha256':h})
+assert len(sourcehash)>=34
+T={}
+for block in re.findall(r'<table>.*?</table>',s,re.S):
+ caption=text(re.search(r'<caption>(.*?)</caption>',block,re.S).group(1));rows=[]
+ for row in re.findall(r'<tr>(.*?)</tr>',block,re.S):
+  cells=[text(v) for v in re.findall(r'<td>(.*?)</td>',row,re.S)]
+  if cells:rows.append(cells)
+ T[caption]=rows
+def table(prefix):matches=[v for k,v in T.items() if k.startswith(prefix)];assert len(matches)==1,prefix;return matches[0]
+s36=json.load(open(R/'data/processed/daily_adjacency_audit/summary.json'));r36=json.load(open(R/'docs/reviews/evidence/daily-adjacency-independent-review/summary.json'));s37=json.load(open(R/'data/processed/daily_context_audit/summary.json'));s39=json.load(open(R/'data/processed/crps_audit/summary.json'));s40=json.load(open(R/'docs/reviews/evidence/goes-preflight/summary.json'));r40=json.load(open(R/'docs/reviews/evidence/goes-preflight-independent-review/summary.json'));agg=json.load(open(R/'docs/reviews/evidence/direction-council-38/aggregate.json'));rat=json.load(open(R/'docs/reviews/evidence/direction-council-38/ratification.json'));amend=json.load(open(R/'docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json'))
+assert [r[1] for r in table('36: integridad')]==[str(s36['overall']['n']),str(r36['verified']['expanded_Aqua_identity_rows']),str(s36['overall']['D_real_1']),str(s36['overall']['D_placebo_1']),str(s36['overall']['D_discordant'])]
+assert table('37: ambos contrastes')==[[r['regime'],str(r['n']),n(r['delta_real_minus_placebo'],10),n(r['delta_real_minus_G'],10)] for r in s37['primary']['regimes']]
+expected=[]
+for regime in ['08_backward','08_forward','16_backward','16_forward']:
+ row=s37['reports'][regime]['held_published14']['all_months'];real=row['methods']['Q_real']['mae'];pl=row['methods']['Q_placebo']['mae'];expected.append([regime,str(row['n']),n(real,6),n(pl,6),n(real-pl,6)])
+assert table('37: coste en held')==expected
+assert table('39: distribución marginal')==[[r['regime'],str(r['n']),n(r['mean_CRPS_F21'],9),n(r['mean_CRPS_delta_B'],9),n(r['difference_F21_minus_delta_B'],9)] for r in s39['primary']['regimes']]
+rows=table('39: un promedio favorable');spec=[('16_forward','held_published14','all_months'),('16_backward','held','zero_reference'),('08_backward','held','reference_50_plus'),('08_forward','held','reference_50_plus'),('16_backward','held','reference_50_plus'),('16_forward','held','reference_50_plus')]
+for row,(regime,pop,st) in zip(rows,spec):
+ q=s39['reports'][regime][pop][st];assert row[0]==regime and row[2:]==[str(q['n']),n(q['mean_difference_F21_minus_delta_B'],10)]
+assert table('40: metadatos')==[['2019-01-03','2019/003/18','4','M3','15 min'],['2023-02-10','2023/041/18','6','M6','10 min']]
+rows=table('38: promedio')
+for row in rows[:3]:assert row[2]=='–'.join(n(v,2) for v in agg['options'][row[0]]['mean_subjective_range'])
+assert rows[3][0]=='B' and 'N/A' in rows[3][2] and rat['all_six_ratified_operational_sequence'] and amend['all_six_ratified']
+assert r40['completed_utc'] in s and 'Corte de evidencia '+r40['completed_utc'] in s
+# Fixed conceptual example, no observations or actual hash recomputed.
+orig=[{1,2},{2}];mapping={1:3,2:1,3:4,4:2};dest=[{mapping[d] for d in q} for q in orig];assert dest==[{1,3},{1}]
+assert 'Orden ilustrativo, no resultado SHA real.' in s and 'día ORIGEN d → día DESTINO rankedDays[d−1]' in text(s)
+assert not O.exists();O.mkdir(parents=True)
+(O/'verifier-code.py.txt').write_bytes(Path(__file__).read_bytes())
+paths=[H,A,R/'pipeline/build_joint_plan_report.py',R/'docs/reviews/2026-11-15-goes-preflight-report.md',R/'docs/reviews/2026-11-15-goes-preflight-independent-review.md']
+report={'status':'PASS_complementary_scientific_communication','completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_sha256':{str(p.relative_to(R)):sha(p) for p in paths},'prior_main_document_unchanged_sha256':sha(R/'docs/reviews/2026-11-15-final-scientific-decision.md'),'scope':'Read-only scope/number/provenance/diagram audit of addendum and final HTML. No browser rendering, new web sources, scientific data or experiments.','C40_report_and_dedicated_peer_read':True,'C40_new_web_queries_by_this_reviewer':0,'addendum_no_stronger_claim_than_C40_peer':True,'CDF_same_historical_month_not_future_claim_checked':True,'CRPS_location_spread_and_noncalibration_limits_checked':True,'14_extreme_zero_costs_visible':True,'SOURCE16_heldBiobio_not_conflated':True,'G_point_not_CDF_or_joint54_checked':True,'37_formulation_only_no_universal_chronology_null':True,'science_bytes_zero_versus_document_bytes_distinguished':True,'all_seven_SVG_XML_and_roles_valid':svginfo,'all_HTML_ids_unique':True,'scripts_iframes_remote_graphic_resources':0,'local_or_fragment_links_checked':len(links),'source_hashes_verified':sourcehash,'numeric_tables36_37_39_40_and_council38_checked':True,'permutation_example':{'source_day_sets':[[1,2],[2]],'origin_to_destination':mapping,'destination_day_sets':[[1,3],[1]],'empty_columns_and_shared_intraday_sets_preserved':True,'conceptual_not_real_SHA_result':True},'council38_three_original_three_adversarial_limits_and_six_ratifications_checked':True,'C_resource_change_due_early_A_completion_not_metric_sign':True,'deterministic_footer_cutoff':r40['completed_utc'],'builder_not_executed_by_reviewer':True,'rebuild_determinism_scope':'Root reported two matching builds; reviewer checked source reads fixed summary timestamp and no current-clock generation.','browser_mobile_desktop_rendering_scope':'Owned by root separately, not claimed here.','PR_metadata_not_requeried':True,'fits':0,'new_losses':0,'solvers':0,'science_downloads':0,'remaining_blockers':[]}
+(O/'summary.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');(O/'manifest.json').write_text(json.dumps({'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in O.iterdir() if p.is_file()}},indent=2)+'\n');print('CONSOLIDATION_PASS',sha(H),sha(O/'summary.json'),len(svgs),len(sourcehash),len(links))

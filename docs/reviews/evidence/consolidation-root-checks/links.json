@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "documents": {
+    "README.md": "d329a8c819ca3b5faee49b3b61ff0454b78b9ee1cccfde715fdcd0fb71b42fbe",
+    "docs/reviews/README.md": "bc73432eeec8f8282495924be17751fd68d290825d4e2cd2d8cf0b43da3d11da",
+    "docs/reviews/2026-11-15-final-scientific-decision.md": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934",
+    "docs/reviews/2026-11-15-final-scientific-decision-addendum.md": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167",
+    "docs/artifacts/science-observation-plan-2026-11-15.html": "6b97c9b929c59f139d7125c185ce9f6ed7eb617a2d408943a924ef39598c8ddc"
+  },
+  "local_links_checked": 74,
+  "missing": []
+}
