@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-11-15T09:35:29.967682+00:00",
+  "scientific_bytes_acquired": 0,
+  "scientific_product_requests": 0,
+  "nc_HDF_headers_GET_HEAD_Range": 0,
+  "images_tiles_radiances": 0,
+  "new_models_fits_solvers_scores": 0,
+  "old_L2_budget_reopened": false,
+  "future_acquisition_authorized": false,
+  "document_and_catalogue_bytes": "separate HTTP log measured where available; web bytes unreported, not scientific bytes",
+  "selected_documents": 9,
+  "selected_catalogue_URLs": 2
+}

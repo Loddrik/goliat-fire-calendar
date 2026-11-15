@@ -1,0 +1,146 @@
+{
+  "science_bytes": 0,
+  "credential_use": false,
+  "fetches": [
+    {
+      "id": "D1modern",
+      "url": "https://www.ospo.noaa.gov/data/messages/2019/03/MSG_20190327_1424.html",
+      "accessed_utc": "2026-11-15T09:25:13.460345+00:00",
+      "request_method": "GET documentation_or_S3LIST_only",
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/data/messages/2019/03/MSG_20190327_1424.html",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 10052,
+      "sha256": "44eacec09f57657c89a9b10f14b7bdea32ac329fc5ad341826f1bb979a1fe388",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D1modern.html"
+    },
+    {
+      "id": "D4",
+      "url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v3.0%20final.pdf",
+      "accessed_utc": "2026-11-15T09:25:14.151290+00:00",
+      "request_method": "GET documentation_or_S3LIST_only",
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v3.0%20final.pdf",
+      "content_type": "application/pdf",
+      "bytes": 10377546,
+      "sha256": "a04ec96213b306037c100b85d835e336ac434a0367063f8659ceafe27bc6fa7e",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D4.pdf"
+    },
+    {
+      "id": "D9",
+      "url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v2.4.pdf",
+      "accessed_utc": "2026-11-15T09:25:15.435289+00:00",
+      "request_method": "GET documentation_or_S3LIST_only",
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v2.4.pdf",
+      "content_type": "application/pdf",
+      "bytes": 7691618,
+      "sha256": "3849bc065849d07fd18e589c3b2c874b8be02791b059c414d5b5d5890d798fe9",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D9.pdf"
+    },
+    {
+      "id": "C1",
+      "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+      "accessed_utc": "2026-11-15T09:25:16.675246+00:00",
+      "request_method": "GET documentation_or_S3LIST_only",
+      "status": 200,
+      "final_url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+      "content_type": "application/xml",
+      "bytes": 1490,
+      "sha256": "ce9248942289f995a1526c5581db7cf35d5ca73a1caaf3d66aba943eda0ec358",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/C1.xml"
+    },
+    {
+      "id": "C2",
+      "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+      "accessed_utc": "2026-11-15T09:25:17.206922+00:00",
+      "request_method": "GET documentation_or_S3LIST_only",
+      "status": 200,
+      "final_url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+      "content_type": "application/xml",
+      "bytes": 2102,
+      "sha256": "a0949dda13e71ecf8c51c7387756825ffbb25e89da3e950a3de42685441d23cf",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/C2.xml"
+    },
+    {
+      "id": "D2",
+      "url": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/goes-east-west/abi-scan-mode-information-and-channel-summary",
+      "accessed_utc": "2026-11-15T09:27:10.865792+00:00",
+      "request_method": "GET documentation_only",
+      "status": 200,
+      "final_url": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/goes-east-west/abi-scan-mode-information-and-channel-summary",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 374536,
+      "sha256": "a052f633a2aca28ed99c40e9817d5deeb7c08754b013d48a239d777cbb07ab3c",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D2.html"
+    },
+    {
+      "id": "D5",
+      "url": "https://www.star.nesdis.noaa.gov/goesr/documents/ATBDs/Baseline/ATBD_GOES-R_FIRE_v2.6_Oct2013.pdf",
+      "accessed_utc": "2026-11-15T09:27:12.289034+00:00",
+      "request_method": "GET documentation_only",
+      "status": 200,
+      "final_url": "https://www.star.nesdis.noaa.gov/goesr/documents/ATBDs/Baseline/ATBD_GOES-R_FIRE_v2.6_Oct2013.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1970020,
+      "sha256": "b0f0de849876a0937dc6c10278799fd9b4414673faecbdf112568fa10e2028ee",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D5.pdf"
+    },
+    {
+      "id": "D6",
+      "url": "https://www.ospo.noaa.gov/resources/documents/ATBD/ATBD_GOES-R_FIRE_v2.7_Oct2020.pdf",
+      "accessed_utc": "2026-11-15T09:27:14.896962+00:00",
+      "request_method": "GET documentation_only",
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/resources/documents/ATBD/ATBD_GOES-R_FIRE_v2.7_Oct2020.pdf",
+      "content_type": "application/pdf",
+      "bytes": 4440589,
+      "sha256": "045c5fc6f0b6f5b70151833330f3613ecb06e0b242409318e50b7794e6e6c9a9",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D6.pdf"
+    },
+    {
+      "id": "D7",
+      "url": "https://www.ospo.noaa.gov/operations/goes/product-quality-overview/ps-pvr/goes-16/ABI/Fires%20and%20Hot%20Spots%20Characterization/Provisional/GOES-16_ABI_L2_FHS_Provisional_ReadMe_v2.pdf",
+      "accessed_utc": "2026-11-15T09:27:15.955949+00:00",
+      "request_method": "GET documentation_only",
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/operations/goes/product-quality-overview/ps-pvr/goes-16/ABI/Fires%20and%20Hot%20Spots%20Characterization/Provisional/GOES-16_ABI_L2_FHS_Provisional_ReadMe_v2.pdf",
+      "content_type": "application/pdf",
+      "bytes": 112245,
+      "sha256": "4bcc6225edf1b36b1305161b5124262701769de47800e06f30fd72462d12cb73",
+      "local_ignored_file": ".runtime/goes-preflight-independent-review/D7.pdf"
+    },
+    {
+      "id": "D8",
+      "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC01520",
+      "accessed_utc": "2026-11-15T09:27:16.495786+00:00",
+      "request_method": "GET documentation_only",
+      "status": "request_failed",
+      "reason": "The read operation timed out"
+    }
+  ],
+  "reviewer": "adversarial_council_measurement24",
+  "credentials_used": false,
+  "science_objects_requested": 0,
+  "scientific_bytes_acquired": 0,
+  "request_scope": "Only selected official documents and two bucket LIST responses; no object GET/HEAD/ranges",
+  "web_access_notes": [
+    {
+      "url": "https://www.ospo.noaa.gov/data/messages/2019/MSG0861424.html",
+      "status": "403 in web fetch",
+      "interpretation": "Legacy access failed; not evidence that the notice or scientific data do not exist. Modern alias independently retrieved."
+    },
+    {
+      "url": "https://www.goes-r.gov/users/docs/PUG-L2+-vol5.pdf",
+      "status": "Redirected to NESDIS geostationary landing",
+      "interpretation": "Not verified as the requested PUG; no schema claim relies on this redirect."
+    },
+    {
+      "url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v2.4.pdf",
+      "status": "Web fetch403; independent direct document GET200",
+      "interpretation": "Technical PDF identity checked in local ignored cache by magic andSHA; scientific bytes remain0."
+    }
+  ],
+  "selected_source_budget_note": "Shared selected set D1-D9, with legacy/modern aliases and failed PUG redirect recorded; no extra document selected. Two S3LIST URLs and the shared NCEI metadata URL are the catalog scope. Within protocol union caps.",
+  "document_cache_note": "Full technical PDFs stay ignored in .runtime; only provenance/hashes and metadata listings are recorded here. The producer used reviewer-retrieved D9 cache; separate HTTP retrievals of D4/D6/D7 match its hashes."
+}

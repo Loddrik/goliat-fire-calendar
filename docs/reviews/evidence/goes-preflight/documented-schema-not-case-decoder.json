@@ -1,0 +1,36 @@
+{
+  "document": "D9 PUGv2.4(2022-07-11),tables5.19.6.1-1/2 printedpp452-453",
+  "NOT_A_CASE_DECODER": true,
+  "historical_granule_applicability": "unknown for both cases; no attributes or software inspected",
+  "Mask_documented_candidates": {
+    "0": "unprocessed",
+    "10-15": "six native fire/probability categories; not truth or incident IDs",
+    "30-35": "temporally filtered equivalents; historical rule applicability unknown",
+    "40": "offEarth",
+    "50": "localzenith block",
+    "60": "solarzenith/glint block",
+    "100": "processed no-fire algorithm class, not physical absence",
+    "120/121": "missing requiredIR inputs",
+    "123/124/125/126/127": "input saturation/invalid/threshold exclusions",
+    "150-153": "surface/ecosystem exclusions",
+    "170/180/182/185-188": "background/conversion/retrieval problems",
+    "200/201/205/210/215/220/225/230/240/245": "cloud/cloudedge tests",
+    "-99": "PUGv2.4 documented short fill; actual case FillValue unverified"
+  },
+  "DQF_documented_candidates": {
+    "0": "fire quality class",
+    "1": "processed firefree land quality class",
+    "2": "opaque cloud invalid",
+    "3": "surface/glint/LZA/offEarth/missing inputs",
+    "4": "bad input invalid",
+    "5": "algorithm failure invalid",
+    "255": "documented fill; actual attributes unverified"
+  },
+  "temporal_rule_document_conflict": {
+    "D7_Dec2019": "same current-pixel prior fire within12h; explicitly changed fromATBD",
+    "D5_v2_6_and_D6_v2_7": "prior fire within neighboring pixel/line-element window; not proof deployed version",
+    "consequence": "Filtered labels are history-dependent, not independent confirmations of continuous same physical fire."
+  },
+  "Mask_storage_documented": "short; valid_range0..245, reserved/unlisted codes not interpreted",
+  "DQF_storage_documented": "unsigned byte; fill255; actual case attributes unverified"
+}
