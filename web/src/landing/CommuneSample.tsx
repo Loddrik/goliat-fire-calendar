@@ -60,14 +60,16 @@ export function CommuneSample({ cut, t, lang }: { cut: string; t: Text; lang: La
             </div>
           ))}
         </div>
-        <p className="lp-note">{t.q1note(n, a, b)}</p>
+        <p className="lp-note">{t.q1short(n)}</p>
+        <details className="lp-more">
+          <summary>{t.howToRead}</summary>
+          <p className="lp-note">{t.q1note(n, a, b)}</p>
+        </details>
       </article>
       <article className="lp-q">
         <h3>{t.q2}</h3>
         <p className="lp-fact">{t.q2sentence(doc.comuna, seasonLabel(sc.season), dateLong(doc.cutoff, lang), num(sc.current, lang)!, sc.n, a, b, num(sc.median, lang))}</p>
         <p className="lp-note">{t.q2note(sc.n)}</p>
-        <h3 className="lp-q3">{t.q3}</h3>
-        <p className="lp-note">{t.q3text}</p>
         <a className="lp-btn lp-btn-primary" href={`/explorar?cut=${cut}&lang=${lang}`}>{t.open(doc.comuna)} <span aria-hidden="true">→</span></a>
       </article>
     </div>
