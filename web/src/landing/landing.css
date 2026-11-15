@@ -201,3 +201,27 @@ body { margin: 0; background: #FCFBF7; }
 .lp-hero-text > *:nth-child(4) { animation-delay: .24s; }
 .lp-hero-text > *:nth-child(5) { animation-delay: .32s; }
 @media (prefers-reduced-motion: reduce) { .lp-hero-text > * { animation: none; } .lp-map-canvas canvas { transition: none; } }
+
+/* revisión #40: rótulo del hero, línea fija del mapa, alcance VIIRS, mes extremo, temporadas desde 2002 */
+.lp-hero-eyebrow { color: #9ECAE1; margin-bottom: -10px !important; }
+.lp-map-kicker { font-size: 13px; color: var(--navy-muted); margin-bottom: 6px; }
+.lp-map-scope { font-weight: 600; color: var(--navy-fg); font-size: 13px; }
+.lp-peak { font-size: 15px; padding: 10px 12px; border-left: 3px solid var(--b5); background: #F2F6FA; }
+.lp-q-wide { grid-column: 1 / -1; }
+.lp-seasons { display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: 3px; align-items: end; }
+.lp-ss { display: grid; gap: 4px; min-width: 0; }
+.lp-ss-track { height: 110px; display: flex; align-items: flex-end; justify-content: center; border-bottom: 1px solid var(--fg); }
+.lp-ss-track b { display: block; width: 100%; border-radius: 2px 2px 0 0; }
+.lp-ss-observed b { background: var(--b3); }
+.lp-ss-estimated b { background: repeating-linear-gradient(45deg, rgba(255,255,255,.6) 0 2px, transparent 2px 6px), var(--b2); border: 1px solid var(--b4); border-bottom: 0; }
+.lp-ss-not_enabled i { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--muted); padding-bottom: 4px; }
+.lp-ss-start .lp-ss-track { box-shadow: -2px 0 0 -0.5px var(--fg); }
+.lp-ss-y { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: left; white-space: nowrap; min-height: 14px; }
+.lp-ss-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; }
+.lp-ss-key span { display: inline-flex; align-items: center; gap: 6px; }
+.lp-ss-k { width: 14px; height: 14px; display: inline-grid; place-items: center; border-radius: 2px; font-style: normal; font-size: 10px; }
+.lp-ss-k-obs { background: var(--b3); }
+.lp-ss-k-est { background: repeating-linear-gradient(45deg, rgba(255,255,255,.6) 0 2px, transparent 2px 6px), var(--b2); border: 1px solid var(--b4); }
+.lp-ss-k-ne { border: 1px dashed var(--muted); color: var(--muted); font-family: var(--mono); }
+@media (max-width: 520px) { .lp-seasons { gap: 1px; } .lp-ss-track { height: 90px; } .lp-ss-y { font-size: 9.5px; } }
+.lp-ch-valid { font-size: 16.5px; }

@@ -61,7 +61,8 @@ export default function Landing() {
         <section className="lp-hero">
           <div className="lp-wrap lp-hero-in">
             <div className="lp-hero-text">
-              <Headline key={lang} t={t} />
+              <p className="lp-eyebrow lp-hero-eyebrow">{t.eyebrow}</p>
+              <h1 className="lp-h1">{t.hQuestion}</h1>
               <p className="lp-sub">{t.sub}</p>
               <p className="lp-alert"><Icon name="telefono" size={20} /> <span>{t.alert}</span></p>
               <Search comunas={comunas} t={t} />
@@ -69,7 +70,7 @@ export default function Landing() {
                 {index ? <>{t.meta(comunas.length, dateShort(index.cutoff, lang))} · <a href={explorer()}>{t.allLink(comunas.length)}</a></> : "\u00a0"}
               </p>
             </div>
-            <RegionMap t={t} lang={lang} />
+            <RegionMap t={t} lang={lang} enabled={enabled} total={comunas.length} />
           </div>
         </section>
 
@@ -136,6 +137,9 @@ export default function Landing() {
             <div className="lp-ch-body">
               <p>MODIS (1 km pixels, since 2000) and VIIRS (375 m, since 2012) see fire differently. VIIRS picks up far more small, cool hot spots{index ? <> (here about {index.r_const.toFixed(2)}× as many cell-days)</> : null}, so stitching the two records together creates a false jump in 2012. Terra and Aqua are at the end of their missions, with drifting orbits; once MODIS stops, the years before 2012 can only be compared through a bridge like this one.</p>
               {index && (
+                <p className="lp-ch-valid">Tested leaving one season out at a time: <b>{enabled} of {comunas.length} communes pass</b>{index.params?.band_coverage_1mae != null ? <>; in internal validation, ±1 typical error covers about {Math.round(index.params.band_coverage_1mae * 100)} % of active months (somewhat less in the published communes and later seasons)</> : null}. The rest show VIIRS from 2012 only.</p>
+              )}
+              {index && (
                 <details className="lp-ch-more">
                 <summary>{t.challengeMore}</summary>
                 <p>
@@ -169,45 +173,6 @@ export default function Landing() {
           <p><a href={REPO} target="_blank" rel="noreferrer">{t.repo} <Icon name="externo" size={14} /></a></p>
         </div>
       </footer>
-    </div>
-  );
-}
-
-// Título animado (#37): la pregunta, y después «Usa lo que vieron los satélites para» con la última
-// parte cambiando. Todas las frases se apilan en la misma celda para que el alto no salte.
-// Ciclo continuo; se pausa con el mouse encima. Con «reducir movimiento» queda la pregunta fija. El lector de pantalla lee hFull una sola vez.
-const Q_MS = 3200, WORD_MS = 2400;
-function Headline({ t }: { t: Text }) {
-  const [step, setStep] = useState(0); // 0 = pregunta; 1..n = palabra n
-  const [hover, setHover] = useState(false);
-  const [reduced, setReduced] = useState(() => matchMedia("(prefers-reduced-motion: reduce)").matches);
-  useEffect(() => {
-    const mq = matchMedia("(prefers-reduced-motion: reduce)");
-    const on = () => setReduced(mq.matches);
-    mq.addEventListener("change", on);
-    return () => mq.removeEventListener("change", on);
-  }, []);
-  const still = reduced || hover;
-  useEffect(() => {
-    if (still) return;
-    const id = setTimeout(() => setStep(s => (s + 1) % (t.hWords.length + 1)), step === 0 ? Q_MS : WORD_MS);
-    return () => clearTimeout(id);
-  }, [step, still, t.hWords.length]);
-  const shown = reduced ? 0 : step;
-  return (
-    <div className="lp-h1-wrap" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <h1 className="lp-h1">
-        <span className="lp-sr">{t.hFull}</span>
-        <span className="lp-h1-stack" aria-hidden="true">
-          <span className={`lp-h1-frame${shown === 0 ? " on" : ""}`}>{t.hQuestion}</span>
-          <span className={`lp-h1-frame${shown > 0 ? " on" : ""}`}>
-            {t.hLead}{" "}
-            <span className="lp-h1-words">
-              {t.hWords.map((w, i) => <span key={w} className={`lp-h1-word${shown === i + 1 ? " on" : ""}`}>{w}</span>)}
-            </span>
-          </span>
-        </span>
-      </h1>
     </div>
   );
 }

@@ -35,7 +35,7 @@ function useReducedMotion() {
   return reduced;
 }
 
-export function RegionMap({ t, lang }: { t: Text; lang: Lang }) {
+export function RegionMap({ t, lang, enabled, total }: { t: Text; lang: Lang; enabled: number; total: number }) {
   const wrap = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const [data, setData] = useState<Months | null>(null);
@@ -111,8 +111,6 @@ export function RegionMap({ t, lang }: { t: Text; lang: Lang }) {
       const [c, x] = off();
       for (const e of byMonth[i]) {
         const X = px(e.x * step), Y = py((e.y + 1) * step);
-        // Halo suave en los sectores con detección en 3 o más temporadas (sin shadowBlur: es caro en celular).
-        if (e.n >= 3) { x.fillStyle = "rgba(198,219,239,.22)"; x.fillRect(X - cw, Y - ch, cw * 3, ch * 3); }
         x.fillStyle = col(e.n); x.fillRect(X, Y, cw, ch);
       }
       return c;
@@ -164,8 +162,9 @@ export function RegionMap({ t, lang }: { t: Text; lang: Lang }) {
     <figure className="lp-map">
       <div className="lp-map-bar">
         <div aria-hidden="true">
+          <div className="lp-map-kicker">{range ? t.mapKicker(range[0], range[1]) : "\u00a0"}</div>
           <div className="lp-map-month">{byMonth ? t.monthsLong[shownMonth] : " "}</div>
-          <div className="lp-map-count">{byMonth && range ? t.mapCount(fmt(counts[shownMonth]), seasons.length) : " "}</div>
+          <div className="lp-map-count">{byMonth && range ? t.mapCount(fmt(counts[shownMonth]), t.monthsLong[shownMonth], seasons.length) : " "}</div>
         </div>
         {!reduced && byMonth && (
           <button type="button" className="lp-map-pause" onClick={() => setPaused(p => !p)} aria-label={paused ? t.mapPlay : t.mapPause} aria-pressed={paused}>
@@ -192,6 +191,7 @@ export function RegionMap({ t, lang }: { t: Text; lang: Lang }) {
           <span className="lp-legend-label">{t.legend}</span>
           {NIGHT_RAMP.map((c, i) => <span key={c}><i style={{ background: c }} />{t.legendClasses[i]}</span>)}
         </span>
+        {total > 0 && <b className="lp-map-scope">{t.mapScope(enabled, total)}</b>}
         <span className="lp-map-note">{range ? t.mapNote(range[0], range[1]) : " "}</span>
       </figcaption>
     </figure>
