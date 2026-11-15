@@ -1,0 +1,158 @@
+{
+  "role": "adversarial_engineering_release_and_feasibility",
+  "reviewed_utc": "2026-11-15T13:52:38.373378+00:00",
+  "criteria_ack": true,
+  "criteria_source": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+  "criteria_sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0",
+  "method": "ACK previo del orden cualitativo congelado; sin puntuaciones numéricas ni reponderación de ciencia histórica.",
+  "inspected_inputs": [
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+      "sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+      "sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/resumen-tecnico.md",
+      "sha256": "f6603fe47e0cc4d090ab90b339bfb9fd29e39e3602d16dd923c789d1c5149f56"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/resumen-negocio.md",
+      "sha256": "05694cad6104fa3eddfe2a21a1692bc5597cce6364f86875b38685aa6dec0ba0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/engineering-proposals.json",
+      "sha256": "87b44817e9695f0ba29314a557ad7a7de99e61792142a8d2cc9e4c8cc831e7d8"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
+      "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/pr-inventory.json",
+      "sha256": "5c5aa441193d5e787f8c6d5be803bff13ce1dea246b2a72718c26e19565a830b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "5c14288806d5382dce9a657c908e1ee2690c59cfecfeef9e8bb337e5fc7d6767"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "dbac5ef870753eab43512a70bbc4f7741056e3b993641ec46ed5905c4b307f30"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6c428b23702562d25f90e512f4c82565d2d3c672a4a8daa6345cb9d4c3575346"
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "bb07c3d555afca5f5c607015c24013c12fa4c63e95d6c1fdf94961bd8114b797"
+    },
+    {
+      "path": "web/src/App.tsx",
+      "sha256": "bcd726e8460a03eb37c799a9038a51d3d8a118fdb5b86bdf8f92ee4a2a8cc68e"
+    },
+    {
+      "path": "web/src/ExploreMap.tsx",
+      "sha256": "04cf838e989dfb7d2f0b95e8da0314f53dcc6bd05e507d16123c482df9f20ff1"
+    },
+    {
+      "path": "docs/reviews/evidence/raw-recovery-final/backup-verification.json",
+      "sha256": "5b32628554d05f5f0f995280071ebfab85c9b577459de7099127a4ccdf84227b"
+    },
+    {
+      "path": "docs/reviews/evidence/raw-recovery-final/inventory-verification.json",
+      "sha256": "e7cf8130885077b1d91bd77bb6f2ad1babe0e34a4720e9699baee6db5eecb160"
+    }
+  ],
+  "verdict": "RATIFY_PRIORITY_ORDER_WITH_EXECUTION_GATES",
+  "priority_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "priority_rationale": "Afirmaciones defendibles y candidato identificable habilitan un ensayo acotado. Custodia y contratos documentales quedan opcionales detrás del mínimo de presentación. Recuperar los 115 raw, integrar la pila o implementar metadatos no bloquean la demo con derivados existentes.",
+  "blocking_flaws_in_priority_order": [],
+  "supported_engineering_findings": [
+    "verification-snapshot.json identifica ambos checks CI SUCCESS de PR64 y 358 pruebas Python sobre 6410fcb491e9a318419d7b142ddab52b1e483662; no acredita ensayo de navegador ni despliegue.",
+    "Inventario fechado: 24 PR científicos seleccionados, 21 OPEN y 3 MERGED; PR22 integración MERGED separado; PR31 OPEN hacia main y PR64 draft hacia dev. No autoriza retarget, merge o deploy.",
+    "Los comandos de instalación/build/arranque coinciden con scripts y CI inspeccionados. npm start sirve web/dist; por tanto se necesita build preparado. El plan permite un candidato conocido si no cabe instalación limpia.",
+    "App.tsx implementa cut, vista=tabla y view=observed; la exportación CSV de la serie está implementada. Esto respalda rutas sugeridas, no demuestra que se hayan ensayado.",
+    "ExploreMap.tsx usa estilo externo OpenFreeMap; el fallback de tabla/calendario/capturas y la advertencia offline están correctamente declarados.",
+    "backup-verification.json conserva hash de tar parcial con 956 miembros verificados e inventory-verification.json mantiene 115 faltantes; no se presume que Git transfiera raw ni que el receptor ya tenga los bytes.",
+    "P1 metadatos y desempate se limitan a contrato/RFC y no alteran canónicos, JSON publicado, gates o modelos. La reversibilidad es suficiente dentro de ese alcance."
+  ],
+  "execution_gates": [
+    {
+      "id": "AR1",
+      "blocks": "Anunciar P0 completado y demo ensayada; no bloquea aprobar el orden documental",
+      "finding": "Los responsables son roles; no hay personas ni hora real de inicio en el plan. La factibilidad depende de asignación real.",
+      "owner_role": "Coordinador de entrega",
+      "acceptance": "Registrar personas, hora y modalidad. Camino amplio: inicio no posterior a13:50UTC/100min; compacto dos operadores: no posterior a14:25UTC/65min; un operador: no posterior a14:10UTC/80min. Reservar15min finales. Si no cabe, documentación/respaldo atribuible y ensayo marcado incompleto.",
+      "fallback": "Omitir P1 y adoptar el mínimo o el respaldo documentado; no comprimir controles fingiendo capacidad adicional."
+    },
+    {
+      "id": "AR2",
+      "blocks": "Afirmar que el paquete es abrible o que se verificó el candidato presentado",
+      "finding": "El receipt existente identifica CI de6410fcb; aún se debe ligar el artefacto entregado a ese commit o al candidato elegido. Los checks de un commit no se heredan por un candidato diferente.",
+      "owner_role": "Mantenedor de release + receptor",
+      "acceptance": "Ficha con SHA completo/rama, ubicación y hash del artefacto cuando corresponda, requisitos/comandos y resultado de apertura por receptor. Si cambia código, adjuntar checks correspondientes o declarar exactamente qué no se ejecutó. Incluir fuentes/JSON existentes requeridos; no exigir raw completo.",
+      "fallback": "Candidato conocido o capturas con commit identificado; no anunciar instalación universal ni despliegue."
+    },
+    {
+      "id": "AR3",
+      "blocks": "Anunciar ensayo interactivo completo u operación offline",
+      "finding": "Rutas y CI de servidor/build están respaldados por código/evidencia; no existe en esta revisión acta de navegador del candidato.",
+      "owner_role": "Frontend/QA + presentador",
+      "acceptance": "Acta de commit, rutas, resultados, CSV y respaldo. Si falla red/mapa, identificar el fallback utilizado y las partes no ensayadas.",
+      "fallback": "Tabla/calendario o captura atribuida; no introducir infraestructura ni ejecutar ingestión."
+    },
+    {
+      "id": "AR4",
+      "blocks": "Afirmar transferencia de bytes raw completada; no bloquea presentación",
+      "finding": "El recibo identifica basename y hash del tar, pero no demuestra acceso del receptor ni ubicación compartida. El plan ya exige distinguir custodia pendiente.",
+      "owner_role": "Custodio del respaldo + receptor",
+      "acceptance": "Registrar ubicación accesible, custodio y comprobación del hash o transferencia explícitamente pendiente. Mantener956/1071 INCOMPLETE y lista115; no ejecutar inventory.py ni aceptar cuatro snapshots NRT diferentes.",
+      "fallback": "Ruta/hash/responsable y estado pendiente sin afirmar entrega material."
+    }
+  ],
+  "timing_assessment": {
+    "deadline_utc": "2026-11-15T15:30:00Z",
+    "timezone_cutoff": "12:30 America/Santiago",
+    "wide_critical_path_minutes": 100,
+    "compact_two_operators_minutes": 65,
+    "single_operator_minimum_minutes": 80,
+    "arithmetic": "Los tres caminos y sus horas máximas de inicio son consistentes. Sus tiempos son presupuestos del plan, no mediciones ni promesa de instalar dependencias desde cero. El modo compacto exige candidato preparado o fallback y no hereda el alcance amplio.",
+    "p1_rule": "P1 sólo con otra persona libre o tras P0; no invade15min de cierre."
+  },
+  "reversibility_and_scope": "Sólo preparación documental, selección de candidato, ensayo y artefactos regenerables dentro del plan. Sin merge, deploy, retarget, contactos externos, recuperación nueva, cambios científicos o reemplazo canónico autorizados por esta ratificación.",
+  "not_required_to_ratify_plan": [
+    "Existencia anticipada de HTML o índice que aún prepara el coordinador",
+    "Recuperación de115raw",
+    "Merge de la pila científica",
+    "Ensayo ya completado"
+  ],
+  "final_coordinator_checks": [
+    "Completar HTML/índice y verificar enlaces del paquete final",
+    "Distinguir plan ratificado de tareas ejecutadas",
+    "Mantener fecha del inventarioPR y actualizar estado si se afirma vigencia posterior",
+    "Registrar respuesta y ratificación real de cada consejo, sin atribuir este voto a los demás"
+  ],
+  "review_limits": [
+    "Revisión documental y de fuentes locales; sin navegador, pruebas nuevas, redescargas o cambios Git/remotos.",
+    "Estados remotos se toman del inventario y receipt fechados inspeccionados, no de una consulta remota nueva.",
+    "No evalúa utilidad municipal ni validez física."
+  ],
+  "final_ratification": {
+    "role": "adversarial_engineering_release_and_feasibility",
+    "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+    "utc": "2026-11-15T13:52:38.373378+00:00",
+    "consolidated_plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+    "conditions_of_scope": "Ratifica el orden1–6 del SHA inspeccionado. AR1–AR4 son gates para afirmar ejecución, no objeciones para aprobar este plan. HTML/índice y enlaces son checks finales del coordinador. No equivale a consenso completo, tareas terminadas, merge o deploy."
+  }
+}

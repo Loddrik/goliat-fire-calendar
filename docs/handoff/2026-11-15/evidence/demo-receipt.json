@@ -1,0 +1,64 @@
+{
+  "recorded_utc": "2026-11-15T14:00:17.772360+00:00",
+  "operator": "Automated coordinator in isolated browser; receiving human presenter not assigned",
+  "code_reference": "6410fcb491e9a318419d7b142ddab52b1e483662",
+  "branch": "docs/44-handoff-presentacion",
+  "source_diff_against_reference": {
+    "paths": [
+      "web",
+      "server.mjs",
+      "package.json",
+      "package-lock.json"
+    ],
+    "different": false
+  },
+  "build_command": "npm --prefix web run build",
+  "build_exit_code": 0,
+  "server": "http://127.0.0.1:3999",
+  "health": {
+    "ok": true,
+    "version": "local"
+  },
+  "production_checked": false,
+  "human_timed_rehearsal": false,
+  "network_available_during_demo": true,
+  "offline_mode_simulated": false,
+  "screenshots_are_local_candidate_not_production": true,
+  "routes_verified": [
+    "/explorar?cut=08111&lang=es",
+    "/explorar?cut=08111&lang=es&vista=tabla",
+    "/explorar?cut=08101&lang=es",
+    "/explorar?cut=08111&lang=es&view=observed"
+  ],
+  "downloaded_csv": {
+    "path": "evidence/demo-tome.csv",
+    "rows": 293,
+    "states": {
+      "estimated": 120,
+      "observed": 173
+    },
+    "rows_compared_to_canonical_series": true,
+    "sha256": "a2a247f8f307954187d4ce357439872e5850197d59096d16e177cbc00da2afa4"
+  },
+  "selected_build_source_sha256": {
+    "web/dist/index.html": "1d00746c31f43a51bf0ee93d445559acf7eefd8a84f3feea319df1ef5296a92c",
+    "web/public/data/index.json": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174",
+    "web/public/data/comunas/08111.json": "e6186c291a3d74e8f74cba89a01e8885bcd7d4d5e2029a1340807c35228dd627",
+    "web/public/data/comunas/08101.json": "101d8b1bb7e936dfdc1e4bab49da19092629530fa6895886428d58ca41ae6987",
+    "server.mjs": "dbac5ef870753eab43512a70bbc4f7741056e3b993641ec46ed5905c4b307f30",
+    "package-lock.json": "1a70b10ad19b521a63f2e8b5ee0dc116924ec042abda87b58aa63fcb28a6a429",
+    "web/package-lock.json": "797e842addf57ba094d54b454fdfb45d79c4135c7d96e80f42fbb3c54db58a5d"
+  },
+  "fallback_screenshots_sha256": {
+    "demo-concepcion.png": "b806abbf415fb3b6bae869afb68fec68f273b006070ec80a7b2d3ce69e2e77cf",
+    "demo-tome.png": "113d52523119e30743402280655c82d3968175ddd7eb856d3859dba3eb1b68bb",
+    "demo-tome-table.png": "08f039280365a3a440705c1cd5a668c90a9dcfc69bebf509d0f2c93fae60ab35"
+  },
+  "raw_tar": {
+    "filename": "goliat-raw-recovery-20261115-1327.tar",
+    "sha256": "32bf13a8cdaceb5daade86baf648d0a3aec9471d5ea9e77e702a432d51aef0e1",
+    "custody": "Local sibling nasa/backups; transfer not confirmed"
+  },
+  "guard_expected_exit_code": 1,
+  "no_fit_or_ingestion_or_deploy": true
+}

@@ -1,0 +1,161 @@
+{
+  "role": "adversarial_scientific_accuracy_and_evidence",
+  "reviewed_utc": "2026-11-15T13:52:12.403295+00:00",
+  "criteria_ACK": {
+    "accepted": true,
+    "accepted_before_review": true,
+    "source": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+    "sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0",
+    "method": "Ordered qualitative delivery criteria accepted; no synthetic scores or reweighting of historical experiments. All non-compensables retained."
+  },
+  "inspected_inputs": [
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+      "sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+      "sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/resumen-negocio.md",
+      "sha256": "05694cad6104fa3eddfe2a21a1692bc5597cce6364f86875b38685aa6dec0ba0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/resumen-tecnico.md",
+      "sha256": "3f73050e54b22d7a77ba0196dc8c9e63b8a51e55b7eeaf80c557f913c4230e2a"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/pr-inventory.json",
+      "sha256": "5c5aa441193d5e787f8c6d5be803bff13ce1dea246b2a72718c26e19565a830b"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
+      "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-season-total-report.md",
+      "sha256": "347c1b1a5b3d1d6af86da713fa6b403b94c879b9a7a2171d64895d3a03006cd9"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-raw-historical-core-audit.md",
+      "sha256": "c46fa3aee19da591e8594f3336df4525fb6ba3b2e72d105dc9c7972fc8cac789"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-raw-recovery-report.md",
+      "sha256": "22ce5b4133a2c59aee3947ccd2db0ab1d9820a982dc4c6685fc4b3ef7eed877b"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-18.md",
+      "sha256": "b84acc6e468eecc7e6de6fa10126ebaeae6d466e30bede6b9fa956111d2ff6e9"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-crps-independent-review.md",
+      "sha256": "77a65ce17487d7b69d9f025352f8a9db8f49591182496230135b55a15f7072cb"
+    }
+  ],
+  "review_scope": "Read-only review of handoff drafts, selected evidence and primary repository reports. Only this reviewer JSON written. No fits, downloads, new datasets, experimental replay, canonical changes, commits or deployment.",
+  "supported_claims": [
+    {
+      "claim": "M1 published remains separate from E_coherent research and F21 marginal research;14/54 eligibility remains unchanged.",
+      "evidence": [
+        "docs/reviews/2026-11-14-science-review-18.md",
+        "docs/handoff/2026-11-15/evidence/verification-snapshot.json"
+      ],
+      "finding": "Supported. Same-panel endpoints2.047245 and1.797939 support the stated approximately12.18% retrospective composite decrease; summed stage percentages, future impact and physical accuracy are expressly excluded."
+    },
+    {
+      "claim": "Season112=14selected communes x8seasons is apparent postselection; medianAPE20.34 differs fromMARE22.81; signed relative mean-11.46 differs from aggregate bias-10.60.",
+      "evidence": [
+        "docs/reviews/2026-11-15-season-total-report.md"
+      ],
+      "finding": "Supported. No2002–2011 validation, annual band, new gate or cause of2012 jump is claimed;112primary references are positive and zero-reference behavior remains explicit outside that population."
+    },
+    {
+      "claim": "Raw recovery956/1071 remains incomplete;115missing comprise4different NRT and111not consulted.",
+      "evidence": [
+        "docs/reviews/2026-11-15-raw-recovery-report.md",
+        "docs/reviews/2026-11-15-raw-historical-core-audit.md"
+      ],
+      "finding": "Supported.205source historical mask223/count9123/21466 reproduction is conditional on frozen commune map. Strict13column comparison still fails one row each way and is not repaired by cell-day agreement."
+    },
+    {
+      "claim": "24selected scientific PRs comprise3merged and21open, distinct from integration22 and publication31.",
+      "evidence": [
+        "docs/handoff/2026-11-15/evidence/pr-inventory.json"
+      ],
+      "finding": "Supported by timestamped inventory; this is neither complete repository PR inventory nor deployment evidence."
+    },
+    {
+      "claim": "Favorable marginal CRPS is not calibration, isolated spread benefit, future forecasting or joint54commune uncertainty.",
+      "evidence": [
+        "docs/reviews/2026-11-15-crps-independent-review.md"
+      ],
+      "finding": "Supported and appropriately bounded. F21 is same-month historical conditional distribution; E_coherent remains point allocation."
+    },
+    {
+      "claim": "358tests and frozen39 reader evidence concern software/frozen replay, not physical fire truth.",
+      "evidence": [
+        "docs/handoff/2026-11-15/evidence/verification-snapshot.json"
+      ],
+      "finding": "Supported with exactPR64 head6410fcb491e9a318419d7b142ddab52b1e483662 and identifiedCI. Reviewer did not rerun these checks."
+    }
+  ],
+  "blocking_objections": [],
+  "optional_objections": [
+    {
+      "id": "AS1",
+      "finding": "Technical recovery paragraph juxtaposes the documented38tie and205historical strict difference. The primary205report explicitly does not identify its differing rows, so readers must not infer the same native record caused both failures.",
+      "suggested_change": "Add one short sentence that the historical pair of rows has not been individually attributed to the38tie.",
+      "acceptance": "No assertion identifies the historical205difference as that exact record without new evidence. No analysis or dedup correction requested."
+    },
+    {
+      "id": "AS2",
+      "finding": "The business headline uses MAE and E_coherent with limited plain-language explanation.",
+      "suggested_change": "Gloss MAE as mean absolute monthly count error in cell-days; keep retrospective scope and no impact claim adjacent.",
+      "acceptance": "A presenter can explain what the12.18% measures without invoking prevented fires."
+    }
+  ],
+  "final_package_checks_separate_from_scientific_order": [
+    {
+      "id": "AS3",
+      "status": "pending_coordinator_at_review",
+      "finding": "The technical draft links evidence/technical-source-map.json and ends at an appendix marker while its author is still finalizing it. Final handoff must not leave a missing source map or empty promised appendix.",
+      "acceptance": "Coordinator verifies final technical map, appendix and HTML links and aligns current claims to the identified run. This is a packaging completion condition, not evidence that science claims reviewed here are false."
+    },
+    {
+      "id": "AS4",
+      "status": "execution_not_demonstrated_by_plan",
+      "finding": "P0 acceptance and role assignments are future actions. Current application or demo cannot be described as newly rehearsed, transferred, merged or deployed because a priority document exists.",
+      "acceptance": "Retain prospective wording unless a separately identified execution receipt exists; use documented fallback when candidate or rehearsal is unavailable."
+    }
+  ],
+  "priority_ratification": {
+    "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+    "consolidated_plan_path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+    "consolidated_plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+    "ordered_actions": [
+      "P0 defensible claims",
+      "P0 identified demo candidate and openable package",
+      "P0 bounded rehearsal with honest fallback",
+      "P1 raw custody and exact missing manifest",
+      "P1 seasonal metadata contract only",
+      "P1 deterministic dedup RFC only"
+    ],
+    "reason": "Claim integrity precedes delivery confidence; candidate identification precedes rehearsal. Optional custody/contracts cannot delay the minimum presentation. Completing115raw files, new models, annual gates and observability research remain later work. This matches the frozen criteria and available evidence.",
+    "conditions_of_scope": [
+      "Ratification concerns this exact ordered plan, not completion of actions or final six-role consensus.",
+      "P1 remains optional and cannot consume the reserved closing period.",
+      "No new scientific computation, data collection, automatic merge/deployment, promoted candidate or canonical repair.",
+      "Finalization may add packaging and copy edits; scientific claim or priority changes require renewed review."
+    ]
+  },
+  "not_claimed": [
+    "Blind or independent numerical votes",
+    "New physical validation",
+    "Full acquisition or cartographic reconstruction",
+    "Raw completeness",
+    "Independent fresh holdout",
+    "Rehearsal completion or deployment"
+  ]
+}

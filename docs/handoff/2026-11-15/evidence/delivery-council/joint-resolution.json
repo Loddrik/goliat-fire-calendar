@@ -1,0 +1,54 @@
+{
+  "resolved_utc": "2026-11-15T14:00:17.671897+00:00",
+  "criteria": "criteria-frozen.json",
+  "reviewed_priority_snapshot": "reviewed-priorities.md",
+  "reviewed_priority_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+  "status": "SIX_MEMBERS_RATIFY_PRIORITY_ORDER_NOT_EXECUTION",
+  "votes": [
+    {
+      "path": "scientific-ratification.json",
+      "sha256": "24f67a2e442575fa628dc09a4d9639ce5cb4d11f765afd779811a59e06635c62"
+    },
+    {
+      "path": "business-ratification.json",
+      "sha256": "87503b0384fa34eecc727613bffc3aa5ca2fa25c2605715e3fdb3a7f45e71ad7"
+    },
+    {
+      "path": "engineering-ratification.json",
+      "sha256": "dc1fcdcf0baf14c3b7443e05ecf144487fa70d063e414b46cb80cfeddb98163c"
+    },
+    {
+      "path": "adversary-science.json",
+      "sha256": "9ee9c93a8b282342722ef88c3021fb0096ed76740dede7ee0efb433699bb3ab1"
+    },
+    {
+      "path": "adversary-product.json",
+      "sha256": "ddf32944eeda24cb021d77be571db02af496ae3ddd9264643fe2337a6e4fffe5"
+    },
+    {
+      "path": "adversary-release.json",
+      "sha256": "db7c041a045832381e4811cdd8fc8b04d7cd9c8eba84b1c903cf42306a5240c9"
+    }
+  ],
+  "ordered_actions": [
+    "P0: afirmaciones y respuestas con fuentes",
+    "P0: candidato de demo y paquete abrible",
+    "P0: ensayo y respaldo",
+    "P1: custodia raw",
+    "P1: contrato de metadatos estacionales",
+    "P1: RFC deduplicación"
+  ],
+  "noncompensable_limits": [
+    "No model promotion or unsupported scientific/business claims",
+    "No automatic merge or deploy",
+    "Raw recovery is not full ingestion/cartography reproduction"
+  ],
+  "accepted_counterpart_conditions": [
+    "Name operator and record start/version",
+    "Identify built demo and matching checks",
+    "Record browser/CSV steps and fallback",
+    "State raw custody remains local and transfer pending"
+  ],
+  "execution_is_separate": true,
+  "coordinator_changes_after_review": "Only ratification/execution status and receipt links; priority order and acceptance scope preserved."
+}
