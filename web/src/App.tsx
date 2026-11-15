@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect, useMemo, useState } from "react";
-import type { ComunaDoc, DerivedDoc, IndexDoc, RegionDoc } from "./types";
+import type { ComunaDoc, DerivedDoc, IndexDoc, RegionDoc, RegionMonthsDoc } from "./types";
 import { dict, type Lang } from "./i18n";
 import { Calendar } from "./Calendar";
 import { MapBoundary } from "./MapBoundary";
@@ -32,6 +32,9 @@ export default function App() {
   const [doc, setDoc] = useState<ComunaDoc | null>(null);
   const [derived, setDerived] = useState<DerivedDoc | null>(null);
   const [season, setSeason] = useState<number | null>(() => { const s = Number(params().get("t")); return s >= 2012 ? s : null; });
+  // Mes del mapa (1–12, todas las temporadas completas). Un solo filtro activo: mes o temporada, nunca los dos (issue #47).
+  const [month, setMonth] = useState<number | null>(() => { const m = Number(params().get("month")); return params().get("t") ? null : m >= 1 && m <= 12 ? m : null; });
+  const [regionMonths, setRegionMonths] = useState<RegionMonthsDoc | null>(null);
   const [q, setQ] = useState("");
   const [searching, setSearching] = useState(false);
   const [tableOpen, setTableOpen] = useState(() => params().get("vista") === "tabla");
@@ -46,6 +49,16 @@ export default function App() {
     getJson<RegionDoc>("/data/derived/region.json", c.signal).then(setRegion).catch(() => { /* sin mapa: la ficha sigue funcionando */ });
     return () => c.abort();
   }, []);
+  // El archivo por mes (~1,5 MB) se baja solo la primera vez que alguien elige un mes.
+  const wantMonths = month != null;
+  useEffect(() => {
+    if (!wantMonths || regionMonths) return;
+    const c = new AbortController();
+    getJson<RegionMonthsDoc>("/data/derived/region_months.json", c.signal).then(setRegionMonths).catch(() => { /* el mapa sigue por temporada */ });
+    return () => c.abort();
+  }, [wantMonths, regionMonths]);
+  const pickSeason = (s: number | null) => { setSeason(s); setMonth(null); };
+  const pickMonth = (m: number | null) => { setMonth(m); setSeason(null); };
   useEffect(() => {
     const c = new AbortController();
     setDoc(null); setDerived(null); setError(false);
@@ -60,10 +73,10 @@ export default function App() {
   useEffect(() => {
     const u = new URL(location.href);
     const set = (k: string, v: string | null) => (v ? u.searchParams.set(k, v) : u.searchParams.delete(k));
-    set("cut", cut); set("t", season ? String(season) : null); set("vista", tableOpen ? "tabla" : null);
+    set("cut", cut); set("t", season ? String(season) : null); set("month", month ? String(month) : null); set("vista", tableOpen ? "tabla" : null);
     set("view", view === "observed" ? "observed" : null); set("lang", lang);
     history.replaceState(null, "", u);
-  }, [cut, season, tableOpen, view, lang]);
+  }, [cut, season, month, tableOpen, view, lang]);
   useEffect(() => {
     document.documentElement.lang = lang;
     const name = doc && doc.cut === cut ? `${doc.comuna} · ` : "";
@@ -150,7 +163,7 @@ export default function App() {
             <div className="explore-map no-print">
               <MapBoundary fallback={<p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>}>
                 <Suspense fallback={<div className="xmap xmap-loading" aria-hidden="true" />}>
-                  <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} wide={wide} />
+                  <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={pickSeason} month={month} setMonth={pickMonth} months={regionMonths} lang={lang} wide={wide} />
                 </Suspense>
               </MapBoundary>
             </div>

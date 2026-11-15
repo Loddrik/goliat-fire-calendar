@@ -4,10 +4,10 @@ import "maplibre-gl/dist/maplibre-gl.css";
 // MapLibre ≥ 6 carga su worker como módulo aparte; Vite no lo emite solo, así que se le pasa la URL del archivo copiado.
 import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 maplibregl.setWorkerUrl(maplibreWorkerUrl);
-import type { Lang } from "./i18n";
-import type { RegionDoc } from "./types";
-import { seasonLabel } from "./types";
-import { BLUES, MAP_BREAKS, MAP_LABELS, MAP_UNAVAILABLE, UI, dmy } from "./ui";
+import { dict, type Lang } from "./i18n";
+import type { RegionDoc, RegionMonthsDoc } from "./types";
+import { MONTHS_SEASON, seasonLabel } from "./types";
+import { BLUES, MAP_BREAKS, MAP_LABELS, MAP_UNAVAILABLE, UI, dmy, monthName } from "./ui";
 
 const STYLE = "https://tiles.openfreemap.org/styles/positron";
 const CELL = 0.01;
@@ -45,9 +45,10 @@ function bbox(f: ComunaFeature): [[number, number], [number, number]] {
 const colorExpr = (prop: string): maplibregl.ExpressionSpecification =>
   ["step", ["get", prop], BLUES[0], MAP_BREAKS[1], BLUES[1], MAP_BREAKS[2], BLUES[2], MAP_BREAKS[3], BLUES[3], MAP_BREAKS[4], BLUES[4]];
 
-export function ExploreMap({ region, selected, onPick, season, setSeason, lang, wide = false }: {
+export function ExploreMap({ region, selected, onPick, season, setSeason, month, setMonth, months, lang, wide = false }: {
   region: RegionDoc | null; selected: string | null; onPick: (cut: string) => void;
-  season: number | null; setSeason: (s: number | null) => void; lang: Lang; wide?: boolean;
+  season: number | null; setSeason: (s: number | null) => void;
+  month: number | null; setMonth: (m: number | null) => void; months: RegionMonthsDoc | null; lang: Lang; wide?: boolean;
 }) {
   const T = UI[lang];
   const el = useRef<HTMLDivElement>(null);
@@ -59,14 +60,21 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
   const seasons = region?.seasons ?? [];
   const current = region?.current_season;
   const cutoff = region ? dmy(region.cutoff) : "";
-  const prop = season == null ? "n" : `s${seasons.indexOf(season)}`;
+  // Mes elegido: temporadas completas con detección en ese mes (de region_months.json). Mientras baja el archivo se sigue viendo «Todas».
+  const byMonth = month != null && months != null;
+  const prop = byMonth ? `ms${month - 1}` : season == null ? "n" : `s${seasons.indexOf(season)}`;
 
   // Celdas publicadas como puntos (lejos) y cuadrados de 0,01° (cerca). Solo se reordenan; no se calcula nada.
+  // Los meses se unen por x, y; una celda sin fila en region_months.json no tuvo detección en temporadas completas.
   const data = useMemo(() => {
     if (!region) return null;
+    const mrow = new Map<string, RegionMonthsDoc["cells"][number]>();
+    for (const c of months?.cells ?? []) mrow.set(`${c.x},${c.y}`, c);
     const props = (c: RegionDoc["cells"][number]) => {
       const p: Record<string, number | string> = { cut: c.cut, n: c.n, d: c.d };
       c.s.forEach((v, i) => (p[`s${i}`] = v));
+      const mc = mrow.get(`${c.x},${c.y}`);
+      for (let i = 0; i < 12; i++) { p[`ms${i}`] = mc?.ms[i] ?? 0; p[`md${i}`] = mc?.md[i] ?? 0; }
       return p;
     };
     const pts: Fc = { type: "FeatureCollection", features: region.cells.map((c) => ({ type: "Feature", properties: props(c), geometry: { type: "Point", coordinates: [(c.x + 0.5) * CELL, (c.y + 0.5) * CELL] } })) };
@@ -75,9 +83,13 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
       return { type: "Feature", properties: props(c), geometry: { type: "Polygon", coordinates: [[[x0, y0], [x0 + CELL, y0], [x0 + CELL, y0 + CELL], [x0, y0 + CELL], [x0, y0]]] } };
     }) };
     return { pts, sq };
-  }, [region]);
+  }, [region, months]);
+  const dataRef = useRef(data);
+  dataRef.current = data;
+  const hasData = data != null;
 
   useEffect(() => {
+    const data = dataRef.current;
     if (failed || !el.current || map.current || !data) return;
     let m: maplibregl.Map;
     try {
@@ -122,7 +134,15 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     map.current = m;
     return () => { m.remove(); map.current = null; setReady(false); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, failed]);
+  }, [hasData, failed]);
+
+  // Al llegar los meses se reemplazan los datos de las fuentes sin rehacer el mapa.
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !ready || !data) return;
+    (m.getSource("cells-pt") as maplibregl.GeoJSONSource | undefined)?.setData(data.pts as Parameters<maplibregl.GeoJSONSource["setData"]>[0]);
+    (m.getSource("cells-sq") as maplibregl.GeoJSONSource | undefined)?.setData(data.sq as Parameters<maplibregl.GeoJSONSource["setData"]>[0]);
+  }, [data, ready]);
 
   // El aviso de "dos dedos" se crea con el idioma inicial; si se cambia de idioma, se actualiza el texto.
   useEffect(() => {
@@ -132,14 +152,15 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
 
   // Referencias vivas para los manejadores registrados una sola vez.
   const onPickRef = useRef(onPick);
-  const popupCtx = useRef({ season, seasons, lang });
-  useEffect(() => { onPickRef.current = onPick; popupCtx.current = { season, seasons, lang }; });
+  const popupCtx = useRef({ season, seasons, lang, month: byMonth ? month : null, monthSeasons: months?.seasons.length ?? 0 });
+  useEffect(() => { onPickRef.current = onPick; popupCtx.current = { season, seasons, lang, month: byMonth ? month : null, monthSeasons: months?.seasons.length ?? 0 }; });
 
   function showPopup(m: maplibregl.Map, at: maplibregl.LngLat, p: Record<string, number>) {
-    const { season: s, seasons: ss, lang: lg } = popupCtx.current;
+    const { season: s, seasons: ss, lang: lg, month: mo, monthSeasons } = popupCtx.current;
     const t = UI[lg];
     const total = ss.length;
-    const lines = s == null ? [t.popupAll(p.n, total, p.d)] : t.popupSeason(seasonLabel(s), p[`s${ss.indexOf(s)}`] ?? 0, p.n, total);
+    const lines = mo != null ? [t.popupMonth(monthName(mo, lg), p[`ms${mo - 1}`] ?? 0, monthSeasons, p[`md${mo - 1}`] ?? 0)]
+      : s == null ? [t.popupAll(p.n, total, p.d)] : t.popupSeason(seasonLabel(s), p[`s${ss.indexOf(s)}`] ?? 0, p.n, total);
     popup.current?.remove();
     const div = document.createElement("div");
     const b = document.createElement("b"); b.textContent = t.sector; div.appendChild(b);
@@ -148,6 +169,7 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
   }
 
   // Temporada elegida: se muestran solo las celdas con detección en esa temporada, coloreadas por días.
+  // Mes elegido: solo las celdas con detección en ese mes, coloreadas por temporadas con detección.
   useEffect(() => {
     const m = map.current;
     if (!m || !ready) return;
@@ -171,7 +193,7 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     const left = window.innerWidth > 860 && panel && el.current ? Math.max(20, Math.min(el.current.clientWidth - 260, panel.getBoundingClientRect().right - el.current.getBoundingClientRect().left + 24)) : 20;
     // En celular el aviso, las temporadas y la leyenda van fuera del mapa (debajo), así que el margen es menor.
     const desk = window.innerWidth > 860;
-    if (f) m.fitBounds(bbox(f), { padding: desk ? { top: 50, bottom: 120, left, right: 60 } : { top: 24, bottom: 24, left: 20, right: 48 }, duration: 700, maxZoom: 11 });
+    if (f) m.fitBounds(bbox(f), { padding: desk ? { top: 50, bottom: 160, left, right: 60 } : { top: 24, bottom: 24, left: 20, right: 48 }, duration: 700, maxZoom: 11 });
   }, [selected, ready, wide]);
   useEffect(() => {
     const m = map.current;
@@ -181,26 +203,48 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     m.setPaintProperty("cells-dot", "circle-opacity", selected ? ["case", ["==", ["get", "cut"], selected], 0.9, 0.3] : 0.85);
   }, [selected, ready, region]);
 
-  const label = season == null ? T.labelAll(seasons.length, cutoff)
+  const ms = months?.seasons ?? [];
+  // En celular la fila de temporadas se desliza: la temporada elegida (por ejemplo, desde un enlace) queda a la vista.
+  const seasonRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const row = seasonRow.current, b = row?.querySelector<HTMLElement>("button.on");
+    if (row && b) row.scrollLeft += b.getBoundingClientRect().left - row.getBoundingClientRect().left - (row.clientWidth - b.offsetWidth) / 2;
+  }, [season, seasons.length]);
+
+  // Temporada s = julio s a junio s+1: los meses jul–dic caen en el año s y los de ene–jun en s+1.
+  const yearOf = (s: number) => (month != null && month >= 7 ? s : s + 1);
+  const label = month != null ? (byMonth ? T.labelMonth(monthName(month, lang), ms.length, yearOf(ms[0]), yearOf(ms[ms.length - 1])) : T.monthLoading)
+    : season == null ? T.labelAll(seasons.length, cutoff)
     : season === current ? T.labelCurrent(seasonLabel(season), cutoff) : T.labelSeason(seasonLabel(season), season);
+  const legend = byMonth ? T.legendMonth(monthName(month, lang), ms.length)
+    : season == null ? T.legendAll(seasons.length) : T.legendSeason(seasonLabel(season));
 
   return (
     <div className="xmap">
       <p className="map-notice" role="note">ⓘ {T.mapNotice}</p>
       {failed ? <p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p> : <div ref={el} className="xmap-canvas" aria-label={label} />}
       <div className="season-bar">
-        <div className="chips" role="group" aria-label={lang === "es" ? "Temporada" : "Season"}>
-          <button className={season == null ? "on" : ""} aria-pressed={season == null} onClick={() => setSeason(null)}>{T.all} 2012→</button>
+        <div ref={seasonRow} className="chips" role="group" aria-label={T.seasonGroup}>
+          <span className="chips-title" aria-hidden="true">{T.seasonGroup}</span>
+          <button className={season == null && month == null ? "on" : ""} aria-pressed={season == null && month == null} onClick={() => setSeason(null)}>{T.all} 2012→</button>
           {seasons.map((s) => (
             <button key={s} className={season === s ? "on" : ""} aria-pressed={season === s} onClick={() => setSeason(s)}>
               {seasonLabel(s).slice(2)}{s === current ? "•" : ""}
             </button>
           ))}
         </div>
-        <p className="chips-label">{label}</p>
+        <div className="chips chips-months" role="group" aria-label={T.monthGroup}>
+          <span className="chips-title" aria-hidden="true">{T.monthGroup}</span>
+          {MONTHS_SEASON.map((m) => (
+            <button key={m} className={month === m ? "on" : ""} aria-pressed={month === m} aria-label={monthName(m, lang)}
+              onClick={() => setMonth(month === m ? null : m)}>{dict[lang].months[m - 1]}</button>
+          ))}
+        </div>
+        <p className="chips-label" aria-live="polite">{label}</p>
       </div>
       <div className="map-legend">
-        <b>{season == null ? T.legendAll(seasons.length) : T.legendSeason(seasonLabel(season))}</b>
+        <b>{legend}</b>
+        {byMonth && <p className="legend-note">{T.monthNote}</p>}
         <div className="sw-row">
           <span><i className="sw-none" />{T.none}</span>
           {BLUES.map((c, i) => <span key={c}><i style={{ background: c }} />{i < MAP_LABELS.length ? MAP_LABELS[i] : `8 ${T.more}`}</span>)}
