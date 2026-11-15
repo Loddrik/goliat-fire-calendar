@@ -1,0 +1,36 @@
+{
+  "issue": {
+    "url": "https://github.com/Loddrik/goliat-fire-calendar/issues/48",
+    "title": "Reconstrucción: el total por temporada no está validado y en algunas comunas se ve un salto en 2012-13",
+    "issue_number": 48,
+    "body": "**Qué pasó.** En la landing (#40) probamos una tira «temporada por temporada, desde 2002» con `season_totals` de `derived/<cut>.json` (suma de los 12 meses publicados; achurado = estimado M1, sólido = observado). La revisión científica de producto la paró: en varias de las 14 comunas habilitadas se ve un **salto en 2012-13** que puede venir del método y no de la actividad, justo lo que el desafío pide que no se vea.\n\nRazón observado (prom. 2012–2019) / estimado (prom. 2002–2011), de los JSON publicados:\n\n| Comuna | Razón |\n|---|---|\n| Tirúa | 2,89 |\n| Ñiquén | 2,50 |\n| Cañete | 2,12 |\n| San Carlos | 1,90 |\n| Coihueco | 1,53 |\n| Coelemu | 0,49 |\n\n**Indicio de que es del método** (cálculo del revisor, no publicado): con `data/processed/eval_loso.csv` (M1; sesgo × meses ÷ total observado), en las 14 habilitadas el total de una temporada se desvía con una mediana de |error| de ~20 % y un **sesgo medio de −12 %** (se queda corto). En algunas comunas queda bajo en todas las temporadas: Tirúa (−7 a −57 %), San Carlos (−2 a −36 %) y Los Ángeles (−5 a −34 %). No se puede separar del todo de un cambio real de actividad entre décadas.\n\nCuadra con lo que ya tienes abierto: #33 («subestimaba más los totales», «peor sesgo en las 14»), #46 (transporte no uniforme, «retrocesos importantes en las 14 publicadas») y la revisión 4 (subestimación en meses intensos). En cambio, `frozen_temporal_audit/season_aggregates.csv` da un sesgo M1 cercano a cero en 2020–2025 sobre las 54 comunas: distinto período y distintas comunas.\n\n**Qué hicimos en producto.** La landing muestra solo temporadas observadas (2012→). Lo de 2002–2011 queda en Explorar, mes a mes, con su error típico (eso sí está validado). No cambiamos ningún número.\n\n**Lo que pedimos (si alcanza antes del corte del domingo a las 11:00; si no, después):**\n1. Error y sesgo de LOSO **a escala de temporada** (total jul–jun) para las 14 comunas publicadas, en `params` o por comuna en `comunas/<cut>.json` (p. ej. `gates.season_mae_rel`, `gates.season_bias_rel`).\n2. Una línea en `docs/method.md` §6 (divulgaciones): el total por temporada de la reconstrucción no se validó por separado, o con qué error se validó.\n3. Tu lectura: ¿el salto de Tirúa/Ñiquén/Cañete es sesgo de M1 o cambio real? Si es sesgo, ¿esas comunas deberían seguir habilitadas?\n\nCon (1) publicado podemos volver a mostrar el tramo 2002→ en la landing con su cifra de error.\n",
+    "state": "open",
+    "user": {
+      "login": "Loddrik",
+      "name": "Loddrik",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/64500782?v=4",
+      "id": 64500782
+    },
+    "assignees": null,
+    "labels": [
+      {
+        "name": "ciencia",
+        "color": "1D76DB",
+        "description": "Algoritmo, validación, método (Daniel)"
+      }
+    ],
+    "milestone": null,
+    "state_reason": null,
+    "comments": 0,
+    "created_at": "2026-11-15T04:10:18Z",
+    "updated_at": "2026-11-15T04:10:18Z",
+    "closed_at": null,
+    "display_url": "https://github.com/Loddrik/goliat-fire-calendar/issues/48",
+    "display_title": "Reconstrucción: el total por temporada no está validado y en algunas comunas se ve un salto en 2012-13"
+  },
+  "url": "https://github.com/Loddrik/goliat-fire-calendar/issues/48",
+  "title": "Reconstrucción: el total por temporada no está validado y en algunas comunas se ve un salto en 2012-13",
+  "display_url": "https://github.com/Loddrik/goliat-fire-calendar/issues/48",
+  "display_title": "Reconstrucción: el total por temporada no está validado y en algunas comunas se ve un salto en 2012-13"
+}
