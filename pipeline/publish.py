@@ -82,7 +82,7 @@ rec = con.execute(f"""
 select c.cut, c.cell_x, c.cell_y, count(distinct season) n_seasons, count(*) n_days, min(season) first_season, max(season) last_season
 from celldays c where sat = {PLATFORM_RULE} and season >= 2012
   and not exists (select 1 from static_mask s where s.cell_x=c.cell_x and s.cell_y=c.cell_y)
-group by 1,2,3""").df()
+group by 1,2,3 order by 1,2,3""").df()
 
 index = []
 for _, cm in comunas.iterrows():

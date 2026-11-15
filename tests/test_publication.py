@@ -2,6 +2,9 @@ import datetime as dt
 import json
 import math
 import sys
+import shutil
+import subprocess
+import tempfile
 import unittest
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -61,6 +64,41 @@ class ContractTests(unittest.TestCase):
             values.sort()
             self.assertEqual(sc['median'], values[min(len(values) - 1, int(.5 * len(values)))])
             self.assertEqual(commune['median'], sc['median'])
+
+
+    def test_republishing_reordered_cell_days_keeps_all_commune_values_and_order(self):
+        import pandas as pd
+        source = ROOT / 'data/processed'
+        published = ROOT / 'web/public/data/comunas'
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = Path(directory)
+            pipeline = fixture / 'pipeline'; pipeline.mkdir()
+            processed = fixture / 'data/processed'; processed.mkdir(parents=True)
+            for name in ['publish.py', 'publication_contract.py']:
+                shutil.copyfile(ROOT / 'pipeline' / name, pipeline / name)
+            for name in ['params.json', 'gates.csv', 'comunas_biobio_nuble.geojson']:
+                shutil.copyfile(source / name, processed / name)
+            for name in ['celldays_comuna_month_masked.parquet', 'celldays_comuna_month.parquet',
+                         'cells_comuna.parquet', 'static_mask.parquet', 'detections.parquet']:
+                (processed / name).symlink_to(source / name)
+            cells = pd.read_parquet(source / 'celldays.parquet')
+            first = None
+            for seed in [6114, 6115]:
+                cells.sample(frac=1, random_state=seed).to_parquet(processed / 'celldays.parquet', index=False)
+                result = subprocess.run([sys.executable, str(pipeline / 'publish.py')], cwd=fixture,
+                                        capture_output=True, text=True)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                current = {}
+                for original in sorted(published.glob('*.json')):
+                    old = json.loads(original.read_text())
+                    expected = dict(old)
+                    expected['recurrence'] = sorted(old['recurrence'], key=lambda row: (row['x'], row['y']))
+                    actual = json.loads((fixture / 'web/public/data/comunas' / original.name).read_text())
+                    self.assertEqual(actual, expected, original.name)
+                    current[original.name] = actual
+                self.assertEqual(len(current), 54)
+                if first is not None: self.assertEqual(current, first)
+                first = current
 
 
 if __name__ == '__main__':
