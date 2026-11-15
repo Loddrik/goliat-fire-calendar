@@ -1,0 +1,14 @@
+from pathlib import Path
+import hashlib,json,sys,datetime
+R=Path('/Users/dquinteros/nasa/goliat-fire-calendar');O=R/'docs/reviews/evidence/crps-independent-review/synthetic-producer-comparison';F=R/'docs/reviews/evidence/crps-independent-review/synthetic-preflight/fixtures.json';H=R/'pipeline/crps_score.py'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def dump(p,v):p.write_text(json.dumps(v,indent=2)+'\n')
+assert not O.exists();O.mkdir(parents=True)
+(O/'comparison-code.py.txt').write_bytes(Path(__file__).read_bytes());dump(O/'freeze.json',{'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'code_sha256':sha(Path(__file__)),'producer_helper_sha256':sha(H),'independent_fixture_sha256':sha(F),'actual_Y_reads':0,'fits':0,'solvers':0})
+sys.path.insert(0,str(R/'pipeline'));from crps_score import crps
+rows=[]
+for row in json.loads(F.read_text())['rows']:
+ result=crps(row['atoms'],row['weights'],row['y']);error=abs(result['raw_score']-row['expected_float']);assert error<=row['tolerance']
+ rows.append({'fixture':row['name'],'expected':row['expected_float'],'producer_raw_score':result['raw_score'],'independent_integral':row['independent_float_integral'],'absolute_error':error,'tau':row['tolerance'],'passed':True})
+dump(O/'summary.json',{'completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'all_14_synthetic_oracle_comparisons_passed':True,'real_response_reads':0,'fits':0,'solvers':0,'rows':rows,'producer_helper_sha256':sha(H),'independent_fixture_sha256':sha(F)})
+dump(O/'manifest.json',{'files':{p.name:sha(p) for p in O.iterdir() if p.is_file()}});print(sha(O/'summary.json'))

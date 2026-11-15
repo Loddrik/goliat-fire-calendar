@@ -1,0 +1,40 @@
+{
+  "all_six_ratified_operational_sequence": true,
+  "unanimity_of_priorities": false,
+  "plan_sha256": "af4031ace22074438e830013e21a164b72227f262e7b22c394196f1e36d747a1",
+  "protocol39_sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38",
+  "sequence": "A+D only; B ineligibleN/A; C deferred, no acquisition, conditional substitute needs separate root decision preservingD",
+  "ratifications": {
+    "statistics": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0"
+    },
+    "observation": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823"
+    },
+    "loco-vote": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a"
+    },
+    "identification-adversary": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "857b1ca985b0ddbfd30c58737bd807ac4fb7bd5e955f6b96be09b6530f787fb1"
+    },
+    "measurement-adversary": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "4727768b35eec04d5790f29827fac68f6c1fa458bdebc90a0ee2a5d385129630"
+    },
+    "feasibility-adversary": {
+      "accepted_sequence": true,
+      "vote_file_sha256": "a3afcf053046e586f899cff66e1f26baae6c7dbcb1baa62378b424aec8471dca"
+    }
+  },
+  "cap_utc": {
+    "A_start": "2026-11-15T08:43:00Z",
+    "identity_checkpoint": "2026-11-15T09:03:00Z",
+    "A_end": "2026-11-15T10:13:00Z",
+    "D_reserved": "10:13–11:13UTC",
+    "final_contingency": "11:13–11:30UTC"
+  }
+}

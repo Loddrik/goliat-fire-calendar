@@ -1,0 +1,78 @@
+{
+  "geometry_stage_sha256": "19575d20eda642386194c4628f78aff3e81f208c5a5444ab00ac3b43ddff715b",
+  "code_sha256": "058a60986c28efe3b96fb10dbb2fb872e87b2f460e477c65077f784b515ff2d5",
+  "cases": {
+    "2019": {
+      "MYD14": {
+        "input_sha256": {
+          "MYD14": "994f1a88fc5a2b5addf8447dc7d636a10e0f3bb6283f2090a601ad43243c9c30",
+          "MYD03": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c"
+        },
+        "shape": [
+          2030,
+          1354
+        ],
+        "labels": 4672,
+        "original_positive_records_granule": 60,
+        "global_quality_flag": "Suspect",
+        "global_explanation": "not being investigated",
+        "scientific_eligibility": "pending_global_quality_and_exposure",
+        "labels_sha256": "c35df8d9febc4b3523c024960e01f711745b66cf3d654e04fad4ba2ac516fe31",
+        "positives_sha256": "efed188ac13441b69f3907301877f52851181ba299d6eec7543ad58d0b008284"
+      },
+      "VNP14IMG": {
+        "input_sha256": {
+          "VNP14IMG": "bcc1e3e30af850542f8ed0ce31e7aae4a6d46ee3d4c68e1898142f60d3f45bef",
+          "VNP03IMG": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7"
+        },
+        "shape": [
+          6464,
+          6400
+        ],
+        "labels": 40707,
+        "original_positive_records_granule": 132,
+        "global_quality_flag": null,
+        "global_explanation": null,
+        "scientific_eligibility": "pending_global_quality_and_exposure",
+        "labels_sha256": "4f6af9beedd2f711d8c2527ac80f688f12b73cc28864686a39bf99a05b1985a6",
+        "positives_sha256": "64a9feb06b342f62568265ee9b2f1a3345474ebe792ff206721e89c4fd436472"
+      }
+    },
+    "2023": {
+      "MYD14": {
+        "input_sha256": {
+          "MYD14": "b0192b581eb5320ebb3d8bc618d7828c917c66db280e79cbacf4a3c3839d8ebe",
+          "MYD03": "dc25dc418fb7a8a7eeafda8a4c9d91f1fcd4e74036ba04bcad6bb7451b394034"
+        },
+        "shape": [
+          2040,
+          1354
+        ],
+        "labels": 2674,
+        "original_positive_records_granule": 177,
+        "global_quality_flag": "Suspect",
+        "global_explanation": "not being investigated",
+        "scientific_eligibility": "pending_global_quality_and_exposure",
+        "labels_sha256": "be24e5746fe9151a2affaff1ba0a608894ef16e13a5fabadfa609d674de2a389",
+        "positives_sha256": "83e8071cb4595839a04aa6f048f4afa540af256d3a142186630c30dcff6bf571"
+      },
+      "VNP14IMG": {
+        "input_sha256": {
+          "VNP14IMG": "d1b61d212995b5052c3b437ec955c46b1504e6a8cf863159e8c22209e9ec5a8e",
+          "VNP03IMG": "cf39c61441093d62420283fd1182eef28b4e5598cd9775a0e4867c1537cf959d"
+        },
+        "shape": [
+          6464,
+          6400
+        ],
+        "labels": 37398,
+        "original_positive_records_granule": 908,
+        "global_quality_flag": null,
+        "global_explanation": null,
+        "scientific_eligibility": "pending_global_quality_and_exposure",
+        "labels_sha256": "a3a522030fcd33d351e262982e969b81beabb6043bde8b27ba2bdc8437247045",
+        "positives_sha256": "364059004eaf3f5455085466167b2a011edc098a8ab12bcfe4b62f0ceb89ba51"
+      }
+    }
+  }
+}

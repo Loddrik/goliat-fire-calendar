@@ -1,0 +1,23 @@
+{
+  "council": "multifocal-delivery",
+  "role": "engineering-access-and-closure",
+  "phase": "criteria-acknowledgement-only",
+  "decision": "ACK_with_non_compensable_conditions",
+  "deadline_utc": "2026-11-15T15:30:00Z",
+  "criteria": [
+    {"id": "scientific_support", "definition": "La entrega conserva el respaldo científico y evita afirmaciones falsas de validación, disponibilidad, merge o despliegue."},
+    {"id": "observable_delivery_value", "definition": "El equipo y el jurado pueden observar el valor de la acción en una demo o un artefacto concreto."},
+    {"id": "bounded_feasibility", "definition": "El alcance cabe antes de las 12:30 Santiago incluyendo revisión, sin depender de una investigación nueva."},
+    {"id": "dependency_unlocking", "definition": "La acción desbloquea una entrega necesaria; distingue trabajo independiente de una cadena de dependencias."},
+    {"id": "verifiable_acceptance", "definition": "Hay responsable por rol, insumo identificado, DONE comprobable y reversión o salida parcial explícita."}
+  ],
+  "non_compensable_conditions": [
+    "Ninguna prioridad promueve un modelo, gate, dato o claim científico sin evidencia revisada y autorización de publicación correspondiente.",
+    "Toda acción corta declara owner por rol, entradas congeladas, criterio DONE y STOP o alternativa parcial.",
+    "Resultados desconocidos no se convierten en cero; PR abierto y CI verde no equivalen a merge o despliegue.",
+    "El backlog de investigación no consume la ventana de entrega ni se presenta como ejecutable hoy."
+  ],
+  "weights_or_order": "Pendiente de congelamiento común; no se trasladan automáticamente los pesos del consejo científico anterior.",
+  "ranking_or_scores_created": false,
+  "independent_adversarial_ratification": "pending"
+}

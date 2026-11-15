@@ -1,0 +1,36 @@
+{
+  "status": "pass_no_blockers_for_documentary_conditional_scope",
+  "completed_utc": "2026-11-15T09:41:54.720579+00:00",
+  "deadline_utc": "2026-11-15T10:00:00Z",
+  "producer_report_sha256": "90709289859a6e05667371c541df77d44bef05b52d4677ac6dbc895408302c52",
+  "producer_manifest_sha256": "e4c63869e5306cc0f225efd316ac36e3c4b7a22a8ffa69f7473edf8fb9b92755",
+  "producer_metadata_files_verified": 13,
+  "producer_metadata_bytes_verified": 45351,
+  "catalog_objects_independently_verified": 10,
+  "catalogs_independently_fetched": 2,
+  "producer_request_log_scope_checked": true,
+  "document_versions_independently_checked": [
+    "ATBDv2.6 October2013",
+    "ATBDv2.7 October2020",
+    "PUGv2.4 July2022",
+    "PUGv3.0 September2025",
+    "GOES16 ReadMev2 December2019"
+  ],
+  "independence_note": "Independent HTTP/contents of D4,D6,D7 match producer; D9 first retrieved by reviewer and shared as document cache. Catalogs independently fetched and parsed. No claim of blinding.",
+  "scientific_objects_requested": 0,
+  "scientific_bytes_acquired": 0,
+  "credentials_used": false,
+  "future_science_acquisition_authorized": false,
+  "actual_scientific_variable_or_header_read": false,
+  "actual_case_decoder_verified": false,
+  "actual_AOI_pixel_exposure_or_quality_verified": false,
+  "G1_physical_certified": false,
+  "documentary_conclusion": "Conditional feasibility for potential coarse temporal context; historical case states/versions remain unverified, no established fine375m/minute adjudication.",
+  "key_limits": [
+    "No coarse-negative refutation375m or independent groundtruth from positive.",
+    "Temporal filtered categories history-dependent; ReadMe same-pixel differs fromATBD neighborhood; deployment unknown.",
+    "Nominal2km-at-nadir/fixed-grid and file scan intervals do not verify AOI optics/PSF/pixel exposure.",
+    "PublicLIST does not prove GetObject or actual attributes/accessconditions.",
+    "Negative/unknown remain explicit; none of35/37/39/30B are reinterpreted."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "cap": {
+    "checkpoint": "2026-11-15T08:03:23+00:00",
+    "end": "2026-11-15T08:33:23+00:00",
+    "start": "2026-11-15T07:48:23+00:00"
+  },
+  "code_sha256": "12b4fd53f57a9aeb149b5d959d755d1de6616b336b9b5fcb4e2b082ab6ef3993",
+  "columns": {
+    "celldays": [
+      "sat",
+      "cut",
+      "cell_x",
+      "cell_y",
+      "acq_date",
+      "season",
+      "m"
+    ],
+    "prediction_control": [
+      "regime",
+      "cut",
+      "season",
+      "m",
+      "aqua"
+    ]
+  },
+  "features_calculated": false,
+  "frozen_utc": "2026-11-15T07:56:59.075743+00:00",
+  "inputs_sha256": {
+    "data/processed/celldays.parquet": "8f0c93119162b11db5c6cd46aa9a6cf6391eba0baa250d1dbe7196bd1983318f",
+    "data/processed/cold_region_audit/candidate_mask.csv": "7758c87910d7d6ab010841e5fb5f2164c1a64fb5605d2a268c2926b66d3a8a93",
+    "data/processed/cold_region_audit/manifest.json": "beeabf68d60df0731092c59a0ad1ab611311cbe8d2c44ebf90659e80047d4ded",
+    "data/processed/cold_region_audit/predictions.parquet": "cfa801038afa21f777edad2b78f1edf1b801fcccad7aed846914ffbe189f60db",
+    "docs/reviews/2026-11-14-science-protocol-21.md": "4259541d1e9c0a498b34e60f12ce7b7cca75a56728a91304294396af9c62d977",
+    "docs/reviews/2026-11-15-daily-adjacency-design.md": "56c902ab443d391047838b87de6795c206788b8ce5bbdf9c0fa28c0c04cbebdf",
+    "docs/reviews/2026-11-15-daily-adjacency-protocol.md": "f12fe4cbebf08e3f9897a50ddd2682ca778524e6be3b62999c9baa69195d55fe",
+    "pipeline/cold_region_audit.py": "5857e7cb2c569650fb0de3ad38e8ca30a28a4bfa1a5f5f56e9da3ba181abca29",
+    "tests/test_daily_adjacency_cube.py": "dba9fcba79530509aef2dad4b352328e18a42fdfc7506dd08630a63025fbc59e"
+  },
+  "mapping": "ORIGINday d -> rankedDays[d-1] DESTday",
+  "permutation_prefix_literal": "goliat-daily-adjacency-v1|",
+  "permutations_calculated": false,
+  "protocol_commit": "f6e45cc",
+  "response_columns_requested": []
+}

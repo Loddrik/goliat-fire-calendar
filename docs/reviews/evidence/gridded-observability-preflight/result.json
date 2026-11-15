@@ -1,0 +1,47 @@
+{
+  "scope": "documentary_preflight_only",
+  "started_utc": "2026-11-15T04:29:28Z",
+  "deadline_utc": "2026-11-15T04:59:28Z",
+  "status": "G0_documentary_negative_for_comparable_opportunity_denominator",
+  "recommendation": "discard_E_as_current_comparable_pass_or_clear_opportunity_denominator",
+  "available_limited_use": "descriptive_daily_composite_class_calendar_only_under_new_explicit_estimand",
+  "comparable_opportunity": {
+    "status": "not_demonstrated",
+    "metrics": null
+  },
+  "complete375m_gridded_opportunity_product": {
+    "status": "not_established_by_bounded_search",
+    "global_absence_claimed": false
+  },
+  "nonidentifiability_example": {
+    "synthetic_only": true,
+    "same_day_same_surface_same_daynight": true,
+    "history1": [
+      "5_nonfire_land",
+      "5_nonfire_land"
+    ],
+    "history2": [
+      "4_cloud",
+      "5_nonfire_land"
+    ],
+    "both_composite_class": 5,
+    "clear_nonfire_pass_counts": [
+      2,
+      1
+    ],
+    "interpretation": "composite_class_does_not_identify_pass_counts_or_physical_sensitivity"
+  },
+  "science_data_downloaded_bytes": 0,
+  "raw_opened": false,
+  "credentials_used": false,
+  "counts_divided": false,
+  "models_scored": false,
+  "gate1_passed": false,
+  "physical_exposure_verified": false,
+  "open_issues": [
+    "VNP14A1_V2_exact_schema_and_QA_bit2_not_verified",
+    "375m_raster_background_missingness_not_a_documented_opportunity_mask",
+    "nominal_grid_not_comparable_physical_support",
+    "daily_composition_loses_pass_identity_and_counts"
+  ]
+}

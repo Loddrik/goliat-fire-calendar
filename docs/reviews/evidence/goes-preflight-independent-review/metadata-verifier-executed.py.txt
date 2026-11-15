@@ -1,0 +1,35 @@
+from pathlib import Path
+import datetime,hashlib,json,xml.etree.ElementTree as ET,re
+ROOT=Path.cwd()
+OWN=ROOT/'docs/reviews/evidence/goes-preflight-independent-review'
+PROD=ROOT/'docs/reviews/evidence/goes-preflight'
+protocol=ROOT/'docs/reviews/2026-11-15-goes-preflight-protocol.md'
+assert hashlib.sha256(protocol.read_bytes()).hexdigest()=='8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2'
+parsed=json.loads((OWN/'catalog-verification.json').read_text())
+producer=json.loads((PROD/'catalog-summary.json').read_text())
+checks=0
+for k in ('C1','C2'):
+ a=parsed[k];b=producer[k]
+ assert a['count']==b['object_count'] and b['IsTruncated']=='false'
+ assert not b['GetObject_access_tested'] and b['science_bytes']==0
+ ao={r['key']:r for r in a['objects']};bo={r['key']:r for r in b['objects']}
+ assert ao.keys()==bo.keys()
+ for key in ao:
+  x,y=ao[key],bo[key]
+  assert x['mode_from_name']==y['mode_from_filename']
+  for p,q in [('declared_start_utc','filename_start_UTC'),('declared_end_utc','filename_end_UTC')]:
+   assert datetime.datetime.fromisoformat(x[p])==datetime.datetime.fromisoformat(y[q])
+  assert x['metadata_size_bytes']==y['size_bytes_LIST_metadata_only']
+  assert x['metadata_last_modified']==y['LastModified_LIST_only']
+  assert not y['object_requested'] and not y['pixel_or_AOI_time_verified'] and not y['software_or_product_attributes_verified']
+  checks+=1
+ # Identical XML is supplementary to independently parsed metadata, not the only check.
+ assert (OWN/(k+'-listing.xml')).read_bytes()==(PROD/(k+'.xml')).read_bytes()
+log=json.loads((PROD/'querylog.json').read_text())
+allowed={r['url'] for r in json.loads((OWN/'sources.json').read_text())['fetches']}
+for r in log['http_requests_producer']:
+ assert r['url'] in allowed and r['method']=='GET' and r['scientific_bytes']==0 and not r['credentials_used']
+ assert r['kind'] in ('official_technical_document','S3_LIST_XML')
+assert log['science_requests']==[] and log['science_bytes_acquired']==0
+assert log['HEAD_requests']==0 and log['Range_requests']==0 and log['nc_or_HDF_object_GET_requests']==0
+print(json.dumps({'metadata_objects_checked':checks,'catalogs_checked':2,'independent_XML_equal':True,'producer_recorded_requests_scope_checked':True,'scientific_objects_requested_by_this_verifier':0,'status':'metadata_identity_passed'}))

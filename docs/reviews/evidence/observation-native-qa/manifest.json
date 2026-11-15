@@ -1,0 +1,24 @@
+{
+  "files": {
+    "code-snapshot.py.txt": {
+      "bytes": 16230,
+      "sha256": "37e1a6e3d6f7c21c916acaba3dbf151c73a747d1045b08d5f80f021dfbd6c0fe"
+    },
+    "counts.json": {
+      "bytes": 7936,
+      "sha256": "c242fd9c1faf666dffaeddfba1a96edb7624d69de8190176f6f386c7e9e6bf1f"
+    },
+    "decoder-snapshot.py.txt": {
+      "bytes": 11624,
+      "sha256": "a2a654f6ec15b1e54e2e1398bc9ed0ff3ef9ed5a523b952a1be735188bf13a45"
+    },
+    "environment.json": {
+      "bytes": 210,
+      "sha256": "80a16a3952e462869356eeace04ee53645d7313b0acb4da3a03cc9bd60c27f44"
+    },
+    "protocol-snapshot.md.txt": {
+      "bytes": 2764,
+      "sha256": "24d6bfb5890d8753d448aada651f7a713f31d05cd474042702a5aeb6561cfa03"
+    }
+  }
+}

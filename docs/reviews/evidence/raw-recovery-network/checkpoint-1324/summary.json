@@ -1,0 +1,38 @@
+{
+  "completed_utc": "2026-11-15T13:24:04.171228+00:00",
+  "status": "PARTIAL_EXACT_RECOVERY",
+  "inventory_total": 1071,
+  "prior_local_exact": 38,
+  "network_exact_unique": 817,
+  "network_exact_bytes": 40828285,
+  "combined_exact_unique": 855,
+  "remaining_exact_originals": 216,
+  "requests_attempted": 947,
+  "response_payload_bytes_accounted": 40866889,
+  "payload_budget_bytes": 157286400,
+  "attempt_status_counts": {
+    "transport_error": 4,
+    "exact": 817,
+    "mismatch": 4,
+    "http_error": 122
+  },
+  "unresolved_latest_status_counts": {
+    "mismatch": 4,
+    "not_attempted": 212
+  },
+  "inventory_sha256": "97428b84e89ae70c9d87529a0239a5b4872a453f42b6f853cb51a7377b1090ad",
+  "helper_sha256": "276010084a97570a0ba39b7580d51696061e74c045701db4d86ae9e8a4820e38",
+  "helper_versions_sha256": {
+    "recover-v2.py": "e1ccb3a0b7d3158eb93df8b4c68a1eb4136617ceff7e7296b780ddab4756cf81",
+    "recover-v1.py": "a156a749544521634bee324c5633a91ba2984685a68320cc6446dfe8e9932c8a",
+    "recover.py": "276010084a97570a0ba39b7580d51696061e74c045701db4d86ae9e8a4820e38"
+  },
+  "raw_CANONICAL_files_written": 0,
+  "processed_files_written": 0,
+  "inventory_modified": false,
+  "L2_scientific_bytes_downloaded": 0,
+  "credential_values_or_private_API_URLs_persisted": false,
+  "scope": "SHA256+byte-exact staging only; unmatched responses remain quarantine; no raw paths restored by this task",
+  "terminated_inflight_read_bound_bytes": 30543920,
+  "payload_plus_terminated_read_bound_bytes": 71410809
+}

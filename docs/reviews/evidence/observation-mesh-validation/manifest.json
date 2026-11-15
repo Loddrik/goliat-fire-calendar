@@ -1,0 +1,51 @@
+{
+  "files": {
+    "2026-11-15-observation-mesh-validation-clarification.md.snapshot.txt": {
+      "bytes": 891,
+      "sha256": "816b610f8cf4b1c29819932027d8a9d5fb0fb46e51c03418b701d5312375fce8"
+    },
+    "2026-11-15-observation-mesh-validation-protocol.md.snapshot.txt": {
+      "bytes": 3533,
+      "sha256": "b784720783497a8219eba438b6e624ff77a60b971f5f968f9a53819ac976f478"
+    },
+    "environment.json": {
+      "bytes": 390,
+      "sha256": "25dd7bb98e41b30322cfa6118e5300d866cb1d2ea90feded614ccccb5f2db6f0"
+    },
+    "export-index.json": {
+      "bytes": 15795,
+      "sha256": "6cbcf6b06506c22330045119378639eca3f392b8125a72d36fb350dab4421cfb"
+    },
+    "observation_mesh.py.snapshot.txt": {
+      "bytes": 7250,
+      "sha256": "31e207100bc9228870df201fe102c7c3c92ef754935cf02535d5bb0d0ff6550a"
+    },
+    "observation_mesh_validation.py.snapshot.txt": {
+      "bytes": 21548,
+      "sha256": "7a10120aff8a3d86e028c68dc9470866371d58eb06ac13379ec94eddcb833fac"
+    },
+    "report.json.gz": {
+      "bytes": 2041896,
+      "sha256": "50b094199438082d7f6907d33c3437ee1e1ba040970d62f26bd2a6a7937a2e12"
+    },
+    "summary.json": {
+      "bytes": 29750,
+      "sha256": "f88f92c7ba1749ed7de8bda6d4c1f4751adb123c025a272e0ee6d6a69cf910c8"
+    }
+  },
+  "packing": {
+    "operation": "Post-execution deterministic storage packaging only; no analysis rerun",
+    "logical_name": "report.json",
+    "uncompressed_bytes": 13572302,
+    "uncompressed_sha256": "79b062851322078852a301db039683cf5b11a49c8f6fa30d418d66b4ae97fa07",
+    "physical_name": "report.json.gz",
+    "gzip_mtime": 0,
+    "gzip_header_filename": "",
+    "gzip_compresslevel": 9,
+    "execution_code_unchanged": true,
+    "metrics_and_summary_unchanged": true,
+    "original_generator": "pipeline/observation_mesh_validation.py generated report.json; gzip created afterwards",
+    "uncompressed_local_copy": ".runtime/observation-mesh-validation/report.json",
+    "decompressed_byte_identity_verified": true
+  }
+}

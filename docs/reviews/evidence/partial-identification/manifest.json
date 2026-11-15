@@ -1,0 +1,62 @@
+{
+  "coverage": [
+    {
+      "completions": 1,
+      "input_coverage": "all",
+      "inputs": 1,
+      "n": 0
+    },
+    {
+      "completions": 32,
+      "input_coverage": "all",
+      "inputs": 15,
+      "n": 1
+    },
+    {
+      "completions": 1024,
+      "input_coverage": "all",
+      "inputs": 225,
+      "n": 2
+    },
+    {
+      "completions": 32768,
+      "input_coverage": "all",
+      "inputs": 3375,
+      "n": 3
+    },
+    {
+      "completions": 10425,
+      "input_coverage": "15 homogeneous + 210 ordered alternating cycles + 200 seeded inputs",
+      "inputs": 425,
+      "n": 4
+    },
+    {
+      "completions": 27150,
+      "input_coverage": "15 homogeneous + 210 ordered alternating cycles + 200 seeded inputs",
+      "inputs": 425,
+      "n": 5
+    },
+    {
+      "completions": 71996,
+      "input_coverage": "15 homogeneous + 210 ordered alternating cycles + 200 seeded inputs",
+      "inputs": 425,
+      "n": 6
+    },
+    {
+      "completions": 190029,
+      "input_coverage": "15 homogeneous + 210 ordered alternating cycles + 200 seeded inputs",
+      "inputs": 425,
+      "n": 7
+    }
+  ],
+  "seed": 20261115,
+  "sources_sha256": {
+    "docs/reviews/2026-11-15-partial-identification-design.md": "f8b9d969a884beef279633b76c531fec1086f90e84aff8359d96aa33a658e0f1",
+    "docs/reviews/2026-11-15-partial-identification-protocol.md": "96d26c54ee25fce0fa4cc5214d36884ff0d4917e295d44864d099db322fbb37e",
+    "pipeline/partial_identification.py": "77d0ab879c7cb56ac9c08b8d63bee89594e9624bef55d84d7e3b2a4ad149f6d9",
+    "tests/test_partial_identification.py": "33dbeecae8a69e119da754ada1341609f8935413d2f21388a90b55fcf91f6d21"
+  },
+  "synthetic_only": true,
+  "total_completions": 333425,
+  "total_inputs": 5316
+}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 3238,
+      "sha256": "a96042e91f2e724d5a47e76da232076dfb2c60e7985a90aaa1ba04f006fe6aae"
+    },
+    "reviewer-code.py.txt": {
+      "bytes": 14907,
+      "sha256": "d6f68d0ab72fd5d3df09f1f79c366f2c306672dd9d5c4a2d58ad31d9a627b5d2"
+    },
+    "all-query-independent-integrals.csv": {
+      "bytes": 849667,
+      "sha256": "a6b6aca9ba71aaa4210f1c06d80d1b1344f864d1ce692eeb29a4077cda9011a6"
+    },
+    "freeze.json": {
+      "bytes": 5905,
+      "sha256": "dec2c6125bf60472a9a275b8723d36ab1bd1077813f327a53febe36ae3305606"
+    }
+  },
+  "producer_manifest_unchanged": true,
+  "cap_end_utc": "2026-11-15T10:13:00+00:00"
+}

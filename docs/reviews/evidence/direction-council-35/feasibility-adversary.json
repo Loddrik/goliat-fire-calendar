@@ -1,0 +1,98 @@
+{
+  "role": "consejo35 adversario: coste de oportunidad, robustez y alcance",
+  "verdict": "ratifico con cambios obligatorios: D checkpoint, A unico contraste panel21, C control fijo incluido; B diferido",
+  "read_scope": "Leidos tres dictamenes, preflight35, summary33 y review PASSED. Revision adversaria no ciega: se leen votos originales. Solo analisis y este dictamen; sin nuevas perdidas, refits, features, mezclas, adquisiciones ni datos.",
+  "source_sha256": {
+    "docs/reviews/evidence/direction-council-35/statistics.json": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4",
+    "docs/reviews/evidence/direction-council-35/engineering.json": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea",
+    "docs/reviews/evidence/direction-council-35/observation.json": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01",
+    "docs/reviews/2026-11-15-next-model-preflight.md": "232c23e63d8037b22575206ebb8ccc9daf7cabb46fbbdaddba0b6468ed897964",
+    "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916",
+    "docs/reviews/evidence/discrete-state-comparison-independent-review/summary.json": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf"
+  },
+  "criteria_confirmation": "Se mantienen 30/25/20/15/10 y puertas no compensables. No se recalculan scores ni se adjudica ganador por puntos; los rangos subjetivos se solapan.",
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_reproducibility_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretive_utility": 10
+  },
+  "non_compensable": [
+    "Unknown no equivale a cero; operador, target, unidad, contrato, cohorte y perdida explicitos.",
+    "No G1, verdad fisica, causalidad, exposicion o holdout fresco inventados.",
+    "No rescatar primaria con otro panel, contrato, grupo, fecha, seed o proporcion.",
+    "No cambiar representacion sin control equivalente o pregunta distinta declarada.",
+    "Sin promocion productiva, refits, adquisicion o grillas de rescate por este dictamen."
+  ],
+  "existing33_limit": "Review PASSED certifica reproduccion estructural y semantica de etiquetas nativas asignadas a puntos nominales, no observabilidad. G1=false y continuous30B permanece fallido; no usar Jaccard33 para elegir un predictor mensual.",
+  "concrete_criticisms": [
+    {
+      "id": "F1",
+      "objection": "Los caps publicados mezclan primer artefacto y experimento revisado. B45 no incluye incorporacion, referencia equivalente, refit ni evaluacion; comparar ese coste con A revisado no es comparar el mismo producto.",
+      "required_change": "Presupuestar artefacto, implementacion, revision e integracion por separado. Para esta iteracion no abrir B, y no presentar construibilidad como valor predictivo."
+    },
+    {
+      "id": "F2",
+      "objection": "Cuatro slots no proporcionan cuatro revisiones independientes ni eliminan la integracion serial del root. D, productorA y revisorA ya necesitan atencion; B paralelo agrega otro protocolo y posible cuello de revision.",
+      "required_change": "Un unico productor experimental A/C y un revisor reservado, D consolidacion separada, root integracion. La revision empieza con protocolo e identidades; no reservarla para despues de agotar45min."
+    },
+    {
+      "id": "F3",
+      "objection": "C tiene cap25 propio en votos, pero llamarlo control barato puede extender A a70min e introducir seleccion entre familias.",
+      "required_change": "C=.5 es opcional y cabe dentro del mismo cap absoluto45min de A, incluido review. Si no cabe, omitirlo sin ampliar cap y sin seleccionar por resultados."
+    },
+    {
+      "id": "F4",
+      "objection": "En panel21 las regiones coinciden con roles SOURCE-held; cambiar presupuestos estudia acoplamiento de decisiones bajo ese contrato, no ecologia regional ni transporte independiente. Un hash33/21 no iguala intensidad, estacionalidad o localizacion.",
+      "required_change": "Estimando A exclusivamente dependencia del acoplamiento con CDF/B congelados, direcciones SOURCE-held separadas, global54/real/hash fijados antes de resultados. No explicar diferencias como efecto territorial causal."
+    },
+    {
+      "id": "F5",
+      "objection": "A aun necesita wrapper y reconstruccionCDF; disponer de arrays no demuestra que45min alcance. Identidad global fallida puede consumir todo el tiempo antes del contraste util.",
+      "required_change": "Checkpoint operativo antes de generar nueva evaluacion: protocolo/panel21/modelos/regimenes/mapeo/particion identificados y controlglobal reproducible. Si falla una identidad o precisa cambiar modelo/contrato, detener; no abrir18/24C."
+    },
+    {
+      "id": "F6",
+      "objection": "Una mejora de totales regionales es impuesta y una mejora local puede redistribuir dano a14/held/extremos. Las restricciones por grupos reducen conjunto factible del problemaCDF global.",
+      "required_change": "Certificados de presupuestos y riesgoCDF junto a controles/guardrails completos; nunca usar igualdad regional o menor riesgo numerico inexplicable como victoria. Incompatibilidad numerica se investiga como fallo, no se promociona."
+    }
+  ],
+  "recommended_sequence": [
+    "D checkpoint ya satisfecho segun actualizacion del root, no reabrirlo ni repetir su cap; conservar D como cierre e integracion final.",
+    "Si el protocolo y la disponibilidad de revisor quedan cerrados, A unico contraste nuevo panel21, ambas direcciones SOURCE-held separadas; C=.5 solo control secundario si cabe en el mismo cap.",
+    "B queda como propuesta posterior: antes de construir cubo exigir protocolo de uso/evaluacion SOURCE-only y presupuesto de revision posterior reservado. Ningun cubo nuevo por esta recomendacion."
+  ],
+  "caps_proposed_not_measured": {
+    "D_checkpoint_minutes": 0,
+    "A_including_optional_C_and_independent_review_minutes": 45,
+    "A_clock_rule": "Empieza con primera implementacion y no se reinicia con fallo, cambio de agente o correccion; fijar timestamp absoluto al aprobar protocolo.",
+    "checkpoint_within_A": "A mas tardar al minuto15 deben estar manifiesto/panel/identidades y controlglobal auditables; si no, detener y conservar bloqueo.",
+    "C_rule": "No cap adicional. Si C compite con controlglobal o revision, omitir C.",
+    "B_now_minutes": 0,
+    "delivery_reserve": "No abrir A sin reservar sus45min completos y un bloque final separado de30min para integrar/consolidar; caps son limites propuestos de inversion, no costes medidos.",
+    "D_checkpoint_note": "No nueva inversion: checkpoint ya entregado segun root."
+  },
+  "stop_plan": [
+    "Sin protocolo, CDF/regimen/mask/panel21 univocos o revisor reservado: D solamente.",
+    "Controlglobal irreproducible, labels afectan decision SOURCE-only, presupuesto inconsistente, falta guardrail obligatorio o cambio de contrato requerido: detener A; no rescate con otro panel/hash/modelo.",
+    "Cap alcanzado sin revision completa: inconcluso, preservar artefacto y causas; no publicar ganador parcial.",
+    "Contrastes nulos o adversos con controles validos: resultado util, cerrar familia sin nuevas particiones ni pesos.",
+    "Resultado favorable: evidencia condicional sobre decision congelada en historia reutilizada; no promocion automatica ni prueba fisica."
+  ],
+  "B_dissent_preserved": {
+    "observation_position": "OBS prefiere B porque agrega informacion temporal potencialmente ausente de conteos mensuales; su propuesta no promete refit dentro45min.",
+    "adversary_response": "Acepto esa ventaja potencial y que B es materialmente construible. Disiento de construirlo en paralelo ahora: sin uso/evaluacion protocolizados el entregable solo prueba disponibilidad/operador, no discrimina utilidad predictiva; su review e integracion desplazan cierre y contraste A. No es rechazo cientifico de B.",
+    "what_changes_decision": "Un protocolo posterior unico de feature/control/placebo SOURCE-only, incorporacion concreta y presupuesto total con revisor reservado permitiria reabrir B como tarea distinta; no el exito o fracaso observado de A como permiso para buscar rescate."
+  },
+  "nonexperimental_alternatives": [
+    "Tabla de decisiones y evidencia ya existente: que resultado cambia que decision, y limites de33 frente al modelo mensual.",
+    "Chequeo documental del argumento de conjuntos factibles: restricciones grupales no mejoran el optimoCDF global bajo mismas distribuciones y solver valido.",
+    "Inventario de dependencias exactas y protocolo futuro de B sobre esquemas/proveniencia ya disponibles, sin construir features ni leer nuevos targets."
+  ],
+  "new_losses_refits_data_features_or_mixes_computed": false,
+  "root_update_reported_not_independently_reverified": {
+    "D_checkpoint": "Root informa ya entregado: PR56 dev; CI ciencia/web PASS325 tests; HTML33 mobile5 SVG; backup0717 verified19f2425. Este dictamen no repite esas verificaciones.",
+    "agreed_sequence": "A+C primero; NO B45 paralelo. Bcube solo decision posterior tras A, sin prometer fit. A45 incluye protocolo y review, sin cap adicional."
+  }
+}

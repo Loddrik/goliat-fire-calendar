@@ -1,0 +1,55 @@
+{
+  "status": "independent_cube_integrity_verification_pass",
+  "completed_utc": "2026-11-15T08:02:23.951920+00:00",
+  "reviewer_freeze_sha256": "726a7349fad8c8f5f0384691c9e4fddbbc65dde755e67e6c232b5a8886197a9c",
+  "producer_manifest_unchanged_sha256": "9169cc2320591a000d72097b76d2207e652bc3141b2f10cc183a3f993272c626",
+  "producer_modified": false,
+  "producer_manifest_extended": false,
+  "source_projection_response_columns_requested": [],
+  "models_opened": false,
+  "new_fits": 0,
+  "new_target_losses": 0,
+  "solvers_called": 0,
+  "HDF_or_new_data_read": false,
+  "verified": {
+    "all_source_event_rows": 9902,
+    "unique_cube_keys": 5184,
+    "expanded_Aqua_identity_rows": 10368,
+    "fullcalendar_mapping_rows": 157788,
+    "block_invariant_rows": 5184,
+    "all_cube_CSV_and_Parquet_cells": true,
+    "mask6_exact": true,
+    "cell_to_CUT_assignment_unique": true,
+    "same_cell_consecutive_days_within_month_bitmask_oracle": true,
+    "leap_year_fullcalendar_days": true,
+    "literal_hash_mapping_ORIGIN_to_DEST_not_inverse": true,
+    "all_cell_month_counts_preserved": true,
+    "all_multisets_of_daily_cell_sets_including_empty_days_preserved": true,
+    "all_daily_count_multisets_preserved": true,
+    "all_source_origin_vs_query_destination_scope_diagnostics": true,
+    "D_implies_Aqua_at_least_two": true,
+    "source_and_producer_hashes_verified": true
+  },
+  "overall_independently_reproduced": {
+    "n": 5184,
+    "D_real_1": 105,
+    "D_placebo_1": 59,
+    "D_discordant": 110,
+    "pair_diagnostic_real": 192,
+    "pair_diagnostic_placebo": 85
+  },
+  "pure_tests": {
+    "count": 9,
+    "passed": true,
+    "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.002s\n\nOK\n"
+  },
+  "operator_limits": [
+    "Recorded Aqua adjacency only; D0 is not physical absence or observing opportunity.",
+    "Same-cell recorded pairs are not a count of independent fires or duration of a physical event.",
+    "The one full-calendar permutation may preserve D; no rereseeding or variation requirement is used.",
+    "Canonical derived integrity does not reconstruct missing acquisition originals.",
+    "The cube authorizes no model or stage37; G1 remains false and35A remains negative."
+  ],
+  "stage37_authorized": false,
+  "G1_physical": false
+}

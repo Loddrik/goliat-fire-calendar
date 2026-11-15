@@ -1,0 +1,802 @@
+{
+  "status": "common-archive-contract-description",
+  "independent_validation": false,
+  "fits": 0,
+  "model_scoring": false,
+  "source_rows19": 3780,
+  "common_rows": 3456,
+  "common_months": 64,
+  "excluded_rows": 324,
+  "excluded_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "exclusion_reason": "observed manifest start/end/available_years; no activity-dependent selection",
+  "strict20_gate_remains_false": true,
+  "O0_series_reproduced_exactly": true,
+  "Cmaskedall_reproduces19_exactly": true,
+  "closure_error_max": 0,
+  "mask_cells": 223,
+  "observation_coverage": "unknown",
+  "diagnostic_detection_rows": {
+    "detection_rows": 23875,
+    "moved_cut_detection_rows": 66,
+    "near_literal_grid_border_rows": 50,
+    "mapping_unavailable_detection_rows": 5,
+    "grid_disagreement_rows": 1
+  },
+  "mapping_unavailable_cell_days": 4,
+  "moved_cut_cell_days": 47,
+  "type_cell_day_patterns": [
+    {
+      "has_type0": false,
+      "has_other": true,
+      "has_unknown": false,
+      "cell_days": 17
+    },
+    {
+      "has_type0": true,
+      "has_other": false,
+      "has_unknown": false,
+      "cell_days": 14627
+    },
+    {
+      "has_type0": true,
+      "has_other": true,
+      "has_unknown": false,
+      "cell_days": 5
+    }
+  ],
+  "residual_is_not_causal_type_or_geography_effect": true,
+  "reports": {
+    "all_common_archive": {
+      "all54": {
+        "n": 3456,
+        "sums": {
+          "O0": 14713,
+          "Ogrid": 14714,
+          "Omask": 14617,
+          "Omap": 14613,
+          "Cmaskedtype0": 14632,
+          "Cmaskedall": 14649
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 3455,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -97,
+            "absolute_difference_sum": 97,
+            "identical_commune_months": 3388,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -4,
+            "absolute_difference_sum": 92,
+            "identical_commune_months": 3379,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 19,
+            "absolute_difference_sum": 19,
+            "identical_commune_months": 3443,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 17,
+            "absolute_difference_sum": 17,
+            "identical_commune_months": 3444,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -64,
+            "absolute_difference_sum": 220,
+            "identical_commune_months": 3292,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "published14": {
+        "n": 896,
+        "sums": {
+          "O0": 5993,
+          "Ogrid": 5993,
+          "Omask": 5965,
+          "Omap": 5968,
+          "Cmaskedtype0": 5975,
+          "Cmaskedall": 5987
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 896,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -28,
+            "absolute_difference_sum": 28,
+            "identical_commune_months": 878,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": 3,
+            "absolute_difference_sum": 25,
+            "identical_commune_months": 873,
+            "maximum_absolute_difference": 2
+          },
+          "residual_cohort": {
+            "signed_sum": 7,
+            "absolute_difference_sum": 7,
+            "identical_commune_months": 891,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 12,
+            "absolute_difference_sum": 12,
+            "identical_commune_months": 888,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -6,
+            "absolute_difference_sum": 70,
+            "identical_commune_months": 843,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "remaining40": {
+        "n": 2560,
+        "sums": {
+          "O0": 8720,
+          "Ogrid": 8721,
+          "Omask": 8652,
+          "Omap": 8645,
+          "Cmaskedtype0": 8657,
+          "Cmaskedall": 8662
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 2559,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -69,
+            "absolute_difference_sum": 69,
+            "identical_commune_months": 2510,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -7,
+            "absolute_difference_sum": 67,
+            "identical_commune_months": 2506,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 12,
+            "absolute_difference_sum": 12,
+            "identical_commune_months": 2552,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 5,
+            "absolute_difference_sum": 5,
+            "identical_commune_months": 2556,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": -58,
+            "absolute_difference_sum": 150,
+            "identical_commune_months": 2449,
+            "maximum_absolute_difference": 4
+          }
+        }
+      }
+    },
+    "diagnostic_2022_2025": {
+      "all54": {
+        "n": 2268,
+        "sums": {
+          "O0": 9865,
+          "Ogrid": 9865,
+          "Omask": 9814,
+          "Omap": 9813,
+          "Cmaskedtype0": 9826,
+          "Cmaskedall": 9834
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 2268,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -51,
+            "absolute_difference_sum": 51,
+            "identical_commune_months": 2229,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -1,
+            "absolute_difference_sum": 57,
+            "identical_commune_months": 2221,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 13,
+            "absolute_difference_sum": 13,
+            "identical_commune_months": 2259,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 8,
+            "absolute_difference_sum": 8,
+            "identical_commune_months": 2262,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": -31,
+            "absolute_difference_sum": 127,
+            "identical_commune_months": 2171,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "published14": {
+        "n": 588,
+        "sums": {
+          "O0": 3850,
+          "Ogrid": 3850,
+          "Omask": 3838,
+          "Omap": 3840,
+          "Cmaskedtype0": 3846,
+          "Cmaskedall": 3850
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 588,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -12,
+            "absolute_difference_sum": 12,
+            "identical_commune_months": 577,
+            "maximum_absolute_difference": 2
+          },
+          "mapping_and_support": {
+            "signed_sum": 2,
+            "absolute_difference_sum": 12,
+            "identical_commune_months": 576,
+            "maximum_absolute_difference": 1
+          },
+          "residual_cohort": {
+            "signed_sum": 6,
+            "absolute_difference_sum": 6,
+            "identical_commune_months": 584,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 4,
+            "absolute_difference_sum": 4,
+            "identical_commune_months": 585,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 34,
+            "identical_commune_months": 558,
+            "maximum_absolute_difference": 3
+          }
+        }
+      },
+      "remaining40": {
+        "n": 1680,
+        "sums": {
+          "O0": 6015,
+          "Ogrid": 6015,
+          "Omask": 5976,
+          "Omap": 5973,
+          "Cmaskedtype0": 5980,
+          "Cmaskedall": 5984
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 1680,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -39,
+            "absolute_difference_sum": 39,
+            "identical_commune_months": 1652,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -3,
+            "absolute_difference_sum": 45,
+            "identical_commune_months": 1645,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 7,
+            "absolute_difference_sum": 7,
+            "identical_commune_months": 1675,
+            "maximum_absolute_difference": 2
+          },
+          "type_within_C": {
+            "signed_sum": 4,
+            "absolute_difference_sum": 4,
+            "identical_commune_months": 1677,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": -31,
+            "absolute_difference_sum": 93,
+            "identical_commune_months": 1613,
+            "maximum_absolute_difference": 4
+          }
+        }
+      }
+    },
+    "legacy_2020_2021": {
+      "all54": {
+        "n": 1188,
+        "sums": {
+          "O0": 4848,
+          "Ogrid": 4849,
+          "Omask": 4803,
+          "Omap": 4800,
+          "Cmaskedtype0": 4806,
+          "Cmaskedall": 4815
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 1187,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -46,
+            "absolute_difference_sum": 46,
+            "identical_commune_months": 1159,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -3,
+            "absolute_difference_sum": 35,
+            "identical_commune_months": 1158,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 6,
+            "absolute_difference_sum": 6,
+            "identical_commune_months": 1184,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 9,
+            "absolute_difference_sum": 9,
+            "identical_commune_months": 1182,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -33,
+            "absolute_difference_sum": 93,
+            "identical_commune_months": 1121,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "published14": {
+        "n": 308,
+        "sums": {
+          "O0": 2143,
+          "Ogrid": 2143,
+          "Omask": 2127,
+          "Omap": 2128,
+          "Cmaskedtype0": 2129,
+          "Cmaskedall": 2137
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 308,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -16,
+            "absolute_difference_sum": 16,
+            "identical_commune_months": 301,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 13,
+            "identical_commune_months": 297,
+            "maximum_absolute_difference": 2
+          },
+          "residual_cohort": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 307,
+            "maximum_absolute_difference": 1
+          },
+          "type_within_C": {
+            "signed_sum": 8,
+            "absolute_difference_sum": 8,
+            "identical_commune_months": 303,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -6,
+            "absolute_difference_sum": 36,
+            "identical_commune_months": 285,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "remaining40": {
+        "n": 880,
+        "sums": {
+          "O0": 2705,
+          "Ogrid": 2706,
+          "Omask": 2676,
+          "Omap": 2672,
+          "Cmaskedtype0": 2677,
+          "Cmaskedall": 2678
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 879,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -30,
+            "absolute_difference_sum": 30,
+            "identical_commune_months": 858,
+            "maximum_absolute_difference": 3
+          },
+          "mapping_and_support": {
+            "signed_sum": -4,
+            "absolute_difference_sum": 22,
+            "identical_commune_months": 861,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 5,
+            "absolute_difference_sum": 5,
+            "identical_commune_months": 877,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 879,
+            "maximum_absolute_difference": 1
+          },
+          "total_gap": {
+            "signed_sum": -27,
+            "absolute_difference_sum": 57,
+            "identical_commune_months": 836,
+            "maximum_absolute_difference": 3
+          }
+        }
+      }
+    },
+    "before_calendar_2022": {
+      "all54": {
+        "n": 864,
+        "sums": {
+          "O0": 2890,
+          "Ogrid": 2890,
+          "Omask": 2850,
+          "Omap": 2849,
+          "Cmaskedtype0": 2855,
+          "Cmaskedall": 2861
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 864,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -40,
+            "absolute_difference_sum": 40,
+            "identical_commune_months": 839,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -1,
+            "absolute_difference_sum": 21,
+            "identical_commune_months": 846,
+            "maximum_absolute_difference": 2
+          },
+          "residual_cohort": {
+            "signed_sum": 6,
+            "absolute_difference_sum": 6,
+            "identical_commune_months": 860,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 6,
+            "absolute_difference_sum": 6,
+            "identical_commune_months": 860,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -29,
+            "absolute_difference_sum": 69,
+            "identical_commune_months": 816,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "published14": {
+        "n": 224,
+        "sums": {
+          "O0": 1299,
+          "Ogrid": 1299,
+          "Omask": 1283,
+          "Omap": 1282,
+          "Cmaskedtype0": 1283,
+          "Cmaskedall": 1288
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 224,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -16,
+            "absolute_difference_sum": 16,
+            "identical_commune_months": 217,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -1,
+            "absolute_difference_sum": 7,
+            "identical_commune_months": 219,
+            "maximum_absolute_difference": 2
+          },
+          "residual_cohort": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 223,
+            "maximum_absolute_difference": 1
+          },
+          "type_within_C": {
+            "signed_sum": 5,
+            "absolute_difference_sum": 5,
+            "identical_commune_months": 221,
+            "maximum_absolute_difference": 3
+          },
+          "total_gap": {
+            "signed_sum": -11,
+            "absolute_difference_sum": 27,
+            "identical_commune_months": 209,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "remaining40": {
+        "n": 640,
+        "sums": {
+          "O0": 1591,
+          "Ogrid": 1591,
+          "Omask": 1567,
+          "Omap": 1567,
+          "Cmaskedtype0": 1572,
+          "Cmaskedall": 1573
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 640,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -24,
+            "absolute_difference_sum": 24,
+            "identical_commune_months": 622,
+            "maximum_absolute_difference": 3
+          },
+          "mapping_and_support": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 14,
+            "identical_commune_months": 627,
+            "maximum_absolute_difference": 2
+          },
+          "residual_cohort": {
+            "signed_sum": 5,
+            "absolute_difference_sum": 5,
+            "identical_commune_months": 637,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 639,
+            "maximum_absolute_difference": 1
+          },
+          "total_gap": {
+            "signed_sum": -18,
+            "absolute_difference_sum": 42,
+            "identical_commune_months": 607,
+            "maximum_absolute_difference": 3
+          }
+        }
+      }
+    },
+    "calendar_2022_onward": {
+      "all54": {
+        "n": 2592,
+        "sums": {
+          "O0": 11823,
+          "Ogrid": 11824,
+          "Omask": 11767,
+          "Omap": 11764,
+          "Cmaskedtype0": 11777,
+          "Cmaskedall": 11788
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 2591,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -57,
+            "absolute_difference_sum": 57,
+            "identical_commune_months": 2549,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -3,
+            "absolute_difference_sum": 71,
+            "identical_commune_months": 2533,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 13,
+            "absolute_difference_sum": 13,
+            "identical_commune_months": 2583,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 11,
+            "absolute_difference_sum": 11,
+            "identical_commune_months": 2584,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": -35,
+            "absolute_difference_sum": 151,
+            "identical_commune_months": 2476,
+            "maximum_absolute_difference": 4
+          }
+        }
+      },
+      "published14": {
+        "n": 672,
+        "sums": {
+          "O0": 4694,
+          "Ogrid": 4694,
+          "Omask": 4682,
+          "Omap": 4686,
+          "Cmaskedtype0": 4692,
+          "Cmaskedall": 4699
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 0,
+            "absolute_difference_sum": 0,
+            "identical_commune_months": 672,
+            "maximum_absolute_difference": 0
+          },
+          "mask": {
+            "signed_sum": -12,
+            "absolute_difference_sum": 12,
+            "identical_commune_months": 661,
+            "maximum_absolute_difference": 2
+          },
+          "mapping_and_support": {
+            "signed_sum": 4,
+            "absolute_difference_sum": 18,
+            "identical_commune_months": 654,
+            "maximum_absolute_difference": 1
+          },
+          "residual_cohort": {
+            "signed_sum": 6,
+            "absolute_difference_sum": 6,
+            "identical_commune_months": 668,
+            "maximum_absolute_difference": 3
+          },
+          "type_within_C": {
+            "signed_sum": 7,
+            "absolute_difference_sum": 7,
+            "identical_commune_months": 667,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": 5,
+            "absolute_difference_sum": 43,
+            "identical_commune_months": 634,
+            "maximum_absolute_difference": 3
+          }
+        }
+      },
+      "remaining40": {
+        "n": 1920,
+        "sums": {
+          "O0": 7129,
+          "Ogrid": 7130,
+          "Omask": 7085,
+          "Omap": 7078,
+          "Cmaskedtype0": 7085,
+          "Cmaskedall": 7089
+        },
+        "contrasts": {
+          "grid": {
+            "signed_sum": 1,
+            "absolute_difference_sum": 1,
+            "identical_commune_months": 1919,
+            "maximum_absolute_difference": 1
+          },
+          "mask": {
+            "signed_sum": -45,
+            "absolute_difference_sum": 45,
+            "identical_commune_months": 1888,
+            "maximum_absolute_difference": 4
+          },
+          "mapping_and_support": {
+            "signed_sum": -7,
+            "absolute_difference_sum": 53,
+            "identical_commune_months": 1879,
+            "maximum_absolute_difference": 3
+          },
+          "residual_cohort": {
+            "signed_sum": 7,
+            "absolute_difference_sum": 7,
+            "identical_commune_months": 1915,
+            "maximum_absolute_difference": 2
+          },
+          "type_within_C": {
+            "signed_sum": 4,
+            "absolute_difference_sum": 4,
+            "identical_commune_months": 1917,
+            "maximum_absolute_difference": 2
+          },
+          "total_gap": {
+            "signed_sum": -40,
+            "absolute_difference_sum": 108,
+            "identical_commune_months": 1842,
+            "maximum_absolute_difference": 4
+          }
+        }
+      }
+    }
+  }
+}

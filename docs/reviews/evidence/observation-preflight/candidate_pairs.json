@@ -1,0 +1,344 @@
+[
+  {
+    "aqua_id": "MYD14.A2019001.1850.061.2021351024430",
+    "viirs_id": "VNP14IMG.A2019001.1912.002.2024086133020",
+    "aqua_concept_id": "G2298314202-LPCLOUD",
+    "viirs_concept_id": "G2923053598-LPCLOUD",
+    "aqua_start": "2019-01-01T18:50:00.000Z",
+    "aqua_end": "2019-01-01T18:55:00.000Z",
+    "viirs_start": "2019-01-01T19:12:00.000Z",
+    "viirs_end": "2019-01-01T19:18:00.000Z",
+    "minimum_possible_gap_minutes": 17.0,
+    "maximum_possible_gap_minutes": 28.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019002.1755.061.2021351103000",
+    "viirs_id": "VNP14IMG.A2019002.1854.002.2024086135123",
+    "aqua_concept_id": "G2298314464-LPCLOUD",
+    "viirs_concept_id": "G2923060747-LPCLOUD",
+    "aqua_start": "2019-01-02T17:55:00.000Z",
+    "aqua_end": "2019-01-02T18:00:00.000Z",
+    "viirs_start": "2019-01-02T18:54:00.000Z",
+    "viirs_end": "2019-01-02T19:00:00.000Z",
+    "minimum_possible_gap_minutes": 54.0,
+    "maximum_possible_gap_minutes": 65.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "uncertain"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019002.1935.061.2021351103036",
+    "viirs_id": "VNP14IMG.A2019002.1854.002.2024086135123",
+    "aqua_concept_id": "G2298314522-LPCLOUD",
+    "viirs_concept_id": "G2923060747-LPCLOUD",
+    "aqua_start": "2019-01-02T19:35:00.000Z",
+    "aqua_end": "2019-01-02T19:40:00.000Z",
+    "viirs_start": "2019-01-02T18:54:00.000Z",
+    "viirs_end": "2019-01-02T19:00:00.000Z",
+    "minimum_possible_gap_minutes": 35.0,
+    "maximum_possible_gap_minutes": 46.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019003.1840.061.2021351103810",
+    "viirs_id": "VNP14IMG.A2019003.1836.002.2024086140848",
+    "aqua_concept_id": "G2298315182-LPCLOUD",
+    "viirs_concept_id": "G2923063887-LPCLOUD",
+    "aqua_start": "2019-01-03T18:40:00.000Z",
+    "aqua_end": "2019-01-03T18:45:00.000Z",
+    "viirs_start": "2019-01-03T18:36:00.000Z",
+    "viirs_end": "2019-01-03T18:42:00.000Z",
+    "minimum_possible_gap_minutes": 0.0,
+    "maximum_possible_gap_minutes": 9.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "definitely_within",
+      "15": "definitely_within",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019005.1825.061.2021362082414",
+    "viirs_id": "VNP14IMG.A2019005.1754.002.2024086150019",
+    "aqua_concept_id": "G2298317889-LPCLOUD",
+    "viirs_concept_id": "G2923072559-LPCLOUD",
+    "aqua_start": "2019-01-05T18:25:00.000Z",
+    "aqua_end": "2019-01-05T18:30:00.000Z",
+    "viirs_start": "2019-01-05T17:54:00.000Z",
+    "viirs_end": "2019-01-05T18:00:00.000Z",
+    "minimum_possible_gap_minutes": 25.0,
+    "maximum_possible_gap_minutes": 36.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "uncertain",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019005.1830.061.2021362082329",
+    "viirs_id": "VNP14IMG.A2019005.1754.002.2024086150019",
+    "aqua_concept_id": "G2298315622-LPCLOUD",
+    "viirs_concept_id": "G2923072559-LPCLOUD",
+    "aqua_start": "2019-01-05T18:30:00.000Z",
+    "aqua_end": "2019-01-05T18:35:00.000Z",
+    "viirs_start": "2019-01-05T17:54:00.000Z",
+    "viirs_end": "2019-01-05T18:00:00.000Z",
+    "minimum_possible_gap_minutes": 30.0,
+    "maximum_possible_gap_minutes": 41.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "uncertain",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019006.1910.061.2021364031650",
+    "viirs_id": "VNP14IMG.A2019006.1918.002.2024086151749",
+    "aqua_concept_id": "G2298316992-LPCLOUD",
+    "viirs_concept_id": "G2923075616-LPCLOUD",
+    "aqua_start": "2019-01-06T19:10:00.000Z",
+    "aqua_end": "2019-01-06T19:15:00.000Z",
+    "viirs_start": "2019-01-06T19:18:00.000Z",
+    "viirs_end": "2019-01-06T19:24:00.000Z",
+    "minimum_possible_gap_minutes": 3.0,
+    "maximum_possible_gap_minutes": 14.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "uncertain",
+      "15": "definitely_within",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019007.1815.061.2021364070200",
+    "viirs_id": "VNP14IMG.A2019007.1900.002.2024086153319",
+    "aqua_concept_id": "G2298319367-LPCLOUD",
+    "viirs_concept_id": "G2923078725-LPCLOUD",
+    "aqua_start": "2019-01-07T18:15:00.000Z",
+    "aqua_end": "2019-01-07T18:20:00.000Z",
+    "viirs_start": "2019-01-07T19:00:00.000Z",
+    "viirs_end": "2019-01-07T19:06:00.000Z",
+    "minimum_possible_gap_minutes": 40.0,
+    "maximum_possible_gap_minutes": 51.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019008.1900.061.2021364111904",
+    "viirs_id": "VNP14IMG.A2019008.1842.002.2024086155119",
+    "aqua_concept_id": "G2298319372-LPCLOUD",
+    "viirs_concept_id": "G2923085089-LPCLOUD",
+    "aqua_start": "2019-01-08T19:00:00.000Z",
+    "aqua_end": "2019-01-08T19:05:00.000Z",
+    "viirs_start": "2019-01-08T18:42:00.000Z",
+    "viirs_end": "2019-01-08T18:48:00.000Z",
+    "minimum_possible_gap_minutes": 12.0,
+    "maximum_possible_gap_minutes": 23.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "uncertain",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019009.1805.061.2021364172012",
+    "viirs_id": "VNP14IMG.A2019009.1824.002.2024086160752",
+    "aqua_concept_id": "G2298320119-LPCLOUD",
+    "viirs_concept_id": "G2923087561-LPCLOUD",
+    "aqua_start": "2019-01-09T18:05:00.000Z",
+    "aqua_end": "2019-01-09T18:10:00.000Z",
+    "viirs_start": "2019-01-09T18:24:00.000Z",
+    "viirs_end": "2019-01-09T18:30:00.000Z",
+    "minimum_possible_gap_minutes": 14.0,
+    "maximum_possible_gap_minutes": 25.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "uncertain",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019010.1845.061.2020283035703",
+    "viirs_id": "VNP14IMG.A2019010.1800.002.2024086163724",
+    "aqua_concept_id": "G2288320782-LPCLOUD",
+    "viirs_concept_id": "G2923086649-LPCLOUD",
+    "aqua_start": "2019-01-10T18:45:00.000Z",
+    "aqua_end": "2019-01-10T18:50:00.000Z",
+    "viirs_start": "2019-01-10T18:00:00.000Z",
+    "viirs_end": "2019-01-10T18:06:00.000Z",
+    "minimum_possible_gap_minutes": 39.0,
+    "maximum_possible_gap_minutes": 50.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019010.1845.061.2020283035703",
+    "viirs_id": "VNP14IMG.A2019010.1942.002.2024086163722",
+    "aqua_concept_id": "G2288320782-LPCLOUD",
+    "viirs_concept_id": "G2923089727-LPCLOUD",
+    "aqua_start": "2019-01-10T18:45:00.000Z",
+    "aqua_end": "2019-01-10T18:50:00.000Z",
+    "viirs_start": "2019-01-10T19:42:00.000Z",
+    "viirs_end": "2019-01-10T19:48:00.000Z",
+    "minimum_possible_gap_minutes": 52.0,
+    "maximum_possible_gap_minutes": 63.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "uncertain"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019011.1930.061.2020283042829",
+    "viirs_id": "VNP14IMG.A2019011.1924.002.2024086165551",
+    "aqua_concept_id": "G2288321016-LPCLOUD",
+    "viirs_concept_id": "G2923093450-LPCLOUD",
+    "aqua_start": "2019-01-11T19:30:00.000Z",
+    "aqua_end": "2019-01-11T19:35:00.000Z",
+    "viirs_start": "2019-01-11T19:24:00.000Z",
+    "viirs_end": "2019-01-11T19:30:00.000Z",
+    "minimum_possible_gap_minutes": 0.0,
+    "maximum_possible_gap_minutes": 11.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "uncertain",
+      "15": "definitely_within",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019012.1835.061.2020283045521",
+    "viirs_id": "VNP14IMG.A2019012.1906.002.2024086171524",
+    "aqua_concept_id": "G2288321379-LPCLOUD",
+    "viirs_concept_id": "G2923096590-LPCLOUD",
+    "aqua_start": "2019-01-12T18:35:00.000Z",
+    "aqua_end": "2019-01-12T18:40:00.000Z",
+    "viirs_start": "2019-01-12T19:06:00.000Z",
+    "viirs_end": "2019-01-12T19:12:00.000Z",
+    "minimum_possible_gap_minutes": 26.0,
+    "maximum_possible_gap_minutes": 37.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "uncertain",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019013.1915.061.2020283060433",
+    "viirs_id": "VNP14IMG.A2019013.1848.002.2024086173318",
+    "aqua_concept_id": "G2288322324-LPCLOUD",
+    "viirs_concept_id": "G2923099779-LPCLOUD",
+    "aqua_start": "2019-01-13T19:15:00.000Z",
+    "aqua_end": "2019-01-13T19:20:00.000Z",
+    "viirs_start": "2019-01-13T18:48:00.000Z",
+    "viirs_end": "2019-01-13T18:54:00.000Z",
+    "minimum_possible_gap_minutes": 21.0,
+    "maximum_possible_gap_minutes": 32.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "uncertain",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019014.1820.061.2020283064002",
+    "viirs_id": "VNP14IMG.A2019014.1830.002.2024086175853",
+    "aqua_concept_id": "G2288322602-LPCLOUD",
+    "viirs_concept_id": "G2923107981-LPCLOUD",
+    "aqua_start": "2019-01-14T18:20:00.000Z",
+    "aqua_end": "2019-01-14T18:25:00.000Z",
+    "viirs_start": "2019-01-14T18:30:00.000Z",
+    "viirs_end": "2019-01-14T18:36:00.000Z",
+    "minimum_possible_gap_minutes": 5.0,
+    "maximum_possible_gap_minutes": 16.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "uncertain",
+      "15": "uncertain",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019015.1905.061.2020283070212",
+    "viirs_id": "VNP14IMG.A2019015.1806.002.2024086182251",
+    "aqua_concept_id": "G2288323439-LPCLOUD",
+    "viirs_concept_id": "G2923110409-LPCLOUD",
+    "aqua_start": "2019-01-15T19:05:00.000Z",
+    "aqua_end": "2019-01-15T19:10:00.000Z",
+    "viirs_start": "2019-01-15T18:06:00.000Z",
+    "viirs_end": "2019-01-15T18:12:00.000Z",
+    "minimum_possible_gap_minutes": 53.0,
+    "maximum_possible_gap_minutes": 64.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "uncertain"
+    }
+  },
+  {
+    "aqua_id": "MYD14.A2019015.1905.061.2020283070212",
+    "viirs_id": "VNP14IMG.A2019015.1948.002.2024086182249",
+    "aqua_concept_id": "G2288323439-LPCLOUD",
+    "viirs_concept_id": "G2923106772-LPCLOUD",
+    "aqua_start": "2019-01-15T19:05:00.000Z",
+    "aqua_end": "2019-01-15T19:10:00.000Z",
+    "viirs_start": "2019-01-15T19:48:00.000Z",
+    "viirs_end": "2019-01-15T19:54:00.000Z",
+    "minimum_possible_gap_minutes": 38.0,
+    "maximum_possible_gap_minutes": 49.0,
+    "time_states": {
+      "5": "definitely_outside",
+      "10": "definitely_outside",
+      "15": "definitely_outside",
+      "30": "definitely_outside",
+      "60": "definitely_within"
+    }
+  }
+]

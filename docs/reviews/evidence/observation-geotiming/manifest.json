@@ -1,0 +1,24 @@
+{
+  "files": {
+    "associations.json": {
+      "bytes": 791736,
+      "sha256": "deefbc7cdc9a784a8500b197e2ed773ed5ab44e1af2da964cc8ca0488784635e"
+    },
+    "code-snapshot.py.txt": {
+      "bytes": 14697,
+      "sha256": "1d39b74932ca5fa8dea788686e6439391219116da612161dfe0d3cc4032c4d61"
+    },
+    "environment.json": {
+      "bytes": 353,
+      "sha256": "2227d83ff5907301809c3f1fa262942ca0ddd8bb294daa218cb20e27f329a385"
+    },
+    "protocol-snapshot.md.txt": {
+      "bytes": 2258,
+      "sha256": "82d37e446ef6572a117f744e88c1a3db5931307182f60e30a04a794805023490"
+    },
+    "summary.json": {
+      "bytes": 5426,
+      "sha256": "2c13c9cde4183253db7e7cb81f67d459e0223d2eb290ce92bc87019c903eeec3"
+    }
+  }
+}

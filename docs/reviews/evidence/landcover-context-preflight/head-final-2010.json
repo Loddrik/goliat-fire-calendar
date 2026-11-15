@@ -1,0 +1,11 @@
+{
+  "metadata_only": true,
+  "request_method": "HEAD",
+  "authorization_used": false,
+  "signed_location_saved": false,
+  "body_bytes_read": 0,
+  "cdn_host": "d1nklfio7vscoe.cloudfront.net",
+  "status": 200,
+  "content_length": "13764955",
+  "content_type": "binary/octet-stream"
+}

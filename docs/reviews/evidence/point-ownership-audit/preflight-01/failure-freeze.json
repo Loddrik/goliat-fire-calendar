@@ -1,0 +1,10 @@
+{
+  "QA_read": false,
+  "all_GEO_gates_passed": false,
+  "code_sha256": "6d5452ff84ba9b5b08730921dd115f0462446679f96cdf113c08230d7f64cafd",
+  "counters_if_available": null,
+  "error": "[Errno 2] No such file or directory: '/Users/dquinteros/nasa/goliat-fire-calendar/docs/reviews/2026-11-15-joint-plan-31-draft.md'",
+  "error_type": "FileNotFoundError",
+  "failed_utc": "2026-11-15T06:25:50.943918+00:00",
+  "gate1_passed": false
+}

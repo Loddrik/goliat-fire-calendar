@@ -1,0 +1,161 @@
+{
+  "role": "loco",
+  "scope": "council38_vote_only_no_data_fit_prediction_or_loss_execution",
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_review_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretation": 10
+  },
+  "formula": "sum(weight_percent * score_1_to_5) / 5; endpoint totals computed by this Python script",
+  "votes": {
+    "A": {
+      "gate": "admissible_for_protocol",
+      "reason": "New full-CDF proper-score question; frozen21 models and same held panels; deltaB is an explicitly degenerate forecast, not calibrated uncertainty. Three transport/selection limitations remain: reused destinations, four overlapping regimes, weak physical interpretation.",
+      "cap_minutes_including_review": 90,
+      "falsifier": "F21 does not outperform deltaB on the frozen equal-four-regime primary, or improvement hides declared territorial/positive-tail costs; preserve mixed/inconclusive outcomes.",
+      "decision_change": "Whether the original frozenCDF deserves a probabilistic-forecast research branch independently of G point decisions; never rescues failed37 or promotes calibration/physical truth.",
+      "criterion_ranges_1_to_5": {
+        "validity_identifiability": [
+          5,
+          5
+        ],
+        "discriminating_information": [
+          4,
+          5
+        ],
+        "feasibility_review_opportunity_cost": [
+          4,
+          4
+        ],
+        "transport_selection": [
+          2,
+          3
+        ],
+        "interpretation": [
+          4,
+          5
+        ]
+      },
+      "weighted_total_range_0_to_100": [
+        80.0,
+        90.0
+      ],
+      "total_status": "subjective_judgment_range_not_probability_or_confidence_interval"
+    },
+    "B": {
+      "gate": "blocked_action_and_cost_undefined",
+      "reason": "Selective error alone can reward discarding difficult months. No concrete action/cost means validity, discriminating value and utility cannot yet be assessed. No zero imputation or weight redistribution.",
+      "cap_minutes_including_review": 90,
+      "falsifier": "No agreed withholding action/cost before losses, or no value beyond matched-intensity/hash controls at matched retention.",
+      "decision_change": "Only after resolving the gate could this change an explicit availability contract; currently not execution-ready.",
+      "criterion_ranges_1_to_5": {
+        "validity_identifiability": null,
+        "discriminating_information": null,
+        "feasibility_review_opportunity_cost": [
+          2,
+          4
+        ],
+        "transport_selection": [
+          2,
+          3
+        ],
+        "interpretation": null
+      },
+      "weighted_total_range_0_to_100": null,
+      "total_status": "not_evaluable_no_weight_redistribution"
+    },
+    "C": {
+      "gate": "documentary_only_no_science_acquisition",
+      "reason": "Bounded independent-operator preflight could close an acquisition route. It cannot directly adjudicate monthly harmonization; coarse negatives do not refute375m positives and only two adaptive cases are in scope.",
+      "cap_minutes_including_review": 45,
+      "falsifier": "No sufficiently localized/timed documented measurement or interpretable unknown/non-detection states.",
+      "decision_change": "Whether a distinct future source-acquisition protocol/budget is justified, not whether a monthly model is superior.",
+      "criterion_ranges_1_to_5": {
+        "validity_identifiability": [
+          4,
+          4
+        ],
+        "discriminating_information": [
+          2,
+          3
+        ],
+        "feasibility_review_opportunity_cost": [
+          4,
+          5
+        ],
+        "transport_selection": [
+          1,
+          2
+        ],
+        "interpretation": [
+          3,
+          4
+        ]
+      },
+      "weighted_total_range_0_to_100": [
+        59.0,
+        73.0
+      ],
+      "total_status": "subjective_judgment_range_not_probability_or_confidence_interval"
+    },
+    "D": {
+      "gate": "admissible_consolidation",
+      "reason": "Reconciles existing verified positive and negative evidence into a defensible closing decision; high feasibility, limited novelty and no new transport evidence.",
+      "cap_minutes_including_review": 60,
+      "falsifier": "Provenance or scientific claims do not match verified artifacts; correct before closing, without new fitting.",
+      "decision_change": "What can responsibly be retained, rejected or left unknown at session close; no automatic promotion.",
+      "criterion_ranges_1_to_5": {
+        "validity_identifiability": [
+          5,
+          5
+        ],
+        "discriminating_information": [
+          3,
+          4
+        ],
+        "feasibility_review_opportunity_cost": [
+          5,
+          5
+        ],
+        "transport_selection": [
+          2,
+          3
+        ],
+        "interpretation": [
+          5,
+          5
+        ]
+      },
+      "weighted_total_range_0_to_100": [
+        81.0,
+        89.0
+      ],
+      "total_status": "subjective_judgment_range_not_probability_or_confidence_interval"
+    }
+  },
+  "operational_order": [
+    "A",
+    "D",
+    "C"
+  ],
+  "B_rank": "not_admissible_pending_gate",
+  "recommendation": "A+D, with D assured and no extra model family. This is an operational preference, not a robust numeric ranking: A80..90 overlaps D81..89.",
+  "horizon_assumption_minutes": 170,
+  "A_plus_D_caps_minutes": 150,
+  "remaining_buffer_minutes": 20,
+  "resource_notes": [
+    "Caps include independent review, not just execution.",
+    "IfA reaches a preflight/reproduction stop, preserve it and consolidate rather than expanding scope.",
+    "C is not added toA+D unless explicit prioritization preserves the hard closing horizon.",
+    "No scoring can offset physical-truth/unknown/unit/protocol violations."
+  ],
+  "preserved_negatives": [
+    "35A primary negative",
+    "37 joint primary negative; differing active pools do not support a universal chronology-null claim",
+    "30B continuous geometry failure",
+    "G1physicalfalse"
+  ],
+  "commit_or_push": false
+}

@@ -1,0 +1,35 @@
+{
+  "completed_utc": "2026-11-15T08:20:08.527388+00:00",
+  "protected_unchanged": true,
+  "output_sha256": {
+    "summary.json": "cd54d7484907afaeed0ea483380f5a8ef3f97d5ca5b61c6e1e2ce1f6a0409cd9",
+    "query-support.csv": "6c7305291a3c4dad91780a758491b9368fef37abc9c043c58534dae314ab338c",
+    "checkpoint.json": "55b49922c7aa3d94ba0e27657f8e8e9d72af46f277e2f97a9538d09fa82773e3",
+    "primary_contrasts.csv": "7620f695207951235fec2cdd6fa366f9b762f6cd102920405cfbb58974ed8b76",
+    "features-controls.parquet": "f911e9bee1bd75fd0dad5f8592510aca271ceb69356e0e70e828f5720b0aa8bc",
+    "control_allocation_checks.csv": "c56f464cb5dcc9e5fea82280e4b3d9b33c2970ab39627f65eb8605c8a5857a7b",
+    "evaluated_predictions.parquet": "f88a755effc13958a452c0b0d373d486365da02a0997061140c032a6579819fa",
+    "synthetic-tests.json": "25ba32cae9ea50bb3c1e32bae58a40392b67e7a7432a55d04c04ace217214be1",
+    "label-invariance.json": "c1f2dc8557e35acef40c0a646a5e472912bab2131db4c012ac27163207dfa67b",
+    "prediction-freeze.json": "5dad677218bfebc933e188fa42a9379cf9eeaacc04333815824f632298bf2f57",
+    "source-selectors-checkpoint.json": "a4200769ed2b87527d6cee7b474a5fb522a869832d1cca69b94bfade9124f5c0",
+    "candidate_allocation_checks.csv": "b0cd968e03c80f5df4f1b7de87315b1175b98237070330b731471af56ae33120",
+    "constant_models.json": "c527ec9d2baf0d75776227c253ce1ed92489effd9761a0550eafa154d7ecd234",
+    "per_CUT.csv": "ef10a7faee7818d2355e3329d89b510e0569d4c7299c7acdac2ee32bbefb55fb",
+    "candidate-models.json": "23adc102386526d1a6b84824f3ab45ed71624d4ed8dbb71bc0b9dca1bdf15fba",
+    "source-selectors-fit.json": "91e87abd39af4c985d190f366feb50fa6a63849aa506f17a7431d2094e71fcd2",
+    "code-freeze.json": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6",
+    "predictions-before-evaluation-labels.parquet": "f04f6bbd129ddb361d1775417aec8564e6732ed36d16c3562fb46b21d63093a7"
+  },
+  "counts": {
+    "fit_calls": 21,
+    "solver_calls": 768
+  },
+  "physical_bytes_before_manifest": 4551368,
+  "rows": 10368,
+  "peak_RSS_bytes": 160755712,
+  "RSS_unit": "bytes; darwin native/LinuxKiBconverted",
+  "code_freeze_sha256": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6",
+  "prediction_freeze_sha256": "5dad677218bfebc933e188fa42a9379cf9eeaacc04333815824f632298bf2f57",
+  "cap_end_utc": "2026-11-15T09:07:07+00:00"
+}

@@ -1,0 +1,101 @@
+{
+  "role": "multifocal_engineering_access_and_closure",
+  "ratified_utc": "2026-11-15T13:54:16.482767+00:00",
+  "criteria_ACK": true,
+  "criteria_sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0",
+  "method": "Ordered qualitative delivery criteria; no synthetic scores or transfer of research weights",
+  "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+  "plan_path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+  "plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+  "counterpart_reviews_sha256": {
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-science.json": "9ee9c93a8b282342722ef88c3021fb0096ed76740dede7ee0efb433699bb3ab1",
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-product.json": "ddf32944eeda24cb021d77be571db02af496ae3ddd9264643fe2337a6e4fffe5",
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-release.json": "db7c041a045832381e4811cdd8fc8b04d7cd9c8eba84b1c903cf42306a5240c9"
+  },
+  "ordered_actions": [
+    "P0 defensible claims and answers",
+    "P0 identified demo candidate and openable package",
+    "P0 bounded rehearsal with honest fallback",
+    "P1 custody of raw and exact missing manifest",
+    "P1 seasonal metadata contract only",
+    "P1 deterministic dedup RFC only"
+  ],
+  "blocking_objections": [],
+  "response_to_counterpart": [
+    {
+      "ids": [
+        "AR1"
+      ],
+      "position": "ACCEPT",
+      "response": "Owners and actual start time must be registered before certifying feasibility. Preserve the100/65/80-minute critical paths, omitP1 as needed, reserve15minutes for closure, and use incomplete-rehearsal fallback if no path fits."
+    },
+    {
+      "ids": [
+        "AR2",
+        "AP2"
+      ],
+      "position": "ACCEPT",
+      "response": "The identified358-test/CI receipt is evidence for its exact6410fcb commit, not a different delivered artifact. Candidate and package require their own version/hash/opening record. This vote certifies no new test run or package opening."
+    },
+    {
+      "ids": [
+        "AR3",
+        "AP5",
+        "AS4"
+      ],
+      "position": "ACCEPT",
+      "response": "Code-derived routes are not rehearsal. External map styles require connectivity or a documented table/calendar/capture fallback. Coordinator will record actual execution separately; no offline, merge or deployment guarantee follows from this plan."
+    },
+    {
+      "ids": [
+        "AR4"
+      ],
+      "position": "ACCEPT",
+      "response": "A verified956-member archive does not prove recipient access. Keep custody/transfer status explicit and preserve115missing. Completing recovery does not block the demo and is not authorized here."
+    },
+    {
+      "ids": [
+        "AP1",
+        "AS3"
+      ],
+      "position": "ACCEPT_AS_FINAL_PACKAGING_CHECK",
+      "response": "Coordinator must complete HTML/index/source map/appendix and verify links before claiming the package complete. These are completion gates, not objections to the priority order."
+    },
+    {
+      "ids": [
+        "AS1"
+      ],
+      "position": "ACCEPT",
+      "response": "Do not identify the strict205-source difference as the exact native-record tie diagnosed in the38-file subset without new evidence. Technical wording should make that attribution limit explicit; no additional analysis is requested."
+    },
+    {
+      "ids": [
+        "AS2",
+        "AP4",
+        "AP7"
+      ],
+      "position": "ACCEPT_AS_BOUNDED_COPY_EDITS",
+      "response": "Gloss monthly mean absolute error in cell-days, retain retrospective/no-impact limits, and correct joined words. Frozen numerical values and scientific scope remain unchanged."
+    },
+    {
+      "ids": [
+        "AP3"
+      ],
+      "position": "ACCEPT",
+      "response": "Individual proposals, adversarial ratifications and final joint decision remain distinct. This file records only this engineering vote on the exact reviewed plan; no claim of blind votes or completed six-role consensus is invented."
+    },
+    {
+      "ids": [
+        "AP6"
+      ],
+      "position": "ACCEPT_AS_FUTURE_WORK",
+      "response": "A future municipal pilot can test same-cutoff seasonal comparison, observed/estimated interpretation and export comprehension before impact orROI claims. No recruitment/contact/action is authorized by ratification."
+    }
+  ],
+  "execution_certified": false,
+  "new_scientific_computations": false,
+  "new_data_acquisition": false,
+  "merges_deployments_or_canonical_changes_authorized": false,
+  "plan_modified_by_this_vote": false,
+  "remaining_coordinator_gate": "Record separate execution/package receipts and aggregate the real votes. Preserve this reviewed plan SHA; scientific or priority changes require renewed review."
+}

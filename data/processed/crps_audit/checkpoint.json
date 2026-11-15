@@ -1,0 +1,58 @@
+{
+  "completed_utc": "2026-11-15T08:54:37.636703+00:00",
+  "all_identities_and_fixtures_passed": true,
+  "identities": [
+    {
+      "regime": "08_forward",
+      "rows": 2592,
+      "max_abs_identity_errors": {
+        "B": 0.0,
+        "median": 0.0,
+        "mean": 2.842170943040401e-14
+      },
+      "full_CDF_restored_without_fit_or_solver": true
+    },
+    {
+      "regime": "08_backward",
+      "rows": 2592,
+      "max_abs_identity_errors": {
+        "B": 0.0,
+        "median": 0.0,
+        "mean": 2.842170943040401e-14
+      },
+      "full_CDF_restored_without_fit_or_solver": true
+    },
+    {
+      "regime": "16_forward",
+      "rows": 2592,
+      "max_abs_identity_errors": {
+        "B": 0.0,
+        "median": 0.0,
+        "mean": 2.842170943040401e-14
+      },
+      "full_CDF_restored_without_fit_or_solver": true
+    },
+    {
+      "regime": "16_backward",
+      "rows": 2592,
+      "max_abs_identity_errors": {
+        "B": 0.0,
+        "median": 0.0,
+        "mean": 1.4210854715202004e-14
+      },
+      "full_CDF_restored_without_fit_or_solver": true
+    }
+  ],
+  "rows": 10368,
+  "atom_elements": 444826,
+  "held_E11_parent_exact_checks": 5184,
+  "original_weight_policy": "preserve zero/tied atoms; normalize rawweights once by fsum",
+  "CDF_snapshot_sha256": "561ba3df6fa5ec53a0a4976d355a511601f63f6e91f2e56fa1c9e997ff191e7e",
+  "roster_sha256": "25529ba8360e8be25dc1c1414a70951ff5fb08459c5d1caf83796baf83146115",
+  "code_freeze_sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f",
+  "no_real_response_join_or_score_yet": true,
+  "fits": 0,
+  "solvers": 0,
+  "science_downloads": 0,
+  "peak_RSS_bytes": 169148416
+}

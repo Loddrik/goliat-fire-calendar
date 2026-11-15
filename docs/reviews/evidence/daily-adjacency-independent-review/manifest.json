@@ -1,0 +1,18 @@
+{
+  "files": {
+    "summary.json": {
+      "bytes": 2326,
+      "sha256": "8a9ddc67402a409d5b2c1bc5c55d10af2c6b6e902306c9e0aff26d32f29c3948"
+    },
+    "verifier-code.py.txt": {
+      "bytes": 13070,
+      "sha256": "933510738274bf89cbab942438a7a4502f5a1fd8e281e1a1c5cdf341f214b0e7"
+    },
+    "freeze.json": {
+      "bytes": 5094,
+      "sha256": "726a7349fad8c8f5f0384691c9e4fddbbc65dde755e67e6c232b5a8886197a9c"
+    }
+  },
+  "producer_manifest_unchanged": true,
+  "original_cap_end_utc": "2026-11-15T08:33:23+00:00"
+}

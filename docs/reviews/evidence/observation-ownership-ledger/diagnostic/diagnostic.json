@@ -1,0 +1,426 @@
+{
+  "code_sha256": "a77fe2e90b4005b4c0ce93dd5034712324cbe527b8225f6d658600545a2a2054",
+  "source_code_sha256": "058a60986c28efe3b96fb10dbb2fb872e87b2f460e477c65077f784b515ff2d5",
+  "GEO_only": true,
+  "grid_changed": false,
+  "cases": {
+    "MYD14_early": {
+      "union_valid": true,
+      "other_valid": true,
+      "union_validity": "Valid Geometry",
+      "other_validity": "Valid Geometry",
+      "union_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "other_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "union_area_m2": 2499999999.9999876,
+      "other_area_m2": 2498580100.0486503,
+      "union_AOI_symmetric_difference_m2": 1.324796539847739e-05,
+      "other_AOI_symmetric_difference_m2": 1419899.9513587102,
+      "selected": [
+        {
+          "row": 818,
+          "col": 1166,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            710986.3769512784,
+            5893283.51571407,
+            713015.3926404947,
+            5894806.05283685
+          ],
+          "area_m2": 2656776.3652512697,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 2656776.3652512226,
+          "intersection_plus_difference_residual_m2": 4.7031790018081665e-08,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 844,
+          "col": 1161,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            717246.943729782,
+            5918231.3011306655,
+            719252.6733826345,
+            5919751.664023943
+          ],
+          "area_m2": 2610235.1816886277,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 2610235.181688485,
+          "difference_area_m2": 1.3748422134085558e-07,
+          "intersection_plus_difference_residual_m2": 5.008132575312629e-09,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 811,
+          "col": 1154,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            734753.3510583609,
+            5886450.286972669,
+            736684.1674903191,
+            5887164.685079723
+          ],
+          "area_m2": 1065179.1843835772,
+          "relate_other": "2FF1FF212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 1065179.1843835772,
+          "difference_area_m2": 0.0,
+          "intersection_plus_difference_residual_m2": 0.0,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 833,
+          "col": 1149,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            741187.959705734,
+            5908934.153868174,
+            743149.0005652191,
+            5910428.353839504
+          ],
+          "area_m2": 2495637.9405776053,
+          "relate_other": "2121FF212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 2495637.9405775475,
+          "difference_area_m2": 5.7887518778443336e-08,
+          "intersection_plus_difference_residual_m2": -1.4551915228366852e-10,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        }
+      ]
+    },
+    "VNP14IMG_early": {
+      "union_valid": true,
+      "other_valid": true,
+      "union_validity": "Valid Geometry",
+      "other_validity": "Valid Geometry",
+      "union_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "other_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "union_area_m2": 2498580100.0486503,
+      "other_area_m2": 2499999999.9999876,
+      "union_AOI_symmetric_difference_m2": 1419899.9513587102,
+      "other_AOI_symmetric_difference_m2": 1.324796539847739e-05,
+      "selected": [
+        {
+          "row": 2076,
+          "col": 3864,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            700291.3429552095,
+            5903660.696276468,
+            700789.2447972657,
+            5904113.706447942
+          ],
+          "area_m2": 179084.11659489258,
+          "relate_other": "2FF10F212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 179084.1165948915,
+          "intersection_plus_difference_residual_m2": 1.076841726899147e-09,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 2051,
+          "col": 3869,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            699392.3707299872,
+            5893499.417299558,
+            699887.6622310199,
+            5893954.05212111
+          ],
+          "area_m2": 177775.3865198072,
+          "relate_other": "2FF10F212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 177775.38651979424,
+          "intersection_plus_difference_residual_m2": 1.2951204553246498e-08,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 2020,
+          "col": 3853,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            708597.7239088708,
+            5883240.643966781,
+            709091.9048308788,
+            5883694.8453050535
+          ],
+          "area_m2": 178160.8434054738,
+          "relate_other": "2FF1FF212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 178160.84340547383,
+          "difference_area_m2": 0.0,
+          "intersection_plus_difference_residual_m2": -2.9103830456733704e-11,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        }
+      ]
+    },
+    "MYD14_late": {
+      "union_valid": true,
+      "other_valid": true,
+      "union_validity": "Valid Geometry",
+      "other_validity": "Valid Geometry",
+      "union_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "other_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "union_area_m2": 2499999999.999987,
+      "other_area_m2": 2498580100.0486503,
+      "union_AOI_symmetric_difference_m2": 1.3205887626099866e-05,
+      "other_AOI_symmetric_difference_m2": 1419899.9513582396,
+      "selected": [
+        {
+          "row": 818,
+          "col": 1166,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            711071.2558252133,
+            5893283.51571407,
+            713015.3926404947,
+            5893721.150019292
+          ],
+          "area_m2": 539759.5758606689,
+          "relate_other": "2FF1FF212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 539759.5758606689,
+          "difference_area_m2": 0.0,
+          "intersection_plus_difference_residual_m2": 0.0,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 844,
+          "col": 1161,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            717246.943729782,
+            5918231.3011306655,
+            719252.6733826345,
+            5919751.664023943
+          ],
+          "area_m2": 2610235.1816886277,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 2610235.1816886575,
+          "intersection_plus_difference_residual_m2": -2.9802322387695312e-08,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 811,
+          "col": 1154,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            734753.3510583609,
+            5885655.065397531,
+            736745.7671250555,
+            5887164.685079723
+          ],
+          "area_m2": 2560468.167407156,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 2560468.167407139,
+          "intersection_plus_difference_residual_m2": 1.6763806343078613e-08,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 833,
+          "col": 1149,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            741187.959705734,
+            5908934.153868174,
+            743149.0005652191,
+            5910428.353839504
+          ],
+          "area_m2": 2495637.9405776053,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 2.9637163834195235e-08,
+          "difference_area_m2": 2495637.940577575,
+          "intersection_plus_difference_residual_m2": 4.656612873077393e-10,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        }
+      ]
+    },
+    "VNP14IMG_late": {
+      "union_valid": true,
+      "other_valid": true,
+      "union_validity": "Valid Geometry",
+      "other_validity": "Valid Geometry",
+      "union_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "other_bbox": [
+        697459.8026976171,
+        5877205.764776958,
+        747459.8026976171,
+        5927205.764776958
+      ],
+      "union_area_m2": 2498580100.0486503,
+      "other_area_m2": 2499999999.999987,
+      "union_AOI_symmetric_difference_m2": 1419899.9513582396,
+      "other_AOI_symmetric_difference_m2": 1.3205887626099866e-05,
+      "selected": [
+        {
+          "row": 2076,
+          "col": 3864,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            700291.3429552095,
+            5903660.696276468,
+            700789.2447972657,
+            5904113.706447942
+          ],
+          "area_m2": 179084.11659489258,
+          "relate_other": "2FF1FF212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 179084.11659489258,
+          "difference_area_m2": 0.0,
+          "intersection_plus_difference_residual_m2": 0.0,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 2051,
+          "col": 3869,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            699392.3707299872,
+            5893499.417299558,
+            699887.6622310199,
+            5893954.05212111
+          ],
+          "area_m2": 177775.3865198072,
+          "relate_other": "2FF1FF212",
+          "covered_by_other": true,
+          "within_other": true,
+          "intersection_area_m2": 177775.38651980716,
+          "difference_area_m2": 0.0,
+          "intersection_plus_difference_residual_m2": 2.9103830456733704e-11,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "Polygon",
+          "other_covers_representative_point": true
+        },
+        {
+          "row": 2020,
+          "col": 3853,
+          "owner_valid": true,
+          "validity": "Valid Geometry",
+          "bbox": [
+            708597.7239088708,
+            5883240.643966781,
+            709091.9048308788,
+            5883694.8453050535
+          ],
+          "area_m2": 178160.8434054738,
+          "relate_other": "21210F212",
+          "covered_by_other": false,
+          "within_other": false,
+          "intersection_area_m2": 0.0,
+          "difference_area_m2": 178160.8434054816,
+          "intersection_plus_difference_residual_m2": -7.799826562404633e-09,
+          "intersection_valid": true,
+          "difference_valid": true,
+          "intersection_type": "LineString",
+          "other_covers_representative_point": true
+        }
+      ]
+    }
+  }
+}

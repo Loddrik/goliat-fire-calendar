@@ -1,0 +1,71 @@
+{
+  "all_cube_integrity_gates_passed": true,
+  "files": {
+    "Aqua21_feature_projection.csv.gz": {
+      "bytes": 29429,
+      "sha256": "1c4115e68df1ebe863f9a4ceb7c75aba37152fb22f2e582b39176bd5c73c21ab"
+    },
+    "block_invariants.csv.gz": {
+      "bytes": 220716,
+      "sha256": "1773c37c8b5bcb1f4e080c94d4e87375a768bb5bb1e395b10fc7bf68b6a86cdb"
+    },
+    "canonical_Aqua_support.csv.gz": {
+      "bytes": 55570,
+      "sha256": "336a62f9fb6fc02707ba8b54fb27b87e16c5a75b1b540073ffa37cede1eec619"
+    },
+    "checkpoint.json": {
+      "bytes": 1631,
+      "sha256": "c915c5dc2b8fd7f93cb2c6e91fafb3fa0a08ff0c142ad625821d39ee742f9fa3"
+    },
+    "code.snapshot.py.txt": {
+      "bytes": 17253,
+      "sha256": "12b4fd53f57a9aeb149b5d959d755d1de6616b336b9b5fcb4e2b082ab6ef3993"
+    },
+    "cube.csv.gz": {
+      "bytes": 18875,
+      "sha256": "dc4a377daa40c42bf3b8c460e220d8619e9deda05adda3f4908b89b59d8c7782"
+    },
+    "cube.parquet": {
+      "bytes": 11918,
+      "sha256": "adf3c22af86b6b03c36aa5a00594a5008ea3be8f2b07e6bb8ec9d7fbc802f072"
+    },
+    "design.snapshot.md.txt": {
+      "bytes": 13629,
+      "sha256": "56c902ab443d391047838b87de6795c206788b8ce5bbdf9c0fa28c0c04cbebdf"
+    },
+    "freeze.json": {
+      "bytes": 1885,
+      "sha256": "8f778677797ef94bab6a2552fc63f6fe63fa7aa64f1e02846c4523627822f8f7"
+    },
+    "fullcalendar_permutations.csv.gz": {
+      "bytes": 570006,
+      "sha256": "72b816826e29ae42380fc8c26ce6cef4cdd450852790b694a2e34cb18c0bc75d"
+    },
+    "mask6.csv": {
+      "bytes": 86,
+      "sha256": "7758c87910d7d6ab010841e5fb5f2164c1a64fb5605d2a268c2926b66d3a8a93"
+    },
+    "monthly_identity_all10368.csv.gz": {
+      "bytes": 32286,
+      "sha256": "a44d1f3fd9673e4604821679160f3844599f2188e474c5396dbcbc4d13e37f4d"
+    },
+    "protocol.snapshot.md.txt": {
+      "bytes": 5959,
+      "sha256": "f12fe4cbebf08e3f9897a50ddd2682ca778524e6be3b62999c9baa69195d55fe"
+    },
+    "regime_contract.json": {
+      "bytes": 613,
+      "sha256": "da0deb0d778fb263971b08dddffc7c52862f53a369c231d3d06016934d98fe70"
+    },
+    "summary.json": {
+      "bytes": 64835,
+      "sha256": "0adc140387f4e37c545f7f8c4cbe4de530caae4516c7cab8ee7b2015168a6b18"
+    },
+    "tests.snapshot.py.txt": {
+      "bytes": 2767,
+      "sha256": "dba9fcba79530509aef2dad4b352328e18a42fdfc7506dd08630a63025fbc59e"
+    }
+  },
+  "model_fitted": false,
+  "response_columns_read": []
+}

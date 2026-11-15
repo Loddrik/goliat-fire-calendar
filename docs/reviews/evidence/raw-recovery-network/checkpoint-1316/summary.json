@@ -1,0 +1,32 @@
+{
+  "completed_utc": "2026-11-15T13:16:20.811134+00:00",
+  "status": "PARTIAL_EXACT_RECOVERY",
+  "inventory_total": 1071,
+  "prior_local_exact": 38,
+  "network_exact_unique": 521,
+  "network_exact_bytes": 26056183,
+  "combined_exact_unique": 559,
+  "remaining_exact_originals": 512,
+  "requests_attempted": 650,
+  "response_payload_bytes_accounted": 26080639,
+  "payload_budget_bytes": 157286400,
+  "attempt_status_counts": {
+    "transport_error": 4,
+    "exact": 521,
+    "mismatch": 3,
+    "http_error": 122
+  },
+  "unresolved_latest_status_counts": {
+    "mismatch": 3,
+    "http_error": 102,
+    "not_attempted": 407
+  },
+  "inventory_sha256": "97428b84e89ae70c9d87529a0239a5b4872a453f42b6f853cb51a7377b1090ad",
+  "helper_sha256": "e1ccb3a0b7d3158eb93df8b4c68a1eb4136617ceff7e7296b780ddab4756cf81",
+  "raw_CANONICAL_files_written": 0,
+  "processed_files_written": 0,
+  "inventory_modified": false,
+  "L2_scientific_bytes_downloaded": 0,
+  "credential_values_or_private_API_URLs_persisted": false,
+  "scope": "SHA256+byte-exact staging only; unmatched responses remain quarantine; no raw paths restored by this task"
+}

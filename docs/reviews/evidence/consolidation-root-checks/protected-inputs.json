@@ -1,0 +1,15 @@
+{
+  "completed_utc": "2026-11-15T09:48:34.171669+00:00",
+  "status": "pass",
+  "reference_code_freeze_sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f",
+  "verified_file_counts": {
+    "code_sha256": 8,
+    "input_sha256": 12,
+    "protected_sha256": 448
+  },
+  "all_named_hashes_unchanged": true,
+  "scope": "Existing source, research and publication inputs named by study39 freeze; additional documentation files are not silently included in that historical snapshot.",
+  "new_scientific_downloads": 0,
+  "new_model_fits": 0,
+  "publication_changed": false
+}

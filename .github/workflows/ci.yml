@@ -16,6 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Informe científico coincide con sus fuentes congeladas
+        run: |
+          python3 pipeline/build_joint_plan_report.py
+          git diff --exit-code -- docs/artifacts/science-observation-plan-2026-11-15.html
+
+      - name: Handoff HTML coincide con Markdown
+        run: |
+          python3 -m venv "$RUNNER_TEMP/goliat-handoff-render"
+          "$RUNNER_TEMP/goliat-handoff-render/bin/pip" install -r docs/handoff/2026-11-15/requirements-render.txt
+          "$RUNNER_TEMP/goliat-handoff-render/bin/python" pipeline/build_presentation_handoff.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22

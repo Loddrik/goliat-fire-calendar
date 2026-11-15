@@ -1,0 +1,50 @@
+{
+  "role": "multifocal negocio y usuario municipal",
+  "ratified_utc": "2026-11-15T13:54:09.326154+00:00",
+  "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+  "plan_path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+  "plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+  "criteria_ack": "Mismo orden cualitativo congelado: respaldo, valor observable, alcance, dependencias y aceptación/reversibilidad. Sin nuevos puntajes.",
+  "adversarial_inputs": [
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/adversary-product.json",
+      "sha256": "ddf32944eeda24cb021d77be571db02af496ae3ddd9264643fe2337a6e4fffe5"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/adversary-release.json",
+      "sha256": "db7c041a045832381e4811cdd8fc8b04d7cd9c8eba84b1c903cf42306a5240c9"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/adversary-science.json",
+      "sha256": "9ee9c93a8b282342722ef88c3021fb0096ed76740dede7ee0efb433699bb3ab1"
+    }
+  ],
+  "ordered_actions": [
+    "P0 afirmaciones defendibles y preguntas",
+    "P0 candidato identificado y paquete abrible",
+    "P0 ensayo acotado con respaldo honesto",
+    "P1 custodia raw y faltantes",
+    "P1 contrato de metadatos estacionales sin publicar",
+    "P1 RFC de desempate sin aplicar"
+  ],
+  "indispensable_objections": [],
+  "response_to_adversaries": {
+    "AP2": "Resuelto en mi resumen con el recibo CI inspeccionado:358 tests se vinculan a6410fcb, no a cualquier candidato.",
+    "AP4_AS2": "Factor de presentación2,35 con precisión completa en nota; MAE explicado en la primera aparición.",
+    "AP5_AR3": "Se conserva el guion sugerido, no ensayado; se añadió la dependencia externa del mapa y el respaldo de tabla/capturas con versión.",
+    "AP6": "Piloto futuro con tarea concreta de comparación, lectura y exportación, sin ROI ni contactos.",
+    "AP1_AS3_AR2": "Índice, HTML, apertura y paquete requieren un recibo final del coordinador; no se declaran terminados por este voto.",
+    "AR1_AR4_AS4": "Personas, hora de inicio, acceso raw y ensayo son condiciones para declarar ejecución; no hechos ya acreditados."
+  },
+  "conditions": [
+    "P1 no bloquea P0 ni consume el cierre reservado.",
+    "La ratificación no autoriza implementación API, ingestión, ajuste, merge, despliegue o contacto externo.",
+    "No inferir la causa de la diferencia histórica de205 fuentes a partir del empate documentado en38 sin atribución independiente.",
+    "Ratificación de este rol, no consenso ni tareas completadas en nombre de otros."
+  ],
+  "my_document_updates": {
+    "path": "docs/handoff/2026-11-15/resumen-negocio.md",
+    "sha256": "6211a0805da0b2090dc85c1242a2a1bc2e21c8c33003d94971ef863acae5aa9b"
+  },
+  "cost_dissent_preserved": "Mi estimación inicial de20 minutos para el ensayo no sustituye los30–45 minutos con contingencia de ingeniería; ratifico la planificación conservadora y la alternativa documentada."
+}

@@ -1,0 +1,638 @@
+{
+  "engine_error_messages": [],
+  "fire_data_read": false,
+  "gate1_passed": false,
+  "library_path": "/Users/dquinteros/nasa/goliat-fire-calendar/.runtime/geometry-engine-diagnostic/build/lib/libgeos_c.1.21.0.dylib",
+  "library_sha256": "9906c58e7de5c80454139cea93d9cc03c32e6064201e680cf510990f52ecfa5c",
+  "physical_exposure_verified": false,
+  "precision_or_repair_changed": false,
+  "rows": [
+    {
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 2656776.3652512226,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 2495923323.683399,
+        "type": "Polygon",
+        "valid": true
+      },
+      "id": "MYD14_early-818-1166",
+      "identities_within_1m2": false,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 4.7031790018081665e-08,
+        "partition_q": 2656776.3652510643,
+        "union_order": 0.0,
+        "union_pq": -2656776.3652510643,
+        "union_qp": -2656776.3652510643
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "kind": "selected_GEO_regression_counterexample",
+      "other_union": "MYD14_early-818-1166-other_union.wkb.gz",
+      "p": {
+        "area_m2": 2656776.3652512697,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "MYD14_early-818-1166-pixel.wkb.gz",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 2498580100.0486503,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": false,
+      "union_pq": {
+        "area_m2": 2498580100.0486503,
+        "type": "Polygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 2498580100.0486503,
+        "type": "Polygon",
+        "valid": true
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "fe5febc0d057469a00c22d19a92e61b4060af576bf70e56118c67f3151959331",
+        "pixel": "35fa42b82426e8172c50fa93c07855a21ef2b2d64c0c9941b176cfec9e300014"
+      }
+    },
+    {
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 2495637.940577575,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 2498580100.0486503,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "id": "MYD14_late-833-1149",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 4.656612873077393e-10,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 2.9637249099323526e-08,
+        "union_qp": 2.9637249099323526e-08
+      },
+      "intersection_pq": {
+        "area_m2": 2.9637249099323526e-08,
+        "type": "Polygon",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 2.9637249099323526e-08,
+        "type": "Polygon",
+        "valid": true
+      },
+      "kind": "selected_GEO_regression_counterexample",
+      "other_union": "MYD14_late-833-1149-other_union.wkb.gz",
+      "p": {
+        "area_m2": 2495637.9405776053,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "MYD14_late-833-1149-pixel.wkb.gz",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 2498580100.0486503,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": true,
+      "union_pq": {
+        "area_m2": 2501075737.989228,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 2501075737.989228,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "c553b893ac0ed6b89f38e4bbafac2b6da1fe23f8eb335facf867187db7ee9218",
+        "pixel": "552c24eee25f67397a19669d2d3f6e4cee78f886262034498ede42accb751bf0"
+      }
+    },
+    {
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 2610235.181688658,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 2498580100.0486503,
+        "type": "MultiPolygon",
+        "valid": false
+      },
+      "id": "MYD14_late-844-1161",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": -3.026798367500305e-08,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "kind": "selected_GEO_regression_counterexample",
+      "other_union": "MYD14_late-844-1161-other_union.wkb.gz",
+      "p": {
+        "area_m2": 2610235.1816886277,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "MYD14_late-844-1161-pixel.wkb.gz",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 2498580100.0486503,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": false,
+      "union_pq": {
+        "area_m2": 2501190335.230339,
+        "type": "MultiPolygon",
+        "valid": false
+      },
+      "union_qp": {
+        "area_m2": 2501190335.230339,
+        "type": "MultiPolygon",
+        "valid": false
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "c553b893ac0ed6b89f38e4bbafac2b6da1fe23f8eb335facf867187db7ee9218",
+        "pixel": "0d833d60b6a4807447fa4217785a390c0112158e1dc5b9c1976bd9ee7d1409b8"
+      }
+    },
+    {
+      "covered_by_pq": true,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 177775.38651979424,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 2499999999.9999876,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "id": "VNP14IMG_early-2051-3869",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 1.2951204553246498e-08,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "kind": "selected_GEO_regression_counterexample",
+      "other_union": "VNP14IMG_early-2051-3869-other_union.wkb.gz",
+      "p": {
+        "area_m2": 177775.3865198072,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "VNP14IMG_early-2051-3869-pixel.wkb.gz",
+      "predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "q": {
+        "area_m2": 2499999999.9999876,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": false,
+      "union_pq": {
+        "area_m2": 2500177775.3865075,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 2500177775.3865075,
+        "type": "GeometryCollection",
+        "valid": true
+      },
+      "within_pq": true,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "46c96888b793df9472cdce8c3fc7e91db95a1ce6ea60abc15de213558f00dad6",
+        "pixel": "dbbf94207c0f1d95df93f1eed7cea4752afabc987c929c5793bfea998005da9b"
+      }
+    },
+    {
+      "covered_by_pq": true,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 179084.11659489147,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 2499820915.883405,
+        "type": "Polygon",
+        "valid": true
+      },
+      "id": "VNP14IMG_early-2076-3864",
+      "identities_within_1m2": false,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 1.1059455573558807e-09,
+        "partition_q": 179084.11658239365,
+        "union_order": 0.0,
+        "union_pq": -179084.11658239365,
+        "union_qp": -179084.11658239365
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "kind": "selected_GEO_regression_counterexample",
+      "other_union": "VNP14IMG_early-2076-3864-other_union.wkb.gz",
+      "p": {
+        "area_m2": 179084.11659489258,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "VNP14IMG_early-2076-3864-pixel.wkb.gz",
+      "predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "q": {
+        "area_m2": 2499999999.9999876,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": false,
+      "union_pq": {
+        "area_m2": 2500000000.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 2500000000.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "within_pq": true,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "46c96888b793df9472cdce8c3fc7e91db95a1ce6ea60abc15de213558f00dad6",
+        "pixel": "02344ef6f1fdf73083a061508ee4b2862789428f2c14ae175522df929836adc2"
+      }
+    },
+    {
+      "control_expected_areas_pass": true,
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "expected_areas_p_q_i_dp_dq_u": [
+        100,
+        100,
+        0,
+        100,
+        100,
+        200
+      ],
+      "id": "control_disjoint",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 0.0,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "kind": "synthetic_control",
+      "other_union": "control_disjoint-other_union.wkb",
+      "p": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "control_disjoint-pixel.wkb",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": true,
+      "union_pq": {
+        "area_m2": 200.0,
+        "type": "MultiPolygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 200.0,
+        "type": "MultiPolygon",
+        "valid": true
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "46436d94e2806f213517f00bc3248b4123334ceca2ddea1389383fbd855f428a",
+        "pixel": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0"
+      }
+    },
+    {
+      "control_expected_areas_pass": true,
+      "covered_by_pq": true,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 0.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 96.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "expected_areas_p_q_i_dp_dq_u": [
+        4,
+        100,
+        4,
+        0,
+        96,
+        100
+      ],
+      "id": "control_contained",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 0.0,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 4.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 4.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "kind": "synthetic_control",
+      "other_union": "control_contained-other_union.wkb",
+      "p": {
+        "area_m2": 4.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "control_contained-pixel.wkb",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": true,
+      "union_pq": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "within_pq": true,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0",
+        "pixel": "321cf2cdd4c92e8a432849ad2b2470fe297c01e66ee372819c05e23eaa9c112e"
+      }
+    },
+    {
+      "control_expected_areas_pass": true,
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 50.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 50.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "expected_areas_p_q_i_dp_dq_u": [
+        100,
+        100,
+        50,
+        50,
+        50,
+        150
+      ],
+      "id": "control_partial",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 0.0,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 50.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 50.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "kind": "synthetic_control",
+      "other_union": "control_partial-other_union.wkb",
+      "p": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "control_partial-pixel.wkb",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": true,
+      "union_pq": {
+        "area_m2": 150.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 150.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "d1789a10586d7cfd1e9306628d4eb95830c4a836233be3281f794a8c2fc8c196",
+        "pixel": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0"
+      }
+    },
+    {
+      "control_expected_areas_pass": true,
+      "covered_by_pq": false,
+      "covered_by_qp": false,
+      "difference_pq": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "difference_qp": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "expected_areas_p_q_i_dp_dq_u": [
+        100,
+        100,
+        0,
+        100,
+        100,
+        200
+      ],
+      "id": "control_touch",
+      "identities_within_1m2": true,
+      "identity_residuals_m2": {
+        "intersection_order": 0.0,
+        "partition_p": 0.0,
+        "partition_q": 0.0,
+        "union_order": 0.0,
+        "union_pq": 0.0,
+        "union_qp": 0.0
+      },
+      "intersection_pq": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "intersection_qp": {
+        "area_m2": 0.0,
+        "type": "LineString",
+        "valid": true
+      },
+      "kind": "synthetic_control",
+      "other_union": "control_touch-other_union.wkb",
+      "p": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "pixel": "control_touch-pixel.wkb",
+      "predicate_overlay_contradictions": [],
+      "q": {
+        "area_m2": 100.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "regression_checks_pass": true,
+      "union_pq": {
+        "area_m2": 200.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "union_qp": {
+        "area_m2": 200.0,
+        "type": "Polygon",
+        "valid": true
+      },
+      "within_pq": false,
+      "within_qp": false,
+      "wkb_sha256": {
+        "other_union": "38809cde15686574f9c325a7ec1b34f060a4ed7f7f0e5bef845e7488b3f4b1aa",
+        "pixel": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0"
+      }
+    }
+  ],
+  "started_or_completed_utc": "2026-11-15T04:57:31.337832+00:00",
+  "version_actual": "3.15.0-CAPI-1.21.0"
+}

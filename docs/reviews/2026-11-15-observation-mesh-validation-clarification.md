@@ -1,0 +1,7 @@
+# Aclaración B antes de geometrías reales
+
+Seoperacionalizaelprotocolo69a35d3antesdecalcularáreasreales: ladiferenciaentrehalo10y15será **áreadeladiferenciasimétrica** entreunionesCORErecortadasdivididaporáreaAOI,umbral≤1e-6(2500m²). Noserestansimplementeáreas,puespuedencompensarseerroresespaciales.
+
+Seconservan sinrelajar losgatesMODISmedian≤20%yp95≤30%parascan/track/área (léase along-scan,along-track yárea). La propuesta de limitar área a diagnóstico no se adopta: si falla, el uso nominal cuantitativo sigue pendiente. Reportardiagnósticosporfranjasfijas100columnasnativasy detector,contresdependenciadecaso/halo yN;nosoncriteriosnuevosdeaprobaciónniinferenciaparacualquiercolumnafueraROIconstruida. G1yfootprints físicosverificadossiguenfalse.
+
+ElmanifiestoBdeberáidentificarprotocolooriginalyestaaclaración. Sinotrasalteraciones,descargas,fitsniusodefuego.

@@ -1,0 +1,6528 @@
+{
+  "HDF_or_new_data_read": false,
+  "QA_surface_policy": "frozen native screen+raw fields; VIIRS surface export preserved with conditional historical provenance; not pure instrumental QA",
+  "RSS_platform": "darwin",
+  "all_final_data_rows": 898704,
+  "all_structural_gates_passed": true,
+  "area_columns_retained_or_used": false,
+  "completed_utc": "2026-11-15T07:03:12.403899+00:00",
+  "continuous30B_repaired": false,
+  "gate1_passed": false,
+  "native_joins": 1381763,
+  "native_retention": {
+    "2019_MYD14": {
+      "phase0-h250-early": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase0-h250-late": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase0-h500-early": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase0-h500-late": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase125-h250-early": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase125-h250-late": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase125-h500-early": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      },
+      "phase125-h500-late": {
+        "native_positive_records": 60,
+        "partition": {
+          "quad_unavailable_geometry_null": 60
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 60
+          }
+        }
+      }
+    },
+    "2019_VNP14IMG": {
+      "phase0-h250-early": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase0-h250-late": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase0-h500-early": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase0-h500-late": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase125-h250-early": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase125-h250-late": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase125-h500-early": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      },
+      "phase125-h500-late": {
+        "native_positive_records": 132,
+        "partition": {
+          "included_quad_without_strict_interior_query": 4,
+          "quad_unavailable_geometry_null": 128
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 4
+          },
+          "outside_halo15": {
+            "quad_unavailable_geometry_null": 128
+          }
+        }
+      }
+    },
+    "2023_MYD14": {
+      "phase0-h250-early": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase0-h250-late": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase0-h500-early": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase0-h500-late": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase125-h250-early": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase125-h250-late": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase125-h500-early": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      },
+      "phase125-h500-late": {
+        "native_positive_records": 177,
+        "partition": {
+          "included_quad_without_strict_interior_query": 3,
+          "quad_outside32A_universe": 7,
+          "quad_unavailable_geometry_null": 163,
+          "represented_owner": 4
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "quad_unavailable_geometry_null": 2,
+            "represented_owner": 4
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 3
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 7,
+            "quad_unavailable_geometry_null": 161
+          }
+        }
+      }
+    },
+    "2023_VNP14IMG": {
+      "phase0-h250-early": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 7,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 16
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "represented_owner": 16
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase0-h250-late": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 7,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 16
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "represented_owner": 16
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase0-h500-early": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 11,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 12
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "included_quad_without_strict_interior_query": 4,
+            "represented_owner": 12
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase0-h500-late": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 11,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 12
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "included_quad_without_strict_interior_query": 4,
+            "represented_owner": 12
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase125-h250-early": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 7,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 16
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "represented_owner": 16
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase125-h250-late": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 7,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 16
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "represented_owner": 16
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase125-h500-early": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 13,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 10
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "included_quad_without_strict_interior_query": 6,
+            "represented_owner": 10
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      },
+      "phase125-h500-late": {
+        "native_positive_records": 908,
+        "partition": {
+          "included_quad_without_strict_interior_query": 13,
+          "quad_outside32A_universe": 6,
+          "quad_unavailable_geometry_null": 879,
+          "represented_owner": 10
+        },
+        "preproperty_unit": "STRICT_INTERIOR incidence; no bbox candidate retention",
+        "scopes": {
+          "centre_AOI": {
+            "included_quad_without_strict_interior_query": 6,
+            "represented_owner": 10
+          },
+          "centre_halo15": {
+            "included_quad_without_strict_interior_query": 7
+          },
+          "outside_halo15": {
+            "quad_outside32A_universe": 6,
+            "quad_unavailable_geometry_null": 879
+          }
+        }
+      }
+    }
+  },
+  "native_source_metadata": {
+    "2019": {
+      "MYD14": {
+        "original_catalogue_sha256": "efed188ac13441b69f3907301877f52851181ba299d6eec7543ad58d0b008284",
+        "original_labels_sha256": "c35df8d9febc4b3523c024960e01f711745b66cf3d654e04fad4ba2ac516fe31",
+        "raw_file_sha256": "994f1a88fc5a2b5addf8447dc7d636a10e0f3bb6283f2090a601ad43243c9c30",
+        "shape": [
+          2030,
+          1354
+        ],
+        "version": "061"
+      },
+      "VNP14IMG": {
+        "original_catalogue_sha256": "64a9feb06b342f62568265ee9b2f1a3345474ebe792ff206721e89c4fd436472",
+        "original_labels_sha256": "4f6af9beedd2f711d8c2527ac80f688f12b73cc28864686a39bf99a05b1985a6",
+        "raw_file_sha256": "bcc1e3e30af850542f8ed0ce31e7aae4a6d46ee3d4c68e1898142f60d3f45bef",
+        "shape": [
+          6464,
+          6400
+        ],
+        "version": "002"
+      }
+    },
+    "2023": {
+      "MYD14": {
+        "original_catalogue_sha256": "83e8071cb4595839a04aa6f048f4afa540af256d3a142186630c30dcff6bf571",
+        "original_labels_sha256": "be24e5746fe9151a2affaff1ba0a608894ef16e13a5fabadfa609d674de2a389",
+        "raw_file_sha256": "b0192b581eb5320ebb3d8bc618d7828c917c66db280e79cbacf4a3c3839d8ebe",
+        "shape": [
+          2040,
+          1354
+        ],
+        "version": "061"
+      },
+      "VNP14IMG": {
+        "original_catalogue_sha256": "364059004eaf3f5455085466167b2a011edc098a8ab12bcfe4b62f0ceb89ba51",
+        "original_labels_sha256": "a3a522030fcd33d351e262982e969b81beabb6043bde8b27ba2bdc8437247045",
+        "raw_file_sha256": "d1b61d212995b5052c3b437ec955c46b1504e6a8cf863159e8c22209e9ec5a8e",
+        "shape": [
+          6464,
+          6400
+        ],
+        "version": "002"
+      }
+    }
+  },
+  "nested": {
+    "2019-phase0-early": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 9801
+    },
+    "2019-phase0-late": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 9801
+    },
+    "2019-phase125-early": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 10000
+    },
+    "2019-phase125-late": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 10000
+    },
+    "2023-phase0-early": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 9801
+    },
+    "2023-phase0-late": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 9801
+    },
+    "2023-phase125-early": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 10000
+    },
+    "2023-phase125-late": {
+      "all_fields_identical_except_step_and_local_point_id": true,
+      "checked_points": 10000
+    }
+  },
+  "offline_export_scope": "Tracked allowlist universal/catalogue projections permit independent verification; original driver still requires frozen local sources and absolute cap, not unrestricted offline replay",
+  "peak_RSS_bytes": 213385216,
+  "point_rows": 397608,
+  "positive_catalogue_used_for_backfill": false,
+  "primary": "each case: phase0,h250,early",
+  "retention_rows": 10216,
+  "roster_rows": 404152,
+  "scenarios": {
+    "2019-phase0-h250-early": {
+      "GEO_after_sha256": "21c9396562311b63ce726845598e9719428d06a829bd9e488ab6c91dfcee7b39",
+      "GEO_before_sha256": "21c9396562311b63ce726845598e9719428d06a829bd9e488ab6c91dfcee7b39",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 32179,
+      "Ntotal": 39601,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7415,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7415
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14484153742414024,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8126770060687795,
+            "U1": 0.0,
+            "UU": 0.04248145650708024
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1074,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6026,
+            "U1": 0,
+            "UU": 315
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32179,
+          "Ntotal": 32179,
+          "five": {
+            "00": 32179,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32179,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 32179,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 7422
+      },
+      "fractions_total": {
+        "00": 0.8125804903916568,
+        "01": 0.0,
+        "0U": 0.027297290472462817,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15216787454862252,
+        "U1": 0.0,
+        "UU": 0.007954344587257897
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 32179,
+        "01": 0,
+        "0U": 1081,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 6026,
+        "U1": 0,
+        "UU": 315
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 162,
+          "Ntotal": 162,
+          "five": {
+            "00": 162,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 162,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 31977,
+          "Ntotal": 31984,
+          "five": {
+            "00": 31977,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.9997811405702851,
+            "01": 0.0,
+            "0U": 0.00021885942971485743,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 31977,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 12,
+          "Ntotal": 12,
+          "five": {
+            "00": 12,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 12,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7415,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7415
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14484153742414024,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8126770060687795,
+            "U1": 0.0,
+            "UU": 0.04248145650708024
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1074,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6026,
+            "U1": 0,
+            "UU": 315
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 28,
+          "Ntotal": 28,
+          "five": {
+            "00": 28,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 28,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 6341
+        },
+        "v": {
+          "geometry_no_nominal_support": 1389,
+          "sun_glint": 7
+        }
+      }
+    },
+    "2019-phase0-h250-late": {
+      "GEO_after_sha256": "c51a080da677a7bc1d9d83fb132f0734db4674def7b0f37a62c52e15c2ab9925",
+      "GEO_before_sha256": "c51a080da677a7bc1d9d83fb132f0734db4674def7b0f37a62c52e15c2ab9925",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 32179,
+      "Ntotal": 39601,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7415,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7415
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14484153742414024,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8126770060687795,
+            "U1": 0.0,
+            "UU": 0.04248145650708024
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1074,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6026,
+            "U1": 0,
+            "UU": 315
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32179,
+          "Ntotal": 32179,
+          "five": {
+            "00": 32179,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32179,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 32179,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 7422
+      },
+      "fractions_total": {
+        "00": 0.8125804903916568,
+        "01": 0.0,
+        "0U": 0.027297290472462817,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15216787454862252,
+        "U1": 0.0,
+        "UU": 0.007954344587257897
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 32179,
+        "01": 0,
+        "0U": 1081,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 6026,
+        "U1": 0,
+        "UU": 315
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 162,
+          "Ntotal": 162,
+          "five": {
+            "00": 162,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 162,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 31977,
+          "Ntotal": 31984,
+          "five": {
+            "00": 31977,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.9997811405702851,
+            "01": 0.0,
+            "0U": 0.00021885942971485743,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 31977,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 12,
+          "Ntotal": 12,
+          "five": {
+            "00": 12,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 12,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7415,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7415
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14484153742414024,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8126770060687795,
+            "U1": 0.0,
+            "UU": 0.04248145650708024
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1074,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6026,
+            "U1": 0,
+            "UU": 315
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 28,
+          "Ntotal": 28,
+          "five": {
+            "00": 28,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 28,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 6341
+        },
+        "v": {
+          "geometry_no_nominal_support": 1389,
+          "sun_glint": 7
+        }
+      }
+    },
+    "2019-phase0-h500-early": {
+      "GEO_after_sha256": "555c5051268aa2cb8423f5a79ce2e6b5aee32ae97ad61a8c630b3b4d6e48351e",
+      "GEO_before_sha256": "555c5051268aa2cb8423f5a79ce2e6b5aee32ae97ad61a8c630b3b4d6e48351e",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 7972,
+      "Ntotal": 9801,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1827,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1827
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14504652435686918,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.812807881773399,
+            "U1": 0.0,
+            "UU": 0.0421455938697318
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 265,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1485,
+            "U1": 0,
+            "UU": 77
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7972,
+          "Ntotal": 7972,
+          "five": {
+            "00": 7972,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7972,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 2,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 7972,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 1829
+      },
+      "fractions_total": {
+        "00": 0.8133863891439649,
+        "01": 0.0,
+        "0U": 0.027242118151209062,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15151515151515152,
+        "U1": 0.0,
+        "UU": 0.007856341189674524
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 7972,
+        "01": 0,
+        "0U": 267,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 1485,
+        "U1": 0,
+        "UU": 77
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 37,
+          "Ntotal": 37,
+          "five": {
+            "00": 37,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 37,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7928,
+          "Ntotal": 7930,
+          "five": {
+            "00": 7928,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9997477931904162,
+            "01": 0.0,
+            "0U": 0.00025220680958385876,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7928,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 2,
+          "Ntotal": 2,
+          "five": {
+            "00": 2,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 2,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1827,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1827
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14504652435686918,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.812807881773399,
+            "U1": 0.0,
+            "UU": 0.0421455938697318
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 265,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1485,
+            "U1": 0,
+            "UU": 77
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 5,
+          "Ntotal": 5,
+          "five": {
+            "00": 5,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 5,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 1562
+        },
+        "v": {
+          "geometry_no_nominal_support": 342,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2019-phase0-h500-late": {
+      "GEO_after_sha256": "92b8e8674f62f142857c5596adde554640c749bcb4e287009ddaa25f44834256",
+      "GEO_before_sha256": "92b8e8674f62f142857c5596adde554640c749bcb4e287009ddaa25f44834256",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 7972,
+      "Ntotal": 9801,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1827,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1827
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14504652435686918,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.812807881773399,
+            "U1": 0.0,
+            "UU": 0.0421455938697318
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 265,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1485,
+            "U1": 0,
+            "UU": 77
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7972,
+          "Ntotal": 7972,
+          "five": {
+            "00": 7972,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7972,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 2,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 7972,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 1829
+      },
+      "fractions_total": {
+        "00": 0.8133863891439649,
+        "01": 0.0,
+        "0U": 0.027242118151209062,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15151515151515152,
+        "U1": 0.0,
+        "UU": 0.007856341189674524
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 7972,
+        "01": 0,
+        "0U": 267,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 1485,
+        "U1": 0,
+        "UU": 77
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 37,
+          "Ntotal": 37,
+          "five": {
+            "00": 37,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 37,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7928,
+          "Ntotal": 7930,
+          "five": {
+            "00": 7928,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9997477931904162,
+            "01": 0.0,
+            "0U": 0.00025220680958385876,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7928,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 2,
+          "Ntotal": 2,
+          "five": {
+            "00": 2,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 2,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1827,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1827
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14504652435686918,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.812807881773399,
+            "U1": 0.0,
+            "UU": 0.0421455938697318
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 265,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1485,
+            "U1": 0,
+            "UU": 77
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 5,
+          "Ntotal": 5,
+          "five": {
+            "00": 5,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 5,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 1562
+        },
+        "v": {
+          "geometry_no_nominal_support": 342,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2019-phase125-h250-early": {
+      "GEO_after_sha256": "b3e516f32dcefe24831adb853415cfc95d5233308be86e84380a140622d12160",
+      "GEO_before_sha256": "b3e516f32dcefe24831adb853415cfc95d5233308be86e84380a140622d12160",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 32486,
+      "Ntotal": 40000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7507,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7507
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14346609830824564,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8144398561342747,
+            "U1": 0.0,
+            "UU": 0.042094045557479684
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1077,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6114,
+            "U1": 0,
+            "UU": 316
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32486,
+          "Ntotal": 32486,
+          "five": {
+            "00": 32486,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32486,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 32486,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 7514
+      },
+      "fractions_total": {
+        "00": 0.81215,
+        "01": 0.0,
+        "0U": 0.0271,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15285,
+        "U1": 0.0,
+        "UU": 0.0079
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 32486,
+        "01": 0,
+        "0U": 1084,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 6114,
+        "U1": 0,
+        "UU": 316
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 191,
+          "Ntotal": 191,
+          "five": {
+            "00": 191,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 191,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32255,
+          "Ntotal": 32262,
+          "five": {
+            "00": 32255,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.9997830264707706,
+            "01": 0.0,
+            "0U": 0.000216973529229434,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32255,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 10,
+          "Ntotal": 10,
+          "five": {
+            "00": 10,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 10,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7507,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7507
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14346609830824564,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8144398561342747,
+            "U1": 0.0,
+            "UU": 0.042094045557479684
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1077,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6114,
+            "U1": 0,
+            "UU": 316
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 30,
+          "Ntotal": 30,
+          "five": {
+            "00": 30,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 30,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 6430
+        },
+        "v": {
+          "geometry_no_nominal_support": 1393,
+          "sun_glint": 7
+        }
+      }
+    },
+    "2019-phase125-h250-late": {
+      "GEO_after_sha256": "29641cf94749833055a2cae9e3ce5cefbdb57b155cd8b212558ba618944d4708",
+      "GEO_before_sha256": "29641cf94749833055a2cae9e3ce5cefbdb57b155cd8b212558ba618944d4708",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 32486,
+      "Ntotal": 40000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7507,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7507
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14346609830824564,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8144398561342747,
+            "U1": 0.0,
+            "UU": 0.042094045557479684
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1077,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6114,
+            "U1": 0,
+            "UU": 316
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32486,
+          "Ntotal": 32486,
+          "five": {
+            "00": 32486,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32486,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 32486,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 7514
+      },
+      "fractions_total": {
+        "00": 0.81215,
+        "01": 0.0,
+        "0U": 0.0271,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.15285,
+        "U1": 0.0,
+        "UU": 0.0079
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 32486,
+        "01": 0,
+        "0U": 1084,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 6114,
+        "U1": 0,
+        "UU": 316
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 191,
+          "Ntotal": 191,
+          "five": {
+            "00": 191,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 191,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 32255,
+          "Ntotal": 32262,
+          "five": {
+            "00": 32255,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7
+          },
+          "fractions_total": {
+            "00": 0.9997830264707706,
+            "01": 0.0,
+            "0U": 0.000216973529229434,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 32255,
+            "01": 0,
+            "0U": 7,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 10,
+          "Ntotal": 10,
+          "five": {
+            "00": 10,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 10,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 7507,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 7507
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.14346609830824564,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8144398561342747,
+            "U1": 0.0,
+            "UU": 0.042094045557479684
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 1077,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 6114,
+            "U1": 0,
+            "UU": 316
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 30,
+          "Ntotal": 30,
+          "five": {
+            "00": 30,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 30,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 6430
+        },
+        "v": {
+          "geometry_no_nominal_support": 1393,
+          "sun_glint": 7
+        }
+      }
+    },
+    "2019-phase125-h500-early": {
+      "GEO_after_sha256": "12e0150b60616fc389690f524463de92697efeb56b04321b6059fdd9bc37c70f",
+      "GEO_before_sha256": "12e0150b60616fc389690f524463de92697efeb56b04321b6059fdd9bc37c70f",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 8124,
+      "Ntotal": 10000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1874,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1874
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.1424759871931697,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8159018143009605,
+            "U1": 0.0,
+            "UU": 0.0416221985058698
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 267,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1529,
+            "U1": 0,
+            "UU": 78
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 8124,
+          "Ntotal": 8124,
+          "five": {
+            "00": 8124,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 8124,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 2,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 8124,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 1876
+      },
+      "fractions_total": {
+        "00": 0.8124,
+        "01": 0.0,
+        "0U": 0.0269,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.1529,
+        "U1": 0.0,
+        "UU": 0.0078
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 8124,
+        "01": 0,
+        "0U": 269,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 1529,
+        "U1": 0,
+        "UU": 78
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 56,
+          "Ntotal": 56,
+          "five": {
+            "00": 56,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 56,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 8054,
+          "Ntotal": 8056,
+          "five": {
+            "00": 8054,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9997517378351539,
+            "01": 0.0,
+            "0U": 0.00024826216484607745,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 8054,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 5,
+          "Ntotal": 5,
+          "five": {
+            "00": 5,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 5,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1874,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1874
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.1424759871931697,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8159018143009605,
+            "U1": 0.0,
+            "UU": 0.0416221985058698
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 267,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1529,
+            "U1": 0,
+            "UU": 78
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 9,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 1607
+        },
+        "v": {
+          "geometry_no_nominal_support": 345,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2019-phase125-h500-late": {
+      "GEO_after_sha256": "357782a7a286290450e32669dcda7cd67aff5439e0f7251932fe0d63992b3231",
+      "GEO_before_sha256": "357782a7a286290450e32669dcda7cd67aff5439e0f7251932fe0d63992b3231",
+      "Jaccard_denominator": 0,
+      "Jaccard_known": null,
+      "Jaccard_null_reason": "no_known_positive_union",
+      "Nknown": 8124,
+      "Ntotal": 10000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1874,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1874
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.1424759871931697,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8159018143009605,
+            "U1": 0.0,
+            "UU": 0.0416221985058698
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 267,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1529,
+            "U1": 0,
+            "UU": 78
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 8124,
+          "Ntotal": 8124,
+          "five": {
+            "00": 8124,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 8124,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 2,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 8124,
+        "01": 0,
+        "10": 0,
+        "11": 0,
+        "U": 1876
+      },
+      "fractions_total": {
+        "00": 0.8124,
+        "01": 0.0,
+        "0U": 0.0269,
+        "10": 0.0,
+        "11": 0.0,
+        "1U": 0.0,
+        "U0": 0.1529,
+        "U1": 0.0,
+        "UU": 0.0078
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 8124,
+        "01": 0,
+        "0U": 269,
+        "10": 0,
+        "11": 0,
+        "1U": 0,
+        "U0": 1529,
+        "U1": 0,
+        "UU": 78
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 56,
+          "Ntotal": 56,
+          "five": {
+            "00": 56,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 56,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 8054,
+          "Ntotal": 8056,
+          "five": {
+            "00": 8054,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9997517378351539,
+            "01": 0.0,
+            "0U": 0.00024826216484607745,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 8054,
+            "01": 0,
+            "0U": 2,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 5,
+          "Ntotal": 5,
+          "five": {
+            "00": 5,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 5,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 1874,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 1874
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 0.1424759871931697,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.8159018143009605,
+            "U1": 0.0,
+            "UU": 0.0416221985058698
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 267,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 1529,
+            "U1": 0,
+            "UU": 78
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 9,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "m": {
+          "geometry_no_nominal_support": 1607
+        },
+        "v": {
+          "geometry_no_nominal_support": 345,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2023-phase0-h250-early": {
+      "GEO_after_sha256": "959fe19674dcee890bcfe4b4d333f708d042b9c8d400c22143f4b707f24248df",
+      "GEO_before_sha256": "959fe19674dcee890bcfe4b4d333f708d042b9c8d400c22143f4b707f24248df",
+      "Jaccard_denominator": 180,
+      "Jaccard_known": 0.15,
+      "Jaccard_null_reason": null,
+      "Nknown": 39576,
+      "Ntotal": 39601,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 152,
+          "Jaccard_known": 0.07236842105263158,
+          "Jaccard_null_reason": null,
+          "Nknown": 39541,
+          "Ntotal": 39541,
+          "five": {
+            "00": 39389,
+            "01": 12,
+            "10": 129,
+            "11": 11,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9961558888242583,
+            "01": 0.00030348246124276067,
+            "0U": 0.0,
+            "10": 0.003262436458359677,
+            "11": 0.0002781922561391973,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39389,
+            "01": 12,
+            "0U": 0,
+            "10": 129,
+            "11": 11,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 28,
+          "Jaccard_known": 0.5714285714285714,
+          "Jaccard_null_reason": null,
+          "Nknown": 35,
+          "Ntotal": 38,
+          "five": {
+            "00": 7,
+            "01": 6,
+            "10": 6,
+            "11": 16,
+            "U": 3
+          },
+          "fractions_total": {
+            "00": 0.18421052631578946,
+            "01": 0.15789473684210525,
+            "0U": 0.07894736842105263,
+            "10": 0.15789473684210525,
+            "11": 0.42105263157894735,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7,
+            "01": 6,
+            "0U": 3,
+            "10": 6,
+            "11": 16,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 39396,
+        "01": 18,
+        "10": 135,
+        "11": 27,
+        "U": 25
+      },
+      "fractions_total": {
+        "00": 0.9948233630463877,
+        "01": 0.000454533976414737,
+        "0U": 0.0006312971894649125,
+        "10": 0.0034090048231105274,
+        "11": 0.0006818009646221055,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 39396,
+        "01": 18,
+        "0U": 25,
+        "10": 135,
+        "11": 27,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 200,
+          "Ntotal": 200,
+          "five": {
+            "00": 200,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 200,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 180,
+          "Jaccard_known": 0.15,
+          "Jaccard_null_reason": null,
+          "Nknown": 39307,
+          "Ntotal": 39310,
+          "five": {
+            "00": 39127,
+            "01": 18,
+            "10": 135,
+            "11": 27,
+            "U": 3
+          },
+          "fractions_total": {
+            "00": 0.9953446960061053,
+            "01": 0.0004578987534978377,
+            "0U": 7.631645891630629e-05,
+            "10": 0.003434240651233783,
+            "11": 0.0006868481302467565,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39127,
+            "01": 18,
+            "0U": 3,
+            "10": 135,
+            "11": 27,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 31,
+          "Ntotal": 31,
+          "five": {
+            "00": 31,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 31,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 38,
+          "Ntotal": 38,
+          "five": {
+            "00": 38,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 38,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 22,
+          "sun_glint": 3
+        }
+      }
+    },
+    "2023-phase0-h250-late": {
+      "GEO_after_sha256": "8ebae3db931a95e17e7d4f3a7427474aa42e6ce41a0202d3e12209cafe34d32d",
+      "GEO_before_sha256": "8ebae3db931a95e17e7d4f3a7427474aa42e6ce41a0202d3e12209cafe34d32d",
+      "Jaccard_denominator": 180,
+      "Jaccard_known": 0.15,
+      "Jaccard_null_reason": null,
+      "Nknown": 39576,
+      "Ntotal": 39601,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 152,
+          "Jaccard_known": 0.07236842105263158,
+          "Jaccard_null_reason": null,
+          "Nknown": 39541,
+          "Ntotal": 39541,
+          "five": {
+            "00": 39389,
+            "01": 12,
+            "10": 129,
+            "11": 11,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9961558888242583,
+            "01": 0.00030348246124276067,
+            "0U": 0.0,
+            "10": 0.003262436458359677,
+            "11": 0.0002781922561391973,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39389,
+            "01": 12,
+            "0U": 0,
+            "10": 129,
+            "11": 11,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 28,
+          "Jaccard_known": 0.5714285714285714,
+          "Jaccard_null_reason": null,
+          "Nknown": 35,
+          "Ntotal": 38,
+          "five": {
+            "00": 7,
+            "01": 6,
+            "10": 6,
+            "11": 16,
+            "U": 3
+          },
+          "fractions_total": {
+            "00": 0.18421052631578946,
+            "01": 0.15789473684210525,
+            "0U": 0.07894736842105263,
+            "10": 0.15789473684210525,
+            "11": 0.42105263157894735,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7,
+            "01": 6,
+            "0U": 3,
+            "10": 6,
+            "11": 16,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 39396,
+        "01": 18,
+        "10": 135,
+        "11": 27,
+        "U": 25
+      },
+      "fractions_total": {
+        "00": 0.9948233630463877,
+        "01": 0.000454533976414737,
+        "0U": 0.0006312971894649125,
+        "10": 0.0034090048231105274,
+        "11": 0.0006818009646221055,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 39396,
+        "01": 18,
+        "0U": 25,
+        "10": 135,
+        "11": 27,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 203,
+          "Ntotal": 203,
+          "five": {
+            "00": 203,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 203,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 180,
+          "Jaccard_known": 0.15,
+          "Jaccard_null_reason": null,
+          "Nknown": 39307,
+          "Ntotal": 39310,
+          "five": {
+            "00": 39127,
+            "01": 18,
+            "10": 135,
+            "11": 27,
+            "U": 3
+          },
+          "fractions_total": {
+            "00": 0.9953446960061053,
+            "01": 0.0004578987534978377,
+            "0U": 7.631645891630629e-05,
+            "10": 0.003434240651233783,
+            "11": 0.0006868481302467565,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39127,
+            "01": 18,
+            "0U": 3,
+            "10": 135,
+            "11": 27,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 30,
+          "Ntotal": 30,
+          "five": {
+            "00": 30,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 30,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 36,
+          "Ntotal": 36,
+          "five": {
+            "00": 36,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 36,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 22,
+          "sun_glint": 3
+        }
+      }
+    },
+    "2023-phase0-h500-early": {
+      "GEO_after_sha256": "e4c9971612709395809f890dcc9da3d30136b43a808b0087497b6fbdb4e3fec5",
+      "GEO_before_sha256": "e4c9971612709395809f890dcc9da3d30136b43a808b0087497b6fbdb4e3fec5",
+      "Jaccard_denominator": 49,
+      "Jaccard_known": 0.12244897959183673,
+      "Jaccard_null_reason": null,
+      "Nknown": 9795,
+      "Ntotal": 9801,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 6,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 6
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 6,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 42,
+          "Jaccard_known": 0.07142857142857142,
+          "Jaccard_null_reason": null,
+          "Nknown": 9786,
+          "Ntotal": 9786,
+          "five": {
+            "00": 9744,
+            "01": 3,
+            "10": 36,
+            "11": 3,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9957081545064378,
+            "01": 0.00030656039239730225,
+            "0U": 0.0,
+            "10": 0.003678724708767627,
+            "11": 0.00030656039239730225,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9744,
+            "01": 3,
+            "0U": 0,
+            "10": 36,
+            "11": 3,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 7,
+          "Jaccard_known": 0.42857142857142855,
+          "Jaccard_null_reason": null,
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 2,
+            "01": 3,
+            "10": 1,
+            "11": 3,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.2222222222222222,
+            "01": 0.3333333333333333,
+            "0U": 0.0,
+            "10": 0.1111111111111111,
+            "11": 0.3333333333333333,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 2,
+            "01": 3,
+            "0U": 0,
+            "10": 1,
+            "11": 3,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 9746,
+        "01": 6,
+        "10": 37,
+        "11": 6,
+        "U": 6
+      },
+      "fractions_total": {
+        "00": 0.9943883277216611,
+        "01": 0.0006121824303642485,
+        "0U": 0.0006121824303642485,
+        "10": 0.003775124987246199,
+        "11": 0.0006121824303642485,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 9746,
+        "01": 6,
+        "0U": 6,
+        "10": 37,
+        "11": 6,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 42,
+          "Ntotal": 42,
+          "five": {
+            "00": 42,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 42,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 49,
+          "Jaccard_known": 0.12244897959183673,
+          "Jaccard_null_reason": null,
+          "Nknown": 9736,
+          "Ntotal": 9736,
+          "five": {
+            "00": 9687,
+            "01": 6,
+            "10": 37,
+            "11": 6,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9949671322925226,
+            "01": 0.0006162695152013147,
+            "0U": 0.0,
+            "10": 0.0038003286770747742,
+            "11": 0.0006162695152013147,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9687,
+            "01": 6,
+            "0U": 0,
+            "10": 37,
+            "11": 6,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 9,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 6,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 6
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 6,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 8,
+          "Ntotal": 8,
+          "five": {
+            "00": 8,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 8,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 6
+        }
+      }
+    },
+    "2023-phase0-h500-late": {
+      "GEO_after_sha256": "155c9c8ed435a5926dae02c91b5cc65269532998bebed869b69172e40d7ae97b",
+      "GEO_before_sha256": "155c9c8ed435a5926dae02c91b5cc65269532998bebed869b69172e40d7ae97b",
+      "Jaccard_denominator": 49,
+      "Jaccard_known": 0.12244897959183673,
+      "Jaccard_null_reason": null,
+      "Nknown": 9795,
+      "Ntotal": 9801,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 6,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 6
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 6,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 42,
+          "Jaccard_known": 0.07142857142857142,
+          "Jaccard_null_reason": null,
+          "Nknown": 9786,
+          "Ntotal": 9786,
+          "five": {
+            "00": 9744,
+            "01": 3,
+            "10": 36,
+            "11": 3,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9957081545064378,
+            "01": 0.00030656039239730225,
+            "0U": 0.0,
+            "10": 0.003678724708767627,
+            "11": 0.00030656039239730225,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9744,
+            "01": 3,
+            "0U": 0,
+            "10": 36,
+            "11": 3,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 7,
+          "Jaccard_known": 0.42857142857142855,
+          "Jaccard_null_reason": null,
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 2,
+            "01": 3,
+            "10": 1,
+            "11": 3,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.2222222222222222,
+            "01": 0.3333333333333333,
+            "0U": 0.0,
+            "10": 0.1111111111111111,
+            "11": 0.3333333333333333,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 2,
+            "01": 3,
+            "0U": 0,
+            "10": 1,
+            "11": 3,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 9746,
+        "01": 6,
+        "10": 37,
+        "11": 6,
+        "U": 6
+      },
+      "fractions_total": {
+        "00": 0.9943883277216611,
+        "01": 0.0006121824303642485,
+        "0U": 0.0006121824303642485,
+        "10": 0.003775124987246199,
+        "11": 0.0006121824303642485,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 9746,
+        "01": 6,
+        "0U": 6,
+        "10": 37,
+        "11": 6,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 43,
+          "Ntotal": 43,
+          "five": {
+            "00": 43,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 43,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 49,
+          "Jaccard_known": 0.12244897959183673,
+          "Jaccard_null_reason": null,
+          "Nknown": 9736,
+          "Ntotal": 9736,
+          "five": {
+            "00": 9687,
+            "01": 6,
+            "10": 37,
+            "11": 6,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9949671322925226,
+            "01": 0.0006162695152013147,
+            "0U": 0.0,
+            "10": 0.0038003286770747742,
+            "11": 0.0006162695152013147,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9687,
+            "01": 6,
+            "0U": 0,
+            "10": 37,
+            "11": 6,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 9,
+          "Ntotal": 9,
+          "five": {
+            "00": 9,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 6,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 6
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 6,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7,
+          "Ntotal": 7,
+          "five": {
+            "00": 7,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 6
+        }
+      }
+    },
+    "2023-phase125-h250-early": {
+      "GEO_after_sha256": "9cb2da5d64c2231587ca2188772201937f01c48ea660ef4dba9f24007eadf265",
+      "GEO_before_sha256": "9cb2da5d64c2231587ca2188772201937f01c48ea660ef4dba9f24007eadf265",
+      "Jaccard_denominator": 187,
+      "Jaccard_known": 0.12299465240641712,
+      "Jaccard_null_reason": null,
+      "Nknown": 39976,
+      "Ntotal": 40000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 161,
+          "Jaccard_known": 0.055900621118012424,
+          "Jaccard_null_reason": null,
+          "Nknown": 39946,
+          "Ntotal": 39946,
+          "five": {
+            "00": 39785,
+            "01": 12,
+            "10": 140,
+            "11": 9,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9959695589045211,
+            "01": 0.0003004055474891103,
+            "0U": 0.0,
+            "10": 0.0035047313873729537,
+            "11": 0.00022530416061683272,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39785,
+            "01": 12,
+            "0U": 0,
+            "10": 140,
+            "11": 9,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 26,
+          "Jaccard_known": 0.5384615384615384,
+          "Jaccard_null_reason": null,
+          "Nknown": 30,
+          "Ntotal": 32,
+          "five": {
+            "00": 4,
+            "01": 7,
+            "10": 5,
+            "11": 14,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.125,
+            "01": 0.21875,
+            "0U": 0.0625,
+            "10": 0.15625,
+            "11": 0.4375,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 4,
+            "01": 7,
+            "0U": 2,
+            "10": 5,
+            "11": 14,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 39789,
+        "01": 19,
+        "10": 145,
+        "11": 23,
+        "U": 24
+      },
+      "fractions_total": {
+        "00": 0.994725,
+        "01": 0.000475,
+        "0U": 0.0006,
+        "10": 0.003625,
+        "11": 0.000575,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 39789,
+        "01": 19,
+        "0U": 24,
+        "10": 145,
+        "11": 23,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 223,
+          "Ntotal": 223,
+          "five": {
+            "00": 223,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 223,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 187,
+          "Jaccard_known": 0.12299465240641712,
+          "Jaccard_null_reason": null,
+          "Nknown": 39678,
+          "Ntotal": 39680,
+          "five": {
+            "00": 39491,
+            "01": 19,
+            "10": 145,
+            "11": 23,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9952368951612903,
+            "01": 0.0004788306451612903,
+            "0U": 5.040322580645161e-05,
+            "10": 0.0036542338709677417,
+            "11": 0.0005796370967741935,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39491,
+            "01": 19,
+            "0U": 2,
+            "10": 145,
+            "11": 23,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 31,
+          "Ntotal": 31,
+          "five": {
+            "00": 31,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 31,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 44,
+          "Ntotal": 44,
+          "five": {
+            "00": 44,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 44,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 22,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2023-phase125-h250-late": {
+      "GEO_after_sha256": "0f66c0dcd9893e448010bb7b58b0826b042f1037db5e4262031e71add58187dc",
+      "GEO_before_sha256": "0f66c0dcd9893e448010bb7b58b0826b042f1037db5e4262031e71add58187dc",
+      "Jaccard_denominator": 187,
+      "Jaccard_known": 0.12299465240641712,
+      "Jaccard_null_reason": null,
+      "Nknown": 39976,
+      "Ntotal": 40000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 161,
+          "Jaccard_known": 0.055900621118012424,
+          "Jaccard_null_reason": null,
+          "Nknown": 39946,
+          "Ntotal": 39946,
+          "five": {
+            "00": 39785,
+            "01": 12,
+            "10": 140,
+            "11": 9,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9959695589045211,
+            "01": 0.0003004055474891103,
+            "0U": 0.0,
+            "10": 0.0035047313873729537,
+            "11": 0.00022530416061683272,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39785,
+            "01": 12,
+            "0U": 0,
+            "10": 140,
+            "11": 9,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 26,
+          "Jaccard_known": 0.5384615384615384,
+          "Jaccard_null_reason": null,
+          "Nknown": 30,
+          "Ntotal": 32,
+          "five": {
+            "00": 4,
+            "01": 7,
+            "10": 5,
+            "11": 14,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.125,
+            "01": 0.21875,
+            "0U": 0.0625,
+            "10": 0.15625,
+            "11": 0.4375,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 4,
+            "01": 7,
+            "0U": 2,
+            "10": 5,
+            "11": 14,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 39789,
+        "01": 19,
+        "10": 145,
+        "11": 23,
+        "U": 24
+      },
+      "fractions_total": {
+        "00": 0.994725,
+        "01": 0.000475,
+        "0U": 0.0006,
+        "10": 0.003625,
+        "11": 0.000575,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 39789,
+        "01": 19,
+        "0U": 24,
+        "10": 145,
+        "11": 23,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 225,
+          "Ntotal": 225,
+          "five": {
+            "00": 225,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 225,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 187,
+          "Jaccard_known": 0.12299465240641712,
+          "Jaccard_null_reason": null,
+          "Nknown": 39678,
+          "Ntotal": 39680,
+          "five": {
+            "00": 39491,
+            "01": 19,
+            "10": 145,
+            "11": 23,
+            "U": 2
+          },
+          "fractions_total": {
+            "00": 0.9952368951612903,
+            "01": 0.0004788306451612903,
+            "0U": 5.040322580645161e-05,
+            "10": 0.0036542338709677417,
+            "11": 0.0005796370967741935,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 39491,
+            "01": 19,
+            "0U": 2,
+            "10": 145,
+            "11": 23,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 31,
+          "Ntotal": 31,
+          "five": {
+            "00": 31,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 31,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 22,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 22
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 22,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 42,
+          "Ntotal": 42,
+          "five": {
+            "00": 42,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 42,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 22,
+          "sun_glint": 2
+        }
+      }
+    },
+    "2023-phase125-h500-early": {
+      "GEO_after_sha256": "886c22741b0cec91b53d76feb136ecf940a1a70a65078795469b8f08c0f9cffe",
+      "GEO_before_sha256": "886c22741b0cec91b53d76feb136ecf940a1a70a65078795469b8f08c0f9cffe",
+      "Jaccard_denominator": 42,
+      "Jaccard_known": 0.11904761904761904,
+      "Jaccard_null_reason": null,
+      "Nknown": 9995,
+      "Ntotal": 10000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 5,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 5
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 5,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 34,
+          "Jaccard_known": 0.029411764705882353,
+          "Jaccard_null_reason": null,
+          "Nknown": 9987,
+          "Ntotal": 9987,
+          "five": {
+            "00": 9953,
+            "01": 3,
+            "10": 30,
+            "11": 1,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9965955742465205,
+            "01": 0.00030039050765995795,
+            "0U": 0.0,
+            "10": 0.0030039050765995794,
+            "11": 0.00010013016921998598,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9953,
+            "01": 3,
+            "0U": 0,
+            "10": 30,
+            "11": 1,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 8,
+          "Jaccard_known": 0.5,
+          "Jaccard_null_reason": null,
+          "Nknown": 8,
+          "Ntotal": 8,
+          "five": {
+            "00": 0,
+            "01": 2,
+            "10": 2,
+            "11": 4,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.25,
+            "0U": 0.0,
+            "10": 0.25,
+            "11": 0.5,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 2,
+            "0U": 0,
+            "10": 2,
+            "11": 4,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 9953,
+        "01": 5,
+        "10": 32,
+        "11": 5,
+        "U": 5
+      },
+      "fractions_total": {
+        "00": 0.9953,
+        "01": 0.0005,
+        "0U": 0.0005,
+        "10": 0.0032,
+        "11": 0.0005,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 9953,
+        "01": 5,
+        "0U": 5,
+        "10": 32,
+        "11": 5,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 62,
+          "Ntotal": 62,
+          "five": {
+            "00": 62,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 62,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 42,
+          "Jaccard_known": 0.11904761904761904,
+          "Jaccard_null_reason": null,
+          "Nknown": 9913,
+          "Ntotal": 9913,
+          "five": {
+            "00": 9871,
+            "01": 5,
+            "10": 32,
+            "11": 5,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9957631393120145,
+            "01": 0.0005043881771411278,
+            "0U": 0.0,
+            "10": 0.003228084333703218,
+            "11": 0.0005043881771411278,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9871,
+            "01": 5,
+            "0U": 0,
+            "10": 32,
+            "11": 5,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7,
+          "Ntotal": 7,
+          "five": {
+            "00": 7,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 5,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 5
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 5,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 13,
+          "Ntotal": 13,
+          "five": {
+            "00": 13,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 13,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 5
+        }
+      }
+    },
+    "2023-phase125-h500-late": {
+      "GEO_after_sha256": "3e85226e5a4eb90b7d0ae1bb2e3a0c7564f69f0084f494065b115eae0fa93269",
+      "GEO_before_sha256": "3e85226e5a4eb90b7d0ae1bb2e3a0c7564f69f0084f494065b115eae0fa93269",
+      "Jaccard_denominator": 42,
+      "Jaccard_known": 0.11904761904761904,
+      "Jaccard_null_reason": null,
+      "Nknown": 9995,
+      "Ntotal": 10000,
+      "QA_tiers": {
+        "QA_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 5,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 5
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 5,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "both_nominal_in_inspected_fields": {
+          "Jaccard_denominator": 34,
+          "Jaccard_known": 0.029411764705882353,
+          "Jaccard_null_reason": null,
+          "Nknown": 9987,
+          "Ntotal": 9987,
+          "five": {
+            "00": 9953,
+            "01": 3,
+            "10": 30,
+            "11": 1,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9965955742465205,
+            "01": 0.00030039050765995795,
+            "0U": 0.0,
+            "10": 0.0030039050765995794,
+            "11": 0.00010013016921998598,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9953,
+            "01": 3,
+            "0U": 0,
+            "10": 30,
+            "11": 1,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "some_non_nominal": {
+          "Jaccard_denominator": 8,
+          "Jaccard_known": 0.5,
+          "Jaccard_null_reason": null,
+          "Nknown": 8,
+          "Ntotal": 8,
+          "five": {
+            "00": 0,
+            "01": 2,
+            "10": 2,
+            "11": 4,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.25,
+            "0U": 0.0,
+            "10": 0.25,
+            "11": 0.5,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 2,
+            "0U": 0,
+            "10": 2,
+            "11": 4,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "five": {
+        "00": 9953,
+        "01": 5,
+        "10": 32,
+        "11": 5,
+        "U": 5
+      },
+      "fractions_total": {
+        "00": 0.9953,
+        "01": 0.0005,
+        "0U": 0.0005,
+        "10": 0.0032,
+        "11": 0.0005,
+        "1U": 0.0,
+        "U0": 0.0,
+        "U1": 0.0,
+        "UU": 0.0
+      },
+      "global_quality_flags": {
+        "MYD14": "Suspect",
+        "VNP14IMG": null
+      },
+      "n1U": 0,
+      "nU1": 0,
+      "nine": {
+        "00": 9953,
+        "01": 5,
+        "0U": 5,
+        "10": 32,
+        "11": 5,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "surface_strata": {
+        "coast": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 62,
+          "Ntotal": 62,
+          "five": {
+            "00": 62,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 62,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_land": {
+          "Jaccard_denominator": 42,
+          "Jaccard_known": 0.11904761904761904,
+          "Jaccard_null_reason": null,
+          "Nknown": 9913,
+          "Ntotal": 9913,
+          "five": {
+            "00": 9871,
+            "01": 5,
+            "10": 32,
+            "11": 5,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 0.9957631393120145,
+            "01": 0.0005043881771411278,
+            "0U": 0.0,
+            "10": 0.003228084333703218,
+            "11": 0.0005043881771411278,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 9871,
+            "01": 5,
+            "0U": 0,
+            "10": 32,
+            "11": 5,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "land_water_conflict": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 7,
+          "Ntotal": 7,
+          "five": {
+            "00": 7,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 7,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "surface_unknown": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 0,
+          "Ntotal": 5,
+          "five": {
+            "00": 0,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 5
+          },
+          "fractions_total": {
+            "00": 0.0,
+            "01": 0.0,
+            "0U": 1.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 0,
+            "01": 0,
+            "0U": 5,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        },
+        "water_water": {
+          "Jaccard_denominator": 0,
+          "Jaccard_known": null,
+          "Jaccard_null_reason": "no_known_positive_union",
+          "Nknown": 13,
+          "Ntotal": 13,
+          "five": {
+            "00": 13,
+            "01": 0,
+            "10": 0,
+            "11": 0,
+            "U": 0
+          },
+          "fractions_total": {
+            "00": 1.0,
+            "01": 0.0,
+            "0U": 0.0,
+            "10": 0.0,
+            "11": 0.0,
+            "1U": 0.0,
+            "U0": 0.0,
+            "U1": 0.0,
+            "UU": 0.0
+          },
+          "n1U": 0,
+          "nU1": 0,
+          "nine": {
+            "00": 13,
+            "01": 0,
+            "0U": 0,
+            "10": 0,
+            "11": 0,
+            "1U": 0,
+            "U0": 0,
+            "U1": 0,
+            "UU": 0
+          }
+        }
+      },
+      "unknown_causes": {
+        "v": {
+          "geometry_no_nominal_support": 5
+        }
+      }
+    }
+  },
+  "surface_provenance_limit": "Preserves24B exports and frozen conditional source code; GEO field not reinspected and raw land_water value was not exported.",
+  "time_reference_metadata": {
+    "delta_definition": "VIIRS ev_mid_time minus MODIS EV center time; seconds on documented common TAI93 scale",
+    "epoch_and_scale": "TAI seconds since1993-01-01; original units/attributes preserved below",
+    "pixel_exposure_verified": false,
+    "source_REF_sha256": "adeca520d3b1d17e4588d57bb8e092f838b36cc68adeb48915e6e0093591795a",
+    "source_attributes": {
+      "2019": {
+        "MYD14": {
+          "EV center time": {
+            "_FillValue": -2000000000.0,
+            "units": "seconds"
+          },
+          "EV start time": {
+            "_FillValue": -2000000000.0,
+            "units": "seconds"
+          }
+        },
+        "VNP14IMG": {
+          "ev_mid_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Earth view mid time (TAI93)",
+            "units": "seconds"
+          },
+          "scan_end_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Scan end time (TAI93)",
+            "units": "seconds"
+          },
+          "scan_start_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Scan start time (TAI93)",
+            "units": "seconds"
+          }
+        }
+      },
+      "2023": {
+        "MYD14": {
+          "EV center time": {
+            "_FillValue": -2000000000.0,
+            "units": "seconds"
+          },
+          "EV start time": {
+            "_FillValue": -2000000000.0,
+            "units": "seconds"
+          }
+        },
+        "VNP14IMG": {
+          "ev_mid_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Earth view mid time (TAI93)",
+            "units": "seconds"
+          },
+          "scan_end_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Scan end time (TAI93)",
+            "units": "seconds"
+          },
+          "scan_start_time": {
+            "_FillValue": [
+              -999.9
+            ],
+            "long_name": "Scan start time (TAI93)",
+            "units": "seconds"
+          }
+        }
+      }
+    },
+    "validity": "source finite ordered scan references, fill excluded; owner selection frozen32A"
+  },
+  "unit": "etiqueta nativa del quad nominal asignado al punto de consulta"
+}

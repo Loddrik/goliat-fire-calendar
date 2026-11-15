@@ -1,0 +1,73 @@
+{
+  "scope": "Catalog/schema/HEAD-only landcover context preflight; no raster download/read, feature counts, fitting or scoring",
+  "retrieved_utc": "2026-11-15T02:28:00.584749+00:00",
+  "collection_concept_id": "C2484079608-LPCLOUD",
+  "short_name": "MCD12Q1",
+  "version": "061",
+  "doi": "10.5067/MODIS/MCD12Q1.061",
+  "required_tiles_both_geographies": [
+    "h12v12"
+  ],
+  "candidate_primary_nominal_year": 2010,
+  "sensitivity_nominal_year": 2001,
+  "pre2012_asof_claim_verified": false,
+  "temporal_limitation": "2022 reprocessing and multiyear HMM stabilization; temporal provenance does not guarantee only information available before2012.",
+  "planned_separate_landcover_cap_bytes": 157286400,
+  "observation_L2_cap_unchanged_bytes": 419430400,
+  "hdf_body_bytes_read": 0,
+  "raster_opened": false,
+  "features_computed": false,
+  "model_fits": 0,
+  "credentials_used": false,
+  "signed_redirect_urls_saved": false,
+  "granules": [
+    {
+      "nominal_year": 2010,
+      "concept_id": "G2484150734-LPCLOUD",
+      "producer_granule_id": "MCD12Q1.A2010001.h12v12.061.2022160091628",
+      "time_start": "2010-01-01T00:00:00.000Z",
+      "time_end": "2010-12-31T23:59:59.000Z",
+      "production_utc": "2022-06-09T09:16:28.000Z",
+      "head_status": 200,
+      "head_exact_content_length_bytes": 13764955,
+      "head_mib": 13.127284049987793,
+      "CMR_declared_size": [
+        {
+          "Name": "Not provided",
+          "Size": 13.1273,
+          "SizeUnit": "MB"
+        }
+      ]
+    },
+    {
+      "nominal_year": 2001,
+      "concept_id": "G2484181538-LPCLOUD",
+      "producer_granule_id": "MCD12Q1.A2001001.h12v12.061.2022146051151",
+      "time_start": "2001-01-01T00:00:00.000Z",
+      "time_end": "2001-12-31T23:59:59.000Z",
+      "production_utc": "2022-05-26T05:11:51.000Z",
+      "head_status": 200,
+      "head_exact_content_length_bytes": 16769989,
+      "head_mib": 15.993107795715332,
+      "CMR_declared_size": [
+        {
+          "Name": "Not provided",
+          "Size": 15.9931,
+          "SizeUnit": "MB"
+        }
+      ]
+    }
+  ],
+  "schema_evidence": "Official C61 guide2022 confirms same format as C6; actual SDS attrs still require subsequent bounded acquisition/read.",
+  "alternative_asof_candidate": {
+    "name": "ESA GlobCover2009V2.3",
+    "nominal_period": "2009-01-01/2009-12-31",
+    "release_date": "2010-12-21",
+    "sensor": "MERIS",
+    "nominal_resolution_m": 300,
+    "access_and_size_verified": false,
+    "source": "https://www.esa.int/Applications/Observing_the_Earth/Envisat/ESA_unveils_latest_map_of_world_s_land_cover"
+  },
+  "two_years_total_exact_bytes": 30534944,
+  "two_years_total_mib": 29.120391845703125
+}

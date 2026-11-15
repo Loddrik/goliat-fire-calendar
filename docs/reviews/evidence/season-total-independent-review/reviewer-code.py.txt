@@ -1,0 +1,62 @@
+"""Independent42 annual totals from original LOSO bias*n and canonical monthly targets."""
+from pathlib import Path
+import sys,json,math,hashlib,datetime,resource
+import pandas as pd,numpy as np
+R=Path('/Users/dquinteros/nasa/goliat-fire-calendar');D=R/'data/processed';P=D/'season_total_audit/attempt-02';O=R/'docs/reviews/evidence/season-total-independent-review';END=datetime.datetime(2026,11,15,10,43,tzinfo=datetime.timezone.utc)
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def now():return datetime.datetime.now(datetime.timezone.utc)
+def dump(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
+def check():assert now()<END,'42 original absolute cap'
+def close(a,b,label):
+ if a is None or b is None or pd.isna(a) or pd.isna(b):assert (a is None or pd.isna(a)) and (b is None or pd.isna(b)),(label,a,b)
+ else:assert math.isclose(float(a),float(b),abs_tol=1e-9,rel_tol=1e-11),(label,a,b)
+def freeze():
+ check();assert not O.exists() and (P/'manifest.json').exists();O.mkdir(parents=True)
+ paths=[D/'season_total_audit/resource-attempt-02.json',R/'docs/reviews/evidence/issue48-assessment/resource-amendment.json',Path(__file__),R/'docs/reviews/2026-11-15-season-total-protocol.md',R/'pipeline/season_total_audit.py',D/'eval_loso.csv',D/'gates.csv',D/'celldays_comuna_month_masked.parquet']+[p for p in P.iterdir() if p.is_file()]
+ (O/'reviewer-code.py.txt').write_bytes(Path(__file__).read_bytes());dump(O/'freeze.json',{'created_utc':now().isoformat(),'cap_end_utc':END.isoformat(),'inputs_sha256':{str(p):sha(p) for p in paths},'producer_manifest_sha256':sha(P/'manifest.json'),'method':'Delta total = original eval_loso bias*n, Y from canonical masked monthly SNPP counts. No producer outer_predictions used as reference.','new_fits':0,'new_loss_model_selection':False,'science_downloads':0});print('42_REVIEW_FROZEN',sha(O/'freeze.json'),flush=True)
+def summary(f):
+ positive=f[f.observed_total>0];target=math.fsum(map(float,f.observed_total));errors=f.signed_error.to_numpy();absolute=f.absolute_error.to_numpy();ratios=positive.absolute_relative_error.to_numpy();signed=positive.signed_relative_error.to_numpy()
+ return {'n_cut_seasons':len(f),'n_positive_target':len(positive),'n_zero_target':int((f.observed_total==0).sum()),'n_zero_target_zero_prediction':int(((f.observed_total==0)&(f.predicted_total==0)).sum()),'n_zero_target_positive_prediction':int(((f.observed_total==0)&(f.predicted_total>0)).sum()),'season_mae':float(np.mean(absolute)),'mean_signed_error':float(np.mean(errors)),'season_mare':float(np.mean(ratios)) if len(ratios) else None,'season_median_ape':float(np.median(ratios)) if len(ratios) else None,'season_bias_rel':float(np.mean(signed)) if len(signed) else None,'season_wape':math.fsum(map(float,absolute))/target if target>0 else None,'aggregate_relative_bias':math.fsum(map(float,errors))/target if target>0 else None,'observed_total':target,'predicted_total':math.fsum(map(float,f.predicted_total)),'seasons_underpredicted':int((f.signed_error<0).sum()),'min_signed_relative_error':float(np.min(signed)) if len(signed) else None,'max_signed_relative_error':float(np.max(signed)) if len(signed) else None}
+def run():
+ check();fr=json.load(open(O/'freeze.json'));man=json.load(open(P/'manifest.json'));pf=json.load(open(P/'code-freeze.json'));s=json.load(open(P/'summary.json'))
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ for p,h in man['output_sha256'].items():assert sha(P/p)==h,p
+ for p,h in pf['input_sha256'].items():assert sha(R/p)==h,p
+ assert sha(R/'pipeline/season_total_audit.py')==pf['code_sha256'] and man['protocol_sha256']==pf['protocol_sha256']
+ # Independent source path: read existing LOSO control table, never outer_predictions.
+ ctrl=pd.read_csv(D/'eval_loso.csv',dtype={'cut':str});ctrl=ctrl[ctrl.method.isin(['M0','M1','M2'])]
+ m1=ctrl[ctrl.method=='M1'];assert len(m1)==54*8*7 and (m1.groupby(['cut','held_out'])[['mae','bias','n','aqua_sum']].nunique(dropna=False)==1).all().all()
+ ref=ctrl[ctrl.kappa==0].copy();assert len(ref)==1296 and not ref.duplicated(['cut','held_out','method']).any() and ref.n.eq(12).all()
+ gates=pd.read_csv(D/'gates.csv',index_col=0,dtype={0:str});cuts=set(gates.index);enabled=set(gates.index[gates.enabled]);assert len(cuts)==54 and len(enabled)==14
+ canon=pd.read_parquet(D/'celldays_comuna_month_masked.parquet',columns=['sat','cut','season','m','celldays']);canon=canon[canon.season.between(2012,2019)&canon.cut.isin(cuts)]
+ assert (canon.celldays>=0).all();ys=canon[canon.sat=='SNPP'].groupby(['cut','season']).celldays.sum();aq=canon[canon.sat=='Aqua'].groupby(['cut','season']).celldays.sum()
+ rows=[]
+ for r in ref.itertuples(index=False):
+  k=(str(r.cut),int(r.held_out));y=int(ys.get(k,0));aqua=int(aq.get(k,0));close(r.aqua_sum,aqua,'canonical Aqua total');err=float(r.bias)*int(r.n);pred=float(y)+err;assert pred>=-1e-9
+  rows.append({'cut':k[0],'season':k[1],'method':r.method,'n_months':12,'observed_total':y,'predicted_total':pred,'signed_error':err,'absolute_error':abs(err),'signed_relative_error':err/y if y>0 else None,'absolute_relative_error':abs(err)/y if y>0 else None,'relative_error_defined':y>0,'published_enabled':k[0] in enabled})
+ ours=pd.DataFrame(rows).sort_values(['cut','season','method']).reset_index(drop=True);have=pd.read_csv(P/'season-totals.csv',dtype={'cut':str}).sort_values(['cut','season','method']).reset_index(drop=True);assert len(have)==1296 and ours[['cut','season','method']].equals(have[['cut','season','method']])
+ for i in range(len(ours)):
+  for field in ['n_months','observed_total','predicted_total','signed_error','absolute_error','signed_relative_error','absolute_relative_error']:close(ours.iloc[i][field],have.iloc[i][field],field)
+  assert bool(ours.iloc[i].relative_error_defined)==bool(have.iloc[i].relative_error_defined) and bool(ours.iloc[i].published_enabled)==bool(have.iloc[i].published_enabled)
+ summaries=0;pc=pd.read_csv(P/'per-cut.csv',dtype={'cut':str});assert len(pc)==162
+ for method,f in ours.groupby('method'):
+  for name,subset in [('published14',f[f.published_enabled]),('all54',f),('remaining40',f[~f.published_enabled])]:
+   claim=s['populations'][method][name];oursum=summary(subset)
+   for field,value in oursum.items():close(value,claim[field],name+method+field)
+   summaries+=1
+  for cut,subset in f.groupby('cut'):
+   target=pc[(pc.method==method)&(pc.cut==cut)];assert len(target)==1
+   for field,value in summary(subset).items():close(value,target[field].iloc[0],cut+method+field)
+   assert bool(target.published_enabled.iloc[0])==(cut in enabled)
+ monthly=pd.read_csv(P/'monthly-controls.csv',dtype={'cut':str});assert len(monthly)==432 and monthly.monthly_control_pass.all()
+ reference=m1[m1.kappa==0].set_index(['cut','held_out'])
+ for r in monthly.itertuples(index=False):
+  rr=reference.loc[(r.cut,r.season)]
+  for field in ['mae','bias','n','aqua_sum']:close(getattr(r,field),rr[field],'monthlycheck')
+ assert s['monthly_controls']==432 and s['kappa_invariance_exact'] and s['kappa_count']==7 and s['monthly_rows']==5184 and s['selected_published_cuts']==sorted(enabled)
+ assert s['apparent_postselection'] and not s['fresh_holdout'] and not s['validates_2002_2011'] and not s['production_changed'];assert all(s[x]==0 for x in ['fits','solvers','downloads'])
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ check();ours.to_csv(O/'independent-season-totals.csv',index=False)
+ report={'status':'independent_full_pass','completed_utc':now().isoformat(),'reviewer_freeze_sha256':sha(O/'freeze.json'),'producer_manifest_sha256_before_and_after':sha(P/'manifest.json'),'producer_outputs_modified':False,'independent_reference':'Original eval_loso bias*n and canonical masked monthly SNPP counts; original outer_predictions not read by this reviewer. Missing count groups are zero only under the existing complete-grid count contract, not physical observation absence.','annual_rows_rebuilt':len(ours),'M1_annual_rows_rebuilt':int((ours.method=='M1').sum()),'M1_primary_published_rows':int(((ours.method=='M1')&ours.published_enabled).sum()),'CUT_method_summaries_verified':len(pc),'population_method_summaries_verified':summaries,'monthly_control_rows_verified':432,'M1_kappa_invariance_exact':True,'all_Y0_relatives_null_with_distinct_prediction_states':True,'primary_M1_published14':summary(ours[(ours.method=='M1')&ours.published_enabled]),'new_fits':0,'solvers':0,'downloads':0,'original_source_predictions_used_as_independent_reference':False,'development_postselection_not_fresh_holdout':True,'not_validation_2002_2011_or_causal_jump2012':True,'no_new_yearly_threshold_or_gate_promotion':True,'RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*(1 if sys.platform=='darwin' else 1024)}
+ dump(O/'summary.json',report);dump(O/'manifest.json',{'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in O.iterdir() if p.is_file() and p.name!='manifest.json'},'cap_end_utc':END.isoformat()});print('42_INDEPENDENT_PASS',json.dumps(report['primary_M1_published14']),flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()

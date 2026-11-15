@@ -1,0 +1,16 @@
+{
+  "metadata_reduced_for_size": true,
+  "original_pretty_snapshot_sha256": "379fcd3e68ae7d5b7a80020180bc373d9907ed54cbb8b31daec1bd3de33df6b3",
+  "request_url": "https://cmr.earthdata.nasa.gov/search/collections.json?short_name=MCD12Q1&version=061&provider=LPCLOUD&page_size=10",
+  "entries": [
+    {
+      "id": "C2484079608-LPCLOUD",
+      "dataset_id": "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m SIN Grid V061",
+      "short_name": "MCD12Q1",
+      "version_id": "061",
+      "time_start": "2001-01-01T00:00:00.000Z",
+      "data_center": "LPCLOUD"
+    }
+  ],
+  "full_collection_metadata_preserved_in": "collection-umm.json"
+}

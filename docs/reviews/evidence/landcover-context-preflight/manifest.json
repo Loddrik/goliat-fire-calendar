@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-15T02:28:00.584749+00:00",
+  "outputs_sha256": {
+    "summary.json": "bb6567f940c00a5f830e46cf85dc1f08dfd114964884dc89d847c586f34879ea",
+    "sources.json": "4ff5fda1e6ba9573422e63a3fbb3c308e72d45ad781edb87844ced43809b005d",
+    "granule-2010-umm.json": "a4c116163eb43effca82754f1b3fac5b9646036a52df691da3461e9c14b8eef0",
+    "granules-2001-bbox.json": "dfce9975d516cc48c8d8e1e39c0e77b9a64a2da2355a441d35f12ed1fcadb029",
+    "granule-2001-umm.json": "c4ba7f38e5abc76cb27f952c7e54d26e73c87d520245ab95528f6a18c1d35fa2",
+    "head-final-2010.json": "06f4150522cef3befc41e10f13a31eec07c63fa0dea7e2cee7bce3a596667f67",
+    "granules-2010-bbox.json": "bdb0bcd4c9eab73ef4015f218e338eee73c9e684ae488cc42d126400a23d8302",
+    "collection-umm.json": "83176e243922bc41d7bf39fd1b62e44d23e358f6fb0ddb7e95ac69f9c059ec40",
+    "head-2010.json": "8a1b3c09e97cfe00434bbda4154bcc959fd962289d1d19b30eed7b3a06a0b0a2",
+    "head-2001.json": "2828c6176cc7dcf4ab4b9ce19679931b7330f7ef2ce66345c4e54d5e06ca4e5b",
+    "collection-query.json": "7aad3e4551a58afc0763f98e217fdb87fda8e7dbb50fc6baa4ee1efa0a65fb57",
+    "request-urls.json": "9722bd79e25b6b6c71dc761b29beeb19990bff23312342360ef60e6a76b8e5f9",
+    "head-final-2001.json": "b886774542fe2e062ee1ca30e77f3520b51205a012a95be2e071c45267ccfa38",
+    "aoi-tile-proof.json": "21ea09afe03aaefb144b84eb7299451577d81952131e3442e36f7dbbb91f5c18"
+  },
+  "no_data_payloads_or_credentials": true,
+  "allowed_actions": "Public catalogJSON and HEAD only; original+CDN HEAD manually controlled without Authorization or persisted signed URLs"
+}

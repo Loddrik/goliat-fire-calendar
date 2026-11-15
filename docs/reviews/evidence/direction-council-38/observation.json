@@ -1,0 +1,168 @@
+{
+  "role": "observación/producto/validez",
+  "criteria_ratified": true,
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "criteria_order": [
+    "validez_identificabilidad",
+    "informacion_discriminante",
+    "factibilidad_repro_revision_coste",
+    "transporte_seleccion",
+    "interpretacion"
+  ],
+  "subjective_ranges_not_probabilities": true,
+  "new_scores_features_targets_fits_or_acquisition_computed": false,
+  "options": {
+    "A": {
+      "criteria_ranges": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_now": true,
+      "question": "¿LaCDF21 congelada aporta calidad de distribución predictiva para celdas-díaSNP registradas frente a deltaB, sobre el mismo panel21?",
+      "value": "Puede cambiar si se sostiene una rama de incertidumbre predictiva. No otro puntofit, ni rescate37 o35A.",
+      "limits": "CRPS propio no demuestra por sí solo calibración, observabilidad física o exactitud del fuego. deltaB es forecast degenerado; CRPS(deltaB)=MAE(B). E11=parent enheld no es contraste nuevo; Gpoint no esCDF. Fechas ya exploradas, cero/positivos/extremos/14-40 ycuatro regímenes visibles.",
+      "first_artifact": "Antes de score: reconstrucción de CDFcompleta/escala/minpositivo/máscara/rosters, control deltaB y oráculo integral independiente en sintéticos. Un solo contraste primario igualpeso4held.",
+      "cap_minutes_including_review": 90,
+      "stop": "CDF o población no reconstruible, discrepancia de oráculos o revisión no reservada: bloquear, sin inventar residualCDF alrededorB/G. Negativo cierra esta defensa distribucional; positivo sólo respalda investigación de forecastCDF, no calibración física.",
+      "weighted_score_range_100": [
+        73.0,
+        88.0
+      ]
+    },
+    "B": {
+      "criteria_ranges": [
+        null,
+        null,
+        [
+          2,
+          3
+        ],
+        null,
+        [
+          3,
+          4
+        ]
+      ],
+      "eligible_now": false,
+      "question": "¿Retener o abstenerse mejora una decisión concreta bajo costo de no informar?",
+      "value": "Potencial decisión de disponibilidad diferente, no mejora de error en toda población.",
+      "limits": "Falta contrato de acción/coste; validez e información decisoria no identificables actualmente. No puntuar esos desconocidos como0 ni redistribuir pesos.",
+      "first_artifact": "Sólo contrato acción/coste/retención territorial antes de pérdidas; no escenario ejecutable hoy.",
+      "cap_minutes_including_review": 90,
+      "stop": "Sin acción/coste convenidos, cerrar ruta. No elegir cobertura tras pérdidas ni excluir meses intensos para anunciar mejora.",
+      "weighted_score_range_100": null
+    },
+    "C": {
+      "criteria_ranges": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_now": true,
+      "question": "¿GOES16FDCF tiene un operador documentado temporal/espacial/QA que podría discriminar otra ambigüedad en las dos fechas fijas?",
+      "value": "Puede cambiar una decisión futura de adquisición o cerrar una vía improductiva; más conectado a la deuda observacional física que una nueva mezcla de counts.",
+      "limits": "SóloG0 documental, no comparación de exactitud ni validación375m. Un negativo grueso no refuta foco fino; mismo territorio no implica cobertura/horarios/errores equivalentes. No asumir disponibilidad/calidad sin documentación.",
+      "first_artifact": "Tabla de fechas/proyección/resolución temporal/estadosunknown-vsno_detection/acceso y falsador de factibilidad, con referencias primarias; cero bytes científicos nuevos.",
+      "cap_minutes_including_review": 45,
+      "stop": "Soporte temporal, geográfico o semántico insuficiente/no establecido =>G0negativo oinconcluso. PresupuestoL2 anterior cerrado389MB; adquisición futura requiere protocolo/budget nuevo, no autoreapertura.",
+      "weighted_score_range_100": [
+        69.0,
+        77.0
+      ]
+    },
+    "D": {
+      "criteria_ranges": [
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_now": true,
+      "question": "¿Qué afirmaciones permanecen defendibles y qué evidencia cambiaría cada decisión pendiente?",
+      "value": "Entrega producto científico fiel y reproducible, preservando negativos y límites. Poca información experimental nueva.",
+      "limits": "No sumar porcentajes entre contratos ni convertir documentación enholdout nuevo. Separar predictor36, primario37fallido, operador33 ycontinuo30Bfallido.",
+      "first_artifact": "Ledger único de estimando/cohorte/controlevidencia/decisión/falsador, con reproducción y deuda observacional explícita.",
+      "cap_minutes_including_review": 60,
+      "stop": "Cualquier sobreafirmación o procedencia incompleta se corrige; no abrir otro score para evitar un cierre incierto.",
+      "weighted_score_range_100": [
+        72.0,
+        72.0
+      ]
+    }
+  },
+  "directional_order": [
+    "A",
+    "C",
+    "D",
+    "B_not_execution_ready"
+  ],
+  "robust_winner": false,
+  "sequence": "A como único estudio numérico nuevo, C sólo documental en paralelo si su revisión no compite con A; reservarD60min final. No intentarA90+C45+D60serialmente en el horizonte restante. Si reconstrucción/oráculoA no queda auditable temprano, stopA y consolidar; C no habilita descarga. Bcerrado mientras faltaacción/coste.",
+  "noncompensables": [
+    "UNKNOWN≠0; unidad/estimando/contrato explícitos",
+    "37 formulaciónbinariaκ10 jointgatefallido; no generalización a toda cronología ni rescate consecundarios",
+    "CDF real/placebo37 activepoolcounts distintos: no afirmar capacitymatched ni causalidad temporal",
+    "SOURCEonly sin nuevoholdout; positivoCDFno rescataMAE ni acreditaG1",
+    "33Jaccard no es truth/modeltarget ydosL2casos no son validación independiente",
+    "L2budget389MB cerrado; sin adquisición durantepreflightC",
+    "Revisión independiente dentro de cada cap y consolidación final protegida; nada producción"
+  ],
+  "score_NA_note": "B carece de ponderado porque varios criterios dependen del contrato inexistente; pesos no se redistribuyeron ni se asignó0 a lo desconocido."
+}

@@ -1,0 +1,158 @@
+{
+  "all_GEO_gates_passed": true,
+  "files": {
+    "2019-MYD14-phase0-h250-points.npz": {
+      "bytes": 42970,
+      "sha256": "3b1d9cf06153f67ba7df3ab77ccc099475b5fc5d0267e6de43047ffb793c5054"
+    },
+    "2019-MYD14-phase0-h250-postings.npz": {
+      "bytes": 136963,
+      "sha256": "7009d3afa8a63cae5cd2e440fb103b62816aee76abc6dace9cf56f69c02f0158"
+    },
+    "2019-MYD14-phase0-h500-points.npz": {
+      "bytes": 30665,
+      "sha256": "90d9ba2fd3754a3e6de11f57066c530176a27556a0ea33667e3a14e2acbb9765"
+    },
+    "2019-MYD14-phase0-h500-postings.npz": {
+      "bytes": 60436,
+      "sha256": "a7f5df25eac6dc15f07497c0de91d273a0ea22c07c7c32f0db5a5cebe73eb4f6"
+    },
+    "2019-MYD14-phase125-h250-points.npz": {
+      "bytes": 43308,
+      "sha256": "5756036e0488866375103a6daf2c127c926332da13d07be26fd7e191bcb6171d"
+    },
+    "2019-MYD14-phase125-h250-postings.npz": {
+      "bytes": 139677,
+      "sha256": "15791243017e78bc895ad91237962e1005c800c7aee242cf49797dbe6c810bae"
+    },
+    "2019-MYD14-phase125-h500-points.npz": {
+      "bytes": 30951,
+      "sha256": "9bbcb592926e0dc7592df8f3e1c163fb8a5e29402b0c6c04301ea827d3bc11dd"
+    },
+    "2019-MYD14-phase125-h500-postings.npz": {
+      "bytes": 61129,
+      "sha256": "1a2c7c64a61bb7f49dbc2b5fd2f91a0f1c285d5777fed97aa6c92372f7c48823"
+    },
+    "2019-VNP14IMG-phase0-h250-points.npz": {
+      "bytes": 240984,
+      "sha256": "8eb49242e3ff8bfd435104e3ffffcb9630915953b1d98c8d06cec5a5b77b9806"
+    },
+    "2019-VNP14IMG-phase0-h250-postings.npz": {
+      "bytes": 443113,
+      "sha256": "78fef48a44ff1fb477c9762ff00c26fb3245d5a4fc6cec77295a244af052d026"
+    },
+    "2019-VNP14IMG-phase0-h500-points.npz": {
+      "bytes": 183284,
+      "sha256": "5a6e5c60d2f874fe48f8c8c9049f3f6d638f4ac51945fd56ce3afedfc2a34486"
+    },
+    "2019-VNP14IMG-phase0-h500-postings.npz": {
+      "bytes": 266979,
+      "sha256": "8c53e7b78520bb3fff8661374209590eda48cbb7774540be9db55e20f011fde4"
+    },
+    "2019-VNP14IMG-phase125-h250-points.npz": {
+      "bytes": 242372,
+      "sha256": "8e01e743dfb7f68d8421f5df404f4b6106b5b79660eca32c60b7a444f92c82d4"
+    },
+    "2019-VNP14IMG-phase125-h250-postings.npz": {
+      "bytes": 449362,
+      "sha256": "4d9e30aa4c43f8b737bcf23c53a79a624e72de16be248055497e24e34783336a"
+    },
+    "2019-VNP14IMG-phase125-h500-points.npz": {
+      "bytes": 184317,
+      "sha256": "6a1d89584f6c27a84a47a045fd02310de689797c68b3888fa4bb169f61338230"
+    },
+    "2019-VNP14IMG-phase125-h500-postings.npz": {
+      "bytes": 268953,
+      "sha256": "88e3eb6b4267660b105a149858b37ef722a77b8aa25773c4a41737fff57977e2"
+    },
+    "2023-MYD14-phase0-h250-points.npz": {
+      "bytes": 25801,
+      "sha256": "32be5d6d62e644308b48814fa440c30cba1a98fb991a2ab97688f0ff094a9277"
+    },
+    "2023-MYD14-phase0-h250-postings.npz": {
+      "bytes": 136970,
+      "sha256": "bfd8108d6d0a23fe3506f6e8d8cebc3961bb3c64fe830da710a4c4954befe73a"
+    },
+    "2023-MYD14-phase0-h500-points.npz": {
+      "bytes": 18807,
+      "sha256": "9d9e7b0e54590f108dbed3cb98f83991088f13fac8c3c568249cb0aa215998f1"
+    },
+    "2023-MYD14-phase0-h500-postings.npz": {
+      "bytes": 47897,
+      "sha256": "e7f6b2e40864e97c472b04e508cbf1382e6ec6dd51e56e2ce4a621bf8a65ded0"
+    },
+    "2023-MYD14-phase125-h250-points.npz": {
+      "bytes": 26028,
+      "sha256": "60277e3afa0f597b92d8b8ca07cc002725bf53ded431a27a0eef16786245b4c3"
+    },
+    "2023-MYD14-phase125-h250-postings.npz": {
+      "bytes": 138963,
+      "sha256": "5ccb3844d7323f83bb3fbcbace7fd4db21df2346d6d9acc372f3ec45dd0d92fb"
+    },
+    "2023-MYD14-phase125-h500-points.npz": {
+      "bytes": 19004,
+      "sha256": "5f4805f005520de437f0f2d6958873b473c5829acc94e8b94d59826f289cd764"
+    },
+    "2023-MYD14-phase125-h500-postings.npz": {
+      "bytes": 48495,
+      "sha256": "582ddc9fed75340cc6179d0efaf126fe6aee755ad4cfe1a8235f527c8aaa2752"
+    },
+    "2023-VNP14IMG-phase0-h250-points.npz": {
+      "bytes": 219979,
+      "sha256": "e324d19f252647c8a65414008405ec1a6d8a484e96e6fc6250338d6bdf08b16d"
+    },
+    "2023-VNP14IMG-phase0-h250-postings.npz": {
+      "bytes": 408805,
+      "sha256": "835e7c3a05521db557c7dd5944f66d8f68a7e6b161acffca664e2393a29be730"
+    },
+    "2023-VNP14IMG-phase0-h500-points.npz": {
+      "bytes": 170212,
+      "sha256": "104e913a3df5b7e6e5ae4b89e431741f56998064a73a95c5cb34d6f38d0873aa"
+    },
+    "2023-VNP14IMG-phase0-h500-postings.npz": {
+      "bytes": 251469,
+      "sha256": "eb5496a852017a7bd5cf91c892ebb02b653c71b7edafdf12d43f2c279a42323a"
+    },
+    "2023-VNP14IMG-phase125-h250-points.npz": {
+      "bytes": 220927,
+      "sha256": "5a11d67a467ac530e63e7ed1349c66dbb5d42f6943150a456943cea41efe682b"
+    },
+    "2023-VNP14IMG-phase125-h250-postings.npz": {
+      "bytes": 416236,
+      "sha256": "b6239d401f830ea7e6e82b57520f4bc4c8ab12e00f8459ccb074eb7f3277670f"
+    },
+    "2023-VNP14IMG-phase125-h500-points.npz": {
+      "bytes": 171302,
+      "sha256": "a7f247c0dabc501e7488d247d19fda277d69016f83148ae00cfb5f7b0733709c"
+    },
+    "2023-VNP14IMG-phase125-h500-postings.npz": {
+      "bytes": 253539,
+      "sha256": "7127f54f661b7e4d43e98a3c31d5f156a5bddedca5f6afe249bc56a3404f2586"
+    },
+    "code.snapshot.py.txt": {
+      "bytes": 21274,
+      "sha256": "b03a9c9e17dee5fef270b09d1f0c6f5996c37c6ac2741207a9b6925df315f607"
+    },
+    "freeze.json": {
+      "bytes": 2994,
+      "sha256": "1f2e2fc462935444c1a8b0347d99d04b6e46081ca3af30052e900207cff4c19a"
+    },
+    "geometry-certificate.json": {
+      "bytes": 1264,
+      "sha256": "4f739acb312d156101642dc4071308dc9c0345615379d550975b660829a19fb0"
+    },
+    "progress.json": {
+      "bytes": 650,
+      "sha256": "b5dd49f60b68c9291184037e9279e8c7fd84026bf9aee3456a0021a812c47224"
+    },
+    "protocol.snapshot.md.txt": {
+      "bytes": 3923,
+      "sha256": "39bd3796d6d082250b740df7cb63b5e11b16d55901743adf1eacffe325abd990"
+    },
+    "summary.json": {
+      "bytes": 16734,
+      "sha256": "933f3c36ec771e6f0ac044bec64b19fbeb9074bfbc5e3c87f0b56c239f3a37f4"
+    }
+  },
+  "gate1_passed": false
+}

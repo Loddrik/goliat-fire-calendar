@@ -1,0 +1,376 @@
+{
+  "created_utc": "2026-11-15T08:51:34.330340+00:00",
+  "algorithm": "Exact Fraction piecewise-CDF integral; verified independently against exact double-sum identity on synthetic data only. Floating integral uses knots, no prefix/producer code.",
+  "rows": [
+    {
+      "name": "delta_zero",
+      "atoms_rational": [
+        "0"
+      ],
+      "weights_rational": [
+        "1"
+      ],
+      "y_rational": "0",
+      "atoms": [
+        0.0
+      ],
+      "weights": [
+        1.0
+      ],
+      "y": 0.0,
+      "expected_rational": "0",
+      "expected_float": 0.0,
+      "independent_float_integral": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "delta_left",
+      "atoms_rational": [
+        "2"
+      ],
+      "weights_rational": [
+        "1"
+      ],
+      "y_rational": "-3",
+      "atoms": [
+        2.0
+      ],
+      "weights": [
+        1.0
+      ],
+      "y": -3.0,
+      "expected_rational": "5",
+      "expected_float": 5.0,
+      "independent_float_integral": 5.0,
+      "tolerance": 3e-10
+    },
+    {
+      "name": "delta_equal",
+      "atoms_rational": [
+        "2"
+      ],
+      "weights_rational": [
+        "1"
+      ],
+      "y_rational": "2",
+      "atoms": [
+        2.0
+      ],
+      "weights": [
+        1.0
+      ],
+      "y": 2.0,
+      "expected_rational": "0",
+      "expected_float": 0.0,
+      "independent_float_integral": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "delta_right",
+      "atoms_rational": [
+        "2"
+      ],
+      "weights_rational": [
+        "1"
+      ],
+      "y_rational": "7",
+      "atoms": [
+        2.0
+      ],
+      "weights": [
+        1.0
+      ],
+      "y": 7.0,
+      "expected_rational": "5",
+      "expected_float": 5.0,
+      "independent_float_integral": 5.0,
+      "tolerance": 7.000000000000001e-10
+    },
+    {
+      "name": "two_at_zero",
+      "atoms_rational": [
+        "0",
+        "2"
+      ],
+      "weights_rational": [
+        "1/3",
+        "2/3"
+      ],
+      "y_rational": "0",
+      "atoms": [
+        0.0,
+        2.0
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "y": 0.0,
+      "expected_rational": "8/9",
+      "expected_float": 0.8888888888888888,
+      "independent_float_integral": 0.8888888888888891,
+      "tolerance": 1.3333333333333334e-10
+    },
+    {
+      "name": "two_between",
+      "atoms_rational": [
+        "0",
+        "2"
+      ],
+      "weights_rational": [
+        "1/3",
+        "2/3"
+      ],
+      "y_rational": "1/2",
+      "atoms": [
+        0.0,
+        2.0
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "y": 0.5,
+      "expected_rational": "13/18",
+      "expected_float": 0.7222222222222222,
+      "independent_float_integral": 0.7222222222222223,
+      "tolerance": 1.3333333333333334e-10
+    },
+    {
+      "name": "two_right",
+      "atoms_rational": [
+        "0",
+        "2"
+      ],
+      "weights_rational": [
+        "1/3",
+        "2/3"
+      ],
+      "y_rational": "4",
+      "atoms": [
+        0.0,
+        2.0
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "y": 4.0,
+      "expected_rational": "20/9",
+      "expected_float": 2.2222222222222223,
+      "independent_float_integral": 2.2222222222222223,
+      "tolerance": 4e-10
+    },
+    {
+      "name": "two_left",
+      "atoms_rational": [
+        "0",
+        "2"
+      ],
+      "weights_rational": [
+        "1/3",
+        "2/3"
+      ],
+      "y_rational": "-1",
+      "atoms": [
+        0.0,
+        2.0
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "y": -1.0,
+      "expected_rational": "17/9",
+      "expected_float": 1.8888888888888888,
+      "independent_float_integral": 1.888888888888889,
+      "tolerance": 1.3333333333333334e-10
+    },
+    {
+      "name": "ties_zero_mass",
+      "atoms_rational": [
+        "0",
+        "1",
+        "1",
+        "9"
+      ],
+      "weights_rational": [
+        "1/2",
+        "1/4",
+        "1/4",
+        "0"
+      ],
+      "y_rational": "1/2",
+      "atoms": [
+        0.0,
+        1.0,
+        1.0,
+        9.0
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25,
+        0.0
+      ],
+      "y": 0.5,
+      "expected_rational": "1/4",
+      "expected_float": 0.25,
+      "independent_float_integral": 0.25,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "ties_reordered",
+      "atoms_rational": [
+        "9",
+        "1",
+        "0",
+        "1"
+      ],
+      "weights_rational": [
+        "0",
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "y_rational": "1/2",
+      "atoms": [
+        9.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "weights": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "y": 0.5,
+      "expected_rational": "1/4",
+      "expected_float": 0.25,
+      "independent_float_integral": 0.25,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "split_mass",
+      "atoms_rational": [
+        "0",
+        "2",
+        "2"
+      ],
+      "weights_rational": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "y_rational": "1/2",
+      "atoms": [
+        0.0,
+        2.0,
+        2.0
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "y": 0.5,
+      "expected_rational": "13/18",
+      "expected_float": 0.7222222222222222,
+      "independent_float_integral": 0.7222222222222223,
+      "tolerance": 1.3333333333333334e-10
+    },
+    {
+      "name": "all_equal",
+      "atoms_rational": [
+        "5/2",
+        "5/2",
+        "5/2"
+      ],
+      "weights_rational": [
+        "1/6",
+        "1/3",
+        "1/2"
+      ],
+      "y_rational": "3",
+      "atoms": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "weights": [
+        0.16666666666666666,
+        0.3333333333333333,
+        0.5
+      ],
+      "y": 3.0,
+      "expected_rational": "1/2",
+      "expected_float": 0.5,
+      "independent_float_integral": 0.5,
+      "tolerance": 3e-10
+    },
+    {
+      "name": "floor_one_noninteger",
+      "atoms_rational": [
+        "0",
+        "1",
+        "5/2"
+      ],
+      "weights_rational": [
+        "1/5",
+        "3/10",
+        "1/2"
+      ],
+      "y_rational": "7/4",
+      "atoms": [
+        0.0,
+        1.0,
+        2.5
+      ],
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "y": 1.75,
+      "expected_rational": "83/200",
+      "expected_float": 0.415,
+      "independent_float_integral": 0.41500000000000004,
+      "tolerance": 1.7500000000000002e-10
+    },
+    {
+      "name": "target_at_atom",
+      "atoms_rational": [
+        "0",
+        "1",
+        "5/2"
+      ],
+      "weights_rational": [
+        "1/5",
+        "3/10",
+        "1/2"
+      ],
+      "y_rational": "1",
+      "atoms": [
+        0.0,
+        1.0,
+        2.5
+      ],
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "y": 1.0,
+      "expected_rational": "83/200",
+      "expected_float": 0.415,
+      "independent_float_integral": 0.41500000000000004,
+      "tolerance": 1.55e-10
+    }
+  ],
+  "actual_target_reads": 0,
+  "new_fits": 0,
+  "solver_calls": 0,
+  "all_exact_oracle_gates_passed": true
+}

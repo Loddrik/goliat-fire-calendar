@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="GOLIAT"><defs><clipPath id="d23"><path d="M0 128 L0 66 L128 34 L128 128 Z"/></clipPath></defs>
+    <g clip-path="url(#d23)">
+      <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="#C7302A"/>
+      <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="#F06A1D" transform="translate(64 116) scale(0.68) translate(-64 -116)"/>
+      <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="#FDB022" transform="translate(64 116) scale(0.38) translate(-64 -116)"/>
+    </g><rect x="65.5" y="37.5" width="9" height="9" rx=".8" fill="#F06A1D"/><rect x="78.25" y="27.25" width="7.5" height="7.5" rx=".8" fill="#FDB022"/><rect x="90" y="18" width="6" height="6" rx=".8" fill="#FDB022"/><rect x="100.75" y="9.75" width="4.5" height="4.5" rx=".8" fill="#FFE29A"/><rect x="53" y="33" width="6" height="6" rx=".8" fill="#F06A1D"/><rect x="71.75" y="21.75" width="4.5" height="4.5" rx=".8" fill="#FDB022"/></svg>

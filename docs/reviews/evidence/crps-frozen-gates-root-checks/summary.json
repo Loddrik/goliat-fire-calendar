@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-11-15T10:29:57.015486+00:00",
+  "status": "pass",
+  "source_commit": "a72b72161e76127db52c3eedb51488996387ba45",
+  "script_sha256": "77517e47513689fcee33985ecd0e9addf37e13126fcffbc5fdb43a28cb1ab346",
+  "historical_snapshot_sha256": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+  "current_publication_gates_intentionally_changed_in_isolated_clone": true,
+  "historical_default_full_replay_unchanged": true,
+  "altered_explicit_override_rejected": true,
+  "only_clone_diff_is_intended_current_gates_mutation": true,
+  "actual_root_publication_untouched": true,
+  "original39_manifest_unchanged": true,
+  "new_scientific_evaluation": false,
+  "fits": 0,
+  "downloads": 0,
+  "private_inputs_required": false
+}

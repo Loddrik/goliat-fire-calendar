@@ -1,0 +1,6 @@
+{
+  "tests_run": 330,
+  "passed": true,
+  "group_budget_fixture_reconcile_calls": 19,
+  "scope": "Root full regression suite; separate from original35run and independentreview; no experiment driver invoked."
+}

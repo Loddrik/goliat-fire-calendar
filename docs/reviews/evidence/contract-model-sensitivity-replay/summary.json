@@ -1,0 +1,89 @@
+{
+  "scope": "offline-local-clone-byte-replay-not-physical-validation",
+  "source_commit": "8b29113404d82f71cf6563ab045b78e8d0c1a766",
+  "replay_checkout": "/private/tmp/goliat-contract-replay-20261115-git",
+  "checkout_HEAD_verified": true,
+  "clone_method": "git clone --no-hardlinks --no-checkout local_repository; git checkout --detach commit",
+  "interpreter": "/Users/dquinteros/nasa/goliat-fire-calendar/.venv/bin/python",
+  "python_version": "3.14.7",
+  "command": "python pipeline/contract_model_sensitivity_audit.py",
+  "code_or_freeze_modified": false,
+  "network_calls_required_or_made": false,
+  "secrets_or_raw_copied_or_read": false,
+  "runtime_directory_absent_in_clone": true,
+  "runner_exit_code": 0,
+  "runner_status": "frozen-contract-sensitivity-complete",
+  "completed_utc": "2026-11-15T04:41:11.959135+00:00",
+  "original_cap_end_utc": "2026-11-15T05:29:28Z",
+  "within_original_cap": true,
+  "protected_input_count": 510,
+  "protected_and_code_hashes_verified": true,
+  "clean_clone_after_replay": true,
+  "all_outputs_byte_identical": true,
+  "output_count": 7,
+  "outputs": [
+    {
+      "name": "allocation_checks.csv",
+      "original_bytes": 11335,
+      "replay_bytes": 11335,
+      "original_sha256": "435158c14a9823563a9afdb7308eacbc702279dd72e9e733b68b74c0d20b2e72",
+      "replay_sha256": "435158c14a9823563a9afdb7308eacbc702279dd72e9e733b68b74c0d20b2e72",
+      "byte_identical": true
+    },
+    {
+      "name": "code-freeze.json",
+      "original_bytes": 64802,
+      "replay_bytes": 64802,
+      "original_sha256": "5a7c732ac84dc519c34a097513f634d6a824ab9d24fb9ec58a7fe8d7acedf868",
+      "replay_sha256": "5a7c732ac84dc519c34a097513f634d6a824ab9d24fb9ec58a7fe8d7acedf868",
+      "byte_identical": true
+    },
+    {
+      "name": "manifest.json",
+      "original_bytes": 65346,
+      "replay_bytes": 65346,
+      "original_sha256": "cdd00e1d4388178bf0c9f4a03764f272fdee6a7d1c8b903bdc3e35898fd8b852",
+      "replay_sha256": "cdd00e1d4388178bf0c9f4a03764f272fdee6a7d1c8b903bdc3e35898fd8b852",
+      "byte_identical": true
+    },
+    {
+      "name": "metrics.csv",
+      "original_bytes": 57103,
+      "replay_bytes": 57103,
+      "original_sha256": "5327d435b64b775ab300e5684ebdf5265b7dee70d634691c7bbb041c60511a7b",
+      "replay_sha256": "5327d435b64b775ab300e5684ebdf5265b7dee70d634691c7bbb041c60511a7b",
+      "byte_identical": true
+    },
+    {
+      "name": "paired_predictions.parquet",
+      "original_bytes": 121385,
+      "replay_bytes": 121385,
+      "original_sha256": "a625ac19418357a83d5d8d25f24b280732c0f6f9e274649dd826303a2da55333",
+      "replay_sha256": "a625ac19418357a83d5d8d25f24b280732c0f6f9e274649dd826303a2da55333",
+      "byte_identical": true
+    },
+    {
+      "name": "source_csv_ledger.csv",
+      "original_bytes": 15145,
+      "replay_bytes": 15145,
+      "original_sha256": "3eaeffe077a7b4bd2a4242d8fb64fa73412ef7f8bbf8e592ea349788c482be93",
+      "replay_sha256": "3eaeffe077a7b4bd2a4242d8fb64fa73412ef7f8bbf8e592ea349788c482be93",
+      "byte_identical": true
+    },
+    {
+      "name": "summary.json",
+      "original_bytes": 159160,
+      "replay_bytes": 159160,
+      "original_sha256": "2ff16a1cf2240669469056a1c15538edae75de427825326478570227533d52d5",
+      "replay_sha256": "2ff16a1cf2240669469056a1c15538edae75de427825326478570227533d52d5",
+      "byte_identical": true
+    }
+  ],
+  "manifest_or_provenance_differences": [],
+  "normalization_applied": false,
+  "operational_notes": [
+    "An initial archive was extracted directly under /private/tmp by an incorrect destination; it was not used as the qualifying checkout, not globally removed, and no original repository artifacts were modified.",
+    "A separate archive-only directory /private/tmp/goliat-contract-replay-20261115 was also created; the qualifying replay uses the distinct real Git clone with suffix -git. These intermediate artifacts remain identified for scoped cleanup."
+  ],
+  "interpretation": "Byte reproduction of this frozen computation in a separate local checkout with the same interpreter; not fresh data, independent scientific validation, sensor agreement or G1."
+}

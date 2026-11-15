@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-11-15T13:41:06.421101+00:00",
+  "purpose": "Short-term presentation and delivery priorities; not a reweighting of historical scientific experiment criteria",
+  "method": "Ordered qualitative criteria, no synthetic numeric scores",
+  "ordered_criteria": [
+    "Claims supported by inspected evidence; distinguish code, PR, merge, deployment and apparent diagnostics from validation.",
+    "Observable value for the presentation team and a demonstrable user decision; no unmeasured impact or prevention claim.",
+    "Bounded scope executable before12:30America/Santiago today, or explicitly assigned to subsequent work.",
+    "Dependencies available and useful delivery steps unblocked.",
+    "Named owner role, frozen/identified inputs, objective acceptance evidence and reversibility."
+  ],
+  "non_compensables": [
+    "Do not promote unsupported scientific claims or models.",
+    "Do not overwrite historical evidence or confuse raw recovery with full scientific validation.",
+    "No automatic merge or deployment in this handoff."
+  ],
+  "multifocal_criteria_ACK": {
+    "scientific_accuracy": true,
+    "business_user_value": true,
+    "engineering_access_delivery": true
+  },
+  "all_three_agreed_before_priority_ordering": true,
+  "adversarial_review_and_final_ratification_pending": true
+}

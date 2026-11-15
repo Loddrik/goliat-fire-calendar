@@ -1,0 +1,320 @@
+{
+  "status": "retrospective-landcover-area-descriptor",
+  "protocol": "22",
+  "model_fits": 0,
+  "new_prediction_scores": 0,
+  "uses_SNPP_labels": false,
+  "asof2012_claim": false,
+  "nominal2010_reprocessed2022_HMM": true,
+  "classification_is_ecological_truth": false,
+  "primary_year": 2010,
+  "stability_year": 2001,
+  "primary_geography": "legacy",
+  "secondary_geography": "DPA2023",
+  "primary_QC_retained": [
+    0,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "unknown_QC": [
+    1,
+    3,
+    10,
+    255
+  ],
+  "sensitivity": "QC0 only; declared policy, not NASA requirement",
+  "context_available_threshold": 0.95,
+  "threshold_is_engineering_policy_not_NASA": true,
+  "primary_denominator": "complete native-SINU polygon area",
+  "secondary_denominator": "retained classified land classes1-16; null if zero",
+  "feature_rows": 432,
+  "whole_polygons_per_geography": 54,
+  "geometry_operations": 108,
+  "grid": {
+    "ulx": -6671703.118,
+    "uly": -3335851.559,
+    "lrx": -5559752.598333,
+    "lry": -4447802.078667,
+    "dx": 463.3127165279165,
+    "dy": 463.3127165279167,
+    "nx": 2400,
+    "ny": 2400,
+    "radius": 6371007.181,
+    "projection": "GCTP_SNSOID"
+  },
+  "max_intersection_relative_closure_error": 9.015534806436423e-14,
+  "max_class_relative_closure_error": 9.015534806436423e-14,
+  "max_fraction_closure_error": 9.015010959956271e-14,
+  "configurations": {
+    "2001/DPA2023/QC0": {
+      "n": 54,
+      "context_available": 45,
+      "context_unavailable_cuts": [
+        "08101",
+        "08102",
+        "08103",
+        "08105",
+        "08107",
+        "08108",
+        "08110",
+        "08112",
+        "08310"
+      ],
+      "min_retained_fraction": 0.6774708994592983,
+      "max_unknown_fraction": 0.32252910054064937,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.010651766072269099,
+          "max": 0.9248044293209287
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.16302970124892957
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.31611663602166096
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.25498643492611045
+        }
+      }
+    },
+    "2001/DPA2023/retained": {
+      "n": 54,
+      "context_available": 54,
+      "context_unavailable_cuts": [],
+      "min_retained_fraction": 0.9999999999999171,
+      "max_unknown_fraction": 0.0,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.010651766072269099,
+          "max": 0.9248044293209287
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.16302970124892957
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.47342838917000424
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.25498643492611045
+        }
+      }
+    },
+    "2001/legacy/QC0": {
+      "n": 54,
+      "context_available": 45,
+      "context_unavailable_cuts": [
+        "08101",
+        "08102",
+        "08103",
+        "08105",
+        "08107",
+        "08108",
+        "08110",
+        "08112",
+        "08310"
+      ],
+      "min_retained_fraction": 0.6831638504809985,
+      "max_unknown_fraction": 0.31683614951894945,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.010693989481848945,
+          "max": 0.9266092782852349
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.1628916587201243
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.31680585635558456
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.25352572350957564
+        }
+      }
+    },
+    "2001/legacy/retained": {
+      "n": 54,
+      "context_available": 54,
+      "context_unavailable_cuts": [],
+      "min_retained_fraction": 0.9999999999999098,
+      "max_unknown_fraction": 0.0,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.010693989481848945,
+          "max": 0.9266092782852349
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.1628916587201243
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.4740133656155887
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.25352572350957564
+        }
+      }
+    },
+    "2010/DPA2023/QC0": {
+      "n": 54,
+      "context_available": 45,
+      "context_unavailable_cuts": [
+        "08101",
+        "08102",
+        "08103",
+        "08105",
+        "08107",
+        "08108",
+        "08110",
+        "08112",
+        "08310"
+      ],
+      "min_retained_fraction": 0.6822074411852256,
+      "max_unknown_fraction": 0.3177925588147222,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.05247373853225652,
+          "max": 0.9219402911014541
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.17786321844700367
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.3176590521322017
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.16425362281598843
+        }
+      }
+    },
+    "2010/DPA2023/retained": {
+      "n": 54,
+      "context_available": 54,
+      "context_unavailable_cuts": [],
+      "min_retained_fraction": 0.9999999999999171,
+      "max_unknown_fraction": 0.0,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.05247373853225652,
+          "max": 0.9222763881307899
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.17786321844700367
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.4780681194231982
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.16425362281598843
+        }
+      }
+    },
+    "2010/legacy/QC0": {
+      "n": 54,
+      "context_available": 45,
+      "context_unavailable_cuts": [
+        "08101",
+        "08102",
+        "08103",
+        "08105",
+        "08107",
+        "08108",
+        "08110",
+        "08112",
+        "08310"
+      ],
+      "min_retained_fraction": 0.6885785912643795,
+      "max_unknown_fraction": 0.31142140873556834,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.05203204434912964,
+          "max": 0.9225991044518111
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.17772280015086886
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.3183030532742367
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.16339016663653838
+        }
+      }
+    },
+    "2010/legacy/retained": {
+      "n": 54,
+      "context_available": 54,
+      "context_unavailable_cuts": [],
+      "min_retained_fraction": 0.9999999999999098,
+      "max_unknown_fraction": 0.0,
+      "feature_ranges": {
+        "forest": {
+          "min": 0.05203204434912964,
+          "max": 0.9229358727371425
+        },
+        "crop": {
+          "min": 0.0,
+          "max": 0.17772280015086886
+        },
+        "urban": {
+          "min": 0.0,
+          "max": 0.47867667922649426
+        },
+        "mosaic": {
+          "min": 0.0,
+          "max": 0.16339016663653838
+        }
+      }
+    }
+  },
+  "acquired_HDF_bytes": 30534944,
+  "transfer_body_bytes_including_failures": 30534944,
+  "dataset_cap_bytes": 157286400,
+  "L2_budget_separate_unchanged": true,
+  "NASA_object_checksum_available": false,
+  "local_SHA256_preserved": true,
+  "geometry_repair_performed": false,
+  "class_interpolation_performed": false,
+  "footprint_area_convention": "native spherical sinusoidal projected geometry; no center assignment",
+  "transform": {
+    "description": "Ballpark geographic offset from WGS 84 to unknown + unknown (with axis order normalized for visualization)",
+    "definition": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=sinu lon_0=0 x_0=0 y_0=0 R=6371007.181",
+    "native_crs_proj4": "+proj=sinu +R=6371007.181 +units=m +no_defs",
+    "interpretation": "Map geographic longitude/latitude to the MODIS product sphere by the explicit pipeline; not a claimed high-accuracy ellipsoidal datum transformation."
+  },
+  "elapsed_seconds": 11.839393678004853,
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "shapely": "2.2.0",
+    "GEOS": "3.14.1",
+    "pyproj": "3.8.0",
+    "PROJ": "9.8.1"
+  }
+}

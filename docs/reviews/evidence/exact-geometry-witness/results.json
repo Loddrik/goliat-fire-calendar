@@ -1,0 +1,1595 @@
+{
+  "GEOS_oracle": false,
+  "all_five_preserved": true,
+  "completed_utc": "2026-11-15T05:27:36.708473+00:00",
+  "coordinate_tuples": 5226,
+  "freeze_sha256": "053f73027f46b8773d21325bd0710f5c308ce74398fb959e6baf6352e73e7e1d",
+  "full_area_oracle": false,
+  "gate1_passed": false,
+  "physical_truth": false,
+  "rows": [
+    {
+      "area_comparisons": {
+        "centered_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 2147483648,
+            "numerator": -5705375210835373
+          },
+          "reported_area_exact": {
+            "denominator": 2147483648,
+            "numerator": 5705383800769965
+          },
+          "reported_area_float": 2656776.365251264,
+          "status": "not_refuted_NOT_validated"
+        },
+        "centered_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 2147483648,
+            "numerator": -5705375210835375
+          },
+          "reported_area_exact": {
+            "denominator": 2147483648,
+            "numerator": 5705383800769967
+          },
+          "reported_area_float": 2656776.365251265,
+          "status": "not_refuted_NOT_validated"
+        },
+        "original_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        },
+        "original_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        }
+      },
+      "attempts": [
+        {
+          "center": [
+            {
+              "denominator": 34359738368,
+              "numerator": 24464208715910217
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25314731047080475
+            }
+          ],
+          "index": 0,
+          "source": {
+            "kind": "exterior_mean",
+            "operand": "p",
+            "polygon": 0
+          },
+          "strict_inside_p": true,
+          "strict_inside_q": true
+        }
+      ],
+      "candidate_index": 0,
+      "id": "MYD14_early-818-1166",
+      "inside_relations_p": [
+        [
+          "inside"
+        ]
+      ],
+      "inside_relations_q": [
+        [
+          "inside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside"
+        ]
+      ],
+      "nearest_boundary": {
+        "a": [
+          {
+            "denominator": 1073741824,
+            "numerator": 765594448233881
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": 6328027888550887
+          }
+        ],
+        "b": [
+          {
+            "denominator": 4294967296,
+            "numerator": 3054117901257041
+          },
+          {
+            "denominator": 536870912,
+            "numerator": 3163932495755979
+          }
+        ],
+        "operand": "p",
+        "polygon": 0,
+        "ring": 0,
+        "segment": 2
+      },
+      "search_truncated": false,
+      "square": {
+        "center": [
+          {
+            "denominator": 34359738368,
+            "numerator": 24464208715910217
+          },
+          {
+            "denominator": 4294967296,
+            "numerator": 25314731047080475
+          }
+        ],
+        "corners": [
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24464174356171849
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25314726752113179
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24464243075648585
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25314726752113179
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24464243075648585
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25314735342047771
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24464174356171849
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25314735342047771
+            }
+          ]
+        ],
+        "h": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "k": 0,
+        "lower_area_m2": {
+          "denominator": 1,
+          "numerator": 4
+        },
+        "minimum_boundary_distance_squared": {
+          "denominator": 5065503789394772209015275174208758857838100480,
+          "numerator": 2395563265630258285155617066244876348063610691610049
+        },
+        "strict_inequality_verified": true
+      },
+      "status": "certified_witness"
+    },
+    {
+      "area_comparisons": {
+        "centered_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 2147483648,
+            "numerator": -5359333078784167
+          },
+          "reported_area_exact": {
+            "denominator": 2147483648,
+            "numerator": 5359341668718759
+          },
+          "reported_area_float": 2495637.940577585,
+          "status": "not_refuted_NOT_validated"
+        },
+        "centered_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 2147483648,
+            "numerator": -5359333078784167
+          },
+          "reported_area_exact": {
+            "denominator": 2147483648,
+            "numerator": 5359341668718759
+          },
+          "reported_area_float": 2495637.940577585,
+          "status": "not_refuted_NOT_validated"
+        },
+        "original_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 35184372088832,
+            "numerator": 140737487312563
+          },
+          "reported_area_exact": {
+            "denominator": 35184372088832,
+            "numerator": 1042765
+          },
+          "reported_area_float": 2.9637163834195235e-08,
+          "status": "refuted_below_exact_lower_bound"
+        },
+        "original_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 35184372088832,
+            "numerator": 140737487312563
+          },
+          "reported_area_exact": {
+            "denominator": 35184372088832,
+            "numerator": 1042765
+          },
+          "reported_area_float": 2.9637163834195235e-08,
+          "status": "refuted_below_exact_lower_bound"
+        }
+      },
+      "attempts": [
+        {
+          "center": [
+            {
+              "denominator": 34359738368,
+              "numerator": 25500779805263617
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25381888806491929
+            }
+          ],
+          "index": 0,
+          "source": {
+            "kind": "exterior_mean",
+            "operand": "p",
+            "polygon": 0
+          },
+          "strict_inside_p": true,
+          "strict_inside_q": true
+        }
+      ],
+      "candidate_index": 0,
+      "id": "MYD14_late-833-1149",
+      "inside_relations_p": [
+        [
+          "inside"
+        ]
+      ],
+      "inside_relations_q": [
+        [
+          "inside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside"
+        ]
+      ],
+      "nearest_boundary": {
+        "a": [
+          {
+            "denominator": 8589934592,
+            "numerator": 6383601306965403
+          },
+          {
+            "denominator": 268435456,
+            "numerator": 1586209258230277
+          }
+        ],
+        "b": [
+          {
+            "denominator": 8589934592,
+            "numerator": 6367732076820687
+          },
+          {
+            "denominator": 536870912,
+            "numerator": 3172334868135155
+          }
+        ],
+        "operand": "p",
+        "polygon": 0,
+        "ring": 0,
+        "segment": 2
+      },
+      "search_truncated": false,
+      "square": {
+        "center": [
+          {
+            "denominator": 34359738368,
+            "numerator": 25500779805263617
+          },
+          {
+            "denominator": 4294967296,
+            "numerator": 25381888806491929
+          }
+        ],
+        "corners": [
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 25500745445525249
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25381884511524633
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 25500814165001985
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25381884511524633
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 25500814165001985
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25381893101459225
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 25500745445525249
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25381893101459225
+            }
+          ]
+        ],
+        "h": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "k": 0,
+        "lower_area_m2": {
+          "denominator": 1,
+          "numerator": 4
+        },
+        "minimum_boundary_distance_squared": {
+          "denominator": 129959212129486899304622319197381914076905472,
+          "numerator": 58634686968492208271932258984652643782550748074529
+        },
+        "strict_inequality_verified": true
+      },
+      "status": "certified_witness"
+    },
+    {
+      "area_comparisons": {
+        "centered_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1073741824,
+            "numerator": -2802714390088021
+          },
+          "reported_area_exact": {
+            "denominator": 1073741824,
+            "numerator": 2802718685055317
+          },
+          "reported_area_float": 2610235.1816886263,
+          "status": "not_refuted_NOT_validated"
+        },
+        "centered_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 2147483648,
+            "numerator": -5605428780176043
+          },
+          "reported_area_exact": {
+            "denominator": 2147483648,
+            "numerator": 5605437370110635
+          },
+          "reported_area_float": 2610235.1816886268,
+          "status": "not_refuted_NOT_validated"
+        },
+        "original_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        },
+        "original_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        }
+      },
+      "attempts": [
+        {
+          "center": [
+            {
+              "denominator": 34359738368,
+              "numerator": 24678801462194037
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25421877627789633
+            }
+          ],
+          "index": 0,
+          "source": {
+            "kind": "exterior_mean",
+            "operand": "p",
+            "polygon": 0
+          },
+          "strict_inside_p": true,
+          "strict_inside_q": true
+        }
+      ],
+      "candidate_index": 0,
+      "id": "MYD14_late-844-1161",
+      "inside_relations_p": [
+        [
+          "inside"
+        ]
+      ],
+      "inside_relations_q": [
+        [
+          "inside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside"
+        ]
+      ],
+      "nearest_boundary": {
+        "a": [
+          {
+            "denominator": 4294967296,
+            "numerator": 3089166709738985
+          },
+          {
+            "denominator": 67108864,
+            "numerator": 397176506147813
+          }
+        ],
+        "b": [
+          {
+            "denominator": 4294967296,
+            "numerator": 3080966294970557
+          },
+          {
+            "denominator": 536870912,
+            "numerator": 3177326236064967
+          }
+        ],
+        "operand": "p",
+        "polygon": 0,
+        "ring": 0,
+        "segment": 2
+      },
+      "search_truncated": false,
+      "square": {
+        "center": [
+          {
+            "denominator": 34359738368,
+            "numerator": 24678801462194037
+          },
+          {
+            "denominator": 4294967296,
+            "numerator": 25421877627789633
+          }
+        ],
+        "corners": [
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24678767102455669
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25421873332822337
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24678835821932405
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25421873332822337
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24678835821932405
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25421881922756929
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24678767102455669
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25421881922756929
+            }
+          ]
+        ],
+        "h": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "k": 0,
+        "lower_area_m2": {
+          "denominator": 1,
+          "numerator": 4
+        },
+        "minimum_boundary_distance_squared": {
+          "denominator": 1249178301350585805348827991348706815036620800,
+          "numerator": 582281474417384028550551130691217309416537204506561
+        },
+        "strict_inequality_verified": true
+      },
+      "status": "certified_witness"
+    },
+    {
+      "area_comparisons": {
+        "centered_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1073741824,
+            "numerator": -190880572816787
+          },
+          "reported_area_exact": {
+            "denominator": 1073741824,
+            "numerator": 190884867784083
+          },
+          "reported_area_float": 177775.3865198074,
+          "status": "not_refuted_NOT_validated"
+        },
+        "centered_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 1073741824,
+            "numerator": -190880572816787
+          },
+          "reported_area_exact": {
+            "denominator": 1073741824,
+            "numerator": 190884867784083
+          },
+          "reported_area_float": 177775.3865198074,
+          "status": "not_refuted_NOT_validated"
+        },
+        "original_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        },
+        "original_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        }
+      },
+      "attempts": [
+        {
+          "center": [
+            {
+              "denominator": 34359738368,
+              "numerator": 24039467044746225
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25313363515697831
+            }
+          ],
+          "index": 0,
+          "source": {
+            "kind": "exterior_mean",
+            "operand": "p",
+            "polygon": 0
+          },
+          "strict_inside_p": true,
+          "strict_inside_q": true
+        }
+      ],
+      "candidate_index": 0,
+      "id": "VNP14IMG_early-2051-3869",
+      "inside_relations_p": [
+        [
+          "inside"
+        ]
+      ],
+      "inside_relations_q": [
+        [
+          "inside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside"
+        ]
+      ],
+      "nearest_boundary": {
+        "a": [
+          {
+            "denominator": 8589934592,
+            "numerator": 6005778747277645
+          },
+          {
+            "denominator": 536870912,
+            "numerator": 3164174668717719
+          }
+        ],
+        "b": [
+          {
+            "denominator": 4294967296,
+            "numerator": 3011499400633239
+          },
+          {
+            "denominator": 33554432,
+            "numerator": 197766157335027
+          }
+        ],
+        "operand": "q",
+        "polygon": 0,
+        "ring": 27,
+        "segment": 0
+      },
+      "search_truncated": false,
+      "square": {
+        "center": [
+          {
+            "denominator": 34359738368,
+            "numerator": 24039467044746225
+          },
+          {
+            "denominator": 4294967296,
+            "numerator": 25313363515697831
+          }
+        ],
+        "corners": [
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24039432685007857
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25313359220730535
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24039501404484593
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25313359220730535
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24039501404484593
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25313367810665127
+            }
+          ],
+          [
+            {
+              "denominator": 34359738368,
+              "numerator": 24039432685007857
+            },
+            {
+              "denominator": 4294967296,
+              "numerator": 25313367810665127
+            }
+          ]
+        ],
+        "h": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "k": 0,
+        "lower_area_m2": {
+          "denominator": 1,
+          "numerator": 4
+        },
+        "minimum_boundary_distance_squared": {
+          "denominator": 5503218850501314295378612700777362033054056448,
+          "numerator": 11054424070629681663874167204292754772219865345369
+        },
+        "strict_inequality_verified": true
+      },
+      "status": "certified_witness"
+    },
+    {
+      "area_comparisons": {
+        "centered_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 34359738368,
+            "numerator": -6153145953110689
+          },
+          "reported_area_exact": {
+            "denominator": 34359738368,
+            "numerator": 6153283392064161
+          },
+          "reported_area_float": 179084.1165948706,
+          "status": "not_refuted_NOT_validated"
+        },
+        "centered_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 34359738368,
+            "numerator": -6153145953110689
+          },
+          "reported_area_exact": {
+            "denominator": 34359738368,
+            "numerator": 6153283392064161
+          },
+          "reported_area_float": 179084.1165948706,
+          "status": "not_refuted_NOT_validated"
+        },
+        "original_pq": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        },
+        "original_qp": {
+          "bound_minus_reported_exact": {
+            "denominator": 1,
+            "numerator": 4
+          },
+          "reported_area_exact": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "reported_area_float": 0.0,
+          "status": "refuted_below_exact_lower_bound"
+        }
+      },
+      "attempts": [
+        {
+          "center": [
+            {
+              "denominator": 8589934592,
+              "numerator": 6017593871902293
+            },
+            {
+              "denominator": 2147483648,
+              "numerator": 12678501384457295
+            }
+          ],
+          "index": 0,
+          "source": {
+            "kind": "exterior_mean",
+            "operand": "p",
+            "polygon": 0
+          },
+          "strict_inside_p": true,
+          "strict_inside_q": true
+        }
+      ],
+      "candidate_index": 0,
+      "id": "VNP14IMG_early-2076-3864",
+      "inside_relations_p": [
+        [
+          "inside"
+        ]
+      ],
+      "inside_relations_q": [
+        [
+          "inside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside",
+          "outside"
+        ]
+      ],
+      "nearest_boundary": {
+        "a": [
+          {
+            "denominator": 8589934592,
+            "numerator": 6024301799962669
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": 6339192698383363
+          }
+        ],
+        "b": [
+          {
+            "denominator": 4294967296,
+            "numerator": 3006270987383429
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": 6339077842478279
+          }
+        ],
+        "operand": "q",
+        "polygon": 0,
+        "ring": 22,
+        "segment": 0
+      },
+      "search_truncated": false,
+      "square": {
+        "center": [
+          {
+            "denominator": 8589934592,
+            "numerator": 6017593871902293
+          },
+          {
+            "denominator": 2147483648,
+            "numerator": 12678501384457295
+          }
+        ],
+        "corners": [
+          [
+            {
+              "denominator": 8589934592,
+              "numerator": 6017585281967701
+            },
+            {
+              "denominator": 2147483648,
+              "numerator": 12678499236973647
+            }
+          ],
+          [
+            {
+              "denominator": 8589934592,
+              "numerator": 6017602461836885
+            },
+            {
+              "denominator": 2147483648,
+              "numerator": 12678499236973647
+            }
+          ],
+          [
+            {
+              "denominator": 8589934592,
+              "numerator": 6017602461836885
+            },
+            {
+              "denominator": 2147483648,
+              "numerator": 12678503531940943
+            }
+          ],
+          [
+            {
+              "denominator": 8589934592,
+              "numerator": 6017585281967701
+            },
+            {
+              "denominator": 2147483648,
+              "numerator": 12678503531940943
+            }
+          ]
+        ],
+        "h": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "k": 0,
+        "lower_area_m2": {
+          "denominator": 1,
+          "numerator": 4
+        },
+        "minimum_boundary_distance_squared": {
+          "denominator": 641659703414687710829506195336370714281246720,
+          "numerator": 8438358392257466564457913276052790095043848479129
+        },
+        "strict_inequality_verified": true
+      },
+      "status": "certified_witness"
+    }
+  ],
+  "search_sha256": "5c22d02403c13fdfa4919127ad32544d916c23caadf3ee7c07278824f7e014f4",
+  "segment_evaluations": 9090
+}

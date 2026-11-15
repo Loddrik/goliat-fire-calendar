@@ -1,0 +1,121 @@
+{
+  "MYD14A1.061": {
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "operator": "daily_class_composite_of_MYD14_1km",
+    "time": "up_to8_daily_planes_packaged_together",
+    "FireMask": {
+      "documented_type": "uint8",
+      "shape": [
+        "number_of_days",
+        1200,
+        1200
+      ],
+      "classes": {
+        "0": "missing",
+        "1": "obsolete",
+        "2": "not_processed_other",
+        "3": "nonfire_water",
+        "4": "cloud",
+        "5": "nonfire_land",
+        "6": "unknown",
+        "7": "positive_low",
+        "8": "positive_nominal",
+        "9": "positive_high"
+      }
+    },
+    "QA": {
+      "documented_type": "uint8",
+      "bits0_1": [
+        "water",
+        "coast",
+        "land",
+        "missing"
+      ],
+      "bit2": {
+        "0": "night",
+        "1": "day"
+      }
+    },
+    "other_fields": [
+      "MaxFRP",
+      "sample"
+    ],
+    "per_pass_count_field_documented": false,
+    "complete_exposure_history_documented": false,
+    "decoder_executed": false,
+    "science_schema_read_from_granule": false
+  },
+  "VNP14A1.002": {
+    "source_ids": [
+      "S4",
+      "S5",
+      "S6",
+      "S8"
+    ],
+    "operator": "daily_composite_of_750m_VNP14_on1km_grid_not_IMG375",
+    "time": "24hour_composite",
+    "documented_legacy_fields": [
+      "FireMask",
+      "QA",
+      "MaxFRP",
+      "sample"
+    ],
+    "legacy_shape": [
+      1200,
+      1200
+    ],
+    "legacy_class_groups": {
+      "0..2": "missing_or_unprocessed",
+      "3": "nonfire_water",
+      "4": "cloud",
+      "5": "nonfire_land",
+      "6": "unknown",
+      "7..9": "positive_confidence_classes"
+    },
+    "QA_bits0_1": [
+      "water",
+      "coast",
+      "land",
+      "missing"
+    ],
+    "QA_bit2": {
+      "status": "unresolved_documentation_conflict",
+      "legacy_filespec": "0night_1day",
+      "legacy_guide": "0day_1night"
+    },
+    "per_pass_count_field_documented": false,
+    "complete_exposure_history_documented": false,
+    "decoder_executed": false,
+    "science_schema_read_from_granule": false
+  },
+  "NASA/LANCE/SNPP_VIIRS/C2": {
+    "source_ids": [
+      "S7"
+    ],
+    "operator": "EarthEngine_daily375m_raster_derivative_of_FIRMS_NRT_detections",
+    "documented_bands": [
+      "Bright_ti4",
+      "Bright_ti5",
+      "confidence",
+      "line_number",
+      "frp",
+      "acq_epoch",
+      "acq_time",
+      "DayNight"
+    ],
+    "documented_confidence_values": [
+      0,
+      1,
+      2
+    ],
+    "full_fire_mask_classes_documented": false,
+    "complete_nonfire_cloud_unprocessed_history_documented": false,
+    "algorithmQA_documented": false,
+    "complete_exposure_history_documented": false,
+    "science_schema_read_from_granule": false
+  }
+}

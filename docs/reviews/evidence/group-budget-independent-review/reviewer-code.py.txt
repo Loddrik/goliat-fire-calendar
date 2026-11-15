@@ -1,0 +1,119 @@
+"""35A independent fixed-CDF validation and predeclared B/C diagnostic completion."""
+from pathlib import Path
+import sys,json,hashlib,math,datetime,csv,io,unittest,platform,resource
+import numpy as np,pandas as pd
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar');PROD=ROOT/'data/processed/group_budget_audit';SOURCE=ROOT/'data/processed/cold_region_audit';OUT=ROOT/'docs/reviews/evidence/group-budget-independent-review';END=datetime.datetime.fromisoformat('2026-11-15T08:04:05+00:00')
+METHODS=('B','G','R','P','C');KEYS=['cut','season','m'];FEATURES=KEYS+['g','aqua']
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def now():return datetime.datetime.now(datetime.timezone.utc)
+def check():
+ if now()>=END:raise TimeoutError('Original35 review cap reached')
+def write(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+def freeze():
+ check();assert not OUT.exists();OUT.mkdir(parents=True)
+ paths=[Path(__file__),ROOT/'docs/reviews/2026-11-15-group-budget-protocol.md',ROOT/'pipeline/group_budget_audit.py',ROOT/'tests/test_group_budget_audit.py',ROOT/'pipeline/cold_region_audit.py',ROOT/'pipeline/hurdle_model.py',ROOT/'pipeline/affine_experiment.py',ROOT/'pipeline/coherent_allocation.py']
+ paths += [p for p in PROD.iterdir() if p.is_file()]+[SOURCE/n for n in ['models.json','manifest.json','predictions.parquet','candidate_mask.csv']]
+ write(OUT/'reviewer-code.py.txt',{}) if False else None
+ (OUT/'reviewer-code.py.txt').write_bytes(Path(__file__).read_bytes())
+ write(OUT/'freeze.json',{'created_utc':now().isoformat(),'absolute_cap_end_utc':END.isoformat(),'code_sha256':sha(Path(__file__)),'inputs_sha256':{str(p):sha(p) for p in paths},'producer_manifest_sha256':sha(PROD/'manifest.json'),'purpose':'Read-only independent verification and transparent postexecution completion of predeclared missing B/C risk/transfer diagnostics; no new primary,selection or refits.','real_reconcile_calls_planned':0,'synthetic_unit_calls_planned':19,'producer_reconcile_calls':979,'new_B_C_diagnostics_computed_before_this_freeze':False})
+ print('REVIEWER_FROZEN',sha(OUT/'freeze.json'),flush=True)
+
+def close(a,b,name):
+ assert math.isclose(float(a),float(b),rel_tol=1e-12,abs_tol=1e-10),(name,a,b)
+def risk(ds,a):return math.fsum(math.fsum(float(w)/math.fsum(map(float,weights))*abs(float(v)-float(t)) for v,w in zip(values,weights)) for (values,weights),t in zip(ds,a))
+def kkt(ds,a):
+ lower,upper=-1.,1.
+ for (v,w),t in zip(ds,a):
+  den=math.fsum(map(float,w));eps=1e-10*np.maximum(1.,np.maximum(np.abs(v),abs(t)));l=2*math.fsum(float(z)/den for z in w[v<t-eps])-1;u=2*math.fsum(float(z)/den for z in w[v<=t+eps])-1
+  if t>1e-10*max(1.,abs(t)):lower=max(lower,l)
+  upper=min(upper,u)
+ return max(0.,lower-upper)
+def metrics(f):
+ ans={'n':len(f),'target_sum':float(f.snpp.sum()),'methods':{}}
+ for method in METHODS:
+  e=f[method]-f.snpp;tot=f.groupby(['season','m'])[[method,'snpp']].sum()
+  ans['methods'][method]={'mae':float(e.abs().mean()) if len(f) else None,'bias':float(e.mean()) if len(f) else None,'prediction_sum':float(f[method].sum()),'absolute_error_sum':float(e.abs().sum()),'regional_monthly_mae':float((tot[method]-tot.snpp).abs().mean()) if len(f) else None,'L1_to_B':float((f[method]-f.B).abs().sum())}
+ return ans
+
+def run():
+ check();fr=json.load(open(OUT/'freeze.json'))
+ for name,h in fr['inputs_sha256'].items():assert sha(Path(name))==h,name
+ pf=json.load(open(PROD/'prediction-freeze.json'));cf=json.load(open(PROD/'code-freeze.json'));pm=json.load(open(PROD/'manifest.json'));ps=json.load(open(PROD/'summary.json'));prior=json.load(open(SOURCE/'manifest.json'));model=json.load(open(SOURCE/'models.json'));parts=json.load(open(PROD/'partitions.json'))
+ for name,h in pm['output_sha256'].items():assert sha(PROD/name)==h,name
+ for family in ['code_sha256','source_sha256','protected_sha256']:
+  for name,h in cf[family].items():assert sha(ROOT/name)==h,name
+ assert sha(PROD/'predictions-before-labels.parquet')==pf['predictions_sha256'];assert datetime.datetime.fromisoformat(pf['created_utc'])<datetime.datetime.fromisoformat('2026-11-15T07:34:05+00:00')
+ assert pf['total_solver_calls']==979 and pf['real_solver_calls']==960 and pf['synthetic_solver_calls']==19
+ pred=pd.read_parquet(PROD/'predictions-before-labels.parquet');assert 'snpp' not in pred and len(pred)==10368 and not pred.duplicated(['regime',*KEYS]).any()
+ feats=pd.read_parquet(PROD/'features-only.parquet');src=pd.read_parquet(SOURCE/'predictions.parquet',columns=['regime',*FEATURES,'B','E11_coherent'])
+ pd.testing.assert_frame_equal(feats.sort_values(['regime',*KEYS]).reset_index(drop=True),src[['regime',*FEATURES]].sort_values(['regime',*KEYS]).reset_index(drop=True))
+ cuts=parts['cuts'];ranked=sorted(cuts,key=lambda c:(hashlib.sha256(('goliat-council35-partition-v1|'+c).encode()).digest(),c));assert parts['artificial']=={c:('P33' if i<33 else 'P21') for i,c in enumerate(ranked)} and parts['real']=={c:c[:2] for c in cuts}
+ sys.path.insert(0,str(ROOT/'pipeline'));import cold_region_audit as cold
+ def forbidden(*a,**k):raise AssertionError('Historical fit_source/predict_all was called')
+ cold.fit_source=forbidden;cold.predict_all=forbidden
+ audit=pd.read_csv(PROD/'allocation_checks.csv',dtype={'group':str});audit=audit.set_index(['regime','season','m','method','group']);old_diag=pd.read_csv(PROD/'decision_diagnostics.csv').set_index(['regime','season','m','method']);diagnostics=[];idchecks=[];max_kkt=0.;max_budget=0.;cdf_hash=hashlib.sha256()
+ for regime in cold.REGIMES:
+  check();ff=feats[feats.regime==regime][FEATURES].copy().reset_index(drop=True);sig=json.dumps(model[regime],sort_keys=True,separators=(',',':'));x,ds,_=cold.raw_predictions(ff,model[regime]);assert sig==json.dumps(model[regime],sort_keys=True,separators=(',',':'))
+  idx=pd.MultiIndex.from_frame(x[KEYS]);a=pred[pred.regime==regime].set_index(KEYS).loc[idx].reset_index();ref=src[src.regime==regime].set_index(KEYS).loc[idx].reset_index()
+  assert np.array_equal(x.B,a.B) and np.array_equal(a.B,ref.B) and np.array_equal(a.G,ref.E11_coherent)
+  assert np.allclose(a.C,.5*(a.B+a.G),rtol=0,atol=0)
+  assert (np.isfinite(a[list(METHODS)]).all().all() and (a[list(METHODS)]>=0).all().all())
+  assert a.role.tolist()==['SOURCE' if c in model[regime]['source_cuts'] else 'held' for c in a.cut]
+  for d in ds:
+   cdf_hash.update(np.asarray(d[0],dtype='<f8').tobytes());cdf_hash.update(np.asarray(d[1],dtype='<f8').tobytes());assert abs(math.fsum(map(float,d[1]))-1)<1e-10
+  for (season,month),g in a.groupby(['season','m'],sort=True):
+   ix=g.index.to_numpy();D=[ds[i] for i in ix];B=g.B.to_numpy();held=g.role.eq('held').to_numpy();rr={method:risk(D,g[method].to_numpy()) for method in METHODS};tol=1e-8*max(1.,rr['B'])
+   assert rr['G']<=rr['R']+tol and rr['G']<=rr['P']+tol and max(rr['R'],rr['P'])<=rr['B']+tol
+   assert rr['G']<=rr['C']+tol and rr['C']<=.5*(rr['B']+rr['G'])+tol
+   for method in METHODS:
+    A=g[method].to_numpy();res=math.fsum(map(float,A))-math.fsum(map(float,B));assert abs(res)<=1e-10*max(1,math.fsum(map(float,B)));max_budget=max(max_budget,abs(res))
+    h=math.fsum(map(float,(A-B)[held]));t=math.fsum(map(float,(A-B)[~held]));assert abs(h+t)<=1e-10*max(1.,math.fsum(map(float,B)))
+    if method=='R':assert abs(h)<=1e-10*max(1.,math.fsum(map(float,B[held])))
+    if method=='C':close(h,.5*math.fsum(map(float,(g.G.to_numpy()-B)[held])),'Ctransfer')
+    row={'regime':regime,'season':int(season),'m':int(month),'method':method,'L1_to_B':float(np.abs(A-B).sum()),'risk':rr[method],'excess_risk_over_G':rr[method]-rr['G'],'transfer_held':h,'transfer_SOURCE':t}
+    diagnostics.append(row)
+    if method in ('G','R','P'):
+     oc=old_diag.loc[(regime,season,month,method)]
+     for col in ['L1_to_B','risk','excess_risk_over_G','transfer_held','transfer_SOURCE']:close(row[col],oc[col],'producer_diag_'+col)
+   for method,groups in [('G',['ALL']*54),('R',g.cut.str[:2].tolist()),('P',[parts['artificial'][c] for c in g.cut])]:
+    for group in sorted(set(groups)):
+     ii=np.flatnonzero(np.array(groups)==group);DD=[D[i] for i in ii];bb=B[ii];aa=g[method].to_numpy()[ii];res=math.fsum(map(float,aa))-math.fsum(map(float,bb));kk=kkt(DD,aa);max_kkt=max(max_kkt,kk);assert abs(res)<=1e-10*max(1,math.fsum(map(float,bb))) and kk<=1e-8
+     row=audit.loc[(regime,season,month,method,group)];assert row['n']==len(ii);close(row['budget'],math.fsum(map(float,bb)),'budget');close(row['budget_error'],res,'budgeterror');assert abs(float(row.kkt_residual)-kk)<1e-10;close(row['risk_baseline'],risk(DD,bb),'riskB');close(row['risk_allocated'],risk(DD,aa),'riskA')
+  idchecks.append({'regime':regime,'B_G_exact_original21':True,'rows':len(a),'CDF_model_unchanged':True});print('INDEPENDENT_MECHANICS_PASS',regime,flush=True)
+ # Labels are loaded only after the producer prediction freeze and independent mechanics gates.
+ labels=pd.read_parquet(SOURCE/'predictions.parquet',columns=['regime',*KEYS,'snpp']);actual=pd.read_parquet(PROD/'evaluated_predictions.parquet');joined=pred.merge(labels,on=['regime',*KEYS],validate='one_to_one');pd.testing.assert_frame_equal(joined,actual)
+ assert (np.abs(actual.C-actual.snpp)<=.5*(np.abs(actual.B-actual.snpp)+np.abs(actual.G-actual.snpp))+1e-10).all()
+ from frozen_temporal_audit import publication_metadata
+ enabled=set(publication_metadata(cuts)[0]);primary=[];populations=0;method_reports=0;percut=pd.read_csv(PROD/'per_CUT.csv',dtype={'cut':str})
+ for regime,f in actual.groupby('regime',sort=True):
+  check();groups={'all54':f,'SOURCE':f[f.role=='SOURCE'],'held':f[f.role=='held'],'published14':f[f.cut.isin(enabled)],'remaining40':f[~f.cut.isin(enabled)]}
+  for role in ('SOURCE','held'):
+   for title,selected in [('published14',f.cut.isin(enabled)),('remaining40',~f.cut.isin(enabled))]:groups[role+'_'+title]=f[(f.role==role)&selected]
+  for name,g in groups.items():
+   strata={'all_months':g,'zero_reference':g[g.snpp==0],'positive_reference':g[g.snpp>0],'aqua_zero_reference_positive':g[(g.aqua==0)&(g.snpp>0)],'both_zero':g[(g.aqua==0)&(g.snpp==0)],'reference_50_plus':g[g.snpp>=50]}
+   for label,subset in strata.items():
+    have=metrics(subset);claim=ps['reports'][regime][name][label];assert have['n']==claim['n'];close(have['target_sum'],claim['target_sum'],'targetsum');populations+=1
+    for method in METHODS:
+     for k,v in have['methods'][method].items():
+      if v is None:assert claim['methods'][method][k] is None
+      else:close(v,claim['methods'][method][k],regime+name+label+method+k)
+     method_reports+=1
+  h=groups['held'];G=float((h.G-h.snpp).abs().mean());R=float((h.R-h.snpp).abs().mean());row={'regime':regime,'n_held':len(h),'G_mae':G,'R_mae':R,'delta_R_minus_G':R-G,'absolute_error_delta':float((h.R-h.snpp).abs().sum()-(h.G-h.snpp).abs().sum())};primary.append(row)
+  for cut,sub in f.groupby('cut'):
+   c=percut[(percut.regime==regime)&(percut.cut==cut)];assert len(c)==1 and int(c.n.iloc[0])==len(sub)
+   for method in METHODS:close(c[method+'_mae'].iloc[0],(sub[method]-sub.snpp).abs().mean(),'perCUT')
+  old=f[f.role=='held'].groupby('cut').apply(lambda c:(c.G-c.snpp).abs().mean(),include_groups=False);worst=min(old.index,key=lambda c:(-float(old.loc[c]),c));reported=next(z for z in ps['worst_CUT_fixed_from_historical_G'] if z['regime']==regime);assert reported['cut']==worst
+  wm=metrics(f[f.cut==worst]);assert reported['metrics']['n']==wm['n']
+  for method in METHODS:
+   for k,v in wm['methods'][method].items():close(v,reported['metrics']['methods'][method][k],'worstCUT')
+ equal=float(np.mean([r['delta_R_minus_G'] for r in primary]));pooled=sum(r['absolute_error_delta'] for r in primary)/sum(r['n_held'] for r in primary);close(equal,ps['primary']['equal_four_delta_mae'],'primaryequal4');close(pooled,ps['primary']['row_weighted_delta_mae'],'secondarypooled')
+ assert len(audit)==960 and len(diagnostics)==960 and populations==216 and method_reports==1080
+ # Exactly one independent synthetic replay, accounted against the common2000-call cap.
+ sys.path.insert(0,str(ROOT/'tests'));import group_budget_audit as gb
+ before=gb.TOTAL_SOLVER_CALLS;buf=io.StringIO();res=unittest.TextTestRunner(stream=buf,verbosity=1).run(unittest.defaultTestLoader.loadTestsFromName('test_group_budget_audit'));fixture_calls=gb.TOTAL_SOLVER_CALLS-before;assert res.wasSuccessful() and res.testsRun==5 and fixture_calls==19
+ check()
+ for name,h in fr['inputs_sha256'].items():assert sha(Path(name))==h,name
+ pd.DataFrame(diagnostics).to_csv(OUT/'all-method-decision-diagnostics.csv',index=False)
+ report={'status':'independent_verification_pass_with_transparent_required_diagnostic_completion','completed_utc':now().isoformat(),'reviewer_freeze_sha256':sha(OUT/'freeze.json'),'producer_manifest_sha256_before_and_after':sha(PROD/'manifest.json'),'producer_outputs_modified':False,'producer_manifest_extended':False,'producer_code_changed':False,'historical_fit_source_or_predict_all_called':False,'new_fits':0,'new_downloads':0,'real_reconcile_calls':0,'independent_synthetic_solver_calls':fixture_calls,'producer_solver_calls':979,'combined35_calls_so_far':979+fixture_calls,'original_solver_cap':2000,'diagnostic_completion':'Postexecution reviewer complement of required B/C risk,transfer,L1 fields omitted by producer. Allfive methods emitted; no new primary or selection. Original producer artifacts unchanged.','independent_risk_implementation':'Direct probability-weighted absolute-loss sums and subgradient intervals from frozenCDF atoms; no solver reexecution.','identities':idchecks,'restored_CDF_sha256':cdf_hash.hexdigest(),'allocation_group_checks_verified':len(audit),'maximum_independent_group_KKT_residual':max_kkt,'maximum_global_budget_absolute_residual':max_budget,'G_le_R_P_le_B_risks_passed':True,'G_le_C_le_average_B_G_risk_passed':True,'all_group_budgets_transfers_and_C_half_transfer_verified':True,'pointwise_C_observed_L1_convexity_passed':True,'complete_evaluated_target_join_exact':True,'population_reports_verified':populations,'method_metric_reports_verified':method_reports,'all_per_CUT_and_historical_G_worst_CUT_verified':True,'primary':{'definition':'equal-four held MAE_R minus MAE_G','regimes':primary,'equal_four_delta_mae':equal,'row_weighted_delta_mae_secondary':pooled},'unit_test_run':{'tests':res.testsRun,'passed':True,'output':buf.getvalue()},'RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*(1 if sys.platform=='darwin' else 1024),'scope_limits':['21 only, fixedCDFs and baselineB; no fresh holdout.','Real groups equalSOURCE/held; sensitivity of decision coupling, not ecology or sensor observability.','ExpectedCDF risk and group-total equality are mathematical properties, not physical accuracy.','G1 remains false;30B remains failed; no production promotion.']}
+ write(OUT/'summary.json',report);write(OUT/'manifest.json',{'files':{p.name:{'bytes':p.stat().st_size,'sha256':sha(p)} for p in OUT.iterdir() if p.is_file() and p.name!='manifest.json'},'producer_manifest_unchanged':True,'original_cap_end_utc':END.isoformat()});print('INDEPENDENT_ALL_PASS',json.dumps(report['primary']), 'solver_calls_review',fixture_calls,flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()

@@ -1,0 +1,56 @@
+[
+  {
+    "requirement": "historical mode/cadence",
+    "2019": "Known as catalogM3,15min starts; D1/D2/D7 support transition context",
+    "2023": "Known as catalogM6,10min starts",
+    "limit": "nominal catalogue cadence, no missing-other-hours or pixel exposure guarantee"
+  },
+  {
+    "requirement": "declared scan intervals",
+    "2019": "names list18:30:36.2\u201318:41:12.9 and18:45:36.2\u201318:56:12.9 aroundfixedpolarwindow",
+    "2023": "name lists18:30:20.5\u201318:39:51.3 aroundfixedpolarwindow",
+    "limit": "Filename observation period only; not AOI/pixel instant"
+  },
+  {
+    "requirement": "projection andresolutionAOI",
+    "2019": "Expected geostationary fixed-grid/x-y scanangles; nominal2km atnadir; no AOI mapping calculated",
+    "2023": "Same documentary expected contract; no actualprojectionattrschecked",
+    "limit": "ROI footprint/PSF/localangles/resolution/validpixels unknown"
+  },
+  {
+    "requirement": "Mask/DQF vocabulary",
+    "2019": "Candidate schemas D5/D9 available, actualhistoricalapplicabilityUNKNOWN",
+    "2023": "Candidate schemas D6/D9 available, actualdeployedversionUNKNOWN",
+    "limit": "No NetCDFheader orvariable read; cannot executecase decoder; PUGcandidateMaskfill\u221299,DQFfill255, never0/no-fire substitution"
+  },
+  {
+    "requirement": "temporalfilterrule",
+    "2019": "UNKNOWN; December2019ReadMe differsfromATBD,doesnot proveJanuary deployment",
+    "2023": "UNKNOWN;2020ATBDstill differsfromReadMe; no versionattrs",
+    "limit": "Cannot call repeatedfiltered labels independent/same-fire persistence"
+  },
+  {
+    "requirement": "access",
+    "2019": "Unauthenticated LIST returned4keys; no scienceGetObject tested",
+    "2023": "Unauthenticated LIST returned6keys; no scienceGetObject tested",
+    "limit": "PUG generic license field doesnot settleactualS3objectconditions;noaccountflow"
+  },
+  {
+    "requirement": "GOES actual signal/cloud/missing",
+    "2019": "UNKNOWN bydesign",
+    "2023": "UNKNOWN bydesign",
+    "limit": "No measurements acquired; catalogpresence isnot clear/usefulobservation"
+  },
+  {
+    "requirement": "finepolaradjudication",
+    "2019": "No support established to adjudicate375m orminute-scale sensor disagreement",
+    "2023": "Same limitation;10min nominalcadence doesnot supplyROI exposuretiming",
+    "limit": "Not a general physicalimpossibility theorem; intense subpixel anomaliescanbe detected inprinciple"
+  },
+  {
+    "requirement": "futurebroadtemporalcontext",
+    "2019": "Documentary feasibilityconditional onversion/geometry/access/QA contract",
+    "2023": "Sameconditional status",
+    "limit": "Newsciencebudget/protocolrequired; noneauthorized; no model/G1/oldL2change"
+  }
+]

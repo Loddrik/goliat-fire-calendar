@@ -1,0 +1,32 @@
+{
+  "file": "prueba-recraft-isotermas.png",
+  "model": "fal-ai/recraft/v3/text-to-image",
+  "prompt": "Minimal geometric logo mark for a satellite fire-monitoring science project: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, warm amber to deep orange gradient steps, small simple satellite silhouette at the upper right, flat vector, clean, centered, generous margin, plain white background, no text, no letters",
+  "input": {
+    "prompt": "Minimal geometric logo mark for a satellite fire-monitoring science project: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, warm amber to deep orange gradient steps, small simple satellite silhouette at the upper right, flat vector, clean, centered, generous margin, plain white background, no text, no letters",
+    "aspect_ratio": "1:1",
+    "image_size": {
+      "width": 1024,
+      "height": 1024
+    },
+    "style": "vector_illustration"
+  },
+  "imagenEntrada": null,
+  "seed": null,
+  "expandedPrompt": null,
+  "requestId": "01a1dd88-7d08-7641-87e1-f83626687e15",
+  "medido": null,
+  "pedido": {
+    "aspect": "1:1"
+  },
+  "problemas": [],
+  "costoEstimado": {
+    "usd": null,
+    "detalle": "sin precio en la tabla de presets: míralo en fal.ai antes de llamar"
+  },
+  "avisos": [
+    "id crudo: los campos se mandan sin validar; revisa https://fal.ai/models/fal-ai/recraft/v3/text-to-image/api"
+  ],
+  "createdAt": "2026-11-15T04:48:01.440Z",
+  "sourceUrl": "https://v3b.fal.media/files/b/0ab285bf/hV_nIJtboSymwWGA1GHuu_OHWFmmIT.svg"
+}

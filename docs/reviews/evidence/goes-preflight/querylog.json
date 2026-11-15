@@ -1,0 +1,128 @@
+{
+  "recorded_utc": "2026-11-15T09:35:29.967682+00:00",
+  "selected_primary_documents": 9,
+  "selected_catalogue_URLs": 2,
+  "union_with_reviewer_shared_registry": true,
+  "legacy_aliases": [
+    {
+      "selected_document": "D1",
+      "attempted_url": "https://www.ospo.noaa.gov/data/messages/2019/MSG0861424.html",
+      "web_status": 403
+    },
+    {
+      "selected_document": "D3",
+      "effective_url": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/geostationary-satellites",
+      "usable_PUG": false
+    }
+  ],
+  "web_search_scope": "Primary NOAA/GOES-R documentation discovery only; unselected search results not used as evidence.",
+  "web_transfer_bytes": "not reported by tool; technical documentation only",
+  "http_requests_producer": [
+    {
+      "id": "D1modern",
+      "url": "https://www.ospo.noaa.gov/data/messages/2019/03/MSG_20190327_1424.html",
+      "method": "GET",
+      "kind": "official_technical_document",
+      "access_utc": "2026-11-15T09:26:40.653273+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/data/messages/2019/03/MSG_20190327_1424.html",
+      "saved_file": "D1modern.html",
+      "document_or_catalogue_bytes": 10052,
+      "sha256": "44eacec09f57657c89a9b10f14b7bdea32ac329fc5ad341826f1bb979a1fe388"
+    },
+    {
+      "id": "D4",
+      "url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v3.0%20final.pdf",
+      "method": "GET",
+      "kind": "official_technical_document",
+      "access_utc": "2026-11-15T09:26:40.654719+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v3.0%20final.pdf",
+      "saved_file": "D4.pdf",
+      "document_or_catalogue_bytes": 10377546,
+      "sha256": "a04ec96213b306037c100b85d835e336ac434a0367063f8659ceafe27bc6fa7e"
+    },
+    {
+      "id": "D6",
+      "url": "https://www.ospo.noaa.gov/resources/documents/ATBD/ATBD_GOES-R_FIRE_v2.7_Oct2020.pdf",
+      "method": "GET",
+      "kind": "official_technical_document",
+      "access_utc": "2026-11-15T09:26:40.655126+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/resources/documents/ATBD/ATBD_GOES-R_FIRE_v2.7_Oct2020.pdf",
+      "saved_file": "D6.pdf",
+      "document_or_catalogue_bytes": 4440589,
+      "sha256": "045c5fc6f0b6f5b70151833330f3613ecb06e0b242409318e50b7794e6e6c9a9"
+    },
+    {
+      "id": "D7",
+      "url": "https://www.ospo.noaa.gov/operations/goes/product-quality-overview/ps-pvr/goes-16/ABI/Fires%20and%20Hot%20Spots%20Characterization/Provisional/GOES-16_ABI_L2_FHS_Provisional_ReadMe_v2.pdf",
+      "method": "GET",
+      "kind": "official_technical_document",
+      "access_utc": "2026-11-15T09:26:40.655531+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://www.ospo.noaa.gov/operations/goes/product-quality-overview/ps-pvr/goes-16/ABI/Fires%20and%20Hot%20Spots%20Characterization/Provisional/GOES-16_ABI_L2_FHS_Provisional_ReadMe_v2.pdf",
+      "saved_file": "D7.pdf",
+      "document_or_catalogue_bytes": 112245,
+      "sha256": "4bcc6225edf1b36b1305161b5124262701769de47800e06f30fd72462d12cb73"
+    },
+    {
+      "id": "D8",
+      "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC01520",
+      "method": "GET",
+      "kind": "official_technical_document",
+      "access_utc": "2026-11-15T09:26:40.656141+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": null,
+      "error_type": "TimeoutError",
+      "error": "The read operation timed out",
+      "document_or_catalogue_bytes": null
+    },
+    {
+      "id": "C1",
+      "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+      "method": "GET",
+      "kind": "S3_LIST_XML",
+      "access_utc": "2026-11-15T09:26:40.656532+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+      "saved_file": "C1.xml",
+      "document_or_catalogue_bytes": 1490,
+      "sha256": "ce9248942289f995a1526c5581db7cf35d5ca73a1caaf3d66aba943eda0ec358"
+    },
+    {
+      "id": "C2",
+      "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+      "method": "GET",
+      "kind": "S3_LIST_XML",
+      "access_utc": "2026-11-15T09:26:40.657029+00:00",
+      "scientific_bytes": 0,
+      "credentials_used": false,
+      "status": 200,
+      "final_url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+      "saved_file": "C2.xml",
+      "document_or_catalogue_bytes": 2102,
+      "sha256": "a0949dda13e71ecf8c51c7387756825ffbb25e89da3e950a3de42685441d23cf"
+    }
+  ],
+  "science_requests": [],
+  "science_bytes_acquired": 0,
+  "HEAD_requests": 0,
+  "Range_requests": 0,
+  "nc_or_HDF_object_GET_requests": 0,
+  "images_tiles_or_radiances_requests": 0,
+  "credentials_or_account_actions": false,
+  "technical_document_cache_reference": "technical-document-cache.json",
+  "technical_document_cache_packing": "Raw technicalPDFs retained only in ignored runtime cache; metadata hashes preserved. No scientific product copied."
+}

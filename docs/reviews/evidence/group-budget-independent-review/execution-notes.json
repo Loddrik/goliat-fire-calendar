@@ -1,0 +1,10 @@
+{
+  "scope": "Reviewer orchestration provenance",
+  "pre_freeze_issue": "An initial SyntaxError from a missing space in else1024 was corrected before Python could execute the verifier or read scientific inputs. The corrected verifier was frozen before risk/diagnostic computation.",
+  "original_cap_unchanged": true,
+  "reviewer_prediction_or_target_values_read_before_reviewer_freeze": false,
+  "producer_code_or_data_modified": false,
+  "diagnostic_scope": "The all-five-method sidecar transparently completes the predeclared B/C diagnostics omitted by the producer; it does not change any primary result, variant or selection rule.",
+  "reviewer_summary_not_rewritten": true,
+  "resource_companion_required_for_global_call_total": true
+}

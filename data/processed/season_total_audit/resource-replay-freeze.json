@@ -1,0 +1,10 @@
+{
+  "wrapper_sha256": "66e46bcf0eac65e1433784b935b5afac55cd1cb15f19fdb60ae2dd5cc5f23445",
+  "amendment_sha256": "d090eacca908b05bfa6652c70a631b1e808a473611c9c28643eb7643e9d9bd0d",
+  "helper_sha256": "9cf6d85d7ff73b872c7143aae2ac1708d2f9aae3cde46a318d08580b9bfd52f6",
+  "code_freeze_sha256": "c5fb02bf5dcb09e5fbe5b081d30831e713637c42b00b465cedb436c17082e90d",
+  "attempt01_manifest_sha256": "40f2bed44132991636d0483d8dbafb9eb8045a4a8be81f026d69a07d51cf1e8b",
+  "created_utc": "2026-11-15T10:34:15.961020+00:00",
+  "output_override": "data/processed/season_total_audit/attempt-02",
+  "resource_api": "resource.getrusage(RUSAGE_CHILDREN).ru_maxrss; Darwin bytes"
+}

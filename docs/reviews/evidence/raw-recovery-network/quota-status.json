@@ -1,0 +1,6 @@
+{
+  "http_status": 200,
+  "body_bytes": 99,
+  "body_sha256": "884f20bab8362b306a0de9dc456a7455673f2956d3e9674d87b687f3c5a96937",
+  "sanitized_message": "{ \"transaction_limit\" : 5000, \"current_transactions\": 4628, \"transaction_interval\" : \"10 minutes\" }"
+}

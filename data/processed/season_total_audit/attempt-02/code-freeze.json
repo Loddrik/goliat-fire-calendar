@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "41734018c7a516444053c7042d08b4d813c87e01cb1f24d3cb6e998ad91d0646",
+  "code_sha256": "9cf6d85d7ff73b872c7143aae2ac1708d2f9aae3cde46a318d08580b9bfd52f6",
+  "input_sha256": {
+    "data/processed/scientific_audit/outer_predictions.csv": "3a8cf62a96d8457c47fc11e2c004e28d36f4ca3045686c3a8b8a013c95feb532",
+    "data/processed/eval_loso.csv": "de5361a2d90f05898886603867bc3e40fbc2ccfb141efbc68ed236cf062c8149",
+    "data/processed/gates.csv": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+    "pipeline/scientific_audit.py": "f5b4dfcac376de518da9783c306f16f59d996e4380897dfaa2d05105ff0e9e32",
+    "pipeline/experiment.py": "4add3b9ca8df8388b5954799dd1b42fb90f3e112b733d3d6e0c31ae7073bf162"
+  },
+  "python": "3.14.7",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "frozen_utc": "2026-11-15T10:28:50.930232+00:00"
+}

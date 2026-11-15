@@ -1,0 +1,21 @@
+{
+  "files": {
+    "summary.json": {
+      "sha256": "e2545a45c63b4512c0d129f8c9e084e656310f84ffd77361fab4cbfa28a28fb5",
+      "bytes": 1969
+    },
+    "reviewer-code.py.txt": {
+      "sha256": "70c8f4ab2200f4a7c40c2a25b66a803bfd01e65ec8128a0caad07904fca5deaa",
+      "bytes": 9134
+    },
+    "independent-season-totals.csv": {
+      "sha256": "892947bd260203afad1c6a87865b096ef7c04a31a70f3879c3572cf4366a6aac",
+      "bytes": 115811
+    },
+    "freeze.json": {
+      "sha256": "74406f1446f1f03d56b1f1f9a9a1a6fd05d46c0384517786b2a794568fc1d188",
+      "bytes": 2789
+    }
+  },
+  "cap_end_utc": "2026-11-15T10:43:00+00:00"
+}

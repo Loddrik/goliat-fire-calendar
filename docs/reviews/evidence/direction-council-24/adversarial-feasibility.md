@@ -1,0 +1,9 @@
+# Dictamen adversario: factibilidad/coste de oportunidad
+
+Miembro adversarial_council_feasibility24; dictamen inicial sobre dos votos, no ratificación literal del plan aún.
+
+Acepta C≤60min enparaleloB, no requisitoque retrase observabilidad. AquaO existeen54CSV,26356registros,cobertura declaradahasta2025-12; funcionesestimate_frozen/extend puedenregenerarseisestimadores sinrefit. Validador20hardcodedNOAA20/VIIRS/N20: Aqua requiere validaciónexplícita fuente/instrumento/confianza/filtros/hashes/series. Factibilidad5 optimistamientrasfaltaintegrarestecontrol.
+
+CapCincluyerevisión. Mínimo3456clavesidénticas,CCreproducido,identidadesAquaO/NOAA20Oy cotas. Identidadfallida→ningúnranking;incompletoal60→límitedocumentado,noiteracióninfraestructurarescate. Factorialopcionalsólosicabe;cadaentradapreds+presupuesto54propios,cotatargetnolocubre.
+
+Bledgerprioritarioparalelo;Etercercupodocumental30min sin descarga. A/Ddiferidos. Cestablesólorobustezdefinicionalacotada,noobservabilidadni explicaciónfracaso23,G1false.

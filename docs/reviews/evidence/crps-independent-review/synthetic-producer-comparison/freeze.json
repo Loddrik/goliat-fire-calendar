@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-15T08:53:56.285514+00:00",
+  "code_sha256": "270fa196e57747001676d18b3ff1892cbaf721a3ced040240d5b65a9cfdfb316",
+  "producer_helper_sha256": "de59e7c482ea2e6ac3b192e9699ef8dd5eef6284861c5571301c76a6b6eb4e9e",
+  "independent_fixture_sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5",
+  "actual_Y_reads": 0,
+  "fits": 0,
+  "solvers": 0
+}

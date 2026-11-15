@@ -1,0 +1,248 @@
+{
+  "scope": "Catalog and anonymous access preflight; no fire outcomes inspected",
+  "started_or_completed_utc": "2026-11-15T00:51:22.613300+00:00",
+  "aoi": {
+    "proposal": "50x50km centered37S72.5W",
+    "catalog_bbox": "-72.782,-37.226,-72.218,-36.774",
+    "bbox_is_envelope_not_pixel_coverage": true
+  },
+  "temporal": "2019-01-01T00:00:00Z,2019-01-15T23:59:59Z",
+  "pinned_collections": {
+    "MYD14": {
+      "concept_id": "C2278858993-LPCLOUD",
+      "version": "061"
+    },
+    "MYD03": {
+      "concept_id": "C1379841358-LAADS",
+      "version": "6.1"
+    },
+    "VNP14IMG": {
+      "concept_id": "C2734202914-LPCLOUD",
+      "version": "002"
+    },
+    "VNP03IMG": {
+      "concept_id": "C2105092163-LAADS",
+      "version": "2"
+    }
+  },
+  "credentials_used": false,
+  "credential_presence": {
+    "environment": {
+      "EARTHDATA_USERNAME": false,
+      "EARTHDATA_PASSWORD": false,
+      "EARTHDATA_TOKEN": false,
+      "EDL_TOKEN": false,
+      "LAADS_TOKEN": false
+    },
+    "earthdata_netrc_entry": false,
+    "laads_netrc_entry": false
+  },
+  "inventory": {
+    "MYD14": {
+      "granules": 35,
+      "metadata_day_flags": {
+        "NIGHT": 17,
+        "DAY": 18
+      },
+      "sum_cmr_granule_size_metadata": 11.633307,
+      "size_note": "CMR granule_size field convention; catalog size, not measured download bytes."
+    },
+    "MYD03": {
+      "granules": 35,
+      "metadata_day_flags": {
+        "NIGHT": 17,
+        "DAY": 18
+      },
+      "sum_cmr_granule_size_metadata": 1062.4061298370364,
+      "size_note": "CMR granule_size field convention; catalog size, not measured download bytes."
+    },
+    "VNP14IMG": {
+      "granules": 46,
+      "metadata_day_flags": {
+        "NIGHT": 24,
+        "DAY": 22
+      },
+      "sum_cmr_granule_size_metadata": 68.20828533172609,
+      "size_note": "CMR granule_size field convention; catalog size, not measured download bytes."
+    },
+    "VNP03IMG": {
+      "granules": 46,
+      "metadata_day_flags": {
+        "NIGHT": 24,
+        "DAY": 22
+      },
+      "sum_cmr_granule_size_metadata": 6586.971216201785,
+      "size_note": "CMR granule_size field convention; catalog size, not measured download bytes."
+    }
+  },
+  "geolocation_identifier_associations": {
+    "MYD14": {
+      "fire_granules": 35,
+      "same_acquisition_id_geolocation_matches": 35,
+      "note": "Identifier/date-time association only; InputPointer, dimensions and actual pixel compatibility not read."
+    },
+    "VNP14IMG": {
+      "fire_granules": 46,
+      "same_acquisition_id_geolocation_matches": 46,
+      "note": "Identifier/date-time association only; InputPointer, dimensions and actual pixel compatibility not read."
+    }
+  },
+  "daytime_metadata_candidates_minimum_gap_le60": 18,
+  "window_counts": {
+    "5": {
+      "definitely_within": 0,
+      "uncertain": 4,
+      "definitely_outside": 14,
+      "distinct_aqua_dates_definitely_within": []
+    },
+    "10": {
+      "definitely_within": 1,
+      "uncertain": 3,
+      "definitely_outside": 14,
+      "distinct_aqua_dates_definitely_within": [
+        "2019-01-03"
+      ]
+    },
+    "15": {
+      "definitely_within": 3,
+      "uncertain": 3,
+      "definitely_outside": 12,
+      "distinct_aqua_dates_definitely_within": [
+        "2019-01-03",
+        "2019-01-06",
+        "2019-01-11"
+      ]
+    },
+    "30": {
+      "definitely_within": 7,
+      "uncertain": 4,
+      "definitely_outside": 7,
+      "distinct_aqua_dates_definitely_within": [
+        "2019-01-01",
+        "2019-01-03",
+        "2019-01-06",
+        "2019-01-08",
+        "2019-01-09",
+        "2019-01-11",
+        "2019-01-14"
+      ]
+    },
+    "60": {
+      "definitely_within": 15,
+      "uncertain": 3,
+      "definitely_outside": 0,
+      "distinct_aqua_dates_definitely_within": [
+        "2019-01-01",
+        "2019-01-02",
+        "2019-01-03",
+        "2019-01-05",
+        "2019-01-06",
+        "2019-01-07",
+        "2019-01-08",
+        "2019-01-09",
+        "2019-01-10",
+        "2019-01-11",
+        "2019-01-12",
+        "2019-01-13",
+        "2019-01-14",
+        "2019-01-15"
+      ]
+    }
+  },
+  "candidate_counts_are_not_independent_passes_or_valid_observations": true,
+  "chosen_probe_pair": {
+    "aqua_id": "MYD14.A2019003.1840.061.2021351103810",
+    "viirs_id": "VNP14IMG.A2019003.1836.002.2024086140848",
+    "aqua_concept_id": "G2298315182-LPCLOUD",
+    "viirs_concept_id": "G2923063887-LPCLOUD",
+    "aqua_start": "2019-01-03T18:40:00.000Z",
+    "aqua_end": "2019-01-03T18:45:00.000Z",
+    "viirs_start": "2019-01-03T18:36:00.000Z",
+    "viirs_end": "2019-01-03T18:42:00.000Z",
+    "minimum_possible_gap_minutes": 0.0,
+    "maximum_possible_gap_minutes": 9.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "definitely_within",
+      "15": "definitely_within",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  "anonymous_probes": {
+    "MYD14": {
+      "url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2019003.1840.061.2021351103810/MYD14.A2019003.1840.061.2021351103810.hdf",
+      "anonymous_only": true,
+      "redirects_followed": false,
+      "bytes_read": 0,
+      "full_product_read": false,
+      "http_status": 302,
+      "status": "http_error_or_redirect",
+      "redirect_location": "https://urs.earthdata.nasa.gov/oauth/authorize",
+      "seconds": 0.658
+    },
+    "MYD03": {
+      "url": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2019003.1840.061.2019004162409.hdf",
+      "anonymous_only": true,
+      "redirects_followed": false,
+      "bytes_read": 0,
+      "full_product_read": false,
+      "http_status": 302,
+      "status": "http_error_or_redirect",
+      "redirect_location": "https://urs.earthdata.nasa.gov/oauth/authorize",
+      "seconds": 0.84
+    },
+    "VNP14IMG": {
+      "url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VNP14IMG.002/VNP14IMG.A2019003.1836.002.2024086140848/VNP14IMG.A2019003.1836.002.2024086140848.nc",
+      "anonymous_only": true,
+      "redirects_followed": false,
+      "bytes_read": 0,
+      "full_product_read": false,
+      "http_status": 302,
+      "status": "http_error_or_redirect",
+      "redirect_location": "https://urs.earthdata.nasa.gov/oauth/authorize",
+      "seconds": 0.646
+    },
+    "VNP03IMG": {
+      "url": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc",
+      "anonymous_only": true,
+      "redirects_followed": false,
+      "bytes_read": 0,
+      "full_product_read": false,
+      "http_status": 302,
+      "status": "http_error_or_redirect",
+      "redirect_location": "https://urs.earthdata.nasa.gov/oauth/authorize",
+      "seconds": 0.93
+    }
+  },
+  "gate0_passed": false,
+  "gate1_passed": false,
+  "full_qa_geolocation_read": false,
+  "limitations": [
+    "No authenticated data access verified",
+    "No full masks/geolocation decoded; no observation-quality denominator",
+    "Granule footprints only intersect catalog AOI envelope; actual common pixel support unknown",
+    "Many-to-many granule candidates are not analytical pairs or independent days/episodes",
+    "Acquisition intervals are metadata bounds, not pixel acquisition instants",
+    "DAY is a granule metadata flag, not verified local pixel day/night QA",
+    "2019 is development, not new predictive holdout"
+  ],
+  "source_requests": {
+    "MYD14": [
+      "https://cmr.earthdata.nasa.gov/search/collections.json?concept_id=C2278858993-LPCLOUD&page_size=10",
+      "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C2278858993-LPCLOUD&temporal=2019-01-01T00%3A00%3A00Z%2C2019-01-15T23%3A59%3A59Z&bounding_box=-72.782%2C-37.226%2C-72.218%2C-36.774&page_size=2000&page_num=1&sort_key=start_date"
+    ],
+    "MYD03": [
+      "https://cmr.earthdata.nasa.gov/search/collections.json?concept_id=C1379841358-LAADS&page_size=10",
+      "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C1379841358-LAADS&temporal=2019-01-01T00%3A00%3A00Z%2C2019-01-15T23%3A59%3A59Z&bounding_box=-72.782%2C-37.226%2C-72.218%2C-36.774&page_size=2000&page_num=1&sort_key=start_date"
+    ],
+    "VNP14IMG": [
+      "https://cmr.earthdata.nasa.gov/search/collections.json?concept_id=C2734202914-LPCLOUD&page_size=10",
+      "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C2734202914-LPCLOUD&temporal=2019-01-01T00%3A00%3A00Z%2C2019-01-15T23%3A59%3A59Z&bounding_box=-72.782%2C-37.226%2C-72.218%2C-36.774&page_size=2000&page_num=1&sort_key=start_date"
+    ],
+    "VNP03IMG": [
+      "https://cmr.earthdata.nasa.gov/search/collections.json?concept_id=C2105092163-LAADS&page_size=10",
+      "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C2105092163-LAADS&temporal=2019-01-01T00%3A00%3A00Z%2C2019-01-15T23%3A59%3A59Z&bounding_box=-72.782%2C-37.226%2C-72.218%2C-36.774&page_size=2000&page_num=1&sort_key=start_date"
+    ]
+  }
+}

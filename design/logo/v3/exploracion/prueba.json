@@ -1,0 +1,8 @@
+{"comun": {"size": "1024x1024"},
+ "clips": [
+  {"model": "fal-ai/recraft/v3/text-to-image", "kind": "image", "out": "prueba-recraft-isotermas",
+   "prompt": "Minimal geometric logo mark for a satellite fire-monitoring science project: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, warm amber to deep orange gradient steps, small simple satellite silhouette at the upper right, flat vector, clean, centered, generous margin, plain white background, no text, no letters",
+   "params": {"style": "vector_illustration"}},
+  {"model": "nano-banana", "out": "prueba-nano-isotermas",
+   "prompt": "Professional minimal logo mark, flat vector design on a plain white background: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, stepping from pale yellow at the core to deep orange outside, a tiny simple satellite silhouette at the upper right, navy blue satellite, centered with generous margin, Swiss modernist identity design, no text, no letters, no gradients outside the flame"}
+ ]}

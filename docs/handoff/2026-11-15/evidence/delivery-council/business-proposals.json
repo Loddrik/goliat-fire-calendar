@@ -1,0 +1,66 @@
+{
+  "role": "negocio y usuario municipal",
+  "criteria_frozen": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+  "criteria_ack": true,
+  "scoring": "prioridad cualitativa, sin puntajes sintéticos",
+  "status": "propuestas para consolidación y revisión adversaria; no aceptación ya ejecutada",
+  "proposals": [
+    {
+      "id": "B1",
+      "priority": 1,
+      "title": "Congelar la historia que el equipo puede defender",
+      "owner_role": "curador científico y presentador",
+      "scope": "M1 publicado/14de54,112casos de temporada, recuperación956de1071 y fallo estricto preservado; corregir claims sin ampliar investigación",
+      "done": "Resumen de negocio revisado contra fuentes identificadas, sin impacto/ROI/validación2002 ni forecastfuturo inventados; distinción PR/merge/despliegue visible",
+      "dependencies": [
+        "resumen-negocio.md",
+        "pr-inventory.json",
+        "reportes revisados42/raw/39"
+      ],
+      "timebox_minutes": 20,
+      "reversible": "Cambios sólo documentales; ninguna promoción ni salida científica sobrescrita"
+    },
+    {
+      "id": "B2",
+      "priority": 2,
+      "title": "Ensayar una decisión municipal observable con respaldo local",
+      "owner_role": "presentador y verificador de interfaz",
+      "scope": "Recorrido Tomé08111 habilitada,Concepción08101 sin reconstrucción,tablaCSV e historial por plataforma; mínimo sin nueva funcionalidad",
+      "done": "Acta breve de rutas ejecutadas/resultado/version y contingencia local/HTML; ningún guion sugerido se presenta como prueba ya pasada",
+      "dependencies": [
+        "aplicación yJSONexistentes",
+        "ruta de inicio de guía técnica"
+      ],
+      "timebox_minutes": 20,
+      "reversible": "No datos nuevos ni cambios del modelo; si falla la red usar evidencia local identificada"
+    },
+    {
+      "id": "B3",
+      "priority": 3,
+      "title": "Entregar un paquete que otro equipo pueda abrir sin reconstruir ciencia",
+      "owner_role": "ingeniería de entrega y receptor",
+      "scope": "Índice,comandos seguros,artefactoHTML,fuentes,estadosPR,pendientesyresponsables; indicar NOinventory.py e ingestión bloqueada por115faltantes",
+      "done": "Receptor abre archivos y conoce qué está publicado/abierto,no ejecuta ingestión como prerequisito y sabe dónde registrar incidentes",
+      "dependencies": [
+        "guía técnica",
+        "inventarioPR",
+        "artefactoHTML existente"
+      ],
+      "timebox_minutes": 20,
+      "reversible": "Copia/ZIP/documentación sin merge ni despliegue automático"
+    },
+    {
+      "id": "B4",
+      "priority": 4,
+      "title": "Preparar preguntas difíciles y siguiente piloto sin prometer resultados",
+      "owner_role": "presentador y futuro responsable municipal",
+      "scope": "Salto2012,detección≠incendio,cero≠ausencia,gatesmensuales≠anuales,bandas/F21,datosfaltantes; piloto de lectura/uso conmunicipio como propuesta",
+      "done": "Equipo puede responder usando límites y fuentes; valor esperado descrito como hipótesis sin clientes,ROI o prevención medida",
+      "dependencies": [
+        "resumen-negocio.md revisado"
+      ],
+      "timebox_minutes": 15,
+      "reversible": "Hipótesis documentada y futura decisión explícita; ninguna acción externa autorizada"
+    }
+  ]
+}

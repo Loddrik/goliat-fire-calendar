@@ -1,0 +1,61 @@
+{
+  "role": "consejo38 adversario coste, robustez y alcance",
+  "criteria_ratification": "Ratificados sin cambios 30/25/20/15/10 antes de emitir juicio; sin nuevos scores. Puertas no compensables no se compensan por notas.",
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "sources_sha256": {
+    "docs/reviews/evidence/direction-council-38/statistics.json": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0",
+    "docs/reviews/evidence/direction-council-38/observation.json": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823",
+    "docs/reviews/evidence/direction-council-38/loco-vote.json": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a",
+    "docs/reviews/evidence/direction-council-38/loco-proposals.json": "5548f5e39ff8d1f87ced06793fdbedb5660994294e7dc10cc981c94b47783e6d"
+  },
+  "scope": "Leidos tres originales FINAL y propuestas. Solo dictamen y calendario propuesto; sin CRPS, nuevos losses, features, fits, targets o adquisicion cientifica.",
+  "verdict": "A+D preferidos, con protocolo y review congelados; C documental diferida por coste de revision salvo asignacion expresa que no compita; B inelegible.",
+  "critiques": [
+    "A90+C45+D60 serial suman195min frente174min disponibles a08:36. El paralelismo no elimina integracion, arbitraje de protocolo, revision y cierre del root.",
+    "Cuarto slot documental puede producir C, pero no crea un quinto revisor: root ya integra A, oraculos, D y HTML/SVG. Que C no use bytes cientificos no significa coste de review cero.",
+    "A evalua nueva pregunta fullCDF21 vs deltaB y destinos reutilizados. Favorable no rescata37/35 ni acredita calibracion, observabilidad o validez externa; negativo no habilita otro score de rescate.",
+    "90min no son90 de computo mas revision. ReconstruccionCDF, fixtures exactos, oraculo integral independiente, freeze, ejecucion y revision deben caber juntos. Disponibilidad de modelos no garantiza lograrlo.",
+    "B carece de accion/coste: su total debe ser N/A, nunca0 ni pesos redistribuidos. Sus rangos numericos en statistics son juicio condicionado y no una elegibilidad cuantificable actual.",
+    "C solo puede decidir sobre futura investigacion de acceso/operador GOES16FDCF en fechas fijas; no aporta verificacion empirica ahora ni abre presupuestoL2 cerrado. Documentacion no confirma existencia o calidad de granulos reales."
+  ],
+  "mandatory_changes": [
+    "A unico estudio numerico: F21original completa vs deltaB, igualpeso cuatroheld y mismo roster/targets/mask6/escala/floor. E11==parent held se excluye; G no esCDF ni se fabricaCDF/alternativa deltaG.",
+    "Congelar antes de scores signo, estadistico primario, guardrails y decisiones favorable/adverso/mixto. Conservar23/35/37negativos,30Bfallido yG1false.",
+    "Designar productorA y revisor independiente antes de abrir datos/calculos; review verifica matematica/oraculo y no solo reproduce helper del productor.",
+    "Reservar cierreD completo y al menos30min finales protegidos; no extender A por retrasos de consejo, protocolo, revision o discrepancias.",
+    "C no avanza automaticamente con un slot libre. Si root decide incluirla, identificar por adelantado quien revisa, ventana exacta y tareas del root desplazadas; no tomar al revisorA ni tiempoD. Sin esa asignacion, diferir."
+  ],
+  "proposed_absolute_allocation_UTC": {
+    "time_verified": "2026-11-15 08:37:48 UTC",
+    "08:38_to_08:50": "Cerrar consejo/protocolo/manifiesto y confirmar productor/revisor. No ciencia antes de jointprotocol.",
+    "08:50_to_10:20": "A max90min TOTAL incl independent review. No C paralelo por recomendacion preferida.",
+    "09:10_checkpoint": "ReconstruccionCDF/rosters/escalas y fixtures/oraculos auditables antes de nuevas perdidas; si faltan, stop sin sustitucionCDF.",
+    "09:50_to_10:20": "Revision independiente y correcciones acotadas dentroA; no dejar review para despues10:20.",
+    "10:20_to_11:20": "D max60min incl evidencia, narrativa, index/HTML/SVG y revision final; trabajoD ya adelantado se conserva.",
+    "10:50_to_11:20": "Ultimos30min protegidos de consolidacion, sin nuevas familias ni cambios metodologicos.",
+    "11:20_to_11:30": "Contingencia y entrega, no nueva investigacion ni recursos despues del cierre11:30UTC/08:30local.",
+    "late_start_rule": "Si protocolo/revisor no listos08:50, diferir A o fijar nuevo cap reducido antes de scoring que preserve10:20; no prometer90min masD fuera del horizonte.",
+    "caps_status": "Limites propuestos de inversion y no tiempos medidos ni garantia de exito."
+  },
+  "critical_stops": [
+    "CDF/modelos/escala/roster incompletos o incompatibles: A bloqueada, no residualCDF/refit/floor nuevo.",
+    "Desacuerdo de oraculos, control CRPS(deltaB)!=MAE(B) o masas invalidas: no interpretar scores; corregir dentro cap o inconcluso.",
+    "Sin review completa10:20: inconcluso y D; conservar artefactos parciales claramente marcados sin ganador.",
+    "C: cualquier byte cientifico, cuenta/autenticacion o reapertura de389MB requiere protocolo/presupuesto distinto; no hacerlo por este dictamen.",
+    "C: semantica/support/acceso no establecidos dentro45min => desconocido/inconcluso; documentacion explicita incompatible => G0negativo. No otrocaso/fecha y no unknown=0.",
+    "A favorable, mixto o adverso termina esta iteracion; no abrir B/otroproper-score por resultado."
+  ],
+  "C_dissent": {
+    "original_position": "Estadistica/OBS permiten C45 documental paralelo si slots/review no compiten; loco prefiere A+D.",
+    "adversary_position": "Comparto valor potencial de una fuente distinta, pero prefiero diferir C: utilidad ahora es futura factibilidad y el root es cuello de revision real. Es disenso de inversion, no negacion cientifica.",
+    "conditional_acceptance": "Aceptaria C si root reserva revision explicita dentro45min sin desplazar reviewA oD; o como alternativa separada tras stoptempranoA, nunca rescate de MAE/CRPS y nunca adquisicion. No autoreasignar todo capA a C."
+  },
+  "scores": "No agregados nuevos; rangos originales solapados no garantizan A>D ni compensan B inelegible.",
+  "no_new_science_computed": true
+}

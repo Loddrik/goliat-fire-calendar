@@ -1,0 +1,233 @@
+{
+  "MeasuredParameters": [
+    {
+      "ParameterName": "Land_Cover_Type_1",
+      "QAStats": {
+        "QAPercentMissingData": 0.0,
+        "QAPercentOutOfBoundsData": 0.0,
+        "QAPercentInterpolatedData": 0.0
+      },
+      "QAFlags": {
+        "AutomaticQualityFlag": "Passed",
+        "AutomaticQualityFlagExplanation": "To be set as 'Passed' or 'Failed' to indicate failure of PGE test.",
+        "OperationalQualityFlag": "Passed",
+        "OperationalQualityFlagExplanation": "Passed",
+        "ScienceQualityFlag": "Not Investigated",
+        "ScienceQualityFlagExplanation": "See https://landweb.modaps.eosdis.nasa.gov/cgi-bin/QA_WWW/qaFlagPage.cgi?sat=aquaTerra&ver=C6 for the product Science Quality status."
+      }
+    }
+  ],
+  "PGEVersionClass": {
+    "PGEVersion": "6.1.1"
+  },
+  "CloudCover": 0.0,
+  "RelatedUrls": [
+    {
+      "URL": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+      "Type": "GET DATA",
+      "Description": "Download MCD12Q1.A2010001.h12v12.061.2022160091628.hdf"
+    },
+    {
+      "URL": "s3://lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+      "Type": "GET DATA VIA DIRECT ACCESS",
+      "Description": "This link provides direct download access via S3 to the granule"
+    },
+    {
+      "URL": "https://doi.org/10.5067/MODIS/MCD12Q1.061",
+      "Type": "VIEW RELATED INFORMATION",
+      "Description": "The Landing Page for this file may be accessed directly from this link",
+      "MimeType": "text/html"
+    },
+    {
+      "URL": "https://opendap.earthdata.nasa.gov/collections/C2484079608-LPCLOUD/granules/MCD12Q1.A2010001.h12v12.061.2022160091628",
+      "Type": "USE SERVICE API",
+      "Subtype": "OPENDAP DATA",
+      "Description": "OPeNDAP request URL"
+    },
+    {
+      "URL": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml",
+      "Type": "VIEW RELATED INFORMATION",
+      "Description": "Download MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml"
+    },
+    {
+      "URL": "s3://lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml",
+      "Type": "VIEW RELATED INFORMATION",
+      "Description": "This link provides direct download access via S3 to the granule"
+    },
+    {
+      "URL": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials",
+      "Type": "VIEW RELATED INFORMATION",
+      "Description": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access"
+    },
+    {
+      "URL": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg",
+      "Type": "GET RELATED VISUALIZATION",
+      "Description": "Download BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg"
+    },
+    {
+      "URL": "s3://lp-prod-public/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg",
+      "Type": "GET RELATED VISUALIZATION",
+      "Description": "This link provides direct download access via S3 to the granule"
+    }
+  ],
+  "SpatialExtent": {
+    "HorizontalSpatialDomain": {
+      "Geometry": {
+        "GPolygons": [
+          {
+            "Boundary": {
+              "Points": [
+                {
+                  "Longitude": -65.046818,
+                  "Latitude": -40.043811
+                },
+                {
+                  "Longitude": -57.498793,
+                  "Latitude": -29.887923
+                },
+                {
+                  "Longitude": -69.229565,
+                  "Latitude": -29.850627
+                },
+                {
+                  "Longitude": -78.324437,
+                  "Latitude": -40.0
+                },
+                {
+                  "Longitude": -65.046818,
+                  "Latitude": -40.043811
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "ProviderDates": [
+    {
+      "Date": "2022-06-09T15:49:47.951Z",
+      "Type": "Insert"
+    },
+    {
+      "Date": "2022-06-09T15:50:19.089Z",
+      "Type": "Update"
+    }
+  ],
+  "AdditionalAttributes": [
+    {
+      "Name": "QAPERCENTGOODQUALITY",
+      "Values": [
+        "100"
+      ]
+    },
+    {
+      "Name": "QAPERCENTOTHERQUALITY",
+      "Values": [
+        "0"
+      ]
+    },
+    {
+      "Name": "QAPERCENTNOTPRODUCEDCLOUD",
+      "Values": [
+        "0"
+      ]
+    },
+    {
+      "Name": "QAPERCENTNOTPRODUCEDOTHER",
+      "Values": [
+        "0"
+      ]
+    },
+    {
+      "Name": "HORIZONTALTILENUMBER",
+      "Values": [
+        "12"
+      ]
+    },
+    {
+      "Name": "VERTICALTILENUMBER",
+      "Values": [
+        "12"
+      ]
+    },
+    {
+      "Name": "TileID",
+      "Values": [
+        "51012012"
+      ]
+    },
+    {
+      "Name": "identifier_product_doi",
+      "Values": [
+        "10.5067/MODIS/MCD12Q1.061"
+      ]
+    },
+    {
+      "Name": "identifier_product_doi_authority",
+      "Values": [
+        "http://dx.doi.org"
+      ]
+    }
+  ],
+  "CollectionReference": {
+    "ShortName": "MCD12Q1",
+    "Version": "061"
+  },
+  "DataGranule": {
+    "DayNightFlag": "Day",
+    "Identifiers": [
+      {
+        "Identifier": "MCD12Q1.A2010001.h12v12.061.2022160091628",
+        "IdentifierType": "ProducerGranuleId"
+      }
+    ],
+    "ProductionDateTime": "2022-06-09T09:16:28.000Z",
+    "ArchiveAndDistributionInformation": [
+      {
+        "Name": "Not provided",
+        "Size": 13.1273,
+        "SizeUnit": "MB"
+      }
+    ]
+  },
+  "Platforms": [
+    {
+      "ShortName": "Terra",
+      "Instruments": [
+        {
+          "ShortName": "MODIS"
+        }
+      ]
+    },
+    {
+      "ShortName": "Aqua",
+      "Instruments": [
+        {
+          "ShortName": "MODIS"
+        }
+      ]
+    }
+  ],
+  "TemporalExtent": {
+    "RangeDateTime": {
+      "BeginningDateTime": "2010-01-01T00:00:00.000Z",
+      "EndingDateTime": "2010-12-31T23:59:59.000Z"
+    }
+  },
+  "GranuleUR": "MCD12Q1.A2010001.h12v12.061.2022160091628",
+  "Projects": [
+    {
+      "ShortName": "Not provided",
+      "Campaigns": [
+        "Aqua",
+        "TERRA"
+      ]
+    }
+  ],
+  "MetadataSpecification": {
+    "URL": "https://cdn.earthdata.nasa.gov/umm/granule/v1.6.7",
+    "Name": "UMM-G",
+    "Version": "1.6.7"
+  }
+}

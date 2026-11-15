@@ -1,0 +1,15 @@
+{
+  "id": "S8",
+  "url": "https://viirsland.gsfc.nasa.gov/Products/NASA/FireESDR.html",
+  "publisher": "NASA GSFC VIIRS science team",
+  "date_in_source": "LastUpdated2024-05-17",
+  "locator": "Product Details table; algorithm description",
+  "facts": [
+    "Science-team product table distinguishes375mL2 swath,750mL2 swath and1kmL3dailyVNP14A1.",
+    "750m detector usesM5,M7,M11,M13,M15,M16;375m detector usesI1..I5 supplemented byM13.",
+    "No full-opportunity gridded375m product is established by this bounded search; absence globally is not proved.",
+    "Some prose anticipates L3 products while table already listsA1; use versioned catalog and product details rather than infer availability from that prose."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

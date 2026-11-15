@@ -1,0 +1,19 @@
+{
+  "status": "INCONCLUSIVE_RSS",
+  "recorded_utc": "2026-11-15T10:32:15.087980+00:00",
+  "os": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+  "wrapper": "/usr/bin/time -l",
+  "wrapper_exit_status": 1,
+  "driver_code_sha256": "9cf6d85d7ff73b872c7143aae2ac1708d2f9aae3cde46a318d08580b9bfd52f6",
+  "code_freeze_sha256": "c5fb02bf5dcb09e5fbe5b081d30831e713637c42b00b465cedb436c17082e90d",
+  "producer_manifest_sha256": "40f2bed44132991636d0483d8dbafb9eb8045a4a8be81f026d69a07d51cf1e8b",
+  "peak_RSS_bytes": null,
+  "RSS_cap_bytes": 1073741824,
+  "RSS_gate_accredited": false,
+  "reason": "Darwin time failed: sysctl kern.clockrate Operation not permitted; no maximum resident set size emitted",
+  "stdout_log_sha256": "fa7b5e10516847eaa7db237335567dba61d4dfdbbd3a7d9cbad8d9fa2ea7c168",
+  "stderr_log_sha256": "a678d807a6cbc6a86fb4d80b0a48a6333f3e3751b773ea060315a2f4a3fde530",
+  "primary_metrics_interpreted": false,
+  "fits": 0,
+  "downloads": 0
+}

@@ -1,0 +1,94 @@
+{
+  "role": "consejo35 adversario: medición, estimandos y selección",
+  "stage": "dictamen posterior a leer los tres votos multifocales; no implementación ni evaluación nueva",
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "criteria_unchanged_from_24_31": true,
+  "no_new_scores_fits_features_or_model_code": true,
+  "sources_sha256": {
+    "docs/reviews/2026-11-15-next-model-preflight.md": "232c23e63d8037b22575206ebb8ccc9daf7cabb46fbbdaddba0b6468ed897964",
+    "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916",
+    "docs/reviews/evidence/discrete-state-comparison-independent-review/summary.json": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf",
+    "docs/reviews/evidence/direction-council-35/statistics.json": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4",
+    "docs/reviews/evidence/direction-council-35/engineering.json": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea",
+    "docs/reviews/evidence/direction-council-35/observation.json": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01"
+  },
+  "multifocal_disagreement_preserved": "Estadística/ingeniería priorizan entregaD y A como contraste acotado conCsecundario; observación prefiere informaciónB y acepta A21 primero con cuboB paralelo si hay capacidad. Rangos subjetivos solapados no proporcionan ganador robusto.",
+  "recommended_sequence": [
+    "D checkpoint obligatorio de evidencia/claims en paralelo, no veto de una investigación válida.",
+    "A como único contraste de pérdidas nuevo inmediato, panel21 único primario, cap45min incluida revisión; C medio fijo secundario dentro del mismo protocolo si cabe.",
+    "B conserva prioridad de información predictiva nueva. Aceptable cubo/placebo auditado≤45min en paralelo si hay capacidad incluida revisión y protocolo propio previo, SIN pérdidas/refit/modelo; después otra decisión para incorporación/evaluaciónSOURCE-only. No prometer familia evaluada dentro del cap del cubo ni usar33 para elegirla."
+  ],
+  "single_primary": {
+    "panel": "21, mismos cuatro regímenes SOURCE-región08/16 por dos direcciones temporales y máscara6; CDF E11/B/modelos ya congelados sin refit.",
+    "question": "¿Qué coste predictivo held cambia al impedir transferencias de presupuesto entre los dominios SOURCE/held, manteniendo CDF y B fijos?",
+    "contrast": "Δ_r=MAE_held(E_role_budget)-MAE_held(E_global54); primaria media con igual peso de los cuatro Δ_r, negativos favorables. Reportar los cuatro y pooled secundario; regímenes dependientes, sin IC IID.",
+    "why_21_not_18": "Regiones reales coinciden con SOURCE/held: esto define explícitamente la intervención asignativa que interesa.21 ya contiene esos regímenes y resultados de transporte adversos.18 tendría otra pregunta sin rol reservado y ocho modelos externos, no un control equivalente que deba añadirse dentro de45min.",
+    "limitation": "El contraste no separa ecología/geografía de dominios de calibración; no atribuir una ventaja al territorio físico. Elimina acoplamiento de presupuesto en inferencia, no la dependencia legítima de modelos held entrenados en SOURCE."
+  },
+  "indispensable_obligations": [
+    "Congelar un único panel/target/CDF/máscara21, cuatro modelos por régimen, B y decisiones globales. Reproducir54 antes de separar grupos; g temporal no es región.",
+    "Definir partición real con CUT y única partición artificial33/21 con algoritmo/hash/lista íntegra fijados antes de pérdidas. Sin semillas alternativas, matching adaptativo o selección de partición.",
+    "La partición artificial cambia composición de roles/intensidad y presupuestos además de geografía. Un hash es control descriptivo de regularización genérica, no contrafactual territorial ni prueba de aleatorización.",
+    "Reportar transferencia mensual T=sum(E_global_held)-sum(B_held), con transferencia SOURCE opuesta, y su anulación bajo presupuestos separados por construcción. No presentar sesgo/totales porgrupo iguales a B como habilidad nueva.",
+    "Reportar magnitud/dirección de redistribución, distancia aB y riesgoCDF adicional de real/hash/C. Estos diagnósticos no igualan automáticamente fuerza de regularización; no optimizarlos para hacer comparables los ganadores.",
+    "Primaria held igual4; guardrails SOURCE/held y sus intersecciones14/40, ceros, activos, >=50, sesgo y totales. Estratos target fijos por comparación; ningún subgrupo favorable rescata primaria o promoción.",
+    "C=.5B+.5E_global exactamente, sin otros pesos. ConvexidadL1 acota su pérdida por el promedio de endpoints, no garantiza superar al mejor ni proteger cada subgrupo. No es mediana de mezclaCDF u óptimoL1 demostrado.",
+    "No trasladar etiquetas/Jaccard/tiersQA/retención33 a targets, pesosCDF o selección de predictor mensual.33 sólo limita claims de representatividad y deja observabilidad física abierta.",
+    "Cap absoluto45min incluido review; identidad fallida/cap conserva inconcluso, sin ampliar con18/24C ni otra semilla. D conserva todos los negativos y fallos continuos.",
+    "Los certificadosKKT de real/hash son PORGRUPO con sus propios multiplicadores y presupuestos. No exigir elKKT global de un único multiplicador a una solución con varias restricciones. C no es óptimo y no debe someterse al gateKKT del solver; sólo identidades/factibilidad y cota convexa pertinente. Tolerancias congeladas, sin ampliarlas por resultados."
+  ],
+  "controls_that_discriminate": [
+    {
+      "control": "Global54 reproducido desde las mismas CDF/B y mismo desempate.",
+      "distinguishes": "Cambio del conjunto factible frente a un cambio accidental de familia, unidad, solver o población."
+    },
+    {
+      "control": "Synthetic: ungrupo reproduceglobal; singleton fuerzaB; renombrar grupos conserva decisiones; si global ya satisface presupuestos porgrupo, coincide con solución separada con mismo desempateEuclídeo.",
+      "distinguishes": "Intervención de presupuesto frente a implementación incorrecta."
+    },
+    {
+      "control": "Synthetic: mantener distribuciones/B held fijos y perturbar sólo entradas de asignaciónSOURCE.",
+      "distinguishes": "La decisión realporroles held debe ser invariante por separabilidad; el global puede acoplarse. No modifica entrenamiento ni usa labels."
+    },
+    {
+      "control": "RiesgoCDF real/hash>=óptimo global y<=riesgoB; B siempre factible. ParaC, riesgo<=promedio riesgosB/global.",
+      "distinguishes": "Regularización evaluada externamente frente a una supuesta mejora del óptimo del mismo solver."
+    },
+    {
+      "control": "Hash único y halfblend fijo, con distancias aB/transferencias/riesgos visibles.",
+      "distinguishes": "Permite observar si un patrón también aparece con restricciones o shrinkage genéricos; no identifica por sí solo un mecanismo geográfico."
+    }
+  ],
+  "decision_branches": [
+    {
+      "outcome": "Real mejora held en varios regímenes sin esconder perjuicioSOURCE/14/extremos y difiere de controles genéricos.",
+      "decision": "Documentar reducción de coste de acoplamiento asignativo bajo esta familia y diseñar posterior prueba de presupuestos por dominio. No promoción ni atribución ecológica."
+    },
+    {
+      "outcome": "Hash o halfblend producen patrón comparable, o mejora concentrada en un régimen con guardrails adversos.",
+      "decision": "Interpretar como sensibilidad/regularización genérica o beneficio no uniforme; no elegir partición por ganador ni declarar mecanismo territorial."
+    },
+    {
+      "outcome": "Real no mejora held bajo la primaria.",
+      "decision": "Cerrar esta intervención: impedir esas transferencias no resuelve el coste bajo CDF/B fijos; no descarta información observacional faltante ni toda alternativa de decisión."
+    },
+    {
+      "outcome": "Identidad/certificado/cap falla.",
+      "decision": "Inconcluso técnico preservado; cerrar A y entregarD, sin completar con otro panel."
+    }
+  ],
+  "B_future_requirements": [
+    "Operador misma celda/díasUTC consecutivos, no alguna celda comunal; bordes de mes/temporada y crédito de pares fijados.",
+    "Máscara/contrato21 exactos, cierre mensual e inputsSOURCE-only. Aqua0 significa no detección registrada, no observaciónútil0.",
+    "Permutación de calendarios completos porCUT/bloque y semilla única, invariantes explícitos y efecto que destruye; no intercambiar con permutación porcelda.",
+    "Cubo válido no es modelo mejor: forma de incorporación, baselineequivalente y protocolo de evaluación separados, sin nuevoholdout ni causalidad física."
+  ],
+  "ratification": "Apoyo condicional Dparalelo+A21único contraste de pérdidas inmediato+Ccontrolfijo y cuboB auditado paralelo opcional≤45min bajo protocolo propio, sinloss/refit y con revisión reservada. No apoyo afirmar unanimidad de ranking ni cerrarB por coste; observación sigue priorizando su información nueva.",
+  "optional_subjective_score_ranges": null
+}

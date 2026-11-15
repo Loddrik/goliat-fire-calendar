@@ -1,0 +1,158 @@
+"""Independent33 audit; no author helper imports, raw HDF, geometry or refits."""
+from pathlib import Path
+import csv,gzip,json,hashlib,collections,math
+import numpy as np
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar')
+D=ROOT/'docs/reviews/evidence/discrete-state-comparison/attempt-01'
+G=ROOT/'docs/reviews/evidence/point-ownership-audit/attempt-01'
+OLD=ROOT/'docs/reviews/evidence/observation-ownership-ledger'
+NAT=ROOT/'.runtime/observation-ownership-ledger'
+COLS=('case','product','row','col','mask_class','algorithm_QA','geographic_flag','surface','screen_sensitivity_state','screen_exclusion_reasons','screen_unresolved_reasons','M13_non_nominal')
+NINE=('00','10','01','11','0U','1U','U0','U1','UU')
+GS=('identified_owner','boundary_unidentified','time_unidentified','same_scan_ambiguous','no_nominal_support')
+MASK={'MYD14':{0:'missing_input',1:'obsolete_not_processed',2:'obsolete_not_processed',3:'water_no_detection',4:'cloud',5:'land_no_detection',6:'unknown'},'VNP14IMG':{0:'not_processed',1:'bowtie_deleted',2:'sun_glint',3:'water_no_detection',4:'cloud',5:'land_no_detection',6:'unclassified'}}
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def rows(p):
+ with gzip.open(p,'rt',newline='') as f:yield from csv.DictReader(f)
+def canon(row):
+ out={k:row[k] for k in COLS}
+ for k in ('row','col','mask_class','algorithm_QA','geographic_flag'):out[k]=None if row[k]=='' else int(row[k])
+ out['M13_non_nominal']=None if row['M13_non_nominal']=='' else row['M13_non_nominal']=='True'
+ return out
+
+def expected_native(product,r):
+ m,q,g=r['mask_class'],r['algorithm_QA'],r['geographic_flag'];flag=r['M13_non_nominal']
+ state='U' if m is None or m not in (3,5,7,8,9) else ('1' if m>=7 else '0')
+ reason='native_mask_null' if m is None else ('registered_detection' if m in (7,8,9) else MASK[product].get(m,'unknown_class'))
+ exc=[];unres=[];complete=all(x is not None for x in (m,q,g))
+ if complete:
+  if m not in range(10):exc.append('mask_fill_or_unknown')
+  elif m not in (3,5,7,8,9):exc.append(MASK[product][m])
+  if g!=0:exc.append('geolocation_policy_not_accepted')
+  reserved=(sum(1<<b for b in [6,17,18,19,29,30,31]) if product=='MYD14' else sum(1<<b for b in range(23,32)))
+  if q&reserved:exc.append('algorithm_qa_reserved_active')
+  if product=='MYD14':
+   surf=q&3
+   if surf==3:exc.append('surface_unused')
+   if (m==3 and surf==2) or (m==5 and surf==0):exc.append('mask_surface_conflict')
+   if (q>>22)&3:unres.append('glint_policy_unresolved')
+  else:
+   if q&127:exc.append('input_quality_non_nominal')
+   if q&(1<<22):exc.append('residual_bowtie_policy')
+  es='excluded' if exc else ('unresolved' if unres else 'local_candidate')
+  verified=(es==r['screen_sensitivity_state'] and '|'.join(exc)==r['screen_exclusion_reasons'] and '|'.join(unres)==r['screen_unresolved_reasons'])
+ else:verified=False
+ missing=[k for k in ('mask_class','algorithm_QA','geographic_flag') if r[k] is None]
+ if product=='VNP14IMG' and flag is None:missing.append('M13_non_nominal')
+ causes=exc[:] if verified and exc else []
+ if product=='VNP14IMG' and flag is True:causes.append('M13_non_nominal')
+ incomplete=['missing_'+k for k in missing]
+ if not verified:incomplete.append('screen_not_verified_against_frozen_decoder')
+ if r['screen_sensitivity_state']=='unresolved':incomplete.extend(r['screen_unresolved_reasons'].split('|') if r['screen_unresolved_reasons'] else ['screen_unresolved_missing_cause'])
+ if (verified and exc) or (product=='VNP14IMG' and flag is True):status='non_nominal'
+ elif missing or not verified or r['screen_sensitivity_state']!='local_candidate' or r['screen_unresolved_reasons']:status='unknown'
+ else:status='nominal_in_inspected_fields'
+ surface={'land':'land','land_mask_class5':'land','water':'water','water_mask_class3':'water','coast':'coast'}.get(r['surface'],'unknown')
+ provenance='MYD14_algorithm_QA_surface_bits0_1_via24B_export' if product=='MYD14' else ('24B_surface_geo_land_water_branch_by_frozen_source_policy' if r['surface'] in ('land','water','coast') else '24B_export_geo_unknown_or_native_mask_fallback')
+ return {'state':state,'state_reason':reason,'mask':m,'algorithm_QA':q,'geographic_flag':g,'surface_native':r['surface'],'surface':surface,'surface_provenance':provenance,'QA_status':status,'QA_causes':'|'.join(causes),'QA_incompleteness':'|'.join(incomplete),'M13':'not_applicable' if product=='MYD14' else flag,'screen':r['screen_sensitivity_state'],'screen_excluded':r['screen_exclusion_reasons'],'screen_unresolved':r['screen_unresolved_reasons']}
+def empty_native(product,gs):
+ return {'state':'U','state_reason':'geometry_'+GS[gs],'mask':None,'algorithm_QA':None,'geographic_flag':None,'surface_native':None,'surface':'unknown','surface_provenance':'no_unique_owner','QA_status':'unknown','QA_causes':'no_unique_owner','QA_incompleteness':'no_unique_owner','M13':'not_applicable' if product=='MYD14' else None,'screen':None,'screen_excluded':None,'screen_unresolved':None}
+def assert_value(actual,expected,where):
+ if expected is None:assert actual=='',where
+ elif isinstance(expected,float):assert actual!='' and float(actual)==expected,where
+ else:assert actual==str(expected),(where,actual,expected)
+def load_np(path):
+ with np.load(path,allow_pickle=False) as z:return {k:z[k] for k in z.files}
+def check_summary(c,got):
+ n=sum(c.values());assert got['Ntotal']==n and got['nine']=={k:c[k] for k in NINE}
+ five={k:c[k] for k in NINE[:4]};five['U']=sum(c[k] for k in NINE[4:]);assert got['five']==five
+ den=c['11']+c['10']+c['01'];assert got['Nknown']==sum(c[k] for k in NINE[:4]) and got['Jaccard_denominator']==den
+ assert got['Jaccard_known']==(c['11']/den if den else None)
+ assert got['n1U']==c['1U'] and got['nU1']==c['U1']
+ for k in NINE:assert got['fractions_total'][k]==c[k]/n
+
+def main():
+ summary=json.load(open(D/'summary.json'));manifest=json.load(open(D/'manifest.json'));freeze=json.load(open(D/'freeze.json'));raw=json.load(open(OLD/'raw-stage.json'));refs=json.load(open(OLD/'references.json'))
+ assert summary['all_structural_gates_passed'] and summary['point_rows']==397608 and len(summary['scenarios'])==16
+ for name,v in manifest['files'].items():assert sha(D/name)==v['sha256'],name
+ for name,h in freeze['inputs_sha256'].items():assert sha(ROOT/name)==h,name
+ assert sha(ROOT/'pipeline/discrete_state_comparison.py')==freeze['code_sha256']
+ native={};enriched={};geo={};native_count=0;point_count=0;roster_count=0;ret_count=0;cat_count=0;signatures={}
+ for case in ('2019','2023'):
+  for prod in ('MYD14','VNP14IMG'):
+   source={};projection={}
+   for x in rows(NAT/f'{case}-{prod}-labels.csv.gz'):
+    q=canon(x);key=q['row'],q['col'];assert key not in source;source[key]=q
+   for x in rows(D/f'{case}-{prod}-universal-native.csv.gz'):
+    q=canon(x);key=q['row'],q['col'];assert key not in projection;projection[key]=q
+   assert source==projection;native[case,prod]=source;native_count+=len(source);enriched[case,prod]={k:expected_native(prod,v) for k,v in source.items()}
+   for phase in (0,125):
+    for step in (250,500):
+     g=load_np(G/f'{case}-{prod}-phase{phase}-h{step}-points.npz');geo[case,prod,phase,step]=g
+     expected={tuple(map(int,n[:2])) for n,keep in zip(g['native'],g['included']) if keep};assert set(source)==expected
+     for i,row in enumerate(rows(D/f'{case}-{prod}-phase{phase}-h{step}-native-roster.csv.gz')):
+      n=g['native'][i];k=int(n[0]),int(n[1]);v=source.get(k);want={'quad_index':i,'row':k[0],'col':k[1],'scan':int(n[2]),'included':bool(g['included'][i]),'strict_interior_points':int(g['roster'][i,1]),'boundary_points':int(g['roster'][i,2]),'owned_early_points':int(g['roster'][i,3]),'owned_late_points':int(g['roster'][i,4]),'mask_class':None if v is None else v['mask_class'],'label_scope':'outside_exported_universe' if v is None else 'universal_native_export'}
+      for field,value in want.items():assert_value(row[field],value,field)
+      roster_count+=1
+     assert i+1==len(g['native'])
+ for case in ('2019','2023'):
+  for phase in (0,125):
+   for step in (250,500):
+    mg=geo[case,'MYD14',phase,step];vg=geo[case,'VNP14IMG',phase,step];N=len(mg['states']);assert len(vg['states'])==N
+    for policy in ('early','late'):
+     name=f'{case}-phase{phase}-h{step}-{policy}';joint=collections.Counter();tiers=collections.defaultdict(collections.Counter);surfaces=collections.defaultdict(collections.Counter);unknown=collections.defaultdict(collections.Counter);sigs=[];geohash=hashlib.sha256()
+     for pid,row in enumerate(rows(D/(name+'-points.csv.gz'))):
+      assert pid<N;expected_geo={'case':case,'phase_m':phase,'step_m':step,'priority':policy,'point_id':pid};derived={}
+      for pref,prod,g in [('m','MYD14',mg),('v','VNP14IMG',vg)]:
+       qi=int(g['owner_'+policy+'_quad'][pid]);gs=int(g['states'][pid]);n=None if qi<0 else g['native'][qi];scan=None if n is None else int(n[2]);expected_geo.update({pref+'_quad_index':qi,pref+'_GEO_state':gs,pref+'_GEO_causes':''.join('1' if t else '0' for t in g['causes'][pid]),pref+'_row':None if n is None else int(n[0]),pref+'_col':None if n is None else int(n[1]),pref+'_scan':scan})
+       fields=['EV start time','EV center time'] if prod=='MYD14' else ['scan_start_time','scan_end_time','ev_mid_time']
+       for k in fields:expected_geo[pref+'_'+k.replace(' ','_')]=None if scan is None else refs['cases'][case][prod]['fields'][k][scan]
+       d=empty_native(prod,gs) if n is None else enriched[case,prod][int(n[0]),int(n[1])];d={**d,'global_flag':raw['cases'][case][prod]['global_quality_flag']};derived[pref]=d
+       for field,value in d.items():assert_value(row[pref+'_'+field],value,pref+'_'+field)
+       if d['state']=='U':unknown[pref][d['state_reason']]+=1
+       if d['mask'] in (7,8,9):assert d['state']=='1'
+      a,b=expected_geo['m_EV_center_time'],expected_geo['v_ev_mid_time'];expected_geo['scan_reference_delta_V_minus_M_s']=None if a is None or b is None else b-a;expected_geo['scan_reference_delta_reason']='no_unique_owner_or_reference' if a is None or b is None else 'scan_reference_only_not_pixel_exposure'
+      for field,value in expected_geo.items():assert_value(row[field],value,field)
+      geohash.update((json.dumps(list(expected_geo.values()),separators=(',',':'),allow_nan=False)+'\n').encode())
+      pair=derived['m']['state']+derived['v']['state'];qa={derived[x]['QA_status'] for x in ('m','v')};tier='some_non_nominal' if 'non_nominal' in qa else ('QA_unknown' if 'unknown' in qa else 'both_nominal_in_inspected_fields');su=[derived[x]['surface'] for x in ('m','v')];surface='surface_unknown' if 'unknown' in su else ('coast' if 'coast' in su else ('land_land' if su==['land','land'] else ('water_water' if su==['water','water'] else 'land_water_conflict')))
+      assert row['joint_state']==pair and row['QA_pair_tier']==tier and row['surface_pair']==surface;joint[pair]+=1;tiers[tier][pair]+=1;surfaces[surface][pair]+=1;point_count+=1
+      sigs.append(hashlib.sha256(json.dumps([v for k,v in row.items() if k not in ('step_m','point_id')],separators=(',',':')).encode()).digest())
+     assert pid+1==N;claimed=summary['scenarios'][name];check_summary(joint,claimed)
+     assert geohash.hexdigest()==claimed['GEO_before_sha256']==claimed['GEO_after_sha256']
+     assert set(tiers)==set(claimed['QA_tiers']) and set(surfaces)==set(claimed['surface_strata'])
+     for t,c in tiers.items():check_summary(c,claimed['QA_tiers'][t])
+     for t,c in surfaces.items():check_summary(c,claimed['surface_strata'][t])
+     assert {p:dict(c) for p,c in unknown.items()}==claimed['unknown_causes'];signatures[case,phase,step,policy]=sigs
+     print(name,'all point/native/GEO/time/QA/surface/9states verified',N,flush=True)
+   for policy in ('early','late'):
+    fine=signatures[case,phase,250,policy];coarse=signatures[case,phase,500,policy];fj=[j for j in range(-101,101) if -25000<phase+j*250<25000];cj=[j for j in range(-101,101) if -25000<phase+j*500<25000];fi={j:i for i,j in enumerate(fj)};count=0
+    for j in cj:
+     for k in cj:
+      assert fine[fi[2*j]*len(fj)+fi[2*k]]==coarse[cj.index(j)*len(cj)+cj.index(k)];count+=1
+    assert count==summary['nested'][f'{case}-phase{phase}-{policy}']['checked_points']
+ for case in ('2019','2023'):
+  for prod in ('MYD14','VNP14IMG'):
+   orig={};project={}
+   for x in rows(NAT/f'{case}-{prod}-all-positive-originals.csv.gz'):
+    q=canon(x);q['scope']=x['scope'];key=q['row'],q['col'];assert key not in orig and q['mask_class'] in (7,8,9);orig[key]=q
+   for x in rows(D/f'{case}-{prod}-positive-catalogue-projection.csv.gz'):
+    q=canon(x);q['scope']=x['scope'];key=q['row'],q['col'];assert key not in project;project[key]=q
+   assert orig==project and len(orig)==raw['cases'][case][prod]['original_positive_records_granule'];cat_count+=len(orig)
+   for phase in (0,125):
+    for step in (250,500):
+     g=geo[case,prod,phase,step];lookup={tuple(map(int,n[:2])):i for i,n in enumerate(g['native'])}
+     for policy,col in [('early',3),('late',4)]:
+      cats=collections.Counter();scopes=collections.defaultdict(collections.Counter);seen=set()
+      for row in rows(D/f'{case}-{prod}-phase{phase}-h{step}-{policy}-positive-retention.csv.gz'):
+       k=int(row['row']),int(row['col']);assert k not in seen;seen.add(k);rawq=orig[k];q=canon(row);q['scope']=row['scope'];assert q==rawq
+       i=lookup.get(k);inc=False if i is None else bool(g['included'][i]);strict=None if i is None else int(g['roster'][i,1]);boundary=None if i is None else int(g['roster'][i,2]);owned=None if i is None else int(g['roster'][i,col])
+       category='quad_unavailable_geometry_null' if i is None else ('quad_outside32A_universe' if not inc else ('included_quad_without_strict_interior_query' if strict==0 else ('strict_interior_present_without_ownership' if owned==0 else 'represented_owner')))
+       want={'phase_m':phase,'step_m':step,'priority':policy,'quad_index':i,'geometry_missing_null':i is None,'included':inc,'strict_interior_points':strict,'boundary_points':boundary,'owned_points':owned,'retention_category':category}
+       for field,value in want.items():assert_value(row[field],value,field)
+       cats[category]+=1;scopes[row['scope']][category]+=1;ret_count+=1
+      assert seen==set(orig);claim=summary['native_retention'][case+'_'+prod][f'phase{phase}-h{step}-{policy}'];assert claim['native_positive_records']==len(seen) and claim['partition']==dict(cats) and claim['scopes']=={k:dict(v) for k,v in scopes.items()}
+ assert point_count==397608 and native_count==85451 and roster_count==404152 and ret_count==10216 and cat_count==1277
+ assert sum((point_count,native_count,roster_count,ret_count,cat_count))==898704==summary['all_final_data_rows']
+ assert summary['time_reference_metadata']['source_REF_sha256']==sha(OLD/'references.json')
+ print('INDEPENDENT COMPLETE PASS',{'points':point_count,'native':native_count,'roster':roster_count,'retention':ret_count,'catalogue':cat_count,'all_final_rows':898704},flush=True)
+if __name__=='__main__':main()

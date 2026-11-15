@@ -1,0 +1,161 @@
+{
+  "shapely": "2.2.0",
+  "GEOS": "3.14.1",
+  "mini_repro_existing_WKB_only": true,
+  "results": [
+    {
+      "file": "MYD14_early-811-1154-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 1065179.1843835772,
+      "p_intersection_q": 1065179.1843835772,
+      "q_intersection_p": 1065179.1843835772,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1503
+    },
+    {
+      "file": "MYD14_early-818-1166-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2656776.3652512697,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1503
+    },
+    {
+      "file": "MYD14_early-833-1149-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2495637.9405776053,
+      "p_intersection_q": 2495637.9405775475,
+      "q_intersection_p": 2495637.9405775475,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1503
+    },
+    {
+      "file": "MYD14_early-844-1161-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2610235.1816886277,
+      "p_intersection_q": 2610235.181688485,
+      "q_intersection_p": 2610235.1816884857,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1503
+    },
+    {
+      "file": "MYD14_late-811-1154-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2560468.167407156,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1467
+    },
+    {
+      "file": "MYD14_late-818-1166-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 539759.5758606689,
+      "p_intersection_q": 539759.5758606689,
+      "q_intersection_p": 539759.5758606689,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1467
+    },
+    {
+      "file": "MYD14_late-833-1149-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2495637.9405776053,
+      "p_intersection_q": 2.9637163834195235e-08,
+      "q_intersection_p": 2.9637163834195235e-08,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1467
+    },
+    {
+      "file": "MYD14_late-844-1161-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 2610235.1816886277,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 1467
+    },
+    {
+      "file": "VNP14IMG_early-2020-3853-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 178160.8434054738,
+      "p_intersection_q": 178160.84340547383,
+      "q_intersection_p": 178160.84340547383,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 382
+    },
+    {
+      "file": "VNP14IMG_early-2051-3869-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 177775.3865198072,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 382
+    },
+    {
+      "file": "VNP14IMG_early-2076-3864-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 179084.11659489258,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 382
+    },
+    {
+      "file": "VNP14IMG_late-2020-3853-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": false,
+      "area_p": 178160.8434054738,
+      "p_intersection_q": 0.0,
+      "q_intersection_p": 0.0,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 423
+    },
+    {
+      "file": "VNP14IMG_late-2051-3869-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 177775.3865198072,
+      "p_intersection_q": 177775.38651980716,
+      "q_intersection_p": 177775.38651980716,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 423
+    },
+    {
+      "file": "VNP14IMG_late-2076-3864-pixel.wkb.gz",
+      "valid": true,
+      "p_within_q": true,
+      "area_p": 179084.11659489258,
+      "p_intersection_q": 179084.11659489258,
+      "q_intersection_p": 179084.11659489258,
+      "p_components": 1,
+      "q_components": 1,
+      "q_points": 423
+    }
+  ]
+}

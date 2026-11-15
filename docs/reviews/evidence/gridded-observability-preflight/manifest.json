@@ -1,0 +1,54 @@
+{
+  "scope": "documentary_preflight_only",
+  "remote_source_hashes_available": false,
+  "capture_method": "web_primary_documentation_then_structured_paraphrase",
+  "hash_scope": "local_saved_evidence_bytes_not_original_remote_document_bytes",
+  "science_data_downloaded_bytes": 0,
+  "files": {
+    "S1-source-note.json": {
+      "bytes": 773,
+      "sha256": "2dbe7b684e784959dfb87a22c9354c1153d35549c8fd287b6cd45bf97965626d"
+    },
+    "S2-source-note.json": {
+      "bytes": 986,
+      "sha256": "eeb51ab36ee595532e6f9b52801fae7aa1bcfcbd7628fdfb882bda375acc53d8"
+    },
+    "S3-source-note.json": {
+      "bytes": 995,
+      "sha256": "a1b92c390494c4be501d3bec023b53aea4993ff50f9efaf63dd127c7869a6f3e"
+    },
+    "S4-source-note.json": {
+      "bytes": 824,
+      "sha256": "abed07e994f8e282f005e4086b6ed889d6b4d6b5ae8956cc7e695e38980924fa"
+    },
+    "S5-source-note.json": {
+      "bytes": 918,
+      "sha256": "b29f228c630fab575805f911eb372dddd5741aef5482a2b39cbcdf05ce5addfe"
+    },
+    "S6-source-note.json": {
+      "bytes": 780,
+      "sha256": "7e55f60a174fb89c78d890b18f81feed9c4449e36bde2b3b38c3f5a8985bf5e3"
+    },
+    "S7-source-note.json": {
+      "bytes": 1325,
+      "sha256": "82f3665128e5505e51664e2f3cc87d294b9e98873c869bd0445a9c225d877eb7"
+    },
+    "S8-source-note.json": {
+      "bytes": 897,
+      "sha256": "5464aa0a2a0d0f6e705993697c6180832ff903acf4e1f24b05bb5c75b4be0671"
+    },
+    "access-notes.json": {
+      "bytes": 927,
+      "sha256": "b081b2b29e8bc9f4f4aa1631d315f55b8425b676407c0d92619f26bf55941b23"
+    },
+    "documented-schemas.json": {
+      "bytes": 2736,
+      "sha256": "8579071aff38cf7838e27fd89266534105315b26d09ca2664eae939ebb2c0732"
+    },
+    "result.json": {
+      "bytes": 1540,
+      "sha256": "7ca1362fc951c4af30b25d13e09ae43d49d33e76d2381bdedfe815e0f38e979d"
+    }
+  },
+  "local_plan_sha256": "d9eecf7407a4e5ff8b228ef398b0d846bc28893ae5120cc8a987a495b0eb98dc"
+}

@@ -1,0 +1,44 @@
+"""GEO-only isolated diagnostic. No grids, repairs, activity or QA reads."""
+import sys,json,gzip
+from pathlib import Path
+ROOT=Path.cwd();sys.path.insert(0,str(ROOT/'pipeline'))
+import numpy as np
+import shapely
+from shapely.geometry import box
+from shapely.validation import explain_validity
+from observation_mesh import build_scan_mesh
+from observation_mesh_validation import crop_columns,spacing_transitions,polygon_crosses_transition
+import observation_ownership_ledger as m
+OUT=m.OUT/'diagnostic';index=json.loads((m.GEO/'index.json').read_text());refs=json.loads((m.TEMP/'references.json').read_text())
+cx,cy=index['center_xy'];aoi=box(cx-25000,cy-25000,cx+25000,cy+25000)
+products={};report={'code_sha256':m.sha(__file__),'source_code_sha256':m.sha(m.__file__),'GEO_only':True,'grid_changed':False,'cases':{}}
+for geo,instrument in [('MYD03','MYD14'),('VNP03IMG','VNP14IMG')]:
+ item=index['cases']['2023_'+geo];rows=[]
+ for w in item['windows']:
+  path=m.GEO/w['npz'];assert m.sha(path)==w['sha256']
+  with np.load(path,allow_pickle=False) as data:
+   x,y,valid=data['x'],data['y'],data['valid'];left,right=crop_columns(x,y,[cx,cy],40000)
+   x,y,valid=x[:,left:right],y[:,left:right],valid[:,left:right]
+   mesh=build_scan_mesh(x,y,valid,item['rows_per_scan']);gaps=spacing_transitions(x,y,valid)[0] if geo=='VNP03IMG' else None
+   for p in mesh['polygons']:
+    r,c=p['row'],p['col']
+    if gaps is not None and polygon_crosses_transition(gaps,r,c):continue
+    if abs(x[r,c]-cx)>40000 or abs(y[r,c]-cy)>40000:continue
+    nr,nc=w['native_row_start']+r,w['native_col_start']+left+c
+    rows.append({'key':(nr,nc),'scan':w['native_scan'],'polygon':p['polygon'].intersection(aoi)})
+ products[instrument]=rows
+for priority in ['early','late']:
+ assignments={p:m.assign_ownership(rows,dict(enumerate(refs['cases']['2023'][p]['scan_reference_TAI93'])),priority) for p,rows in products.items()}
+ for instrument,selected in [('MYD14',[(818,1166),(844,1161),(811,1154),(833,1149)]),('VNP14IMG',[(2076,3864),(2051,3869),(2020,3853)])]:
+  own,_,union,summary=assignments[instrument];other=assignments['VNP14IMG' if instrument=='MYD14' else 'MYD14'][2]
+  key=instrument+'_'+priority
+  report['cases'][key]={'union_valid':union.is_valid,'other_valid':other.is_valid,'union_validity':explain_validity(union),'other_validity':explain_validity(other),'union_bbox':list(union.bounds),'other_bbox':list(other.bounds),'union_area_m2':union.area,'other_area_m2':other.area,'union_AOI_symmetric_difference_m2':union.symmetric_difference(aoi).area,'other_AOI_symmetric_difference_m2':other.symmetric_difference(aoi).area,'selected':[]}
+  for target in selected:
+   p=own[target];intersection=p.intersection(other);difference=p.difference(other)
+   record={'row':target[0],'col':target[1],'owner_valid':p.is_valid,'validity':explain_validity(p),'bbox':list(p.bounds),'area_m2':p.area,'relate_other':p.relate(other),'covered_by_other':p.covered_by(other),'within_other':p.within(other),'intersection_area_m2':intersection.area,'difference_area_m2':difference.area,'intersection_plus_difference_residual_m2':p.area-intersection.area-difference.area,'intersection_valid':intersection.is_valid,'difference_valid':difference.is_valid,'intersection_type':intersection.geom_type,'other_covers_representative_point':other.covers(p.representative_point())}
+   report['cases'][key]['selected'].append(record)
+   for name,geom in [('pixel',p),('other_union',other),('intersection',intersection),('difference',difference)]:
+    file=OUT/f'{key}-{target[0]}-{target[1]}-{name}.wkb.gz'
+    with file.open('wb') as f,gzip.GzipFile(filename='',mode='wb',fileobj=f,mtime=0) as z:z.write(geom.wkb)
+m.dump(OUT/'diagnostic.json',report)
+print(json.dumps(report))

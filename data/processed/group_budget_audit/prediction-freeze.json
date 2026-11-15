@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-15T07:26:39.626161+00:00",
+  "checkpoint_deadline_utc": "2026-11-15T07:34:05+00:00",
+  "all_identities_passed": true,
+  "identities": [
+    {
+      "regime": "08_forward",
+      "rows": 2592,
+      "B_max_abs": 0.0,
+      "G_max_abs": 0.0,
+      "model_unchanged": true
+    },
+    {
+      "regime": "08_backward",
+      "rows": 2592,
+      "B_max_abs": 0.0,
+      "G_max_abs": 0.0,
+      "model_unchanged": true
+    },
+    {
+      "regime": "16_forward",
+      "rows": 2592,
+      "B_max_abs": 0.0,
+      "G_max_abs": 0.0,
+      "model_unchanged": true
+    },
+    {
+      "regime": "16_backward",
+      "rows": 2592,
+      "B_max_abs": 0.0,
+      "G_max_abs": 0.0,
+      "model_unchanged": true
+    }
+  ],
+  "source_feature_sha256": "773575fd5d13f5747d84539271407dcbe1944afe9f38a2e09a6c140f4834feed",
+  "code_freeze_sha256": "d2c1198ba921a8702cb3a9e46a4568dd1f0669edd169c580198e8576d00b5398",
+  "predictions_sha256": "26b0ca7663284d2ca3cd15030d41cc182bdc409bdfc5ca3427ac87fb71a94509",
+  "no_targets_materialized": true,
+  "synthetic_solver_calls": 19,
+  "real_solver_calls": 960,
+  "total_solver_calls": 979,
+  "peak_RSS_bytes": 150638592,
+  "rows": 10368,
+  "group_count_checks": 960
+}

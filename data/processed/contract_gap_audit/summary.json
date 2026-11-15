@@ -1,0 +1,28 @@
+{
+  "status": "blocked-contract-domain-incompatibility",
+  "fits": 0,
+  "new_downloads": 0,
+  "model_scoring": false,
+  "independent_validation": false,
+  "observation_coverage": "unknown",
+  "causal_attribution": false,
+  "observed_assignment": "cell-centre",
+  "research_assignment": "cell-centre; different frozen legacy geography",
+  "gates": {
+    "observed_csv_hash_filters_series_exact": true,
+    "research_Cmaskedall_reproduces19_exact": true,
+    "observed_available_on_all3780_rows": false
+  },
+  "observed_source_end": "2025-12",
+  "domain_rows": 3780,
+  "unavailable_rows": 324,
+  "unavailable_calendar_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "reason": "Fixed19 panel includes months absent from observed source/publication; no zero fill, domain reduction, transformation quantities, or causal decomposition were performed."
+}

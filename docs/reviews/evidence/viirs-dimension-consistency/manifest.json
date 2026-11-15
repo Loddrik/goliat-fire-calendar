@@ -1,0 +1,65 @@
+{
+  "files": {
+    "2019-25m-records.csv": {
+      "bytes": 305,
+      "sha256": "0bf426851b86ba70eba335ae79c27be7af7f6c89c55d4235711f08c917ea5161"
+    },
+    "2019-25m-records.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "2019-75m-records.csv": {
+      "bytes": 305,
+      "sha256": "0bf426851b86ba70eba335ae79c27be7af7f6c89c55d4235711f08c917ea5161"
+    },
+    "2019-75m-records.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "2023-25m-records.csv": {
+      "bytes": 4846,
+      "sha256": "1389d423a2729f26d8c2664da3b00a3d1866dad0f6ae314bf7f525a04dafbe22"
+    },
+    "2023-25m-records.json": {
+      "bytes": 14162,
+      "sha256": "a8debe4d82dce0fa89dee87836ca8feeb44289a73513c4ceeff9c2f45d990f6c"
+    },
+    "2023-75m-records.csv": {
+      "bytes": 4846,
+      "sha256": "1389d423a2729f26d8c2664da3b00a3d1866dad0f6ae314bf7f525a04dafbe22"
+    },
+    "2023-75m-records.json": {
+      "bytes": 14162,
+      "sha256": "a8debe4d82dce0fa89dee87836ca8feeb44289a73513c4ceeff9c2f45d990f6c"
+    },
+    "2026-11-15-viirs-dimension-consistency-protocol.md.snapshot.txt": {
+      "bytes": 3249,
+      "sha256": "5f7d9d08dd705e134682ae868a3d3156dcedd6625e824690b139480677b48cfe"
+    },
+    "environment.json": {
+      "bytes": 169,
+      "sha256": "f20d239144d1defe62a18891e8141400ccfac74838fa4922845ce96236f1d6da"
+    },
+    "observation_mesh.py.snapshot.txt": {
+      "bytes": 7250,
+      "sha256": "31e207100bc9228870df201fe102c7c3c92ef754935cf02535d5bb0d0ff6550a"
+    },
+    "observation_mesh_validation.py.snapshot.txt": {
+      "bytes": 21548,
+      "sha256": "7a10120aff8a3d86e028c68dc9470866371d58eb06ac13379ec94eddcb833fac"
+    },
+    "source-contract.json": {
+      "bytes": 3147,
+      "sha256": "2aa8b0f4072f3c4cb421a71c094d4f29876596619ff696cec51733b82859c913"
+    },
+    "summary.json": {
+      "bytes": 42596,
+      "sha256": "118e6ba3e8bed477d1f62c6d644c2f1f8ec7b1733e8f0dd8f5bf086be48adf2c"
+    },
+    "viirs_dimension_consistency.py.snapshot.txt": {
+      "bytes": 17834,
+      "sha256": "939b5bb3ab4660bc47838d1c4e79995e23836836f217c524c20c0315bebbc301"
+    }
+  },
+  "post_execution_exports": "Flat CSV mirrors of JSON records and environment/source-contract metadata; geometry and metrics unchanged"
+}

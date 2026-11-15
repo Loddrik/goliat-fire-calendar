@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-11-15T07:27:55.259879+00:00",
+  "code_freeze_sha256": "d2c1198ba921a8702cb3a9e46a4568dd1f0669edd169c580198e8576d00b5398",
+  "prediction_freeze_sha256": "62b75586ff24354cefa9025c97ebb4b5a587d0296d1b0f43dc91ddad9da2b0c4",
+  "protected_unchanged": true,
+  "output_sha256": {
+    "decision_diagnostics.csv": "e1f478cb23ed75948b81469c78a6c0562810af210b4b77faba516134fa6ddebd",
+    "summary.json": "6e2e9db1424f808a8c1c9831a5f7ba94624de40a5d85363d47e911e16529af0c",
+    "allocation_checks.csv": "5de2fe43c53f80f7fb2bfb9176dbc1190e4ebf4561a2e272c941f6207dbc50df",
+    "predictions-before-labels.parquet": "26b0ca7663284d2ca3cd15030d41cc182bdc409bdfc5ca3427ac87fb71a94509",
+    "primary_contrasts.csv": "a522a76fee0a034b3af8696da7fb5817f755ddb439d299ff024c866b99aecb4c",
+    "features-only.parquet": "773575fd5d13f5747d84539271407dcbe1944afe9f38a2e09a6c140f4834feed",
+    "evaluated_predictions.parquet": "b5e7d7aebd23d47c113a4811c242fde456f97b74820b6e32193d6253bc4741a4",
+    "prediction-freeze.json": "62b75586ff24354cefa9025c97ebb4b5a587d0296d1b0f43dc91ddad9da2b0c4",
+    "partitions.json": "d338eef2fab7e5d0f8da871eecda86dfb4b48764bac7b0f4c49a264a0f061f42",
+    "per_CUT.csv": "b1b909770d279d640250867cd66ebea3615f95551224dca098494cff66056266",
+    "code-freeze.json": "d2c1198ba921a8702cb3a9e46a4568dd1f0669edd169c580198e8576d00b5398"
+  },
+  "total_solver_calls": 979,
+  "physical_output_bytes_before_manifest": 904424,
+  "peak_RSS_bytes": 159571968,
+  "RSS_units": "bytes (darwin native; Linux KiB converted)",
+  "cap_end_utc": "2026-11-15T08:04:05+00:00"
+}

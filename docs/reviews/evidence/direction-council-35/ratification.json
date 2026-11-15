@@ -1,0 +1,45 @@
+{
+  "plan_sha256": "8018047c92c9b2a80c699e0bbdc2d4d1f738fe65d411ce2021c6506efd1786fb",
+  "sequence_ratified_by_all_six": true,
+  "priority_unanimous": false,
+  "parallelism_unanimous": false,
+  "root_resource_decision": "A+C first; no B parallel; D checkpoint satisfied; later B requires own decision/protocol/review",
+  "ratifications": {
+    "statistics": {
+      "accepted_sequence": true,
+      "retained_disagreement": false,
+      "vote_file_sha256": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4"
+    },
+    "engineering": {
+      "accepted_sequence": true,
+      "retained_disagreement": false,
+      "vote_file_sha256": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea"
+    },
+    "observation": {
+      "accepted_sequence": true,
+      "retained_disagreement": true,
+      "vote_file_sha256": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01"
+    },
+    "identification-adversary": {
+      "accepted_sequence": true,
+      "retained_disagreement": false,
+      "vote_file_sha256": "84656bef7d6fe88c9a18e7e7468d47460dd76294d5437a5ac336cccc8d676158"
+    },
+    "measurement-adversary": {
+      "accepted_sequence": true,
+      "retained_disagreement": true,
+      "vote_file_sha256": "bc245c87f6afdd423d61add877656c8fc52ab2a7e9821a4f477e3b379b52d6da"
+    },
+    "feasibility-adversary": {
+      "accepted_sequence": true,
+      "retained_disagreement": false,
+      "vote_file_sha256": "0ef5111edcaa828bb1dc8f714127e2db8fdb7ccdfed59d85a5e7fefc10326209"
+    }
+  },
+  "cap_utc": {
+    "start": "2026-11-15T07:19:05Z",
+    "identity_checkpoint": "2026-11-15T07:34:05Z",
+    "end": "2026-11-15T08:04:05Z"
+  },
+  "protocol_sha256": "a1107de9e9c1256f8e6a502d868e9d536fca5a624d50257d514750e7a73f778c"
+}

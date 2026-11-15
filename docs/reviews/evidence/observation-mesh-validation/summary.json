@@ -1,0 +1,851 @@
+{
+  "scope": "Nominal CORE geometry benchmark only; no activity or atmospheric QA",
+  "started_utc": "2026-11-15T02:39:45.232981+00:00",
+  "completed_utc": "2026-11-15T02:40:16.310666+00:00",
+  "code_sha256": "7a10120aff8a3d86e028c68dc9470866371d58eb06ac13379ec94eddcb833fac",
+  "mesh_helper_sha256": "31e207100bc9228870df201fe102c7c3c92ef754935cf02535d5bb0d0ff6550a",
+  "protocol_sha256": {
+    "2026-11-15-observation-mesh-validation-protocol.md": "b784720783497a8219eba438b6e624ff77a60b971f5f968f9a53819ac976f478",
+    "2026-11-15-observation-mesh-validation-clarification.md": "816b610f8cf4b1c29819932027d8a9d5fb0fb46e51c03418b701d5312375fce8"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0"
+  },
+  "metric_population": "Accepted CORE polygons with centers inside each halo; diagnostic strata do not extend outside these ROI subsets",
+  "dimensional_primary_metric": "UTM sides/area vs nominal formula; geodesic measures separately check projection",
+  "gate1_passed": false,
+  "physical_footprints_verified": false,
+  "pixel_exposure_times_verified": false,
+  "scientific_eligibility_certified": false,
+  "nominal_intersections": {
+    "2019": {
+      "area_m2": 2030811869.5847123,
+      "not_observed_or_clear_sky_coverage": true,
+      "bounded_by_each_union": true,
+      "sensitivities": [
+        {
+          "dx_m": 75,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2030806610.0950263,
+          "change_from_unshifted_m2": -5259.489686012268,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": -75,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2030817155.1321392,
+          "change_from_unshifted_m2": 5285.547426939011,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": 75,
+          "nominal_intersection_m2": 2030987471.8788157,
+          "change_from_unshifted_m2": 175602.29410338402,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": -75,
+          "nominal_intersection_m2": 2030623563.2202327,
+          "change_from_unshifted_m2": -188306.36447954178,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 150,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2030801376.7997818,
+          "change_from_unshifted_m2": -10492.784930467606,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": -150,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2030822464.7688417,
+          "change_from_unshifted_m2": 10595.184129476547,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": 150,
+          "nominal_intersection_m2": 2030951231.2085073,
+          "change_from_unshifted_m2": 139361.6237950325,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": -150,
+          "nominal_intersection_m2": 2030434814.6253865,
+          "change_from_unshifted_m2": -377054.9593257904,
+          "assumed_perturbation_not_confidence_interval": true
+        }
+      ]
+    },
+    "2023": {
+      "area_m2": 2498580100.0486503,
+      "not_observed_or_clear_sky_coverage": true,
+      "bounded_by_each_union": true,
+      "sensitivities": [
+        {
+          "dx_m": 75,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2498592573.229447,
+          "change_from_unshifted_m2": 12473.18079662323,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": -75,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2498567558.33139,
+          "change_from_unshifted_m2": -12541.717260360718,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": 75,
+          "nominal_intersection_m2": 2498580100.0486503,
+          "change_from_unshifted_m2": 0.0,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": -75,
+          "nominal_intersection_m2": 2498580100.0486503,
+          "change_from_unshifted_m2": 0.0,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 150,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2498604977.986344,
+          "change_from_unshifted_m2": 24877.937693595886,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": -150,
+          "dy_m": 0,
+          "nominal_intersection_m2": 2498554949.904365,
+          "change_from_unshifted_m2": -25150.144285202026,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": 150,
+          "nominal_intersection_m2": 2498580100.0486503,
+          "change_from_unshifted_m2": 0.0,
+          "assumed_perturbation_not_confidence_interval": true
+        },
+        {
+          "dx_m": 0,
+          "dy_m": -150,
+          "nominal_intersection_m2": 2498580100.0486503,
+          "change_from_unshifted_m2": 0.0,
+          "assumed_perturbation_not_confidence_interval": true
+        }
+      ]
+    }
+  },
+  "products": {
+    "2019_MYD03": {
+      "input_sha256": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c",
+      "halo_stability": {
+        "symmetric_difference_m2": 0.0,
+        "normalized_by_AOI": 0.0,
+        "threshold": 1e-06,
+        "passed": true
+      },
+      "available_engineering_checks_passed": true,
+      "nominal_geometry_consistency_passed": true,
+      "VIIRS_detector_dimensions_verified": null,
+      "halos": {
+        "10000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 1242,
+            "nominal_core_polygon": 4248
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 3577,
+            "geometry_edge_unresolved": 891
+          },
+          "window_geometry_unresolved_fraction": 0.22622950819672127,
+          "measured_CORE_polygons": 3577,
+          "spacing_transition_diagnostics": {},
+          "engineering_gates": {
+            "projection_passed": true,
+            "modis_scan_relative_error_passed": true,
+            "modis_track_relative_error_passed": true,
+            "modis_area_relative_error_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2098249420.6415632,
+          "area_union_clipped_m2": 2098249420.6415632,
+          "overlap_excess_clipped_m2": 0.0,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 1090.6200895775391,
+              "p95": 1121.7416105045406,
+              "max": 1154.3245093049607
+            },
+            "track_length_m": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 1051.7521599550505,
+              "p95": 1064.5218798427707,
+              "max": 1068.5808463447152
+            },
+            "polygon_area_UTM_m2": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 1147087.1453705677,
+              "p95": 1193796.5934380293,
+              "max": 1231200.4065920026
+            },
+            "projection_scan_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.00021221832306372868,
+              "p95": 0.00039448709095233345,
+              "max": 0.0004164561536159628
+            },
+            "projection_track_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.00021222024732070466,
+              "p95": 0.0003944887312798961,
+              "max": 0.0004164577865279906
+            },
+            "projection_area_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.0004244795528414169,
+              "p95": 0.0007891273072666127,
+              "max": 0.0008330831682008544
+            },
+            "modis_scan_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.01907311651711252,
+              "p95": 0.024354646811998566,
+              "max": 0.049109582118672
+            },
+            "modis_track_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.017919052886358866,
+              "p95": 0.01812208420759607,
+              "max": 0.018671792402929155
+            },
+            "modis_area_relative_error": {
+              "n": 3577,
+              "nonfinite": 0,
+              "p50": 0.03736976487428545,
+              "p95": 0.042467738364937,
+              "max": 0.06734311933028203
+            }
+          }
+        },
+        "15000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 1564,
+            "nominal_core_polygon": 5456
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 4672,
+            "geometry_edge_unresolved": 1170
+          },
+          "window_geometry_unresolved_fraction": 0.22279202279202281,
+          "measured_CORE_polygons": 4672,
+          "spacing_transition_diagnostics": {},
+          "engineering_gates": {
+            "projection_passed": true,
+            "modis_scan_relative_error_passed": true,
+            "modis_track_relative_error_passed": true,
+            "modis_area_relative_error_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2098249420.6415632,
+          "area_union_clipped_m2": 2098249420.6415632,
+          "overlap_excess_clipped_m2": 0.0,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 1090.4214294081175,
+              "p95": 1127.3966064151534,
+              "max": 1155.725107733189
+            },
+            "track_length_m": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 1051.6942097177866,
+              "p95": 1066.5925417658248,
+              "max": 1071.1661271867974
+            },
+            "polygon_area_UTM_m2": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 1146802.9721502964,
+              "p95": 1201884.5014426648,
+              "max": 1236735.6498208118
+            },
+            "projection_scan_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.00021225200261643096,
+              "p95": 0.00042358076713417954,
+              "max": 0.00044850621959580117
+            },
+            "projection_track_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.00021225462923357696,
+              "p95": 0.0004235823952729034,
+              "max": 0.0004485077104035007
+            },
+            "projection_area_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.00042454826035431825,
+              "p95": 0.0008473385758092532,
+              "max": 0.0008972107315377009
+            },
+            "modis_scan_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.019144547198179707,
+              "p95": 0.025196020527908522,
+              "max": 0.049109582118672
+            },
+            "modis_track_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.01791443642961499,
+              "p95": 0.01812841104584213,
+              "max": 0.018671792402929155
+            },
+            "modis_area_relative_error": {
+              "n": 4672,
+              "nonfinite": 0,
+              "p50": 0.037442005822768354,
+              "p95": 0.043323235359161584,
+              "max": 0.06734311933028203
+            }
+          }
+        }
+      }
+    },
+    "2019_VNP03IMG": {
+      "input_sha256": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7",
+      "halo_stability": {
+        "symmetric_difference_m2": 0.0,
+        "normalized_by_AOI": 0.0,
+        "threshold": 1e-06,
+        "passed": true
+      },
+      "available_engineering_checks_passed": true,
+      "nominal_geometry_consistency_passed": false,
+      "VIIRS_detector_dimensions_verified": false,
+      "halos": {
+        "10000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 3016,
+            "nominal_core_polygon": 37560
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 31173,
+            "geometry_edge_unresolved": 2072
+          },
+          "window_geometry_unresolved_fraction": 0.07432965299684546,
+          "measured_CORE_polygons": 31173,
+          "spacing_transition_diagnostics": {
+            "comparable_adjacent_gaps": 40064,
+            "flagged_adjacent_gap_ratios": 0,
+            "flagged_gap_links": 0
+          },
+          "engineering_gates": {
+            "projection_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2412819221.8048134,
+          "area_union_clipped_m2": 2412819221.804815,
+          "overlap_excess_clipped_m2": -1.430511474609375e-06,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 399.3405078426178,
+              "p95": 405.28036305895506,
+              "max": 417.0294308418372
+            },
+            "track_length_m": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 379.22253355064544,
+              "p95": 381.3062476834139,
+              "max": 382.1873848513341
+            },
+            "polygon_area_UTM_m2": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 151446.41943001267,
+              "p95": 154440.97256134043,
+              "max": 159137.89672314705
+            },
+            "projection_scan_relative_error": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 0.00021045680455289428,
+              "p95": 0.00039468927098136315,
+              "max": 0.0004165671674702942
+            },
+            "projection_track_relative_error": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 0.00021045701430599806,
+              "p95": 0.0003946893509419347,
+              "max": 0.0004165676560294873
+            },
+            "projection_area_relative_error": {
+              "n": 31173,
+              "nonfinite": 0,
+              "p50": 0.0004209574445375175,
+              "p95": 0.0007895339477811624,
+              "max": 0.0008333075245647859
+            }
+          }
+        },
+        "15000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 3776,
+            "nominal_core_polygon": 48000
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 40707,
+            "geometry_edge_unresolved": 2715
+          },
+          "window_geometry_unresolved_fraction": 0.07292954264524099,
+          "measured_CORE_polygons": 40707,
+          "spacing_transition_diagnostics": {
+            "comparable_adjacent_gaps": 51200,
+            "flagged_adjacent_gap_ratios": 0,
+            "flagged_gap_links": 0
+          },
+          "engineering_gates": {
+            "projection_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2412819221.8048134,
+          "area_union_clipped_m2": 2412819221.804815,
+          "overlap_excess_clipped_m2": -1.430511474609375e-06,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 399.3464702983773,
+              "p95": 406.21229474334336,
+              "max": 418.0133837070213
+            },
+            "track_length_m": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 379.21218042436954,
+              "p95": 381.65024685629203,
+              "max": 382.78385388132097
+            },
+            "polygon_area_UTM_m2": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 151447.75617054832,
+              "p95": 154962.4616914325,
+              "max": 159547.74779915126
+            },
+            "projection_scan_relative_error": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 0.00021136802793564335,
+              "p95": 0.0004232267446989234,
+              "max": 0.00044872436099829827
+            },
+            "projection_track_relative_error": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 0.00021136834397395,
+              "p95": 0.00042322713313851506,
+              "max": 0.0004487246868756234
+            },
+            "projection_area_relative_error": {
+              "n": 40707,
+              "nonfinite": 0,
+              "p50": 0.00042278037485599107,
+              "p95": 0.0008466323177868772,
+              "max": 0.0008976497668498062
+            }
+          }
+        }
+      }
+    },
+    "2023_MYD03": {
+      "input_sha256": "dc25dc418fb7a8a7eeafda8a4c9d91f1fcd4e74036ba04bcad6bb7451b394034",
+      "halo_stability": {
+        "symmetric_difference_m2": 2.488971622393579e-07,
+        "normalized_by_AOI": 9.955886489574316e-17,
+        "threshold": 1e-06,
+        "passed": true
+      },
+      "available_engineering_checks_passed": true,
+      "nominal_geometry_consistency_passed": true,
+      "VIIRS_detector_dimensions_verified": null,
+      "halos": {
+        "10000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 830,
+            "nominal_core_polygon": 2600
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 2049,
+            "geometry_edge_unresolved": 510
+          },
+          "window_geometry_unresolved_fraction": 0.2419825072886297,
+          "measured_CORE_polygons": 2049,
+          "spacing_transition_diagnostics": {},
+          "engineering_gates": {
+            "projection_passed": true,
+            "modis_scan_relative_error_passed": true,
+            "modis_track_relative_error_passed": true,
+            "modis_area_relative_error_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2732019761.108063,
+          "area_union_clipped_m2": 2500000000.0,
+          "overlap_excess_clipped_m2": 232019761.10806322,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 1912.5336769878124,
+              "p95": 2027.466957886464,
+              "max": 2108.635452666997
+            },
+            "track_length_m": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 1363.5469850961022,
+              "p95": 1395.4743589823995,
+              "max": 1403.439312366276
+            },
+            "polygon_area_UTM_m2": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 2606610.902874651,
+              "p95": 2823840.674453956,
+              "max": 2951883.199438751
+            },
+            "projection_scan_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.00021530030540439782,
+              "p95": 0.00039529714956860747,
+              "max": 0.00041666019921082764
+            },
+            "projection_track_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.0002153039320058614,
+              "p95": 0.00039530037935633363,
+              "max": 0.00041666333553580515
+            },
+            "projection_area_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.0004306409017598156,
+              "p95": 0.0007907453997288093,
+              "max": 0.0008334886190313195
+            },
+            "modis_scan_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.018505842708125275,
+              "p95": 0.030807047642480382,
+              "max": 0.09588744003875371
+            },
+            "modis_track_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.014775821021536517,
+              "p95": 0.015053959395318594,
+              "max": 0.02014555896208381
+            },
+            "modis_area_relative_error": {
+              "n": 2049,
+              "nonfinite": 0,
+              "p50": 0.03347910941257881,
+              "p95": 0.044853227308038736,
+              "max": 0.11154048768220504
+            }
+          }
+        },
+        "15000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 1018,
+            "nominal_core_polygon": 3272
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 2674,
+            "geometry_edge_unresolved": 668
+          },
+          "window_geometry_unresolved_fraction": 0.23729603729603732,
+          "measured_CORE_polygons": 2674,
+          "spacing_transition_diagnostics": {},
+          "engineering_gates": {
+            "projection_passed": true,
+            "modis_scan_relative_error_passed": true,
+            "modis_track_relative_error_passed": true,
+            "modis_area_relative_error_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2732019761.108063,
+          "area_union_clipped_m2": 2500000000.0,
+          "overlap_excess_clipped_m2": 232019761.10806322,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 1912.3332662001303,
+              "p95": 2046.8978273523546,
+              "max": 2140.5081687783686
+            },
+            "track_length_m": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 1362.2805910361985,
+              "p95": 1399.9197386227013,
+              "max": 1408.6418753342896
+            },
+            "polygon_area_UTM_m2": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 2605274.714931543,
+              "p95": 2860955.9043711787,
+              "max": 2995004.73978093
+            },
+            "projection_scan_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.00021622507535701274,
+              "p95": 0.0004243361557569214,
+              "max": 0.0004484916603813005
+            },
+            "projection_track_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.00021622861175107921,
+              "p95": 0.00042433900197595963,
+              "max": 0.0004484948161649349
+            },
+            "projection_area_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.0004324906016293095,
+              "p95": 0.000848846593828878,
+              "max": 0.00089717926712507
+            },
+            "modis_scan_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.018858166695138956,
+              "p95": 0.03249568645460564,
+              "max": 0.09588744003875371
+            },
+            "modis_track_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.01477577229785998,
+              "p95": 0.01508812851050273,
+              "max": 0.02014555896208381
+            },
+            "modis_area_relative_error": {
+              "n": 2674,
+              "nonfinite": 0,
+              "p50": 0.03382720376256776,
+              "p95": 0.04695209193838964,
+              "max": 0.11154048768220504
+            }
+          }
+        }
+      }
+    },
+    "2023_VNP03IMG": {
+      "input_sha256": "cf39c61441093d62420283fd1182eef28b4e5598cd9775a0e4867c1537cf959d",
+      "halo_stability": {
+        "symmetric_difference_m2": 0.0,
+        "normalized_by_AOI": 0.0,
+        "threshold": 1e-06,
+        "passed": true
+      },
+      "available_engineering_checks_passed": true,
+      "nominal_geometry_consistency_passed": false,
+      "VIIRS_detector_dimensions_verified": false,
+      "halos": {
+        "10000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 2780,
+            "nominal_core_polygon": 34980
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 28652,
+            "geometry_edge_unresolved": 1944
+          },
+          "window_geometry_unresolved_fraction": 0.0736228813559322,
+          "measured_CORE_polygons": 28652,
+          "spacing_transition_diagnostics": {
+            "comparable_adjacent_gaps": 37312,
+            "flagged_adjacent_gap_ratios": 0,
+            "flagged_gap_links": 0
+          },
+          "engineering_gates": {
+            "projection_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2513630557.6359205,
+          "area_union_clipped_m2": 2498580100.0486507,
+          "overlap_excess_clipped_m2": 15050457.587269783,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 434.5388976696836,
+              "p95": 448.9079307407473,
+              "max": 477.2581839455297
+            },
+            "track_length_m": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 394.7483744320094,
+              "p95": 399.5230153672776,
+              "max": 401.2009569896835
+            },
+            "polygon_area_UTM_m2": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 171578.5897280988,
+              "p95": 179104.93188189087,
+              "max": 190981.787159329
+            },
+            "projection_scan_relative_error": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 0.0002120514406641627,
+              "p95": 0.0003950395134940109,
+              "max": 0.0004166227630610919
+            },
+            "projection_track_relative_error": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 0.00021205175919858377,
+              "p95": 0.00039503980282803433,
+              "max": 0.0004166231284901123
+            },
+            "projection_area_relative_error": {
+              "n": 28652,
+              "nonfinite": 0,
+              "p50": 0.0004241474254783606,
+              "p95": 0.0007902346677522985,
+              "max": 0.0008334187639944535
+            }
+          }
+        },
+        "15000": {
+          "window_state_counts": {
+            "geometry_edge_unresolved": 3530,
+            "nominal_core_polygon": 44310
+          },
+          "known_centers_inside_halo_state_counts": {
+            "nominal_core_polygon": 37398,
+            "geometry_edge_unresolved": 2486
+          },
+          "window_geometry_unresolved_fraction": 0.07378762541806017,
+          "measured_CORE_polygons": 37398,
+          "spacing_transition_diagnostics": {
+            "comparable_adjacent_gaps": 47264,
+            "flagged_adjacent_gap_ratios": 0,
+            "flagged_gap_links": 0
+          },
+          "engineering_gates": {
+            "projection_passed": true
+          },
+          "area_sum_individually_clipped_m2": 2513630557.6359205,
+          "area_union_clipped_m2": 2498580100.0486507,
+          "overlap_excess_clipped_m2": 15050457.587269783,
+          "union_idempotent": true,
+          "metric_quantiles": {
+            "scan_length_m": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 434.52479676979476,
+              "p95": 450.8631165079634,
+              "max": 477.2581839455297
+            },
+            "track_length_m": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 394.731623318218,
+              "p95": 400.25457093186026,
+              "max": 402.06204427736475
+            },
+            "polygon_area_UTM_m2": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 171553.51746202813,
+              "p95": 180255.76738460254,
+              "max": 190981.787159329
+            },
+            "projection_scan_relative_error": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 0.00021296879967047655,
+              "p95": 0.00042362203212704675,
+              "max": 0.00044866655084074836
+            },
+            "projection_track_relative_error": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 0.0002129691039706172,
+              "p95": 0.0004236222109496146,
+              "max": 0.00044866637107721097
+            },
+            "projection_area_relative_error": {
+              "n": 37398,
+              "nonfinite": 0,
+              "p50": 0.0004259826460130123,
+              "p95": 0.0008474230228319834,
+              "max": 0.0008975339089927203
+            }
+          }
+        }
+      }
+    }
+  },
+  "prior_input_protection": {
+    "2019_MYD03": {
+      "GEO_hash_unchanged": true,
+      "source_record_hash_unchanged": true
+    },
+    "2019_VNP03IMG": {
+      "GEO_hash_unchanged": true,
+      "source_record_hash_unchanged": true
+    },
+    "2023_MYD03": {
+      "GEO_hash_unchanged": true,
+      "source_record_hash_unchanged": true
+    },
+    "2023_VNP03IMG": {
+      "GEO_hash_unchanged": true,
+      "source_record_hash_unchanged": true
+    }
+  }
+}

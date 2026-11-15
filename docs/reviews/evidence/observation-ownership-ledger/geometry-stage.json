@@ -1,0 +1,219 @@
+{
+  "stage": "geometry persisted before FIRE masks/QA",
+  "code_sha256": "058a60986c28efe3b96fb10dbb2fb872e87b2f460e477c65077f784b515ff2d5",
+  "protocol_sha256": "139bf266f38d91df6c263c5513e75079e2ad85f85ee64fbfb69747062a80f116",
+  "GEO_index_sha256": "6cbcf6b06506c22330045119378639eca3f392b8125a72d36fb350dab4421cfb",
+  "references_sha256": "adeca520d3b1d17e4588d57bb8e092f838b36cc68adeb48915e6e0093591795a",
+  "center_xy": [
+    722459.8026976171,
+    5902205.764776958
+  ],
+  "cases": {
+    "2019": {
+      "MYD14_early": {
+        "original_union_m2": 2098249420.6415627,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2098249420.641563,
+        "union_conservation_residual_m2": -2.384185791015625e-07,
+        "scan_priority": [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2098249420.6415632,
+        "sum_owned_m2": 2098249420.6415632,
+        "common_nominal_union_m2": 2030811869.5847125,
+        "pixels": 4672,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "VNP14IMG_early": {
+        "original_union_m2": 2412819221.8048124,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2412819221.8048124,
+        "union_conservation_residual_m2": 0.0,
+        "scan_priority": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2412819221.8048134,
+        "sum_owned_m2": 2412819221.8048134,
+        "common_nominal_union_m2": 2030811869.5847123,
+        "pixels": 40707,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "MYD14_late": {
+        "original_union_m2": 2098249420.6415627,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2098249420.641563,
+        "union_conservation_residual_m2": -2.384185791015625e-07,
+        "scan_priority": [
+          99,
+          98,
+          97,
+          96,
+          95,
+          94,
+          93,
+          92,
+          91,
+          90
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2098249420.6415632,
+        "sum_owned_m2": 2098249420.6415632,
+        "common_nominal_union_m2": 2030811869.5847125,
+        "pixels": 4672,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "VNP14IMG_late": {
+        "original_union_m2": 2412819221.8048124,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2412819221.8048124,
+        "union_conservation_residual_m2": 0.0,
+        "scan_priority": [
+          34,
+          33,
+          32,
+          31,
+          30,
+          29,
+          28,
+          27,
+          26
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2412819221.8048134,
+        "sum_owned_m2": 2412819221.8048134,
+        "common_nominal_union_m2": 2030811869.5847123,
+        "pixels": 40707,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      }
+    },
+    "2023": {
+      "MYD14_early": {
+        "original_union_m2": 2500000000.0000014,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2499999999.9999876,
+        "union_conservation_residual_m2": 1.3828277587890625e-05,
+        "scan_priority": [
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2732019761.108063,
+        "sum_owned_m2": 2500000000.0000024,
+        "common_nominal_union_m2": 2498580100.0486374,
+        "pixels": 2674,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "VNP14IMG_early": {
+        "original_union_m2": 2498580100.048651,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2498580100.0486503,
+        "union_conservation_residual_m2": 9.5367431640625e-07,
+        "scan_priority": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2513630557.6359205,
+        "sum_owned_m2": 2498580100.0486507,
+        "common_nominal_union_m2": 2498580100.0486374,
+        "pixels": 37398,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "MYD14_late": {
+        "original_union_m2": 2500000000.0000014,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2499999999.999987,
+        "union_conservation_residual_m2": 1.430511474609375e-05,
+        "scan_priority": [
+          87,
+          86,
+          85,
+          84,
+          83,
+          82,
+          81,
+          80,
+          79,
+          78
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2732019761.108063,
+        "sum_owned_m2": 2500000000.000002,
+        "common_nominal_union_m2": 2498580100.048638,
+        "pixels": 2674,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      },
+      "VNP14IMG_late": {
+        "original_union_m2": 2498580100.048651,
+        "unknown_time_union_m2": 0.0,
+        "identified_union_m2": 2498580100.0486503,
+        "union_conservation_residual_m2": 9.5367431640625e-07,
+        "scan_priority": [
+          68,
+          67,
+          66,
+          65,
+          64,
+          63,
+          62,
+          61,
+          60
+        ],
+        "unknown_reference_scans": [],
+        "sum_pixel_AOI_m2": 2513630557.6359205,
+        "sum_owned_m2": 2498580100.048651,
+        "common_nominal_union_m2": 2498580100.048638,
+        "pixels": 37398,
+        "nominal_area_does_not_locate_subpixel_fire": true
+      }
+    }
+  },
+  "tables": {
+    "2019-MYD14-early-geometry.csv.gz": "f9317803c8b8a3f12727e3cc22de98ce31fbce9b56c6a974d78d64b3b5a9d9ed",
+    "2019-VNP14IMG-early-geometry.csv.gz": "0fdc5c502aceba3c337ca3315562e438389f50ce4e48af30a282f696ef6f6e05",
+    "2019-MYD14-late-geometry.csv.gz": "83df31b6fdfd4214063940934addeed892296e9a7cc7a1cad97fef98deac21f8",
+    "2019-VNP14IMG-late-geometry.csv.gz": "3c23061a414f02bc2cf29c5dc60c95a51deccfc5bec5529d4ed4990e611097b9",
+    "2019-MYD14-geometry-states.csv.gz": "7dab378cecac8ea9cd7840dd9ba57334914b696b9d0a1ea3282267018ec2edb3",
+    "2019-VNP14IMG-geometry-states.csv.gz": "d1f2f4f6adec3bb3213fe367433d8e442b853081d4acfa9b98aa31bfc5792ba4",
+    "2023-MYD14-early-geometry.csv.gz": "5edb0c8bb46e02ebea5f7b49ff72572c591a8e0709fbf09734a70dbd3ca264ee",
+    "2023-VNP14IMG-early-geometry.csv.gz": "aee2f5cd6f659bb9c3e4fa7cf5b7fe77279403899ad4a70c1ffa719cf95d4faa",
+    "2023-MYD14-late-geometry.csv.gz": "52308fc83ebde46a3f9b84b3e2a3ac9e56e5678e7d1e5748a27dd9d830145fb9",
+    "2023-VNP14IMG-late-geometry.csv.gz": "70b37d4b42e94152d63b2cbefe336cb62485e02a8637ad85a8449487f967154f",
+    "2023-MYD14-geometry-states.csv.gz": "bac65c70fcdafb6ad78afcad1de7662bc6681b6da8f8d3fb07f41ead3fa1c221",
+    "2023-VNP14IMG-geometry-states.csv.gz": "3b65500588b04358942db5e8bacc5d4798975fcd9656a80b56a03c07a8748a3a"
+  }
+}

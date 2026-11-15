@@ -1,0 +1,34 @@
+[
+  {
+    "regime": "08_forward",
+    "variant": "real",
+    "same_parameters_after_forbidden_synthetic_NaN_or_999999": true,
+    "forbidden_rows": 3600,
+    "actual_forbidden_Y_loaded": false,
+    "prediction_function_exact_feature_whitelist": true
+  },
+  {
+    "regime": "08_backward",
+    "variant": "real",
+    "same_parameters_after_forbidden_synthetic_NaN_or_999999": true,
+    "forbidden_rows": 3600,
+    "actual_forbidden_Y_loaded": false,
+    "prediction_function_exact_feature_whitelist": true
+  },
+  {
+    "regime": "16_forward",
+    "variant": "real",
+    "same_parameters_after_forbidden_synthetic_NaN_or_999999": true,
+    "forbidden_rows": 4176,
+    "actual_forbidden_Y_loaded": false,
+    "prediction_function_exact_feature_whitelist": true
+  },
+  {
+    "regime": "16_backward",
+    "variant": "real",
+    "same_parameters_after_forbidden_synthetic_NaN_or_999999": true,
+    "forbidden_rows": 4176,
+    "actual_forbidden_Y_loaded": false,
+    "prediction_function_exact_feature_whitelist": true
+  }
+]

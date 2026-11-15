@@ -1,0 +1,41 @@
+{
+  "AOI_simple_nonzero_exact": true,
+  "QA_read": false,
+  "all_input_quads": 101038,
+  "all_passed": true,
+  "candidate_indexing_started": false,
+  "completed_utc": "2026-11-15T06:26:46.607795+00:00",
+  "groups": {
+    "2019_MYD14": {
+      "all_quads_simple_nonzero": true,
+      "constructed_quads": 5456,
+      "indexed_universe_quads": 4672,
+      "native_ids_unique": true,
+      "world_bit_inverse_and_rational_translation_passed": true
+    },
+    "2019_VNP14IMG": {
+      "all_quads_simple_nonzero": true,
+      "constructed_quads": 48000,
+      "indexed_universe_quads": 40707,
+      "native_ids_unique": true,
+      "world_bit_inverse_and_rational_translation_passed": true
+    },
+    "2023_MYD14": {
+      "all_quads_simple_nonzero": true,
+      "constructed_quads": 3272,
+      "indexed_universe_quads": 2674,
+      "native_ids_unique": true,
+      "world_bit_inverse_and_rational_translation_passed": true
+    },
+    "2023_VNP14IMG": {
+      "all_quads_simple_nonzero": true,
+      "constructed_quads": 44310,
+      "indexed_universe_quads": 37398,
+      "native_ids_unique": true,
+      "world_bit_inverse_and_rational_translation_passed": true
+    }
+  },
+  "scale_exponent": 33,
+  "scale_power_of_two": 8589934592,
+  "total_input_tuples": 505195
+}

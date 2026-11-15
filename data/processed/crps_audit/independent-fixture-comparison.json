@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-11-15T08:53:32.189284+00:00",
+  "independent_fixture_sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5",
+  "fixture_source": "docs/reviews/evidence/crps-independent-review/synthetic-preflight/fixtures.json",
+  "producer_code_unchanged": true,
+  "all_passed": true,
+  "only_synthetic_y": true,
+  "rows": [
+    {
+      "name": "delta_zero",
+      "producer_score": 0.0,
+      "expected_float": 0.0,
+      "absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "delta_left",
+      "producer_score": 5.0,
+      "expected_float": 5.0,
+      "absolute_difference": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "delta_equal",
+      "producer_score": 0.0,
+      "expected_float": 0.0,
+      "absolute_difference": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "delta_right",
+      "producer_score": 5.0,
+      "expected_float": 5.0,
+      "absolute_difference": 0.0,
+      "tolerance": 7.000000000000001e-10,
+      "passed": true
+    },
+    {
+      "name": "two_at_zero",
+      "producer_score": 0.8888888888888888,
+      "expected_float": 0.8888888888888888,
+      "absolute_difference": 0.0,
+      "tolerance": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "name": "two_between",
+      "producer_score": 0.7222222222222223,
+      "expected_float": 0.7222222222222222,
+      "absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "name": "two_right",
+      "producer_score": 2.2222222222222223,
+      "expected_float": 2.2222222222222223,
+      "absolute_difference": 0.0,
+      "tolerance": 4e-10,
+      "passed": true
+    },
+    {
+      "name": "two_left",
+      "producer_score": 1.888888888888889,
+      "expected_float": 1.8888888888888888,
+      "absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "name": "ties_zero_mass",
+      "producer_score": 0.25,
+      "expected_float": 0.25,
+      "absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "ties_reordered",
+      "producer_score": 0.25,
+      "expected_float": 0.25,
+      "absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "split_mass",
+      "producer_score": 0.7222222222222223,
+      "expected_float": 0.7222222222222222,
+      "absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "name": "all_equal",
+      "producer_score": 0.5,
+      "expected_float": 0.5,
+      "absolute_difference": 0.0,
+      "tolerance": 3e-10,
+      "passed": true
+    },
+    {
+      "name": "floor_one_noninteger",
+      "producer_score": 0.41500000000000004,
+      "expected_float": 0.415,
+      "absolute_difference": 5.551115123125783e-17,
+      "tolerance": 1.7500000000000002e-10,
+      "passed": true
+    },
+    {
+      "name": "target_at_atom",
+      "producer_score": 0.41500000000000004,
+      "expected_float": 0.415,
+      "absolute_difference": 5.551115123125783e-17,
+      "tolerance": 1.55e-10,
+      "passed": true
+    }
+  ]
+}
