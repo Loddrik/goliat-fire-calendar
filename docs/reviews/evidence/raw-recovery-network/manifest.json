@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-11-15T13:27:53.573316+00:00",
+  "output_sha256": {
+    "summary.json": "57ec5e80e327295ced90f17e2ee082c90707ee1bee832b1d8361c0a72052fac6",
+    "sources.json": "100dd2191ca5b9fa47a3106af7f3a3077043dfb76281f8940a8315f0c3b77516",
+    "helper.py.txt": "276010084a97570a0ba39b7580d51696061e74c045701db4d86ae9e8a4820e38",
+    "results.json": "a6740fe86e2185b3be46b46168cadca99cb548d008e8aacb301654396f536871",
+    "unresolved.csv": "ba7afd133c6f85ff666484698156dd5a1872935c711fd60a2300c9f5abfb8795",
+    "exact-files.csv": "2407da216da86216d9d04a8300c1101c301ed1d180d1ddedf9e3bd44f9dadbfb",
+    "helper-batch-v1.py.txt": "a156a749544521634bee324c5633a91ba2984685a68320cc6446dfe8e9932c8a",
+    "finalizer.py.txt": "10e00e926c07f8a9fd5e53c83c32eccf6b9094b228d62b66ca642b1ab1f898b6",
+    "http400-diagnostic.json": "99fefed1dc5c87a2e315e15f0b00564ff4fdfc96f91b5ebaebc91cbf6df1edca",
+    "quota-status.json": "cfbd10cdf1d23e24d00fdd2d429a68fee68ae4be7dca6cb9b22ded2e5cad5e9d",
+    "quota-weight-source.txt": "23f9a371c50cea6c5406436b79e7a13b1b3b64f56f724dc7dc72e1d08ec56e8b",
+    "helper-resume-v2.py.txt": "e1ccb3a0b7d3158eb93df8b4c68a1eb4136617ceff7e7296b780ddab4756cf81"
+  },
+  "checkpoint_manifest_sha256": {
+    "checkpoint-1324/manifest.json": "06f9079b10d45f0c6468f337ed8c2807ec63b7dd31e815136b0be4ffa80f6d56",
+    "checkpoint-1316/manifest.json": "f14e073a3d433e935c36111dd495496ab95046a8c32eff1307a0eda8de1accf0",
+    "checkpoint-1320/manifest.json": "88310fdb407d2ad70941204204120fff92f6706c23055994f1ca3d84337c130b"
+  },
+  "canonical_raw_and_processed_mutated": false,
+  "producer_report_sha256": "5c9ce4df2da0fbe5546e746f0bc841b4f9b825df883ed7b0983deea0f7dabcfc"
+}

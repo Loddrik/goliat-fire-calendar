@@ -1,0 +1,21 @@
+{
+  "files": {
+    "summary.json": {
+      "sha256": "95e36c4f787d2512323b44dce70f14b1b67783637c7b876d45550fb96d40340e",
+      "bytes": 13724
+    },
+    "audit-code.py.txt": {
+      "sha256": "0a9f561b3efba06cc85f1988f6ba13f06ae491f6686d621164f3817a82a19f7c",
+      "bytes": 12597
+    },
+    "protocol.json": {
+      "sha256": "65888cbf3775030459e2eff073d2863dbc208dd0afeff9844815443334a6be00",
+      "bytes": 5146
+    },
+    "freeze-public.json": {
+      "sha256": "7e0c5db9b20f97025a6fdadef16385c15252d3243d50b04fab84f4fbeda2b25a",
+      "bytes": 21440
+    }
+  },
+  "canonical_unchanged": true
+}

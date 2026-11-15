@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-11-15T13:01:00Z",
+  "primary_sources": [
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/area/",
+      "verified": "Area endpoint: fixed bbox, source, date, day_range1..5; MAP_KEY5000transactionsper10minutes; largerrequests maycountmultiple"
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/map_key/",
+      "verified": "Same transactionlimit; existingprivatekeyused, noaccountoperation"
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/",
+      "verified": "API4.2.8;countryAPI markedunavailable; not treated as rejectionofannualstaticarchive"
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2000/modis_2000_Chile.csv",
+      "verified": "GET200andSHA256exactinventory2000"
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/modis/2001/modis_2001_Chile.csv",
+      "verified": "GET200andSHA256exactinventory2001"
+    }
+  ],
+  "private_API_URLs_stored": false,
+  "MAP_key_contents_or_full_URLs_in_evidence": false,
+  "retrieval_policy_initial": {
+    "concurrent_workers": 3,
+    "request_start_spacing_seconds": 0.75,
+    "timeout_seconds": 18,
+    "retries_per_batch_window": 0,
+    "body_budget_bytes": 157286400,
+    "network_deadline_utc": "2026-11-15T13:24:00Z"
+  },
+  "retrieval_policy_current": {
+    "concurrent_workers": 2,
+    "request_start_spacing_seconds": 1.5,
+    "timeout_seconds": 18,
+    "automatic_retries_per_window": 0,
+    "body_budget_bytes": 157286400,
+    "network_deadline_utc": "2026-11-15T13:27:00Z",
+    "quota_headroom_checked_before_resumption": true,
+    "stop_on_quota": true,
+    "mismatches_never_retried": true
+  },
+  "cost_verified_after_quota_pause": true,
+  "official_weight_for_bbox": {
+    "bbox": "-76,-56,-66,-17",
+    "VIIRS_5days_transactions": 10,
+    "MODIS_5days_transactions": 3,
+    "source": "computeWeight function in official area API HTML",
+    "evidence": "quota-weight-source.txt"
+  },
+  "updated_utc": "2026-11-15T13:22:49.180504+00:00"
+}

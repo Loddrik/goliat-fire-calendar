@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-15T13:19:44.363314+00:00",
+  "new_phase_not_repair_raw38": true,
+  "sources205_SHA_verified_before_rows": true,
+  "source_completeness_relative_inventory": true,
+  "uncovered_before20200701": [],
+  "comparison": "EXCEPT ALL bothdirections13canonicalcolumns for ALL detections acq_date<2020-07-01; no tolerance/tiebreak changes",
+  "mask": "Execute exactly three literal SQL statements cell_stats/static_core/static_mask from frozen build_mask AST in private memory; compare cell_x,cell_y,rule multiset.",
+  "conditional_training": "Only if mask processed, reuse frozen cells_comuna mapping (not regenerateGEO) to compare training2012–2019 monthly Aqua/SNPP counts; ratio sumSNPP/sumAqua is arithmetic, not a refit.",
+  "deadline": "2026-11-15T13:23:00+00:00",
+  "fits": 0,
+  "downloads": 0,
+  "output_writes": "Assigned runtime/evidence only"
+}

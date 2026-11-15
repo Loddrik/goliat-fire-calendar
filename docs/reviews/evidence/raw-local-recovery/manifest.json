@@ -1,0 +1,9 @@
+{
+  "docs/reviews/evidence/raw-local-recovery/summary.json": "988977e58b379298f40d2205c93e26be334c6bfbcb07a058bda33d1790ed0ae4",
+  "docs/reviews/evidence/raw-local-recovery/downloads-expanded-name-scan.json": "a3f6c535cd660a58b9a623f3db657152622bcf286f9561a89749e373d7faa176",
+  "docs/reviews/evidence/raw-local-recovery/file-scan.json": "e0bc658fc95264e06e08034f66a8a57aa45c947d4a64f1c05bdf35ae6d139582",
+  "docs/reviews/evidence/raw-local-recovery/case-extension-check.json": "b1a3def8b1d1191f797567e6f3d2188425d48fb8713d71d9f895ac1ec3ea8284",
+  "docs/reviews/evidence/raw-local-recovery/git-preflight.json": "14757a687a9398f2f3a04826f6f8732f891de19cdff3a8ca00d99fa7d91468a4",
+  "docs/reviews/evidence/raw-local-recovery/bundle-coverage.json": "811409d66e9b97c38e77029a1fb8b09e8e6f39a0c7209baf54c8c8f27dbd2069",
+  "docs/reviews/evidence/raw-local-recovery/git-object-scan.json": "70d54af260e7a4af383368f29e1135b766e2b385d32dd610e627a677824c819c"
+}

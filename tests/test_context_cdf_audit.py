@@ -26,6 +26,12 @@ class ContextAuditTests(unittest.TestCase):
         cls.features=x[(x.season==2016)&(x.m==1)][FEATURES].copy().reset_index(drop=True)
         cls.contexts={c:{'available':True,'vector':np.eye(18)[i%3].tolist()} for i,c in enumerate(cls.cuts)}
 
+    def setUp(self):
+        # Synthetic fixtures must remain runnable after the historical experiment cap.
+        deadline = patch.object(audit, "deadline_check", return_value=None)
+        deadline.start()
+        self.addCleanup(deadline.stop)
+
     def test_uniform_base_controls_and_real54_invariance_synthetic_labels(self):
         out,checks,diagnostics=audit.infer(self.features,self.model,self.contexts,self.cuts)
         old,_=predict_all(self.features,self.model,self.cuts)

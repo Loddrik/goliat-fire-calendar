@@ -1,0 +1,81 @@
+import concurrent.futures,csv,datetime,hashlib,json,pathlib,re,threading,time,urllib.request,urllib.error,sys
+ROOT=pathlib.Path(__file__).resolve().parents[3]
+BASE=ROOT/'.runtime/raw-recovery/network'
+KEY=(ROOT/'.runtime/secrets/firms-map-key').read_text().strip()
+DEADLINE=datetime.datetime(2026,11,15,13,24,tzinfo=datetime.timezone.utc).timestamp()
+CAP=150*1024*1024
+lock=threading.Lock();next_start=0.;transferred=0;reserved=0
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self,*args,**kwargs):return None
+opener=urllib.request.build_opener(NoRedirect())
+inventory=list(csv.DictReader((ROOT/'data/processed/inventory.csv').open()))
+local=json.loads((ROOT/'.runtime/raw-recovery/local-exact-match-audit.json').read_text())
+known={q['expected_path'] for q in local['matches']}
+missing=[q for q in inventory if q['path'] not in known]
+log=BASE/'results.jsonl'
+previous=[json.loads(l) for l in log.read_text().splitlines()] if log.exists() else []
+transferred=sum(q.get('received_bytes',0) for q in previous)
+done={q['expected_path'] for q in previous}
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def target(q):
+    p=pathlib.PurePosixPath(q['path']);name=p.name
+    if 'firms_country' in q['path']:
+        year=name.split('_')[1];return f'https://firms.modaps.eosdis.nasa.gov/data/country/modis/{year}/{name}'
+    source=p.parent.name;m=re.fullmatch(re.escape(source)+r'_(\d{4}-\d{2}-\d{2})_(\d)d.csv',name)
+    if not m:raise ValueError('Unexpected inventory filename')
+    return f'https://firms.modaps.eosdis.nasa.gov/api/area/csv/{KEY}/{source}/-76,-56,-66,-17/{m[2]}/{m[1]}'
+def work(q):
+    global next_start,transferred,reserved
+    result={'expected_path':q['path'],'expected_sha256':q['sha256'],'expected_bytes':int(q['bytes']),'started_utc':now(),'received_bytes':0,'status':'not_attempted'}
+    with lock:
+        if time.time()>DEADLINE-25 or transferred>=CAP:return result
+        wait=max(0,next_start-time.monotonic());next_start=max(time.monotonic(),next_start)+.75
+    if wait:time.sleep(wait)
+    try:
+        req=urllib.request.Request(target(q),headers={'User-Agent':'Goliat-raw-exact-recovery/1.0'})
+        with opener.open(req,timeout=18) as response:
+            result['http_status']=response.status;chunks=[];size=0
+            while True:
+                with lock:
+                    allowed=min(65536,CAP-transferred-reserved)
+                    reserved+=allowed
+                if allowed<=0:raise ValueError('TransferCap')
+                try:block=response.read(allowed)
+                finally:
+                    with lock:reserved-=allowed
+                with lock:transferred+=len(block)
+                if not block:break
+                chunks.append(block);size+=len(block)
+                result['received_bytes']=size
+                if size>max(int(q['bytes'])*4,4*1024*1024):raise ValueError('IndividualResponseCap')
+            body=b''.join(chunks);result['received_bytes']=size;actual=hashlib.sha256(body).hexdigest();result['actual_sha256']=actual
+            exact=actual==q['sha256'] and size==int(q['bytes']);result['status']='exact' if exact else 'mismatch'
+            is_csv=body.split(b'\n',1)[0].lower().startswith(b'latitude,longitude,')
+            if KEY.encode() in body:result['status']='secret_bearing_response_not_saved'
+            elif exact or is_csv:
+                destination=BASE/('exact' if exact else 'quarantine')/q['path'];destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(body)
+                result['stored_relative']=str(destination.relative_to(ROOT))
+            else:result['body_not_saved']='not_detection_csv'
+    except urllib.error.HTTPError as exc:result.update(status='http_error',http_status=exc.code,error_type=type(exc).__name__)
+    except Exception as exc:
+        result.update(status='transport_error',error_type=type(exc).__name__)
+        if isinstance(exc,urllib.error.URLError):
+            result['error_reason_type']=type(exc.reason).__name__
+            if isinstance(getattr(exc.reason,'errno',None),int):result['error_errno']=exc.reason.errno
+    result['finished_utc']=now()
+    with lock:
+        with log.open('a') as f:f.write(json.dumps(result)+'\n')
+    return result
+if __name__=='__main__':
+    mode=sys.argv[1]
+    if mode=='preflight':
+        candidates=[q for q in missing if 'firms_country' in q['path']]
+        for source in ['MODIS_SP','VIIRS_NOAA20_SP']:
+            candidates.append(next(q for q in missing if '/'+source+'/' in q['path']))
+    elif mode=='batch':candidates=[q for q in missing if q['path'] not in done and 'firms_api' in q['path']]
+    else:raise ValueError('Mode')
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+        for result in pool.map(work,candidates):
+            print(json.dumps({k:v for k,v in result.items() if k not in ['expected_sha256','actual_sha256']}),flush=True)
+    records=[json.loads(l) for l in log.read_text().splitlines()]
+    print(json.dumps({'completed_utc':now(),'attempted':len(records),'exact':sum(r['status']=='exact' for r in records),'received_bytes':sum(r['received_bytes'] for r in records)}))

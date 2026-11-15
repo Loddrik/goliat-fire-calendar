@@ -1,0 +1,73 @@
+"""Isolated ingestion audit of exactly38 original raw files, no legacy import/output."""
+from pathlib import Path
+import sys,json,csv,hashlib,datetime,platform,resource
+import duckdb
+R=Path('/Users/dquinteros/nasa/goliat-fire-calendar');P=R/'.runtime/raw-recovery/ingestion-audit';E=R/'docs/reviews/evidence/raw-ingestion-recovery';AUDIT=R/'.runtime/raw-recovery/local-exact-match-audit.json';INV=R/'data/processed/inventory.csv';CANON=R/'data/processed/detections.parquet';END=datetime.datetime(2026,11,15,13,23,tzinfo=datetime.timezone.utc)
+COLS=['lat','lon','acq_date','acq_time','sat','instrument','confidence','frp','type','version','source_kind','cell_x','cell_y']
+def now():return datetime.datetime.now(datetime.timezone.utc)
+def check():assert now()<END,'Raw-ingestion audit own13:23UTC deadline'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def dump(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False,default=str)+'\n')
+def freeze():
+ check();assert not (P/'freeze.json').exists();meta=json.load(open(AUDIT));matches=meta['matches'];assert len(matches)==38
+ inv=list(csv.DictReader(open(INV)));by={v['path']:v for v in inv};assert len(by)==len(inv)==1071
+ selected=[]
+ for row in matches:
+  expected=row['expected_path'];q=Path(row['existing_source']);v=by[expected];assert q.is_file() and q.stat().st_size==int(v['bytes'])==row['bytes'] and sha(q)==v['sha256']==row['sha256'];selected.append({**row,'inventory_rows':int(v['rows']),'inventory_acq_min':v['acq_min'],'inventory_acq_max':v['acq_max']})
+ # Completeness is decided solely from inventory metadata, before canonical/raw values.
+ scope=[{'sat':['Terra','Aqua'],'family':'MODIS','lo':'2002-01-01','hi':'2025-12-31'},{'sat':['SNPP'],'family':'VIIRS_SNPP','lo':'2012-01-01','hi':'2025-12-31'}];selectedpaths={v['expected_path'] for v in selected};completeness=[]
+ for spec in scope:
+  relevant=[]
+  for v in inv:
+   family=('MODIS' if '/firms_country/modis/' in v['path'] or '/MODIS_' in v['path'] else 'VIIRS_SNPP' if '/firms_country/viirs-snpp/' in v['path'] or '/VIIRS_SNPP_' in v['path'] else 'OTHER')
+   if family==spec['family'] and v['acq_min'] and v['acq_max'] and v['acq_min']<=spec['hi'] and v['acq_max']>=spec['lo']:relevant.append(v['path'])
+  missing=sorted(set(relevant)-selectedpaths);assert not missing,(spec,missing);completeness.append({**spec,'inventory_relevant_sources':sorted(relevant),'missing_inventory_sources':missing,'complete_relative_to_inventory_only':True})
+ protected=[CANON,INV,R/'pipeline/build_detections.py',R/'data/processed/cells_comuna.parquet',R/'data/processed/static_mask.parquet',R/'data/processed/celldays.parquet',R/'data/processed/params.json',R/'data/processed/gates.csv']
+ db=R/'data/processed/goliat.duckdb'
+ if db.exists():protected.append(db)
+ protected+=sorted((R/'web/public/data').rglob('*.json'))
+ protocol={'frozen_utc':now().isoformat(),'scope':'Exactly38 byte-identical raw country files from local copies only; no downloads or expansion after values.','comparison_unit':'Full original bbox daytime detections before commune assignment, not only municipal detections.','columns_exact_multiset':COLS,'primary':'EXCEPT ALL in both directions over all13 columns, no rounding/tolerance added.','reference_scope':'Terra/Aqua2002-01-01..2025-12-31; SNPP2012-01-01..2025-12-31, no source_kind restriction on reference.','source_completeness':completeness,'read_semantics':'Separate MODIS and SNPP read_csv file lists; header=true, union_by_name=true, filename=true, all_varchar=true. Original strict casts, bbox and daynight filtering.','dedup_semantics':'SAT normalized; row_number partition sat,round(lat,4),round(lon,4),date,lpad(time,4), ordered solely source priority. Rank before confidence exactly as original.','tie_policy':'Report repeated keys and distinct payloads. Nonidentical same-priority ties expose nondeterminism; no new tie-break or winner selected to force equality.','parse_integrity':'Validate full-file count/min/max against inventory, then strict parser; parse failures are failures, not coercion repairs.','limitations':['Completeness only relative to frozen inventory, not observation opportunity or true fire.','No commune assignment, static-mask rebuild, calibration or publication rerun. MissingTerra2000/2001 and NOAA20/21 prevent whole-pipeline raw reproduction.','A successful projection onto canonical13 columns is not invertibility of all raw fields or validation of source-priority alternatives.'],'isolated_database':'DuckDB in-memory only; only scratch outputs under assigned audit folder. Never import legacy script or open goliat.duckdb.','deadline_utc':END.isoformat(),'fits':0,'downloads':0,'production_writes':0}
+ dump(P/'protocol.json',protocol);dump(E/'protocol.json',{k:v for k,v in protocol.items()})
+ (E/'audit-code.py.txt').write_bytes(Path(__file__).read_bytes())
+ record={'created_utc':now().isoformat(),'code_sha256':sha(Path(__file__)),'protocol_sha256':sha(P/'protocol.json'),'audit_input_sha256':sha(AUDIT),'inventory_sha256':sha(INV),'selected_sources':selected,'protected_sha256':{str(q.relative_to(R)):sha(q) for q in protected},'environment':{'python':sys.version,'platform':platform.platform(),'duckdb':duckdb.__version__},'no_raw_rows_or_canonical_values_loaded_yet':True}
+ dump(P/'freeze.json',record);dump(E/'freeze-public.json',{k:v for k,v in record.items() if k!='selected_sources'}|{'selected_sources':[{'expected_path':v['expected_path'],'bytes':v['bytes'],'sha256':v['sha256']} for v in selected]});print('RAW38_FROZEN',sha(P/'freeze.json'),flush=True)
+
+def run():
+ check();f=json.load(open(P/'freeze.json'));protocol=json.load(open(P/'protocol.json'));assert sha(Path(__file__))==f['code_sha256'] and sha(P/'protocol.json')==f['protocol_sha256']
+ for name,h in f['protected_sha256'].items():assert sha(R/name)==h,name
+ for v in f['selected_sources']:assert sha(Path(v['existing_source']))==v['sha256']
+ con=duckdb.connect(':memory:');con.execute("set temp_directory='"+str(P/'duckdb-temp').replace("'","''")+"'");con.execute("set memory_limit='1GB'")
+ # Exact original parts, only restored historical country sources are in scope.
+ groups={'modis':[v['existing_source'] for v in f['selected_sources'] if '/modis/' in v['expected_path']],'snpp':[v['existing_source'] for v in f['selected_sources'] if '/viirs-snpp/' in v['expected_path']]}
+ file_rows=[]
+ for label,paths in groups.items():
+  con.execute(f'create temp table input_{label} as select * from read_csv(?,header=true,union_by_name=true,filename=true,all_varchar=true)',[paths])
+  file_rows+=con.execute(f'select filename,count(*),min(acq_date::date),max(acq_date::date) from input_{label} group by filename').fetchall()
+ selectedby={v['existing_source']:v for v in f['selected_sources']};filechecks=[]
+ for filename,n,lo,hi in file_rows:
+  v=selectedby[filename];assert n==v['inventory_rows'] and str(lo)==v['inventory_acq_min'] and str(hi)==v['inventory_acq_max'];filechecks.append({'path':v['expected_path'],'rows':n,'min':str(lo),'max':str(hi),'inventory_parser_metadata_matches':True})
+ assert len(filechecks)==38
+ def part(label):return f"""select latitude::double lat,longitude::double lon,acq_date::date acq_date,lpad(acq_time::varchar,4,'0') acq_time,satellite,instrument,confidence::varchar confidence,frp::double frp,daynight,try_cast(type as integer) type,version::varchar version,'country_sp' source_kind,filename from input_{label} where daynight='D' and longitude::double between -74.0 and -70.9 and latitude::double between -38.6 and -35.9"""
+ con.execute('create temp table raw_all as '+part('modis')+' union all '+part('snpp'))
+ con.execute("""create temp table normalized as select *,case satellite when 'Terra' then 'Terra' when 'Aqua' then 'Aqua' when 'N' then 'SNPP' when 'N20' then 'NOAA20' when 'N21' then 'NOAA21' else satellite end sat,case when instrument='MODIS' then try_cast(confidence as integer)>=30 else confidence<>'l' end conf_ok,case source_kind when 'country_sp' then 1 when 'api_sp' then 2 else 3 end prio from raw_all""")
+ keys='sat,round(lat,4),round(lon,4),acq_date,acq_time'
+ con.execute('create temp table ranked as select *,row_number() over(partition by '+keys+' order by prio) rn from normalized')
+ con.execute('create temp table reconstructed as select lat,lon,acq_date,acq_time,sat,instrument,confidence,frp,type,version,source_kind,floor(lon/0.01)::integer cell_x,floor(lat/0.01)::integer cell_y from ranked where rn=1 and conf_ok')
+ assert con.execute("select count(*) from normalized where sat not in ('Terra','Aqua','SNPP')").fetchone()[0]==0
+ con.execute("create temp table reference as select * from read_parquet(?) where (sat in ('Terra','Aqua') and acq_date between date'2002-01-01' and date'2025-12-31') or (sat='SNPP' and acq_date between date'2012-01-01' and date'2025-12-31')",[str(CANON)])
+ cols=','.join(COLS);con.execute('create temp table only_reconstructed as select '+cols+' from reconstructed except all select '+cols+' from reference');con.execute('create temp table only_reference as select '+cols+' from reference except all select '+cols+' from reconstructed')
+ nr=con.execute('select count(*) from reconstructed').fetchone()[0];nc=con.execute('select count(*) from reference').fetchone()[0];a=con.execute('select count(*) from only_reconstructed').fetchone()[0];b=con.execute('select count(*) from only_reference').fetchone()[0]
+ duplicate=con.execute('select '+keys+',count(*) n,count(distinct (lat,lon,instrument,confidence,frp,type,version,source_kind)) payloads from normalized group by '+keys+' having count(*)>1').fetchall();ambiguous=[r for r in duplicate if r[-1]>1]
+ stages={'full_raw_rows':sum(v['rows'] for v in filechecks),'day_bbox_rows':con.execute('select count(*) from raw_all').fetchone()[0],'confidence_true_before_dedup':con.execute('select count(*) from normalized where conf_ok').fetchone()[0],'confidence_false_or_unknown_before_dedup':con.execute('select count(*) from normalized where not conf_ok or conf_ok is null').fetchone()[0],'dedup_winners_before_confidence':con.execute('select count(*) from ranked where rn=1').fetchone()[0],'filtered_dedup_final':nr,'repeated_dedup_keys':len(duplicate),'nonidentical_same_priority_tie_keys':len(ambiguous)}
+ byplatform=con.execute('select sat,source_kind,min(acq_date),max(acq_date),count(*) from reconstructed group by 1,2 order by 1,2').fetchall()
+ differences={}
+ for table in ['only_reconstructed','only_reference']:
+  cursor=con.execute('select * from '+table+' limit 20');differences[table]=[dict(zip([v[0] for v in cursor.description],row)) for row in cursor.fetchall()]
+ cursor=con.execute('select * from reconstructed limit 0');assert [v[0] for v in cursor.description]==COLS
+ # Keep reconstructed science output ignored/local; publish small audit evidence only.
+ con.execute('copy reconstructed to ? (format parquet)',[str(P/'reconstructed38.parquet')])
+ for name,h in f['protected_sha256'].items():assert sha(R/name)==h,name
+ for v in f['selected_sources']:assert sha(Path(v['existing_source']))==v['sha256']
+ check();report={'status':'PASS_exact_multiset_subset' if a==0 and b==0 and not ambiguous else 'FAIL_or_ambiguous_subset_preserved','completed_utc':now().isoformat(),'freeze_sha256':sha(P/'freeze.json'),'protocol_sha256':f['protocol_sha256'],'selected_raw_files':38,'selected_raw_bytes':sum(v['bytes'] for v in f['selected_sources']),'source_completeness':protocol['source_completeness'],'stage_counts':stages,'reconstructed_rows':nr,'canonical_reference_rows':nc,'EXCEPT_ALL_reconstructed_minus_canonical':a,'EXCEPT_ALL_canonical_minus_reconstructed':b,'all13_columns_compared':COLS,'platform_counts':[dict(zip(['sat','source_kind','min','max','n'],v)) for v in byplatform],'file_parser_checks':filechecks,'same_priority_tie_examples':ambiguous[:20],'difference_examples':differences,'canonical_and_production_hashes_unchanged':True,'goliat_database_opened':False,'legacy_script_imported':False,'database':':memory:','new_fits':0,'downloads':0,'full_ingestion_or_mask_rebuild_claim':False,'comparison_scope_relative_inventory_not_physical_completeness':True,'RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*(1 if sys.platform=='darwin' else 1024)}
+ dump(P/'summary.json',report);dump(E/'summary.json',report);dump(E/'manifest.json',{'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in E.iterdir() if p.is_file() and p.name!='manifest.json'},'canonical_unchanged':True});print('RAW38_DONE',report['status'],nr,nc,a,b,'ambiguous',len(ambiguous),flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()
