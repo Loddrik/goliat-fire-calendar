@@ -45,7 +45,6 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
   return (
     <div className="ficha">
       <div className="ficha-head">
-        <h2>{doc.comuna} <small>· {doc.region} · CUT {doc.cut}</small></h2>
         <p className="muted">{T.upTo} {cutoff}</p>
         <span className={`chip ${doc.reconstruction_enabled ? "on" : ""}`}>{doc.reconstruction_enabled ? T.serieOn : T.serieOff}</span>
       </div>
@@ -89,8 +88,12 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
               </div>
             ))}
           </div>
-          <p className="muted small">{T.profileLegend(nSeasons)}</p>
           <p className="note small">{T.profileNote}</p>
+          <details className="legend-more no-print">
+            <summary>{T.howToRead}</summary>
+            <p className="muted small">{T.profileLegend(nSeasons)}</p>
+          </details>
+          <p className="muted small print-only">{T.profileLegend(nSeasons)}</p>
         </section>
       )}
 

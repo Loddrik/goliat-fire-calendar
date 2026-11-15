@@ -68,7 +68,6 @@ export default function App() {
   }, [lang, doc, cut, T.headline]);
 
   const current = doc?.cut === cut ? doc : null;
-  const enabledCount = index ? index.comunas.filter((c) => c.enabled).length : "…";
 
   const matches = useMemo(() => {
     // Sin tildes ni mayúsculas: "chillan" encuentra Chillán; también por CUT.
@@ -114,7 +113,7 @@ export default function App() {
           <a href={`/?lang=${lang}`} className="logo" aria-label="GOLIAT"><GoliatLogo variant="horizontal" height={30} lang={lang} /></a>
           <div>
             <h1>{T.headline}</h1>
-            <p className="sub">{T.line(enabledCount)}</p>
+            <p className="sub">{T.line}</p>
           </div>
         </div>
         <div className="tools no-print">

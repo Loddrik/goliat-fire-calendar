@@ -103,6 +103,8 @@ button.primary { background: var(--accent); color: #fff; border-color: var(--acc
 .fold { border-top: 1px solid var(--line); padding-top: 8px; font-size: 13px; }
 .fold summary { cursor: pointer; font-weight: 500; }
 .fold ul { padding-left: 18px; }
+.legend-more summary { cursor: pointer; font-size: 13px; font-weight: 500; color: var(--accent, #1F6F8B); width: fit-content; }
+.legend-more[open] summary { margin-bottom: 4px; }
 
 /* Serie 2002–2026 */
 main, .card { margin: 16px 20px; }
