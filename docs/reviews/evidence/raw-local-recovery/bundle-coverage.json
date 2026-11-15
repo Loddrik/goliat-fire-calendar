@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/Users/dquinteros/nasa/backups/firechronos-stage2-af390038.bundle",
+    "heads": [
+      [
+        "af3900386b33cd0f8960550640f2b12b52ace45e",
+        "refs/heads/main"
+      ],
+      [
+        "af3900386b33cd0f8960550640f2b12b52ace45e",
+        "refs/tags/checkpoint/observed-stage2-20261114"
+      ],
+      [
+        "af3900386b33cd0f8960550640f2b12b52ace45e",
+        "HEAD"
+      ]
+    ],
+    "all_heads_reachable_firechronos": true
+  },
+  {
+    "path": "/Users/dquinteros/nasa/backups/firechronos-reviewed-d61ccf82.bundle",
+    "heads": [
+      [
+        "d61ccf826ed3dbfd6461ad19324b0d65f9ffd4ac",
+        "refs/heads/main"
+      ],
+      [
+        "af3900386b33cd0f8960550640f2b12b52ace45e",
+        "refs/tags/checkpoint/observed-stage2-20261114"
+      ],
+      [
+        "d61ccf826ed3dbfd6461ad19324b0d65f9ffd4ac",
+        "HEAD"
+      ]
+    ],
+    "all_heads_reachable_firechronos": true
+  },
+  {
+    "path": "/Users/dquinteros/nasa/backups/firechronos-published-stage1.bundle",
+    "heads": [
+      [
+        "8f6aea02cee488c30043681a15b098c7d63a1f0a",
+        "refs/heads/main"
+      ],
+      [
+        "8f6aea02cee488c30043681a15b098c7d63a1f0a",
+        "HEAD"
+      ]
+    ],
+    "all_heads_reachable_firechronos": true
+  }
+]

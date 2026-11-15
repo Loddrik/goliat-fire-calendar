@@ -1,0 +1,45 @@
+{
+  "completed_utc": "2026-11-15T13:19:52.354892+00:00",
+  "scope": "205 exact available sources, ALL detections before2020-07-01; no whole2026 acquisition/NOAA21 or GEO reproduction.",
+  "source_files": 205,
+  "source_completeness_relative_inventory": true,
+  "freeze_sha256": "2c7032da0bfaf6f8617af401c47bba8ac365955105368e14d652f6001f9ecb31",
+  "det_pre_rows": 125740,
+  "canon_pre_rows": 125740,
+  "primary_detection13_columns_EXCEPT_ALL": {
+    "left_minus_right": 1,
+    "right_minus_left": 1
+  },
+  "primary_detection_pass": false,
+  "mask_exact3columns_EXCEPT_ALL": {
+    "left_minus_right": 0,
+    "right_minus_left": 0
+  },
+  "mask_unique_cells_EXCEPT_ALL": {
+    "left_minus_right": 0,
+    "right_minus_left": 0
+  },
+  "mask_rows": 223,
+  "mask_unique_cells": 223,
+  "mask_pass": true,
+  "conditional_training_monthly_EXCEPT_ALL": {
+    "left_minus_right": 0,
+    "right_minus_left": 0
+  },
+  "conditional_training_pass": true,
+  "training_counts": {
+    "SNPP": 21466,
+    "Aqua": 9123
+  },
+  "ratio_arithmetic": 2.352954072125397,
+  "frozen_published_ratio": 2.352954072125397,
+  "ratio_exact_equal": true,
+  "frozen_map_used_not_GEO_reproduced": true,
+  "raw38_primary_failure_unchanged": true,
+  "canonical_files_unchanged": true,
+  "goliat_db_opened": false,
+  "legacy_scripts_imported": false,
+  "new_fits": 0,
+  "downloads": 0,
+  "LOSO_or_publication_rerun": false
+}

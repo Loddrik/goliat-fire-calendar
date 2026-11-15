@@ -1,0 +1,16 @@
+Source: https://firms.modaps.eosdis.nasa.gov/api/area/
+function computeWeight(obj) {
+        let src = (obj.source.indexOf('VIIRS') >= 0 ) ? 2 : 0.5;
+        if (apiName == 'country') {
+            return Math.ceil(weight[obj.country] * 20 * src * obj.range);
+        } else if (apiName == 'area' || apiName == 'area_static_fires') {
+            if (obj.areaParams && obj.areaParams.isValid) {
+                let p = obj.areaParams;
+                let x = Math.ceil((p.east - p.west) / 60.0);
+                let y = Math.ceil((p.north - p.south) / 60.0);
+                return Math.ceil(x * y * src * obj.range)
+            }
+            return 0;
+        }
+        return Math.ceil(src * obj.range);
+    }

@@ -1,0 +1,1044 @@
+{
+  "created_utc": "2026-11-15T13:19:44.364218+00:00",
+  "code_sha256": "1f208c5f79c63eb8faeb7242d08dae4165408f6f223f640924acd03f9ab0211c",
+  "protocol_sha256": "6f660c1780de130e17812b0049fc6d9b9d88ce2658833d46ab075336d300b440",
+  "protected_sha256": {
+    "pipeline/build_detections.py": "564f8842a1310381f9cee14c9964de6a2f0659703196197eeef374d4e8144b38",
+    "pipeline/build_mask.py": "3c18defdb3939106280e5a37d28c66a8dcefd9fcae0b067073a6fa92914fdc70",
+    "data/processed/detections.parquet": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+    "data/processed/static_mask.parquet": "a7c7961d0ff3f809600bd64c5705a8b5d6ea03d24ff9e103d5bd5f1be16f2cd4",
+    "data/processed/cells_comuna.parquet": "44bf64ebf0c51437b5587eb6f16adb5f6157bb107fed81923e7b4df86eaf98cc",
+    "data/processed/celldays_comuna_month_masked.parquet": "9453f1e1fe5d6fd4316d7dfdf7d6ea420993613e13002cd73cbc94e78c9ea5ee",
+    "data/processed/params.json": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd",
+    "data/processed/inventory.csv": "97428b84e89ae70c9d87529a0239a5b4872a453f42b6f853cb51a7377b1090ad"
+  },
+  "sources": [
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-01_5d.csv",
+      "sha256": "1c6859688be5c1d35d40b12eda23b654914c00e00369a4dbe925ae124a0da919",
+      "bytes": "69453"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-06_5d.csv",
+      "sha256": "1994578084137555030692b5ce9d7a1fb65d90465fa33072e66793a2dd8bbc67",
+      "bytes": "32813"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-11_5d.csv",
+      "sha256": "f85e1258ebb7f6b137553e8a180e127a405c5219ba230e38ee706d32090051ba",
+      "bytes": "51558"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-16_5d.csv",
+      "sha256": "78cddedd4ce79cca1236c4d5cdae34204c355199de5c4c31cc80fd03854e3613",
+      "bytes": "76786"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-21_5d.csv",
+      "sha256": "c9a912679f29b7be2780c1254b726321c6d49b631465e8485ee194a0092db2a0",
+      "bytes": "65425"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-04-26_5d.csv",
+      "sha256": "1f17d56173e4ae505aa80965071c99d4c6c05bfd4f3b3c38e36e2bb7ac7fc8a7",
+      "bytes": "24712"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-01_5d.csv",
+      "sha256": "eaff6bf884df62cf4e3826f52b3dc1b97f6b81795a1f2aef1b3d15d854822356",
+      "bytes": "34401"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-06_5d.csv",
+      "sha256": "5d7e0b608a47011754b43a9216eb1976dd3a3975a03b5dbbef288516d9990104",
+      "bytes": "32439"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-11_5d.csv",
+      "sha256": "99ac887e85a9b9971a0c0558243ab81f622653d991c7756bfa9a5a13daa36d28",
+      "bytes": "45920"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-16_5d.csv",
+      "sha256": "638cfee4f000f3586755d4bb979ec68f74e309eb8daad660b9f7a8b71b9d7fea",
+      "bytes": "33905"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-21_5d.csv",
+      "sha256": "04d59a408099e3672bc9f67d7d782b90cd50f73db146288eddcfb69fec7c10e5",
+      "bytes": "73442"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-26_5d.csv",
+      "sha256": "8f90869381a53b9a715093a60204d370ebcb0e0236f0ccd76ae1ff9b476dbfcb",
+      "bytes": "18534"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-05-31_5d.csv",
+      "sha256": "58d5cbaabdbf49ea47f7b95e43e39f71ef2a985541311e773ad8fc6112b01f82",
+      "bytes": "33710"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-05_5d.csv",
+      "sha256": "a236edb6d171485c17b21f39748f0bba5a418d86fdae9a4b8536974d76206123",
+      "bytes": "27620"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-10_5d.csv",
+      "sha256": "b98dc1a88d48f51171438dc7382a9b55d98b0c3ec0428225d9ebe64259353f14",
+      "bytes": "13535"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-15_5d.csv",
+      "sha256": "37afac9e4d05ea4e61c4cd7b4910b0a000b11ee991a99969b93826f265b38783",
+      "bytes": "30863"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-20_5d.csv",
+      "sha256": "63ac17abe37645b9f9cfcab8b7e10b95f919ca0c8fbd32fa2c8d2063dc425f76",
+      "bytes": "32892"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-25_5d.csv",
+      "sha256": "dcab20a0153a741020d7bca5d6f029e42a98284db2eea28265342b4cdf77b478",
+      "bytes": "20027"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-06-30_5d.csv",
+      "sha256": "b35562263a18585e20a80982326be1f26bf6cff8db0d06ed560cc757ad94ab18",
+      "bytes": "12049"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-05_5d.csv",
+      "sha256": "89acad88cdfbd6dfcc4aa2e28069442f6c9f534f564646513a95652dd0e7b81d",
+      "bytes": "10022"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-10_5d.csv",
+      "sha256": "157d324f0cd2b15dea423643eb33c3428ff69c6b3110474149aa9b398bb43c69",
+      "bytes": "20394"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-15_5d.csv",
+      "sha256": "73b734326a1be7d6a5dd093471997b4fddd2debb378c6536a7b56d8bc27162b8",
+      "bytes": "17156"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-20_5d.csv",
+      "sha256": "45a44ba433e557b93953b8cb35eb35e06ba704510f853650859b1a510e6aab3e",
+      "bytes": "29001"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-25_5d.csv",
+      "sha256": "96f06fbd05848fc850af264e6f98d8982ba7a1700340bd9756082b57ab3de983",
+      "bytes": "29947"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-07-30_5d.csv",
+      "sha256": "7bc2203e104c540f30c5cf06b022caf003057eb2fac36b543d6a7b39e45c6cc0",
+      "bytes": "54601"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-04_5d.csv",
+      "sha256": "7d40f0dba3aefd207594948d873ece447925cfd355f5e7cfb3bc7efa7b1f0021",
+      "bytes": "26207"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-09_5d.csv",
+      "sha256": "95a7ca729b4f5c4c291ea35959d9850b2e0d87b5d3206ecc394e35acb57b1675",
+      "bytes": "40723"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-14_5d.csv",
+      "sha256": "909d8cb24a3ce298533dfd9d23e9feb9e7dfdc21429bf83c278514b76433074a",
+      "bytes": "58419"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-19_5d.csv",
+      "sha256": "097821adf9bdfb33d80443c4a8f6ee6cc7746d9b7db3fa927d43d7d560784ace",
+      "bytes": "136578"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-24_5d.csv",
+      "sha256": "09f5f6c761becd53dfc92a189f18d8e9b7ad02aadd5c224857a49f93b8ff38d0",
+      "bytes": "64620"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-08-29_5d.csv",
+      "sha256": "4b4ff8ba12090f2a4578a02982cd62c37c2c3e580826c4884282651cb6a920f1",
+      "bytes": "42001"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-03_5d.csv",
+      "sha256": "79cdbb03aeec1a482b7f7778a395745d39f51d198146eb6764afba2a28840c7d",
+      "bytes": "77513"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-08_5d.csv",
+      "sha256": "cf4f5e31fdc9040246e7bda7bc91c6bc95e09400b37dbe721e881fda6cb396ae",
+      "bytes": "57104"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-13_5d.csv",
+      "sha256": "603b60591a35b2ac782fe493b08c78186cdeef62fa72ff46b8a27f2fd1310e0b",
+      "bytes": "48523"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-18_5d.csv",
+      "sha256": "b442a86375f31bb4360fd9f8f6e60b45ccb7b7f98e4f5a70be1114cb453da30e",
+      "bytes": "49330"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-23_5d.csv",
+      "sha256": "5f5ae296c1e332a1e997123c7f0544238d4e33223ae7ae4c4aaa5e79e2506f1c",
+      "bytes": "29074"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-09-28_5d.csv",
+      "sha256": "d1c883ad12820e160e7ca534d195feefd268d7cdadf42ff47260fa6bc83b59ec",
+      "bytes": "40023"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-03_5d.csv",
+      "sha256": "e2fbb35918539011b721614943a35287f66c2d933e305b7267d1538507bfc496",
+      "bytes": "48912"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-08_5d.csv",
+      "sha256": "3eda0df7e7f14085c44cad40a54ae5144f78bfc1a79030088c58b5237cfae40a",
+      "bytes": "49787"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-13_5d.csv",
+      "sha256": "00966d96a51bda6c16c6f93ed45ff249cb467e9ffffaaebc96b1207cd486b653",
+      "bytes": "55308"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-18_5d.csv",
+      "sha256": "b7383fe28c4d86454fee4a8b0a5c33efec7f7ef732fab4fd207b7cd0202118ac",
+      "bytes": "25723"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-23_5d.csv",
+      "sha256": "a6a41caa1259f0c85bb9c79dbbceda356c1b0389f03bad5e75c0fcf78305bd33",
+      "bytes": "19698"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-10-28_5d.csv",
+      "sha256": "b27df674acf9edec94fabc3c8b82e609f1654eb64adb34765915d72afd57759e",
+      "bytes": "21834"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-02_5d.csv",
+      "sha256": "15d17e23e0d6375224bc8a7805fcfbbaa854f40b5f7e7f0a8ffe03667f33b72c",
+      "bytes": "31317"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-07_5d.csv",
+      "sha256": "fac41e983ba2202ef316d9d9eb345fc234a168d7439da5b5dd15883cd206e3ff",
+      "bytes": "45663"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-12_5d.csv",
+      "sha256": "7c67547b43ba376f1741f152a19450dfebebe6cc31c6900462823d22430ddb7c",
+      "bytes": "23526"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-17_5d.csv",
+      "sha256": "072768b9e2ada2d480c788addfc4d75de54cd8a80a4d8a0c1bcff5f0482b44e9",
+      "bytes": "29536"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-22_5d.csv",
+      "sha256": "2a17a00410a2183b49d636a2dfede8b4894bc2fb7303774c15f1d1a5efe1963e",
+      "bytes": "33326"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-11-27_5d.csv",
+      "sha256": "d69b1ff62bd63e6557e4d1817c155c9ad4d272a7dccca9658af02a9be6e0aadd",
+      "bytes": "28861"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-02_5d.csv",
+      "sha256": "45128a07a5c0980379ca251937456ce221057d75e414737359844f02a9cb3718",
+      "bytes": "29801"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-07_5d.csv",
+      "sha256": "364c02e73076c30d5477169e2f2ea9d5cd44d1ad03ff4a283dbce95050cfc04d",
+      "bytes": "26797"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-12_5d.csv",
+      "sha256": "5330856ca0772c2c4fb71474ab579e62e161eaa64143bdb1b0bba2da395a21aa",
+      "bytes": "40176"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-17_5d.csv",
+      "sha256": "2993f4a81f7e71b89c1ca6cd269693764b1e65cc16e02b53556531568301d451",
+      "bytes": "38907"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-22_5d.csv",
+      "sha256": "50c4db22ec75c3d9d88070385ae838a7a76e4ef8b8c55c87b23c0a1e441854db",
+      "bytes": "36352"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2018-12-27_5d.csv",
+      "sha256": "2ea53d9a7eab98ba6ba8b3c714ec148c4a77e06905cb0d9c787fc47b061fbdc1",
+      "bytes": "29051"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-01_5d.csv",
+      "sha256": "a856ac5eb1633f1a4716a6d747e4de7fa763e9fa5bcf6d1a8b5b477f10781580",
+      "bytes": "58684"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-06_5d.csv",
+      "sha256": "af5155a14c343d14eff107ee80db1a1b7f16e550188177ffc466f7a0ffb68ee1",
+      "bytes": "30204"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-11_5d.csv",
+      "sha256": "1a155bbaa87a15ed42203bcdb218786cd63d6dcb5d6f427b2674d82ba50846f9",
+      "bytes": "26990"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-16_5d.csv",
+      "sha256": "52434da3b12953885a27a6f403cd7c137eb3c810f1f73f0092be60b94fb19e8d",
+      "bytes": "41111"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-21_5d.csv",
+      "sha256": "86b8dcae2da37eb493be9dbee4798ca3a9e5156a8e508d36c2244edf61bc482f",
+      "bytes": "43261"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-26_5d.csv",
+      "sha256": "98f707192ec80731e71b495fc97247d49f4bf7534842501cd1c1b7c2efe66b69",
+      "bytes": "69411"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-01-31_5d.csv",
+      "sha256": "4e5eb6825d9f4763f78860e813fee2cda9c1f226645774bd28e011ae514d6929",
+      "bytes": "142826"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-02-05_5d.csv",
+      "sha256": "c8615d015579813a96681342ea6cd0e0e239ea3752838cf99fcc6c060f186c6b",
+      "bytes": "175064"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-02-10_5d.csv",
+      "sha256": "ca7389face8f825f950637c6cab546ed99791bc0944f834139636e17fc65f96e",
+      "bytes": "104176"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-02-15_5d.csv",
+      "sha256": "608bcecf2936901affb12c95aecfc7739674f1d93715a4b47829cae6508845a9",
+      "bytes": "117359"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-02-20_5d.csv",
+      "sha256": "ed56114801b1955078312a92db81247d6ca7de18ea65757d95ec3f85980d48a4",
+      "bytes": "38943"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-02-25_5d.csv",
+      "sha256": "c44c39c38154a8c94b1d76548fb2c9e0032a628f6d6e3c24509e48fa41523de5",
+      "bytes": "74060"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-02_5d.csv",
+      "sha256": "ef262b9b00f413fada8e5ec8cec1f72c179c4ef888a1683ed7550d3be1449a6c",
+      "bytes": "33315"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-07_5d.csv",
+      "sha256": "d0ae4df8647b17a0a95912139f383a124d6cd91d3095cb349011d7e1206aeb65",
+      "bytes": "60336"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-12_5d.csv",
+      "sha256": "70d6380f356e42b1c07d7b8856e2455cd55f276cff09f7ce90f563de1bb46ad9",
+      "bytes": "37732"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-17_5d.csv",
+      "sha256": "59d3ed4603fbcdb4cc777bc4b63f6df3c118f505cb706a90b0515618b9d27ca2",
+      "bytes": "45910"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-22_5d.csv",
+      "sha256": "4c3fa87fb1abc10728b6e08bb72001c89af127495fa39f784d37c15ef3177311",
+      "bytes": "65333"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-03-27_5d.csv",
+      "sha256": "52ca1917d4f20036d495115eba58cfc41e248fcfe87c524d5086e6644d0ce958",
+      "bytes": "93107"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-01_5d.csv",
+      "sha256": "7c4677deb7454c709741e1404398169c26e26a9d7e3533fdfb570061ffaa8fde",
+      "bytes": "95107"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-06_5d.csv",
+      "sha256": "a02feff940b350439dcd76dcf7b24d3ff4c39b9974eb8162fea24e7521f4df33",
+      "bytes": "76514"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-11_5d.csv",
+      "sha256": "187cf0e2e9de781f88e94c8fff16fa50ac0ae04a2790e657e3dbae3bca5e219c",
+      "bytes": "63465"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-16_5d.csv",
+      "sha256": "9e762cddf50a662a535f5da3f15579a684b92d5879d6da6bbd8cad160eaaef3c",
+      "bytes": "44498"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-21_5d.csv",
+      "sha256": "c84ad6ad8b83902370d359dca8693a0e62b30b64fee342cb0a6434e39e6e5c2d",
+      "bytes": "34278"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-04-26_5d.csv",
+      "sha256": "5da1aaa3561f4a98b6fdb07f1e38e6a58c59f9d4f21c4e3e73405190fc5d3f12",
+      "bytes": "61713"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-01_5d.csv",
+      "sha256": "0a1a6253898afd8e583c324ecbb67c2fd46df1538e40b0c9aa1a7318399d224e",
+      "bytes": "15177"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-06_5d.csv",
+      "sha256": "a84bb571648a2cf94dd10f9af3c976b000ef088124c7d0d36669519e61aff424",
+      "bytes": "28461"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-11_5d.csv",
+      "sha256": "c136017cb5cc73ea34b2a4f84cf1e5dbe028f1b5934d941a1a45ca05243a078a",
+      "bytes": "88416"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-16_5d.csv",
+      "sha256": "ba508c97e58e8a7a505a296c88f039c291ad6a02326be94248fa5a0b31c1ab36",
+      "bytes": "22834"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-21_5d.csv",
+      "sha256": "f460751cf4509bc3d6fe84d9004904fcae40fbb30dc153321605b92d485d8f12",
+      "bytes": "57415"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-26_5d.csv",
+      "sha256": "e507a7945a29b7d9501000da63c62a222b49a95181e82a9f55300380101bd785",
+      "bytes": "17405"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-05-31_5d.csv",
+      "sha256": "5e305d2599feba14e8f4da381502dfa6733403cf161916bc2f09b0c9f548301d",
+      "bytes": "12376"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-05_5d.csv",
+      "sha256": "8bf9e918d6152376ba40713d4161e6d708dcd6894efeb621162982b16f88022a",
+      "bytes": "18339"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-10_5d.csv",
+      "sha256": "5b8a804c9ba2e01076aa8c2daa3191d22552aafa8ccb445395d643e358f69ad1",
+      "bytes": "16052"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-15_5d.csv",
+      "sha256": "823f7d4a4c932652511e0841f345fb0687cab7c1bd694a97477a3908051ce0d5",
+      "bytes": "19667"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-20_5d.csv",
+      "sha256": "25b833bfa88bbac5ee9c6b09e641df86ea0f1f29bba86132db4bbb561a666192",
+      "bytes": "25894"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-25_5d.csv",
+      "sha256": "4ebc4051c38c96bb7b7bc63fd87ed257ee2909072d8d2ca921eae915d38ed22f",
+      "bytes": "28473"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-06-30_5d.csv",
+      "sha256": "5469fa9e8278948e06bcec9d39c18ec77d4f9371e92c6ac9f5a7f02384e0af1c",
+      "bytes": "23798"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-05_5d.csv",
+      "sha256": "8e30ced1902e13e6a066e7b39d0cbe7a3406c383784f224732f86c485ab037f6",
+      "bytes": "25568"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-10_5d.csv",
+      "sha256": "17b1b51f5736b01a3c811ddaf38b33eb42aa55a601540def2b6fa8f104a7377a",
+      "bytes": "30595"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-15_5d.csv",
+      "sha256": "1224a096680dc863b43217f8a35c935a22d41954e0fd58fcadbcf8ab3d43f3f0",
+      "bytes": "26648"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-20_5d.csv",
+      "sha256": "59280fa43976265458736a346f4288f7d1bfa77be34d7362715ee071d4451fa6",
+      "bytes": "87968"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-25_5d.csv",
+      "sha256": "2537c8be4765757646e4e9ad9c5fc3563cefd18e9b1915c54e121ea8f290669d",
+      "bytes": "30255"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-07-30_5d.csv",
+      "sha256": "f91feb44852c2487fd61ede28792e2ebfd562afdd395a519dc0e2260d9fca787",
+      "bytes": "41205"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-04_5d.csv",
+      "sha256": "00418577c34d3a840a168472a42b6b6c8111ac5b24377b6e9614e8da74554976",
+      "bytes": "61455"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-09_5d.csv",
+      "sha256": "1990ae27e434a5fad7fd876482a0a63ace5cb65b60a3391417d29829a10f3777",
+      "bytes": "55971"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-14_5d.csv",
+      "sha256": "2ea686e155e11f7eba07ebe39e9a39bdbe0c72e84c6e3a1abf015e83394bc2eb",
+      "bytes": "29640"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-19_5d.csv",
+      "sha256": "6bd15c2a62fa5e97e75328a73fa032100edb61f795a7e414f101219a23efdfce",
+      "bytes": "34678"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-24_5d.csv",
+      "sha256": "770e7ad2db80c80ccb78bbadcf33a7bae042c83560f37cbd81debb1b7605507c",
+      "bytes": "37292"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-08-29_5d.csv",
+      "sha256": "ea49c6e3a59b84bf5bd61d02177112c31fa14636a0d5c138dae88c744462a7dd",
+      "bytes": "59407"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-03_5d.csv",
+      "sha256": "5e2e5625cff05f39dad644e1df054acc9101d56f686b7074a00b2c90835b76e1",
+      "bytes": "37760"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-08_5d.csv",
+      "sha256": "de94365f0a3afba056ecd1a5b10f7f8de41333fde6bdfd97434c28e679e29d65",
+      "bytes": "27215"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-13_5d.csv",
+      "sha256": "58ceba942df10bcb9ad45e2be3f7052e4ccc0329d1d422bd04e4b933522d4d36",
+      "bytes": "51605"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-18_5d.csv",
+      "sha256": "467e1baf2263717e3447a4c59d6ad215d2284fd386bf59e5dff29cdc92ac3923",
+      "bytes": "66830"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-23_5d.csv",
+      "sha256": "043238593b924bbb3e04dd93adf1b399e09f96a4af3dab05e08edff04076c6a3",
+      "bytes": "74554"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-09-28_5d.csv",
+      "sha256": "0686bb4c3dd348ea318e6bb3a33334103ec72418e3f5e9dc1986fdc2e9db635a",
+      "bytes": "42800"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-03_5d.csv",
+      "sha256": "ae4bd844e87f325a9e0ed8144f129111d7299220180673eec6b1bff6479b1596",
+      "bytes": "40392"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-08_5d.csv",
+      "sha256": "7e84609beff6ede74e1e49025688029ed04ce7f99749627fd66b3042dbe2f11c",
+      "bytes": "44850"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-13_5d.csv",
+      "sha256": "88edd9ed87173b3925d1d08c461b0b00f1eca955e7ba91b2ce0062d9e6c1bb45",
+      "bytes": "21629"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-18_5d.csv",
+      "sha256": "1034ac2f1e9ef74d221f05fa9bf9d2dbd9acf6592fb940bd951da80318858afa",
+      "bytes": "50938"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-23_5d.csv",
+      "sha256": "4967d7159de44ea9c3378da785b13f4efc181d5f4dd657e9f8a210ce096b0fc1",
+      "bytes": "46283"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-10-28_5d.csv",
+      "sha256": "6f92c861c82a5f48b5b40c6dd65a8420674e0e75ccb9b0891fa4e7348d729c29",
+      "bytes": "43733"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-02_5d.csv",
+      "sha256": "23ebb73a4fe1120c0cca6d4b1d14644ad8392561adb4444db18a9ec4ead7cc7f",
+      "bytes": "45235"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-07_5d.csv",
+      "sha256": "22368ddf4fe73ecb7c786ece9016229e2430a0b36edda2807be49242cbaab6a8",
+      "bytes": "45606"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-12_5d.csv",
+      "sha256": "f51144a90ada5e799e4454bd845d41cc0de5c8e69fae1a6487b1cf8d20f5302c",
+      "bytes": "71339"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-17_5d.csv",
+      "sha256": "5860ccbf0b40b346d2a9597d7d93e333a4ffb9b624e0d36f6460e8249496c9e9",
+      "bytes": "55305"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-22_5d.csv",
+      "sha256": "80fd1e0355a507aadbcab6273b28ccb11872465634fa4dc0fb7975cb54d73ec1",
+      "bytes": "35400"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-11-27_5d.csv",
+      "sha256": "3382e65e568da29cd2b055d0b16efea6daca07806bf4b5744753ab49dc044c0c",
+      "bytes": "55298"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-02_5d.csv",
+      "sha256": "e2b4029ea4f21c5eae11aa562c6508202a5c6f77bd64e93fe58da4a93354bc67",
+      "bytes": "72333"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-07_5d.csv",
+      "sha256": "ce5c8779146797084ed083373b82d0d91b316ce2b9c5b32fd803d36be3d91b8b",
+      "bytes": "49127"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-12_5d.csv",
+      "sha256": "bee1f52f20979f63fccefc40ebc42777a28881ded2cd9617523bcfba7752b4ab",
+      "bytes": "59142"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-17_5d.csv",
+      "sha256": "4d32ea0cf2159232dad3bbbd4fcc008377e75d43efc4ca4420c4a4d1ef4fea2e",
+      "bytes": "58815"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-22_5d.csv",
+      "sha256": "f1ae87f6a951c9c24bd0497d144b63e613ba293a299c6ed94787a84399f9d6d0",
+      "bytes": "59481"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2019-12-27_5d.csv",
+      "sha256": "72ae9057ed45fb7458621729026e007e4e766ca8c8f9106daaeb361b6040dce7",
+      "bytes": "41604"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-01_5d.csv",
+      "sha256": "c91e0834307648432c43846341eb264fbbef6ebd86a1fd283ba5b37578537d95",
+      "bytes": "65964"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-06_5d.csv",
+      "sha256": "53cdb2f0759c8683eea5b581be44d58a4a776faf079bc4ae9f8be757366f1f58",
+      "bytes": "43279"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-11_5d.csv",
+      "sha256": "c3eaf03a4d7ddf3ef22f2e3deacadf9442dc8c22045ca67e3ff9993ec213b2b5",
+      "bytes": "34582"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-16_5d.csv",
+      "sha256": "20574e51dc2d2fa1a99c3658283c3a944c00da878212505e3233caa792a5b335",
+      "bytes": "57358"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-21_5d.csv",
+      "sha256": "e8030aa25d0f5514791822555e105c0c33b0eddd6003f32427c0f466613e20aa",
+      "bytes": "68947"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-26_5d.csv",
+      "sha256": "5763758c5431c641b6e845cc9914f66053222952821580aae105ffdda65ec26c",
+      "bytes": "77197"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-01-31_5d.csv",
+      "sha256": "a487b845760f17c254657ed5a52df171d4757752de8941772111ed436d8fafa5",
+      "bytes": "55949"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-02-05_5d.csv",
+      "sha256": "b31a79b21e8bb7d6324b8c245e76a76b6aa9eae9ba0a6a8d9981dd52b81de97e",
+      "bytes": "40611"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-02-10_5d.csv",
+      "sha256": "bf5cec6cb3215247334b41dffc6c860b88cde72e94010b6433ccb8950593a3ff",
+      "bytes": "127825"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-02-15_5d.csv",
+      "sha256": "d1824b9cefe1f3a27c0bebf9b94a1272e0dca5502be788e1f5b53f598bfb03aa",
+      "bytes": "82276"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-02-20_5d.csv",
+      "sha256": "1c37558e45bf32c286905c76115ef4de6570ae415e09b6dad188e431b1bdd63d",
+      "bytes": "114681"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-02-25_5d.csv",
+      "sha256": "fceb32f319fff636dc428156dfe4b244fa5a26f7fc608fd79b0a3e2b01233cde",
+      "bytes": "110676"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-01_5d.csv",
+      "sha256": "a746a17007cbce88708c6da53e39815f22231ac41901a9767513edf05c791a04",
+      "bytes": "95492"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-06_5d.csv",
+      "sha256": "a33a684fa11d58ed9d53fae14eb8aaca01a6ad7df7a1af069ece05f6d3b9011a",
+      "bytes": "85621"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-11_5d.csv",
+      "sha256": "afff9d6c7f6d886b2eac35efd402e6df8f7ee2c756376d50ee2d5e5cb46e592e",
+      "bytes": "44624"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-16_5d.csv",
+      "sha256": "51615b3315be1e52932f207a4092351ae6132665a626f566120971447a8c1193",
+      "bytes": "60679"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-21_5d.csv",
+      "sha256": "33bb8819fe8a096796bdcf0a9fcd83a2d1b798298ec128e3143a91505dd8087b",
+      "bytes": "79956"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-26_5d.csv",
+      "sha256": "2978d185add49fff68dccbd32f7c5da7310af19125f1d0980e7484c67bcce92d",
+      "bytes": "51106"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-03-31_5d.csv",
+      "sha256": "cdd3f462e7b0277a653ef0cd39515c5335f4500b545862202295f181daac0aa6",
+      "bytes": "76978"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-05_5d.csv",
+      "sha256": "43139b747db34f0a5bfc9ba13865417c697c82b3ae4564365a42ddfcfa83072a",
+      "bytes": "100460"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-10_5d.csv",
+      "sha256": "3e5524fc18f40aa0d96163a7529860ea37950e147799df165eb1a5e5e8fe733d",
+      "bytes": "94875"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-15_5d.csv",
+      "sha256": "dc85b0829e20c54da918331aa0c78bff761858609cbb72f16ca685b3ac6d2b32",
+      "bytes": "57861"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-20_5d.csv",
+      "sha256": "6cfae40eda68739a2196a76fa61f942e0e030dc096ef5a37859ab383a88a81f4",
+      "bytes": "65131"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-25_5d.csv",
+      "sha256": "a506f35939430b53a000808ac5dfbb33292596a31bb37eae79e3c5a9351ee221",
+      "bytes": "26598"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-04-30_5d.csv",
+      "sha256": "ac360b4eda33bb404b07622e8155e0d918660e3a1ee3649502d1ca878ac8790c",
+      "bytes": "46645"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-05_5d.csv",
+      "sha256": "945acde85a589fbc2dd0d9d53ffdb8548b0b45caf991ab892d1110425a942618",
+      "bytes": "79791"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-10_5d.csv",
+      "sha256": "3e1534f27444b080a0faef92344eff49aa565149effff8fb03a9ee78bdf00065",
+      "bytes": "38891"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-15_5d.csv",
+      "sha256": "72e2caec1fa9dd896e3af19f9908bcba38eb4a28c2cc08445fb767676a879fe4",
+      "bytes": "52399"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-20_5d.csv",
+      "sha256": "a833f46b21b3f49391248b67f75e7b326967cc2c5dec4d6ece407e51ad895a6c",
+      "bytes": "23521"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-25_5d.csv",
+      "sha256": "5dcd22e3de7bdab4ade17a215c2fc5d0c811ea912b5105e5f8e25276d1f6f923",
+      "bytes": "54405"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-05-30_5d.csv",
+      "sha256": "490ca6e055b7161c496a605c25111a338be41e301b82b8d15ffe4ea98e0df0bf",
+      "bytes": "32489"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-04_5d.csv",
+      "sha256": "f815a8af2d492db3d55952ddf879854360e61d1628622ca055dad79518569c96",
+      "bytes": "36258"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-09_5d.csv",
+      "sha256": "91619bf82fdf2cc6a4c922da59000a1599da66c84ff24d8ee89e6d177881f8a7",
+      "bytes": "31674"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-14_5d.csv",
+      "sha256": "1fbb75759f8199cb5ca2c3512dd04ba627b58e78d52d583eddcdd5f57b7aaf71",
+      "bytes": "21799"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-19_5d.csv",
+      "sha256": "49b34c0d34828a6df1593713916b502d642f4d1ed0643690ea82825462bfd40e",
+      "bytes": "21214"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-24_5d.csv",
+      "sha256": "358932a515b981058b8d9d671c6aed0d76a9628115369405729f264e0f693b79",
+      "bytes": "32240"
+    },
+    {
+      "path": "data/raw/firms_api/VIIRS_NOAA20_SP/VIIRS_NOAA20_SP_2020-06-29_5d.csv",
+      "sha256": "644cff3d5a30cfd25bef0357db19c2d74328c2915720ec81b88430cd32d6e98f",
+      "bytes": "19657"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2000_Chile.csv",
+      "sha256": "6356b1b666c23831522fd4cbeddf01c46e3be728755e45734968a210c77c1a72",
+      "bytes": "15947"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2001_Chile.csv",
+      "sha256": "758502304f6dc8c2cec240163d9a5f0239ba6c13468d97381b3c2aff0b216b2c",
+      "bytes": "122213"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2002_Chile.csv",
+      "sha256": "af647b0adc85282cc101280f489e8cb61f249b602be8bd424f567c9a2462af34",
+      "bytes": "165069"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2003_Chile.csv",
+      "sha256": "fbb8ffaff18f6346fc80c1adf589674dcd2b9a479ae45d149018ce4caf20960d",
+      "bytes": "443906"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2004_Chile.csv",
+      "sha256": "6e46386aad27380b89e015e4d6e9787150c95f9d92c397f2557eba7a9d209f8e",
+      "bytes": "510965"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2005_Chile.csv",
+      "sha256": "62e61ba9d1fdd7093672a0dd130fbfc2715e67961f044fa81d2a9c90c4e7e929",
+      "bytes": "565559"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2006_Chile.csv",
+      "sha256": "f85f90f3db646fdfd7af85d4209040e7ee913d1de451b4afb6664051f312b8f2",
+      "bytes": "480654"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2007_Chile.csv",
+      "sha256": "9234abaf0e8484c476f88f08f325f748d2b671b634ff5d782f84cc2d65823b55",
+      "bytes": "539375"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2008_Chile.csv",
+      "sha256": "eab901ec9f71c01e852e00e14df3b17fe3067767d1b3fed6cca6e6ac1686d7b2",
+      "bytes": "668400"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2009_Chile.csv",
+      "sha256": "481e500dd44ccec19fd2c4cda3e2598d8476cbd196ae4d15c69b5768296fbdf1",
+      "bytes": "654555"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2010_Chile.csv",
+      "sha256": "2b7a9652c5962315e31eed6908a4c701206bcbd3c157714a1d75a1e60038a777",
+      "bytes": "559031"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2011_Chile.csv",
+      "sha256": "2305add869fdd5b598633711dec3f4fb4a61067c50658380ad06eedd269ddbda",
+      "bytes": "600489"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2012_Chile.csv",
+      "sha256": "8ef73f85e4f81191ddc82c12c29f8569b126e98186f4e83f3b0629d8a7851f44",
+      "bytes": "586878"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2013_Chile.csv",
+      "sha256": "1427ffc32505176703811a7e8e914f93e666e82fa4956c926d9db8363de78725",
+      "bytes": "529441"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2014_Chile.csv",
+      "sha256": "c53edb3a3310bcf28c5ef8eff16eca5d42bf5e3a7105f07a8707ea25b9d5dd50",
+      "bytes": "566674"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2015_Chile.csv",
+      "sha256": "30fe437e28ea7289f7f25c827f08006432df1b3236babc6a78ae0476310e3cfa",
+      "bytes": "756992"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2016_Chile.csv",
+      "sha256": "14e3c5bb212d4c8f4846e77becec475d6e5b73ff3e2c89a2a1da87101e27a40b",
+      "bytes": "558505"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2017_Chile.csv",
+      "sha256": "386b8fbb1934d5b0981549d27ebc10df8f273ac6542492b282371aa25e9a53cc",
+      "bytes": "1315453"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2018_Chile.csv",
+      "sha256": "12ad07011b09def899da75dd793e5a954a11a82d32ca59299a53f862c697db8a",
+      "bytes": "573150"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2019_Chile.csv",
+      "sha256": "725a48a8531514edeb619351b10496ecbf883a4dc604e21c10b816536f40f5b7",
+      "bytes": "611853"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2020_Chile.csv",
+      "sha256": "a64eae582638e4b646a56962e4d496401e061d7d0e0afe98406ab062250b42a8",
+      "bytes": "677635"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2021_Chile.csv",
+      "sha256": "4f223ff2e3a181246ed618227a4a6961d58c96a46eec5e47b6ab758ad93f0643",
+      "bytes": "605538"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2022_Chile.csv",
+      "sha256": "189a11be2cf269fe6de0eb14c297cb60ba3bc9d1ebd658ccb87a499fb4d380ea",
+      "bytes": "605800"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2023_Chile.csv",
+      "sha256": "75224614c69d06d3c10c07f19d3ca65db4cd62c9614f4771fc37d04eff3efc64",
+      "bytes": "1341774"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2024_Chile.csv",
+      "sha256": "c1c86ecebc767911bd35b18bba1f33cb8a6f1443baf2139555bc902e61338700",
+      "bytes": "526327"
+    },
+    {
+      "path": "data/raw/firms_country/modis/modis_2025_Chile.csv",
+      "sha256": "c225abab2d48f6f52644d1b7295ef3cdabf3ce492bb21d960087acea530cf2ca",
+      "bytes": "547628"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2012_Chile.csv",
+      "sha256": "60e8d51b189a89c6aa8f4f46e2e8b7d280a0a8cfdab9562174af7cf53626b138",
+      "bytes": "1737573"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2013_Chile.csv",
+      "sha256": "59ca55abd316aaf13202affd64ac33fbc25bd7a5038c3d213e1c21c0883c5957",
+      "bytes": "1907758"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2014_Chile.csv",
+      "sha256": "129ff951cc85afd8e9de7e1d8b68d146f991dc462ff8ea6167d44b653cb0cbc8",
+      "bytes": "2009133"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2015_Chile.csv",
+      "sha256": "d9a2923f7eaa5ab65d7fea38c5001356023ae6e29cabdd15961de1b7b50f4190",
+      "bytes": "2766725"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2016_Chile.csv",
+      "sha256": "1189f8b200217b8cdbbbf14008b561242ef39c2fc56ece8eed663f4e3693dcde",
+      "bytes": "2004658"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2017_Chile.csv",
+      "sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc",
+      "bytes": "4398957"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2018_Chile.csv",
+      "sha256": "adbe875112d2cc6e51696133098c4c443806db755ca5682dbd9aff307f383b6f",
+      "bytes": "1849971"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2019_Chile.csv",
+      "sha256": "249d99a517ec826c81972e249869c654af0de39d65f084700b3ed35f8e0c9758",
+      "bytes": "1990774"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2020_Chile.csv",
+      "sha256": "b7fa9a8730acbedcbdac3afd9d92c5690004ff28e29ec3e3f3130147ac25304b",
+      "bytes": "2224611"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2021_Chile.csv",
+      "sha256": "6b6354496f5317eef183226dcc8ac01517f5e58c94e8d926a05c07ec3406185a",
+      "bytes": "1980639"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2022_Chile.csv",
+      "sha256": "6b5255b0f5f2cae3cb3a9fd4c71b2ea16b48b025f1352622c44ded794ab5f453",
+      "bytes": "2360998"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2023_Chile.csv",
+      "sha256": "ced287dac1f1dd4503a5649dbf92afb719595eefbb69e78f6cddd3a81cbc14af",
+      "bytes": "4409079"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2024_Chile.csv",
+      "sha256": "bbf8704aeeb4ca02a2a4ff8057bad2c524ccd7ffd8d4790ed558cc15b1a4ccc5",
+      "bytes": "1737186"
+    },
+    {
+      "path": "data/raw/firms_country/viirs-snpp/viirs-snpp_2025_Chile.csv",
+      "sha256": "c6ad5e85bcb65e7a49f3aa60446dcceedf835bcd3f0ee86769be7df79a3e89cf",
+      "bytes": "2078518"
+    }
+  ],
+  "duckdb_version": "2.0.0",
+  "raw_rows_not_read_before_this_record": true
+}

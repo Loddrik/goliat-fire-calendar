@@ -1,0 +1,17 @@
+{
+  "related_paths": [],
+  "unrelated_names_suppressed": 275,
+  "match_scope": "case-insensitive full path keywords, filenames only; no unrelated file content opened",
+  "keywords": [
+    "nasa",
+    "modis",
+    "viirs",
+    "firms",
+    "fire",
+    "goliat",
+    "snpp",
+    "suomi",
+    "noaa",
+    "hotspot"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "frozen_utc": "2026-11-15T13:06:35.223192+00:00",
+  "scope": "Exactly38 byte-identical raw country files from local copies only; no downloads or expansion after values.",
+  "comparison_unit": "Full original bbox daytime detections before commune assignment, not only municipal detections.",
+  "columns_exact_multiset": [
+    "lat",
+    "lon",
+    "acq_date",
+    "acq_time",
+    "sat",
+    "instrument",
+    "confidence",
+    "frp",
+    "type",
+    "version",
+    "source_kind",
+    "cell_x",
+    "cell_y"
+  ],
+  "primary": "EXCEPT ALL in both directions over all13 columns, no rounding/tolerance added.",
+  "reference_scope": "Terra/Aqua2002-01-01..2025-12-31; SNPP2012-01-01..2025-12-31, no source_kind restriction on reference.",
+  "source_completeness": [
+    {
+      "sat": [
+        "Terra",
+        "Aqua"
+      ],
+      "family": "MODIS",
+      "lo": "2002-01-01",
+      "hi": "2025-12-31",
+      "inventory_relevant_sources": [
+        "data/raw/firms_country/modis/modis_2002_Chile.csv",
+        "data/raw/firms_country/modis/modis_2003_Chile.csv",
+        "data/raw/firms_country/modis/modis_2004_Chile.csv",
+        "data/raw/firms_country/modis/modis_2005_Chile.csv",
+        "data/raw/firms_country/modis/modis_2006_Chile.csv",
+        "data/raw/firms_country/modis/modis_2007_Chile.csv",
+        "data/raw/firms_country/modis/modis_2008_Chile.csv",
+        "data/raw/firms_country/modis/modis_2009_Chile.csv",
+        "data/raw/firms_country/modis/modis_2010_Chile.csv",
+        "data/raw/firms_country/modis/modis_2011_Chile.csv",
+        "data/raw/firms_country/modis/modis_2012_Chile.csv",
+        "data/raw/firms_country/modis/modis_2013_Chile.csv",
+        "data/raw/firms_country/modis/modis_2014_Chile.csv",
+        "data/raw/firms_country/modis/modis_2015_Chile.csv",
+        "data/raw/firms_country/modis/modis_2016_Chile.csv",
+        "data/raw/firms_country/modis/modis_2017_Chile.csv",
+        "data/raw/firms_country/modis/modis_2018_Chile.csv",
+        "data/raw/firms_country/modis/modis_2019_Chile.csv",
+        "data/raw/firms_country/modis/modis_2020_Chile.csv",
+        "data/raw/firms_country/modis/modis_2021_Chile.csv",
+        "data/raw/firms_country/modis/modis_2022_Chile.csv",
+        "data/raw/firms_country/modis/modis_2023_Chile.csv",
+        "data/raw/firms_country/modis/modis_2024_Chile.csv",
+        "data/raw/firms_country/modis/modis_2025_Chile.csv"
+      ],
+      "missing_inventory_sources": [],
+      "complete_relative_to_inventory_only": true
+    },
+    {
+      "sat": [
+        "SNPP"
+      ],
+      "family": "VIIRS_SNPP",
+      "lo": "2012-01-01",
+      "hi": "2025-12-31",
+      "inventory_relevant_sources": [
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2012_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2013_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2014_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2015_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2016_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2017_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2018_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2019_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2020_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2021_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2022_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2023_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2024_Chile.csv",
+        "data/raw/firms_country/viirs-snpp/viirs-snpp_2025_Chile.csv"
+      ],
+      "missing_inventory_sources": [],
+      "complete_relative_to_inventory_only": true
+    }
+  ],
+  "read_semantics": "Separate MODIS and SNPP read_csv file lists; header=true, union_by_name=true, filename=true, all_varchar=true. Original strict casts, bbox and daynight filtering.",
+  "dedup_semantics": "SAT normalized; row_number partition sat,round(lat,4),round(lon,4),date,lpad(time,4), ordered solely source priority. Rank before confidence exactly as original.",
+  "tie_policy": "Report repeated keys and distinct payloads. Nonidentical same-priority ties expose nondeterminism; no new tie-break or winner selected to force equality.",
+  "parse_integrity": "Validate full-file count/min/max against inventory, then strict parser; parse failures are failures, not coercion repairs.",
+  "limitations": [
+    "Completeness only relative to frozen inventory, not observation opportunity or true fire.",
+    "No commune assignment, static-mask rebuild, calibration or publication rerun. MissingTerra2000/2001 and NOAA20/21 prevent whole-pipeline raw reproduction.",
+    "A successful projection onto canonical13 columns is not invertibility of all raw fields or validation of source-priority alternatives."
+  ],
+  "isolated_database": "DuckDB in-memory only; only scratch outputs under assigned audit folder. Never import legacy script or open goliat.duckdb.",
+  "deadline_utc": "2026-11-15T13:23:00+00:00",
+  "fits": 0,
+  "downloads": 0,
+  "production_writes": 0
+}

@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-11-15T13:27:57.945688+00:00",
+  "restored_exact": 956,
+  "expected": 1071,
+  "raw_backup_basename": "goliat-raw-recovery-20261115-1327.tar",
+  "members_hash_verified": 956,
+  "archive_sha256": "32bf13a8cdaceb5daade86baf648d0a3aec9471d5ea9e77e702a432d51aef0e1",
+  "status": "verified_partial_backup_not_full_inventory"
+}

@@ -1,0 +1,9 @@
+{
+  "http_status": 400,
+  "body_bytes": 36,
+  "body_sha256": "dacd806e6bfecdd439f69d5ba8e9b832d976c74937872e1669ccbb5ea2058b90",
+  "mentions_transaction": true,
+  "mentions_limit": true,
+  "mentions_exceed": true,
+  "sanitized_message": "Exceeding allowed transaction limit."
+}

@@ -17,6 +17,16 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 RAW, OUT = ROOT / "data/raw", ROOT / "data/processed"
 BBOX = (-74.0, -38.6, -70.9, -35.9)  # oeste, sur, este, norte (con margen sobre las comunas)
 
+# Read-only frozen-input guard: do not open or modify DuckDB on incomplete inputs.
+try:
+    from .verify_raw_inventory import verify_inventory
+except ImportError:
+    from verify_raw_inventory import verify_inventory
+
+_raw_inventory_check = verify_inventory(ROOT, OUT / "inventory.csv")
+if _raw_inventory_check["status"] != "COMPLETE":
+    raise SystemExit("Raw inventory guard failed: " + json.dumps(_raw_inventory_check, sort_keys=True))
+
 con = duckdb.connect(str(OUT / "goliat.duckdb"))
 con.execute("install spatial; load spatial;") if False else None
 

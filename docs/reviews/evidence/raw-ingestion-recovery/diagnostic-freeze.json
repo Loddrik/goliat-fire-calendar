@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-15T13:08:33.324169+00:00",
+  "diagnostic_code_sha256": "835ab96cab8958ddce3fb3ddafc3d1e147268282cfac32bf3ab72a15f9b15933",
+  "primary_summary_sha256": "95e36c4f787d2512323b44dce70f14b1b67783637c7b876d45550fb96d40340e",
+  "source_sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc",
+  "reconstructed_sha256": "824a80f31c4c27e05ec2fd36551fe40efcba3e57aae7db9098976c7ba88f6397",
+  "canonical_sha256": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+  "scope": "Postprimary projection/candidate diagnosis; does not alter or replace exact13-column primary failure."
+}

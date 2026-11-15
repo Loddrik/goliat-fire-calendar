@@ -1,0 +1,62 @@
+import csv,datetime,hashlib,json,pathlib,collections,sys
+ROOT=pathlib.Path(__file__).resolve().parents[3]
+BASE=ROOT/'.runtime/raw-recovery/network'
+OUT=ROOT/'docs/reviews/evidence/raw-recovery-network'
+if len(sys.argv)>1:
+    if not sys.argv[1].replace('-','').isalnum():raise ValueError('Invalid checkpoint name')
+    OUT=OUT/sys.argv[1]
+def sha(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
+def need(ok,why):
+    if not ok:raise ValueError(why)
+inventory=list(csv.DictReader((ROOT/'data/processed/inventory.csv').open()))
+by_path={q['path']:q for q in inventory}
+need(all(q['path'].startswith('data/raw/firms_') and not pathlib.PurePosixPath(q['path']).is_absolute() and '..' not in pathlib.PurePosixPath(q['path']).parts for q in inventory),'Unsafe inventory path')
+anchor=json.loads((BASE/'source-anchor.json').read_text())
+need(sha(ROOT/'data/processed/inventory.csv')==anchor['inventory_sha256'],'Inventory changed')
+records=[json.loads(line) for line in (BASE/'results.jsonl').read_text().splitlines()]
+exact={q['expected_path']:q for q in records if q['status']=='exact'}
+for path,q in exact.items():
+    expected=by_path[path];file=ROOT/q['stored_relative']
+    need(file.is_file() and file.stat().st_size==int(expected['bytes']) and sha(file)==expected['sha256'],'Exact-file verification failed')
+for q in records:
+    if 'stored_relative' in q:
+        need(sha(ROOT/q['stored_relative'])==q['actual_sha256'],'Stored response hash changed')
+local=json.loads((ROOT/'.runtime/raw-recovery/local-exact-match-audit.json').read_text())
+known={q['expected_path'] for q in local['matches']}
+need(not(known&set(exact)),'Network duplicates local scope')
+remaining=[q for q in inventory if q['path'] not in known|set(exact)]
+unique_responses={q['expected_path']:q for q in records}
+summary={'completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+ 'status':'COMPLETE_EXACT_RECOVERY' if not remaining else 'PARTIAL_EXACT_RECOVERY',
+ 'inventory_total':len(inventory),'prior_local_exact':len(known),'network_exact_unique':len(exact),
+ 'network_exact_bytes':sum(int(by_path[p]['bytes']) for p in exact),'combined_exact_unique':len(known|set(exact)),
+ 'remaining_exact_originals':len(remaining),'requests_attempted':len(records),
+ 'response_payload_bytes_accounted':sum(q['received_bytes'] for q in records),
+ 'payload_budget_bytes':157286400,'attempt_status_counts':dict(collections.Counter(q['status'] for q in records)),
+ 'unresolved_latest_status_counts':dict(collections.Counter(unique_responses[q['path']]['status'] if q['path'] in unique_responses else 'not_attempted' for q in remaining)),
+ 'inventory_sha256':anchor['inventory_sha256'],'helper_sha256':sha(BASE/'recover.py'),
+ 'helper_versions_sha256':{p.name:sha(p) for p in BASE.glob('recover*.py')},
+ 'raw_CANONICAL_files_written':0,'processed_files_written':0,'inventory_modified':False,
+ 'L2_scientific_bytes_downloaded':0,'credential_values_or_private_API_URLs_persisted':False,
+ 'scope':'SHA256+byte-exact staging only; unmatched responses remain quarantine; no raw paths restored by this task'}
+summary['terminated_inflight_read_bound_bytes']=5*max(max(int(q['bytes'])*4,4*1024*1024)+65536 for q in inventory if 'firms_api' in q['path'])
+summary['payload_plus_terminated_read_bound_bytes']=summary['response_payload_bytes_accounted']+summary['terminated_inflight_read_bound_bytes']
+need(summary['response_payload_bytes_accounted']<summary['payload_budget_bytes'],'Transfer budget exceeded')
+need(summary['payload_plus_terminated_read_bound_bytes']<summary['payload_budget_bytes'],'Conservative inflight transfer bound exceeded')
+OUT.mkdir(parents=True,exist_ok=True)
+key=(ROOT/'.runtime/secrets/firms-map-key').read_bytes().strip()
+serialized=json.dumps(records,indent=2).encode();need(key not in serialized,'Secret present in metadata')
+(OUT/'results.json').write_bytes(serialized+b'\n')
+(OUT/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+(OUT/'helper.py.txt').write_bytes((BASE/'recover.py').read_bytes())
+(OUT/'finalizer.py.txt').write_bytes(pathlib.Path(__file__).read_bytes())
+with (OUT/'exact-files.csv').open('w',newline='') as f:
+    writer=csv.DictWriter(f,fieldnames=['path','bytes','sha256','staged_relative']);writer.writeheader()
+    for path in sorted(exact):
+        writer.writerow({'path':path,'bytes':by_path[path]['bytes'],'sha256':by_path[path]['sha256'],'staged_relative':exact[path]['stored_relative']})
+with (OUT/'unresolved.csv').open('w',newline='') as f:
+    writer=csv.DictWriter(f,fieldnames=['path','bytes','sha256','latest_status']);writer.writeheader()
+    for q in remaining:writer.writerow({**{k:q[k] for k in ['path','bytes','sha256']},'latest_status':unique_responses[q['path']]['status'] if q['path'] in unique_responses else 'not_attempted'})
+manifest={'completed_utc':summary['completed_utc'],'output_sha256':{p.name:sha(p) for p in OUT.iterdir() if p.is_file() and p.name!='manifest.json'},'checkpoint_manifest_sha256':{str(p.relative_to(OUT)):sha(p) for p in OUT.glob('checkpoint-*/manifest.json')},'canonical_raw_and_processed_mutated':False}
+(OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+print(json.dumps(summary))

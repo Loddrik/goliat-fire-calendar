@@ -1,0 +1,53 @@
+{
+  "completed_utc": "2026-11-15T13:08:34.247046+00:00",
+  "primary_13_column_failure_unchanged": true,
+  "candidate_source": "data/raw/firms_country/viirs-snpp/viirs-snpp_2017_Chile.csv",
+  "candidate_source_sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc",
+  "raw_candidates": [
+    {
+      "latitude": "-36.91106",
+      "longitude": "-72.57348",
+      "acq_date": "2017-01-26",
+      "acq_time": "1933",
+      "satellite": "N",
+      "instrument": "VIIRS",
+      "confidence": "n",
+      "frp": "70.66",
+      "type": "0",
+      "version": "2"
+    },
+    {
+      "latitude": "-36.91114",
+      "longitude": "-72.57353",
+      "acq_date": "2017-01-26",
+      "acq_time": "1933",
+      "satellite": "N",
+      "instrument": "VIIRS",
+      "confidence": "n",
+      "frp": "67.6",
+      "type": "0",
+      "version": "2"
+    }
+  ],
+  "raw_candidates_differ_not_identical_duplicate_rows": true,
+  "same_priority_order_without_tiebreak": "row_number partition normalized sat,rounded4coords,date,time order by prio only",
+  "projection_diagnostics_not_primary_pass": {
+    "retained_columns_without_lat_lon_frp": {
+      "rebuilt_minus_canonical": 0,
+      "canonical_minus_rebuilt": 0
+    },
+    "distinct_satellite_cell_days": {
+      "rebuilt_minus_canonical": 0,
+      "canonical_minus_rebuilt": 0
+    }
+  },
+  "scope_limits": [
+    "The two rows share registered cell-day/type/confidence, but differ in coordinates/FRP.",
+    "Projection agreement is diagnostic, not proof of full ingestion, all masks or models; it does not justify changing the primary.",
+    "Distinct native observations are not distinct physical fires."
+  ],
+  "legacy_database_opened": false,
+  "production_writes": 0,
+  "new_fits": 0,
+  "downloads": 0
+}
