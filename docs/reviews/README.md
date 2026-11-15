@@ -18,6 +18,7 @@ Para una explicación visual del proceso, los consejos y los límites: [informe 
 |35A: presupuestos separados|Primaria negativa:ΔMAE held R−G=+0,041975, mejora 1/4. Complemento separado completa diagnósticos B/C omitidos, sin editar original.|[Reporte35A](2026-11-15-group-budget-report.md) · [Revisión independiente](2026-11-15-group-budget-independent-review.md)|
 |36: adyacencia diaria y placebo|Cubo íntegro: 5184 claves, 10368 controles Aqua exactos; D real=1 en105meses y placebo en59,110discordantes. Integridad verificada, sin utilidad predictiva demostrada.|[Reporte36](2026-11-15-daily-adjacency-report.md) · [Revisión independiente](2026-11-15-daily-adjacency-independent-review.md)|
 |37: contexto diario como predictor|No cumple el doble criterio: real−placebo −0,004927; real−G21 +0,010794. Sin sustitución de G21 ni cambio de semilla o κ.|[Reporte37](2026-11-15-daily-context-model-report.md) · [Revisión independiente](2026-11-15-daily-context-independent-review.md)|
+|39: calidad de forecast completo|CRPS(F21)−CRPS(δB)=−0,618164, favorable en los cuatro regímenes. Hay costes adversos territoriales y en extremos; no certifica calibración ni rehabilita37.|[Reporte39](2026-11-15-crps-report.md) · [Revisión independiente](2026-11-15-crps-independent-review.md)|
 
 ## Cómo se decide y revisa
 

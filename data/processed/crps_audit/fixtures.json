@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-11-15T08:53:07.252181+00:00",
+  "tests": 5,
+  "passed": true,
+  "oracle": "independent CDF integral plus Fraction double-sum analytic fixtures",
+  "only_synthetic_Y": true,
+  "fits": 0,
+  "solvers": 0
+}

@@ -1,0 +1,91 @@
+{
+  "status": "independent_full_pass",
+  "completed_utc": "2026-11-15T08:57:35.997463+00:00",
+  "reviewer_freeze_sha256": "dec2c6125bf60472a9a275b8723d36ab1bd1077813f327a53febe36ae3305606",
+  "producer_manifest_sha256_before_and_after": "aec1533e33b1d354c6102daf51d51d295d449f2afc15cf5ae50d2fe9719779ea",
+  "producer_artifacts_modified": false,
+  "all_frozen_CDFs_reconstructed": 10368,
+  "atom_elements": 444826,
+  "held_full_CDF_parent_exact_checks": 5184,
+  "original_atoms_and_weights_exact_against_frozen21_restoration": true,
+  "independent_JSON_weight_max_abs_difference": 5.551115123125783e-17,
+  "normalized_weights_exact_single_fsum_division": true,
+  "actual_CRPS_rows_independent_integral": 10368,
+  "max_abs_integral_vs_producer_raw_CRPS": 2.1316282072803006e-14,
+  "all_delta_B_scores_equal_MAE": true,
+  "clamped_rows": 0,
+  "population_reports_verified": 216,
+  "method_report_sets_verified": 432,
+  "all_per_CUT_and_worst_original_B_CUT_verified": true,
+  "independent_integral_primary": {
+    "regimes": [
+      {
+        "regime": "08_backward",
+        "n": 1008,
+        "difference_F21_minus_delta_B": -0.47839550408894704
+      },
+      {
+        "regime": "08_forward",
+        "n": 1008,
+        "difference_F21_minus_delta_B": -1.1789937234445416
+      },
+      {
+        "regime": "16_backward",
+        "n": 1584,
+        "difference_F21_minus_delta_B": -0.35442856148252444
+      },
+      {
+        "regime": "16_forward",
+        "n": 1584,
+        "difference_F21_minus_delta_B": -0.46083774643594133
+      }
+    ],
+    "equal_four_difference": -0.6181638838629886
+  },
+  "primary": {
+    "regimes": [
+      {
+        "regime": "08_backward",
+        "n": 1008,
+        "mean_CRPS_F21": 1.6749993501114826,
+        "mean_CRPS_delta_B": 2.15339485420043,
+        "difference_F21_minus_delta_B": -0.478395504088947
+      },
+      {
+        "regime": "08_forward",
+        "n": 1008,
+        "mean_CRPS_F21": 1.8464397058285358,
+        "mean_CRPS_delta_B": 3.0254334292730776,
+        "difference_F21_minus_delta_B": -1.1789937234445416
+      },
+      {
+        "regime": "16_backward",
+        "n": 1584,
+        "mean_CRPS_F21": 1.47502718014427,
+        "mean_CRPS_delta_B": 1.8294557416267945,
+        "difference_F21_minus_delta_B": -0.35442856148252433
+      },
+      {
+        "regime": "16_forward",
+        "n": 1584,
+        "mean_CRPS_F21": 1.6907906942663056,
+        "mean_CRPS_delta_B": 2.1516284407022472,
+        "difference_F21_minus_delta_B": -0.46083774643594116
+      }
+    ],
+    "equal_four_difference": -0.6181638838629885,
+    "row_weighted_secondary": -0.5713792772177094,
+    "negative_primary_favors_F21_over_delta_B": true
+  },
+  "fits": 0,
+  "solvers": 0,
+  "science_downloads": 0,
+  "CDF_queries_are_not_new_model_fits": true,
+  "limitations": [
+    "F21 versus deltaB is a whole-distribution forecast comparison, combining location and spread.",
+    "No calibration, marginal-to-joint54 coherence, pure uncertainty value, additional Aqua value or physical truth established.",
+    "Retrospective repeated targets and overlapping regimes, not fresh holdout or IID replicates.",
+    "37/35/23 negatives, 30B failure and G1physicalfalse unchanged."
+  ],
+  "RSS_bytes": 281804800
+}

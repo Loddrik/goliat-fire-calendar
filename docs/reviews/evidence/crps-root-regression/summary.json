@@ -1,0 +1,8 @@
+{
+  "tests_run": 348,
+  "passed": true,
+  "tracked_only": true,
+  "source_head": "c84d4f4aa0b0c5cc7726f80d5c634feec7152e76",
+  "no_experiment_driver_invoked": true,
+  "scope": "Regression of tracked code through39; no new scientific fit, solver, data acquisition or alternative forecast."
+}

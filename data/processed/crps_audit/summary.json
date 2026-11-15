@@ -1,0 +1,3237 @@
+{
+  "status": "retrospective-frozen21-marginal-CDF-CRPS-audit",
+  "primary": {
+    "definition": "equal-four held CRPS(F21)-MAE(B); lower better",
+    "regimes": [
+      {
+        "regime": "08_backward",
+        "n": 1008,
+        "mean_CRPS_F21": 1.6749993501114826,
+        "mean_CRPS_delta_B": 2.15339485420043,
+        "difference_F21_minus_delta_B": -0.478395504088947
+      },
+      {
+        "regime": "08_forward",
+        "n": 1008,
+        "mean_CRPS_F21": 1.8464397058285358,
+        "mean_CRPS_delta_B": 3.0254334292730776,
+        "difference_F21_minus_delta_B": -1.1789937234445416
+      },
+      {
+        "regime": "16_backward",
+        "n": 1584,
+        "mean_CRPS_F21": 1.47502718014427,
+        "mean_CRPS_delta_B": 1.8294557416267945,
+        "difference_F21_minus_delta_B": -0.35442856148252433
+      },
+      {
+        "regime": "16_forward",
+        "n": 1584,
+        "mean_CRPS_F21": 1.6907906942663056,
+        "mean_CRPS_delta_B": 2.1516284407022472,
+        "difference_F21_minus_delta_B": -0.46083774643594116
+      }
+    ],
+    "equal_four_difference": -0.6181638838629885,
+    "row_weighted_difference": -0.5713792772177094,
+    "dependent_regimes_not_IID": true
+  },
+  "reports": {
+    "08_backward": {
+      "all54": {
+        "all_months": {
+          "n": 2592,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 3809.1977265375376,
+              "mean_CRPS": 1.4695978883246672
+            },
+            "delta_B": {
+              "sum_CRPS": 5004.516070309572,
+              "mean_CRPS": 1.9307546567552363
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4611567684305688
+        },
+        "zero_reference": {
+          "n": 1253,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 232.08746094765002,
+              "mean_CRPS": 0.18522542773156425
+            },
+            "delta_B": {
+              "sum_CRPS": 261.64125176906134,
+              "mean_CRPS": 0.20881185296812557
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.023586425236561324
+        },
+        "positive_reference": {
+          "n": 1339,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 3577.1102655898876,
+              "mean_CRPS": 2.6714789138087287
+            },
+            "delta_B": {
+              "sum_CRPS": 4742.87481854051,
+              "mean_CRPS": 3.5421021796419048
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8706232658331763
+        },
+        "aqua_zero_reference_positive": {
+          "n": 586,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 908.9386614119954,
+              "mean_CRPS": 1.5510898658907772
+            },
+            "delta_B": {
+              "sum_CRPS": 1256.935301072877,
+              "mean_CRPS": 2.1449407868137835
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5938509209230064
+        },
+        "both_zero": {
+          "n": 1170,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 136.58868735275536,
+              "mean_CRPS": 0.11674246782286783
+            },
+            "delta_B": {
+              "sum_CRPS": 57.73610216978353,
+              "mean_CRPS": 0.049347095871609854
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.06739537195125796
+        },
+        "reference_50_plus": {
+          "n": 32,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 582.699999173399,
+              "mean_CRPS": 18.209374974168718
+            },
+            "delta_B": {
+              "sum_CRPS": 591.406147767515,
+              "mean_CRPS": 18.481442117734847
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.2720671435661274
+        }
+      },
+      "SOURCE": {
+        "all_months": {
+          "n": 1584,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2120.798381625163,
+              "mean_CRPS": 1.338887867187603
+            },
+            "delta_B": {
+              "sum_CRPS": 2833.8940572755387,
+              "mean_CRPS": 1.7890745311082943
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4501866639206917
+        },
+        "zero_reference": {
+          "n": 761,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 139.71848493895715,
+              "mean_CRPS": 0.18359853474238785
+            },
+            "delta_B": {
+              "sum_CRPS": 155.06196139976373,
+              "mean_CRPS": 0.20376079027564223
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.02016225553325437
+        },
+        "positive_reference": {
+          "n": 823,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1981.0798966862058,
+              "mean_CRPS": 2.407144467419448
+            },
+            "delta_B": {
+              "sum_CRPS": 2678.832095875775,
+              "mean_CRPS": 3.2549600192901273
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8478155518706791
+        },
+        "aqua_zero_reference_positive": {
+          "n": 376,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 544.896992235578,
+              "mean_CRPS": 1.4491941282861114
+            },
+            "delta_B": {
+              "sum_CRPS": 737.9353010728771,
+              "mean_CRPS": 1.96259388583212
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5133997575460085
+        },
+        "both_zero": {
+          "n": 705,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 77.70659862228656,
+              "mean_CRPS": 0.11022212570537102
+            },
+            "delta_B": {
+              "sum_CRPS": 57.73610216978353,
+              "mean_CRPS": 0.08189518038267168
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.028326945322699332
+        },
+        "reference_50_plus": {
+          "n": 11,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 191.9532049957927,
+              "mean_CRPS": 17.450291363253882
+            },
+            "delta_B": {
+              "sum_CRPS": 161.0151267682391,
+              "mean_CRPS": 14.637738797112643
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 2.812552566141237
+        }
+      },
+      "held": {
+        "all_months": {
+          "n": 1008,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1688.3993449123748,
+              "mean_CRPS": 1.6749993501114826
+            },
+            "delta_B": {
+              "sum_CRPS": 2170.6220130340334,
+              "mean_CRPS": 2.15339485420043
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.478395504088947
+        },
+        "zero_reference": {
+          "n": 492,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 92.36897600869285,
+              "mean_CRPS": 0.18774182115587978
+            },
+            "delta_B": {
+              "sum_CRPS": 106.57929036929761,
+              "mean_CRPS": 0.2166245739213366
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.028882752765456834
+        },
+        "positive_reference": {
+          "n": 516,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1596.0303689036818,
+              "mean_CRPS": 3.0930821102784534
+            },
+            "delta_B": {
+              "sum_CRPS": 2064.0427226647357,
+              "mean_CRPS": 4.000082795861891
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9070006855834377
+        },
+        "aqua_zero_reference_positive": {
+          "n": 210,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 364.04166917641754,
+              "mean_CRPS": 1.733531757982941
+            },
+            "delta_B": {
+              "sum_CRPS": 519.0,
+              "mean_CRPS": 2.4714285714285715
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7378968134456311
+        },
+        "both_zero": {
+          "n": 465,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 58.882088730468794,
+              "mean_CRPS": 0.12662814780745976
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.12662814780745976
+        },
+        "reference_50_plus": {
+          "n": 21,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 390.74679417760626,
+              "mean_CRPS": 18.60699019893363
+            },
+            "delta_B": {
+              "sum_CRPS": 430.39102099927595,
+              "mean_CRPS": 20.494810523775048
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.8878203248414145
+        }
+      },
+      "published14": {
+        "all_months": {
+          "n": 672,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1618.1276074052428,
+              "mean_CRPS": 2.407927987210183
+            },
+            "delta_B": {
+              "sum_CRPS": 1944.7294577101106,
+              "mean_CRPS": 2.8939426454019506
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.48601465819176765
+        },
+        "zero_reference": {
+          "n": 217,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 49.58802630533412,
+              "mean_CRPS": 0.22851625025499595
+            },
+            "delta_B": {
+              "sum_CRPS": 75.82782657302747,
+              "mean_CRPS": 0.3494369888157947
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.1209207385607988
+        },
+        "positive_reference": {
+          "n": 455,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1568.5395810999087,
+              "mean_CRPS": 3.447339738681118
+            },
+            "delta_B": {
+              "sum_CRPS": 1868.901631137083,
+              "mean_CRPS": 4.107476112389193
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.660136373708076
+        },
+        "aqua_zero_reference_positive": {
+          "n": 162,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 308.49454899810064,
+              "mean_CRPS": 1.9042873394944484
+            },
+            "delta_B": {
+              "sum_CRPS": 421.0332155645209,
+              "mean_CRPS": 2.59897046644766
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6946831269532114
+        },
+        "both_zero": {
+          "n": 198,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 22.413511487573846,
+              "mean_CRPS": 0.11319955296754468
+            },
+            "delta_B": {
+              "sum_CRPS": 1.6578947376063984,
+              "mean_CRPS": 0.008373205745486861
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.10482634722205782
+        },
+        "reference_50_plus": {
+          "n": 16,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 309.07312776880593,
+              "mean_CRPS": 19.31707048555037
+            },
+            "delta_B": {
+              "sum_CRPS": 284.3468973726503,
+              "mean_CRPS": 17.77168108579064
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 1.5453893997597297
+        }
+      },
+      "remaining40": {
+        "all_months": {
+          "n": 1920,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2191.070119132295,
+              "mean_CRPS": 1.141182353714737
+            },
+            "delta_B": {
+              "sum_CRPS": 3059.7866125994615,
+              "mean_CRPS": 1.593638860728886
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4524565070141492
+        },
+        "zero_reference": {
+          "n": 1036,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 182.4994346423159,
+              "mean_CRPS": 0.1761577554462509
+            },
+            "delta_B": {
+              "sum_CRPS": 185.81342519603388,
+              "mean_CRPS": 0.17935658802705973
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.0031988325808088784
+        },
+        "positive_reference": {
+          "n": 884,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2008.5706844899792,
+              "mean_CRPS": 2.272138783359705
+            },
+            "delta_B": {
+              "sum_CRPS": 2873.9731874034273,
+              "mean_CRPS": 3.251100890727859
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9789621073681544
+        },
+        "aqua_zero_reference_positive": {
+          "n": 424,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 600.4441124138948,
+              "mean_CRPS": 1.4161417745610727
+            },
+            "delta_B": {
+              "sum_CRPS": 835.9020855083562,
+              "mean_CRPS": 1.9714671828027268
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5553254082416543
+        },
+        "both_zero": {
+          "n": 972,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 114.17517586518152,
+              "mean_CRPS": 0.11746417270080402
+            },
+            "delta_B": {
+              "sum_CRPS": 56.07820743217713,
+              "mean_CRPS": 0.057693629045449724
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.0597705436553543
+        },
+        "reference_50_plus": {
+          "n": 16,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 273.626871404593,
+              "mean_CRPS": 17.10167946278706
+            },
+            "delta_B": {
+              "sum_CRPS": 307.05925039486476,
+              "mean_CRPS": 19.191203149679048
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -2.0895236868919853
+        }
+      },
+      "SOURCE_published14": {
+        "all_months": {
+          "n": 288,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 740.1014220610301,
+              "mean_CRPS": 2.5697966043785767
+            },
+            "delta_B": {
+              "sum_CRPS": 857.5042585790461,
+              "mean_CRPS": 2.977445342288355
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4076487379097777
+        },
+        "zero_reference": {
+          "n": 76,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 14.348435408422429,
+              "mean_CRPS": 0.1887952027424004
+            },
+            "delta_B": {
+              "sum_CRPS": 11.04433634855244,
+              "mean_CRPS": 0.14532021511253207
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.04347498762986827
+        },
+        "positive_reference": {
+          "n": 212,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 725.7529866526078,
+              "mean_CRPS": 3.4233631445877726
+            },
+            "delta_B": {
+              "sum_CRPS": 846.4599222304937,
+              "mean_CRPS": 3.99273548221931
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5693723376315376
+        },
+        "aqua_zero_reference_positive": {
+          "n": 70,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 96.34394895203702,
+              "mean_CRPS": 1.3763421278862433
+            },
+            "delta_B": {
+              "sum_CRPS": 137.0332155645209,
+              "mean_CRPS": 1.9576173652074413
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5812752373211985
+        },
+        "both_zero": {
+          "n": 71,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 7.954510126462969,
+              "mean_CRPS": 0.11203535389384461
+            },
+            "delta_B": {
+              "sum_CRPS": 1.6578947376063984,
+              "mean_CRPS": 0.023350630107132373
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.08868472378671224
+        },
+        "reference_50_plus": {
+          "n": 4,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 93.69563938696884,
+              "mean_CRPS": 23.42390984674221
+            },
+            "delta_B": {
+              "sum_CRPS": 56.79946797366401,
+              "mean_CRPS": 14.199866993416002
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 9.224042853326207
+        }
+      },
+      "SOURCE_remaining40": {
+        "all_months": {
+          "n": 1296,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1380.6969595641326,
+              "mean_CRPS": 1.0653525922562752
+            },
+            "delta_B": {
+              "sum_CRPS": 1976.3897986964923,
+              "mean_CRPS": 1.5249921286238368
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.45963953636756144
+        },
+        "zero_reference": {
+          "n": 685,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 125.37004953053473,
+              "mean_CRPS": 0.18302197011756893
+            },
+            "delta_B": {
+              "sum_CRPS": 144.0176250512113,
+              "mean_CRPS": 0.2102447081039581
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.02722273798638914
+        },
+        "positive_reference": {
+          "n": 611,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1255.326910033598,
+              "mean_CRPS": 2.0545448609387855
+            },
+            "delta_B": {
+              "sum_CRPS": 1832.372173645281,
+              "mean_CRPS": 2.9989724609579063
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9444276000191212
+        },
+        "aqua_zero_reference_positive": {
+          "n": 306,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 448.5530432835409,
+              "mean_CRPS": 1.465859618573663
+            },
+            "delta_B": {
+              "sum_CRPS": 600.9020855083562,
+              "mean_CRPS": 1.9637323055828637
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4978726870092005
+        },
+        "both_zero": {
+          "n": 634,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 69.75208849582359,
+              "mean_CRPS": 0.11001906702811291
+            },
+            "delta_B": {
+              "sum_CRPS": 56.07820743217713,
+              "mean_CRPS": 0.0884514312810365
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.021567635747076437
+        },
+        "reference_50_plus": {
+          "n": 7,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 98.25756560882387,
+              "mean_CRPS": 14.036795086974838
+            },
+            "delta_B": {
+              "sum_CRPS": 104.21565879457509,
+              "mean_CRPS": 14.88795125636787
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8511561693930307
+        }
+      },
+      "held_published14": {
+        "all_months": {
+          "n": 384,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 878.0261853442125,
+              "mean_CRPS": 2.286526524333887
+            },
+            "delta_B": {
+              "sum_CRPS": 1087.2251991310645,
+              "mean_CRPS": 2.831315622737147
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5447890984032603
+        },
+        "zero_reference": {
+          "n": 141,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 35.23959089691169,
+              "mean_CRPS": 0.2499261765738418
+            },
+            "delta_B": {
+              "sum_CRPS": 64.78349022447502,
+              "mean_CRPS": 0.4594573774785462
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.20953120090470448
+        },
+        "positive_reference": {
+          "n": 243,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 842.7865944473008,
+              "mean_CRPS": 3.4682575903181103
+            },
+            "delta_B": {
+              "sum_CRPS": 1022.4417089065895,
+              "mean_CRPS": 4.207579048998309
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7393214586801999
+        },
+        "aqua_zero_reference_positive": {
+          "n": 92,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 212.15060004606363,
+              "mean_CRPS": 2.305984783109387
+            },
+            "delta_B": {
+              "sum_CRPS": 284.0,
+              "mean_CRPS": 3.0869565217391304
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7809717386297431
+        },
+        "both_zero": {
+          "n": 127,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 14.459001361110877,
+              "mean_CRPS": 0.11385040441819588
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.11385040441819588
+        },
+        "reference_50_plus": {
+          "n": 12,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 215.3774883818371,
+              "mean_CRPS": 17.948124031819756
+            },
+            "delta_B": {
+              "sum_CRPS": 227.54742939898625,
+              "mean_CRPS": 18.962285783248856
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.0141617514290961
+        }
+      },
+      "held_remaining40": {
+        "all_months": {
+          "n": 624,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 810.3731595681622,
+              "mean_CRPS": 1.2986749352053881
+            },
+            "delta_B": {
+              "sum_CRPS": 1083.396813902969,
+              "mean_CRPS": 1.7362128427932195
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4375379075878314
+        },
+        "zero_reference": {
+          "n": 351,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 57.12938511178116,
+              "mean_CRPS": 0.16276178094524546
+            },
+            "delta_B": {
+              "sum_CRPS": 41.79580014482259,
+              "mean_CRPS": 0.11907635368895328
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.043685427256292216
+        },
+        "positive_reference": {
+          "n": 273,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 753.2437744563811,
+              "mean_CRPS": 2.759134704968429
+            },
+            "delta_B": {
+              "sum_CRPS": 1041.6010137581463,
+              "mean_CRPS": 3.815388328784419
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.05625362381599
+        },
+        "aqua_zero_reference_positive": {
+          "n": 118,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 151.89106913035388,
+              "mean_CRPS": 1.2872124502572366
+            },
+            "delta_B": {
+              "sum_CRPS": 235.0,
+              "mean_CRPS": 1.9915254237288136
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7043129734715773
+        },
+        "both_zero": {
+          "n": 338,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 44.423087369357916,
+              "mean_CRPS": 0.13142925257206484
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.13142925257206484
+        },
+        "reference_50_plus": {
+          "n": 9,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 175.36930579576912,
+              "mean_CRPS": 19.485478421752127
+            },
+            "delta_B": {
+              "sum_CRPS": 202.84359160028967,
+              "mean_CRPS": 22.538176844476634
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -3.0526984227245055
+        }
+      }
+    },
+    "08_forward": {
+      "all54": {
+        "all_months": {
+          "n": 2592,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 4002.911982430026,
+              "mean_CRPS": 1.544333326554794
+            },
+            "delta_B": {
+              "sum_CRPS": 6226.515582700848,
+              "mean_CRPS": 2.402205085918537
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8578717593637433
+        },
+        "zero_reference": {
+          "n": 1274,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 360.2910594260372,
+              "mean_CRPS": 0.2828030293767953
+            },
+            "delta_B": {
+              "sum_CRPS": 441.2046280024245,
+              "mean_CRPS": 0.346314464680082
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.0635114353032867
+        },
+        "positive_reference": {
+          "n": 1318,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 3642.6209230039885,
+              "mean_CRPS": 2.7637488034931628
+            },
+            "delta_B": {
+              "sum_CRPS": 5785.310954698424,
+              "mean_CRPS": 4.389462029361475
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.625713225868312
+        },
+        "aqua_zero_reference_positive": {
+          "n": 534,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 650.3340245541564,
+              "mean_CRPS": 1.2178539785658358
+            },
+            "delta_B": {
+              "sum_CRPS": 1002.0082809182014,
+              "mean_CRPS": 1.8764200017194783
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6585660231536425
+        },
+        "both_zero": {
+          "n": 1155,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 183.79204590885792,
+              "mean_CRPS": 0.15912731247520165
+            },
+            "delta_B": {
+              "sum_CRPS": 91.25396442864664,
+              "mean_CRPS": 0.07900776141008367
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.08011955106511798
+        },
+        "reference_50_plus": {
+          "n": 43,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 864.4711019642125,
+              "mean_CRPS": 20.1039791154468
+            },
+            "delta_B": {
+              "sum_CRPS": 1227.0294576213971,
+              "mean_CRPS": 28.535568781892955
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -8.431589666446152
+        }
+      },
+      "SOURCE": {
+        "all_months": {
+          "n": 1584,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2141.7007589548616,
+              "mean_CRPS": 1.3520838124715033
+            },
+            "delta_B": {
+              "sum_CRPS": 3176.8786859935863,
+              "mean_CRPS": 2.005605231056557
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6535214185850534
+        },
+        "zero_reference": {
+          "n": 834,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 230.72613510047674,
+              "mean_CRPS": 0.2766500420869026
+            },
+            "delta_B": {
+              "sum_CRPS": 283.9087326483424,
+              "mean_CRPS": 0.34041814466228104
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.06376810257537842
+        },
+        "positive_reference": {
+          "n": 750,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1910.9746238543848,
+              "mean_CRPS": 2.54796616513918
+            },
+            "delta_B": {
+              "sum_CRPS": 2892.969953345244,
+              "mean_CRPS": 3.857293271126992
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.3093271059878122
+        },
+        "aqua_zero_reference_positive": {
+          "n": 321,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 372.1263898999904,
+              "mean_CRPS": 1.1592722426790978
+            },
+            "delta_B": {
+              "sum_CRPS": 562.0082809182014,
+              "mean_CRPS": 1.750804613452341
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.591532370773243
+        },
+        "both_zero": {
+          "n": 759,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 120.53231947109744,
+              "mean_CRPS": 0.15880410997509545
+            },
+            "delta_B": {
+              "sum_CRPS": 91.25396442864664,
+              "mean_CRPS": 0.12022920214577949
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.03857490782931595
+        },
+        "reference_50_plus": {
+          "n": 14,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 352.8056994283438,
+              "mean_CRPS": 25.200407102024563
+            },
+            "delta_B": {
+              "sum_CRPS": 328.65056722897486,
+              "mean_CRPS": 23.475040516355342
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 1.7253665856692133
+        }
+      },
+      "held": {
+        "all_months": {
+          "n": 1008,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1861.2112234751644,
+              "mean_CRPS": 1.8464397058285358
+            },
+            "delta_B": {
+              "sum_CRPS": 3049.636896707262,
+              "mean_CRPS": 3.0254334292730776
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.1789937234445416
+        },
+        "zero_reference": {
+          "n": 440,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 129.56492432556044,
+              "mean_CRPS": 0.2944657371035465
+            },
+            "delta_B": {
+              "sum_CRPS": 157.2958953540821,
+              "mean_CRPS": 0.3574906712592775
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.06302493415573103
+        },
+        "positive_reference": {
+          "n": 568,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1731.646299149604,
+              "mean_CRPS": 3.0486730618831053
+            },
+            "delta_B": {
+              "sum_CRPS": 2892.34100135318,
+              "mean_CRPS": 5.0921496502696835
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -2.043476588386578
+        },
+        "aqua_zero_reference_positive": {
+          "n": 213,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 278.20763465416593,
+              "mean_CRPS": 1.3061391298317646
+            },
+            "delta_B": {
+              "sum_CRPS": 440.0,
+              "mean_CRPS": 2.0657276995305165
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7595885696987515
+        },
+        "both_zero": {
+          "n": 396,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 63.25972643776048,
+              "mean_CRPS": 0.1597467839337386
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.1597467839337386
+        },
+        "reference_50_plus": {
+          "n": 29,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 511.6654025358687,
+              "mean_CRPS": 17.64363457020237
+            },
+            "delta_B": {
+              "sum_CRPS": 898.3788903924222,
+              "mean_CRPS": 30.978582427324906
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -13.334947857122536
+        }
+      },
+      "published14": {
+        "all_months": {
+          "n": 672,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1697.7096993064383,
+              "mean_CRPS": 2.5263537192060093
+            },
+            "delta_B": {
+              "sum_CRPS": 2466.67326355291,
+              "mean_CRPS": 3.670644737429926
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.1442910182239168
+        },
+        "zero_reference": {
+          "n": 203,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 69.75383044311361,
+              "mean_CRPS": 0.34361492829120005
+            },
+            "delta_B": {
+              "sum_CRPS": 124.15798455618173,
+              "mean_CRPS": 0.6116156874688755
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.26800075917767546
+        },
+        "positive_reference": {
+          "n": 469,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1627.9558688633247,
+              "mean_CRPS": 3.471121255572121
+            },
+            "delta_B": {
+              "sum_CRPS": 2342.5152789967287,
+              "mean_CRPS": 4.994702087413068
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.523580831840947
+        },
+        "aqua_zero_reference_positive": {
+          "n": 145,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 221.4824730049943,
+              "mean_CRPS": 1.5274653310689261
+            },
+            "delta_B": {
+              "sum_CRPS": 336.0060588534314,
+              "mean_CRPS": 2.3172831645064234
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7898178334374975
+        },
+        "both_zero": {
+          "n": 176,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 29.201393926930027,
+              "mean_CRPS": 0.16591701094846603
+            },
+            "delta_B": {
+              "sum_CRPS": 17.68076308572615,
+              "mean_CRPS": 0.10045888116889858
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.0654581297795675
+        },
+        "reference_50_plus": {
+          "n": 24,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 440.0080425287935,
+              "mean_CRPS": 18.33366843869973
+            },
+            "delta_B": {
+              "sum_CRPS": 580.4149675551457,
+              "mean_CRPS": 24.183956981464405
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -5.850288542764677
+        }
+      },
+      "remaining40": {
+        "all_months": {
+          "n": 1920,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2305.2022831235877,
+              "mean_CRPS": 1.2006261891268686
+            },
+            "delta_B": {
+              "sum_CRPS": 3759.8423191479383,
+              "mean_CRPS": 1.9582512078895513
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7576250187626826
+        },
+        "zero_reference": {
+          "n": 1071,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 290.5372289829236,
+              "mean_CRPS": 0.2712765910204702
+            },
+            "delta_B": {
+              "sum_CRPS": 317.04664344624274,
+              "mean_CRPS": 0.2960286119946244
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.02475202097415421
+        },
+        "positive_reference": {
+          "n": 849,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2014.665054140664,
+              "mean_CRPS": 2.3729859294943036
+            },
+            "delta_B": {
+              "sum_CRPS": 3442.7956757016955,
+              "mean_CRPS": 4.055118581509653
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.682132652015349
+        },
+        "aqua_zero_reference_positive": {
+          "n": 389,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 428.851551549162,
+              "mean_CRPS": 1.1024461479412904
+            },
+            "delta_B": {
+              "sum_CRPS": 666.00222206477,
+              "mean_CRPS": 1.712087974459563
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6096418265182724
+        },
+        "both_zero": {
+          "n": 979,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 154.5906519819279,
+              "mean_CRPS": 0.15790669252495187
+            },
+            "delta_B": {
+              "sum_CRPS": 73.57320134292048,
+              "mean_CRPS": 0.07515138032984728
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.08275531219510461
+        },
+        "reference_50_plus": {
+          "n": 19,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 424.463059435419,
+              "mean_CRPS": 22.340161022916796
+            },
+            "delta_B": {
+              "sum_CRPS": 646.6144900662514,
+              "mean_CRPS": 34.032341582434285
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -11.692180559517492
+        }
+      },
+      "SOURCE_published14": {
+        "all_months": {
+          "n": 288,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 694.2105184099898,
+              "mean_CRPS": 2.410453188923576
+            },
+            "delta_B": {
+              "sum_CRPS": 888.23077370176,
+              "mean_CRPS": 3.0841346309088893
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.673681441985313
+        },
+        "zero_reference": {
+          "n": 85,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 23.320415689194927,
+              "mean_CRPS": 0.2743578316375874
+            },
+            "delta_B": {
+              "sum_CRPS": 34.62032104693499,
+              "mean_CRPS": 0.4072978946698234
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.13294006303223602
+        },
+        "positive_reference": {
+          "n": 203,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 670.8901027207949,
+              "mean_CRPS": 3.3048773533044082
+            },
+            "delta_B": {
+              "sum_CRPS": 853.610452654825,
+              "mean_CRPS": 4.2049775992848515
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.900100245980444
+        },
+        "aqua_zero_reference_positive": {
+          "n": 56,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 80.72517944083948,
+              "mean_CRPS": 1.4415210614435618
+            },
+            "delta_B": {
+              "sum_CRPS": 125.00605885343141,
+              "mean_CRPS": 2.2322510509541322
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7907299895105703
+        },
+        "both_zero": {
+          "n": 79,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 14.116157671000746,
+              "mean_CRPS": 0.17868554013924992
+            },
+            "delta_B": {
+              "sum_CRPS": 17.68076308572615,
+              "mean_CRPS": 0.22380712766741961
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.04512158752816964
+        },
+        "reference_50_plus": {
+          "n": 5,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 125.64111655766106,
+              "mean_CRPS": 25.128223311532214
+            },
+            "delta_B": {
+              "sum_CRPS": 77.07441726195671,
+              "mean_CRPS": 15.414883452391342
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 9.71333985914087
+        }
+      },
+      "SOURCE_remaining40": {
+        "all_months": {
+          "n": 1296,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1447.4902405448718,
+              "mean_CRPS": 1.1168906177043765
+            },
+            "delta_B": {
+              "sum_CRPS": 2288.6479122918263,
+              "mean_CRPS": 1.7659320310893722
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6490414133849959
+        },
+        "zero_reference": {
+          "n": 749,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 207.4057194112818,
+              "mean_CRPS": 0.2769101727787474
+            },
+            "delta_B": {
+              "sum_CRPS": 249.28841160140738,
+              "mean_CRPS": 0.33282831989506995
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.055918147116322495
+        },
+        "positive_reference": {
+          "n": 547,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1240.08452113359,
+              "mean_CRPS": 2.267064938087002
+            },
+            "delta_B": {
+              "sum_CRPS": 2039.3595006904188,
+              "mean_CRPS": 3.7282623412987546
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.4611974032117532
+        },
+        "aqua_zero_reference_positive": {
+          "n": 265,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 291.40121045915095,
+              "mean_CRPS": 1.0996272092798147
+            },
+            "delta_B": {
+              "sum_CRPS": 437.00222206477,
+              "mean_CRPS": 1.6490649889236604
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5494377796438455
+        },
+        "both_zero": {
+          "n": 680,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 106.41616180009669,
+              "mean_CRPS": 0.1564943555883775
+            },
+            "delta_B": {
+              "sum_CRPS": 73.57320134292048,
+              "mean_CRPS": 0.10819588432782425
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.04829847126055324
+        },
+        "reference_50_plus": {
+          "n": 9,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 227.16458287068275,
+              "mean_CRPS": 25.240509207853638
+            },
+            "delta_B": {
+              "sum_CRPS": 251.57614996701813,
+              "mean_CRPS": 27.952905551890904
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -2.712396344037264
+        }
+      },
+      "held_published14": {
+        "all_months": {
+          "n": 384,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1003.4991808964484,
+              "mean_CRPS": 2.6132791169178344
+            },
+            "delta_B": {
+              "sum_CRPS": 1578.4424898511504,
+              "mean_CRPS": 4.110527317320704
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.4972482004028695
+        },
+        "zero_reference": {
+          "n": 118,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 46.43341475391869,
+              "mean_CRPS": 0.39350351486371765
+            },
+            "delta_B": {
+              "sum_CRPS": 89.53766350924674,
+              "mean_CRPS": 0.7587937585529384
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.36529024368922075
+        },
+        "positive_reference": {
+          "n": 266,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 957.0657661425297,
+              "mean_CRPS": 3.597991602039585
+            },
+            "delta_B": {
+              "sum_CRPS": 1488.9048263419036,
+              "mean_CRPS": 5.5973865651951265
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.9993949631555405
+        },
+        "aqua_zero_reference_positive": {
+          "n": 89,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 140.75729356415482,
+              "mean_CRPS": 1.5815426243163464
+            },
+            "delta_B": {
+              "sum_CRPS": 211.0,
+              "mean_CRPS": 2.3707865168539324
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7892438925375864
+        },
+        "both_zero": {
+          "n": 97,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 15.085236255929281,
+              "mean_CRPS": 0.15551789954566272
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.15551789954566272
+        },
+        "reference_50_plus": {
+          "n": 19,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 314.36692597113245,
+              "mean_CRPS": 16.54562768269118
+            },
+            "delta_B": {
+              "sum_CRPS": 503.34055029318904,
+              "mean_CRPS": 26.491607910167843
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -9.945980227476662
+        }
+      },
+      "held_remaining40": {
+        "all_months": {
+          "n": 624,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 857.7120425787159,
+              "mean_CRPS": 1.3745385297735833
+            },
+            "delta_B": {
+              "sum_CRPS": 1471.194406856112,
+              "mean_CRPS": 2.357683344320692
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9831448145471089
+        },
+        "zero_reference": {
+          "n": 322,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 83.13150957164176,
+              "mean_CRPS": 0.25817238997404274
+            },
+            "delta_B": {
+              "sum_CRPS": 67.75823184483536,
+              "mean_CRPS": 0.2104292914435881
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.047743098530454636
+        },
+        "positive_reference": {
+          "n": 302,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 774.5805330070742,
+              "mean_CRPS": 2.5648362020101794
+            },
+            "delta_B": {
+              "sum_CRPS": 1403.4361750112766,
+              "mean_CRPS": 4.647139652355221
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -2.0823034503450413
+        },
+        "aqua_zero_reference_positive": {
+          "n": 124,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 137.4503410900111,
+              "mean_CRPS": 1.1084704926613798
+            },
+            "delta_B": {
+              "sum_CRPS": 229.0,
+              "mean_CRPS": 1.846774193548387
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7383037008870071
+        },
+        "both_zero": {
+          "n": 299,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 48.174490181831196,
+              "mean_CRPS": 0.161118696260305
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.161118696260305
+        },
+        "reference_50_plus": {
+          "n": 10,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 197.29847656473623,
+              "mean_CRPS": 19.729847656473623
+            },
+            "delta_B": {
+              "sum_CRPS": 395.0383400992332,
+              "mean_CRPS": 39.503834009923324
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -19.7739863534497
+        }
+      }
+    },
+    "16_backward": {
+      "all54": {
+        "all_months": {
+          "n": 2592,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 3913.613808109417,
+              "mean_CRPS": 1.5098818704125836
+            },
+            "delta_B": {
+              "sum_CRPS": 5040.270188397178,
+              "mean_CRPS": 1.9445486837952077
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.43466681338262386
+        },
+        "zero_reference": {
+          "n": 1253,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 354.515410134832,
+              "mean_CRPS": 0.2829332882161468
+            },
+            "delta_B": {
+              "sum_CRPS": 293.1881417362622,
+              "mean_CRPS": 0.23398893993317016
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.048944348282976675
+        },
+        "positive_reference": {
+          "n": 1339,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 3559.0983979745847,
+              "mean_CRPS": 2.6580271829533864
+            },
+            "delta_B": {
+              "sum_CRPS": 4747.082046660916,
+              "mean_CRPS": 3.5452442469461656
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8872170639927786
+        },
+        "aqua_zero_reference_positive": {
+          "n": 586,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 853.0172792456457,
+              "mean_CRPS": 1.4556608860847198
+            },
+            "delta_B": {
+              "sum_CRPS": 1321.6753660022416,
+              "mean_CRPS": 2.2554187133144055
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7997578272296858
+        },
+        "both_zero": {
+          "n": 1170,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 255.52154181454006,
+              "mean_CRPS": 0.21839448018336755
+            },
+            "delta_B": {
+              "sum_CRPS": 48.75107154591678,
+              "mean_CRPS": 0.04166758251787759
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.17672689766548996
+        },
+        "reference_50_plus": {
+          "n": 32,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 608.7203521445138,
+              "mean_CRPS": 19.022511004516055
+            },
+            "delta_B": {
+              "sum_CRPS": 555.1361009265285,
+              "mean_CRPS": 17.34800315395401
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 1.6745078505620419
+        }
+      },
+      "SOURCE": {
+        "all_months": {
+          "n": 1008,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1577.1707547608933,
+              "mean_CRPS": 1.5646535265485053
+            },
+            "delta_B": {
+              "sum_CRPS": 2142.4122936603358,
+              "mean_CRPS": 2.1254090214884283
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5607554949399232
+        },
+        "zero_reference": {
+          "n": 492,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 111.73575767389224,
+              "mean_CRPS": 0.22710519852417121
+            },
+            "delta_B": {
+              "sum_CRPS": 128.78603647310433,
+              "mean_CRPS": 0.2617602367339519
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.034655038209780664
+        },
+        "positive_reference": {
+          "n": 516,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1465.434997087001,
+              "mean_CRPS": 2.839990304432173
+            },
+            "delta_B": {
+              "sum_CRPS": 2013.6262571872312,
+              "mean_CRPS": 3.9023764674171146
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.0623861629849423
+        },
+        "aqua_zero_reference_positive": {
+          "n": 210,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 320.35493348807404,
+              "mean_CRPS": 1.525499683276543
+            },
+            "delta_B": {
+              "sum_CRPS": 474.67536600224156,
+              "mean_CRPS": 2.26035888572496
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7348592024484167
+        },
+        "both_zero": {
+          "n": 465,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 80.58337352202524,
+              "mean_CRPS": 0.17329757746672095
+            },
+            "delta_B": {
+              "sum_CRPS": 48.75107154591678,
+              "mean_CRPS": 0.1048410140772404
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.06845656338948056
+        },
+        "reference_50_plus": {
+          "n": 21,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 355.19411033286303,
+              "mean_CRPS": 16.91400525394586
+            },
+            "delta_B": {
+              "sum_CRPS": 412.44662724231785,
+              "mean_CRPS": 19.64031558296752
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -2.7263103290216595
+        }
+      },
+      "held": {
+        "all_months": {
+          "n": 1584,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2336.4430533485233,
+              "mean_CRPS": 1.47502718014427
+            },
+            "delta_B": {
+              "sum_CRPS": 2897.857894736842,
+              "mean_CRPS": 1.8294557416267945
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.35442856148252433
+        },
+        "zero_reference": {
+          "n": 761,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 242.77965246093973,
+              "mean_CRPS": 0.31902713858204956
+            },
+            "delta_B": {
+              "sum_CRPS": 164.4021052631579,
+              "mean_CRPS": 0.2160343038937686
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.102992834688281
+        },
+        "positive_reference": {
+          "n": 823,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2093.6634008875835,
+              "mean_CRPS": 2.5439409488305995
+            },
+            "delta_B": {
+              "sum_CRPS": 2733.455789473684,
+              "mean_CRPS": 3.321331457440686
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7773905086100856
+        },
+        "aqua_zero_reference_positive": {
+          "n": 376,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 532.6623457575716,
+              "mean_CRPS": 1.4166551748871583
+            },
+            "delta_B": {
+              "sum_CRPS": 847.0,
+              "mean_CRPS": 2.252659574468085
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8360043995809264
+        },
+        "both_zero": {
+          "n": 705,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 174.93816829251483,
+              "mean_CRPS": 0.2481392458049856
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.2481392458049856
+        },
+        "reference_50_plus": {
+          "n": 11,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 253.52624181165072,
+              "mean_CRPS": 23.04784016469552
+            },
+            "delta_B": {
+              "sum_CRPS": 142.68947368421055,
+              "mean_CRPS": 12.971770334928232
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 10.076069829767288
+        }
+      },
+      "published14": {
+        "all_months": {
+          "n": 672,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1663.4719753893642,
+              "mean_CRPS": 2.4754047252817917
+            },
+            "delta_B": {
+              "sum_CRPS": 1942.2915210359438,
+              "mean_CRPS": 2.8903147634463444
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4149100381645532
+        },
+        "zero_reference": {
+          "n": 217,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 61.93496514007241,
+              "mean_CRPS": 0.2854145858989512
+            },
+            "delta_B": {
+              "sum_CRPS": 62.836526831732044,
+              "mean_CRPS": 0.2895692480724979
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.004154662173546732
+        },
+        "positive_reference": {
+          "n": 455,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1601.5370102492916,
+              "mean_CRPS": 3.5198615609874544
+            },
+            "delta_B": {
+              "sum_CRPS": 1879.4549942042117,
+              "mean_CRPS": 4.130670316932333
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6108087559448793
+        },
+        "aqua_zero_reference_positive": {
+          "n": 162,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 272.1709346030677,
+              "mean_CRPS": 1.6800674975498004
+            },
+            "delta_B": {
+              "sum_CRPS": 405.1375025737011,
+              "mean_CRPS": 2.5008487813191427
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8207812837693426
+        },
+        "both_zero": {
+          "n": 198,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 36.763876973078425,
+              "mean_CRPS": 0.1856761463286789
+            },
+            "delta_B": {
+              "sum_CRPS": 12.299571288100761,
+              "mean_CRPS": 0.062119046909599795
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.1235570994190791
+        },
+        "reference_50_plus": {
+          "n": 16,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 320.77856891315554,
+              "mean_CRPS": 20.04866055707222
+            },
+            "delta_B": {
+              "sum_CRPS": 258.76378889362945,
+              "mean_CRPS": 16.17273680585184
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 3.8759237512203812
+        }
+      },
+      "remaining40": {
+        "all_months": {
+          "n": 1920,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2250.1418327200527,
+              "mean_CRPS": 1.1719488712083606
+            },
+            "delta_B": {
+              "sum_CRPS": 3097.978667361234,
+              "mean_CRPS": 1.613530555917309
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4415816847089486
+        },
+        "zero_reference": {
+          "n": 1036,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 292.58044499475955,
+              "mean_CRPS": 0.2824135569447486
+            },
+            "delta_B": {
+              "sum_CRPS": 230.35161490453015,
+              "mean_CRPS": 0.22234711863371637
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.06006643831103225
+        },
+        "positive_reference": {
+          "n": 884,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1957.561387725293,
+              "mean_CRPS": 2.2144359589652636
+            },
+            "delta_B": {
+              "sum_CRPS": 2867.6270524567035,
+              "mean_CRPS": 3.2439220050415205
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.0294860460762563
+        },
+        "aqua_zero_reference_positive": {
+          "n": 424,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 580.8463446425781,
+              "mean_CRPS": 1.3699206241570236
+            },
+            "delta_B": {
+              "sum_CRPS": 916.5378634285404,
+              "mean_CRPS": 2.1616459043125955
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7917252801555718
+        },
+        "both_zero": {
+          "n": 972,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 218.75766484146163,
+              "mean_CRPS": 0.22505932596858197
+            },
+            "delta_B": {
+              "sum_CRPS": 36.45150025781602,
+              "mean_CRPS": 0.03750154347511936
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.18755778249346258
+        },
+        "reference_50_plus": {
+          "n": 16,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 287.9417832313582,
+              "mean_CRPS": 17.996361451959885
+            },
+            "delta_B": {
+              "sum_CRPS": 296.372312032899,
+              "mean_CRPS": 18.523269502056188
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5269080500962988
+        }
+      },
+      "SOURCE_published14": {
+        "all_months": {
+          "n": 384,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 796.482233129775,
+              "mean_CRPS": 2.074172482108789
+            },
+            "delta_B": {
+              "sum_CRPS": 1053.6827491061192,
+              "mean_CRPS": 2.7439654924638517
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6697930103550632
+        },
+        "zero_reference": {
+          "n": 141,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 40.58144563487156,
+              "mean_CRPS": 0.28781167116930184
+            },
+            "delta_B": {
+              "sum_CRPS": 52.297930340503974,
+              "mean_CRPS": 0.37090730737946087
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.08309563621015902
+        },
+        "positive_reference": {
+          "n": 243,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 755.9007874949034,
+              "mean_CRPS": 3.1107028291971335
+            },
+            "delta_B": {
+              "sum_CRPS": 1001.3848187656153,
+              "mean_CRPS": 4.120925180105413
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.0102223509082793
+        },
+        "aqua_zero_reference_positive": {
+          "n": 92,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 179.8342058223913,
+              "mean_CRPS": 1.9547196285042534
+            },
+            "delta_B": {
+              "sum_CRPS": 258.1375025737011,
+              "mean_CRPS": 2.80584241927936
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8511227907751069
+        },
+        "both_zero": {
+          "n": 127,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 21.270450231003068,
+              "mean_CRPS": 0.1674838600866383
+            },
+            "delta_B": {
+              "sum_CRPS": 12.299571288100761,
+              "mean_CRPS": 0.09684701801654143
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.0706368420700969
+        },
+        "reference_50_plus": {
+          "n": 12,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 171.8516959246674,
+              "mean_CRPS": 14.320974660388954
+            },
+            "delta_B": {
+              "sum_CRPS": 191.29150819187504,
+              "mean_CRPS": 15.940959015989586
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.6199843556006337
+        }
+      },
+      "SOURCE_remaining40": {
+        "all_months": {
+          "n": 624,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 780.6885216311183,
+              "mean_CRPS": 1.2511034000498693
+            },
+            "delta_B": {
+              "sum_CRPS": 1088.7295445542163,
+              "mean_CRPS": 1.7447588855035518
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4936554854536829
+        },
+        "zero_reference": {
+          "n": 351,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 71.15431203902068,
+              "mean_CRPS": 0.20271883771800764
+            },
+            "delta_B": {
+              "sum_CRPS": 76.48810613260035,
+              "mean_CRPS": 0.21791483228661074
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.015195994568603032
+        },
+        "positive_reference": {
+          "n": 273,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 709.5342095920976,
+              "mean_CRPS": 2.599026408762262
+            },
+            "delta_B": {
+              "sum_CRPS": 1012.2414384216161,
+              "mean_CRPS": 3.7078440967824764
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.1088176880202143
+        },
+        "aqua_zero_reference_positive": {
+          "n": 118,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 140.52072766568276,
+              "mean_CRPS": 1.190853624285447
+            },
+            "delta_B": {
+              "sum_CRPS": 216.53786342854045,
+              "mean_CRPS": 1.835066639224919
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.644213014939472
+        },
+        "both_zero": {
+          "n": 338,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 59.31292329102217,
+              "mean_CRPS": 0.1754820215710715
+            },
+            "delta_B": {
+              "sum_CRPS": 36.45150025781602,
+              "mean_CRPS": 0.10784467531898231
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.0676373462520892
+        },
+        "reference_50_plus": {
+          "n": 9,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 183.34241440819562,
+              "mean_CRPS": 20.3713793786884
+            },
+            "delta_B": {
+              "sum_CRPS": 221.15511905044286,
+              "mean_CRPS": 24.572791005604763
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -4.20141162691636
+        }
+      },
+      "held_published14": {
+        "all_months": {
+          "n": 288,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 866.9897422595891,
+              "mean_CRPS": 3.0103810495124623
+            },
+            "delta_B": {
+              "sum_CRPS": 888.6087719298246,
+              "mean_CRPS": 3.0854471247563353
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.07506607524387308
+        },
+        "zero_reference": {
+          "n": 76,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 21.353519505200854,
+              "mean_CRPS": 0.28096736191053756
+            },
+            "delta_B": {
+              "sum_CRPS": 10.53859649122807,
+              "mean_CRPS": 0.1386657433056325
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.14230161860490503
+        },
+        "positive_reference": {
+          "n": 212,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 845.6362227543883,
+              "mean_CRPS": 3.988850107332021
+            },
+            "delta_B": {
+              "sum_CRPS": 878.0701754385965,
+              "mean_CRPS": 4.14184045018206
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.15299034285003876
+        },
+        "aqua_zero_reference_positive": {
+          "n": 70,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 92.33672878067635,
+              "mean_CRPS": 1.3190961254382338
+            },
+            "delta_B": {
+              "sum_CRPS": 147.0,
+              "mean_CRPS": 2.1
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7809038745617664
+        },
+        "both_zero": {
+          "n": 71,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 15.493426742075354,
+              "mean_CRPS": 0.21821727805739935
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.21821727805739935
+        },
+        "reference_50_plus": {
+          "n": 4,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 148.92687298848813,
+              "mean_CRPS": 37.23171824712203
+            },
+            "delta_B": {
+              "sum_CRPS": 67.47228070175441,
+              "mean_CRPS": 16.868070175438604
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 20.36364807168343
+        }
+      },
+      "held_remaining40": {
+        "all_months": {
+          "n": 1296,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1469.4533110889342,
+              "mean_CRPS": 1.1338374313957826
+            },
+            "delta_B": {
+              "sum_CRPS": 2009.2491228070173,
+              "mean_CRPS": 1.5503465453757852
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.4165091139800024
+        },
+        "zero_reference": {
+          "n": 685,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 221.42613295573886,
+              "mean_CRPS": 0.32324982913246547
+            },
+            "delta_B": {
+              "sum_CRPS": 153.86350877192982,
+              "mean_CRPS": 0.22461826098091944
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.09863156815154606
+        },
+        "positive_reference": {
+          "n": 611,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1248.0271781331953,
+              "mean_CRPS": 2.0425976728857536
+            },
+            "delta_B": {
+              "sum_CRPS": 1855.3856140350877,
+              "mean_CRPS": 3.0366376661785397
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9940399932927858
+        },
+        "aqua_zero_reference_positive": {
+          "n": 306,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 440.3256169768953,
+              "mean_CRPS": 1.4389726044996578
+            },
+            "delta_B": {
+              "sum_CRPS": 700.0,
+              "mean_CRPS": 2.287581699346405
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8486090948467475
+        },
+        "both_zero": {
+          "n": 634,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 159.44474155043946,
+              "mean_CRPS": 0.2514901286284534
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.2514901286284534
+        },
+        "reference_50_plus": {
+          "n": 7,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 104.59936882316259,
+              "mean_CRPS": 14.942766974737511
+            },
+            "delta_B": {
+              "sum_CRPS": 75.21719298245613,
+              "mean_CRPS": 10.745313283208018
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 4.197453691529494
+        }
+      }
+    },
+    "16_forward": {
+      "all54": {
+        "all_months": {
+          "n": 2592,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 4557.287683205779,
+              "mean_CRPS": 1.7582128407429702
+            },
+            "delta_B": {
+              "sum_CRPS": 6112.336944330525,
+              "mean_CRPS": 2.358154685312702
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5999418445697318
+        },
+        "zero_reference": {
+          "n": 1274,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 389.9247038119406,
+              "mean_CRPS": 0.3060633467911622
+            },
+            "delta_B": {
+              "sum_CRPS": 470.7210606015684,
+              "mean_CRPS": 0.3694827791221102
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.06341943233094803
+        },
+        "positive_reference": {
+          "n": 1318,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 4167.362979393839,
+              "mean_CRPS": 3.161883899388345
+            },
+            "delta_B": {
+              "sum_CRPS": 5641.615883728956,
+              "mean_CRPS": 4.280436937578874
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.1185530381905289
+        },
+        "aqua_zero_reference_positive": {
+          "n": 534,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 676.5226535159459,
+              "mean_CRPS": 1.266896354898775
+            },
+            "delta_B": {
+              "sum_CRPS": 1069.9952653793268,
+              "mean_CRPS": 2.0037364520212115
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7368400971224365
+        },
+        "both_zero": {
+          "n": 1155,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 233.23932636458753,
+              "mean_CRPS": 0.20193881070527062
+            },
+            "delta_B": {
+              "sum_CRPS": 34.56965029540854,
+              "mean_CRPS": 0.029930433156197866
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.17200837754907275
+        },
+        "reference_50_plus": {
+          "n": 43,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1119.0503997355563,
+              "mean_CRPS": 26.024427900826897
+            },
+            "delta_B": {
+              "sum_CRPS": 1077.131826101839,
+              "mean_CRPS": 25.049577351205556
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.9748505496213385
+        }
+      },
+      "SOURCE": {
+        "all_months": {
+          "n": 1008,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1879.0752234879512,
+              "mean_CRPS": 1.8641619280634438
+            },
+            "delta_B": {
+              "sum_CRPS": 2704.157494258165,
+              "mean_CRPS": 2.682695926843418
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8185339987799742
+        },
+        "zero_reference": {
+          "n": 440,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 113.3378373118471,
+              "mean_CRPS": 0.2575859938905616
+            },
+            "delta_B": {
+              "sum_CRPS": 149.8744614698752,
+              "mean_CRPS": 0.3406237760678982
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.0830377821773366
+        },
+        "positive_reference": {
+          "n": 568,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1765.7373861761043,
+              "mean_CRPS": 3.1086925812959585
+            },
+            "delta_B": {
+              "sum_CRPS": 2554.28303278829,
+              "mean_CRPS": 4.496977170401919
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.3882845891059608
+        },
+        "aqua_zero_reference_positive": {
+          "n": 213,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 270.56690749917925,
+              "mean_CRPS": 1.270267171357649
+            },
+            "delta_B": {
+              "sum_CRPS": 405.99526537932695,
+              "mean_CRPS": 1.9060810581189058
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6358138867612568
+        },
+        "both_zero": {
+          "n": 396,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 56.725085133602846,
+              "mean_CRPS": 0.14324516447879507
+            },
+            "delta_B": {
+              "sum_CRPS": 34.56965029540854,
+              "mean_CRPS": 0.08729709670557712
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.05594806777321794
+        },
+        "reference_50_plus": {
+          "n": 29,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 510.4265892496292,
+              "mean_CRPS": 17.600916870676873
+            },
+            "delta_B": {
+              "sum_CRPS": 686.9436929614625,
+              "mean_CRPS": 23.687713550395262
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -6.0867966797183914
+        }
+      },
+      "held": {
+        "all_months": {
+          "n": 1584,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2678.212459717828,
+              "mean_CRPS": 1.6907906942663056
+            },
+            "delta_B": {
+              "sum_CRPS": 3408.179450072359,
+              "mean_CRPS": 2.1516284407022472
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.46083774643594116
+        },
+        "zero_reference": {
+          "n": 834,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 276.5868665000935,
+              "mean_CRPS": 0.3316389286571864
+            },
+            "delta_B": {
+              "sum_CRPS": 320.8465991316932,
+              "mean_CRPS": 0.384708152436083
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.05306922377889653
+        },
+        "positive_reference": {
+          "n": 750,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2401.6255932177346,
+              "mean_CRPS": 3.2021674576236463
+            },
+            "delta_B": {
+              "sum_CRPS": 3087.332850940666,
+              "mean_CRPS": 4.116443801254221
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9142763436305748
+        },
+        "aqua_zero_reference_positive": {
+          "n": 321,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 405.9557460167666,
+              "mean_CRPS": 1.2646596449120455
+            },
+            "delta_B": {
+              "sum_CRPS": 664.0,
+              "mean_CRPS": 2.068535825545171
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8038761806331258
+        },
+        "both_zero": {
+          "n": 759,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 176.51424123098468,
+              "mean_CRPS": 0.23256158264951873
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.23256158264951873
+        },
+        "reference_50_plus": {
+          "n": 14,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 608.6238104859272,
+              "mean_CRPS": 43.473129320423375
+            },
+            "delta_B": {
+              "sum_CRPS": 390.1881331403763,
+              "mean_CRPS": 27.8705809385983
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 15.602548381825063
+        }
+      },
+      "published14": {
+        "all_months": {
+          "n": 672,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1938.0387950348784,
+              "mean_CRPS": 2.8839863021352357
+            },
+            "delta_B": {
+              "sum_CRPS": 2304.4424286322674,
+              "mean_CRPS": 3.4292298045123024
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5452435023770671
+        },
+        "zero_reference": {
+          "n": 203,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 63.16367885649011,
+              "mean_CRPS": 0.3111511273718725
+            },
+            "delta_B": {
+              "sum_CRPS": 78.77070580987547,
+              "mean_CRPS": 0.38803303354618457
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.07688190617431215
+        },
+        "positive_reference": {
+          "n": 469,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1874.8751161783882,
+              "mean_CRPS": 3.9976015270328107
+            },
+            "delta_B": {
+              "sum_CRPS": 2225.671722822392,
+              "mean_CRPS": 4.745568705378235
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7479671783454238
+        },
+        "aqua_zero_reference_positive": {
+          "n": 145,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 215.87373055533354,
+              "mean_CRPS": 1.4887843486574728
+            },
+            "delta_B": {
+              "sum_CRPS": 331.88226715685846,
+              "mean_CRPS": 2.2888432217714376
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.8000588731139648
+        },
+        "both_zero": {
+          "n": 176,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 32.50544327473449,
+              "mean_CRPS": 0.18469001860644596
+            },
+            "delta_B": {
+              "sum_CRPS": 11.113415083718124,
+              "mean_CRPS": 0.06314440388476207
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.12154561472168389
+        },
+        "reference_50_plus": {
+          "n": 24,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 556.5975310134216,
+              "mean_CRPS": 23.191563792225903
+            },
+            "delta_B": {
+              "sum_CRPS": 532.3157832624054,
+              "mean_CRPS": 22.179824302600224
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 1.0117394896256762
+        }
+      },
+      "remaining40": {
+        "all_months": {
+          "n": 1920,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2619.248888170901,
+              "mean_CRPS": 1.3641921292556778
+            },
+            "delta_B": {
+              "sum_CRPS": 3807.894515698257,
+              "mean_CRPS": 1.9832783935928424
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6190862643371644
+        },
+        "zero_reference": {
+          "n": 1071,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 326.76102495545047,
+              "mean_CRPS": 0.3050989962235766
+            },
+            "delta_B": {
+              "sum_CRPS": 391.9503547916929,
+              "mean_CRPS": 0.3659667178260438
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.06086772160246726
+        },
+        "positive_reference": {
+          "n": 849,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 2292.4878632154505,
+              "mean_CRPS": 2.7002212758721442
+            },
+            "delta_B": {
+              "sum_CRPS": 3415.944160906564,
+              "mean_CRPS": 4.023491355602549
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.3232700797304042
+        },
+        "aqua_zero_reference_positive": {
+          "n": 389,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 460.6489229606123,
+              "mean_CRPS": 1.1841874626236821
+            },
+            "delta_B": {
+              "sum_CRPS": 738.1129982224685,
+              "mean_CRPS": 1.8974627203662429
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7132752577425608
+        },
+        "both_zero": {
+          "n": 979,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 200.73388308985304,
+              "mean_CRPS": 0.20503971715000313
+            },
+            "delta_B": {
+              "sum_CRPS": 23.45623521169042,
+              "mean_CRPS": 0.023959382238703187
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.18108033491129993
+        },
+        "reference_50_plus": {
+          "n": 19,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 562.4528687221348,
+              "mean_CRPS": 29.602782564322876
+            },
+            "delta_B": {
+              "sum_CRPS": 544.8160428394335,
+              "mean_CRPS": 28.674528570496502
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.9282539938263872
+        }
+      },
+      "SOURCE_published14": {
+        "all_months": {
+          "n": 384,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 998.8096115431619,
+              "mean_CRPS": 2.601066696726984
+            },
+            "delta_B": {
+              "sum_CRPS": 1444.7680436829187,
+              "mean_CRPS": 3.7624167804242674
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.1613500836972834
+        },
+        "zero_reference": {
+          "n": 118,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 41.17643817873022,
+              "mean_CRPS": 0.3489528659214426
+            },
+            "delta_B": {
+              "sum_CRPS": 62.61296340755999,
+              "mean_CRPS": 0.5306183339623727
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.18166546804093026
+        },
+        "positive_reference": {
+          "n": 266,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 957.6331733644316,
+              "mean_CRPS": 3.6001247118963597
+            },
+            "delta_B": {
+              "sum_CRPS": 1382.1550802753586,
+              "mean_CRPS": 5.196071730358491
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.595947018462132
+        },
+        "aqua_zero_reference_positive": {
+          "n": 89,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 132.0391836430709,
+              "mean_CRPS": 1.4835863330682124
+            },
+            "delta_B": {
+              "sum_CRPS": 194.88226715685843,
+              "mean_CRPS": 2.189688395020881
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7061020619526688
+        },
+        "both_zero": {
+          "n": 97,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 17.24704816987324,
+              "mean_CRPS": 0.17780462030797153
+            },
+            "delta_B": {
+              "sum_CRPS": 11.113415083718124,
+              "mean_CRPS": 0.11457128952286726
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.06323333078510428
+        },
+        "reference_50_plus": {
+          "n": 19,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 319.18920687440914,
+              "mean_CRPS": 16.799431940758375
+            },
+            "delta_B": {
+              "sum_CRPS": 444.4127441885993,
+              "mean_CRPS": 23.39014443097891
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -6.590712490220536
+        }
+      },
+      "SOURCE_remaining40": {
+        "all_months": {
+          "n": 624,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 880.2656119447895,
+              "mean_CRPS": 1.4106820704243421
+            },
+            "delta_B": {
+              "sum_CRPS": 1259.3894505752464,
+              "mean_CRPS": 2.018252324639818
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.607570254215476
+        },
+        "zero_reference": {
+          "n": 322,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 72.16139913311687,
+              "mean_CRPS": 0.2241037240158909
+            },
+            "delta_B": {
+              "sum_CRPS": 87.26149806231521,
+              "mean_CRPS": 0.2709984411873143
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.0468947171714234
+        },
+        "positive_reference": {
+          "n": 302,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 808.1042128116726,
+              "mean_CRPS": 2.6758417642770618
+            },
+            "delta_B": {
+              "sum_CRPS": 1172.1279525129314,
+              "mean_CRPS": 3.881218385804408
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.2053766215273467
+        },
+        "aqua_zero_reference_positive": {
+          "n": 124,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 138.5277238561083,
+              "mean_CRPS": 1.1171590633557122
+            },
+            "delta_B": {
+              "sum_CRPS": 211.1129982224685,
+              "mean_CRPS": 1.7025241792134556
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.5853651158577432
+        },
+        "both_zero": {
+          "n": 299,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 39.47803696372961,
+              "mean_CRPS": 0.13203356844056724
+            },
+            "delta_B": {
+              "sum_CRPS": 23.45623521169042,
+              "mean_CRPS": 0.07844894719628903
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.05358462124427822
+        },
+        "reference_50_plus": {
+          "n": 10,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 191.2373823752201,
+              "mean_CRPS": 19.123738237522012
+            },
+            "delta_B": {
+              "sum_CRPS": 242.53094877286324,
+              "mean_CRPS": 24.253094877286323
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -5.129356639764312
+        }
+      },
+      "held_published14": {
+        "all_months": {
+          "n": 288,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 939.2291834917165,
+              "mean_CRPS": 3.261212442679571
+            },
+            "delta_B": {
+              "sum_CRPS": 859.6743849493488,
+              "mean_CRPS": 2.98498050329635
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.2762319393832213
+        },
+        "zero_reference": {
+          "n": 85,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 21.987240677759885,
+              "mean_CRPS": 0.2586734197383516
+            },
+            "delta_B": {
+              "sum_CRPS": 16.157742402315485,
+              "mean_CRPS": 0.19009108708606454
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.06858233265228708
+        },
+        "positive_reference": {
+          "n": 203,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 917.2419428139566,
+              "mean_CRPS": 4.5184332158322995
+            },
+            "delta_B": {
+              "sum_CRPS": 843.5166425470333,
+              "mean_CRPS": 4.155254396783415
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.36317881904888344
+        },
+        "aqua_zero_reference_positive": {
+          "n": 56,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 83.83454691226262,
+              "mean_CRPS": 1.4970454805761182
+            },
+            "delta_B": {
+              "sum_CRPS": 137.0,
+              "mean_CRPS": 2.4464285714285716
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.9493830908524531
+        },
+        "both_zero": {
+          "n": 79,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 15.25839510486125,
+              "mean_CRPS": 0.19314424183368673
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.19314424183368673
+        },
+        "reference_50_plus": {
+          "n": 5,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 237.4083241390125,
+              "mean_CRPS": 47.4816648278025
+            },
+            "delta_B": {
+              "sum_CRPS": 87.90303907380607,
+              "mean_CRPS": 17.580607814761215
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 29.90105701304128
+        }
+      },
+      "held_remaining40": {
+        "all_months": {
+          "n": 1296,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1738.9832762261117,
+              "mean_CRPS": 1.3418080835078021
+            },
+            "delta_B": {
+              "sum_CRPS": 2548.5050651230104,
+              "mean_CRPS": 1.966439093459113
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.6246310099513107
+        },
+        "zero_reference": {
+          "n": 749,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 254.59962582233362,
+              "mean_CRPS": 0.3399193936212732
+            },
+            "delta_B": {
+              "sum_CRPS": 304.68885672937773,
+              "mean_CRPS": 0.40679420124082477
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.06687480761955156
+        },
+        "positive_reference": {
+          "n": 547,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 1484.3836504037781,
+              "mean_CRPS": 2.713681262164128
+            },
+            "delta_B": {
+              "sum_CRPS": 2243.8162083936327,
+              "mean_CRPS": 4.10204060035399
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -1.3883593381898618
+        },
+        "aqua_zero_reference_positive": {
+          "n": 265,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 322.121199104504,
+              "mean_CRPS": 1.2155516947339773
+            },
+            "delta_B": {
+              "sum_CRPS": 527.0,
+              "mean_CRPS": 1.9886792452830189
+            }
+          },
+          "mean_difference_F21_minus_delta_B": -0.7731275505490415
+        },
+        "both_zero": {
+          "n": 680,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 161.25584612612343,
+              "mean_CRPS": 0.23714095018547568
+            },
+            "delta_B": {
+              "sum_CRPS": 0.0,
+              "mean_CRPS": 0.0
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 0.23714095018547568
+        },
+        "reference_50_plus": {
+          "n": 9,
+          "forecasts": {
+            "F21": {
+              "sum_CRPS": 371.2154863469147,
+              "mean_CRPS": 41.246165149657195
+            },
+            "delta_B": {
+              "sum_CRPS": 302.28509406657025,
+              "mean_CRPS": 33.58723267406336
+            }
+          },
+          "mean_difference_F21_minus_delta_B": 7.6589324755938275
+        }
+      }
+    }
+  },
+  "worst_CUT_fixed_from_original_B_MAE": [
+    {
+      "regime": "08_backward",
+      "cut": "16301",
+      "selection": "worst original held B MAE; lex CUT tie; no CDF affected",
+      "metrics": {
+        "n": 48,
+        "forecasts": {
+          "F21": {
+            "sum_CRPS": 163.67972701268698,
+            "mean_CRPS": 3.409994312764312
+          },
+          "delta_B": {
+            "sum_CRPS": 234.8291093410572,
+            "mean_CRPS": 4.892273111272026
+          }
+        },
+        "mean_difference_F21_minus_delta_B": -1.482278798507713
+      }
+    },
+    {
+      "regime": "08_forward",
+      "cut": "16104",
+      "selection": "worst original held B MAE; lex CUT tie; no CDF affected",
+      "metrics": {
+        "n": 48,
+        "forecasts": {
+          "F21": {
+            "sum_CRPS": 202.20595387544827,
+            "mean_CRPS": 4.212624039071839
+          },
+          "delta_B": {
+            "sum_CRPS": 335.59179070816424,
+            "mean_CRPS": 6.991495639753421
+          }
+        },
+        "mean_difference_F21_minus_delta_B": -2.778871600681582
+      }
+    },
+    {
+      "regime": "16_backward",
+      "cut": "08305",
+      "selection": "worst original held B MAE; lex CUT tie; no CDF affected",
+      "metrics": {
+        "n": 48,
+        "forecasts": {
+          "F21": {
+            "sum_CRPS": 182.35721433905303,
+            "mean_CRPS": 3.799108632063605
+          },
+          "delta_B": {
+            "sum_CRPS": 269.759298245614,
+            "mean_CRPS": 5.619985380116958
+          }
+        },
+        "mean_difference_F21_minus_delta_B": -1.8208767480533534
+      }
+    },
+    {
+      "regime": "16_forward",
+      "cut": "08305",
+      "selection": "worst original held B MAE; lex CUT tie; no CDF affected",
+      "metrics": {
+        "n": 48,
+        "forecasts": {
+          "F21": {
+            "sum_CRPS": 256.63650726175956,
+            "mean_CRPS": 5.346593901286657
+          },
+          "delta_B": {
+            "sum_CRPS": 526.712011577424,
+            "mean_CRPS": 10.973166907863003
+          }
+        },
+        "mean_difference_F21_minus_delta_B": -5.626573006576344
+      }
+    }
+  ],
+  "fits": 0,
+  "solvers": 0,
+  "science_downloads": 0,
+  "independent_validation": false,
+  "gate1_physical": false,
+  "calibration_or_pure_spread_claim": false,
+  "joint54_CDF_claim": false,
+  "forecasts_only": [
+    "F21",
+    "delta_B"
+  ],
+  "first_real_response_join_utc": "2026-11-15T08:56:25.882657+00:00",
+  "negative_roundoff_clamped_rows": 0,
+  "prior23_35_37_negative_unchanged": true
+}

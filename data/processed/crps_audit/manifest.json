@@ -1,0 +1,26 @@
+{
+  "completed_utc": "2026-11-15T08:56:30.614736+00:00",
+  "output_sha256": {
+    "primary-contrasts.csv": "526568c37c7bf10e1f784f68b7be9caec6ccb913a9b4e677c58760696d1bd540",
+    "summary.json": "1d8af62a1aab4e8b124dab92f4438cf158ac606aa97d13a85072b3682d306ad6",
+    "checkpoint.json": "f16b3c38c6c6226cc726758b3b73d3aa358a1b7752bd99442323ce3985dc7e19",
+    "forecast-CDFs.jsonl.gz": "561ba3df6fa5ec53a0a4976d355a511601f63f6e91f2e56fa1c9e997ff191e7e",
+    "scored-queries.parquet": "6b735032064c90711d2f4010fbf87f7c20ed6d5127760252431f4294e705cd75",
+    "forecast-roster.parquet": "25529ba8360e8be25dc1c1414a70951ff5fb08459c5d1caf83796baf83146115",
+    "per-CUT.csv": "e3721a212ac7348899e617836fa8718a86b2fdbec2a695228053f1a61ede4810",
+    "independent-fixture-comparison.json": "f856d4dcbaf6d0c720b9b63308c36f0c051a8f1f1235b017ca8be03400e6768b",
+    "fixtures.json": "b1dc55fa2c5f1f8eae56166cbe43b67157a9c3d3fa3a2a9240123a9bca64eaa2",
+    "code-freeze.json": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f"
+  },
+  "code_freeze_sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f",
+  "CDF_freeze_sha256": "f16b3c38c6c6226cc726758b3b73d3aa358a1b7752bd99442323ce3985dc7e19",
+  "protected_unchanged": true,
+  "fits": 0,
+  "solvers": 0,
+  "science_downloads": 0,
+  "exported_query_rows": 10368,
+  "atom_elements": 444826,
+  "physical_bytes_before_manifest": 2255662,
+  "peak_RSS_bytes": 174153728,
+  "cap_end_utc": "2026-11-15T10:13:00+00:00"
+}

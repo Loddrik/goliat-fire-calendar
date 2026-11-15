@@ -1,0 +1,16 @@
+{
+  "files": {
+    "oracle-code.py.txt": {
+      "sha256": "1b3d2a76c4713fcdc82fd31654f5b9b15eee72d050e3dda83e6652d88e21860f",
+      "bytes": 3478
+    },
+    "fixtures.json": {
+      "sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5",
+      "bytes": 7296
+    },
+    "freeze.json": {
+      "sha256": "e5a836d02e26bbe339f32b8c1e632708efb29663a0dab56619f9ee360871b067",
+      "bytes": 370
+    }
+  }
+}
