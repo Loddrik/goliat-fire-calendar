@@ -1,0 +1,112 @@
+{
+ "clips": [
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m07-sticker",
+   "image": "r3/entrada/07-satelite-termometro.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo as a die-cut vinyl sticker with a thin white border, stuck on the closed lid of a dark grey laptop on a desk, soft natural light, slight angle. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m05-libreta",
+   "image": "r3/entrada/05-barrido.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo printed in full color on the front cover of a matte off-white field notebook lying on a light wooden desk next to a pencil, soft daylight from a window, top-down view. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m05-sticker",
+   "image": "r3/entrada/05-barrido.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo as a die-cut vinyl sticker with a thin white border, stuck on the closed lid of a dark grey laptop on a desk, soft natural light, slight angle. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m15-libreta",
+   "image": "r3/entrada/15-satelite-calado.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo printed in full color on the front cover of a matte off-white field notebook lying on a light wooden desk next to a pencil, soft daylight from a window, top-down view. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m15-sticker",
+   "image": "r3/entrada/15-satelite-calado.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo as a die-cut vinyl sticker with a thin white border, stuck on the closed lid of a dark grey laptop on a desk, soft natural light, slight angle. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m13-libreta",
+   "image": "r3/entrada/13-curva-de-temporada.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo printed in full color on the front cover of a matte off-white field notebook lying on a light wooden desk next to a pencil, soft daylight from a window, top-down view. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m13-sticker",
+   "image": "r3/entrada/13-curva-de-temporada.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo as a die-cut vinyl sticker with a thin white border, stuck on the closed lid of a dark grey laptop on a desk, soft natural light, slight angle. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m02-libreta",
+   "image": "r3/entrada/02-dos-sensores.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo printed in full color on the front cover of a matte off-white field notebook lying on a light wooden desk next to a pencil, soft daylight from a window, top-down view. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  },
+  {
+   "model": "fal-ai/flux-pro/kontext",
+   "kind": "image",
+   "out": "r3/m02-sticker",
+   "image": "r3/entrada/02-dos-sensores.svg.png",
+   "prompt": "Turn this flat logo into a realistic photo: the exact same logo as a die-cut vinyl sticker with a thin white border, stuck on the closed lid of a dark grey laptop on a desk, soft natural light, slight angle. Keep the logo shape and colors exactly as in the input, do not add any text or letters.",
+   "params": {
+    "aspect_ratio": "1:1",
+    "guidance_scale": 3.5,
+    "output_format": "jpeg"
+   }
+  }
+ ]
+}

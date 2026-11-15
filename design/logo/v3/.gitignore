@@ -1,0 +1,8 @@
+# Lo pesado se queda local: las imágenes crudas de fal.ai y las láminas renderizadas.
+# Se versionan los lotes (exploracion/*.json), los logs con requestId y la página de revisión (pagina/, con copias livianas).
+exploracion/r1/
+exploracion/r2/
+exploracion/r3/
+exploracion/*.png
+exploracion/*.svg
+render/

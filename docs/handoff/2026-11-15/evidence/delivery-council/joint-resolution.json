@@ -50,5 +50,5 @@
     "State raw custody remains local and transfer pending"
   ],
   "execution_is_separate": true,
-  "coordinator_changes_after_review": "Only ratification/execution status and receipt links; priority order and acceptance scope preserved."
+  "coordinator_changes_after_review": "Ratification/execution status, receipt links and dated upstream/recovery factual updates; priority order and acceptance scope preserved."
 }

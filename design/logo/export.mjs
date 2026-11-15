@@ -9,7 +9,7 @@ const root = path.resolve(here, '../..');
 const out = path.join(root, 'web/public/brand');
 fs.mkdirSync(out, { recursive: true });
 
-const M = new Function(`${fs.readFileSync(path.join(here, 'mark.js'), 'utf8')}; return { THEMES, markBody, smallBody, MARK_OPTS };`)();
+const M = new Function(`${fs.readFileSync(path.join(here, 'mark.js'), 'utf8')}; return { THEMES, markBody, smallBody, INK_X };`)();
 const T = JSON.parse(fs.readFileSync(path.join(here, 'text-paths.json'), 'utf8'));
 
 const INK = {
@@ -27,13 +27,17 @@ const text = (key, x, baseline, fill, k = 1) =>
 
 const PAD = 8;
 function horizontal(theme, tagKey) {
-  const ICON = 185, GAP = 30;
+  // La llama es alta y angosta: se recorta el cuadrado a su ancho visible para que el logo parta en el borde
+  // y el nombre quede a una distancia pareja.
+  const ICON = 185, GAP = 34, k = ICON / 128;
+  const inkW = (M.INK_X[1] - M.INK_X[0]) * k;
   const tagW = tagKey ? T[tagKey].width : 0;
   const textW = Math.max(T.name.width, tagW);
-  const w = PAD * 2 + ICON + GAP + textW, h = PAD * 2 + ICON;
+  const w = PAD * 2 + inkW + GAP + textW, h = PAD * 2 + ICON;
   const cy = PAD + ICON / 2;
-  let body = iconAt(theme, PAD, PAD, ICON);
-  const x = PAD + ICON + GAP;
+  // Los horizontales viven en cabeceras de 28–40 px: llevan las líneas gruesas de la versión chica.
+  let body = iconAt(theme, PAD - M.INK_X[0] * k, PAD, ICON, true);
+  const x = PAD + inkW + GAP;
   if (tagKey) {
     const block = T.name.cap + 36;
     const nameBase = cy - block / 2 + T.name.cap;

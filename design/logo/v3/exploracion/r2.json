@@ -1,0 +1,159 @@
+{
+ "comun": {
+  "size": "1024x1024"
+ },
+ "clips": [
+  {
+   "model": "nano-banana",
+   "out": "r2/n01-isolineas-nano",
+   "prompt": "Logo mark: a flame drawn only with five nested contour lines, like a topographic or thermal isotherm map, thick strokes, the outer line brick red, inner lines orange and amber, the innermost a small solid amber dot. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n02-dos-mitades-nano",
+   "prompt": "Logo mark: a single symmetric flame cut vertically into two halves with a thin gap; the left half is filled with horizontal navy stripes, the right half is solid amber-to-orange. Two sensors becoming one record. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n03-sat-termometro-nano",
+   "prompt": "Logo mark: a satellite whose central body is a thermometer with a round orange bulb and amber mercury, and two navy solar panels as wings on each side. Clever, friendly, geometric. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n04-g-llama-nano",
+   "prompt": "Logo mark: a heavy geometric capital G monogram in navy, its inner counter holds a small amber-orange flame that rises out of the G's crossbar. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n05-haz-nano",
+   "prompt": "Logo mark: a small navy satellite at the top projects a narrow triangular beam made of thin horizontal lines downward, and the beam lands on one single small square pixel glowing amber at the bottom. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n06-pixeles-nano",
+   "prompt": "Logo mark: an orange flame whose upper tip breaks apart into small square pixels that drift upward and to the right, the fire turning into data. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n07-ondas-nano",
+   "prompt": "Logo mark: three vertical wavy heat-haze lines of different heights rising from a short navy ground line, together forming the silhouette of a flame, amber, orange, brick red. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n08-copihue-nano",
+   "prompt": "Logo mark: a single stylized Chilean copihue flower bell, drawn so that it is upside down it becomes a flame, three elongated petals in amber and orange with a navy stem curling like an orbit. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n09-curva-estacional-nano",
+   "prompt": "Logo mark: a smooth seasonal area chart, low on the left and right and rising to a single peak in the middle; the peak curls over at the top like the tip of a flame; amber to orange fill, navy baseline. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n10-bauhaus-nano",
+   "prompt": "Logo mark in Bauhaus style: a flame composed only of a quarter circle, a semicircle and a triangle, plus one small navy square satellite, bold primary geometry. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n11-negativo-nano",
+   "prompt": "Logo mark: a solid orange flame silhouette with the shape of a small satellite cut out of it as negative space, clever figure-ground logo. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n12-origami-nano",
+   "prompt": "Logo mark: a flame made of folded paper origami facets, five flat triangular planes in amber, orange and brick red, crisp geometric. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n13-monolinea-nano",
+   "prompt": "Logo mark: one continuous single-weight line that draws a flame outline, then leaves the flame tip as a gentle wave going up and right to a tiny navy satellite. Elegant monoline. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n14-cordillera-nano",
+   "prompt": "Logo mark: a wide navy silhouette of the Andes with a snow-capped volcano, a small amber glow at the foot of the mountains, and a thin wavy line rising from the glow to a tiny satellite in the sky. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "nano-banana",
+   "out": "r2/n15-gigante-nano",
+   "prompt": "Logo mark: a towering minimal navy figure made of a tall rectangle with a satellite dish for a head, looking down at a tiny amber ember on the ground, the giant who watches; witty, geometric, friendly. Flat vector icon, solid shapes, at most four colors: deep navy #0B2545, amber #FDB022, orange #F06A1D, brick red #C7302A. Strong simple silhouette that still reads at 32 pixels. Centered with generous margin on a plain off-white background. No text, no letters, no circle, no ring, no badge, no frame, no stars, no shadow, no 3D."
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i01-o-isoterma-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in heavy extended geometric sans-serif, deep navy letters, the letter O is replaced by a flame-shaped symbol built from concentric isotherm contour bands in amber, orange and brick red, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i02-a-haz-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in bold extended geometric sans-serif, deep navy letters, the letter A has no crossbar and is shaped like a satellite beam, with a small amber flame sitting at the base inside the A and a small amber dot at the apex, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i03-i-termometro-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in bold extended geometric sans-serif, deep navy letters, the letter I is drawn as a slim thermometer with an orange bulb at the bottom, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i04-lockup-sensores-ideogram",
+   "prompt": "Horizontal logo lockup: on the left a flame symbol split in two halves, left half navy horizontal stripes, right half solid amber-orange; on the right the word \"GOLIAT\" in bold extended navy sans-serif, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i05-curva-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in bold extended navy sans-serif, underlined by a smooth amber-to-orange curve that rises to a single peak under the letters and curls like a flame tip, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i06-mono-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in a technical monospaced typeface, deep navy, with a tiny amber satellite floating above the letter I like a dot, and a short orange infrared wave between them, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  },
+  {
+   "model": "fal-ai/ideogram/v3",
+   "kind": "image",
+   "out": "r2/i07-stencil-ideogram",
+   "prompt": "Wordmark logo \"GOLIAT\" in a bold stencil extended sans-serif like scientific instrument labeling, deep navy, the gaps in the letters glowing amber, flat vector, professional brand identity, generous margin, plain off-white background, nothing else",
+   "params": {
+    "rendering_speed": "BALANCED",
+    "style": "DESIGN",
+    "negative_prompt": "circle frame, badge, ring, emblem, seal, stars, gradient background, extra text, tagline, mockup, 3D"
+   }
+  }
+ ]
+}

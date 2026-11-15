@@ -1,5 +1,9 @@
 # GOLIAT: una historia del fuego que el municipio puede revisar
 
+**Actualización de originales, 14:11 UTC:** la copia del otro desarrollador completó **1.071/1.071 CSV exactos**. El guard devuelve **COMPLETE, salida 0** en esta máquina. Los 956 recuperados y 115 faltantes citados en informes previos corresponden al corte anterior. No se repitieron ingestión, cartografía ni modelos; el fallo estricto histórico de una fila por lado sigue sin resolverse. [Recibo de la copia](evidence/peer-raw-recovery.json).
+
+**Actualización de integración:** `dev` avanzó a `2fa31b4` durante la preparación. La [consulta de cierre](evidence/repository-at-close.json) registra ahora **23 de los 24 PR científicos seleccionados fusionados y uno abierto (#64)**. El inventario de las 13:41 UTC se conserva como antecedente fechado. Se incorporan localmente la marca nueva y el método en inglés del otro desarrollador; esto no acredita despliegue ni promoción de los modelos de investigación.
+
 **Resumen para presentar · 15 de noviembre de 2026.** GOLIAT organiza actividad térmica registrada por satélites en un calendario territorial para las 54 comunas de Biobío y Ñuble. Su propuesta es ayudar a preparar la temporada con información histórica comprensible y trazable. El producto conservado utiliza M1; los candidatos de investigación permanecen separados. Este documento no acredita un nuevo despliegue.
 
 ## El problema y la decisión del usuario
@@ -26,7 +30,7 @@ El producto distingue el tramo estimado, las observaciones S-NPP y las observaci
 | --- | --- |
 | Investigación puntual: en un mismo panel retrospectivo de **5.184 comuna-meses**, la referencia M1 reajustada por origen tuvo un error absoluto medio mensual (**MAE**, en celdas-día) de **2,047245** y E_coherent **1,797939**: reducción compuesta **12,18 %**. | Es una mejora media de investigación bajo ese contrato, con costes territoriales. No sustituye M1 publicado ni equivale a incendios evitados. No se suman porcentajes de etapas. |
 | Totales julio–junio M1: **112 casos**, correspondientes a las 14 seleccionadas × 8 temporadas. Mediana del error porcentual absoluto **20,34 %**; media del error relativo firmado **−11,46 %**; **76/112** totales subestimados. | Diagnóstico aparente después de seleccionar comunas con ese desarrollo. La mediana no es la media: MARE **22,81 %**, WAPE **20,42 %** y sesgo agregado **−10,60 %** responden otras preguntas. No valida 2002–2011. |
-| Recuperación: **956/1.071 CSV** idénticos al inventario; **115** pendientes. Con **205 fuentes históricas**, se reprodujeron las **223 celdas** de máscara y los conteos Aqua **9.123** / S-NPP **21.466**, usando el mapa comunal congelado. | El cociente reproduce el factor M1 exacto. La comparación estricta de detecciones todavía difiere en **una fila por cada lado**; la adquisición y cartografía completas no están reproducidas. |
+| Recuperación actual: **1.071/1.071 CSV** idénticos al inventario; los 115 faltantes se completaron con la copia del otro desarrollador. En la auditoría previa con **205 fuentes históricas**, se reprodujeron las **223 celdas** de máscara y los conteos Aqua **9.123** / S-NPP **21.466**, usando el mapa comunal congelado. | El cociente reproduce el factor M1 exacto. La comparación estricta de detecciones todavía difiere en **una fila por cada lado**; la adquisición y cartografía completas no están reproducidas. |
 
 Los consejos multifocales acordaron criterios antes de priorizar; consejos adversarios buscaron errores de interpretación, dependencia y selección. Protocolos previos, resultados negativos conservados y revisiones independientes limitaron qué podía afirmarse. Varios candidatos no superaron sus controles y no se promovieron. Los **358 tests confirmados en el CI del corte**, para el commit `6410fcb`, están identificados en el [recibo técnico](evidence/verification-snapshot.json). Acreditan controles de software, no verdad física del fuego ni el despliegue de otra versión.
 
@@ -51,7 +55,7 @@ Usar el enlace del sitio indicado en el [README](../../../README.md), comproband
 
 **¿F21 ya pronostica futuros incendios?** No. Es una distribución experimental de S-NPP del **mismo mes histórico**, condicionada al Aqua mensual ya conocido. Su comparación favorable de CRPS mezcla localización y dispersión; no demuestra calibración, oportunidad física ni bandas consistentes alrededor del punto reconciliado E_coherent.
 
-**¿Todo está integrado y desplegado?** No se debe afirmar eso. El [inventario de entrega](evidence/pr-inventory.json), consultado a las **13:41 UTC**, registra **24 ramas científicas: 3 fusionadas y 21 abiertas**. La integración PR22 está fusionada y el fix PR31 sigue abierto contra `main`. Entre las 26 entradas revisadas, sólo PR22–25 están fusionados. Ningún estado de PR acredita despliegue; revisado, fusionado y desplegado son estados distintos.
+**¿Todo está integrado y desplegado?** Hay que distinguir cada estado. En el corte histórico, el [inventario de entrega](evidence/pr-inventory.json), consultado a las **13:41 UTC**, registraba **24 ramas científicas: 3 fusionadas y 21 abiertas**. En ese corte, la integración PR22 estaba fusionada y el fix PR31 seguía abierto contra `main`; entre las 26 entradas revisadas, sólo PR22–25 estaban fusionados. La consulta de cierre actualiza la selección científica a 23 fusionados y uno abierto (#64). Ningún estado de PR acredita despliegue; revisado, fusionado y desplegado son estados distintos.
 
 ## Sostenibilidad: hipótesis que debe probar un piloto
 

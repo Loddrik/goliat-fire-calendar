@@ -1,6 +1,10 @@
 # GOLIAT: entrega al equipo de presentación
 
-**15 de noviembre de 2026 · límite de entrega 12:30 Santiago / 15:30 UTC.** Este paquete explica el producto conservado, la investigación y sus límites. No cambia M1, compuertas, predicciones ni datos publicados. El candidato de aplicación es el código científico de `6410fcb491e9a318419d7b142ddab52b1e483662` (PR64); la rama `docs/44-handoff-presentacion` añade documentación. El estado de integración y el de despliegue deben comprobarse por separado.
+**Actualización de originales, 14:11 UTC:** la copia del otro desarrollador completó **1.071/1.071 CSV exactos**. El guard devuelve **COMPLETE, salida 0** en esta máquina. Los 956 recuperados y 115 faltantes citados en informes previos corresponden al corte anterior. No se repitieron ingestión, cartografía ni modelos; el fallo estricto histórico de una fila por lado sigue sin resolverse. [Recibo de la copia](evidence/peer-raw-recovery.json).
+
+**Actualización de integración:** `dev` avanzó a `2fa31b4` durante la preparación. La [consulta de cierre](evidence/repository-at-close.json) registra ahora **23 de los 24 PR científicos seleccionados fusionados y uno abierto (#64)**. El inventario de las 13:41 UTC se conserva como antecedente fechado. Se incorporan localmente la marca nueva y el método en inglés del otro desarrollador; esto no acredita despliegue ni promoción de los modelos de investigación.
+
+**15 de noviembre de 2026 · límite de entrega 12:30 Santiago / 15:30 UTC.** Este paquete explica el producto conservado, la investigación y sus límites. No cambia M1, compuertas, predicciones ni datos publicados. La referencia científica es `6410fcb491e9a318419d7b142ddab52b1e483662` (PR64). La aplicación incorpora además la nueva marca de `dev` en `2fa31b4a3453de70b3eae093bc57f1910d9bcb5d`; la rama `docs/44-handoff-presentacion` añade la documentación y conserva ese avance. El estado de integración y el de despliegue deben comprobarse por separado.
 
 ## Empieza aquí: diez minutos para preparar el relato
 
@@ -15,7 +19,7 @@
 
 **Investigación:** existen mejoras retrospectivas bajo contratos explícitos y resultados negativos preservados. E_coherent y F21 no sustituyen M1. F21 no es un pronóstico de incendios futuros ni una banda anual validada. El diagnóstico estacional de 112 casos es aparente después de seleccionar comunas; no valida 2002–2011.
 
-**Versiones y PR:** el [inventario de entrega](evidence/pr-inventory.json), fechado a las 13:41 UTC, distingue 24 PR científicos: tres fusionados (#23–25) y 21 abiertos. #22, de integración, está fusionado; #31 sigue abierto hacia `main`. Las ramas científicas abiertas requieren revisión y un plan de integración. No corresponde fusionarlas en bloque para presentar. Los nuevos PR se dirigen a `dev`.
+**Versiones y PR:** en el corte histórico, el [inventario de entrega](evidence/pr-inventory.json), fechado a las 13:41 UTC, distinguía 24 PR científicos: tres fusionados (#23–25) y 21 abiertos. #22, de integración, está fusionado; #31 estaba abierto hacia `main`. La consulta de cierre superior actualiza esos estados; el PR64 sigue separado y requiere revisión. No se deduce una versión desplegada del estado de integración. Los nuevos PR se dirigen a `dev`.
 
 **Comprobación de software:** el [recibo de CI](evidence/verification-snapshot.json) identifica el commit `6410fcb` y el run con **358 tests**, más el lector portátil de evidencia CRPS (10.368 CDF y 432 conjuntos). Ambos checks de PR64 estaban en SUCCESS en ese corte. Son verificaciones de software y evidencia congelada, no validación de verdad física ni utilidad municipal.
 
@@ -32,7 +36,7 @@ Abrir `http://localhost:3999/explorar?cut=08111&lang=es` (Tomé), después añad
 
 Un checkout nuevo necesita primero `npm ci` en la raíz y `npm --prefix web ci`, respetando sus lockfiles. No hacen falta claves NASA para consultar los JSON publicados incluidos. El mapa carga un estilo externo: para una presentación sin red, preparar capturas y conservar calendario/tabla como alternativa. La aplicación no se convierte en una solución offline por ejecutarla en localhost.
 
-No ejecutar `pipeline/inventory.py`, reconstruir raw ni lanzar drivers históricos con deadlines vencidos para preparar la demo. En particular, no regenerar el inventario para ocultar los 115 faltantes.
+No ejecutar `pipeline/inventory.py`, reconstruir derivados ni lanzar drivers históricos con deadlines vencidos para preparar la demo. El inventario original permanece congelado; la recuperación completó los faltantes sin modificarlo.
 
 ## Verificar evidencia y preservar el trabajo
 
@@ -43,9 +47,9 @@ Con el entorno científico bloqueado existente, el lector es de sólo lectura:
 .venv/bin/python pipeline/verify_raw_inventory.py --details
 ```
 
-El segundo comando debe informar **INCOMPLETE** y salir con código 1 mientras falten originales. En esta copia hay 956/1.071 exactos; en un clon sin respaldo puede haber cero. Es una negativa esperada del guard, no permiso para reingestar parcialmente. La [auditoría histórica](../../reviews/2026-11-15-raw-historical-core-audit.md) documenta una fila distinta por lado en la comparación estricta, aunque máscara y agregados coincidan usando la asignación comunal congelada.
+El segundo comando ahora informa **COMPLETE** y sale con código **0**: en esta máquina hay 1.071/1.071 exactos, cero faltantes, distintos o adicionales. En un clon sin el respaldo seguirá informando INCOMPLETE y salida 1. El guard acredita disponibilidad/integridad, no reproducibilidad científica. La [auditoría histórica](../../reviews/2026-11-15-raw-historical-core-audit.md) sigue documentando una fila distinta por lado en la comparación estricta; no se repitió tras la recuperación completa.
 
-Los originales están ignorados por Git. El respaldo local `goliat-raw-recovery-20261115-1327.tar` se conserva en la carpeta hermana `nasa/backups`, con 956 miembros verificados; su hash consta en el [acta local](acta-ensayo.md). Su custodia y transferencia requieren un receptor; no están incluidas en un clon de GitHub. El [reporte de recuperación](../../reviews/2026-11-15-raw-recovery-report.md) y su manifest conservan el inventario. Preguntar al otro desarrollador por su `data/raw` es útil para comparar los pendientes, pero no bloquea esta presentación. Conservar la copia sin regenerarla; aceptar sólo archivos que coincidan en ruta, tamaño y SHA con el inventario congelado.
+Los originales están ignorados por Git. La copia completa recibida, `goliat-data-raw.tar.gz`, se conserva sin modificar en Downloads y respaldada como `nasa/backups/goliat-data-raw-peer-complete-20261115.tar.gz`: SHA-256 `6999eec9d27c4ebe3af1314355a78c7fb98acb7f77224b04db8ccc85c0bd1698`. El [recibo](evidence/peer-raw-recovery.json) registra 1.071 CSV y el inventario idéntico, sin rutas inseguras ni reemplazos. El tar parcial anterior de 956 se preserva como antecedente. La transferencia al presentador sigue por coordinar; el respaldo completo no viaja con un clon de GitHub. La consulta al otro desarrollador resolvió los 115 faltantes sin redescargar NASA ni regenerar el inventario.
 
 ## Reproducir los informes HTML
 

@@ -3,13 +3,13 @@
   "scope": "Consolidación documental para presentadores; sin mediciones nuevas, ensayo de navegador ni verificación remota propia",
   "document": {
     "path": "docs/handoff/2026-11-15/resumen-negocio.md",
-    "sha256": "ea3414ef1e27c6b119a6953102f00d519c65b166d31a4e1ea0650f7c4e58b9c2"
+    "sha256": "2a524afd63efd80d7ce8b45f3b635b1ce0b6055031d7c425b3ef421da5c41108"
   },
   "sources": [
     {
       "claim_group": "producto_y_gates",
       "path": "docs/method.md",
-      "sha256": "7a56c167dbd1a5c2d536d6bb341ca32caae061e78e24ba305ab7b20e5b0fce00"
+      "sha256": "f7abbb55b2b04fc70beb0364a1ad7083e6aeb26f72c1b750df3c39085736a70a"
     },
     {
       "claim_group": "indice_54_y_habilitacion",
@@ -70,6 +70,18 @@
       "claim_group": "358_tests_CI_commit6410fcb",
       "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
       "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-raw-recovery.json",
+      "sha256": "ff33d3a9ac9459db845656a8f88459b563c3b10880c426a9c8b93c24774dab4f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-verification.json",
+      "sha256": "3630662620afb9b814ec79d3990aeadac172f8e235eb6814d7be2b96f7789b3f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/repository-at-close.json",
+      "sha256": "af385374b89a23336946690694cc033fde60e340b9800f14e06689955a7e6b4f"
     }
   ],
   "uncertainties": [
@@ -78,5 +90,6 @@
     "El estado dePR es snapshot13:41, no evidencia de despliegue."
   ],
   "verification_scope": "Se inspeccionó el recibo primario:358tests enCIrun43719314956 delcommit6410fcb; no se reejecutó suite ni navegador para esta redacción.",
-  "coordinator_addendum": "Local browser receipt linked after writer completion; human rehearsal and public deployment remain unverified."
+  "coordinator_addendum": "Local browser receipt linked after writer completion; human rehearsal and public deployment remain unverified.",
+  "coordinator_closing_addendum": "Dated upstream state and complete peer raw recovery appended after council priority vote; no change to scientific results or model publication."
 }
