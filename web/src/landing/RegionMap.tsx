@@ -1,158 +1,199 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Text } from "./text";
-import { seasonLabel, dateShort, type Lang } from "./text";
+import { seasonLabel, type Lang } from "./text";
 
-// Mapa regional dibujado en canvas desde /data/derived/region.json (celdas de 0,01° con temporadas
-// con detección, solo VIIRS 2012→) y /data/comunas.geojson. Sin teselas: no depende de un servidor de mapas.
+// Mapa animado del hero (#40): recorre el año de julio a junio y en cada mes se encienden los sectores
+// con detección en ese mes, sumando solo temporadas completas (/data/derived/region_months.json, de
+// pipeline/publish_web.py). Es para mirar, no para interactuar: elegir una comuna se hace con el buscador
+// o en Explorar. Botón de pausa (WCAG 2.2.2); con «reducir movimiento» queda quieto en el mes más alto.
+// Canvas sin teselas. Solo dos capas fuera de pantalla (mes actual y siguiente) para no gastar memoria en
+// un celular; la animación se detiene cuando el mapa no está a la vista o la pestaña está oculta.
 
-type Cell = { cut: string; x: number; y: number; n: number };
-type Region = { cutoff: string; seasons: number[]; cell_size_deg: number; cells: Cell[] };
+type Cell = { x: number; y: number; ms: number[] };
+type Months = { cutoff: string; seasons: number[]; cell_size_deg: number; cells: Cell[] };
 type Ring = number[][];
-type Feature = { properties: { cut: string; comuna: string; region: string }; geometry: { type: "Polygon" | "MultiPolygon"; coordinates: Ring[] | Ring[][] } };
+type Feature = { geometry: { type: "Polygon" | "MultiPolygon"; coordinates: Ring[] | Ring[][] } };
 type Geo = { features: Feature[] };
 
-// Misma rampa y mismos tramos que el mapa de la app (1 · 2 · 3–4 · 5–7 · 8 o más temporadas).
-const RAMP = ["#C6DBEF", "#9ECAE1", "#6BAED6", "#3182BD", "#08519C"];
-const cls = (n: number) => (n >= 8 ? 4 : n >= 5 ? 3 : n >= 3 ? 2 : n === 2 ? 1 : 0);
-
-// Comunas de referencia para ubicarse (capitales regionales y provincial); solo el nombre, sin datos.
-const LANDMARKS = ["08101", "16101", "08301"];
+const ORDER = [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
+// Más temporadas con detección en ese mes = más claro: se «enciende» sobre el azul noche. Rampa de la app.
+export const NIGHT_RAMP = ["#4F8FC0", "#9ECAE1", "#C6DBEF", "#FFFFFF"];
+const col = (n: number) => NIGHT_RAMP[n >= 5 ? 3 : n >= 3 ? 2 : n === 2 ? 1 : 0];
+const HOLD = 1200, FADE = 600, STEP = HOLD + FADE;
 
 const BOUNDS = { lonMin: -73.98, lonMax: -70.97, latMin: -38.51, latMax: -35.99 };
 const KX = Math.cos((37.25 * Math.PI) / 180);
 
-export function RegionMap({ t, lang, onPick }: { t: Text; lang: Lang; onPick: (cut: string) => void }) {
+function useReducedMotion() {
+  const [reduced, setReduced] = useState(() => matchMedia("(prefers-reduced-motion: reduce)").matches);
+  useEffect(() => {
+    const mq = matchMedia("(prefers-reduced-motion: reduce)");
+    const on = () => setReduced(mq.matches);
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+  return reduced;
+}
+
+export function RegionMap({ t, lang, enabled, total }: { t: Text; lang: Lang; enabled: number; total: number }) {
   const wrap = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
-  const [region, setRegion] = useState<Region | null>(null);
+  const [data, setData] = useState<Months | null>(null);
   const [geo, setGeo] = useState<Geo | null>(null);
   const [error, setError] = useState(false);
   const [width, setWidth] = useState(0);
-  const [hover, setHover] = useState<{ cut: string; name: string; x: number; y: number } | null>(null);
-  const touch = useRef(false);
+  const reduced = useReducedMotion();
+  const [paused, setPaused] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [month, setMonth] = useState(9); // índice en ORDER; 9 = abril
+  const still = reduced || paused || !visible;
 
   useEffect(() => {
     const c = new AbortController();
     Promise.all([
-      fetch("/data/derived/region.json", { signal: c.signal }).then(r => { if (!r.ok) throw new Error("region"); return r.json(); }),
+      fetch("/data/derived/region_months.json", { signal: c.signal }).then(r => { if (!r.ok) throw new Error("months"); return r.json(); }),
       fetch("/data/comunas.geojson", { signal: c.signal }).then(r => { if (!r.ok) throw new Error("geo"); return r.json(); }),
-    ]).then(([r, g]) => { setRegion(r); setGeo(g); }).catch(() => { if (!c.signal.aborted) setError(true); });
+    ]).then(([d, g]) => { setData(d); setGeo(g); }).catch(() => { if (!c.signal.aborted) setError(true); });
     return () => c.abort();
   }, []);
 
   useEffect(() => {
-    if (!wrap.current) return;
+    const el = wrap.current;
+    if (!el) return;
     const ro = new ResizeObserver(([e]) => setWidth(Math.floor(e.contentRect.width)));
-    ro.observe(wrap.current);
-    return () => ro.disconnect();
+    ro.observe(el);
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting && !document.hidden));
+    io.observe(el);
+    const vis = () => setVisible(!document.hidden);
+    document.addEventListener("visibilitychange", vis);
+    return () => { ro.disconnect(); io.disconnect(); document.removeEventListener("visibilitychange", vis); };
   }, []);
 
   const s = width / ((BOUNDS.lonMax - BOUNDS.lonMin) * KX);
   const height = Math.round((BOUNDS.latMax - BOUNDS.latMin) * s);
-  const px = (lon: number) => (lon - BOUNDS.lonMin) * KX * s;
-  const py = (lat: number) => (BOUNDS.latMax - lat) * s;
 
-  // Un Path2D por comuna, en píxeles CSS, para dibujar y para saber qué comuna está bajo el puntero.
-  const paths = useMemo(() => {
-    if (!geo || !width) return [];
-    return geo.features.map(f => {
-      const p = new Path2D();
-      const polys = (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates) as Ring[][];
-      for (const poly of polys) for (const ring of poly) {
-        ring.forEach(([lon, lat], i) => (i ? p.lineTo(px(lon), py(lat)) : p.moveTo(px(lon), py(lat))));
-        p.closePath();
-      }
-      let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
-      for (const poly of polys) for (const [lon, lat] of poly[0]) { x0 = Math.min(x0, lon); x1 = Math.max(x1, lon); y0 = Math.min(y0, lat); y1 = Math.max(y1, lat); }
-      return { cut: f.properties.cut, name: f.properties.comuna, path: p, cx: px((x0 + x1) / 2), cy: py((y0 + y1) / 2) };
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [geo, width]);
+  // Por mes (en el orden jul→jun): celdas ordenadas para que las más claras queden encima, y su conteo.
+  const byMonth = useMemo(() => {
+    if (!data) return null;
+    return ORDER.map(m => data.cells.filter(c => c.ms[m - 1] > 0).map(c => ({ x: c.x, y: c.y, n: c.ms[m - 1] })).sort((a, b) => a.n - b.n));
+  }, [data]);
+  const counts = useMemo(() => byMonth?.map(l => l.length) ?? [], [byMonth]);
+  const peak = counts.length ? counts.indexOf(Math.max(...counts)) : 9;
 
-  const sorted = useMemo(() => (region ? [...region.cells].sort((a, b) => a.n - b.n) : []), [region]);
+  // Dibujo: base (límites) + mes i + mes j con fundido. Las capas se rehacen solo al cambiar de mes.
+  const layers = useRef<{ base?: HTMLCanvasElement; cache: Map<number, HTMLCanvasElement>; key: string }>({ cache: new Map(), key: "" });
 
   useEffect(() => {
     const cv = canvas.current;
-    if (!cv || !region || !paths.length) return;
-    const dpr = window.devicePixelRatio || 1;
+    if (!cv || !byMonth || !geo || width < 60) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
     cv.width = width * dpr; cv.height = height * dpr;
+    const px = (lon: number) => (lon - BOUNDS.lonMin) * KX * s;
+    const py = (lat: number) => (BOUNDS.latMax - lat) * s;
+    const off = () => { const c = document.createElement("canvas"); c.width = width * dpr; c.height = height * dpr; const x = c.getContext("2d")!; x.setTransform(dpr, 0, 0, dpr, 0, 0); return [c, x] as const; };
+    const L = layers.current;
+    const key = `${width}x${height}@${dpr}`;
+    if (L.key !== key) { L.base = undefined; L.cache.clear(); L.key = key; }
+    if (!L.base) {
+      const [c, x] = off();
+      x.fillStyle = "#0D2252"; x.strokeStyle = "rgba(169,184,206,.30)"; x.lineWidth = 0.6;
+      for (const f of geo.features) {
+        const polys = (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates) as Ring[][];
+        x.beginPath();
+        for (const poly of polys) for (const ring of poly) { ring.forEach(([lon, lat], i) => (i ? x.lineTo(px(lon), py(lat)) : x.moveTo(px(lon), py(lat)))); x.closePath(); }
+        x.fill(); x.stroke();
+      }
+      L.base = c;
+    }
+    const step = data!.cell_size_deg;
+    const cw = Math.max(1.6, step * KX * s), ch = Math.max(1.6, step * s);
+    const paint = (i: number) => {
+      const [c, x] = off();
+      for (const e of byMonth[i]) {
+        const X = px(e.x * step), Y = py((e.y + 1) * step);
+        x.fillStyle = col(e.n); x.fillRect(X, Y, cw, ch);
+      }
+      return c;
+    };
+    // Caché de a lo más 3 meses pintados (el actual, el siguiente y el que se está yendo).
+    const layer = (i: number) => {
+      let c = L.cache.get(i);
+      if (!c) {
+        c = paint(i); L.cache.set(i, c);
+        while (L.cache.size > 3) L.cache.delete(L.cache.keys().next().value!);
+      }
+      return c;
+    };
     const ctx = cv.getContext("2d")!;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, width, height);
-    for (const p of paths) {
-      ctx.fillStyle = p.cut === hover?.cut ? "#E4EEF3" : "#F1F0EA";
-      ctx.fill(p.path);
-    }
-    ctx.lineWidth = 0.7; ctx.strokeStyle = "#C9C9C0";
-    for (const p of paths) ctx.stroke(p.path);
-    const step = region.cell_size_deg;
-    const cw = Math.max(1.4, step * KX * s), ch = Math.max(1.4, step * s);
-    for (const c of sorted) {
-      ctx.fillStyle = RAMP[cls(c.n)];
-      ctx.fillRect(px(c.x * step), py((c.y + 1) * step), cw, ch);
-    }
-    const h = paths.find(p => p.cut === hover?.cut);
-    if (h) { ctx.lineWidth = 1.8; ctx.strokeStyle = "#1A1A1A"; ctx.stroke(h.path); }
-    ctx.font = "500 12px 'IBM Plex Sans', system-ui, sans-serif";
-    ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.lineJoin = "round";
-    for (const p of paths.filter(p => LANDMARKS.includes(p.cut))) {
-      ctx.fillStyle = "#1A1A1A"; ctx.beginPath(); ctx.arc(p.cx, p.cy, 2.6, 0, Math.PI * 2); ctx.fill();
-      ctx.lineWidth = 3.5; ctx.strokeStyle = "rgba(255,255,255,.92)"; ctx.strokeText(p.name, p.cx, p.cy - 12);
-      ctx.fillText(p.name, p.cx, p.cy - 12);
-    }
+    const draw = (i: number, fade: number) => {
+      const j = (i + 1) % 12;
+      const li = layer(i), lj = fade > 0 ? layer(j) : null;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      ctx.drawImage(L.base!, 0, 0);
+      ctx.globalAlpha = 1 - fade; ctx.drawImage(li, 0, 0);
+      if (lj) { ctx.globalAlpha = fade; ctx.drawImage(lj, 0, 0); }
+      ctx.globalAlpha = 1;
+    };
+    if (still) { draw(reduced && !paused ? peak : month, 0); return; }
+    let raf = 0;
+    const t0 = performance.now() - month * STEP;
+    const tick = (now: number) => {
+      const tt = (now - t0) % (12 * STEP), i = Math.floor(tt / STEP), f = tt - i * STEP;
+      const fade = f < HOLD ? 0 : (f - HOLD) / FADE;
+      draw(i, fade);
+      const shown = fade > 0.5 ? (i + 1) % 12 : i;
+      setMonth(m => (m === shown ? m : shown));
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+    // El mes de partida se toma al (re)arrancar; no se reinicia en cada cambio de mes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [region, paths, sorted, hover?.cut, width, height]);
+  }, [byMonth, geo, width, height, still, reduced]);
 
-  function pick(e: { clientX: number; clientY: number }) {
-    const cv = canvas.current;
-    if (!cv || !paths.length) return null;
-    const r = cv.getBoundingClientRect();
-    const x = e.clientX - r.left, y = e.clientY - r.top;
-    const ctx = cv.getContext("2d")!;
-    // isPointInPath transforma el trazado con la matriz vigente, pero no el punto: con la escala del
-    // dibujo (dpr) el acierto caía en (x/dpr, y/dpr). En identidad, trazado y punto quedan en píxeles CSS.
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    const hit = paths.find(p => ctx.isPointInPath(p.path, x, y));
-    return hit ? { cut: hit.cut, name: hit.name, x, y } : null;
-  }
+  const shownMonth = reduced && !paused ? peak : month;
+  const cmax = Math.max(1, ...counts);
+  const seasons = data?.seasons ?? [];
+  const range = seasons.length ? [seasonLabel(seasons[0]), seasonLabel(seasons[seasons.length - 1])] as const : null;
+  const fmt = (n: number) => n.toLocaleString(lang === "es" ? "es-CL" : "en-US");
 
-  const seasons = region?.seasons ?? [];
   return (
     <figure className="lp-map">
-      <figcaption className="lp-map-head">
-        <span className="lp-map-title">{seasons.length ? t.mapTitle(seasonLabel(seasons[0]), seasonLabel(seasons[seasons.length - 1]), dateShort(region!.cutoff, lang)) : t.mapLoading}</span>
-        <span className="lp-map-note">{t.mapNote}</span>
-      </figcaption>
-      <div className="lp-map-canvas" ref={wrap} style={{ height: height || undefined }}>
-        {error ? <p className="lp-map-msg">{t.mapError}</p> : !region ? <p className="lp-map-msg">{t.mapLoading}</p> : null}
-        <canvas
-          ref={canvas}
-          role="img"
-          aria-label={t.mapAria}
-          style={{ width, height, cursor: hover ? "pointer" : "default" }}
-          onPointerDown={e => { touch.current = e.pointerType !== "mouse"; }}
-          onPointerMove={e => { if (e.pointerType === "mouse") setHover(pick(e)); }}
-          onPointerLeave={e => { if (e.pointerType === "mouse") setHover(null); }}
-          onClick={e => {
-            const h = pick(e);
-            if (!h) { setHover(null); return; }
-            // En pantallas táctiles, el primer toque muestra el nombre y el segundo abre la comuna.
-            if (touch.current && hover?.cut !== h.cut) { setHover(h); return; }
-            onPick(h.cut);
-          }}
-        />
-        {hover && (
-          <div className="lp-map-tip" style={{ left: Math.max(4, Math.min(hover.x + 12, width - 250)), top: Math.max(hover.y - 34, 4) }} aria-hidden="true">
-            {hover.name} <span>{touch.current ? `· ${t.mapTapAgain}` : "→"}</span>
-          </div>
+      <div className="lp-map-bar">
+        <div aria-hidden="true">
+          <div className="lp-map-kicker">{range ? t.mapKicker(range[0], range[1]) : "\u00a0"}</div>
+          <div className="lp-map-month">{byMonth ? t.monthsLong[shownMonth] : " "}</div>
+          <div className="lp-map-count">{byMonth && range ? t.mapCount(fmt(counts[shownMonth]), t.monthsLong[shownMonth], seasons.length) : " "}</div>
+        </div>
+        {!reduced && byMonth && (
+          <button type="button" className="lp-map-pause" onClick={() => setPaused(p => !p)} aria-label={paused ? t.mapPlay : t.mapPause} aria-pressed={paused}>
+            {paused
+              ? <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1 13 7 3 13z" fill="currentColor" /></svg>
+              : <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" fill="currentColor" /><rect x="8.5" y="1" width="3.5" height="12" fill="currentColor" /></svg>}
+          </button>
         )}
       </div>
-      <div className="lp-map-foot">
-        <span className="lp-legend">
-          {RAMP.map((c, i) => <span key={c}><i style={{ background: c }} />{t.legendClasses[i]}</span>)}
-        </span>
-        <span className="lp-legend-label">{t.legend} · {t.mapHint}</span>
+      <div className="lp-map-canvas" ref={wrap} style={{ height: height || undefined }}>
+        {error ? <p className="lp-map-msg">{t.mapError}</p> : !byMonth ? <p className="lp-map-msg">{t.mapLoading}</p> : null}
+        <canvas ref={canvas} role="img" aria-label={range ? t.mapAria(range[0], range[1], t.monthsLong[peak]) : t.mapLoading}
+          className={byMonth ? "on" : ""} style={{ width, height }} />
       </div>
+      {byMonth && (
+        <div className="lp-map-tl" aria-hidden="true">
+          {counts.map((c, i) => (
+            <div key={i} className={i === shownMonth ? "on" : ""}><i style={{ height: `${Math.max(3, (c / cmax) * 34)}px` }} /><span>{t.monthsShort[i]}</span></div>
+          ))}
+        </div>
+      )}
+      <figcaption className="lp-map-foot">
+        <span className="lp-legend">
+          <span className="lp-legend-label">{t.legend}</span>
+          {NIGHT_RAMP.map((c, i) => <span key={c}><i style={{ background: c }} />{t.legendClasses[i]}</span>)}
+        </span>
+        {total > 0 && <b className="lp-map-scope">{t.mapScope(enabled, total)}</b>}
+        <span className="lp-map-note">{range ? t.mapNote(range[0], range[1]) : " "}</span>
+      </figcaption>
     </figure>
   );
 }

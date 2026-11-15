@@ -7,7 +7,9 @@ Lee SOLO lo que ya produce el pipeline científico y está versionado:
 y las reordena en los archivos que la web necesita y que publish.py no entrega.
 No calcula ningún número nuevo del método: solo rebana, cuenta días y resume la serie publicada.
 
-Escribe web/public/data/derived/<cut>.json y web/public/data/derived/region.json.
+Escribe web/public/data/derived/<cut>.json, web/public/data/derived/region.json y
+web/public/data/derived/region_months.json (celda × mes del año, solo temporadas completas: mapa animado
+de la landing y filtro por mes de Explorar).
 Antes de escribir, comprueba que las celdas y sus conteos coinciden con `recurrence` de publish.py.
 
 Uso: uv run python pipeline/publish_web.py
@@ -93,5 +95,31 @@ for cm in index["comunas"]:
 json.dump(dict(cutoff=cutoff, current_season=cur_season, seasons=SEASONS, cell_size_deg=0.01,
                note="Todas las celdas de las 54 comunas con días de detección por temporada (observado VIIRS, misma regla que publish.py). Para el mapa regional.",
                cells=region), open(OUT / "region.json", "w"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
-print(f"derived/: {len(index['comunas'])} comunas, {len(region)} celdas en region.json, corte {cutoff}; comunas con diferencias vs publish.py: {problems}")
+# --- celda × mes del año, solo temporadas completas (2012 → la anterior a la en curso), para el mapa
+# animado de la landing (#40) y el filtro por mes de Explorar (#47). Sin la temporada en curso: un mes
+# a medias no se suma con meses completos. ms = temporadas con detección ese mes; md = días.
+FULL = [s for s in SEASONS if s < cur_season]
+cell_cut = {(int(r.cell_x), int(r.cell_y)): r.cut for r in cells[["cut", "cell_x", "cell_y"]].drop_duplicates().itertuples()}
+mrows = cells[cells.season < cur_season].groupby(["cell_x", "cell_y", "m"]).agg(md=("n_days", "sum"), ms=("season", "nunique")).reset_index()
+months = {}
+for r in mrows.itertuples():
+    k = (int(r.cell_x), int(r.cell_y))
+    e = months.setdefault(k, {"x": k[0], "y": k[1], "cut": cell_cut[k], "ms": [0] * 12, "md": [0] * 12})
+    e["ms"][int(r.m) - 1] = int(r.ms); e["md"][int(r.m) - 1] = int(r.md)
+# comprobación: los días por mes cuadran con region.json (sus temporadas completas) celda por celda
+full_idx = [SEASONS.index(s) for s in FULL]
+for c in region:
+    k = (c["x"], c["y"]); e = months.get(k)
+    want = sum(c["s"][i] for i in full_idx)
+    if want != (sum(e["md"]) if e else 0):
+        problems += 1; print(f"[{c['cut']}] región por mes no cuadra en la celda {k}: {want} vs {sum(e['md']) if e else 0}", file=sys.stderr)
+for k, e in months.items():  # ms: entre 0 y el número de temporadas completas, y > 0 solo donde hay días
+    assert all(0 <= s <= len(FULL) and (s > 0) == (d > 0) and s <= d for s, d in zip(e["ms"], e["md"])), k
+json.dump(dict(cutoff=cutoff, seasons=FULL, cell_size_deg=0.01,
+               note=("Celda × mes del año, sumando solo temporadas completas " + f"{FULL[0]}-{str(FULL[0] + 1)[2:]} a {FULL[-1]}-{str(FULL[-1] + 1)[2:]}"
+                     " (sin la temporada en curso). ms[i] = temporadas con al menos una detección en el mes i; md[i] = días con detección;"
+                     " índice 0 = enero. Misma regla de plataforma y máscara que region.json; se une con region.json por x, y."),
+               cells=sorted(months.values(), key=lambda e: (e["x"], e["y"]))),
+          open(OUT / "region_months.json", "w"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
+print(f"derived/: {len(index['comunas'])} comunas, {len(region)} celdas en region.json, {len(months)} en region_months.json, corte {cutoff}; diferencias: {problems}")
 if problems: sys.exit(1)
