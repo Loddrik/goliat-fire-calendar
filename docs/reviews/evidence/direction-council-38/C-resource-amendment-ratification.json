@@ -1,0 +1,23 @@
+{
+  "amendment": "C documentary phase after A complete early, not only earlySTOP; resource-only change before Csourceaccess.",
+  "A39_review_completed_utc": "2026-11-15T08:57:35.997463Z",
+  "all_six_ratified": true,
+  "ratified_roles": [
+    "statistics",
+    "observation",
+    "loco",
+    "identification",
+    "measurement",
+    "feasibility"
+  ],
+  "C_start_utc": "2026-11-15T09:15:00Z",
+  "C_end_utc": "2026-11-15T10:00:00Z",
+  "D_protected_unchanged": "10:13–11:13UTC; last30min consolidation",
+  "contingency_unchanged": "11:13–11:30UTC",
+  "producer": "observation_gate0",
+  "independent_reviewer": "adversarial_council_measurement24",
+  "science_bytes_allowed": 0,
+  "credentials_allowed": false,
+  "future_science_authorized": false,
+  "protocol_sha256": "8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2"
+}
