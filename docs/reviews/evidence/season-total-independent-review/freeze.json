@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-15T10:34:54.976957+00:00",
+  "cap_end_utc": "2026-11-15T10:43:00+00:00",
+  "inputs_sha256": {
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/resource-attempt-02.json": "9841671a66e0b14d738634cb1acf5ac74ac6178dd3df16524c903cde6aa84d78",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/docs/reviews/evidence/issue48-assessment/resource-amendment.json": "d090eacca908b05bfa6652c70a631b1e808a473611c9c28643eb7643e9d9bd0d",
+    "/private/tmp/independent_season42.py": "70c8f4ab2200f4a7c40c2a25b66a803bfd01e65ec8128a0caad07904fca5deaa",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/docs/reviews/2026-11-15-season-total-protocol.md": "41734018c7a516444053c7042d08b4d813c87e01cb1f24d3cb6e998ad91d0646",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/pipeline/season_total_audit.py": "9cf6d85d7ff73b872c7143aae2ac1708d2f9aae3cde46a318d08580b9bfd52f6",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/eval_loso.csv": "de5361a2d90f05898886603867bc3e40fbc2ccfb141efbc68ed236cf062c8149",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/gates.csv": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/celldays_comuna_month_masked.parquet": "9453f1e1fe5d6fd4316d7dfdf7d6ea420993613e13002cd73cbc94e78c9ea5ee",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/summary.json": "c02bd9e3614ebc2393d4c03039951a903d54b6fe79c43a459878d6f050c7e58d",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/monthly-controls.csv": "14291fef4bf41aa7de8c311727a2be3e4bafe06a8e433ab18b7fbd9d0b83e642",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/manifest.json": "3870823331e085a76bc5289dd8b33d9560ef981c48cdb485c52dc2e9ae41d455",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/season-totals.csv": "5d20a8dd8177c1910cc3a1fc2f6212557fc38312c65b8e752f0885fdbfed4031",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/per-cut.csv": "e39b7bde3522517b7b505954f7fae2db06f5951bc486d35fef9463b035be8d74",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/data/processed/season_total_audit/attempt-02/code-freeze.json": "c5fb02bf5dcb09e5fbe5b081d30831e713637c42b00b465cedb436c17082e90d"
+  },
+  "producer_manifest_sha256": "3870823331e085a76bc5289dd8b33d9560ef981c48cdb485c52dc2e9ae41d455",
+  "method": "Delta total = original eval_loso bias*n, Y from canonical masked monthly SNPP counts. No producer outer_predictions used as reference.",
+  "new_fits": 0,
+  "new_loss_model_selection": false,
+  "science_downloads": 0
+}
