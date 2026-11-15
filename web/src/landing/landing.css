@@ -63,7 +63,7 @@ body { margin: 0; background: #FCFBF7; }
 .lp-ch-more[open] summary { margin-bottom: 12px; }
 
 /* buscador */
-.lp-search { position: relative; display: grid; gap: 8px; }
+.lp-search { position: relative; z-index: 2; display: grid; gap: 8px; } /* z-index: la animación de entrada pone a cada hijo del hero en su propia capa y el párrafo siguiente tapaba la lista */
 .lp-search-label { font-weight: 600; font-size: 15px; color: var(--navy-fg); }
 .lp-search-box { display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1.5px solid #fff; border-radius: 8px; background: var(--card); color: var(--muted); }
 .lp-search-box:focus-within { border-color: #9ECAE1; box-shadow: 0 0 0 3px rgba(158, 202, 225, .45); }
