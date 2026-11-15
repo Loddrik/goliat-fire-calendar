@@ -1,0 +1,101 @@
+{
+  "baseline_adapter_matches_shapely": true,
+  "comparisons": [
+    {
+      "baseline_checks_pass": false,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": false,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "MYD14_early-818-1166",
+      "kind": "selected_GEO_regression_counterexample",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": true,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": true,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "MYD14_late-833-1149",
+      "kind": "selected_GEO_regression_counterexample",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": false,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": false,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "MYD14_late-844-1161",
+      "kind": "selected_GEO_regression_counterexample",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": false,
+      "baseline_predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "comparator_checks_pass": false,
+      "comparator_predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "id": "VNP14IMG_early-2051-3869",
+      "kind": "selected_GEO_regression_counterexample",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": false,
+      "baseline_predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "comparator_checks_pass": false,
+      "comparator_predicate_overlay_contradictions": [
+        "containment_vs_overlay_pq"
+      ],
+      "id": "VNP14IMG_early-2076-3864",
+      "kind": "selected_GEO_regression_counterexample",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": true,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": true,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "control_disjoint",
+      "kind": "synthetic_control",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": true,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": true,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "control_contained",
+      "kind": "synthetic_control",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": true,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": true,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "control_partial",
+      "kind": "synthetic_control",
+      "same_input_properties": true
+    },
+    {
+      "baseline_checks_pass": true,
+      "baseline_predicate_overlay_contradictions": [],
+      "comparator_checks_pass": true,
+      "comparator_predicate_overlay_contradictions": [],
+      "id": "control_touch",
+      "kind": "synthetic_control",
+      "same_input_properties": true
+    }
+  ],
+  "completed_utc": "2026-11-15T04:57:31.363750+00:00",
+  "full_24B_ledger_validated": false,
+  "gate1_passed": false,
+  "issue1499_cause_proved": false,
+  "physical_exposure_verified": false,
+  "same_WKB_verified": true,
+  "tolerance_m2": 1.0
+}
