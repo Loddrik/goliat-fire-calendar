@@ -1,0 +1,45 @@
+{
+  "files": {
+    "cap.snapshot.json": {
+      "bytes": 224,
+      "sha256": "2edd7649e7e9dd74e1392509c192d7bd77e00bb417afdb7126e983da2ed826db"
+    },
+    "code.snapshot.py.txt": {
+      "bytes": 11681,
+      "sha256": "6be8360f2692ca92ec73415df4f14bbb8309b8af533365a6e758695f2cc6f33e"
+    },
+    "freeze.json": {
+      "bytes": 1424,
+      "sha256": "d8763b48f6671f7c907d8df2f83e5b1a415d47f4c40f683ae0deb4cf829c5cdd"
+    },
+    "last-operation-context.json": {
+      "bytes": 228,
+      "sha256": "71527523333091449801261e7c60b10d67b1c9747600ffb8eb9e8e5ea5e9a92d"
+    },
+    "last-operation-p.wkb.gz": {
+      "bytes": 97,
+      "sha256": "5590c53485466a6c257145aeaf65c3a59e7a141a33f5214dfcdc567c0fe3a6f6"
+    },
+    "last-operation-q.wkb.gz": {
+      "bytes": 106,
+      "sha256": "ef9d3eb2d484a1c8f5088e2a14db02eb5fa46d477e2d2adaaf086b7cac392e51"
+    },
+    "parser.snapshot.py.txt": {
+      "bytes": 12612,
+      "sha256": "0760e2badaa335fa0d142cce8215ca42dbf2d58a57d1ed14da824b06b35b4ab9"
+    },
+    "protocol.snapshot.md.txt": {
+      "bytes": 1778,
+      "sha256": "246cc77ba6ea6051443f53aec94cb63908182f27c994a395219e7d456fee1311"
+    },
+    "results.json": {
+      "bytes": 5857,
+      "sha256": "5b565d5854636b7e6dd7f9d6bc05fe1d25abb13d6ac741ae9920fdccda6ca108"
+    },
+    "tests.snapshot.py.txt": {
+      "bytes": 3336,
+      "sha256": "2016c788aad8f78014e8e5c231757dcc8d421c5c2f7797dda8b4a9a35a44b4bc"
+    }
+  },
+  "previous_studies_unchanged": true
+}

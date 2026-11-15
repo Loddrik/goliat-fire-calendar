@@ -1,0 +1,41 @@
+{
+  "QA_FIRE_positive_catalogue_read": false,
+  "cap": {
+    "end_utc_A": "2026-11-15T07:01:47.752408+00:00",
+    "end_utc_B": "2026-11-15T06:46:47.752408+00:00",
+    "goal_end_utc": "2026-11-15T11:30:00Z",
+    "reset_allowed": false,
+    "start_utc": "2026-11-15T06:16:47.752408+00:00"
+  },
+  "code_sha256": "b03a9c9e17dee5fef270b09d1f0c6f5996c37c6ac2741207a9b6925df315f607",
+  "engine": {
+    "binary_sha256": {
+      "/Users/dquinteros/nasa/goliat-fire-calendar/.venv/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so": "b6c96fa983c26cceeb4ef9811041c0b00284e3a926f83a96fcbb963e21a26ba5",
+      "/usr/local/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14": "b08b055365df6dcd3fff0b805b688428f0f6a01839303f22c0716780155c480d"
+    },
+    "numpy": "2.5.4",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]"
+  },
+  "frozen_utc": "2026-11-15T06:26:17.995782+00:00",
+  "inputs_sha256": {
+    ".runtime/study32-cap.json": "2edd7649e7e9dd74e1392509c192d7bd77e00bb417afdb7126e983da2ed826db",
+    "docs/reviews/2026-11-15-joint-plan-31.md": "e40c97c4acc64402e01ebc249d70d767c3c8435303f0a022f998e05bf925c412",
+    "docs/reviews/2026-11-15-point-ownership-protocol.md": "39bd3796d6d082250b740df7cb63b5e11b16d55901743adf1eacffe325abd990",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/2019-MYD14-local-input.npz": "0cd8f9840d090e3095d8f8908b0d76692c34e3bb58f6f45aed92af60adfa4b4d",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/2019-VNP14IMG-local-input.npz": "e2cd60d078cf8c6f59fba4f2f95e3e1dd439222addc639ab81bcfce430553e13",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/2023-MYD14-local-input.npz": "337f995719708162e0fd7c1157a50770cd343e40191c5cf23f8b54133002ed92",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/2023-VNP14IMG-local-input.npz": "52a65635f65f5d3842aa374a7836f2f1e9afbf8571ab90ea1c5ef3f9eaa093d0",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/AOI-local.npy": "1e9a411a40852a36f09c5d06ac856387f525961cf28579eb7545fd5d5c3d1dd5",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/exactness-certificate.json": "09274448ba09075d6932e86a4e21c0b62a5daae9abd5a87210e73fde06d14f4b",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/freeze.json": "5c1705a6e012fab2cbd24045f86be6d6c3c012c381821932df31cd6a877416e0",
+    "docs/reviews/evidence/centered-observation-ledger/attempt-01/manifest.json": "15354e1634d014ceb71c537b723c8c561b4a5bbb8db2d02222b2be56bf0d169c",
+    "docs/reviews/evidence/observation-ownership-ledger/references.json": "adeca520d3b1d17e4588d57bb8e092f838b36cc68adeb48915e6e0093591795a"
+  },
+  "origin_xy": [
+    722459.8026976171,
+    5902205.764776958
+  ],
+  "predicate": "exact dyadic Python integers; no GEOS/Shapely",
+  "protocol_commit": "eaec7ca",
+  "source": "PRE-overlay local-input arrays only; never30B owned/common geometries"
+}

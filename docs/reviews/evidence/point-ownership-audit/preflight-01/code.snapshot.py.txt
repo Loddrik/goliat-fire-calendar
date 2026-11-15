@@ -1,0 +1,251 @@
+"""32A GEO-only point membership with exact dyadic integer predicates.
+
+Pure geometry/grid/ownership helpers do not read runtime files or clocks.
+No GEOS/Shapely dependency is used for predicates, candidates or ownership.
+"""
+from __future__ import annotations
+import argparse
+from collections import Counter,defaultdict
+from datetime import datetime,timezone
+from fractions import Fraction
+from numbers import Integral
+import gzip,hashlib,json,math,platform,resource,shutil,struct,sys
+from pathlib import Path
+import numpy as np
+
+ROOT=Path(__file__).resolve().parents[1]
+SOURCE=ROOT/'docs/reviews/evidence/centered-observation-ledger/attempt-01'
+OUT=ROOT/'docs/reviews/evidence/point-ownership-audit/attempt-01'
+CAP=ROOT/'.runtime/study32-cap.json'
+PROTOCOL=ROOT/'docs/reviews/2026-11-15-point-ownership-protocol.md'
+REF=ROOT/'docs/reviews/evidence/observation-ownership-ledger/references.json'
+CASES=('2019','2023');PRODUCTS=('MYD14','VNP14IMG')
+MAX_QUADS=150_000;MAX_TUPLES=2_000_000;MAX_QUERIES=1_000_000;MAX_CANDIDATES=10_000_000;MAX_EDGES=50_000_000
+MAX_RSS=2*1024**3;MAX_OUTPUT=200*1024**2
+STATES=('identified_owner','boundary_unidentified','time_unidentified','same_scan_ambiguous','no_nominal_support')
+RELATIONS={-1:'outside',0:'boundary',1:'interior'}
+ACTIVE_BUDGET=None
+
+def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def bhash(data):return hashlib.sha256(data).hexdigest()
+def now():return datetime.now(timezone.utc).isoformat()
+def dump(path,obj):Path(path).write_text(json.dumps(obj,indent=2,sort_keys=True,allow_nan=False)+'\n')
+class Budget:
+    def __init__(self):
+        self.cap=json.loads(CAP.read_text());self.end=datetime.fromisoformat(self.cap['end_utc_A']);self.queries=0;self.candidates=0;self.edges=0;self.calls=0;self.peak_rss_bytes=0
+    def check(self,force=False):
+        self.calls+=1
+        if force or self.calls%1000==0:
+            if datetime.now(timezone.utc)>=self.end:raise TimeoutError('32A fixed cap reached')
+            raw=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss;rss=raw if sys.platform=='darwin' else raw*1024
+            self.peak_rss_bytes=max(self.peak_rss_bytes,rss)
+            if rss>MAX_RSS:raise RuntimeError('RSS resource_limit')
+            if OUT.exists() and sum(p.stat().st_size for p in OUT.rglob('*') if p.is_file())>MAX_OUTPUT:raise RuntimeError('output resource_limit')
+    def edge(self,n=1):
+        self.edges+=n
+        if self.edges>MAX_EDGES:raise RuntimeError('segment resource_limit')
+        self.check()
+    def candidate(self):
+        self.candidates+=1
+        if self.candidates>MAX_CANDIDATES:raise RuntimeError('candidate resource_limit')
+        self.check()
+
+def orient(a,b,p,counter=None):
+    if counter:counter()
+    return (b[0]-a[0])*(p[1]-a[1])-(b[1]-a[1])*(p[0]-a[0])
+def on_segment(a,b,p,orientation=None,counter=None):
+    z=orient(a,b,p,counter) if orientation is None else orientation
+    return z==0 and min(a[0],b[0])<=p[0]<=max(a[0],b[0]) and min(a[1],b[1])<=p[1]<=max(a[1],b[1])
+def segments_meet(a,b,c,d,counter=None):
+    o1,o2,o3,o4=orient(a,b,c,counter),orient(a,b,d,counter),orient(c,d,a,counter),orient(c,d,b,counter)
+    if any([on_segment(a,b,c,o1),on_segment(a,b,d,o2),on_segment(c,d,a,o3),on_segment(c,d,b,o4)]):return True
+    return ((o1>0 and o2<0) or (o1<0 and o2>0)) and ((o3>0 and o4<0) or (o3<0 and o4>0))
+def validate_quad(ring,counter=None):
+    if len(ring)!=5 or ring[0]!=ring[-1] or any(len(p)!=2 for p in ring):raise ValueError('Quad ring/closure not preserved')
+    if any(not isinstance(v,Integral) or isinstance(v,bool) for p in ring for v in p):raise ValueError('Exact integer lattice coordinates required')
+    q=tuple(tuple(map(int,p)) for p in ring[:-1])
+    if any(q[i]==q[(i+1)%4] for i in range(4)):raise ValueError('Zero-length quad edge')
+    if segments_meet(q[0],q[1],q[2],q[3],counter) or segments_meet(q[1],q[2],q[3],q[0],counter):raise ValueError('Non-simple exact quad')
+    area2=0
+    for i in range(4):
+        if counter:counter()
+        a,b=q[i],q[(i+1)%4];area2+=a[0]*b[1]-a[1]*b[0]
+    if area2==0:raise ValueError('Zero exact quad area')
+    return q,area2
+def point_relation(q,p,counter=None):
+    parity=False
+    for i,a in enumerate(q):
+        b=q[(i+1)%len(q)];z=orient(a,b,p,counter)
+        if on_segment(a,b,p,z):return 0
+        if (a[1]>p[1])!=(b[1]>p[1]) and ((z>0)==(b[1]>a[1])):parity=not parity
+    return 1 if parity else -1
+def ceildiv(a,b):return -((-a)//b)
+def grid_limits(step,phase):
+    return (-25000-phase)//step+1,ceildiv(25000-phase,step)-1
+def integer_range(q,scale,step,phase):
+    lo,hi=grid_limits(step,phase);xs=[p[0] for p in q];ys=[p[1] for p in q];den=step*scale;anchor=phase*scale
+    return max(lo,ceildiv(min(xs)-anchor,den)),min(hi,(max(xs)-anchor)//den),max(lo,ceildiv(min(ys)-anchor,den)),min(hi,(max(ys)-anchor)//den)
+def independent_range(q,scale,step,phase):
+    lo,hi=grid_limits(step,phase)
+    return max(lo,math.ceil((Fraction(min(p[0] for p in q),scale)-phase)/step)),min(hi,math.floor((Fraction(max(p[0] for p in q),scale)-phase)/step)),max(lo,math.ceil((Fraction(min(p[1] for p in q),scale)-phase)/step)),min(hi,math.floor((Fraction(max(p[1] for p in q),scale)-phase)/step))
+def resolve(candidates,scans,references):
+    boundary=[i for i,r in candidates if r==0];inside=[i for i,r in candidates if r==1]
+    unknown=[i for i in inside if references[scans[i]] is None];counts=Counter(scans[i] for i in inside);same=any(n>1 for n in counts.values())
+    causes=(bool(boundary),bool(unknown),same,not inside)
+    code=1 if causes[0] else (2 if causes[1] else (3 if causes[2] else (4 if causes[3] else 0)))
+    if code:return code,causes,-1,-1
+    early=min(inside,key=lambda i:(references[scans[i]],scans[i]));late=min(inside,key=lambda i:(-references[scans[i]],scans[i]))
+    return code,causes,early,late
+
+def freeze():
+    budget=Budget();budget.check(True)
+    if OUT.exists():raise FileExistsError('32A attempt already exists')
+    manifest=json.loads((SOURCE/'manifest.json').read_text());cert=json.loads((SOURCE/'exactness-certificate.json').read_text())
+    if not cert['all_passed'] or cert['total_tuples']!=505195:raise ValueError('30B preoverlay certificate not accredited')
+    inputs=[SOURCE/'manifest.json',SOURCE/'freeze.json',SOURCE/'exactness-certificate.json',SOURCE/'AOI-local.npy',REF,CAP,PROTOCOL,ROOT/'docs/reviews/2026-11-15-joint-plan-31-draft.md']
+    for case in CASES:
+        for product in PRODUCTS:
+            p=SOURCE/f'{case}-{product}-local-input.npz'
+            if digest(p)!=manifest['files'][p.name]['sha256'] or digest(p)!=cert['local_files_sha256'][p.name]:raise ValueError('Preoverlay NPZ changed')
+            inputs.append(p)
+    for p in inputs:
+        if p.parent==SOURCE and p.name!='manifest.json' and digest(p)!=manifest['files'][p.name]['sha256']:raise ValueError('Protected source metadata changed')
+    source_freeze=json.loads((SOURCE/'freeze.json').read_text())
+    if digest(REF)!=source_freeze['inputs_sha256'][str(REF.relative_to(ROOT))]:raise ValueError('Reference provenance changed')
+    OUT.mkdir(parents=True)
+    dump(OUT/'freeze.json',{'frozen_utc':now(),'protocol_commit':'eaec7ca','code_sha256':digest(__file__),'cap':budget.cap,'inputs_sha256':{str(p.relative_to(ROOT)):digest(p) for p in inputs},
+        'origin_xy':source_freeze['origin_xy'],'source':'PRE-overlay local-input arrays only; never30B owned/common geometries','predicate':'exact dyadic Python integers; no GEOS/Shapely','engine':{'python':sys.version,'numpy':np.__version__,'binary_sha256':{str(Path(sys.executable).resolve()):digest(Path(sys.executable).resolve()),str(Path(np._core._multiarray_umath.__file__).resolve()):digest(Path(np._core._multiarray_umath.__file__).resolve())}},'QA_FIRE_positive_catalogue_read':False})
+    shutil.copyfile(__file__,OUT/'code.snapshot.py.txt');shutil.copyfile(PROTOCOL,OUT/'protocol.snapshot.md.txt')
+    print(json.dumps({'code_sha256':digest(__file__),'freeze_sha256':digest(OUT/'freeze.json')}))
+def verify():
+    global ACTIVE_BUDGET
+    budget=Budget();budget.check(True);f=json.loads((OUT/'freeze.json').read_text())
+    ACTIVE_BUDGET=budget
+    if digest(__file__)!=f['code_sha256']:raise ValueError('Code changed after freeze')
+    for p,h in f['inputs_sha256'].items():
+        if digest(ROOT/p)!=h:raise ValueError('Protected input changed: '+p)
+    for p,h in f['engine']['binary_sha256'].items():
+        if digest(p)!=h:raise ValueError('Runtime binary changed')
+    return budget,f
+
+def load_geometry(budget,frozen):
+    source_cert=json.loads((SOURCE/'exactness-certificate.json').read_text());origin=np.asarray(frozen['origin_xy'],dtype=np.float64);groups={};maximum_denominator=1;tuples=5;quads=0
+    if origin.shape!=(2,) or not np.isfinite(origin).all():raise ValueError('Invalid rational origin')
+    for case in CASES:
+        for product in PRODUCTS:
+            with np.load(SOURCE/f'{case}-{product}-local-input.npz',allow_pickle=False) as d:
+                coords=d['coords'];native=d['native'];included=d['included'];full=d['world_full_area']
+            if coords.ndim!=3 or coords.shape[1:]!=(5,2) or coords.dtype!=np.dtype('float64') or native.shape!=(len(coords),4) or native.dtype.kind not in 'iu' or included.shape!=(len(coords),) or included.dtype.kind!='b' or not np.isfinite(coords).all():raise ValueError('Malformed quad/native arrays')
+            quads+=len(coords);tuples+=coords.size//2
+            if quads>MAX_QUADS or tuples>MAX_TUPLES:raise RuntimeError('input resource_limit')
+            c=source_cert['groups'][case+'_'+product];world=coords+origin
+            if bhash(world.tobytes())!=c['world_coordinates_sha256'] or bhash(coords.tobytes())!=c['local_coordinates_sha256'] or bhash(native.tobytes())!=c['world_index_sha256'] or bhash(full.tobytes())!=c['world_full_area_sha256']:raise ValueError('Source world/local representation changed')
+            if not np.array_equal((world-origin).view(np.uint64),coords.view(np.uint64)):raise ValueError('Source translation inverse bits changed')
+            ids=[tuple(map(int,r[:2])) for r in native];rps=10 if product=='MYD14' else 32
+            if len(ids)!=len(set(ids)) or any(int(n[0])//rps!=int(n[2]) or int(n[0])%rps!=int(n[3]) for n in native):raise ValueError('Native duplicate/scan mapping invalid')
+            for i,(w,p) in enumerate(zip(world.reshape(-1,2),coords.reshape(-1,2))):
+                if i%1000==0:budget.check(True)
+                for axis in range(2):
+                    if Fraction.from_float(float(w[axis]))-Fraction.from_float(float(origin[axis]))!=Fraction.from_float(float(p[axis])):raise ValueError('Source rational translation not exact')
+                    maximum_denominator=max(maximum_denominator,float(p[axis]).as_integer_ratio()[1])
+            groups[case,product]={'coords':coords,'native':native,'included':included}
+    aoi=np.load(SOURCE/'AOI-local.npy',allow_pickle=False)
+    if aoi.shape!=(5,2) or not np.isfinite(aoi).all():raise ValueError('AOI malformed')
+    aoi_world=aoi+origin
+    if bhash(aoi.tobytes())!=source_cert['AOI']['local_coordinates_sha256'] or bhash(aoi_world.tobytes())!=source_cert['AOI']['world_coordinates_sha256'] or not np.array_equal((aoi_world-origin).view(np.uint64),aoi.view(np.uint64)):raise ValueError('AOI representation changed')
+    for w,p in zip(aoi_world,aoi):
+        for axis in range(2):
+            if Fraction.from_float(float(w[axis]))-Fraction.from_float(float(origin[axis]))!=Fraction.from_float(float(p[axis])):raise ValueError('AOI rational translation not exact')
+            maximum_denominator=max(maximum_denominator,float(p[axis]).as_integer_ratio()[1])
+    scale=maximum_denominator;geometry_cert={};total_input=0
+    for (case,product),g in groups.items():
+        all_quads=[];nonzero=0
+        for i,ring in enumerate(g.pop('coords')):
+            if i%1000==0:budget.check(True)
+            integers=[]
+            for p in ring:
+                xy=[]
+                for value in p:
+                    num,den=float(value).as_integer_ratio()
+                    if scale%den:raise ValueError('Dyadic scale not common')
+                    xy.append(num*(scale//den))
+                integers.append(tuple(xy))
+            try:quad,area2=validate_quad(integers,budget.edge)
+            except ValueError:
+                dump(OUT/'invalid-quad.json',{'case':case,'product':product,'quad_index':i,'native':list(map(int,g['native'][i])),'integer_ring':integers,'source_NPZ':f'{case}-{product}-local-input.npz','not_dropped':True})
+                raise
+            all_quads.append(quad);nonzero+=area2!=0
+        total_input+=len(all_quads);g['quads']=all_quads
+        geometry_cert[case+'_'+product]={'all_quads_simple_nonzero':nonzero==len(all_quads),'constructed_quads':len(all_quads),'indexed_universe_quads':int(g['included'].sum()),'native_ids_unique':True,'world_bit_inverse_and_rational_translation_passed':True}
+    aoi_integer=[tuple(float(v).as_integer_ratio()[0]*(scale//float(v).as_integer_ratio()[1]) for v in p) for p in aoi]
+    validate_quad(aoi_integer,budget.edge)
+    dump(OUT/'geometry-certificate.json',{'completed_utc':now(),'all_passed':True,'all_input_quads':total_input,'AOI_simple_nonzero_exact':True,'total_input_tuples':tuples,'scale_power_of_two':scale,'scale_exponent':scale.bit_length()-1,'groups':geometry_cert,'candidate_indexing_started':False,'QA_read':False})
+    return groups,scale
+
+def evaluate_grid(g,scale,step,phase,references,budget):
+    lo,hi=grid_limits(step,phase);n=hi-lo+1;count=n*n;postings=[[] for _ in range(count)];ranges=[];posting_rows=[];candidate_expected=0
+    scans=[int(r[2]) for r in g['native']];roster=np.zeros((len(g['quads']),5),dtype=np.int32)
+    for qi,(q,keep) in enumerate(zip(g['quads'],g['included'])):
+        if not keep:continue
+        bounds=integer_range(q,scale,step,phase)
+        if bounds!=independent_range(q,scale,step,phase):raise ValueError('Independent rational bbox range differs')
+        a,b,c,d=bounds;expected=max(0,b-a+1)*max(0,d-c+1);actual=0
+        for j in range(a,b+1):
+            for k in range(c,d+1):
+                budget.candidate();pid=(j-lo)*n+(k-lo);point=((phase+j*step)*scale,(phase+k*step)*scale)
+                relation=point_relation(q,point,budget.edge);postings[pid].append((qi,relation));posting_rows.append((pid,qi,relation));roster[qi,0]+=1;roster[qi,1]+=relation==1;roster[qi,2]+=relation==0;actual+=1
+        if expected!=actual:raise ValueError('Incomplete bbox postings')
+        candidate_expected+=expected;ranges.append((qi,a,b,c,d,expected))
+    if candidate_expected!=len(posting_rows):raise ValueError('Postings count not exhaustive')
+    states=np.zeros(count,dtype=np.uint8);causes=np.zeros((count,4),dtype=bool);early=np.full(count,-1,dtype=np.int32);late=np.full(count,-1,dtype=np.int32)
+    for pid,candidates in enumerate(postings):
+        if pid%1000==0:budget.check(True)
+        code,flags,e,l=resolve(candidates,scans,references);states[pid]=code;causes[pid]=flags;early[pid]=e;late[pid]=l
+        if e>=0:roster[e,3]+=1
+        if l>=0:roster[l,4]+=1
+    return {'lo':lo,'hi':hi,'n':n,'postings':postings,'posting_rows':np.asarray(posting_rows,dtype=np.int32).reshape(-1,3),'ranges':np.asarray(ranges,dtype=np.int64).reshape(-1,6),'states':states,'causes':causes,'early':early,'late':late,'roster':roster}
+
+def verify_nested(fine,coarse):
+    checked=0
+    for j in range(coarse['lo'],coarse['hi']+1):
+        for k in range(coarse['lo'],coarse['hi']+1):
+            a=(2*j-fine['lo'])*fine['n']+(2*k-fine['lo']);b=(j-coarse['lo'])*coarse['n']+(k-coarse['lo'])
+            if fine['postings'][a]!=coarse['postings'][b] or any(not np.array_equal(fine[key][a],coarse[key][b]) for key in ['states','causes','early','late']):raise ValueError('Independent nested grids conflict')
+            checked+=1
+    return {'all_passed':True,'independently_constructed_shared_points_checked':checked,'fine_postings_not_copied':True}
+
+def run():
+    budget,frozen=verify()
+    if (OUT/'geometry-certificate.json').exists():raise FileExistsError('Attempt already started')
+    groups,scale=load_geometry(budget,frozen);source_refs=json.loads(REF.read_text());summary={'started_utc':now(),'code_sha256':digest(__file__),'freeze_sha256':digest(OUT/'freeze.json'),'geometry_certificate_sha256':digest(OUT/'geometry-certificate.json'),'groups':{},'query_populations':{},'all_GEO_gates_passed':False,'gate1_passed':False,'QA_FIRE_positive_catalogue_read':False,'continuous_area30B_repaired':False}
+    for case in CASES:
+        for phase in [0,125]:
+            outputs={}
+            for step in [250,500]:
+                lo,hi=grid_limits(step,phase);n=hi-lo+1;budget.queries+=n*n
+                if budget.queries>MAX_QUERIES:raise RuntimeError('query resource_limit')
+                summary['query_populations'][f'{case}-phase{phase}-h{step}']={'queries':n*n,'j_min':lo,'j_max':hi,'open_domain_m':[-25000,25000],'point_formula':'origin_exact+phase+j*h; origin_exact+phase+k*h'}
+                for product in PRODUCTS:
+                    references=source_refs['cases'][case][product]['scan_reference_TAI93']
+                    if any(v is not None and not math.isfinite(v) for v in references):raise ValueError('Invalid scan reference')
+                    g=groups[case,product]
+                    if any(int(r[2])<0 or int(r[2])>=len(references) for r in g['native']):raise ValueError('Scan reference index missing')
+                    result=evaluate_grid(g,scale,step,phase,references,budget);outputs[product,step]=result;prefix=f'{case}-{product}-phase{phase}-h{step}'
+                    np.savez_compressed(OUT/(prefix+'-points.npz'),states=result['states'],causes=result['causes'],owner_early_quad=result['early'],owner_late_quad=result['late'],native=g['native'],included=g['included'],roster=result['roster'])
+                    np.savez_compressed(OUT/(prefix+'-postings.npz'),postings=result['posting_rows'],ranges=result['ranges'])
+                    counts=Counter(map(int,result['states']));group={'queries':len(result['states']),'candidate_postings':len(result['posting_rows']),'all_bbox_ranges_independently_verified':True,'postings_sha256':digest(OUT/(prefix+'-postings.npz')),'state_partition':{name:counts[i] for i,name in enumerate(STATES)},'all_causes_counts':dict(zip(['boundary','time_unknown','same_scan_multiple_interiors','no_interiors'],map(int,result['causes'].sum(axis=0)))),'roster_quad_rows':len(g['quads']),'indexed_quads':int(g['included'].sum()),'indexed_quads_without_interior_point':int(np.sum(g['included'] & (result['roster'][:,1]==0)))}
+                    if sum(group['state_partition'].values())!=len(result['states']):raise ValueError('Reason partition failed')
+                    summary['groups'][prefix]=group;budget.check(True)
+            for product in PRODUCTS:summary['groups'][f'{case}-{product}-phase{phase}-h500']['nested_validation']=verify_nested(outputs[product,250],outputs[product,500])
+            dump(OUT/'progress.json',{'completed_groups':list(summary['groups']),'queries':budget.queries,'candidates':budget.candidates,'segment_evaluations':budget.edges,'QA_read':False})
+    budget.check(True);summary.update(completed_utc=now(),all_GEO_gates_passed=True,queries_total=budget.queries,candidate_tests_total=budget.candidates,exact_segment_evaluations_total=budget.edges,peak_RSS_bytes=budget.peak_rss_bytes,RSS_native_units='bytes on darwin; kilobytes multiplied1024 on other systems',states_legend=dict(enumerate(STATES)),relations_legend=RELATIONS,roster_columns=['bbox_candidates','strict_interior_points','boundary_points','owned_early_points','owned_late_points'],postings_columns=['flat_point_id','quad_index','exact_relation_code'],ranges_columns=['quad_index','j_min','j_max','k_min','k_max','expected_postings'],native_columns=['native_row','native_col','scan','detector'],point_index_formula='(j-j_min)*n+(k-j_min), n=j_max-j_min+1; j outer, k inner',frame={'coordinate_frame':'local_exact_offsets','parent_crs':'EPSG:32718','origin_xy':frozen['origin_xy'],'point_unit':'fixed query point; not physical fire point or area'},unknown_owner_sentinel=-1)
+    dump(OUT/'summary.json',summary)
+    dump(OUT/'manifest.json',{'files':{p.name:{'bytes':p.stat().st_size,'sha256':digest(p)} for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='manifest.json'},'all_GEO_gates_passed':True,'gate1_passed':False})
+    print(json.dumps({'all_GEO_gates_passed':True,'queries':budget.queries,'candidates':budget.candidates,'segments':budget.edges,'peak_RSS_bytes':budget.peak_rss_bytes}))
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=['freeze','run']);args=parser.parse_args()
+    try:{'freeze':freeze,'run':run}[args.stage]()
+    except Exception as exc:
+        if OUT.exists():dump(OUT/f'failure-{args.stage}.json',{'failed_utc':now(),'error_type':type(exc).__name__,'error':str(exc),'code_sha256':digest(__file__),'all_GEO_gates_passed':False,'gate1_passed':False,'QA_read':False,'counters_if_available':None if ACTIVE_BUDGET is None else {'queries':ACTIVE_BUDGET.queries,'candidates':ACTIVE_BUDGET.candidates,'segments':ACTIVE_BUDGET.edges,'peak_RSS_bytes':ACTIVE_BUDGET.peak_rss_bytes}})
+        raise

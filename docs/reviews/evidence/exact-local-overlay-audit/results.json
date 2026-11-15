@@ -1,0 +1,258 @@
+{
+  "GEOS_oracle": false,
+  "area_exact_m2": {
+    "denominator": 413035307066988553173563968428541782654799839232,
+    "numerator": 75245373460380228544614245301434420217
+  },
+  "both_orders_exactly_equal": true,
+  "classification": "positive_exact_intersection_refutes_zero_overlay",
+  "completed_utc": "2026-11-15T06:20:46.440903+00:00",
+  "context": {
+    "not_necessarily_cause": true,
+    "operation": "intersection",
+    "operations": {
+      "difference": 352566,
+      "intersection": 1069484,
+      "symmetric_difference": 528639,
+      "unary_union": 176280,
+      "union": 352470
+    }
+  },
+  "does_not_adjudicate_global_ledger_or_physical_fire": true,
+  "domain_certificates": {
+    "p": {
+      "area_exact": {
+        "denominator": 9223372036854775808,
+        "numerator": 23081440399518446596391851
+      },
+      "convex": true,
+      "nonadjacent_pairs_checked": 2,
+      "reversed_to_CCW": true,
+      "simple": true,
+      "source_signed_area2": {
+        "denominator": 4611686018427387904,
+        "numerator": -23081440399518446596391851
+      },
+      "source_vertices": [
+        [
+          {
+            "denominator": 4294967296,
+            "numerator": 95941310554663
+          },
+          {
+            "denominator": 536870912,
+            "numerator": -8041497114303
+          }
+        ],
+        [
+          {
+            "denominator": 1073741824,
+            "numerator": 25979419492889
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": -15928129724735
+          }
+        ],
+        [
+          {
+            "denominator": 4294967296,
+            "numerator": 104381688381745
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": -17364893420113
+          }
+        ],
+        [
+          {
+            "denominator": 4294967296,
+            "numerator": 96404864170357
+          },
+          {
+            "denominator": 536870912,
+            "numerator": -8760875783477
+          }
+        ]
+      ],
+      "vertices": 4
+    },
+    "q": {
+      "area_exact": {
+        "denominator": 590295810358705651712,
+        "numerator": 553709083128750353881750461
+      },
+      "convex": true,
+      "nonadjacent_pairs_checked": 5,
+      "reversed_to_CCW": true,
+      "simple": true,
+      "source_signed_area2": {
+        "denominator": 295147905179352825856,
+        "numerator": -553709083128750353881750461
+      },
+      "source_vertices": [
+        [
+          {
+            "denominator": 1073741824,
+            "numerator": 25251762859691
+          },
+          {
+            "denominator": 536870912,
+            "numerator": -7649653315307
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 25000
+          },
+          {
+            "denominator": 549755813888,
+            "numerator": -7764106229858485
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 25000
+          },
+          {
+            "denominator": 549755813888,
+            "numerator": -8120819623455431
+          }
+        ],
+        [
+          {
+            "denominator": 1073741824,
+            "numerator": 25979419492889
+          },
+          {
+            "denominator": 1073741824,
+            "numerator": -15928129724735
+          }
+        ],
+        [
+          {
+            "denominator": 274877906944,
+            "numerator": 6478277363704379
+          },
+          {
+            "denominator": 137438953472,
+            "numerator": -2045497138627867
+          }
+        ]
+      ],
+      "vertices": 5
+    }
+  },
+  "exact_operations": 1104,
+  "freeze_sha256": "d8763b48f6671f7c907d8df2f83e5b1a415d47f4c40f683ae0deb4cf829c5cdd",
+  "full_ledger_validated": false,
+  "gate1_passed": false,
+  "last_operation_not_necessarily_failure_cause": true,
+  "pq_clip_steps": [
+    {
+      "clip_edge": 0,
+      "vertices": 3
+    },
+    {
+      "clip_edge": 1,
+      "vertices": 3
+    },
+    {
+      "clip_edge": 2,
+      "vertices": 3
+    },
+    {
+      "clip_edge": 3,
+      "vertices": 3
+    },
+    {
+      "clip_edge": 4,
+      "vertices": 3
+    }
+  ],
+  "pq_vertices": [
+    [
+      {
+        "denominator": 274877906944,
+        "numerator": 6478277363704379
+      },
+      {
+        "denominator": 137438953472,
+        "numerator": -2045497138627867
+      }
+    ],
+    [
+      {
+        "denominator": 1073741824,
+        "numerator": 25979419492889
+      },
+      {
+        "denominator": 1073741824,
+        "numerator": -15928129724735
+      }
+    ],
+    [
+      {
+        "denominator": 1502613693690322372907990824127561728,
+        "numerator": 35413352737036769658978621762259754451557
+      },
+      {
+        "denominator": 751306846845161186453995412063780864,
+        "numerator": -11181662597324628240661146920891654671429
+      }
+    ]
+  ],
+  "qp_clip_steps": [
+    {
+      "clip_edge": 0,
+      "vertices": 5
+    },
+    {
+      "clip_edge": 1,
+      "vertices": 4
+    },
+    {
+      "clip_edge": 2,
+      "vertices": 3
+    },
+    {
+      "clip_edge": 3,
+      "vertices": 3
+    }
+  ],
+  "qp_vertices": [
+    [
+      {
+        "denominator": 1502613693690322372907990824127561728,
+        "numerator": 35413352737036769658978621762259754451557
+      },
+      {
+        "denominator": 751306846845161186453995412063780864,
+        "numerator": -11181662597324628240661146920891654671429
+      }
+    ],
+    [
+      {
+        "denominator": 274877906944,
+        "numerator": 6478277363704379
+      },
+      {
+        "denominator": 137438953472,
+        "numerator": -2045497138627867
+      }
+    ],
+    [
+      {
+        "denominator": 1073741824,
+        "numerator": 25979419492889
+      },
+      {
+        "denominator": 1073741824,
+        "numerator": -15928129724735
+      }
+    ]
+  ],
+  "status": "exact_local_adjudication_complete"
+}
