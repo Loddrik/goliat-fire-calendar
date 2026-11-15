@@ -10,6 +10,7 @@ type Entry = { cut: string; comuna: string; region: string; enabled: boolean };
 type Index = { cutoff: string; current_season: number; r_const: number; params?: { train?: number[]; min_aqua?: number; min_wins?: number; band_coverage_1mae?: number; rel_err_median_active?: number }; comunas: Entry[] };
 
 const LANG_KEY = "goliat-lang";
+const SEARCH_ID = "lp-search-in";
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 // El idioma viaja a la app en ?lang= (la app lo puede leer; hoy decide por el navegador).
 const explorer = (cut?: string) => `/explorar?${cut ? `cut=${cut}&` : ""}lang=${document.documentElement.lang === "en" ? "en" : "es"}`;
@@ -76,16 +77,21 @@ export default function Landing() {
 
         <section className="lp-section lp-uses" aria-labelledby="uses-title">
           <div className="lp-wrap">
-            <h2 id="uses-title">{t.usesTitle}</h2>
-            <div className="lp-cards">
-              {t.uses.map(u => (
-                <a key={u.icon} className="lp-card" href={explorer()}>
-                  <Icon name={u.icon} size={28} className="lp-card-icon" />
-                  <h3>{u.t}</h3>
-                  <p>{u.d}</p>
-                  <span className="lp-card-cta">{t.usesCta} <Icon name="flecha" size={16} /></span>
-                </a>
-              ))}
+            <div className="lp-uses-in">
+              <h2 id="uses-title">{t.usesTitle}</h2>
+              <ul className="lp-uses-list">
+                {t.uses.map(u => (
+                  <li key={u.who}>
+                    <span className="lp-uses-who">{u.who}</span>
+                    <span className="lp-uses-what">{u.what}</span>
+                    <span className="lp-uses-get">{u.get}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="lp-uses-cta">
+                <button type="button" className="lp-btn lp-btn-primary" onClick={() => { const el = document.getElementById(SEARCH_ID); el?.scrollIntoView({ behavior: "smooth", block: "center" }); el?.focus({ preventScroll: true }); }}>{t.usesCta}</button>
+                <a href={explorer()}>{t.usesOr} <Icon name="flecha" size={16} /></a>
+              </p>
             </div>
           </div>
         </section>
@@ -101,8 +107,9 @@ export default function Landing() {
                 </select>
               </label>
             </div>
-            <p className="lp-lead">{t.qIntro} {t.unit}</p>
-            <CommuneSample key={sample} cut={sample} t={t} lang={lang} />
+            <p className="lp-lead">{t.qIntro}</p>
+            <CommuneSample key={sample} cut={sample} t={t} lang={lang} enabled={enabled} />
+            <p className="lp-sample-cta"><a className="lp-btn lp-btn-primary" href={explorer(sample)}>{t.sampleCta(comunas.find(c => c.cut === sample)?.comuna ?? "")} <span aria-hidden="true">→</span></a></p>
           </div>
         </section>
 
@@ -198,12 +205,12 @@ function Search({ comunas, t }: { comunas: Entry[]; t: Text }) {
   const show = open && q.trim().length > 0;
   return (
     <div className="lp-search">
-      <label htmlFor={`${id}-in`} className="lp-search-label">{t.searchLabel}</label>
+      <label htmlFor={SEARCH_ID} className="lp-search-label">{t.searchLabel}</label>
       <div className="lp-search-box">
         <Icon name="buscar" size={20} />
         <input
           ref={input}
-          id={`${id}-in`}
+          id={SEARCH_ID}
           role="combobox"
           aria-expanded={show}
           aria-controls={`${id}-list`}

@@ -225,3 +225,51 @@ body { margin: 0; background: #FCFBF7; }
 .lp-ss-k-ne { border: 1px dashed var(--muted); color: var(--muted); font-family: var(--mono); }
 @media (max-width: 520px) { .lp-seasons { gap: 1px; } .lp-ss-track { height: 90px; } .lp-ss-y { font-size: 9.5px; } }
 .lp-ch-valid { font-size: 16.5px; }
+
+/* Para qué sirve (#40, segunda vuelta): quién → qué hace → qué se lleva; sin tarjetas ni íconos */
+.lp-uses-in { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 16px 48px; align-items: start; }
+@media (max-width: 860px) { .lp-uses-in { grid-template-columns: 1fr; } }
+.lp-uses-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.lp-uses-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 20px; padding-block: 18px; border-top: 1px solid var(--line); }
+.lp-uses-list li:first-child { border-top: 0; padding-top: 4px; }
+.lp-uses-who { grid-column: 1 / -1; font-size: 14px; font-weight: 600; color: var(--accent); }
+.lp-uses-what { font-size: 18px; line-height: 1.45; max-width: 52ch; }
+.lp-uses-get { align-self: end; font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 560px) { .lp-uses-list li { grid-template-columns: 1fr; } .lp-uses-what { font-size: 16.5px; } }
+.lp-uses-cta { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 4px !important; }
+.lp-uses-cta a { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+@media (max-width: 860px) { .lp-uses-cta { grid-column: 1; } }
+
+/* Tu comuna en tres preguntas: una sola superficie dividida en tres, respuesta corta en grande */
+.lp-qs { margin-top: 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+.lp-qs > .lp-q { border: 0; border-radius: 0; background: none; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.lp-qs > .lp-q + .lp-q { border-left: 1px solid var(--line); }
+@media (max-width: 1000px) { .lp-qs { grid-template-columns: 1fr; } .lp-qs > .lp-q + .lp-q { border-left: 0; border-top: 1px solid var(--line); } }
+.lp-q-ask { font-size: 15px; font-weight: 600; color: var(--muted); }
+.lp-q-answer { font-size: 24px; line-height: 1.22; font-weight: 600; letter-spacing: -.005em; text-wrap: balance; min-height: 2.44em; }
+@media (max-width: 1000px) { .lp-q-answer { min-height: 0; } }
+.lp-q-detail { font-size: 14.5px; }
+.lp-q-peak { font-size: 14.5px; padding: 8px 12px; border-left: 3px solid var(--b5); background: #F2F6FA; }
+.lp-q-fine { font-size: 12.5px; color: var(--muted); margin-top: auto !important; }
+/* barras por mes */
+.lp-mbars { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 3px; }
+.lp-mbar { display: grid; gap: 4px; padding: 0; border: 0; background: none; font: inherit; cursor: pointer; min-width: 0; color: var(--muted); }
+.lp-mbar-track { height: 96px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--fg); }
+.lp-mbar-track b { display: block; width: 100%; background: var(--b2); border-radius: 2px 2px 0 0; transition: background .15s; }
+.lp-mbar.hi .lp-mbar-track b { background: var(--b5); }
+.lp-mbar.on .lp-mbar-track { box-shadow: 0 0 0 2px var(--accent); border-radius: 2px; }
+.lp-mbar:hover .lp-mbar-track b { background: var(--b4); }
+.lp-mbar-m { font-size: 11px; text-align: center; }
+.lp-mbar.hi .lp-mbar-m { color: var(--fg); font-weight: 600; }
+.lp-mbar:focus-visible { outline: none; }
+.lp-mbar:focus-visible .lp-mbar-track { box-shadow: 0 0 0 2px var(--accent); }
+/* barras por temporada */
+.lp-ybars { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 3px; }
+.lp-ybar { display: grid; gap: 4px; min-width: 0; }
+.lp-ybar-track { height: 96px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--fg); }
+.lp-ybar-track b { display: block; width: 100%; background: var(--b2); border-radius: 2px 2px 0 0; }
+.lp-ybar.hi .lp-ybar-track b { background: var(--b5); }
+.lp-ybar-y { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: center; }
+.lp-ybar.hi .lp-ybar-y { color: var(--fg); font-weight: 600; }
+.lp-dots-ax { font-family: var(--sans) !important; }
+.lp-sample-cta { margin-top: 20px !important; }
