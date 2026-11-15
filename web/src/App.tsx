@@ -8,6 +8,7 @@ import { CommunePanel } from "./CommunePanel";
 import { ObservedHistory } from "./ObservedHistory";
 import { GoliatLogo } from "./brand/GoliatLogo";
 import { UI } from "./ui";
+import { download, seriesCsv } from "./csv";
 import "./App.css";
 
 const params = () => new URLSearchParams(location.search);
@@ -77,6 +78,8 @@ export default function App() {
     return (index?.comunas ?? []).filter((c) => fold(c.comuna).includes(n) || c.cut.startsWith(n)).slice(0, 8);
   }, [index, q]);
   const pick = (c: string) => { setCut(c); setQ(""); setSearching(false); };
+  const close = () => { setCut(null); setTableOpen(false); };
+  const wide = !!current && tableOpen;
 
   const search = (
     <div className="search-box no-print">
@@ -133,23 +136,58 @@ export default function App() {
         </main>
       ) : (
         <>
-          <div className="explore">
+          {/* Una sola card a la izquierda: el resumen de la comuna o, al abrir la serie, el calendario completo (más ancha). El mapa queda al lado y la página no se desliza (issue #38). */}
+          <div className={`explore${wide ? " wide" : ""}`}>
             <div className="explore-map no-print">
               <MapBoundary fallback={<p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>}>
-                <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} />
+                <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} wide={wide} />
               </MapBoundary>
             </div>
             <aside className="panel">
-              {search}
-              {!cut ? <p className="muted hint">{T.searchHint}</p>
-                : error ? <p role="alert">{T.loadError}</p>
-                : current ? <CommunePanel doc={current} derived={derived} season={season} lang={lang} tableOpen={tableOpen} toggleTable={() => setTableOpen(!tableOpen)} method={method} />
-                : <p className="muted">{T.loading}</p>}
+              <div className="panel-head">
+                <div className="search-row">
+                  {search}
+                  {cut && <button className="close no-print" onClick={close} aria-label={T.close} title={T.close}>× {T.closeShort}</button>}
+                </div>
+                {current && (
+                  <div className="titlerow">
+                    <h2>{current.comuna} <small>· {current.region} · CUT {current.cut}</small></h2>
+                    <div className="tabs no-print" role="group" aria-label={t.calendar}>
+                      <button aria-pressed={!tableOpen} onClick={() => setTableOpen(false)}>{T.tabSummary}</button>
+                      <button aria-pressed={tableOpen} onClick={() => setTableOpen(true)}>{T.tabSeries}</button>
+                    </div>
+                    {tableOpen && (
+                      <span className="acts no-print">
+                        <button onClick={() => download(`goliat_${current.cut}_${current.comuna}.csv`, seriesCsv(current))}>CSV</button>
+                        <button onClick={() => window.print()}>{T.printShort}</button>
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="panel-body">
+                {!cut ? <p className="muted hint">{T.searchHint}</p>
+                  : error ? <p role="alert">{T.loadError}</p>
+                  : current ? (
+                    <>
+                      <div className="resumen">
+                        <CommunePanel doc={current} derived={derived} season={season} lang={lang} toggleTable={() => setTableOpen(true)} method={method} />
+                      </div>
+                      {tableOpen && (
+                        <section className="serie-panel no-print" id="serie" aria-label={`${t.calendar} · ${current.comuna} · 2002–2026`}>
+                          <Calendar series={current.series} totals={derived?.season_totals ?? []} bandMae={current.reconstruction_enabled ? current.gates.band_mae : undefined} lang={lang} cutoff={current.cutoff} compact />
+                        </section>
+                      )}
+                    </>
+                  )
+                  : <p className="muted">{T.loading}</p>}
+              </div>
             </aside>
           </div>
 
+          {/* Impresión: igual que antes (ficha + serie + método), desde el mismo JSON. */}
           {current && (
-            <section className={`card serie${tableOpen ? "" : " print-only"}`} id="serie">
+            <section className="card serie print-only">
               <h2>{t.calendar} · {current.comuna} · 2002–2026</h2>
               <p className="help">{t.calendarHelp}</p>
               <Calendar series={current.series} totals={derived?.season_totals ?? []} bandMae={current.reconstruction_enabled ? current.gates.band_mae : undefined} lang={lang} />

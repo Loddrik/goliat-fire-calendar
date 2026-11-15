@@ -7,9 +7,9 @@ import { download, seriesCsv } from "./csv";
 
 const MONTHS_SEASON = [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
 
-export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTable, method }: {
+export function CommunePanel({ doc, derived, season, lang, toggleTable, method }: {
   doc: ComunaDoc; derived: DerivedDoc | null; season: number | null; lang: Lang;
-  tableOpen: boolean; toggleTable: () => void; method: ReactNode;
+  toggleTable: () => void; method: ReactNode;
 }) {
   const T = UI[lang];
   const [copied, setCopied] = useState(false);
@@ -98,7 +98,7 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
       )}
 
       <div className="actions no-print">
-        <button className="primary" onClick={toggleTable} aria-expanded={tableOpen}>{tableOpen ? T.hideTable : T.table}</button>
+        <button className="primary" onClick={toggleTable}>{T.table}</button>
         <div className="share-preview">
           <b>{T.shareTitle}</b>
           <p>{shareText}</p>
