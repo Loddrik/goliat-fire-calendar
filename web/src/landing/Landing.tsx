@@ -84,7 +84,6 @@ export default function Landing() {
                   <li key={u.who}>
                     <span className="lp-uses-who">{u.who}</span>
                     <span className="lp-uses-what">{u.what}</span>
-                    <span className="lp-uses-get">{u.get}</span>
                   </li>
                 ))}
               </ul>

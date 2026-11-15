@@ -63,7 +63,11 @@ export function CommuneSample({ cut, t, lang, enabled }: { cut: string; t: Text;
   // El mes extremo de un solo año: si cae fuera de los meses nombrados, se nombra con su año (de la serie publicada).
   const maxes = clim.map(x => x.max ?? 0);
   const peakMax = Math.max(...maxes), peakI = maxes.indexOf(peakMax);
-  const peakPoint = peakMax > 0 && !h.months.includes(peakI)
+  // Siempre se nombra; si cae fuera de los meses nombrados, se dice que no sigue el patrón.
+  const peakOut = !h.months.includes(peakI);
+  const peakTie = maxes.filter(v => v === peakMax).length > 1;
+  // Un «extremo» de 2 celdas-día no dice nada: se nombra desde 2 × LOW.
+  const peakPoint = peakMax >= 2 * LOW
     ? doc.series.find(p => p.m === ORDER[peakI] && p.state === "observed" && !p.partial && p.season < derived.current_season && p.value === peakMax)
     : undefined;
   const top = h.kind === "low" ? clim.reduce((b, x, i) => (x.seasons_with > clim[b].seasons_with ? i : b), 0) : med.indexOf(h.peak);
@@ -74,8 +78,15 @@ export function CommuneSample({ cut, t, lang, enabled }: { cut: string; t: Text;
   const sc = doc.season_compare;
   const years = Object.keys(sc.observed_seasons).map(Number).sort((a, b) => a - b);
   const vals = years.map(y => sc.observed_seasons[String(y)]);
+  // Conteo de temporadas publicadas por encima, por debajo e iguales (no es una cifra nueva).
   const above = vals.filter(v => v > sc.current).length, below = vals.filter(v => v < sc.current).length;
-  const nowAnswer = above >= below ? t.nowLess(above, vals.length) : t.nowMore(below, vals.length);
+  const equal = vals.length - above - below, nv = vals.length;
+  const nowAnswer = (sc.median ?? 0) < LOW && sc.current < LOW ? t.nowQuiet
+    : above >= nv - 3 ? t.nowLess(above, nv, equal)
+    : below >= nv - 3 ? t.nowMore(below, nv, equal)
+    : t.nowMid(above, below, equal);
+  // Mientras el corte cae entre julio y noviembre, el verano no ha empezado.
+  const early = Number(doc.cutoff.slice(5, 7)) >= 7 && Number(doc.cutoff.slice(5, 7)) <= 11;
   const vmax = Math.max(4, sc.current, ...vals);
   const pos = (v: number) => `${(v / vmax) * 100}%`;
   const stack = vals.map((v, i) => vals.slice(0, i).filter(w => w === v).length);
@@ -84,13 +95,16 @@ export function CommuneSample({ cut, t, lang, enabled }: { cut: string; t: Text;
   // ---- 3. ¿Qué año tuvo más? (solo temporadas completas observadas) -------------------------------
   const seasons = derived.season_totals.filter(s => s.complete && s.state === "observed");
   const sMax = Math.max(1, ...seasons.map(s => s.value ?? 0));
-  const topSeason = seasons.find(s => s.value === sMax);
+  const tops = seasons.filter(s => s.value === sMax);
+  const topSeason = tops[0];
 
   return (
     <div className="lp-qs">
       <article className="lp-q">
         <p className="lp-q-ask">{t.whenAsk(c)}</p>
         <p className="lp-q-answer">{whenAnswer}</p>
+        {peakPoint && <p className={`lp-q-peak${peakOut ? " out" : ""}`}>{t.whenPeak(t.monthsLong[peakI], peakPoint.y, num(peakMax, lang), peakOut, peakTie)}</p>}
+        {h.kind !== "low" && <p className="lp-q-detail">{t.whenBurns}</p>}
         <div className="lp-mbars" role="group" aria-label={t.whenAsk(c)}>
           {clim.map((x, i) => (
             <button key={x.m} type="button" className={`lp-mbar${h.months.includes(i) ? " hi" : ""}${shown === i ? " on" : ""}`}
@@ -101,13 +115,13 @@ export function CommuneSample({ cut, t, lang, enabled }: { cut: string; t: Text;
           ))}
         </div>
         <p className="lp-q-detail" aria-live="polite">{t.monthLine(t.monthsLong[shown], num(clim[shown].median, lang), clim[shown].seasons_with, clim[shown].n)}</p>
-        {peakPoint && <p className="lp-q-peak">{t.whenPeak(t.monthsLong[peakI], peakPoint.y, num(peakMax, lang))}</p>}
         <p className="lp-q-fine">{t.whenFine(n)}</p>
       </article>
 
       <article className="lp-q">
         <p className="lp-q-ask">{t.nowAsk}</p>
         <p className="lp-q-answer">{nowAnswer}</p>
+        <p className="lp-q-warn">{t.nowWarn(early)}</p>
         <div className="lp-dots" aria-hidden="true" style={{ height: 70 + lift }}>
           <span className="lp-dots-cur-l" style={{ left: pos(sc.current) }}>{t.nowThis}: {num(sc.current, lang)}</span>
           <span className="lp-dots-axis" style={{ top: 34 + lift }} />
@@ -122,10 +136,10 @@ export function CommuneSample({ cut, t, lang, enabled }: { cut: string; t: Text;
 
       <article className="lp-q">
         <p className="lp-q-ask">{t.yearsAsk}</p>
-        <p className="lp-q-answer">{topSeason ? t.yearsAnswer(seasonLabel(topSeason.season)) : "—"}</p>
+        <p className="lp-q-answer">{tops.length ? t.yearsAnswer(tops.map(s => seasonLabel(s.season)), tops.map(s => s.season + 1)) : "—"}</p>
         <div className="lp-ybars" role="list" aria-label={t.yearsAsk}>
           {seasons.map(s => (
-            <div key={s.season} role="listitem" className={`lp-ybar${s === topSeason ? " hi" : ""}`}>
+            <div key={s.season} role="listitem" className={`lp-ybar${s.value === sMax ? " hi" : ""}`}>
               <span className="lp-sr">{seasonLabel(s.season)}: {num(s.value, lang)}</span>
               <span className="lp-ybar-track" aria-hidden="true" title={`${seasonLabel(s.season)}: ${num(s.value, lang)}`}><b style={{ height: `${Math.max(3, ((s.value ?? 0) / sMax) * 100)}%` }} /></span>
               <span className="lp-ybar-y" aria-hidden="true">{String(s.season).slice(2)}</span>
