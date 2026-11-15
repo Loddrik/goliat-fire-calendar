@@ -1,0 +1,37 @@
+{
+  "79": {
+    "candidate_pairs": 2,
+    "contact_zero_area_pairs": 2,
+    "sum_overlap_m2": 0.0
+  },
+  "80": {
+    "candidate_pairs": 617,
+    "contact_zero_area_pairs": 617,
+    "sum_overlap_m2": 0.0
+  },
+  "81": {
+    "candidate_pairs": 766,
+    "contact_zero_area_pairs": 766,
+    "sum_overlap_m2": 0.0
+  },
+  "82": {
+    "candidate_pairs": 761,
+    "contact_zero_area_pairs": 761,
+    "sum_overlap_m2": 0.0
+  },
+  "83": {
+    "candidate_pairs": 761,
+    "contact_zero_area_pairs": 761,
+    "sum_overlap_m2": 0.0
+  },
+  "84": {
+    "candidate_pairs": 778,
+    "contact_zero_area_pairs": 778,
+    "sum_overlap_m2": 0.0
+  },
+  "85": {
+    "candidate_pairs": 173,
+    "contact_zero_area_pairs": 173,
+    "sum_overlap_m2": 0.0
+  }
+}

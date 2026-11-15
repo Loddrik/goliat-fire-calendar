@@ -1,0 +1,11 @@
+{
+  "not_necessarily_cause": true,
+  "operation": "intersection",
+  "operations": {
+    "difference": 352566,
+    "intersection": 1069484,
+    "symmetric_difference": 528639,
+    "unary_union": 176280,
+    "union": 352470
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "plan_path": "docs/reviews/2026-11-15-joint-plan-31.md",
+  "plan_sha256": "e40c97c4acc64402e01ebc249d70d767c3c8435303f0a022f998e05bf925c412",
+  "ratified_at_utc": "2026-11-15T06:14:01.154898+00:00",
+  "multifocal": [
+    "hurdle_design",
+    "observation_gate0",
+    "loco_observation"
+  ],
+  "adversarial": [
+    "independent_review_23",
+    "adversarial_council_measurement24",
+    "adversarial_council_feasibility24"
+  ],
+  "sequence": "A<=45min GEO + B<=30min exact local, independently capped in parallel",
+  "all_six_ratified_sequence": true,
+  "unanimous_ranking": false,
+  "final_conditions": [
+    "exact_rational_origin_and_vertices",
+    "simple_nonzero_quads_before_index",
+    "nested_grids_same_phase",
+    "ambiguity_precedence",
+    "no_QA_before_later_protocol"
+  ],
+  "physical_G1": false
+}

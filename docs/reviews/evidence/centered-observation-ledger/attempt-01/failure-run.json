@@ -1,0 +1,10 @@
+{
+  "QA_replay_executed": false,
+  "all_geometry_gates_passed": false,
+  "code_sha256": "9848796bde6cc8e03fcc524c777565159881102855403dd3fd06ce6e6e3ff8f7",
+  "error": "Interior predicate vs intersection dimension",
+  "error_type": "ValueError",
+  "failed_utc": "2026-11-15T05:40:50.932280+00:00",
+  "gate1_passed": false,
+  "stage": "run"
+}
