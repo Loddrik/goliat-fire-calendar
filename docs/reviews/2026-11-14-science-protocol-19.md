@@ -1,0 +1,13 @@
+# Protocolo 19 — sensibilidad congelada al referente NOAA-20
+
+Fijado antes de calcular discrepancias nuevas. La etapa18 aprende detecciones registradas S-NPP; el producto observado usa NOAA-20 desde2018. Se prueba sensibilidad a cambiar de referente, sin ajuste, selección ni promoción. NOAA-20 no es verdad física ni validación independiente; su puente ya se exploró en7.
+
+Usar exclusivamente las filas posteriores guardadas de18, con sus54comunas y fechas2020–2025, manteniendo exclusiones heredadas (agosto/septiembre2020 y cualquier ventana incompleta explícita). Los cortes de temporada son julio–junio; enero–junio2022 sigue perteneciendo a2021. No rellenar huecos de solicitud como ceros: comprobar inventario y completitud de días solicitados por plataforma en cada mes, y excluir cualquier mes incompleto en cualquiera de los dos referentes. Esa completitud no demuestra cobertura ni cielo despejado.
+
+Construir NOAA-20 a partir de `celldays.parquet`, unidad0.01°celda-día diurna porplataforma, aplicando la misma máscara completaTRAIN223celdas de18 y7. Verificar equivalencia porhash/identidad, no elegir otra máscara por resultado. Conservar provisionalidad SP/NRT y mostrar grupos con/sinNRT; si no hay variación, decirlo. No nuevos datos FIRMS ni descarga ni ajuste.
+
+Comparar TODOS los métodos fijos M1,B,E11_10,E_mean,E_coherent,E_proportional frente a S-NPP y NOAA-20 sobre IDÉNTICASfilas. Reproducir el referenteSNP desde celldays cuando sea posible y comprobarlo con fuente18; cualquier diferencia debe resolverse antes de puntuar, no ignorarse. Métricas MAE,MSE,sesgo,suma estimada,MAEregional;54/14/40,ambosbloques posteriores,cortescalendario2022 y estratos positivos/cero/intensos por cada referente claramente separados. Reportar cambio de ranking/desacuerdos, no escoger nuevo modelo conNN20.
+
+E_coherent yproporcional conservan el totalB frente acualquierreferente: igualdad deMAEregional ysesgo global sigue siendo construida. La pregunta nueva es si la mejora de asignación local frente aB persiste alreferente usado enproducto. Aunque persista, no valida el puente SNP→NOAA20 ni habilita cambiar publicación; si falla, registrar la fragilidad.
+
+Sin nuevas búsquedas de hiperparámetros ni mezclas. Salidas aisladas `data/processed/platform_target_audit/`, manifiesto deentradas/código/protocolo/entorno; proteger base,publicación yestudios previos. Pruebas necesarias: mescondíasfaltantesrechazado,clavesidénticas,agregaciónsinrellenosindebidos,ningunainferencia/fitconetiquetasNN20. Bootstrapportemporadas soloexploratorio si se añade; no aparentarindependenciaconmilesdeceldas.
