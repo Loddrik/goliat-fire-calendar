@@ -195,5 +195,6 @@ for i,part in enumerate(parts):
     part=part.replace('conNRT','con NRT').replace('yCtodos','y Ctodos').replace('días.20','días. 20').replace('correctamente.20A','correctamente. 20A')
     parts[i]=part
 page=''.join(parts)
+page='\n'.join(line.rstrip() for line in page.splitlines())+'\n'
 DEST.write_text(page)
 print(DEST,DEST.stat().st_size,'bytes')
