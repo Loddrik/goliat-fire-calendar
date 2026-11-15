@@ -1,0 +1,49 @@
+{
+  "observed_utc": "2026-11-15T14:33:03.966681+00:00",
+  "upstream_dev": "2fa31b4a3453de70b3eae093bc57f1910d9bcb5d",
+  "upstream_main": "e953924d89d6608b7dc9f597c2e7a6ffb5d86398",
+  "open_PRs": [
+    {
+      "baseRefName": "dev",
+      "headRefName": "docs/44-handoff-presentacion",
+      "headRefOid": "85092eaad34b1594a8e98ab3b73b22cb2b1f1c6e",
+      "isDraft": false,
+      "number": 65,
+      "title": "Handoff: ciencia revisada, relato de negocio y plan para presentación",
+      "url": "https://github.com/Loddrik/goliat-fire-calendar/pull/65"
+    },
+    {
+      "baseRefName": "dev",
+      "headRefName": "ciencia/43-recuperacion-crudos",
+      "headRefOid": "6410fcb491e9a318419d7b142ddab52b1e483662",
+      "isDraft": true,
+      "number": 64,
+      "title": "Recuperar originales FIRMS y bloquear ingestión incompleta",
+      "url": "https://github.com/Loddrik/goliat-fire-calendar/pull/64"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "fix/publicacion-recurrencia-estable",
+      "headRefOid": "76c7d3ef404ae847b521a0f67bce5c1972e0917a",
+      "isDraft": false,
+      "number": 31,
+      "title": "Publicación: estabiliza el orden de las celdas de recurrencia",
+      "url": "https://github.com/Loddrik/goliat-fire-calendar/pull/31"
+    }
+  ],
+  "recommended_order": [
+    64,
+    65,
+    31
+  ],
+  "PR31_requires_base_change": "main to dev; not executed",
+  "allow_merge_commit": true,
+  "ancestry64_merge_base_with_dev": "538241137d9c42e2297a0722cd53e68f96336701",
+  "PR31_fix_already_in_dev_or_handoff": false,
+  "PR31_expected_files": [
+    "pipeline/publish.py",
+    "tests/test_publication.py"
+  ],
+  "current_checks_at_snapshot": "Both checks SUCCESS on the consulted heads; base synchronization requires checks again",
+  "merge_retarg_rebase_deploy_executed": false
+}

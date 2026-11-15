@@ -13,6 +13,10 @@
 3. Revisar [las seis prioridades HTML](pendientes-priorizados.html) o su [lista Markdown](pendientes-priorizados.md). Los votos de los consejos y la ejecución son registros distintos.
 4. Antes de anunciar una demo funcional, identificar la versión que se abre y leer el [acta local de comprobación](acta-ensayo.md). Un build local o CI verde no acredita el despliegue público.
 
+## Guía para los PR pendientes
+
+Abrir la [guía de merge HTML](guia-merge.html) o su [Markdown](guia-merge.md): orden #64 → #65 → #31 hacia `dev`, revisión del fix de recurrencia, CI por head y recuperación. La publicación `dev` → `main` se decide aparte. Esta guía añade instrucciones; no ejecuta merges ni despliegues.
+
 ## Qué decir y qué comprobar
 
 **Producto conservado:** calendario de actividad térmica para 54 comunas de Biobío y Ñuble. M1 habilita reconstrucción mensual histórica en 14; las otras 40 conservan observaciones. Una celda-día con detección no es un incendio individual y un cero no certifica ausencia de fuego. La vista por plataforma tiene un contrato diferente del calendario armonizado.
@@ -53,7 +57,7 @@ Los originales están ignorados por Git. La copia completa recibida, `goliat-dat
 
 ## Reproducir los informes HTML
 
-Los cuatro HTML son autónomos, sin fuentes, scripts o estilos externos, y se generan desde sus Markdown. Pueden abrirse directamente desde disco; imprimir permite guardar PDF. Los enlaces a evidencia requieren conservar la estructura del repositorio.
+Los cinco HTML son autónomos, sin fuentes, scripts o estilos externos, y se generan desde sus Markdown. Pueden abrirse directamente desde disco; imprimir permite guardar PDF. Los enlaces a evidencia requieren conservar la estructura del repositorio.
 
 Instalar las dependencias sólo documentales en un entorno separado del científico:
 

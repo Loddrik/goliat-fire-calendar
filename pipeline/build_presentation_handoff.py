@@ -16,6 +16,7 @@ PAGES = {
     "resumen-tecnico": ("Ciencia que se puede revisar", "01 / INFORME TÉCNICO", "technical"),
     "resumen-negocio": ("Una historia del fuego para decidir mejor", "02 / PRODUCTO Y NEGOCIO", "business"),
     "pendientes-priorizados": ("El siguiente paso, con límites claros", "03 / PLAN DE ENTREGA", "plan"),
+    "guia-merge": ("Integrar los PR sin perder la evidencia", "04 / GUÍA DE MERGE", "merge"),
     "README": ("GOLIAT · entrega al equipo", "HANDOFF / 15 NOVIEMBRE 2026", "index"),
 }
 CSS = """:root{--ink:#173337;--muted:#51676a;--paper:#f7f5ee;--card:#fffef9;--line:#cbd8d4;--teal:#087e83;--orange:#b65320;--hero:#07393d}
@@ -39,6 +40,11 @@ def diagram(kind: str) -> str:
                  ("02 / REVISAR", "Comparar temporadas", "Mismo corte temporal, procedencia visible y límites de la reconstrucción."),
                  ("03 / CONTRASTAR", "Preparar una decisión", "Exportar y conversar con el equipo local. La utilidad debe probarse en un piloto.")]
         note = "Flujo de uso propuesto. No representa ahorro, reducción de daños ni efecto preventivo medido."
+    elif kind == "merge":
+        steps = [("01 / #64", "Recuperación y guard", "Actualizar con dev, revisar entradas y pasar CI del head actualizado."),
+                 ("02 / #65", "Entrega al equipo", "Conservar ascendencia, verificar informes y fusionar el diff restante."),
+                 ("03 / #31", "Orden de publicación", "Llevar el fix a dev y probar su alcance antes del release separado.")]
+        note = "Secuencia recomendada. La publicación dev → main requiere una decisión de release aparte."
     else:
         steps = [("P0 / RELATO", "Afirmaciones con fuente", "Un alcance defendible y respuestas claras sobre lo que se sabe."),
                  ("P0 / PAQUETE", "Una versión identificada", "Informes, evidencia, comandos y candidato de demo; revisión de integración aparte."),
@@ -68,13 +74,13 @@ def render(stem: str, title: str, eyebrow: str, kind: str) -> str:
     content = md.renderer.render(tokens, md.options, {})
     content = content.replace("<table>", '<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla desplazable"><table>').replace("</table>", "</table></div>")
     toc = "".join(f'<li><a href="#{anchor}">{html.escape(label)}</a></li>' for anchor,label in headings)
-    lead = {"technical":"Qué cambió, qué evidencia lo respalda y qué conserva el producto. Un recorrido desde los contratos publicados hasta los límites de la investigación.",
+    lead = {"merge":"Dependencias reales, controles por PR, método de integración y recuperación. Una secuencia verificable antes de publicar.", "technical":"Qué cambió, qué evidencia lo respalda y qué conserva el producto. Un recorrido desde los contratos publicados hasta los límites de la investigación.",
             "business":"El problema municipal, el valor que se puede mostrar y una historia de tres minutos respaldada por evidencia.",
             "plan":"Prioridades acotadas, responsables por rol, aceptación verificable y revisión de ambos consejos.",
             "index":"La puerta de entrada para preparar la presentación: relato, ciencia, pendientes y una versión identificada."}[kind]
     return f'''<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="{html.escape(lead)}"><title>{html.escape(title)} — GOLIAT</title><style>{CSS}</style></head>
-<body class="{kind}"><a class="skip" href="#contenido">Ir al contenido</a><header><nav class="top" aria-label="Informes"><a class="brand" href="index.html">GOLIAT</a><a href="resumen-negocio.html">Producto</a><a href="resumen-tecnico.html">Ciencia</a><a href="pendientes-priorizados.html">Pendientes</a><a href="{stem}.md">Markdown ↗</a></nav><div class="eyebrow">{eyebrow}</div><h1 class="hero">{title}</h1><p class="lede">{lead}</p><div class="pills"><span class="pill">M1 conservado</span><span class="pill">14 / 54 comunas habilitadas</span><span class="pill">Investigación ≠ despliegue</span></div></header>
+<body class="{kind}"><a class="skip" href="#contenido">Ir al contenido</a><header><nav class="top" aria-label="Informes"><a class="brand" href="index.html">GOLIAT</a><a href="resumen-negocio.html">Producto</a><a href="resumen-tecnico.html">Ciencia</a><a href="pendientes-priorizados.html">Pendientes</a><a href="guia-merge.html">Merge</a><a href="{stem}.md">Markdown ↗</a></nav><div class="eyebrow">{eyebrow}</div><h1 class="hero">{title}</h1><p class="lede">{lead}</p><div class="pills"><span class="pill">M1 conservado</span><span class="pill">14 / 54 comunas habilitadas</span><span class="pill">Investigación ≠ despliegue</span></div></header>
 <div class="layout"><aside class="toc" aria-label="En este informe"><h2>En este informe</h2><ol>{toc}</ol><a class="source" href="{stem}.md">Leer fuente Markdown ↗</a><a class="source" href="evidence/verification-snapshot.json">Recibo de verificación ↗</a></aside><main class="body" id="contenido"><div class="reading-note">Entrega documental del 15 de noviembre de 2026. Los estados y cifras tienen el corte y alcance indicados en las fuentes; este informe no acredita despliegue.</div>{diagram(kind)}{content}</main></div>
 <footer><div class="inner">GOLIAT · NASA Space Apps · Documento autónomo, sin recursos externos.<br>Fuente: {stem}.md · SHA-256: {hashlib.sha256(raw).hexdigest()}<br>Generado de forma reproducible por pipeline/build_presentation_handoff.py. Imprimir permite guardar como PDF.</div></footer></body></html>
 '''
@@ -92,7 +98,7 @@ def main() -> None:
             if not path.exists() or path.read_text(encoding="utf-8") != result: stale.append(path.name)
         else: path.write_text(result, encoding="utf-8")
     if stale: raise SystemExit("Stale HTML: " + ", ".join(stale))
-    print("PASS: four handoff documents match their Markdown sources" if args.check else "Rendered four standalone handoff documents")
+    print(f"PASS: {len(PAGES)} handoff documents match their Markdown sources" if args.check else f"Rendered {len(PAGES)} standalone handoff documents")
 
 
 if __name__ == "__main__":

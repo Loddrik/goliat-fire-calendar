@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dependencias reales, controles por PR, método de integración y recuperación. Una secuencia verificable antes de publicar."><title>Integrar los PR sin perder la evidencia — GOLIAT</title><style>:root{--ink:#173337;--muted:#51676a;--paper:#f7f5ee;--card:#fffef9;--line:#cbd8d4;--teal:#087e83;--orange:#b65320;--hero:#07393d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.75 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}a{color:#006c75;text-underline-offset:3px;overflow-wrap:anywhere}a:hover{color:#a94315}a:focus-visible,summary:focus-visible{outline:3px solid #e48635;outline-offset:4px}header{background:var(--hero);color:#fff;padding:26px max(5vw,24px) 60px;position:relative;overflow:hidden}header:after{content:'';position:absolute;width:460px;height:460px;border:1px solid #76b0a944;border-radius:50%;right:-180px;top:-160px;pointer-events:none;box-shadow:0 0 0 60px #76b0a910,0 0 0 120px #76b0a910}nav.top{display:flex;gap:20px;flex-wrap:wrap;align-items:center;position:relative;z-index:1}nav.top a{color:#daeeeb;font-size:13px;text-decoration:none}.brand{font-size:24px!important;letter-spacing:.16em;font-weight:850;margin-right:auto}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.18em;text-transform:uppercase;margin-top:54px;color:#a7ded5}h1.hero{max-width:930px;font-size:clamp(36px,5.2vw,70px);letter-spacing:-.045em;line-height:1.08;margin:18px 0 22px;font-weight:760}.lede{max-width:760px;color:#d0e8e4;font-size:19px;line-height:1.6}.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.pill{font-size:12px;border:1px solid #9ac9c76b;border-radius:100px;padding:6px 12px;color:#e2f1ee}.layout{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:245px minmax(0,1fr);gap:52px;padding:48px max(4vw,24px) 70px}.toc{font-size:13px;align-self:start;position:sticky;top:24px}.toc h2{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:0}.toc ol{list-style:none;padding:0;border-left:1px solid var(--line)}.toc li a{display:block;padding:7px 0 7px 16px;text-decoration:none;color:var(--muted);line-height:1.4}.toc li a:hover{color:var(--teal);border-left:2px solid var(--teal);margin-left:-1px}.toc .source{display:block;margin-top:20px;font-weight:700}.body{min-width:0;max-width:960px}.body>h1{font-size:28px;letter-spacing:-.025em;line-height:1.3;margin-top:8px}.body h2{font-size:28px;letter-spacing:-.025em;line-height:1.3;margin:50px 0 18px;padding-top:20px;border-top:1px solid var(--line)}.body h3{font-size:20px;margin-top:30px;line-height:1.4}.body p{margin:18px 0}.body strong{font-weight:730}.body li{margin:10px 0}.body blockquote{margin:24px 0;border-left:4px solid var(--teal);padding:8px 22px;background:#e9f0ea}.body code{font-size:.84em;background:#e7eeea;padding:3px 5px;border-radius:4px;overflow-wrap:anywhere}.body pre{padding:24px;background:#15373b;color:#e8f4ef;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.7}.body pre code{color:inherit;background:none;padding:0}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:24px 0;background:var(--card)}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.65}th{text-align:left;background:#e7ede6;font-weight:750;color:#244446}th,td{padding:15px 17px;vertical-align:top;border-bottom:1px solid var(--line);min-width:140px}tr:last-child td{border-bottom:0}table p{margin:0}.diagram{padding:26px;border:1px solid var(--line);background:#fffdf6;border-radius:16px;margin:4px 0 36px}.diagram .label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:750}.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:18px 0}.step{border-top:3px solid var(--teal);padding:15px;background:#eaf1eb;border-radius:0 0 8px 8px;min-width:0}.step span{font-size:12px;color:var(--muted)}.step b{display:block;line-height:1.35;margin:6px 0 10px;font-size:17px}.step p{font-size:13px;line-height:1.5;margin:0}.diagram figcaption{font-size:12px;line-height:1.6;color:var(--muted)}.boundary{border-top:1px dashed #b98c60;padding-top:16px;font-size:13px;color:#684c30}.reading-note{padding:16px 20px;border-left:3px solid #c57432;background:#f4e9d9;font-size:14px;margin-bottom:30px}.business{--hero:#22443c;--paper:#fbf6eb;--line:#d9dbcb}.technical{--hero:#102f43;--paper:#f4f6f3}.plan{--hero:#413c30}footer{background:#e8eee7;padding:30px max(5vw,24px);font-size:12px;color:var(--muted);overflow-wrap:anywhere}footer .inner{max-width:1220px;margin:auto}.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:white;padding:10px;z-index:4}details{border:1px solid var(--line);border-radius:10px;padding:18px}summary{cursor:pointer;font-weight:700}::selection{background:#f4c98b;color:#173337}
+@media(max-width:950px){.layout{grid-template-columns:1fr;gap:25px}.toc{position:static}.toc ol{columns:2}.body{max-width:none}.eyebrow{margin-top:35px}}
+@media(max-width:550px){body{font-size:16px}.layout{padding:28px 20px 50px}header{padding:22px 22px 40px}nav.top{gap:12px}.brand{width:100%}.lede{font-size:17px}.toc ol{columns:1}.flow{grid-template-columns:1fr}.diagram{padding:20px}.body h2{font-size:24px}th,td{padding:12px;min-width:150px}.pills{gap:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{font-size:10pt;background:white;color:black}header{background:white;color:black;padding:0 0 20px}header:after,.top,.toc,.pills,.skip{display:none!important}.eyebrow,.lede{color:#333}.eyebrow{margin-top:0}h1.hero{font-size:30pt}.layout{display:block;padding:0;max-width:none}.body{max-width:none}.body h2{font-size:18pt;break-after:avoid}.body h3{break-after:avoid}.table-wrap{overflow:visible}table{font-size:8pt}th,td{min-width:0;padding:8px}tr{break-inside:avoid}.diagram{break-inside:avoid}footer{background:white;padding:18px 0}.body pre{color:black;background:#eee}a{color:#174b50}header .lede{font-size:12pt}}
+</style></head>
+<body class="merge"><a class="skip" href="#contenido">Ir al contenido</a><header><nav class="top" aria-label="Informes"><a class="brand" href="index.html">GOLIAT</a><a href="resumen-negocio.html">Producto</a><a href="resumen-tecnico.html">Ciencia</a><a href="pendientes-priorizados.html">Pendientes</a><a href="guia-merge.html">Merge</a><a href="guia-merge.md">Markdown ↗</a></nav><div class="eyebrow">04 / GUÍA DE MERGE</div><h1 class="hero">Integrar los PR sin perder la evidencia</h1><p class="lede">Dependencias reales, controles por PR, método de integración y recuperación. Una secuencia verificable antes de publicar.</p><div class="pills"><span class="pill">M1 conservado</span><span class="pill">14 / 54 comunas habilitadas</span><span class="pill">Investigación ≠ despliegue</span></div></header>
+<div class="layout"><aside class="toc" aria-label="En este informe"><h2>En este informe</h2><ol><li><a href="#que-queda-abierto-y-por-que-ese-orden">Qué queda abierto y por qué ese orden</a></li><li><a href="#antes-de-cada-merge-identificar-base-head-y-aceptacion">Antes de cada merge: identificar base, head y aceptación</a></li><li><a href="#paso-1-64-recuperacion-y-guard">Paso 1: #64, recuperación y guard</a></li><li><a href="#paso-2-65-entrega-y-guia-de-integracion">Paso 2: #65, entrega y guía de integración</a></li><li><a href="#paso-3-31-publicacion-determinista-hacia-dev">Paso 3: #31, publicación determinista hacia dev</a></li><li><a href="#comprobaciones-comunes-y-decision-de-release">Comprobaciones comunes y decisión de release</a></li><li><a href="#como-recuperar-una-integracion-fallida">Cómo recuperar una integración fallida</a></li></ol><a class="source" href="guia-merge.md">Leer fuente Markdown ↗</a><a class="source" href="evidence/verification-snapshot.json">Recibo de verificación ↗</a></aside><main class="body" id="contenido"><div class="reading-note">Entrega documental del 15 de noviembre de 2026. Los estados y cifras tienen el corte y alcance indicados en las fuentes; este informe no acredita despliegue.</div><figure class="diagram" aria-label="Diagrama conceptual de tres pasos"><div class="label">Diagrama conceptual · leer de izquierda a derecha</div><div class="flow"><div class="step"><span>01 / #64</span><b>Recuperación y guard</b><p>Actualizar con dev, revisar entradas y pasar CI del head actualizado.</p></div><div class="step"><span>02 / #65</span><b>Entrega al equipo</b><p>Conservar ascendencia, verificar informes y fusionar el diff restante.</p></div><div class="step"><span>03 / #31</span><b>Orden de publicación</b><p>Llevar el fix a dev y probar su alcance antes del release separado.</p></div></div><figcaption class="boundary">Secuencia recomendada. La publicación dev → main requiere una decisión de release aparte.</figcaption></figure><h1 id="guia-para-integrar-los-pr-pendientes">Guía para integrar los PR pendientes</h1>
+<p><strong>Consulta del 15 de noviembre de 2026.</strong> Orden recomendado: <strong>#64 → #65 → #31 hacia <code>dev</code></strong>, seguido, si el responsable decide publicar, de un <strong>PR separado <code>dev</code> → <code>main</code></strong>. Esta guía no ejecuta merges, cambios de base ni despliegues. El <a href="evidence/merge-guide-snapshot.json">recibo de estado</a> conserva los heads y checks consultados; repetir la consulta antes de actuar.</p>
+<h2 id="que-queda-abierto-y-por-que-ese-orden">Qué queda abierto y por qué ese orden</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla desplazable"><table>
+<thead>
+<tr>
+<th>PR</th>
+<th>Base actual / estado</th>
+<th>Qué incorpora</th>
+<th>Acción recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Loddrik/goliat-fire-calendar/pull/64">#64</a></td>
+<td><code>dev</code>, borrador; head <code>6410fcb</code></td>
+<td>Verificador del inventario, guard antes de DuckDB, pruebas y evidencia de recuperación.</td>
+<td>Actualizar con <code>dev</code>, revisar, ejecutar CI del head actualizado y fusionar primero.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Loddrik/goliat-fire-calendar/pull/65">#65</a></td>
+<td><code>dev</code>, borrador; head anterior a esta guía <code>85092ea</code></td>
+<td>Handoff, informes, evidencia de la copia completa y renderer documental. Contiene #64 como antecesor.</td>
+<td>Tras #64, actualizar con <code>dev</code>, revisar el diff restante y fusionar.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Loddrik/goliat-fire-calendar/pull/31">#31</a></td>
+<td><code>main</code>, abierto; head <code>76c7d3e</code></td>
+<td>Orden determinista de recurrencia en <code>publish.py</code> y una prueba de republicación.</td>
+<td>Cambiar su base a <code>dev</code>, sincronizar y validar antes de fusionar. No usar su base <code>main</code> actual para saltarse integración.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los PR científicos #32–#63 ya están integrados en <code>dev</code>. La comparación local confirma que #64 añade un único commit sobre <code>5382411</code>, ya antecesor de <code>dev</code>. Algunas vistas de GitHub todavía mostraban la base antigua de #64: usar el parentesco y el diff actualizado, no el tamaño de una vista antigua como prueba de duplicación.</p>
+<p>La comprobación por archivos confirma que <strong>#31 todavía no está incorporado</strong>: añade <code>order by 1,2,3</code> a la consulta de recurrencia y una prueba que reordena las celdas-día en un directorio temporal. Ese orden de JSON <strong>no resuelve el empate de deduplicación FIRMS</strong> ni la discrepancia estricta de una fila por lado. Puede prepararse en paralelo; se ubica tercero para mantener un solo candidato de integración por vez.</p>
+<h2 id="antes-de-cada-merge-identificar-base-head-y-aceptacion">Antes de cada merge: identificar base, head y aceptación</h2>
+<p>Trabajar con el checkout limpio y conservar un respaldo Git. El raw completo se respalda por separado: no está incluido en Git ni en un bundle. La <a href="README.md">guía de entrega</a> identifica el tar de 1.071 originales y su SHA.</p>
+<pre><code class="language-sh">git status --short
+git fetch origin dev main
+gh pr list --repo Loddrik/goliat-fire-calendar --state open
+git config user.name 'Daniel Quinteros'
+git config user.email 'daniel.quinterosc@gmail.com'
+git config commit.gpgsign false
+</code></pre>
+<p>Usar <strong>Create a merge commit</strong> para conservar la ascendencia entre #64 y #65; el repositorio permite ese método. Squash o rebase cambian los identificadores y obligan a reconciliar otra vez la rama apilada. Conservar las ramas hasta terminar el traspaso y registrar el SHA que finalmente se integró.</p>
+<p>La configuración de identidad y firma anterior controla commits <strong>locales</strong>. GitHub puede crear sus propios commits y firmas de plataforma al fusionar: no asumir que <code>commit.gpgsign=false</code> controla el servidor. Si también se exige ausencia de firma en el commit de integración, el mantenedor debe comprobar ese requisito y utilizar un método local permitido por las reglas de rama; no saltarse esas reglas con un push directo.</p>
+<h2 id="paso-1-64-recuperacion-y-guard">Paso 1: #64, recuperación y guard</h2>
+<p>El mantenedor revisa su diff contra <code>dev</code>: el guard debe ejecutarse antes de abrir DuckDB; no cambia los SQL de detección, parámetros, gates o JSON publicados. El recibo antiguo de 956 archivos sigue siendo evidencia de un corte anterior; el recibo de la copia peer acredita ahora 1.071 exactos.</p>
+<p>Para preparar su rama, después de confirmar que el checkout está limpio:</p>
+<pre><code class="language-sh">gh pr checkout 64 --repo Loddrik/goliat-fire-calendar
+git fetch origin dev
+git -c commit.gpgsign=false merge origin/dev
+git push
+gh pr checks 64 --repo Loddrik/goliat-fire-calendar --watch --fail-fast
+</code></pre>
+<p>Si hay conflictos, resolver cada archivo conservando el método actual en inglés y los cambios vigentes de marca/CI. Revisar el resultado antes de crear el commit de resolución. Un check verde del head antiguo no sustituye los checks del head actualizado.</p>
+<p><strong>Aceptación:</strong> CI web y científico pasan; el lector CRPS reproduce evidencia congelada; el guard da COMPLETE/salida 0 con el respaldo completo y rechaza inventarios incompletos. La ausencia de raw en GitHub Actions o un clon limpio es esperable y no justifica regenerar el inventario. Revisar y quitar el estado borrador sólo cuando se cumpla esa aceptación. Fusionar #64 mediante el procedimiento de revisión del equipo y registrar el commit de merge.</p>
+<h2 id="paso-2-65-entrega-y-guia-de-integracion">Paso 2: #65, entrega y guía de integración</h2>
+<p>Después de confirmar que #64 está fusionado:</p>
+<pre><code class="language-sh">git fetch origin dev
+gh pr checkout 65 --repo Loddrik/goliat-fire-calendar
+git -c commit.gpgsign=false merge origin/dev
+git push
+gh pr diff 65 --repo Loddrik/goliat-fire-calendar --name-only
+gh pr checks 65 --repo Loddrik/goliat-fire-calendar --watch --fail-fast
+</code></pre>
+<p><strong>Aceptación:</strong> el diff restante contiene la entrega y sus herramientas documentales; no debe volver a introducir una versión antigua de método, marca o datos. Los HTML coinciden con sus Markdown; enlaces y fuentes resuelven; el estado actual indica 1.071 originales exactos y diferencia integración de despliegue. Los snapshots históricos y los seis votos conservan sus fechas y hashes. Verificar que ambos checks corresponden al head que se revisó, no al head <code>85092ea</code> anterior a esta guía. Quitar borrador y fusionar tras revisión.</p>
+<p>Si el equipo ya incorporó #64 a través de un merge directo de #65, consultar primero el head actual de #64 con <code>gh pr view 64 --json headRefOid</code>, obtenerlo con <code>git fetch</code> y verificar <code>git merge-base --is-ancestor SHA_ACTUAL_DE_64 origin/dev</code>. Si la ascendencia confirma que ya está incorporado, no volver a aplicarlo ni hacer cherry-pick; comprobar el estado de #64 y documentar su incorporación. El orden normal anterior evita esta ambigüedad.</p>
+<h2 id="paso-3-31-publicacion-determinista-hacia-dev">Paso 3: #31, publicación determinista hacia dev</h2>
+<p>El responsable cambia expresamente la base; esta guía no la modifica:</p>
+<pre><code class="language-sh">gh pr edit 31 --repo Loddrik/goliat-fire-calendar --base dev
+git fetch origin dev
+gh pr checkout 31 --repo Loddrik/goliat-fire-calendar
+git -c commit.gpgsign=false merge origin/dev
+git push
+uv run --frozen python -m unittest discover -s tests -p 'test_publication.py' -v
+gh pr checks 31 --repo Loddrik/goliat-fire-calendar --watch --fail-fast
+</code></pre>
+<p><strong>Aceptación:</strong> el cambio neto conserva su alcance de dos archivos, <code>pipeline/publish.py</code> y <code>tests/test_publication.py</code>; la prueba obtiene el mismo contenido y orden de las 54 comunas con dos permutaciones de entrada. La republicación de esa prueba ocurre en un directorio temporal. No ejecutar el publisher real para preparar el merge ni regenerar los JSON versionados por este motivo. El CI completo debe pasar, incluida la nueva prueba; el número histórico de 358 tests no es un techo para futuros cambios.</p>
+<p>Cambiar la base puede alterar el diff y los checks. Revisar de nuevo antes de fusionar. Si aparece un cambio de parámetros, máscara, filtro científico o valores publicados, detener esa integración y separar la modificación que amplió el alcance.</p>
+<h2 id="comprobaciones-comunes-y-decision-de-release">Comprobaciones comunes y decisión de release</h2>
+<p>Los workflows <a href="../../../.github/workflows/ci.yml">web</a> y <a href="../../../.github/workflows/science.yml">científico</a> son la referencia. Usan Node 22 y el entorno Python bloqueado. El mínimo de lectura incluye:</p>
+<pre><code class="language-sh">uv sync --frozen
+uv run --frozen python -m unittest discover -s tests -p 'test_*.py' -v
+uv run --frozen python -O pipeline/verify_crps_evidence.py
+uv run --frozen python pipeline/verify_raw_inventory.py
+npm ci
+npm --prefix web ci
+npm --prefix web run lint
+npm --prefix web run build
+</code></pre>
+<p>El guard tiene salida 0 con los 1.071 raw verificados y salida 1 si no están completos. Es disponibilidad de entradas, no validación física. Las comprobaciones del renderer se instalan en un entorno documental separado siguiendo el <a href="README.md">README de entrega</a>; CI también las ejecuta. No lanzar drivers científicos con deadlines vencidos, reingestar ni ajustar modelos para resolver un merge.</p>
+<p>Al terminar la integración, comprobar Tomé habilitada, Concepción sin reconstrucción, CSV con estados observado/estimado y vista por plataforma. Registrar commit y resultado; las capturas del handoff pertenecen al candidato que indica su acta, no automáticamente al último release.</p>
+<p><strong><code>main</code> es una decisión de publicación separada.</strong> Según <a href="../../alcances.md">alcances</a>, <code>main</code> despliega automáticamente a Railway. El responsable de despliegue debe confirmar el candidato y abrir/revisar un PR <code>dev</code> → <code>main</code>, ejecutar CI y el ensayo de presentación antes de fusionarlo. El merge a <code>dev</code> no prueba despliegue. Después de publicar, consultar <code>/health</code>, confirmar la versión servida cuando esté disponible y repetir el recorrido; no inferir producción a partir de un check o de la versión local.</p>
+<h2 id="como-recuperar-una-integracion-fallida">Cómo recuperar una integración fallida</h2>
+<p>Antes de integrar, registrar el SHA de <code>dev</code>; después, el <strong>commit de merge del PR creado al integrarlo</strong>. Si falla una comprobación, mantener el candidato anterior y corregir mediante un PR pequeño. Para revertir, crear una rama desde el <code>dev</code> actual y un PR de reversión hacia <code>dev</code>; no reescribir la historia compartida.</p>
+<p>Con merges que preservan ascendencia, revertir las dependencias en orden inverso: <strong>#65 antes de #64</strong> si se retiran ambos. #31 puede revertirse por separado. Para un merge commit, el comando de reversión es <code>git revert -m 1 SHA_DEL_MERGE_DEL_PR</code>, sustituyendo el identificador por el registrado. No usar el SHA interno <code>85092ea</code> de sincronización ni <code>6410fcb</code> como si fueran el merge futuro del PR. Revisar el diff de reversión y su CI antes de integrarlo. Si se usó squash, la reversión es la de un commit normal y no lleva <code>-m 1</code>.</p>
+<p>Si el fallo ya llegó a producción, el responsable de despliegue coordina la recuperación del release; revertir <code>dev</code> por sí solo no cambia <code>main</code> ni Railway.</p>
+</main></div>
+<footer><div class="inner">GOLIAT · NASA Space Apps · Documento autónomo, sin recursos externos.<br>Fuente: guia-merge.md · SHA-256: f72db43e5b7fd0b5969a672a83ba7770f315ab0c2fec8fa18c525c1c83e0ea1f<br>Generado de forma reproducible por pipeline/build_presentation_handoff.py. Imprimir permite guardar como PDF.</div></footer></body></html>

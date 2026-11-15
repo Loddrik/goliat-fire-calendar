@@ -1,22 +1,23 @@
 {
-  "recorded_utc": "2026-11-15T14:15:02.666070+00:00",
+  "recorded_utc": "2026-11-15T14:34:03.557214+00:00",
   "scope": "Documentation package; HTML generated from Markdown, software/demo evidence separate from scientific validation",
   "checks": {
-    "renderer_check": "PASS four sources match standalone HTML",
-    "local_markdown_references": 89,
+    "renderer_check": "PASS five sources match standalone HTML",
+    "local_markdown_references": 97,
     "source_maps": "PASS SHA256",
     "council_votes": "PASS six exact vote hashes and reviewed snapshot",
-    "browser_layout": "PASS eight viewport/page combinations",
+    "browser_layout": "PASS ten viewport/page combinations including merge guide",
     "raw_guard": "COMPLETE expected exit0,1071 exact,0 missing/different/additional; earlier INCOMPLETE receipt preserved",
     "independent_final_review": [
       "science: no blockers after final read-only check",
       "release: no blockers after final read-only check; renderer inspected, coordinator executed --check"
     ],
-    "upstream_sync": "dev2fa incorporated locally; method conflict resolved; no PR merged by coordinator"
+    "upstream_sync": "dev2fa incorporated locally; method conflict resolved; no PR merged by coordinator",
+    "merge_guide": "Live open PRs and ancestry inspected; no PR merged or retargeted"
   },
   "files": {
     ".github/workflows/ci.yml": "b11e83c792ff1b1d8d9d6be127574d7fd7d46156fa66fba34486f6bdfc694ee4",
-    "docs/handoff/2026-11-15/README.md": "27187546055fb29b5d177143d42684f9082008b94d06e87f8566094d82c7418b",
+    "docs/handoff/2026-11-15/README.md": "f912039fd5b1588f696d9850b10cdf357b3aa1b7fb3a4c9389c8c9e7ff124028",
     "docs/handoff/2026-11-15/acta-ensayo.md": "1b55d4264cef6c072a8e46cc89e9953e6d91f19c5f3d67804965c82a8cfd9fe8",
     "docs/handoff/2026-11-15/evidence/business-source-map.json": "6008eb47d5365b694191daea47b993b170714132368b5826d5e3892321a1b890",
     "docs/handoff/2026-11-15/evidence/delivery-council/adversary-product.json": "ddf32944eeda24cb021d77be571db02af496ae3ddd9264643fe2337a6e4fffe5",
@@ -37,7 +38,8 @@
     "docs/handoff/2026-11-15/evidence/demo-tome-table.png": "d3a5389b93d0e504751de838dea086436e43c0f7e8b02a7b3b082e4920237c90",
     "docs/handoff/2026-11-15/evidence/demo-tome.csv": "a2a247f8f307954187d4ce357439872e5850197d59096d16e177cbc00da2afa4",
     "docs/handoff/2026-11-15/evidence/demo-tome.png": "3cf1d2cbf395f95db53fdde045cb06766c6b582a4bc78adb8c88e7f03eda9152",
-    "docs/handoff/2026-11-15/evidence/html-browser-check.json": "2e8451b771b183d80fd541deaf698a9026164e094f0e1841ab6e0b952f277ae7",
+    "docs/handoff/2026-11-15/evidence/html-browser-check.json": "127f5752323833b384f895484fbbbe3679c3f48cfc23e3f2f14596045b90b16c",
+    "docs/handoff/2026-11-15/evidence/merge-guide-snapshot.json": "6d538e2cbb2672a1b1980e8a67d53d5db0e1bbd697b31e39b8205dc6c55a49e2",
     "docs/handoff/2026-11-15/evidence/peer-raw-recovery.json": "ff33d3a9ac9459db845656a8f88459b563c3b10880c426a9c8b93c24774dab4f",
     "docs/handoff/2026-11-15/evidence/peer-raw-recovery.md": "cad9fee6c1fa62662fba6a33eac569780c4c531e3f36595402767e5fd7bf913c",
     "docs/handoff/2026-11-15/evidence/peer-verification.json": "3630662620afb9b814ec79d3990aeadac172f8e235eb6814d7be2b96f7789b3f",
@@ -47,15 +49,17 @@
     "docs/handoff/2026-11-15/evidence/repository-at-close.json": "af385374b89a23336946690694cc033fde60e340b9800f14e06689955a7e6b4f",
     "docs/handoff/2026-11-15/evidence/technical-source-map.json": "30f87b15927aaf502037506043f97ca1fd3495f81e913adcf9d8cb200ac68604",
     "docs/handoff/2026-11-15/evidence/verification-snapshot.json": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17",
-    "docs/handoff/2026-11-15/index.html": "a320adcbaf86b8720ce731c3658727ac5ba32ab0eb29dc255e852aba5d5b0366",
-    "docs/handoff/2026-11-15/pendientes-priorizados.html": "0f369a0a52c8f3b63656289019bc28b9b1c6e4f6b892bfc38bdf5b2ef55ba8dc",
+    "docs/handoff/2026-11-15/guia-merge.html": "cb27cb59c810d26a926d78827a3ff7cf010ef411883822083624b336d67d3a7a",
+    "docs/handoff/2026-11-15/guia-merge.md": "f72db43e5b7fd0b5969a672a83ba7770f315ab0c2fec8fa18c525c1c83e0ea1f",
+    "docs/handoff/2026-11-15/index.html": "71017308bf2bd3729e296f0e41b9ea0f68826295c40f5d9e0554b3ef84925652",
+    "docs/handoff/2026-11-15/pendientes-priorizados.html": "74bf3b01cfc15a2ad6ac4a3d8cfba54877130486d90449ccd68b4c3be0bd7dcf",
     "docs/handoff/2026-11-15/pendientes-priorizados.md": "dce9778355db45b261fd112261e0814e86d714da616d57d80371eb2a5824add3",
     "docs/handoff/2026-11-15/requirements-render.txt": "c3a75e999eb351a6333e73d415a379d71840809a6b9ec0c9d310251841aa8d87",
-    "docs/handoff/2026-11-15/resumen-negocio.html": "c28bd7c30939c4278d24ad2d2d66aebbd81b48aac88d3a631b0c9e045a0a9a88",
+    "docs/handoff/2026-11-15/resumen-negocio.html": "ec57041ba6948bade2fe9bfe0f0bced841a72dec61eeb5e0b182e03e73c4cb46",
     "docs/handoff/2026-11-15/resumen-negocio.md": "2a524afd63efd80d7ce8b45f3b635b1ce0b6055031d7c425b3ef421da5c41108",
-    "docs/handoff/2026-11-15/resumen-tecnico.html": "dee6bdf8c8e43414066cbf26cb52185817ae89fff59352519c6d1b75608eaf44",
+    "docs/handoff/2026-11-15/resumen-tecnico.html": "8ea66f1f0bea51bf1f76910e8bfa03a417f1fa01605c4e508df6e6978043884b",
     "docs/handoff/2026-11-15/resumen-tecnico.md": "48cb6d9392adc8144b17bcf74b2272d1dba5768a0dabd34f862baa565314d0b9",
     "docs/method.md": "f7abbb55b2b04fc70beb0364a1ad7083e6aeb26f72c1b750df3c39085736a70a",
-    "pipeline/build_presentation_handoff.py": "b50f42671794f6b66e6aaba9bcaf925ef13aaf2e0c7ef4868b9e2fc0f8ec89fa"
+    "pipeline/build_presentation_handoff.py": "84dc4be775a2148ba0299288b9fc43b61dace86ce10fcf737f33b52060259d49"
   }
 }
