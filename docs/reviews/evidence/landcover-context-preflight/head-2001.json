@@ -1,0 +1,11 @@
+{
+  "url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MCD12Q1.061/MCD12Q1.A2001001.h12v12.061.2022146051151/MCD12Q1.A2001001.h12v12.061.2022146051151.hdf",
+  "method": "HEAD",
+  "authorization_used": false,
+  "redirects_followed": false,
+  "body_bytes_read": 0,
+  "status": 303,
+  "content_length": "0",
+  "content_type": "application/json",
+  "redirect_host": "d1nklfio7vscoe.cloudfront.net"
+}

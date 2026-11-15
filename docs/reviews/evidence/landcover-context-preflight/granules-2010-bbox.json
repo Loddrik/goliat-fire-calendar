@@ -1,0 +1,150 @@
+{
+  "feed": {
+    "updated": "2026-11-15T02:21:02.237Z",
+    "id": "https://cmr.earthdata.nasa.gov:443/search/granules.json?collection_concept_id=C2484079608-LPCLOUD&temporal=2010-01-01T00%3A00%3A00Z%2C2010-12-31T23%3A59%3A59Z&bounding_box=-73.97359%2C-38.492448%2C-70.982979%2C-36.005384&page_size=50",
+    "title": "ECHO granule metadata",
+    "entry": [
+      {
+        "producer_granule_id": "MCD12Q1.A2010001.h12v12.061.2022160091628",
+        "time_start": "2010-01-01T00:00:00.000Z",
+        "cloud_cover": "0.0",
+        "updated": "2022-06-09T15:50:19.089Z",
+        "dataset_id": "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m SIN Grid V061",
+        "data_center": "LPCLOUD",
+        "title": "MCD12Q1.A2010001.h12v12.061.2022160091628",
+        "coordinate_system": "GEODETIC",
+        "day_night_flag": "DAY",
+        "time_end": "2010-12-31T23:59:59.000Z",
+        "id": "G2484150734-LPCLOUD",
+        "original_format": "ECHO10",
+        "granule_size": "13.1273",
+        "browse_flag": true,
+        "polygons": [
+          [
+            "-40.043811 -65.046818 -29.887923 -57.498793 -29.850627 -69.229565 -40 -78.324437 -40.043811 -65.046818"
+          ]
+        ],
+        "collection_concept_id": "C2484079608-LPCLOUD",
+        "online_access_flag": true,
+        "links": [
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "title": "Download MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+            "hreflang": "en-US",
+            "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.hdf"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+            "title": "This link provides direct download access via S3 to the granule",
+            "hreflang": "en-US",
+            "href": "s3://lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.hdf"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "type": "text/html",
+            "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+            "hreflang": "en-US",
+            "href": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+            "title": "OPeNDAP request URL (GET DATA : OPENDAP DATA)",
+            "hreflang": "en-US",
+            "href": "https://opendap.earthdata.nasa.gov/collections/C2484079608-LPCLOUD/granules/MCD12Q1.A2010001.h12v12.061.2022160091628"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "title": "Download MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml (EXTENDED METADATA)",
+            "hreflang": "en-US",
+            "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+            "hreflang": "en-US",
+            "href": "s3://lp-prod-protected/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/MCD12Q1.A2010001.h12v12.061.2022160091628.cmr.xml"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+            "hreflang": "en-US",
+            "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+            "title": "Download BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg",
+            "hreflang": "en-US",
+            "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+            "title": "This link provides direct download access via S3 to the granule",
+            "hreflang": "en-US",
+            "href": "s3://lp-prod-public/MCD12Q1.061/MCD12Q1.A2010001.h12v12.061.2022160091628/BROWSE.MCD12Q1.A2010001.h12v12.061.2022160091628.1.jpg"
+          },
+          {
+            "inherited": true,
+            "length": "4.6MB",
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://search.earthdata.nasa.gov/search/granules?p=C2484079608-LPCLOUD"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://appeears.earthdatacloud.nasa.gov/"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "hreflang": "en-US",
+            "href": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://lpdaac.usgs.gov/documents/1409/MCD12_User_Guide_V61.pdf"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://lpdaac.usgs.gov/documents/86/MCD12_ATBD.pdf"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "hreflang": "en-US",
+            "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/6/MCD12Q1"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php?ProductID=MCD12"
+          },
+          {
+            "inherited": true,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://landweb.modaps.eosdis.nasa.gov"
+          }
+        ]
+      }
+    ]
+  }
+}

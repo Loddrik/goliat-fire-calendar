@@ -1,0 +1,91 @@
+{
+  "geography_primary_candidate": "legacy geometry for strict21 contract alignment; DPA alternative separately frozen before extraction",
+  "DPA_geometry_sha256": "134981d8b085157d7e88ab5fa465d89935554640746b66129d63843a16e70602",
+  "legacy_geometry_sha256": "6bfe6baebd6e56dad166851f4280a80115812d424ce253c3487350fcb5de8375",
+  "DPA54_bbox": [
+    -73.97358999999994,
+    -38.49244739099998,
+    -70.98297989199995,
+    -36.005384084999946
+  ],
+  "projection_sphere_radius_m": 6371007.181,
+  "nominal_resolution_m": 500,
+  "actual_grid_pixel_m": 463.312716525,
+  "pixels_per_tile_axis": 2400,
+  "bbox_corner_modis_tiles": [
+    {
+      "lon": -73.97358999999994,
+      "lat": -38.49244739099998,
+      "x": -6438016.1077027675,
+      "y": -4280169.688350798,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -73.97358999999994,
+      "lat": -36.005384084999946,
+      "x": -6654112.651783078,
+      "y": -4003620.554770899,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -70.98297989199995,
+      "lat": -38.49244739099998,
+      "x": -6177739.486720025,
+      "y": -4280169.688350798,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -70.98297989199995,
+      "lat": -36.005384084999946,
+      "x": -6385099.662739377,
+      "y": -4003620.554770899,
+      "h": 12,
+      "v": 12
+    }
+  ],
+  "conservative_bbox_required_tiles": [
+    "h12v12"
+  ],
+  "classification_raster_opened": false,
+  "landcover_shares_computed": false,
+  "method_note": "In this negative-latitude/longitude interval, projected x extrema lie at rectangle corners, y is monotone; complete DPA bbox lies inside this single tile. No landcover labels or counts used.",
+  "legacy54_bbox": [
+    -73.96144258899994,
+    -38.49246286799996,
+    -70.98327263399995,
+    -36.005559682999944
+  ],
+  "DPA_local_geometry_hash_verified": true,
+  "legacy_bbox_corner_tiles": [
+    {
+      "lon": -73.96144258899994,
+      "lat": -38.49246286799996,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -73.96144258899994,
+      "lat": -36.005559682999944,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -70.98327263399995,
+      "lat": -38.49246286799996,
+      "h": 12,
+      "v": 12
+    },
+    {
+      "lon": -70.98327263399995,
+      "lat": -36.005559682999944,
+      "h": 12,
+      "v": 12
+    }
+  ],
+  "legacy_required_tiles": [
+    "h12v12"
+  ]
+}

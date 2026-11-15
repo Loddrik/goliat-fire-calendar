@@ -1,0 +1,5 @@
+{
+  "collection-umm": "https://cmr.earthdata.nasa.gov/search/concepts/C2484079608-LPCLOUD.umm_json",
+  "granules-2001-bbox": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C2484079608-LPCLOUD&temporal=2001-01-01T00%3A00%3A00Z%2C2001-12-31T23%3A59%3A59Z&bounding_box=-73.97359%2C-38.492448%2C-70.982979%2C-36.005384&page_size=50",
+  "granules-2010-bbox": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C2484079608-LPCLOUD&temporal=2010-01-01T00%3A00%3A00Z%2C2010-12-31T23%3A59%3A59Z&bounding_box=-73.97359%2C-38.492448%2C-70.982979%2C-36.005384&page_size=50"
+}

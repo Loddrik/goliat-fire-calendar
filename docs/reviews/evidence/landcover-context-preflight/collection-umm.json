@@ -1,0 +1,537 @@
+{
+  "CollectionCitations": [
+    {
+      "Title": "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m SIN Grid V061\r\n",
+      "Creator": "Mark Friedl, Damien Sulla-Menashe\r\n",
+      "ReleaseDate": "2022-08-05T00:00:00.000Z",
+      "ReleasePlace": "Sioux Falls, South Dakota, USA",
+      "Publisher": "NASA Land Processes Distributed Active Archive Center",
+      "OnlineResource": {
+        "Name": "DOI Landing Page",
+        "Linkage": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+      }
+    }
+  ],
+  "LocationKeywords": [
+    {
+      "Category": "GEOGRAPHIC REGION",
+      "Type": "GLOBAL"
+    }
+  ],
+  "MetadataDates": [
+    {
+      "Type": "CREATE",
+      "Date": "2022-09-26T16:29:00.000Z"
+    },
+    {
+      "Type": "UPDATE",
+      "Date": "2026-01-14T00:00:00.000Z"
+    }
+  ],
+  "DirectDistributionInformation": {
+    "Region": "us-west-2",
+    "S3BucketAndObjectPrefixNames": [
+      "s3://lp-prod-protected/MCD12Q1.061",
+      "s3://lp-prod-public/MCD12Q1.061"
+    ],
+    "S3CredentialsAPIEndpoint": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials",
+    "S3CredentialsAPIDocumentationURL": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
+  },
+  "VersionDescription": "The following changes and improvements were implemented for inputs to MODIS Version 6.1 Land Cover data products: (1) Version 6.1 Level-1B (L1B) products have been improved by undergoing various calibration changes that include: changes to the response-versus-scan angle (RVS) approach that affects reflectance bands for Aqua and Terra MODIS, corrections to adjust for the optical crosstalk in Terra MODIS infrared (IR) bands, and corrections to the Terra MODIS forward look-up table (LUT) update for the period 2012 \u2013 2017, (2) A polarization correction has been applied to the L1B Reflective Solar Bands (RSB), and (3) A minor correction to the UMD Land Cover classification.",
+  "ShortName": "MCD12Q1",
+  "Abstract": "The Terra and Aqua combined Moderate Resolution Imaging Spectroradiometer (MODIS) Land Cover Type (MCD12Q1) Version 6.1 data product provides global land cover types at yearly intervals. The MCD12Q1 Version 6.1 data product is derived using supervised classifications of MODIS Terra and Aqua reflectance data. Land cover types are derived from the International Geosphere-Biosphere Programme (IGBP), University of Maryland (UMD), Leaf Area Index (LAI), BIOME-Biogeochemical Cycles (BGC), and Plant Functional Types (PFT) classification schemes. The supervised classifications then undergo additional post-processing that incorporate prior knowledge and ancillary information to further refine specific classes. Additional land cover property assessment layers are provided by the Food and Agriculture Organization (FAO) Land Cover Classification System (LCCS) for land cover, land use, and surface hydrology.\n \nLayers for Land Cover Type 1-5, Land Cover Property 1-3, Land Cover Property Assessment 1-3, Land Cover Quality Control (QC), and a Land Water Mask are provided in each MCD12Q1 Version 6.1 Hierarchical Data Format 4 (HDF4) file.\n\nKnown Issues\n\n* The \"units\" field is missing in the metadata, however, this information can be found in Table 1 of the User Guide.\n* The MCD12Q1.061 land cover data product is derived using supervised classification of MODIS Terra and Aqua reflectance data. The classification algorithm uses labeled training samples selected globally to represent land cover categories derived under the IGBP, UMD, LAI, BIOME-BGC, and PFT classification schemes. These training samples were selected to represent land classes, best suited over a certain period. However, due to lack of funding, the science team was not able to keep the training database updated over the course of the years, and some of these training sites could well have undergone changes in their land cover characteristics, especially after 2021. Hence users are urged to maintain caution while using the V6.1/MCD12Q1 land cover layers for 2021 and beyond. More information on this known issue can be found in the [Land Data Products Operational Products (LDOPE) Quality Assessment](https://landweb.modaps.eosdis.nasa.gov/displayissue?id=781).\n* Known issues are described in Section 2.2 of the User Guide.\n* For complete information about known issues please refer to the [MODIS/VIIRS Land Quality Assessment website](https://landweb.modaps.eosdis.nasa.gov/knownissue?sensor=MODIS&sat=TerraAqua&as=61).",
+  "Purpose": "Science Research",
+  "TilingIdentificationSystems": [
+    {
+      "Coordinate1": {
+        "MinimumValue": 0,
+        "MaximumValue": 35
+      },
+      "Coordinate2": {
+        "MinimumValue": 0,
+        "MaximumValue": 17
+      },
+      "TilingIdentificationSystemName": "MODIS Tile SIN"
+    }
+  ],
+  "DOI": {
+    "DOI": "10.5067/MODIS/MCD12Q1.061",
+    "Authority": "https://doi.org"
+  },
+  "RelatedUrls": [
+    {
+      "Description": "Earthdata Search allows users to search, discover, visualize, refine, and access NASA Earth Observation data.",
+      "URLContentType": "DistributionURL",
+      "Type": "GET DATA",
+      "URL": "https://search.earthdata.nasa.gov/search/granules?p=C2484079608-LPCLOUD",
+      "GetData": {
+        "Format": "HDF-EOS2",
+        "MimeType": "application/x-hdf",
+        "Size": 4.6,
+        "Unit": "MB"
+      },
+      "Subtype": "Earthdata Search"
+    },
+    {
+      "Description": "The Application for Extracting and Exploring Analysis Ready Samples (AppEEARS) offers a simple and efficient way to perform data access and transformation processes.",
+      "URLContentType": "DistributionURL",
+      "Type": "GET DATA",
+      "URL": "https://appeears.earthdatacloud.nasa.gov/",
+      "Subtype": "APPEEARS"
+    },
+    {
+      "Description": "The LP DAAC product page provides information on Science Data Set layers and links for user guides, ATBDs, data access, tools, customer support, etc.",
+      "URLContentType": "CollectionURL",
+      "Type": "DATA SET LANDING PAGE",
+      "URL": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+    },
+    {
+      "Description": "The technical information in the User's Guide enables users to interpret and use the data products.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "USER'S GUIDE",
+      "URL": "https://lpdaac.usgs.gov/documents/1409/MCD12_User_Guide_V61.pdf"
+    },
+    {
+      "Description": "The ATBD provides physical theory and mathematical procedures for the calculations used to produce the data products.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "ALGORITHM THEORETICAL BASIS DOCUMENT (ATBD)",
+      "URL": "https://lpdaac.usgs.gov/documents/86/MCD12_ATBD.pdf"
+    },
+    {
+      "Description": "The LP DAAC website provides detailed information on discovery, distribution, access, and support of land data products.",
+      "URLContentType": "CollectionURL",
+      "Type": "PROJECT HOME PAGE",
+      "URL": "https://www.earthdata.nasa.gov/centers/lp-daac"
+    },
+    {
+      "Description": "The File Specification provides a description of the product file including Scientific Data Sets and their attributes.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "GENERAL DOCUMENTATION",
+      "URL": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/6/MCD12Q1"
+    },
+    {
+      "Description": "Validation at stage 2 has been achieved for the MODIS Land Cover products.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "SCIENCE DATA PRODUCT VALIDATION",
+      "URL": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+    },
+    {
+      "Description": "Further details regarding MODIS land product validation for the MCD12 data products are available from the MODIS Land Team Validation site.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "SCIENCE DATA PRODUCT VALIDATION",
+      "URL": "https://modis-land.gsfc.nasa.gov/ValStatus.php?ProductID=MCD12"
+    },
+    {
+      "Description": "Browse image for Earthdata Search",
+      "URLContentType": "VisualizationURL",
+      "Type": "GET RELATED VISUALIZATION",
+      "URL": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MCD12Q1.061/MCD12Q1.A2021001.h13v09.061.2022216034955/BROWSE.MCD12Q1.A2021001.h13v09.061.2022216034955.1.jpg",
+      "Subtype": "Thumbnail Image"
+    },
+    {
+      "Description": "The LDOPE Land Product Quality Assessment website provides known issues, maneuvers, and product quality of the land products.",
+      "URLContentType": "PublicationURL",
+      "Type": "VIEW RELATED INFORMATION",
+      "Subtype": "PRODUCT QUALITY ASSESSMENT",
+      "URL": "https://landweb.modaps.eosdis.nasa.gov"
+    },
+    {
+      "URL": "https://worldview.earthdata.nasa.gov/images/layers/previews/geographic/MODIS_Combined_L3_IGBP_Land_Cover_Type_Annual.jpg",
+      "URLContentType": "VisualizationURL",
+      "Type": "GET RELATED VISUALIZATION",
+      "Subtype": "WORLDVIEW",
+      "Description": "The URL for viewing a Worldview visualization. The Worldview tool from NASA's Earth Observing System Data and Information System (EOSDIS) provides the capability to interactively browse over 600 global, full-resolution satellite imagery layers and then download the underlying data."
+    }
+  ],
+  "DataDates": [
+    {
+      "Date": "2022-08-05T00:00:00.000Z",
+      "Type": "CREATE"
+    },
+    {
+      "Date": "2022-08-05T00:00:00.000Z",
+      "Type": "UPDATE"
+    }
+  ],
+  "ContactPersons": [
+    {
+      "Roles": [
+        "Investigator"
+      ],
+      "ContactInformation": {
+        "ContactMechanisms": [
+          {
+            "Type": "Email",
+            "Value": "dsm@bu.edu"
+          }
+        ]
+      },
+      "FirstName": "Damien",
+      "LastName": "Sulla-Menashe"
+    },
+    {
+      "Roles": [
+        "Investigator"
+      ],
+      "ContactInformation": {
+        "ContactMechanisms": [
+          {
+            "Type": "Email",
+            "Value": "friedl@bu.edu"
+          }
+        ]
+      },
+      "FirstName": "Mark",
+      "LastName": "Friedl"
+    }
+  ],
+  "AccessConstraints": {
+    "Description": "None"
+  },
+  "SpatialExtent": {
+    "HorizontalSpatialDomain": {
+      "Geometry": {
+        "BoundingRectangles": [
+          {
+            "NorthBoundingCoordinate": 90,
+            "WestBoundingCoordinate": -180,
+            "EastBoundingCoordinate": 180,
+            "SouthBoundingCoordinate": -90
+          }
+        ],
+        "CoordinateSystem": "CARTESIAN"
+      },
+      "ResolutionAndCoordinateSystem": {
+        "HorizontalDataResolution": {
+          "GenericResolutions": [
+            {
+              "XDimension": 500,
+              "YDimension": 500,
+              "Unit": "Meters"
+            }
+          ]
+        },
+        "Description": "Sinusoidal"
+      },
+      "ZoneIdentifier": "MODIS Sinusoidal Tiling System"
+    },
+    "SpatialCoverageType": "HORIZONTAL",
+    "GranuleSpatialRepresentation": "GEODETIC"
+  },
+  "FileNamingConvention": {
+    "Convention": "MCD12Q1.A2024001.h21v07.061.2025205222320.hdf",
+    "Description": "The file name begins with the Product Short Name (MCD12Q1) followed by the Julian Date of Acquisition formatted as AYYYYDDD (A2024001), the Tile Identifier which is horizontal tile and vertical tile provided as hXXvYY (h21v07), the Version of the data collection (061), the Julian Date and Time of Production designated as YYYYDDDHHMMSS (2025205222320), and the Data Format (hdf)."
+  },
+  "AdditionalAttributes": [
+    {
+      "Name": "HORIZONTALTILENUMBER",
+      "Description": "Horizontal tile number of a grid, which increases from left to right.",
+      "DataType": "INT"
+    },
+    {
+      "Name": "QAPERCENTGOODQUALITY",
+      "Description": "Percent of pixels with good quality",
+      "DataType": "INT"
+    },
+    {
+      "Name": "QAPERCENTNOTPRODUCEDCLOUD",
+      "Description": "Percent of pixels under cloud",
+      "DataType": "INT"
+    },
+    {
+      "Name": "QAPERCENTNOTPRODUCEDOTHER",
+      "Description": "Percent of pixels not produced due to some reason other than cloud",
+      "DataType": "INT"
+    },
+    {
+      "Name": "QAPERCENTOTHERQUALITY",
+      "Description": "Percent of pixels with not so good quality",
+      "DataType": "INT"
+    },
+    {
+      "Name": "VERTICALTILENUMBER",
+      "Description": "Vertical tile number of a grid, which increases from top to bottom.",
+      "DataType": "INT"
+    },
+    {
+      "Name": "TileID",
+      "Description": "MODIS Land tile identification number which represents a geographical area on the surface of the Earth bounded by latitude and longitude coordinates.",
+      "DataType": "INT"
+    },
+    {
+      "Name": "PROCESSVERSION",
+      "Description": "Version of the process software that generated the product.",
+      "DataType": "STRING"
+    },
+    {
+      "Name": "identifier_product_doi",
+      "Description": "Digital object identifier that uniquely identifies this data product",
+      "Value": "10.5067/MODIS/MCD12Q1.061",
+      "DataType": "STRING"
+    },
+    {
+      "Name": "identifier_product_doi_authority",
+      "Description": "URL of the digital object identifier resolving authority",
+      "Value": "https://doi.org",
+      "DataType": "STRING"
+    }
+  ],
+  "ArchiveAndDistributionInformation": {
+    "FileArchiveInformation": [
+      {
+        "Format": "HDF-EOS2",
+        "FormatType": "Native",
+        "FormatDescription": "Hierarchical Data Format - Earth Observing System Version 2",
+        "AverageFileSize": 4.6,
+        "AverageFileSizeUnit": "MB",
+        "TotalCollectionFileSizeBeginDate": "2001-01-01T00:00:00.000Z"
+      }
+    ],
+    "FileDistributionInformation": [
+      {
+        "Format": "HDF-EOS2",
+        "FormatType": "Native",
+        "FormatDescription": "Hierarchical Data Format - Earth Observing System Version 2",
+        "Media": [
+          "HTTPS",
+          "Earthdata Cloud"
+        ],
+        "AverageFileSize": 4.6,
+        "AverageFileSizeUnit": "MB",
+        "TotalCollectionFileSizeBeginDate": "2001-01-01T00:00:00.000Z"
+      }
+    ]
+  },
+  "ScienceKeywords": [
+    {
+      "Category": "EARTH SCIENCE",
+      "Topic": "LAND SURFACE",
+      "Term": "LAND USE/LAND COVER",
+      "VariableLevel1": "LAND USE/LAND COVER CLASSIFICATION"
+    }
+  ],
+  "EntryTitle": "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m SIN Grid V061",
+  "CollectionProgress": "ACTIVE",
+  "StandardProduct": true,
+  "CollectionDataType": "SCIENCE_QUALITY",
+  "TemporalKeywords": [
+    "Annual"
+  ],
+  "AncillaryKeywords": [
+    "National Geospatial Data Asset",
+    "NGDA"
+  ],
+  "ProcessingLevel": {
+    "ProcessingLevelDescription": "Level 3 data products are variables mapped on uniform space-time grid scales, usually with some completeness and consistency.",
+    "Id": "3"
+  },
+  "Platforms": [
+    {
+      "Characteristics": [
+        {
+          "Name": "EquatorCrossingTime",
+          "Description": "Local time of the equator crossing and direction (ascending or descending)",
+          "Value": "10:30, descending",
+          "Unit": "Local Mean Time",
+          "DataType": "STRING"
+        }
+      ],
+      "Instruments": [
+        {
+          "ShortName": "MODIS",
+          "LongName": "Moderate-Resolution Imaging Spectroradiometer",
+          "Technique": "Imaging Spectroradiometry"
+        }
+      ],
+      "Type": "Earth Observation Satellites",
+      "ShortName": "Terra",
+      "LongName": "Earth Observing System, Terra (AM-1)"
+    },
+    {
+      "Characteristics": [
+        {
+          "Name": "EquatorCrossingTime",
+          "Description": "Local time of the equator crossing and direction (ascending or descending)",
+          "Value": "13:30, ascending",
+          "Unit": "Local Mean Time",
+          "DataType": "STRING"
+        }
+      ],
+      "Instruments": [
+        {
+          "ShortName": "MODIS",
+          "LongName": "Moderate-Resolution Imaging Spectroradiometer",
+          "Technique": "Imaging Spectroradiometry"
+        }
+      ],
+      "Type": "Earth Observation Satellites",
+      "ShortName": "Aqua",
+      "LongName": "Earth Observing System, Aqua"
+    }
+  ],
+  "Projects": [
+    {
+      "ShortName": "Terra",
+      "LongName": "Earth Observing System (EOS), Terra"
+    },
+    {
+      "ShortName": "Aqua",
+      "LongName": "Earth Observing System (EOS), Aqua"
+    }
+  ],
+  "Version": "061",
+  "TemporalExtents": [
+    {
+      "RangeDateTimes": [
+        {
+          "BeginningDateTime": "2001-01-01T00:00:00.000Z"
+        }
+      ],
+      "EndsAtPresentFlag": true,
+      "PrecisionOfSeconds": 1,
+      "TemporalResolution": {
+        "Value": 1,
+        "Unit": "Year"
+      }
+    }
+  ],
+  "DataCenters": [
+    {
+      "Roles": [
+        "ARCHIVER",
+        "DISTRIBUTOR"
+      ],
+      "ContactGroups": [
+        {
+          "Roles": [
+            "User Services"
+          ],
+          "ContactInformation": {
+            "RelatedUrls": [
+              {
+                "Description": "The LP DAAC website provides detailed information on discovery, distribution, access, and support of land data products.",
+                "URLContentType": "DataContactURL",
+                "Type": "HOME PAGE",
+                "URL": "https://www.earthdata.nasa.gov/centers/lp-daac/contact"
+              }
+            ],
+            "ContactMechanisms": [
+              {
+                "Type": "Telephone",
+                "Value": "605-594-6116"
+              },
+              {
+                "Type": "U.S. toll free",
+                "Value": "866-573-3222"
+              },
+              {
+                "Type": "Email",
+                "Value": "lpdaac@usgs.gov"
+              }
+            ],
+            "Addresses": [
+              {
+                "StreetAddresses": [
+                  "U.S. Geological Survey, Earth Resources Observation and Science (EROS) Center"
+                ],
+                "Country": "United States",
+                "City": "Sioux Falls",
+                "StateProvince": "South Dakota",
+                "PostalCode": "57198"
+              }
+            ],
+            "ServiceHours": "M-F, 8 a.m. to 4 p.m. Central Time",
+            "ContactInstruction": "LP DAAC User Services is the point of contact for answering questions concerning data products, data access, and online applications."
+          },
+          "GroupName": "User Services"
+        }
+      ],
+      "ContactInformation": {
+        "RelatedUrls": [
+          {
+            "Description": "The LP DAAC website provides detailed information on discovery, distribution, access, and support of land data products.",
+            "URLContentType": "DataCenterURL",
+            "Type": "HOME PAGE",
+            "URL": "https://www.earthdata.nasa.gov/centers/lp-daac"
+          }
+        ],
+        "ContactMechanisms": [
+          {
+            "Type": "Telephone",
+            "Value": "605-594-6116"
+          },
+          {
+            "Type": "U.S. toll free",
+            "Value": "866-573-3222"
+          },
+          {
+            "Type": "Email",
+            "Value": "lpdaac@usgs.gov"
+          }
+        ],
+        "Addresses": [
+          {
+            "StreetAddresses": [
+              "U.S. Geological Survey, Earth Resources Observation and Science (EROS) Center"
+            ],
+            "Country": "United States",
+            "City": "Sioux Falls",
+            "PostalCode": "57198"
+          }
+        ],
+        "ServiceHours": "M-F, 8 a.m. to 4 p.m. Central Time",
+        "ContactInstruction": "LP DAAC User Services is the point of contact for answering questions concerning data products, data access, and online applications."
+      },
+      "ShortName": "LP DAAC",
+      "LongName": "Land Processes Distributed Active Archive Center"
+    },
+    {
+      "Roles": [
+        "PROCESSOR"
+      ],
+      "ContactInformation": {
+        "RelatedUrls": [
+          {
+            "Description": "MODIS Adaptive Processing System (MODAPS) Services website.",
+            "URLContentType": "DataCenterURL",
+            "Type": "HOME PAGE",
+            "URL": "https://modaps.modaps.eosdis.nasa.gov/"
+          }
+        ],
+        "ContactMechanisms": [
+          {
+            "Type": "Telephone",
+            "Value": "301-614-5515"
+          },
+          {
+            "Type": "Email",
+            "Value": "Edward.J.Masuoka@nasa.gov"
+          }
+        ],
+        "Addresses": [
+          {
+            "StreetAddresses": [
+              "NASA/GSFC Code 922"
+            ],
+            "Country": "United States",
+            "City": "GREENBELT",
+            "PostalCode": "20771"
+          }
+        ],
+        "ContactInstruction": "Contact for data content concerns"
+      },
+      "ShortName": "NASA/GSFC/SED/ESD/TISL/MODAPS",
+      "LongName": "MODIS Adaptive Processing System, Terrestrial Information Systems Laboratory, Earth Sciences Division, Science and Exploration Directorate, Goddard Space Flight Center, NASA"
+    }
+  ],
+  "MetadataSpecification": {
+    "URL": "https://cdn.earthdata.nasa.gov/umm/collection/v1.18.6",
+    "Name": "UMM-C",
+    "Version": "1.18.6"
+  }
+}
