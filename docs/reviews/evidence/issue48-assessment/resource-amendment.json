@@ -1,0 +1,22 @@
+{
+  "authorized_utc": "2026-11-15T10:33:26.223649+00:00",
+  "reason": "The first external time-l wrapper failed in sandbox after producer execution and returned no RSS. Metrics have not been interpreted by producer/reviewer/root. Repair concerns instrumentation, not an observed scientific outcome.",
+  "original_protocol_sha256": "41734018c7a516444053c7042d08b4d813c87e01cb1f24d3cb6e998ad91d0646",
+  "original_code_sha256": "9cf6d85d7ff73b872c7143aae2ac1708d2f9aae3cde46a318d08580b9bfd52f6",
+  "attempt01_manifest_sha256": "40f2bed44132991636d0483d8dbafb9eb8045a4a8be81f026d69a07d51cf1e8b",
+  "attempt01_remains_RSS_unknown": true,
+  "attempt01_originals_must_remain_unchanged": true,
+  "authorized_action": "One identical aggregation replay under new child-resource launcher, with a separate output directory and frozen wrapper. No old driver/source/protocol rewrite; only explicit output-root override.",
+  "new_launcher": "New parent subprocess captures resource.getrusage(RUSAGE_CHILDREN).ru_maxrss from its sole aggregation child; Darwin units bytes. No sysctl dependency.",
+  "attempt02_directory": "data/processed/season_total_audit/attempt-02",
+  "all_original_inputs_and_code_must_match_original_freeze": true,
+  "RSS_cap_bytes": 1073741824,
+  "total_all_attempt_output_cap_bytes": 5242880,
+  "cap_unchanged_utc": "2026-11-15T10:43:00Z",
+  "fits": 0,
+  "downloads": 0,
+  "model_selection_or_parameter_change_allowed": false,
+  "numerical_csvs_must_equal_attempt01": true,
+  "no_third_attempt_if_RSS_unknown": true,
+  "scope": "Explicit prospective instrumentation amendment; does not retroactively certify original producer RSS."
+}
