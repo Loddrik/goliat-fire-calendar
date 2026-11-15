@@ -1,0 +1,51 @@
+{
+  "retrieved_utc": "2026-11-15T01:26:39.181654+00:00",
+  "purpose": "documentation only, no granules, no credentials, no G1 execution",
+  "sources": [
+    {
+      "title": "MODIS C6/C6.1 Active Fire Product User Guide v1.0 May2021",
+      "url": "https://modis-fire.umd.edu/files/MODIS_C6_C6.1_Fire_User_Guide_1.0.pdf",
+      "transport": "anonymous HTTPS curl TLS validated",
+      "pdf_tracked": false,
+      "bytes": 1459584,
+      "sha256": "2124ac650d19e229009bb8f7b1334d21ea95f81f329621ace7d7284a960e4520",
+      "pdf_header_verified": true
+    },
+    {
+      "title": "VIIRS375m Collection2 User Guide v1.0 May2024",
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2024-07/VIIRS_C2_AF-375m_User_Guide_1.0.pdf",
+      "transport": "anonymous HTTPS curl TLS validated",
+      "pdf_tracked": false,
+      "bytes": 1598295,
+      "sha256": "12d288191b6ad19a6f8b5f948b4412e4d95dbef9b8404404c7e8e311de7ad663",
+      "pdf_header_verified": true
+    },
+    {
+      "title": "NASA VIIRS L1B User Guide August2021, official C2 product-page link",
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/api/v2/content/archives/Document%20Archive/Science%20Data%20Product%20Documentation/NASA_VIIRS_L1B_UG_August_2021.pdf",
+      "transport": "anonymous HTTPS curl TLS validated",
+      "pdf_tracked": false,
+      "bytes": 3448390,
+      "sha256": "75063acb9d8b1cdc1e1070ee309fd071296be93d17cdf269547824982d49d82a",
+      "pdf_header_verified": true,
+      "readable_pdf_verified": false,
+      "status": "partial_or_invalid_transfer; pdftotext could not reconstruct xref; not used as evidence"
+    },
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MOD03",
+      "scope": "route61, internally document6.0.3 June2012; not silently certified schema061"
+    },
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/VIIRS/1/VNP03IMG.fs",
+      "scope": "Collection1 historical only; C2 quality meanings corroborated by acquired file attributes"
+    },
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/VNP03IMG",
+      "scope": "DOI002 collection2 productpage"
+    },
+    {
+      "url": "https://atmosphere-imager.gsfc.nasa.gov/issues/cloud",
+      "scope": "MYD03 EV start TAI vs filename UTC"
+    }
+  ]
+}
