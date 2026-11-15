@@ -7,7 +7,7 @@ maplibregl.setWorkerUrl(maplibreWorkerUrl);
 import type { Lang } from "./i18n";
 import type { RegionDoc } from "./types";
 import { seasonLabel } from "./types";
-import { BLUES, MAP_BREAKS, MAP_LABELS, UI, dmy } from "./ui";
+import { BLUES, MAP_BREAKS, MAP_LABELS, MAP_UNAVAILABLE, UI, dmy } from "./ui";
 
 const STYLE = "https://tiles.openfreemap.org/styles/positron";
 const CELL = 0.01;
@@ -24,10 +24,9 @@ function webglAvailable(): boolean {
     return false;
   }
 }
-export const MAP_UNAVAILABLE = {
-  es: "El mapa no se puede mostrar en este navegador (le falta aceleración gráfica). La ficha de la comuna, la tabla y las descargas funcionan igual.",
-  en: "The map cannot be shown in this browser (graphics acceleration is missing). The commune card, table and downloads still work.",
-};
+
+
+const TWO_FINGERS = { es: "Usa dos dedos para mover el mapa", en: "Use two fingers to move the map" };
 
 type Ring = [number, number][];
 type ComunaFeature = { type: "Feature"; properties: { cut: string; comuna: string; region: string };
@@ -82,7 +81,11 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     if (failed || !el.current || map.current || !data) return;
     let m: maplibregl.Map;
     try {
-      m = new maplibregl.Map({ container: el.current, style: STYLE, center: [-72.4, -37.1], zoom: 6.4, minZoom: 5.5, maxZoom: MAX_ZOOM, attributionControl: { compact: true }, canvasContextAttributes: { preserveDrawingBuffer: true } });
+      // En pantallas táctiles el mapa no se adueña del scroll: un dedo desliza la página y dos mueven el mapa (issue #42).
+      // Tocar una comuna o un cuadro sigue funcionando con un dedo.
+      const touch = window.matchMedia("(pointer: coarse)").matches;
+      m = new maplibregl.Map({ container: el.current, style: STYLE, center: [-72.4, -37.1], zoom: 6.4, minZoom: 5.5, maxZoom: MAX_ZOOM, attributionControl: { compact: true }, canvasContextAttributes: { preserveDrawingBuffer: true },
+        cooperativeGestures: touch, locale: { "CooperativeGesturesHandler.MobileHelpText": TWO_FINGERS[lang] } });
     } catch {
       setFailed(true);
       return;
@@ -120,6 +123,12 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     return () => { m.remove(); map.current = null; setReady(false); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, failed]);
+
+  // El aviso de "dos dedos" se crea con el idioma inicial; si se cambia de idioma, se actualiza el texto.
+  useEffect(() => {
+    const msg = el.current?.querySelector(".maplibregl-mobile-message");
+    if (msg) msg.textContent = TWO_FINGERS[lang];
+  }, [lang, ready]);
 
   // Referencias vivas para los manejadores registrados una sola vez.
   const onPickRef = useRef(onPick);
@@ -160,7 +169,9 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang, 
     // La card tapa el lado izquierdo del mapa y cambia de ancho al abrir la serie: el zoom deja la comuna en la parte visible.
     const panel = document.querySelector(".panel");
     const left = window.innerWidth > 860 && panel && el.current ? Math.max(20, Math.min(el.current.clientWidth - 260, panel.getBoundingClientRect().right - el.current.getBoundingClientRect().left + 24)) : 20;
-    if (f) m.fitBounds(bbox(f), { padding: { top: 50, bottom: 120, left, right: 60 }, duration: 700, maxZoom: 11 });
+    // En celular el aviso, las temporadas y la leyenda van fuera del mapa (debajo), así que el margen es menor.
+    const desk = window.innerWidth > 860;
+    if (f) m.fitBounds(bbox(f), { padding: desk ? { top: 50, bottom: 120, left, right: 60 } : { top: 24, bottom: 24, left: 20, right: 48 }, duration: 700, maxZoom: 11 });
   }, [selected, ready, wide]);
   useEffect(() => {
     const m = map.current;

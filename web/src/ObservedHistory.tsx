@@ -136,7 +136,7 @@ export function ObservedHistory({ cut, lang }: { cut: string; lang: Lang }) {
     </section>
     {valid && <section className="card"><h2>{t.calendar}</h2>
       <p className="help">{t.notes[0]} {t.notes[1]}</p>
-      <div className="calendar"><table data-testid="observed-calendar"><caption className="sr">{doc.commune.name} · {source.platform} · {range.start} → {range.end} · {t.cells}</caption>
+      <div className="calendar"><p className="swipe-hint no-print">{lang === 'es' ? 'Desliza la tabla hacia el lado para ver todos los meses →' : 'Swipe the table sideways to see every month →'}</p><table data-testid="observed-calendar"><caption className="sr">{doc.commune.name} · {source.platform} · {range.start} → {range.end} · {t.cells}</caption>
         <thead><tr><th>{t.season}</th>{MONTHS_SEASON.map(m => <th key={m} scope="col">{months[lang][m - 1]}</th>)}</tr></thead>
         <tbody>{seasons.map(s => <tr key={s}><th scope="row">{seasonLabel(s)}</th>{MONTHS_SEASON.map(m => {
           const month = `${m >= 7 ? s : s + 1}-${String(m).padStart(2, '0')}`;

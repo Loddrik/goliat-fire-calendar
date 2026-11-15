@@ -6,6 +6,12 @@ import { seasonLabel } from "./types";
 const prevSeasons = (n: number) => `2012-13 a ${seasonLabel(2011 + n)}`;
 const prevSeasonsEn = (n: number) => `2012-13 to ${seasonLabel(2011 + n)}`;
 
+// Sin WebGL el mapa no se muestra; la ficha, la tabla y las descargas siguen.
+export const MAP_UNAVAILABLE = {
+  es: "El mapa no se puede mostrar en este navegador (le falta aceleración gráfica). La ficha de la comuna, la tabla y las descargas funcionan igual.",
+  en: "The map cannot be shown in this browser (graphics acceleration is missing). The commune card, table and downloads still work.",
+};
+
 // Una sola rampa en toda la página (brief §11): 5 azules, tramos fijos iguales en las 54 comunas.
 export const BLUES = ["#C6DBEF", "#9ECAE1", "#6BAED6", "#3182BD", "#08519C"];
 // Calendario: celdas-día por mes.

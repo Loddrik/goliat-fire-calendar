@@ -22,6 +22,7 @@ export function Calendar({ series, totals, bandMae, lang, cutoff, compact = fals
   const byKey = new Map(series.map((r) => [`${r.season}-${r.m}`, r]));
   return (
     <div className="calendar">
+      <p className="swipe-hint no-print">{lang === "es" ? "Desliza la tabla hacia el lado para ver mayo, junio y el total →" : "Swipe the table sideways to see May, June and the total →"}</p>
       <table aria-label={t.calendar}>
         <thead>
           <tr>

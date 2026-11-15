@@ -1,15 +1,17 @@
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState } from "react";
 import type { ComunaDoc, DerivedDoc, IndexDoc, RegionDoc } from "./types";
 import { dict, type Lang } from "./i18n";
 import { Calendar } from "./Calendar";
-import { ExploreMap, MAP_UNAVAILABLE } from "./ExploreMap";
 import { MapBoundary } from "./MapBoundary";
 import { CommunePanel } from "./CommunePanel";
 import { ObservedHistory } from "./ObservedHistory";
 import { GoliatLogo } from "./brand/GoliatLogo";
-import { UI } from "./ui";
+import { MAP_UNAVAILABLE, UI } from "./ui";
 import { download, seriesCsv } from "./csv";
 import "./App.css";
+
+// MapLibre pesa ~1 MB: se carga aparte para que en el celular la ficha de la comuna aparezca antes que el mapa (issue #42).
+const ExploreMap = lazy(() => import("./ExploreMap").then((m) => ({ default: m.ExploreMap })));
 
 const params = () => new URLSearchParams(location.search);
 const validCut = (c: string | null) => (c && /^\d{5}$/.test(c) ? c : null);
@@ -78,6 +80,11 @@ export default function App() {
     return (index?.comunas ?? []).filter((c) => fold(c.comuna).includes(n) || c.cut.startsWith(n)).slice(0, 8);
   }, [index, q]);
   const pick = (c: string) => { setCut(c); setQ(""); setSearching(false); };
+  // En celular la serie queda debajo del mapa: al abrirla, la página baja hasta la tabla.
+  const openTable = () => {
+    setTableOpen(true);
+    if (window.innerWidth <= 860) requestAnimationFrame(() => document.getElementById("serie")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  };
   const close = () => { setCut(null); setTableOpen(false); };
   const wide = !!current && tableOpen;
 
@@ -98,12 +105,14 @@ export default function App() {
     </div>
   );
 
+  // Solo cambia el separador decimal según el idioma; las cifras van tal cual vienen del JSON (sin redondear).
+  const dec = (v: number) => v.toLocaleString(lang === "es" ? "es-CL" : "en-US", { maximumFractionDigits: 6 });
   const method = current && (
     <div className="method">
       <ul className="gates">
-        <li>{lang === "es" ? "Validación cruzada 2012–2019, error absoluto medio mensual" : "Cross-validation 2012–2019, monthly mean absolute error"}: Aqua {lang === "es" ? "crudo" : "raw"} <b>{current.gates.loso_mae_raw}</b> · Aqua × {current.r_const} <b>{current.gates.loso_mae_const}</b> · {lang === "es" ? "climatología" : "climatology"} <b>{current.gates.loso_mae_clim}</b></li>
+        <li>{lang === "es" ? "Validación cruzada 2012–2019, error absoluto medio mensual" : "Cross-validation 2012–2019, monthly mean absolute error"}: Aqua {lang === "es" ? "crudo" : "raw"} <b>{dec(current.gates.loso_mae_raw)}</b> · Aqua × {dec(current.r_const)} <b>{dec(current.gates.loso_mae_const)}</b> · {lang === "es" ? "climatología" : "climatology"} <b>{dec(current.gates.loso_mae_clim)}</b></li>
         <li>{lang === "es" ? "Gana a la climatología en" : "Beats climatology in"} <b>{current.gates.wins_vs_clim}/{current.gates.of}</b> {t.seasons} {current.gates.gate_vs_clim ? "✓" : "✗"} · {lang === "es" ? "gana a Aqua crudo en" : "beats raw Aqua in"} <b>{current.gates.wins_vs_raw}/{current.gates.of}</b> {current.gates.gate_vs_raw ? "✓" : "✗"} · Aqua 2012–2019: <b>{current.gates.aqua_train}</b> (≥ {current.gates.min_aqua} {current.gates.gate_aqua ? "✓" : "✗"}) · S-NPP: {current.gates.snpp_train}</li>
-        {current.reconstruction_enabled && <li>{lang === "es" ? "Error típico del estimado" : "Typical error of estimates"}: ± {current.gates.band_mae} ({lang === "es" ? "cubre" : "covers"} {Math.round(current.gates.band_coverage_1 * 100)} % {lang === "es" ? "de los meses activos" : "of active months"}; {Math.round(current.gates.band_coverage_2 * 100)} % {lang === "es" ? "con" : "at"} ±2 {lang === "es" ? "en la validación interna de las 54 comunas; no es una garantía" : "in internal validation across all 54 communes; not a guarantee"})</li>}
+        {current.reconstruction_enabled && <li>{lang === "es" ? "Error típico del estimado" : "Typical error of estimates"}: ± {dec(current.gates.band_mae)} ({lang === "es" ? "cubre" : "covers"} {Math.round(current.gates.band_coverage_1 * 100)} % {lang === "es" ? "de los meses activos" : "of active months"}; {Math.round(current.gates.band_coverage_2 * 100)} % {lang === "es" ? "con" : "at"} ±2 {lang === "es" ? "en la validación interna de las 54 comunas; no es una garantía" : "in internal validation across all 54 communes; not a guarantee"})</li>}
       </ul>
       {t.methodBody.map((p, i) => <p key={i}>{p}</p>)}
     </div>
@@ -120,13 +129,13 @@ export default function App() {
           </div>
         </div>
         <div className="tools no-print">
-          <button onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label="Language">{lang === "es" ? "EN" : "ES"}</button>
+          <button onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label={lang === "es" ? "EN · English" : "ES · Español"} lang={lang === "es" ? "en" : "es"}>{lang === "es" ? "EN" : "ES"}</button>
         </div>
       </header>
       <p className="alert-strip" role="note">{T.alert}</p>
       <nav className="view-switch no-print" aria-label={lang === "es" ? "Vistas de datos" : "Data views"}>
-        <button aria-pressed={view === "reconstruction"} onClick={() => setView("reconstruction")}>{lang === "es" ? "Mapa y calendario armonizado · GOLIAT" : "Map and harmonized calendar · GOLIAT"}</button>
-        <button aria-pressed={view === "observed"} onClick={() => setView("observed")}>{lang === "es" ? "Historial por plataforma · FireChronos" : "Platform history · FireChronos"}</button>
+        <button aria-pressed={view === "reconstruction"} onClick={() => setView("reconstruction")}><span className="long">{lang === "es" ? "Mapa y calendario armonizado · GOLIAT" : "Map and harmonized calendar · GOLIAT"}</span><span className="short">{lang === "es" ? "Calendario armonizado" : "Harmonized calendar"}</span></button>
+        <button aria-pressed={view === "observed"} onClick={() => setView("observed")}><span className="long">{lang === "es" ? "Historial por plataforma · FireChronos" : "Platform history · FireChronos"}</span><span className="short">{lang === "es" ? "Por plataforma" : "By platform"}</span></button>
       </nav>
 
       {view === "observed" ? (
@@ -140,11 +149,13 @@ export default function App() {
           <div className={`explore${wide ? " wide" : ""}`}>
             <div className="explore-map no-print">
               <MapBoundary fallback={<p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>}>
-                <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} wide={wide} />
+                <Suspense fallback={<div className="xmap xmap-loading" aria-hidden="true" />}>
+                  <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} wide={wide} />
+                </Suspense>
               </MapBoundary>
             </div>
             <aside className="panel">
-              <div className="panel-head">
+              <div className={`panel-head${cut ? " has-cut" : ""}`}>
                 <div className="search-row">
                   {search}
                   {cut && <button className="close no-print" onClick={close} aria-label={T.close} title={T.close}>× {T.closeShort}</button>}
@@ -154,7 +165,7 @@ export default function App() {
                     <h2>{current.comuna} <small>· {current.region} · CUT {current.cut}</small></h2>
                     <div className="tabs no-print" role="group" aria-label={t.calendar}>
                       <button aria-pressed={!tableOpen} onClick={() => setTableOpen(false)}>{T.tabSummary}</button>
-                      <button aria-pressed={tableOpen} onClick={() => setTableOpen(true)}>{T.tabSeries}</button>
+                      <button aria-pressed={tableOpen} onClick={openTable}>{T.tabSeries}</button>
                     </div>
                     {tableOpen && (
                       <span className="acts no-print">
@@ -171,7 +182,7 @@ export default function App() {
                   : current ? (
                     <>
                       <div className="resumen">
-                        <CommunePanel doc={current} derived={derived} season={season} lang={lang} toggleTable={() => setTableOpen(true)} method={method} />
+                        <CommunePanel doc={current} derived={derived} season={season} lang={lang} toggleTable={openTable} method={method} />
                       </div>
                       {tableOpen && (
                         <section className="serie-panel no-print" id="serie" aria-label={`${t.calendar} · ${current.comuna} · 2002–2026`}>
