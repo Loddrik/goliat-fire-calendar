@@ -167,7 +167,7 @@ body { margin: 0; background: #FCFBF7; }
 .lp-cell-0 { background: var(--b3); color: var(--fg); }
 .lp-cell-1 { background: repeating-linear-gradient(45deg, rgba(255,255,255,.55) 0 2px, transparent 2px 7px), var(--b2); color: var(--fg); font-size: 12px; }
 .lp-cell-2 { background: #fff; border: 1px dashed var(--muted); color: var(--muted); }
-.lp-cell-3 { background: var(--b1); border: 2px solid var(--accent); }
+.lp-cell-3 { background: var(--b1); border: 2px solid var(--accent); color: var(--fg); }
 .lp-notis { margin-top: 24px !important; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); max-width: 80ch; }
 
 /* el desafío */
@@ -275,3 +275,11 @@ body { margin: 0; background: #FCFBF7; }
 .lp-sample-cta { margin-top: 20px !important; }
 .lp-q-peak:not(.out) { border-left-color: var(--b3); background: transparent; padding-block: 0; }
 .lp-q-warn { font-size: 14.5px; font-weight: 500; }
+
+/* Celular (issue #42): zonas táctiles de al menos 44 px en botones y enlaces sueltos. */
+@media (pointer: coarse), (max-width: 720px) {
+  .lp-btn { min-height: 44px; }
+  .lp-lang { min-width: 44px; justify-content: center; }
+  .lp-map-pause { width: 44px; height: 44px; }
+  .lp-uses-cta a:not(.lp-btn), .lp-search-meta a { display: inline-block; padding-block: 10px; }
+}
