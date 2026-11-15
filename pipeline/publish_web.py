@@ -113,6 +113,8 @@ for c in region:
     want = sum(c["s"][i] for i in full_idx)
     if want != (sum(e["md"]) if e else 0):
         problems += 1; print(f"[{c['cut']}] región por mes no cuadra en la celda {k}: {want} vs {sum(e['md']) if e else 0}", file=sys.stderr)
+for k, e in months.items():  # ms: entre 0 y el número de temporadas completas, y > 0 solo donde hay días
+    assert all(0 <= s <= len(FULL) and (s > 0) == (d > 0) and s <= d for s, d in zip(e["ms"], e["md"])), k
 json.dump(dict(cutoff=cutoff, seasons=FULL, cell_size_deg=0.01,
                note=("Celda × mes del año, sumando solo temporadas completas " + f"{FULL[0]}-{str(FULL[0] + 1)[2:]} a {FULL[-1]}-{str(FULL[-1] + 1)[2:]}"
                      " (sin la temporada en curso). ms[i] = temporadas con al menos una detección en el mes i; md[i] = días con detección;"

@@ -10,6 +10,7 @@ type Entry = { cut: string; comuna: string; region: string; enabled: boolean };
 type Index = { cutoff: string; current_season: number; r_const: number; params?: { train?: number[]; min_aqua?: number; min_wins?: number; band_coverage_1mae?: number; rel_err_median_active?: number }; comunas: Entry[] };
 
 const LANG_KEY = "goliat-lang";
+const SEARCH_ID = "lp-search-in";
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 // El idioma viaja a la app en ?lang= (la app lo puede leer; hoy decide por el navegador).
 const explorer = (cut?: string) => `/explorar?${cut ? `cut=${cut}&` : ""}lang=${document.documentElement.lang === "en" ? "en" : "es"}`;
@@ -61,15 +62,36 @@ export default function Landing() {
         <section className="lp-hero">
           <div className="lp-wrap lp-hero-in">
             <div className="lp-hero-text">
-              <Headline key={lang} t={t} />
-              <p className="lp-sub">{t.sub}</p>
+              <p className="lp-eyebrow lp-hero-eyebrow">{index ? t.eyebrow(enabled, comunas.length) : "\u00a0"}</p>
+              <h1 className="lp-h1">{t.hQuestion}</h1>
+              <p className="lp-sub">{index ? t.sub(enabled, comunas.length) : "\u00a0"}</p>
               <p className="lp-alert"><Icon name="telefono" size={20} /> <span>{t.alert}</span></p>
               <Search comunas={comunas} t={t} />
               <p className="lp-meta">
                 {index ? <>{t.meta(comunas.length, dateShort(index.cutoff, lang))} · <a href={explorer()}>{t.allLink(comunas.length)}</a></> : "\u00a0"}
               </p>
             </div>
-            <RegionMap t={t} lang={lang} onPick={go} />
+            <RegionMap t={t} lang={lang} enabled={enabled} total={comunas.length} />
+          </div>
+        </section>
+
+        <section className="lp-section lp-uses" aria-labelledby="uses-title">
+          <div className="lp-wrap">
+            <div className="lp-uses-in">
+              <h2 id="uses-title">{t.usesTitle}</h2>
+              <ul className="lp-uses-list">
+                {t.uses.map(u => (
+                  <li key={u.who}>
+                    <span className="lp-uses-who">{u.who}</span>
+                    <span className="lp-uses-what">{u.what}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="lp-uses-cta">
+                <button type="button" className="lp-btn lp-btn-primary" onClick={() => { const el = document.getElementById(SEARCH_ID); el?.scrollIntoView({ behavior: "smooth", block: "center" }); el?.focus({ preventScroll: true }); }}>{t.usesCta}</button>
+                <a href={explorer()}>{t.usesOr} <Icon name="flecha" size={16} /></a>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -84,23 +106,9 @@ export default function Landing() {
                 </select>
               </label>
             </div>
-            <p className="lp-lead">{t.qIntro} {t.unit}</p>
-            <CommuneSample key={sample} cut={sample} t={t} lang={lang} />
-          </div>
-        </section>
-
-        <section className="lp-section lp-uses" aria-labelledby="uses-title">
-          <div className="lp-wrap">
-            <h2 id="uses-title">{t.usesTitle}</h2>
-            <div className="lp-cards">
-              {t.uses.map(u => (
-                <article key={u.icon} className="lp-card">
-                  <Icon name={u.icon} size={28} className="lp-card-icon" />
-                  <h3>{u.t}</h3>
-                  <p>{u.d}</p>
-                </article>
-              ))}
-            </div>
+            <p className="lp-lead">{t.qIntro}</p>
+            <CommuneSample key={sample} cut={sample} t={t} lang={lang} enabled={enabled} />
+            <p className="lp-sample-cta"><a className="lp-btn lp-btn-primary" href={explorer(sample)}>{t.sampleCta(comunas.find(c => c.cut === sample)?.comuna ?? "")} <span aria-hidden="true">→</span></a></p>
           </div>
         </section>
 
@@ -109,13 +117,17 @@ export default function Landing() {
             <h2 id="how-title">{t.statesTitle}</h2>
             <p className="lp-lead">{t.statesIntro}</p>
             <ul className="lp-states">
-              {t.states.map(([name, desc], i) => (
+              {t.states.slice(0, 3).map(([name, desc], i) => (
                 <li key={name}>
-                  <span className={`lp-cell lp-cell-${i}`} aria-hidden="true">{["12", "41 ±14", "∅", "4•"][i]}</span>
-                  <span><b>{name}</b> · {desc}</span>
+                  <span className={`lp-cell lp-cell-${i}`} aria-hidden="true">{["12", "41 ±14", "∅"][i]}</span>
+                  <span><b>{name}</b><br />{desc}</span>
                 </li>
               ))}
             </ul>
+            <p className="lp-states-foot">
+              <span className="lp-cell lp-cell-3" aria-hidden="true">4•</span>
+              <span><b>{t.states[3][0]}</b> · {t.states[3][1]}</span>
+            </p>
             <p className="lp-samples">{t.samplesNote}</p>
             <p className="lp-notis">{t.notIs}</p>
           </div>
@@ -130,6 +142,9 @@ export default function Landing() {
             </div>
             <div className="lp-ch-body">
               <p>MODIS (1 km pixels, since 2000) and VIIRS (375 m, since 2012) see fire differently. VIIRS picks up far more small, cool hot spots{index ? <> (here about {index.r_const.toFixed(2)}× as many cell-days)</> : null}, so stitching the two records together creates a false jump in 2012. Terra and Aqua are at the end of their missions, with drifting orbits; once MODIS stops, the years before 2012 can only be compared through a bridge like this one.</p>
+              {index && (
+                <p className="lp-ch-valid">Tested leaving one season out at a time: <b>{enabled} of {comunas.length} communes pass</b>{index.params?.band_coverage_1mae != null ? <>; in internal validation, ±1 typical error covers about {Math.round(index.params.band_coverage_1mae * 100)} % of active months (somewhat less in the published communes and later seasons)</> : null}. The rest show VIIRS from 2012 only.</p>
+              )}
               {index && (
                 <details className="lp-ch-more">
                 <summary>{t.challengeMore}</summary>
@@ -168,45 +183,6 @@ export default function Landing() {
   );
 }
 
-// Título animado (#37): la pregunta, y después «Usa lo que vieron los satélites para» con la última
-// parte cambiando. Todas las frases se apilan en la misma celda para que el alto no salte.
-// Ciclo continuo; se pausa con el mouse encima. Con «reducir movimiento» queda la pregunta fija. El lector de pantalla lee hFull una sola vez.
-const Q_MS = 3200, WORD_MS = 2400;
-function Headline({ t }: { t: Text }) {
-  const [step, setStep] = useState(0); // 0 = pregunta; 1..n = palabra n
-  const [hover, setHover] = useState(false);
-  const [reduced, setReduced] = useState(() => matchMedia("(prefers-reduced-motion: reduce)").matches);
-  useEffect(() => {
-    const mq = matchMedia("(prefers-reduced-motion: reduce)");
-    const on = () => setReduced(mq.matches);
-    mq.addEventListener("change", on);
-    return () => mq.removeEventListener("change", on);
-  }, []);
-  const still = reduced || hover;
-  useEffect(() => {
-    if (still) return;
-    const id = setTimeout(() => setStep(s => (s + 1) % (t.hWords.length + 1)), step === 0 ? Q_MS : WORD_MS);
-    return () => clearTimeout(id);
-  }, [step, still, t.hWords.length]);
-  const shown = reduced ? 0 : step;
-  return (
-    <div className="lp-h1-wrap" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <h1 className="lp-h1">
-        <span className="lp-sr">{t.hFull}</span>
-        <span className="lp-h1-stack" aria-hidden="true">
-          <span className={`lp-h1-frame${shown === 0 ? " on" : ""}`}>{t.hQuestion}</span>
-          <span className={`lp-h1-frame${shown > 0 ? " on" : ""}`}>
-            {t.hLead}{" "}
-            <span className="lp-h1-words">
-              {t.hWords.map((w, i) => <span key={w} className={`lp-h1-word${shown === i + 1 ? " on" : ""}`}>{w}</span>)}
-            </span>
-          </span>
-        </span>
-      </h1>
-    </div>
-  );
-}
-
 function Search({ comunas, t }: { comunas: Entry[]; t: Text }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
@@ -228,12 +204,12 @@ function Search({ comunas, t }: { comunas: Entry[]; t: Text }) {
   const show = open && q.trim().length > 0;
   return (
     <div className="lp-search">
-      <label htmlFor={`${id}-in`} className="lp-search-label">{t.searchLabel}</label>
+      <label htmlFor={SEARCH_ID} className="lp-search-label">{t.searchLabel}</label>
       <div className="lp-search-box">
         <Icon name="buscar" size={20} />
         <input
           ref={input}
-          id={`${id}-in`}
+          id={SEARCH_ID}
           role="combobox"
           aria-expanded={show}
           aria-controls={`${id}-list`}
