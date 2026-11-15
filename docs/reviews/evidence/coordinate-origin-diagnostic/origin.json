@@ -1,0 +1,14 @@
+{
+  "AOI_CRS": "EPSG:32718",
+  "AOI_half_side_m": 25000.0,
+  "float64_bytes_hex": "9c2efb9a370c26410e1bf270df835641",
+  "float_hex": [
+    "0x1.60c379afb2e9cp+19",
+    "0x1.683df70f21b0ep+22"
+  ],
+  "origin_xy": [
+    722459.8026976171,
+    5902205.764776958
+  ],
+  "source_index_sha256": "6cbcf6b06506c22330045119378639eca3f392b8125a72d36fb350dab4421cfb"
+}

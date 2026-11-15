@@ -1,0 +1,50 @@
+{
+  "cap_sha256": "0e4d3f6cc864a9db2018f7ed89740951beee99a556b835f1b86bd9b21f1e1f2e",
+  "code_sha256": "52575983c1d5bc106bb5030c0f4a417c3f895a75ee43f0a7c1726d51d0139aca",
+  "engine": {
+    "GEOS": "3.14.1",
+    "binary_sha256": {
+      "/Users/dquinteros/nasa/goliat-fire-calendar/.venv/lib/python3.14/site-packages/shapely/.dylibs/libgeos.3.14.1.dylib": "5fc54abe9b7d07e2595bb4b151a76da842163658376eeee9328aa1ce48118d3e",
+      "/Users/dquinteros/nasa/goliat-fire-calendar/.venv/lib/python3.14/site-packages/shapely/.dylibs/libgeos_c.1.20.5.dylib": "8e55ec1e74234d7c4019a44288afab314aecfc381b7f11e59b3aaf132f3d5368",
+      "/Users/dquinteros/nasa/goliat-fire-calendar/.venv/lib/python3.14/site-packages/shapely/lib.cpython-314-darwin.so": "6f66e47181aa5683c167eec26f22201837fa547f197f1bd1a08a1c9c549fa137"
+    },
+    "shapely": "2.2.0"
+  },
+  "files_sha256": {
+    "AOI.wkb": "34c41ea6be38b5a8dc96b530249406b822e04bf05b34f20c524be3bbed02efac",
+    "MYD14_early-818-1166-other_union.wkb.gz": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f",
+    "MYD14_early-818-1166-pixel.wkb.gz": "331d22b1444603b222b300baa1ae5019808f323455551064c1c04a8952447652",
+    "MYD14_late-833-1149-other_union.wkb.gz": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e",
+    "MYD14_late-833-1149-pixel.wkb.gz": "c7a7bcfaebda644d5100566275a14058e07d62e64c8aec656dd1c726fe5f9b0d",
+    "MYD14_late-844-1161-other_union.wkb.gz": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e",
+    "MYD14_late-844-1161-pixel.wkb.gz": "674ffc202cff0be13fb66fc75ae6524fb3ac8291c325c324b792bc32a914a2bb",
+    "VNP14IMG_early-2051-3869-other_union.wkb.gz": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2",
+    "VNP14IMG_early-2051-3869-pixel.wkb.gz": "6e0482ccbb655292917649ce118696ec86a23e18c6c03e420183ff28c4e3661b",
+    "VNP14IMG_early-2076-3864-other_union.wkb.gz": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2",
+    "VNP14IMG_early-2076-3864-pixel.wkb.gz": "b31b0db2e0400e7e023d260a90debefb78af0b119c59002b6d6b4c2495bbf8ff",
+    "baseline27.snapshot.json": "117df8dd733c6e3e555bd91b4dd6b6393008195aaa14af29c1a689ede158e2db",
+    "cap.snapshot.json": "0e4d3f6cc864a9db2018f7ed89740951beee99a556b835f1b86bd9b21f1e1f2e",
+    "code.snapshot.py.txt": "52575983c1d5bc106bb5030c0f4a417c3f895a75ee43f0a7c1726d51d0139aca",
+    "control_contained-other_union.wkb": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0",
+    "control_contained-pixel.wkb": "321cf2cdd4c92e8a432849ad2b2470fe297c01e66ee372819c05e23eaa9c112e",
+    "control_disjoint-other_union.wkb": "46436d94e2806f213517f00bc3248b4123334ceca2ddea1389383fbd855f428a",
+    "control_disjoint-pixel.wkb": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0",
+    "control_partial-other_union.wkb": "d1789a10586d7cfd1e9306628d4eb95830c4a836233be3281f794a8c2fc8c196",
+    "control_partial-pixel.wkb": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0",
+    "control_touch-other_union.wkb": "38809cde15686574f9c325a7ec1b34f060a4ed7f7f0e5bef845e7488b3f4b1aa",
+    "control_touch-pixel.wkb": "dd37c17a51a39b586f812ee2d975c74c05126bbf7c89815c599a2543c33b48c0",
+    "fixtures.json": "daa89a9c67fec0fdc035da4c9d969facbb6c1f6f9497f75c7110e1bbaef4fbfa",
+    "metrics-helper.snapshot.py.txt": "9ce8197e93947b5111fa84b7203ede64f9883a344dd64d5034a1f421780f6d1b",
+    "origin.json": "66cc481d70ce04e269fad79c30b127df790b52a3eb7ffaa7291e9dc443634793",
+    "protocol.snapshot.md.txt": "4b3acdd1134f61b3d92420cddbc2fa7cb839ca1e43639c0139e426b284062de3"
+  },
+  "finish_metrics_source_sha256": "5f0b4b739c021b8c8240912e4d926ba7d0f2ef02c7d2b6308a5a8612ae103809",
+  "frozen_utc": "2026-11-15T05:08:31.017904+00:00",
+  "metrics_helper_sha256": "9ce8197e93947b5111fa84b7203ede64f9883a344dd64d5034a1f421780f6d1b",
+  "original_27_cap_not_used": true,
+  "overlays_started": false,
+  "protocol_commit": "9f324a4",
+  "protocol_sha256": "4b3acdd1134f61b3d92420cddbc2fa7cb839ca1e43639c0139e426b284062de3",
+  "scope": "Pure finish_metrics reused; worker/run/DEADLINE of27 never invoked; cap29 checked separately",
+  "source_manifest_sha256": "9a88d49359a82d17f630d7129bc24717115a9c0960090af102e274fee5e6a2de"
+}
