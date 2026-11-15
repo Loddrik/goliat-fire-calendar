@@ -63,3 +63,7 @@ El diagnóstico positivo sólo permite diseñar una revalidación ampliada con p
 Revisión independiente de `hurdle_design`: sin bloqueantes. Recalculó racionales y bitinverse de las5271 tuplas desde los WKB existentes sin nuevos overlays, verificó hashes, las nueve filas baseline y controles/residuos/tipos, y repitió los siete tests. Confirmó el alcance condicional y que no acredita ledger/G1 o causa única.
 
 24B original sigue fallido;25/26/28 no se ejecutaron aquí. `gate1_passed=false`, `full_ledger_validated=false`, `physical_exposure_verified=false`. No se valida PSF, exposición, tiempo por píxel, causalidad de incendios o eficacia de un modelo. Los13 contrastes dimensionalesVIIRS anteriores siguen selectivos. El siguiente paso requiere revisión independiente de29 y autorización explícita de su propio protocolo, no una promoción automática desde estos cinco pares.
+
+## Integración CI posterior al experimento
+
+El primer CI limpio expuso que los tests de la primitiva matemática dependían del guard de presupuesto `.runtime/coordinate-origin-cap.json`, ausente por diseño en Git. Se aisló ese guard únicamente en el fixture unitario, para no depender de un cap histórico que además expira. No se cambió el helper ejecutado, sus guards reales, freeze, certificado, coordenadas o resultados; los siete tests matemáticos siguen ejercitando la misma función. El código de ejecución conserva SHA52575983c1d5bc106bb5030c0f4a417c3f895a75ee43f0a7c1726d51d0139aca.

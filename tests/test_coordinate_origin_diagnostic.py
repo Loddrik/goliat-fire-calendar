@@ -1,5 +1,6 @@
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 import numpy as np
 import shapely
@@ -8,6 +9,14 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'pipeline'))
 from coordinate_origin_diagnostic import translate_certified,signature,bits,evaluate
 
 class FixedOriginTests(unittest.TestCase):
+    def setUp(self):
+        # These exercise the mathematical primitive, not a timed research run.
+        # A clean CI checkout has no private .runtime budget, and these tests
+        # must remain meaningful after the historical experiment cap expires.
+        deadline_guard = patch('coordinate_origin_diagnostic.check_cap')
+        deadline_guard.start()
+        self.addCleanup(deadline_guard.stop)
+
     def test_all_rings_parts_and_closures_roundtrip(self):
         p=Polygon([(700000,5900000),(700010,5900000),(700010,5900010),(700000,5900010)],holes=[[(700002,5900002),(700004,5900002),(700004,5900004),(700002,5900004)]])
         g=MultiPolygon([p,box(700020,5900000,700030,5900010)])
