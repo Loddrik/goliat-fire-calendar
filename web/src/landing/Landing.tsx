@@ -69,7 +69,23 @@ export default function Landing() {
                 {index ? <>{t.meta(comunas.length, dateShort(index.cutoff, lang))} · <a href={explorer()}>{t.allLink(comunas.length)}</a></> : "\u00a0"}
               </p>
             </div>
-            <RegionMap t={t} lang={lang} onPick={go} />
+            <RegionMap t={t} lang={lang} />
+          </div>
+        </section>
+
+        <section className="lp-section lp-uses" aria-labelledby="uses-title">
+          <div className="lp-wrap">
+            <h2 id="uses-title">{t.usesTitle}</h2>
+            <div className="lp-cards">
+              {t.uses.map(u => (
+                <a key={u.icon} className="lp-card" href={explorer()}>
+                  <Icon name={u.icon} size={28} className="lp-card-icon" />
+                  <h3>{u.t}</h3>
+                  <p>{u.d}</p>
+                  <span className="lp-card-cta">{t.usesCta} <Icon name="flecha" size={16} /></span>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -89,33 +105,22 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="lp-section lp-uses" aria-labelledby="uses-title">
-          <div className="lp-wrap">
-            <h2 id="uses-title">{t.usesTitle}</h2>
-            <div className="lp-cards">
-              {t.uses.map(u => (
-                <article key={u.icon} className="lp-card">
-                  <Icon name={u.icon} size={28} className="lp-card-icon" />
-                  <h3>{u.t}</h3>
-                  <p>{u.d}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="lp-section" id="como-leer" aria-labelledby="how-title">
           <div className="lp-wrap">
             <h2 id="how-title">{t.statesTitle}</h2>
             <p className="lp-lead">{t.statesIntro}</p>
             <ul className="lp-states">
-              {t.states.map(([name, desc], i) => (
+              {t.states.slice(0, 3).map(([name, desc], i) => (
                 <li key={name}>
-                  <span className={`lp-cell lp-cell-${i}`} aria-hidden="true">{["12", "41 ±14", "∅", "4•"][i]}</span>
-                  <span><b>{name}</b> · {desc}</span>
+                  <span className={`lp-cell lp-cell-${i}`} aria-hidden="true">{["12", "41 ±14", "∅"][i]}</span>
+                  <span><b>{name}</b><br />{desc}</span>
                 </li>
               ))}
             </ul>
+            <p className="lp-states-foot">
+              <span className="lp-cell lp-cell-3" aria-hidden="true">4•</span>
+              <span><b>{t.states[3][0]}</b> · {t.states[3][1]}</span>
+            </p>
             <p className="lp-samples">{t.samplesNote}</p>
             <p className="lp-notis">{t.notIs}</p>
           </div>
