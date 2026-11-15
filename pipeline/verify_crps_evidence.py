@@ -13,6 +13,7 @@ import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST_SHA256='aec1533e33b1d354c6102daf51d51d295d449f2afc15cf5ae50d2fe9719779ea'
 GATES_SHA256='218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42'
+FROZEN_GATES=ROOT/'docs/reviews/evidence/crps-portable-inputs/gates39.csv'
 REGIMES={'08_forward','08_backward','16_forward','16_backward'}
 KEYS=['regime','cut','season','m']
 IDENTITY=['row_id',*KEYS,'g','aqua','role','B','F21_median','F21_mean','original_E11_mean','model_sha256','original_weight_sum']
@@ -150,10 +151,10 @@ def verify(evidence_dir,gates_file):
     # Re-check immutable sources after replay. No write path exists in this tool.
     require(sha(p/'manifest.json')==MANIFEST_SHA256 and sha(gates_file)==GATES_SHA256,'Anchored input changed during verification')
     for name,h in manifest['output_sha256'].items():require(sha(p/name)==h,'Snapshot changed during verification: '+name)
-    return {'status':'PASS','scope':'Replay frozen39 CDF loss snapshots plus anchored public gates; no original fit reconstruction','manifest_sha256':MANIFEST_SHA256,'CDF_rows':count,'atom_elements':atom_count,'weights_single_normalization_verified':True,'CRPS_integral_rows':count,'deltaB_equals_MAE_rows':count,'population_reports_verified':populations,'method_report_sets_verified':populations*2,'per_CUT_rows_verified':len(percut),'primary_regimes':4,'primary_equal_four_difference':equal,'max_abs_integral_vs_recorded_raw_CRPS':max_error,'shared_oracle_provenance':'Archived39peer direct CDF-integral semantics; not a third independent oracle','fits':0,'solvers':0,'downloads':0,'new_CDFs_or_predictions':0,'new_loss_definitions':0,'same_frozen_loss_replay_only':True,'original_files_written':0,'private_runtime_or_absolute_clock_dependency':False,'physical_G1_claim':False}
+    return {'status':'PASS','scope':'Replay frozen39 CDF loss snapshots plus historical anchored gate membership; no original fit reconstruction','manifest_sha256':MANIFEST_SHA256,'CDF_rows':count,'atom_elements':atom_count,'weights_single_normalization_verified':True,'CRPS_integral_rows':count,'deltaB_equals_MAE_rows':count,'population_reports_verified':populations,'method_report_sets_verified':populations*2,'per_CUT_rows_verified':len(percut),'primary_regimes':4,'primary_equal_four_difference':equal,'max_abs_integral_vs_recorded_raw_CRPS':max_error,'shared_oracle_provenance':'Archived39peer direct CDF-integral semantics; not a third independent oracle','fits':0,'solvers':0,'downloads':0,'new_CDFs_or_predictions':0,'new_loss_definitions':0,'same_frozen_loss_replay_only':True,'original_files_written':0,'private_runtime_or_absolute_clock_dependency':False,'physical_G1_claim':False}
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--evidence-dir',type=Path,default=ROOT/'data/processed/crps_audit');parser.add_argument('--gates-file',type=Path,default=ROOT/'data/processed/gates.csv');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--evidence-dir',type=Path,default=ROOT/'data/processed/crps_audit');parser.add_argument('--gates-file',type=Path,default=FROZEN_GATES);args=parser.parse_args()
     try:result=verify(args.evidence_dir,args.gates_file)
     except (OSError,KeyError,TypeError,IndexError,StopIteration) as exc:raise ValueError('Incomplete or invalid frozen evidence: '+str(exc)) from exc
     print(json.dumps(result,sort_keys=True,allow_nan=False))

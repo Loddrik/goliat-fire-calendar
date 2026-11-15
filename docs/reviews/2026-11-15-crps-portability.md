@@ -13,7 +13,7 @@ Necesita NumPy, pandas y el lector Parquet del entorno del proyecto. Imprime un 
 ## Anclas y alcance comprobado
 
 - Manifest 39: `aec1533e33b1d354c6102daf51d51d295d449f2afc15cf5ae50d2fe9719779ea`, más todos sus hashes de salida, comprobados antes y después del replay.
-- `data/processed/gates.csv`: `218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42`, también exigido en `code-freeze.json`. Sus valores públicos `enabled` determinan las 14 comunas publicadas; no se infieren a partir de pérdidas.
+- Snapshot histórico `docs/reviews/evidence/crps-portable-inputs/gates39.csv`, copiado byte por byte de `data/processed/gates.csv`: `218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42`, también exigido en `code-freeze.json`. Su [procedencia](evidence/crps-portable-inputs/provenance.json) vincula la copia con el freeze39. El valor por defecto usa esta copia histórica para que una actualización legítima de las compuertas actuales no cambie los estratos de un estudio antiguo. Sus valores `enabled` determinan las 14 comunas publicadas en ese corte; no se infieren a partir de pérdidas.
 - Las 10.368 claves CDF, los 444.826 átomos, identidad con el roster, dominio completo de CUT/temporadas/meses, roles SOURCE/held y respuestas repetidas congeladas.
 - Pesos finitos y no negativos; suma original dentro de la tolerancia congelada y pesos almacenados exactamente iguales a una sola división por esa suma. El integrador no vuelve a normalizar.
 - CRPS de cada CDF mediante integración por intervalos y CRPS de la distribución degenerada en B igual a `abs(B-Y)`. Se verifica también la tolerancia y política de redondeo originales.
