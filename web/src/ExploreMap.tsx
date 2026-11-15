@@ -233,6 +233,7 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, month,
       </div>
       <div className="map-legend">
         <b>{legend}</b>
+        {byMonth && <p className="legend-note">{T.monthNote}</p>}
         <div className="sw-row">
           <span><i className="sw-none" />{T.none}</span>
           {BLUES.map((c, i) => <span key={c}><i style={{ background: c }} />{i < MAP_LABELS.length ? MAP_LABELS[i] : `8 ${T.more}`}</span>)}
