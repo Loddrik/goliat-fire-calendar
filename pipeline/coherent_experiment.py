@@ -1,5 +1,6 @@
 """Protocol 18: fixed-CDF decisions, no destination-dependent fitting."""
 import json
+import math
 import subprocess
 from pathlib import Path
 
@@ -44,7 +45,7 @@ def extend(frame, model):
     if not np.allclose(restored.E11_10, features.E11_10, atol=1e-10, rtol=0):
         raise ValueError('Source median did not reproduce')
     ds = distributions(features, model)
-    features['E_mean'] = [float(np.dot(v, w)) for v, w in ds]
+    features['E_mean'] = [math.fsum(float(a)*float(p) for a,p in zip(v,w)) for v,w in ds]
     features['E_coherent'] = np.nan
     features['E_proportional'] = np.nan
     checks = []
