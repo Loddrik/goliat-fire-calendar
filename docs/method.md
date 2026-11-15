@@ -72,7 +72,7 @@ Why the other 40 are not: 14 have too little Aqua (coastal/urban communes: Penco
 - A detection is not a fire and a cell-day is not a hectare (FIRMS FAQ).
 - We do not measure observation opportunity: a month with zero detections may be cloudy, not fire-free.
 - 2002–2012 is extrapolation with a regional constant; typical relative error ~35 % in active months. Good performance in the overlap does not prove small historical fires are recovered.
-- **Seasonal reconstructed totals:** an internal audit of the existing fixed-mask LOSO predictions for the 14 enabled communes (112 commune-seasons, July–June seasons2012–2019) finds median absolute relative error20.34% and mean signed relative error−11.46%. These are apparent postselection development diagnostics: the same LOSO selected the communes. They do not independently validate2002–2011 totals, an annual error band or the cause of the2012 transition. Monthly enablement does not certify seasonal-total accuracy. See the [seasonal audit and issue48 response](reviews/2026-11-15-season-total-report.md).
+- **Seasonal reconstructed totals:** an internal audit of the existing fixed-mask LOSO predictions for the 14 enabled communes (112 commune-seasons, July–June seasons 2012–2019) finds a median absolute relative error of 20.34 % and a mean signed relative error of −11.46 %. These are apparent post-selection development diagnostics: the same LOSO selected the communes. They do not independently validate 2002–2011 totals, an annual error band or the cause of the 2012 transition. Monthly enablement does not certify seasonal-total accuracy. See the [seasonal audit and issue #48 response](reviews/2026-11-15-season-total-report.md).
 - The mask was calibrated with data to June 2020; newer static sources (or renewed volcanic activity) may leak.
 - NRT months are provisional. Agricultural burns and wildfires are both "fire activity"; we do not separate them.
 - No alerts, no forecasts. For emergencies: CONAF and SENAPRED.
@@ -93,12 +93,6 @@ An automated, read-only scientific review (checklist C1–C20 of the preparation
 
 **Separate Terra predictor, iteration 14:** [`2026-11-14-scientific-review-14.md`](reviews/2026-11-14-scientific-review-14.md) tests Aqua+Terra as two regularized predictors, with a seasonal-Terra ablation and strict nested/blocked controls. Adding the tested C family to M1/B increases nested MAE by 1.21 % and is unfavorable in seven of eight seasons; small later-period gains do not justify replacing B or M1. Terra is never summed with Aqua as event counts. All existing publication gates and values remain unchanged.
 
+**Loss-based tail adjustment, iteration 15:** [`2026-11-14-scientific-review-15.md`](reviews/2026-11-14-scientific-review-15.md): directly optimizing square-root intervals improves the same-cohort asymmetric quantiles in 8 of 8 folds, but does not dominate the symmetric reference in every target. Ten recipes are preserved, 85 tests and the earlier controls are reproduced; no publication change and no guaranteed coverage.
 
-## Ajuste de extremos por pérdida — etapa 15
-
-[Revisión completa](reviews/2026-11-14-scientific-review-15.md): la optimización directa de intervalos raíz mejora los cuantiles asimétricos de igual cohorte en 8/8 folds, pero no domina la referencia simétrica en todos los destinos. Diez recetas conservadas, 85 tests y controles anteriores reproducidos; sin cambio de publicación ni cobertura garantizada.
-
-
-## Decisión y reproducción acumulada
-
-[Decisión científica](reviews/2026-11-14-research-decision.md): conservar M1 y las 14 compuertas; mejoras retrospectivas no equivalen a transporte ni cobertura garantizada. Dos checkouts reproducen 118 resultados de las etapas 2–15, el segundo con entorno nuevo desde uv.lock y 88 tests. [Reconstrucción adicional](reviews/2026-11-14-baseline-reconstruction.md): agregados y parámetros coinciden; el orden no determinado de recurrencia impide igualdad estricta de los 54 JSON comunales. La ingestión FIRMS cruda no se ha reproducido porque faltan sus 1.071 CSV.
+**Decision and cumulative reproduction:** [scientific decision](reviews/2026-11-14-research-decision.md): keep M1 and the 14 gates; retrospective improvements do not amount to transport or guaranteed coverage. Two checkouts reproduce 118 results from iterations 2–15, the second with a fresh environment from `uv.lock` and 88 tests. [Additional reconstruction](reviews/2026-11-14-baseline-reconstruction.md): aggregates and parameters match; the undetermined order of the recurrence cells prevents strict equality of the 54 commune JSON files. The raw FIRMS ingestion has not been reproduced because its 1,071 CSV files are missing.
