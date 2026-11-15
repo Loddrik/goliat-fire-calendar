@@ -1,0 +1,21 @@
+{
+  "pair": {
+    "aqua_start": "2023-02-10T18:30:00.000Z",
+    "viirs_start": "2023-02-10T18:30:00.000Z",
+    "aqua_id": "MYD14.A2023041.1830.061.2023042110133",
+    "viirs_id": "VNP14IMG.A2023041.1830.002.2024078170147",
+    "minimum_gap_minutes": 0.0,
+    "maximum_gap_minutes": 6.0
+  },
+  "candidates": [
+    {
+      "aqua_start": "2023-02-10T18:30:00.000Z",
+      "viirs_start": "2023-02-10T18:30:00.000Z",
+      "aqua_id": "MYD14.A2023041.1830.061.2023042110133",
+      "viirs_id": "VNP14IMG.A2023041.1830.002.2024078170147",
+      "minimum_gap_minutes": 0.0,
+      "maximum_gap_minutes": 6.0
+    }
+  ],
+  "outcomes_used": false
+}

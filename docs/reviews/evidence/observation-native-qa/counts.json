@@ -1,0 +1,277 @@
+{
+  "scope": "Independent native-center counts by product; no paired fire outcomes or concordance",
+  "started_utc": "2026-11-15T01:51:28.611159+00:00",
+  "input_sha256": {
+    "MYD14": "994f1a88fc5a2b5addf8447dc7d636a10e0f3bb6283f2090a601ad43243c9c30",
+    "MYD03": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c",
+    "VNP14IMG": "bcc1e3e30af850542f8ed0ce31e7aae4a6d46ee3d4c68e1898142f60d3f45bef",
+    "VNP03IMG": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7"
+  },
+  "protocol_sha256": "24d6bfb5890d8753d448aada651f7a713f31d05cd474042702a5aeb6561cfa03",
+  "code_sha256": "37e1a6e3d6f7c21c916acaba3dbf151c73a747d1045b08d5f80f021dfbd6c0fe",
+  "decoder_sha256": "a2a654f6ec15b1e54e2e1398bc9ed0ff3ef9ed5a523b952a1be735188bf13a45",
+  "aoi": {
+    "epsg": 32718,
+    "center_lonlat": [
+      -72.5,
+      -37
+    ],
+    "center_xy": [
+      722459.8026976171,
+      5902205.764776958
+    ],
+    "half_side_m": 25000
+  },
+  "products": {
+    "MYD14": {
+      "native_shape": [
+        2030,
+        1354
+      ],
+      "native_pixel_count": 2748620,
+      "field_attributes": {
+        "mask": {
+          "valid_range": [
+            0,
+            9
+          ],
+          "legend": "Classes:\n0 missing input data\n1 not processed (obsolete)\n2 not processed (obsolete)\n3 non-fire water\n4 cloud\n5 non-fire land\n6 unknown\n7 fire (low confidence)\n8 fire (nominal confidence)\n9 fire (high confidence)"
+        },
+        "algorithm_qa": {
+          "units": "bit field"
+        },
+        "geolocation_qa": {
+          "_FillValue": 255
+        }
+      },
+      "effective_fill_values": {
+        "mask": null,
+        "algorithm_qa": null,
+        "geolocation_qa": 255
+      },
+      "counts": {
+        "partition": {
+          "unassignable_invalid_coordinates": 0,
+          "unassignable_projection": 0,
+          "outside_aoi": 2746340,
+          "inside_aoi": 2280
+        },
+        "mask_partition": {
+          "known": 2280,
+          "fill": 0,
+          "unknown": 0
+        },
+        "mask_classes": {
+          "0:missing_input": 0,
+          "1:obsolete_not_processed": 0,
+          "2:obsolete_not_processed": 0,
+          "3:water_no_detection": 11,
+          "4:cloud": 0,
+          "5:land_no_detection": 2269,
+          "6:unknown": 0,
+          "7:low_confidence_detection": 0,
+          "8:nominal_confidence_detection": 0,
+          "9:high_confidence_detection": 0
+        },
+        "qa_partition": {
+          "decoded_no_reserved": 2280,
+          "reserved_bits_active": 0,
+          "fill": 0,
+          "unknown_layout": 0
+        },
+        "qa_active_bits": {
+          "1": 2269,
+          "2": 2280,
+          "4": 2280,
+          "0": 6,
+          "5": 5,
+          "8": 5,
+          "12": 5,
+          "15": 5,
+          "13": 2
+        },
+        "geo_partition": {
+          "zero": 2280
+        },
+        "geo_flags_raw": {
+          "0": 2280
+        },
+        "surface_states": {
+          "land": 2269,
+          "water": 5,
+          "coast": 6
+        },
+        "local_screen_states": {
+          "local_candidate": 2280
+        },
+        "local_exclusion_reasons": {},
+        "local_unresolved_reasons": {},
+        "local_cautions": {},
+        "local_candidate_mask_classes": {
+          "5": 2269,
+          "3": 11
+        },
+        "local_candidate_surfaces": {
+          "land": 2269,
+          "water": 5,
+          "coast": 6
+        },
+        "qa_surface": {
+          "land": 2269,
+          "water": 5,
+          "coast": 6
+        },
+        "qa_glint": {
+          "0": 2280
+        },
+        "qa_day_algorithm": {
+          "True": 2280
+        }
+      },
+      "all_exhaustive_partitions_reconciled": true,
+      "nonexclusive_counters": [
+        "qa_active_bits",
+        "local_exclusion_reasons",
+        "local_unresolved_reasons",
+        "local_cautions"
+      ],
+      "qa_unknown_layout_count": 0,
+      "qa_unknown_layout_note": "Supported uint32 layout; out-of-range or unsupported collections raise, reserved bits kept separate",
+      "global_quality": {
+        "automatic_flag": "Suspect",
+        "explanation": "not being investigated",
+        "decision": "quarantined_pending_global_eligibility",
+        "local_screen_is_conditional_only": true
+      }
+    },
+    "VNP14IMG": {
+      "native_shape": [
+        6464,
+        6400
+      ],
+      "native_pixel_count": 41369600,
+      "field_attributes": {
+        "mask": {
+          "legend": [
+            "0 not-processed (non-zero QF)\n1 bowtie\n2 glint\n3 water\n4 clouds\n5 clear land\n6 unclassified pixel\n7 low confidence fire pixel\n8 nominal confidence fire pixel\n9 high confidence fire pixel"
+          ]
+        },
+        "algorithm_qa": {
+          "units": [
+            "bit field"
+          ]
+        },
+        "geolocation_qa": {
+          "flag_masks": [
+            1,
+            2,
+            4,
+            8
+          ],
+          "flag_meanings": "Input_invalid Pointing_bad Terrain_bad SolarAngle_bad"
+        }
+      },
+      "effective_fill_values": {
+        "mask": null,
+        "algorithm_qa": null,
+        "geolocation_qa": 255
+      },
+      "counts": {
+        "partition": {
+          "unassignable_invalid_coordinates": 0,
+          "unassignable_projection": 0,
+          "outside_aoi": 41352622,
+          "inside_aoi": 16978
+        },
+        "mask_partition": {
+          "known": 16978,
+          "fill": 0,
+          "unknown": 0
+        },
+        "mask_classes": {
+          "0:not_processed": 0,
+          "1:bowtie_deleted": 0,
+          "2:sun_glint": 3,
+          "3:water_no_detection": 28,
+          "4:cloud": 0,
+          "5:land_no_detection": 16947,
+          "6:unclassified": 0,
+          "7:low_confidence_detection": 0,
+          "8:nominal_confidence_detection": 0,
+          "9:high_confidence_detection": 0
+        },
+        "qa_partition": {
+          "decoded_no_reserved": 16978,
+          "reserved_bits_active": 0,
+          "fill": 0,
+          "unknown_layout": 0
+        },
+        "qa_active_bits": {
+          "9": 12,
+          "10": 4
+        },
+        "geo_partition": {
+          "zero": 16978
+        },
+        "geo_flags_raw": {
+          "0": 16978
+        },
+        "surface_states": {
+          "land_mask_class5": 16947,
+          "water_mask_class3": 28,
+          "unknown": 3
+        },
+        "local_screen_states": {
+          "local_candidate": 16975,
+          "excluded": 3
+        },
+        "local_exclusion_reasons": {
+          "sun_glint": 3
+        },
+        "local_unresolved_reasons": {},
+        "local_cautions": {},
+        "local_candidate_mask_classes": {
+          "5": 16947,
+          "3": 28
+        },
+        "local_candidate_surfaces": {
+          "land_mask_class5": 16947,
+          "water_mask_class3": 28
+        },
+        "qa_surface": {},
+        "qa_glint": {},
+        "qa_day_algorithm": {}
+      },
+      "all_exhaustive_partitions_reconciled": true,
+      "nonexclusive_counters": [
+        "qa_active_bits",
+        "local_exclusion_reasons",
+        "local_unresolved_reasons",
+        "local_cautions"
+      ],
+      "qa_unknown_layout_count": 0,
+      "qa_unknown_layout_note": "Supported uint32 layout; out-of-range or unsupported collections raise, reserved bits kept separate",
+      "global_quality": {
+        "automatic_flag": null,
+        "decision": "not_certified_by_this_inventory",
+        "local_screen_is_conditional_only": true
+      }
+    }
+  },
+  "gate1_passed": false,
+  "common_footprints_verified": false,
+  "pixel_exposure_times_verified": false,
+  "scientific_eligibility_certified": false,
+  "environment": {
+    "python": "3.10.0",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "packages": {
+      "numpy": "2.2.6",
+      "h5py": "3.16.0",
+      "pyhdf": "0.11.7",
+      "pyproj": "3.6.1"
+    },
+    "proj_version": "9.3.0"
+  },
+  "completed_utc": "2026-11-15T01:51:38.301197+00:00"
+}

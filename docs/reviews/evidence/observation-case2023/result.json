@@ -1,0 +1,480 @@
+{
+  "scope": "One metadata-selected additional case, not positive fire selection or validation",
+  "started_utc": "2026-11-15T01:59:39.995705+00:00",
+  "deadline_utc": "2026-11-15T02:14:00+00:00",
+  "previous_raw_bytes": 193748806,
+  "extra_cap_bytes": 209715200,
+  "total_cap_bytes": 419430400,
+  "downloaded_extra_bytes_including_failures": 195349494,
+  "files": {
+    "MYD14": {
+      "status": "downloaded",
+      "bytes": 444680,
+      "sha256": "b0192b581eb5320ebb3d8bc618d7828c917c66db280e79cbacf4a3c3839d8ebe",
+      "file": ".runtime/observation-case2023/raw/MYD14.A2023041.1830.061.2023042110133",
+      "hdf_magic": "0e03130100100000",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.hdf",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.hdf",
+          "to": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.hdf",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 3.942,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "MYD03": {
+      "status": "downloaded",
+      "bytes": 34766537,
+      "sha256": "dc25dc418fb7a8a7eeafda8a4c9d91f1fcd4e74036ba04bcad6bb7451b394034",
+      "file": ".runtime/observation-case2023/raw/MYD03.A2023041.1830.061.2023042152438.hdf",
+      "hdf_magic": "0e03130100100003",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/MYD03/MYD03.A2023041.1830.061.2023042152438.hdf",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023041.1830.061.2023042152438.hdf",
+          "to": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/MYD03/MYD03.A2023041.1830.061.2023042152438.hdf",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 7.131,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "VNP14IMG": {
+      "status": "downloaded",
+      "bytes": 2762282,
+      "sha256": "d1b61d212995b5052c3b437ec955c46b1504e6a8cf863159e8c22209e9ec5a8e",
+      "file": ".runtime/observation-case2023/raw/VNP14IMG.A2023041.1830.002.2024078170147",
+      "hdf_magic": "894844460d0a1a0a",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/VNP14IMG.002/VNP14IMG.A2023041.1830.002.2024078170147/VNP14IMG.A2023041.1830.002.2024078170147.nc",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VNP14IMG.002/VNP14IMG.A2023041.1830.002.2024078170147/VNP14IMG.A2023041.1830.002.2024078170147.nc",
+          "to": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/VNP14IMG.002/VNP14IMG.A2023041.1830.002.2024078170147/VNP14IMG.A2023041.1830.002.2024078170147.nc",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 4.39,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "VNP03IMG": {
+      "status": "downloaded",
+      "bytes": 157375995,
+      "sha256": "cf39c61441093d62420283fd1182eef28b4e5598cd9775a0e4867c1537cf959d",
+      "file": ".runtime/observation-case2023/raw/VNP03IMG.A2023041.1830.002.2023042020823.nc",
+      "hdf_magic": "894844460d0a1a0a",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/VNP03IMG/VNP03IMG.A2023041.1830.002.2023042020823.nc",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2023041.1830.002.2023042020823.nc",
+          "to": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/VNP03IMG/VNP03IMG.A2023041.1830.002.2023042020823.nc",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 15.639,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    }
+  },
+  "protocol_sha256": "0a24f378f5b033d04f83b582df92cec543c56f3771e5b9f09afc7cff136268b1",
+  "code_sha256": "c383312b9658655b2851ec9b307294429680b405bd4513b3762d086e3a6c89e9",
+  "helper_sha256": {
+    "observation_authenticated.py": "3132cfe2d12e1a261b98d342ee05b9f91678508a95042912ab4cf5f8f3c73726",
+    "observation_preflight.py": "55b72ca2fcce4d914e5cc3e3112786cb2620e505a6ef151992fb29b97b8f95e9",
+    "observation_native_qa.py": "37e1a6e3d6f7c21c916acaba3dbf151c73a747d1045b08d5f80f021dfbd6c0fe",
+    "observation_geotiming.py": "1d39b74932ca5fa8dea788686e6439391219116da612161dfe0d3cc4032c4d61",
+    "observation_qa.py": "a2a654f6ec15b1e54e2e1398bc9ed0ff3ef9ed5a523b952a1be735188bf13a45"
+  },
+  "gate1_passed": false,
+  "scientific_eligibility_certified": false,
+  "common_footprints_verified": false,
+  "pixel_exposure_times_verified": false,
+  "all_four_acquired": true,
+  "gate0_access_schema_passed": true,
+  "catalog_counts": {
+    "MYD14": 19,
+    "MYD03": 19,
+    "VNP14IMG": 23,
+    "VNP03IMG": 23
+  },
+  "selected_pair": {
+    "aqua_start": "2023-02-10T18:30:00.000Z",
+    "viirs_start": "2023-02-10T18:30:00.000Z",
+    "aqua_id": "MYD14.A2023041.1830.061.2023042110133",
+    "viirs_id": "VNP14IMG.A2023041.1830.002.2024078170147",
+    "minimum_gap_minutes": 0.0,
+    "maximum_gap_minutes": 6.0
+  },
+  "metadata_candidates": 1,
+  "inspection": {
+    "products": {
+      "MYD14": {
+        "native_shape": [
+          2040,
+          1354
+        ],
+        "native_pixel_count": 2762160,
+        "field_attributes": {
+          "mask": {
+            "valid_range": [
+              0,
+              9
+            ],
+            "legend": "Classes:\n0 missing input data\n1 not processed (obsolete)\n2 not processed (obsolete)\n3 non-fire water\n4 cloud\n5 non-fire land\n6 unknown\n7 fire (low confidence)\n8 fire (nominal confidence)\n9 fire (high confidence)"
+          },
+          "algorithm_qa": {
+            "units": "bit field"
+          },
+          "geolocation_qa": {
+            "_FillValue": 255
+          }
+        },
+        "effective_fill_values": {
+          "mask": null,
+          "algorithm_qa": null,
+          "geolocation_qa": 255
+        },
+        "counts": {
+          "partition": {
+            "unassignable_invalid_coordinates": 0,
+            "unassignable_projection": 0,
+            "outside_aoi": 2760853,
+            "inside_aoi": 1307
+          },
+          "mask_partition": {
+            "known": 1307,
+            "fill": 0,
+            "unknown": 0
+          },
+          "mask_classes": {
+            "0:missing_input": 0,
+            "1:obsolete_not_processed": 0,
+            "2:obsolete_not_processed": 0,
+            "3:water_no_detection": 8,
+            "4:cloud": 0,
+            "5:land_no_detection": 1293,
+            "6:unknown": 0,
+            "7:low_confidence_detection": 0,
+            "8:nominal_confidence_detection": 3,
+            "9:high_confidence_detection": 3
+          },
+          "qa_partition": {
+            "decoded_no_reserved": 1307,
+            "reserved_bits_active": 0,
+            "fill": 0,
+            "unknown_layout": 0
+          },
+          "qa_active_bits": {
+            "1": 1299,
+            "2": 1303,
+            "4": 1307,
+            "0": 5,
+            "5": 8,
+            "8": 8,
+            "12": 8,
+            "15": 8,
+            "14": 7,
+            "13": 6,
+            "16": 1
+          },
+          "geo_partition": {
+            "zero": 1307
+          },
+          "geo_flags_raw": {
+            "0": 1307
+          },
+          "surface_states": {
+            "land": 1299,
+            "coast": 5,
+            "water": 3
+          },
+          "local_screen_states": {
+            "local_candidate": 1307
+          },
+          "local_exclusion_reasons": {},
+          "local_unresolved_reasons": {},
+          "local_cautions": {},
+          "local_candidate_mask_classes": {
+            "5": 1293,
+            "3": 8,
+            "9": 3,
+            "8": 3
+          },
+          "local_candidate_surfaces": {
+            "land": 1299,
+            "coast": 5,
+            "water": 3
+          },
+          "qa_surface": {
+            "land": 1299,
+            "coast": 5,
+            "water": 3
+          },
+          "qa_glint": {
+            "0": 1307
+          },
+          "qa_day_algorithm": {
+            "True": 1307
+          }
+        },
+        "all_exhaustive_partitions_reconciled": true,
+        "nonexclusive_counters": [
+          "qa_active_bits",
+          "local_exclusion_reasons",
+          "local_unresolved_reasons",
+          "local_cautions"
+        ],
+        "qa_unknown_layout_count": 0,
+        "qa_unknown_layout_note": "Supported uint32 layout; out-of-range or unsupported collections raise, reserved bits kept separate",
+        "global_quality": {
+          "automatic_flag": "Suspect",
+          "explanation": "not being investigated",
+          "decision": "unresolved_global_eligibility",
+          "local_candidates_conditional_only": true
+        }
+      },
+      "VNP14IMG": {
+        "native_shape": [
+          6464,
+          6400
+        ],
+        "native_pixel_count": 41369600,
+        "field_attributes": {
+          "mask": {
+            "legend": [
+              "0 not-processed (non-zero QF)\n1 bowtie\n2 glint\n3 water\n4 clouds\n5 clear land\n6 unclassified pixel\n7 low confidence fire pixel\n8 nominal confidence fire pixel\n9 high confidence fire pixel"
+            ]
+          },
+          "algorithm_qa": {
+            "units": [
+              "bit field"
+            ]
+          },
+          "geolocation_qa": {
+            "flag_masks": [
+              1,
+              2,
+              4,
+              8
+            ],
+            "flag_meanings": "Input_invalid Pointing_bad Terrain_bad SolarAngle_bad"
+          }
+        },
+        "effective_fill_values": {
+          "mask": null,
+          "algorithm_qa": null,
+          "geolocation_qa": 255
+        },
+        "counts": {
+          "partition": {
+            "unassignable_invalid_coordinates": 0,
+            "unassignable_projection": 0,
+            "outside_aoi": 41354055,
+            "inside_aoi": 15545
+          },
+          "mask_partition": {
+            "known": 15545,
+            "fill": 0,
+            "unknown": 0
+          },
+          "mask_classes": {
+            "0:not_processed": 0,
+            "1:bowtie_deleted": 0,
+            "2:sun_glint": 1,
+            "3:water_no_detection": 24,
+            "4:cloud": 0,
+            "5:land_no_detection": 15504,
+            "6:unclassified": 0,
+            "7:low_confidence_detection": 3,
+            "8:nominal_confidence_detection": 11,
+            "9:high_confidence_detection": 2
+          },
+          "qa_partition": {
+            "decoded_no_reserved": 15545,
+            "reserved_bits_active": 0,
+            "fill": 0,
+            "unknown_layout": 0
+          },
+          "qa_active_bits": {
+            "9": 27,
+            "10": 17,
+            "11": 16,
+            "12": 16,
+            "13": 16,
+            "14": 16,
+            "15": 14,
+            "17": 6,
+            "8": 12,
+            "6": 12
+          },
+          "geo_partition": {
+            "zero": 15545
+          },
+          "geo_flags_raw": {
+            "0": 15545
+          },
+          "surface_states": {
+            "land_mask_class5": 15504,
+            "water_mask_class3": 24,
+            "unknown": 1,
+            "detection_surface_unknown": 16
+          },
+          "local_screen_states": {
+            "local_candidate": 15532,
+            "excluded": 13
+          },
+          "local_exclusion_reasons": {
+            "sun_glint": 1,
+            "input_quality_non_nominal": 12
+          },
+          "local_unresolved_reasons": {},
+          "local_cautions": {
+            "requires_separate_land_water_mask": 16
+          },
+          "local_candidate_mask_classes": {
+            "5": 15500,
+            "3": 24,
+            "8": 6,
+            "7": 2
+          },
+          "local_candidate_surfaces": {
+            "land_mask_class5": 15500,
+            "water_mask_class3": 24,
+            "detection_surface_unknown": 8
+          },
+          "qa_surface": {},
+          "qa_glint": {},
+          "qa_day_algorithm": {}
+        },
+        "all_exhaustive_partitions_reconciled": true,
+        "nonexclusive_counters": [
+          "qa_active_bits",
+          "local_exclusion_reasons",
+          "local_unresolved_reasons",
+          "local_cautions"
+        ],
+        "qa_unknown_layout_count": 0,
+        "qa_unknown_layout_note": "Supported uint32 layout; out-of-range or unsupported collections raise, reserved bits kept separate",
+        "global_quality": {
+          "automatic_flag": null,
+          "decision": "not_certified_by_inventory",
+          "local_candidates_conditional_only": true
+        }
+      }
+    },
+    "geotiming": {
+      "selection_counts": {
+        "Aqua": {
+          "native_centers_total": 2762160,
+          "coordinate_invalid": 0,
+          "geo_flag_fill": 0,
+          "geo_flag_nonzero_nonfill": 0,
+          "projection_invalid_among_valid_coordinates_geo0": 0,
+          "geo0_centers_selected": 1307
+        },
+        "VIIRS": {
+          "native_centers_total": 41369600,
+          "coordinate_invalid": 0,
+          "geo_flag_fill": 0,
+          "geo_flag_nonzero_nonfill": 0,
+          "projection_invalid_among_valid_coordinates_geo0": 0,
+          "geo0_centers_selected": 16157
+        }
+      },
+      "nearest_distance_m": {
+        "count": 1307,
+        "quantiles": {
+          "0": 4.808204052971387,
+          "0.25": 111.90958522891859,
+          "0.5": 162.9684580888114,
+          "0.75": 201.10614980816717,
+          "1": 286.94855934535843
+        }
+      },
+      "reference_offsets": {
+        "center_reference": {
+          "definition": "Aqua_minus_SNPP native TAI93 scan-reference seconds; NOT pixel time",
+          "signed_seconds": {
+            "count": 1307,
+            "quantiles": {
+              "0": 5.0927311182022095,
+              "0.25": 6.569849133491516,
+              "0.5": 7.1741496324539185,
+              "0.75": 7.7448025941848755,
+              "1": 8.95342469215393
+            }
+          },
+          "absolute_seconds": {
+            "count": 1307,
+            "quantiles": {
+              "0": 5.0927311182022095,
+              "0.25": 6.569849133491516,
+              "0.5": 7.1741496324539185,
+              "0.75": 7.7448025941848755,
+              "1": 8.95342469215393
+            }
+          }
+        },
+        "start_reference": {
+          "definition": "Aqua_minus_SNPP native TAI93 scan-reference seconds; NOT pixel time",
+          "signed_seconds": {
+            "count": 1307,
+            "quantiles": {
+              "0": 5.144124984741211,
+              "0.25": 6.621243000030518,
+              "0.5": 7.225540041923523,
+              "0.75": 7.79619300365448,
+              "1": 9.004814982414246
+            }
+          },
+          "absolute_seconds": {
+            "count": 1307,
+            "quantiles": {
+              "0": 5.144124984741211,
+              "0.25": 6.621243000030518,
+              "0.5": 7.225540041923523,
+              "0.75": 7.79619300365448,
+              "1": 9.004814982414246
+            }
+          }
+        }
+      },
+      "matched_Aqua_seeds": 1307,
+      "unmatched_Aqua_seeds": 0,
+      "VIIRS_centers_reused": 0,
+      "distinct_VIIRS_used": 1307,
+      "matches_outside_primary_square": 8,
+      "associations_unknown_reference_time": 0
+    },
+    "input_pointer_exact": true,
+    "environment": {
+      "packages": {
+        "numpy": "2.2.6",
+        "h5py": "3.16.0",
+        "pyhdf": "0.11.7",
+        "pyproj": "3.6.1",
+        "certifi": "2026.10.23"
+      },
+      "proj_version": "9.3.0"
+    }
+  },
+  "status": "technical_inventory_complete_no_G1",
+  "completed_utc": "2026-11-15T02:00:38.100796+00:00",
+  "cumulative_transferred_raw_bytes": 389098300
+}

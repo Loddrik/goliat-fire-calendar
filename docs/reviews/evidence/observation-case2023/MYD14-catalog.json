@@ -1,0 +1,3107 @@
+{
+  "collection": {
+    "feed": {
+      "updated": "2026-11-15T01:59:40.642Z",
+      "id": "https://cmr.earthdata.nasa.gov:443/search/collections.json?concept_id=C2278858993-LPCLOUD",
+      "title": "ECHO dataset metadata",
+      "entry": [
+        {
+          "processing_level_id": "2",
+          "cloud_hosted": true,
+          "boxes": [
+            "-90 -180 90 180"
+          ],
+          "has_combine": false,
+          "time_start": "2002-07-04T00:00:00.000Z",
+          "version_id": "061",
+          "updated": "2021-02-11T00:00:00.000Z",
+          "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+          "entry_id": "MYD14_061",
+          "has_spatial_subsetting": false,
+          "has_transforms": false,
+          "associations": {
+            "variables": [
+              "V3166584280-LPCLOUD",
+              "V3166584567-LPCLOUD",
+              "V3166584420-LPCLOUD",
+              "V3166584262-LPCLOUD",
+              "V3166584331-LPCLOUD",
+              "V3166584455-LPCLOUD",
+              "V3166584359-LPCLOUD",
+              "V3166584560-LPCLOUD",
+              "V3166584409-LPCLOUD",
+              "V3166584294-LPCLOUD",
+              "V3166584537-LPCLOUD",
+              "V3166584465-LPCLOUD",
+              "V3166584530-LPCLOUD",
+              "V3166584585-LPCLOUD",
+              "V3166584577-LPCLOUD",
+              "V3166584245-LPCLOUD",
+              "V3166584346-LPCLOUD",
+              "V3166584445-LPCLOUD",
+              "V3166584389-LPCLOUD",
+              "V3166584398-LPCLOUD",
+              "V3166584383-LPCLOUD",
+              "V3166584368-LPCLOUD",
+              "V3166584547-LPCLOUD",
+              "V3166584475-LPCLOUD",
+              "V3166584429-LPCLOUD",
+              "V3166584311-LPCLOUD",
+              "V3166584490-LPCLOUD",
+              "V3166584502-LPCLOUD",
+              "V3166584517-LPCLOUD",
+              "V3166584591-LPCLOUD"
+            ],
+            "citations": [
+              "CIT4076061718-ESDIS",
+              "CIT4076047754-ESDIS",
+              "CIT4076042362-ESDIS",
+              "CIT4076018277-ESDIS",
+              "CIT3804248965-ESDIS",
+              "CIT4076052222-ESDIS",
+              "CIT4076057059-ESDIS",
+              "CIT4076020657-ESDIS",
+              "CIT3804341400-ESDIS",
+              "CIT4076021910-ESDIS",
+              "CIT3804236104-ESDIS",
+              "CIT4076048385-ESDIS",
+              "CIT3804038982-ESDIS",
+              "CIT3804029051-ESDIS",
+              "CIT4076048653-ESDIS",
+              "CIT4076051654-ESDIS",
+              "CIT4076041808-ESDIS",
+              "CIT4076057912-ESDIS",
+              "CIT4076021757-ESDIS",
+              "CIT4076053270-ESDIS",
+              "CIT4076038843-ESDIS",
+              "CIT4076043196-ESDIS",
+              "CIT4076019421-ESDIS",
+              "CIT3804254768-ESDIS",
+              "CIT3804314502-ESDIS",
+              "CIT4076042232-ESDIS",
+              "CIT4076059326-ESDIS",
+              "CIT4076058737-ESDIS",
+              "CIT4076049347-ESDIS",
+              "CIT3804319139-ESDIS",
+              "CIT3804014745-ESDIS",
+              "CIT3804240156-ESDIS",
+              "CIT4076054949-ESDIS",
+              "CIT4076021650-ESDIS",
+              "CIT3857554713-ESDIS",
+              "CIT4076043706-ESDIS",
+              "CIT3804188924-ESDIS",
+              "CIT4076008579-ESDIS",
+              "CIT3804192654-ESDIS",
+              "CIT3804081267-ESDIS",
+              "CIT4076043468-ESDIS",
+              "CIT4076022689-ESDIS",
+              "CIT4076056237-ESDIS",
+              "CIT3963288143-ESDIS",
+              "CIT3803970618-ESDIS",
+              "CIT4076058855-ESDIS",
+              "CIT3803961874-ESDIS",
+              "CIT4076010719-ESDIS",
+              "CIT4076020437-ESDIS",
+              "CIT4076015488-ESDIS",
+              "CIT4321026906-ESDIS",
+              "CIT4076042214-ESDIS",
+              "CIT4076007248-ESDIS",
+              "CIT4076045600-ESDIS",
+              "CIT4076034514-ESDIS",
+              "CIT4076053828-ESDIS",
+              "CIT4076007051-ESDIS",
+              "CIT4076022862-ESDIS",
+              "CIT4076058877-ESDIS",
+              "CIT4076064643-ESDIS",
+              "CIT4076051804-ESDIS",
+              "CIT4076028450-ESDIS",
+              "CIT3804326330-ESDIS"
+            ]
+          },
+          "has_variables": true,
+          "data_center": "LPCLOUD",
+          "short_name": "MYD14",
+          "organizations": [
+            "LP DAAC",
+            "NASA/GSFC/SED/ESD/TISL/MODAPS"
+          ],
+          "title": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+          "coordinate_system": "CARTESIAN",
+          "summary": "The Aqua Moderate Resolution Imaging Spectroradiometer (MODIS) Thermal Anomalies and Fire (MYD14) Version 6.1 product is produced daily in 5-minute temporal satellite increments (swaths). The MYD14 product is used to generate all of the higher level fire products, but can also be used to identify fires and other thermal anomalies, such as volcanoes. Each swath of data is approximately 2,030 kilometers along track (long), and 2,300 kilometers across track (wide). \n\nKnown Issues\n* For complete information about known issues please refer to the [MODIS/VIIRS Land Quality Assessment website](https://landweb.modaps.eosdis.nasa.gov/knownissue?sensor=MODIS&sat=Aqua&as=61).",
+          "service_features": {
+            "opendap": {
+              "has_formats": false,
+              "has_variables": false,
+              "has_transforms": false,
+              "has_combine": false,
+              "has_spatial_subsetting": false,
+              "has_temporal_subsetting": false
+            },
+            "esi": {
+              "has_formats": false,
+              "has_variables": false,
+              "has_transforms": false,
+              "has_combine": false,
+              "has_spatial_subsetting": false,
+              "has_temporal_subsetting": false
+            },
+            "harmony": {
+              "has_formats": false,
+              "has_variables": false,
+              "has_transforms": false,
+              "has_combine": false,
+              "has_spatial_subsetting": false,
+              "has_temporal_subsetting": false
+            }
+          },
+          "orbit_parameters": {},
+          "id": "C2278858993-LPCLOUD",
+          "has_formats": false,
+          "consortiums": [
+            "GEOSS",
+            "EOSDIS"
+          ],
+          "original_format": "UMM_JSON",
+          "collection_data_type": "SCIENCE_QUALITY",
+          "archive_center": "LP DAAC",
+          "has_temporal_subsetting": false,
+          "browse_flag": true,
+          "platforms": [
+            "Aqua"
+          ],
+          "association_details": {
+            "variables": [
+              {
+                "concept_id": "V3166584280-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584567-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584420-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584262-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584331-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584455-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584359-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584560-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584409-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584294-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584537-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584465-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584530-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584585-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584577-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584245-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584346-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584445-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584389-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584398-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584383-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584368-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584547-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584475-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584429-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584311-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584490-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584502-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584517-LPCLOUD"
+              },
+              {
+                "concept_id": "V3166584591-LPCLOUD"
+              }
+            ],
+            "citations": [
+              {
+                "concept_id": "CIT4076061718-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076047754-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076042362-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076018277-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804248965-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076052222-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076057059-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076020657-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804341400-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076021910-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804236104-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076048385-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804038982-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804029051-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076048653-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076051654-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076041808-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076057912-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076021757-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076053270-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076038843-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076043196-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076019421-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804254768-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804314502-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076042232-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076059326-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076058737-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076049347-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804319139-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804014745-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804240156-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076054949-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076021650-ESDIS"
+              },
+              {
+                "concept_id": "CIT3857554713-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076043706-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804188924-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076008579-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804192654-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804081267-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076043468-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076022689-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076056237-ESDIS"
+              },
+              {
+                "concept_id": "CIT3963288143-ESDIS"
+              },
+              {
+                "concept_id": "CIT3803970618-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076058855-ESDIS"
+              },
+              {
+                "concept_id": "CIT3803961874-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076010719-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076020437-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076015488-ESDIS"
+              },
+              {
+                "concept_id": "CIT4321026906-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076042214-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076007248-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076045600-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076034514-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076053828-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076007051-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076022862-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076058877-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076064643-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076051804-ESDIS"
+              },
+              {
+                "concept_id": "CIT4076028450-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804326330-ESDIS"
+              }
+            ]
+          },
+          "online_access_flag": true,
+          "links": [
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+              "hreflang": "en-US",
+              "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+              "hreflang": "en-US",
+              "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+            },
+            {
+              "length": "307.9KB",
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+              "hreflang": "en-US",
+              "href": "https://search.earthdata.nasa.gov/search/granules"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://landweb.modaps.eosdis.nasa.gov"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+              "hreflang": "en-US",
+              "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2024199.0930.061.2024199151323/BROWSE.MYD14.A2024199.0930.061.2024199151323.1.jpg"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+              "hreflang": "en-US",
+              "href": "https://worldview.earthdata.nasa.gov/images/layers/previews/geographic/MODIS_Aqua_Thermal_Anomalies_All.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "granules": [
+    {
+      "producer_granule_id": "MYD14.A2023034.0625.061.2023034141311",
+      "time_start": "2023-02-03T06:25:00.000Z",
+      "cloud_cover": "0.0",
+      "updated": "2023-02-05T02:58:50.034Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-03T06:18:13.953Z",
+          "equator_crossing_longitude": "-68.4416977819513",
+          "orbit_number": "110385"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023034.0625.061.2023034141311",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-03T06:30:00.000Z",
+      "id": "G2602784644-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.213492",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-39.6362873 -92.6624574 -44.0141255 -64.5292925 -25.8020344 -62.0377155 -22.4300892 -85.1694451 -39.6362873 -92.6624574"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023034.0625.061.2023034141311.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023034.0625.061.2023034141311/MYD14.A2023034.0625.061.2023034141311.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023034.0625.061.2023034141311/MYD14.A2023034.0625.061.2023034141311.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023034.0625.061.2023034141311.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023034.0625.061.2023034141311/MYD14.A2023034.0625.061.2023034141311.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023034.0625.061.2023034141311/MYD14.A2023034.0625.061.2023034141311.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023034.0625.061.2023034141311.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023034.0625.061.2023034141311/BROWSE.MYD14.A2023034.0625.061.2023034141311.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023034.0625.061.2023034141311/BROWSE.MYD14.A2023034.0625.061.2023034141311.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023034.1825.061.2023035122808",
+      "time_start": "2023-02-03T18:25:00.000Z",
+      "cloud_cover": "18.0",
+      "updated": "2023-02-06T06:44:52.180Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-03T17:50:10.090Z",
+          "equator_crossing_longitude": "118.577228519613",
+          "orbit_number": "110392"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023034.1825.061.2023035122808",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-03T18:30:00.000Z",
+      "id": "G2603397210-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.415709",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-32.2510237 -52.732695 -35.7299846 -78.5655246 -53.9689647 -77.3546618 -49.0617391 -43.1889978 -32.2510237 -52.732695"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023034.1825.061.2023035122808.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023034.1825.061.2023035122808/MYD14.A2023034.1825.061.2023035122808.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023034.1825.061.2023035122808/MYD14.A2023034.1825.061.2023035122808.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023034.1825.061.2023035122808.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023034.1825.061.2023035122808/MYD14.A2023034.1825.061.2023035122808.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023034.1825.061.2023035122808/MYD14.A2023034.1825.061.2023035122808.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023034.1825.061.2023035122808.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023034.1825.061.2023035122808/BROWSE.MYD14.A2023034.1825.061.2023035122808.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023034.1825.061.2023035122808/BROWSE.MYD14.A2023034.1825.061.2023035122808.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023035.0530.061.2023035123440",
+      "time_start": "2023-02-04T05:30:00.000Z",
+      "cloud_cover": "4.0",
+      "updated": "2023-02-06T06:48:43.314Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-04T05:22:06.090Z",
+          "equator_crossing_longitude": "-54.4010118977709",
+          "orbit_number": "110399"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023035.0530.061.2023035123440",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-04T05:35:00.000Z",
+      "id": "G2603398351-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.322851",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-43.3546334 -80.8981732 -48.0469264 -50.819115 -29.8201441 -48.5081247 -26.3315183 -72.5144841 -43.3546334 -80.8981732"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023035.0530.061.2023035123440.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023035.0530.061.2023035123440/MYD14.A2023035.0530.061.2023035123440.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023035.0530.061.2023035123440/MYD14.A2023035.0530.061.2023035123440.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023035.0530.061.2023035123440.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023035.0530.061.2023035123440/MYD14.A2023035.0530.061.2023035123440.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023035.0530.061.2023035123440/MYD14.A2023035.0530.061.2023035123440.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023035.0530.061.2023035123440.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023035.0530.061.2023035123440/BROWSE.MYD14.A2023035.0530.061.2023035123440.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023035.0530.061.2023035123440/BROWSE.MYD14.A2023035.0530.061.2023035123440.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023035.1910.061.2023036104025",
+      "time_start": "2023-02-04T19:10:00.000Z",
+      "cloud_cover": "32.0",
+      "updated": "2023-02-06T15:20:52.903Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-04T18:32:52.995Z",
+          "equator_crossing_longitude": "107.907464425899",
+          "orbit_number": "110407"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023035.1910.061.2023036104025",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-04T19:15:00.000Z",
+      "id": "G2603557999-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.366315",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-24.4300569 -66.5786982 -27.6348907 -90.274143 -45.8578156 -88.4290862 -41.6384846 -59.1281601 -24.4300569 -66.5786982"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023035.1910.061.2023036104025.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023035.1910.061.2023036104025/MYD14.A2023035.1910.061.2023036104025.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023035.1910.061.2023036104025/MYD14.A2023035.1910.061.2023036104025.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023035.1910.061.2023036104025.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023035.1910.061.2023036104025/MYD14.A2023035.1910.061.2023036104025.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023035.1910.061.2023036104025/MYD14.A2023035.1910.061.2023036104025.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023035.1910.061.2023036104026.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023035.1910.061.2023036104025/BROWSE.MYD14.A2023035.1910.061.2023036104026.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023035.1910.061.2023036104025/BROWSE.MYD14.A2023035.1910.061.2023036104026.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023036.0610.061.2023036142840",
+      "time_start": "2023-02-05T06:10:00.000Z",
+      "cloud_cover": "12.0",
+      "updated": "2023-02-06T16:24:59.422Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-05T06:04:48.939Z",
+          "equator_crossing_longitude": "-65.070869421515",
+          "orbit_number": "110414"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023036.0610.061.2023036142840",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-05T06:15:00.000Z",
+      "id": "G2603584081-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.236352",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-34.2437111 -86.4890882 -38.2548414 -60.5838043 -20.0691565 -57.8678651 -16.8284681 -80.0149885 -34.2437111 -86.4890882"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023036.0610.061.2023036142840.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.0610.061.2023036142840/MYD14.A2023036.0610.061.2023036142840.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.0610.061.2023036142840/MYD14.A2023036.0610.061.2023036142840.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023036.0610.061.2023036142840.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.0610.061.2023036142840/MYD14.A2023036.0610.061.2023036142840.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.0610.061.2023036142840/MYD14.A2023036.0610.061.2023036142840.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023036.0610.061.2023036142840.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023036.0610.061.2023036142840/BROWSE.MYD14.A2023036.0610.061.2023036142840.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023036.0610.061.2023036142840/BROWSE.MYD14.A2023036.0610.061.2023036142840.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023036.0615.061.2023036142842",
+      "time_start": "2023-02-05T06:15:00.000Z",
+      "cloud_cover": "9.0",
+      "updated": "2023-02-06T16:24:51.377Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-05T06:04:48.939Z",
+          "equator_crossing_longitude": "-65.070869421515",
+          "orbit_number": "110414"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023036.0615.061.2023036142842",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-05T06:20:00.000Z",
+      "id": "G2603584775-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.322392",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-50.7628405 -97.357977 -56.3049591 -61.8936118 -37.9682325 -60.0659359 -34.1606286 -86.4446696 -50.7628405 -97.357977"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023036.0615.061.2023036142842.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.0615.061.2023036142842/MYD14.A2023036.0615.061.2023036142842.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.0615.061.2023036142842/MYD14.A2023036.0615.061.2023036142842.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023036.0615.061.2023036142842.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.0615.061.2023036142842/MYD14.A2023036.0615.061.2023036142842.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.0615.061.2023036142842/MYD14.A2023036.0615.061.2023036142842.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023036.0615.061.2023036142842.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023036.0615.061.2023036142842/BROWSE.MYD14.A2023036.0615.061.2023036142842.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023036.0615.061.2023036142842/BROWSE.MYD14.A2023036.0615.061.2023036142842.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023036.1815.061.2023037103050",
+      "time_start": "2023-02-05T18:15:00.000Z",
+      "cloud_cover": "13.0",
+      "updated": "2023-02-06T18:00:52.860Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-05T17:36:44.941Z",
+          "equator_crossing_longitude": "121.94854418969",
+          "orbit_number": "110421"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023036.1815.061.2023037103050",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-05T18:20:00.000Z",
+      "id": "G2603617901-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.46212",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-20.430192 -53.9368671 -23.5402166 -76.8250679 -41.7492562 -74.7256633 -37.7875995 -47.2567451 -20.430192 -53.9368671"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023036.1815.061.2023037103050.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.1815.061.2023037103050/MYD14.A2023036.1815.061.2023037103050.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.1815.061.2023037103050/MYD14.A2023036.1815.061.2023037103050.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023036.1815.061.2023037103050.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.1815.061.2023037103050/MYD14.A2023036.1815.061.2023037103050.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.1815.061.2023037103050/MYD14.A2023036.1815.061.2023037103050.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023036.1815.061.2023037103050.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023036.1815.061.2023037103050/BROWSE.MYD14.A2023036.1815.061.2023037103050.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023036.1815.061.2023037103050/BROWSE.MYD14.A2023036.1815.061.2023037103050.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023036.1950.061.2023037103122",
+      "time_start": "2023-02-05T19:50:00.000Z",
+      "cloud_cover": "52.0",
+      "updated": "2023-02-06T18:01:13.025Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-05T19:15:35.800Z",
+          "equator_crossing_longitude": "97.2382798637938",
+          "orbit_number": "110422"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023036.1950.061.2023037103122",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-05T19:55:00.000Z",
+      "id": "G2603618390-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.368415",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-33.6838031 -73.4102261 -37.2283665 -99.7322145 -55.4679552 -98.6680729 -50.3995522 -63.3684483 -33.6838031 -73.4102261"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023036.1950.061.2023037103122.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.1950.061.2023037103122/MYD14.A2023036.1950.061.2023037103122.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.1950.061.2023037103122/MYD14.A2023036.1950.061.2023037103122.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023036.1950.061.2023037103122.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023036.1950.061.2023037103122/MYD14.A2023036.1950.061.2023037103122.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023036.1950.061.2023037103122/MYD14.A2023036.1950.061.2023037103122.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023036.1950.061.2023037103122.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023036.1950.061.2023037103122/BROWSE.MYD14.A2023036.1950.061.2023037103122.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023036.1950.061.2023037103122/BROWSE.MYD14.A2023036.1950.061.2023037103122.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023037.0515.061.2023049153959",
+      "time_start": "2023-02-06T05:15:00.000Z",
+      "cloud_cover": "5.0",
+      "updated": "2023-02-18T17:46:33.224Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-06T05:08:40.816Z",
+          "equator_crossing_longitude": "-51.0289963924174",
+          "orbit_number": "110428"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023037.0515.061.2023049153959",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-06T05:20:00.000Z",
+      "id": "G2614616071-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.330347",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-38.1403437 -74.3810728 -42.4049027 -46.9697679 -24.1922057 -44.4096515 -20.8749887 -67.207137 -38.1403437 -74.3810728"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023037.0515.061.2023049153959.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.0515.061.2023049153959/MYD14.A2023037.0515.061.2023049153959.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.0515.061.2023049153959/MYD14.A2023037.0515.061.2023049153959.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023037.0515.061.2023049153959.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.0515.061.2023049153959/MYD14.A2023037.0515.061.2023049153959.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.0515.061.2023049153959/MYD14.A2023037.0515.061.2023049153959.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023037.0515.061.2023049154000.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023037.0515.061.2023049153959/BROWSE.MYD14.A2023037.0515.061.2023049154000.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023037.0515.061.2023049153959/BROWSE.MYD14.A2023037.0515.061.2023049154000.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023037.0655.061.2023049153332",
+      "time_start": "2023-02-06T06:55:00.000Z",
+      "cloud_cover": "3.0",
+      "updated": "2023-02-18T17:22:03.765Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-06T06:47:31.698Z",
+          "equator_crossing_longitude": "-75.7403313752346",
+          "orbit_number": "110429"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023037.0655.061.2023049153332",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-06T07:00:00.000Z",
+      "id": "G2614602071-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.166975",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-41.9749775 -101.3544697 -46.5379589 -72.0541096 -28.3219382 -69.6710817 -24.8740889 -93.3208114 -41.9749775 -101.3544697"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023037.0655.061.2023049153332.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.0655.061.2023049153332/MYD14.A2023037.0655.061.2023049153332.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.0655.061.2023049153332/MYD14.A2023037.0655.061.2023049153332.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023037.0655.061.2023049153332.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.0655.061.2023049153332/MYD14.A2023037.0655.061.2023049153332.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.0655.061.2023049153332/MYD14.A2023037.0655.061.2023049153332.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023037.0655.061.2023049153332.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023037.0655.061.2023049153332/BROWSE.MYD14.A2023037.0655.061.2023049153332.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023037.0655.061.2023049153332/BROWSE.MYD14.A2023037.0655.061.2023049153332.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023037.1855.061.2023049151929",
+      "time_start": "2023-02-06T18:55:00.000Z",
+      "cloud_cover": "26.0",
+      "updated": "2023-02-18T16:58:23.610Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-06T18:19:27.569Z",
+          "equator_crossing_longitude": "111.280086718017",
+          "orbit_number": "110436"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023037.1855.061.2023049151929",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-06T19:00:00.000Z",
+      "id": "G2614590326-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.415112",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-29.833947 -61.0822097 -33.2151257 -86.1681811 -51.4510635 -84.7353744 -46.7865417 -52.2869629 -29.833947 -61.0822097"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023037.1855.061.2023049151929.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.1855.061.2023049151929/MYD14.A2023037.1855.061.2023049151929.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.1855.061.2023049151929/MYD14.A2023037.1855.061.2023049151929.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023037.1855.061.2023049151929.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023037.1855.061.2023049151929/MYD14.A2023037.1855.061.2023049151929.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023037.1855.061.2023049151929/MYD14.A2023037.1855.061.2023049151929.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023037.1855.061.2023049151930.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023037.1855.061.2023049151929/BROWSE.MYD14.A2023037.1855.061.2023049151930.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023037.1855.061.2023049151929/BROWSE.MYD14.A2023037.1855.061.2023049151930.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023038.0600.061.2023038232746",
+      "time_start": "2023-02-07T06:00:00.000Z",
+      "cloud_cover": "12.0",
+      "updated": "2023-02-07T23:37:59.441Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-07T05:51:23.340Z",
+          "equator_crossing_longitude": "-61.6973118147876",
+          "orbit_number": "110443"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023038.0600.061.2023038232746",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-07T06:05:00.000Z",
+      "id": "G2604624745-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.315436",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-45.6807333 -89.8048518 -50.6020496 -58.288342 -32.3677766 -56.1081095 -28.7921243 -80.7593448 -45.6807333 -89.8048518"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023038.0600.061.2023038232746.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023038.0600.061.2023038232746/MYD14.A2023038.0600.061.2023038232746.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023038.0600.061.2023038232746/MYD14.A2023038.0600.061.2023038232746.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023038.0600.061.2023038232746.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023038.0600.061.2023038232746/MYD14.A2023038.0600.061.2023038232746.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023038.0600.061.2023038232746/MYD14.A2023038.0600.061.2023038232746.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023038.0600.061.2023038232746.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023038.0600.061.2023038232746/BROWSE.MYD14.A2023038.0600.061.2023038232746.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023038.0600.061.2023038232746/BROWSE.MYD14.A2023038.0600.061.2023038232746.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023038.1940.061.2023039114600",
+      "time_start": "2023-02-07T19:40:00.000Z",
+      "cloud_cover": "26.0",
+      "updated": "2023-02-08T21:06:39.906Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-07T19:02:09.971Z",
+          "equator_crossing_longitude": "100.61271136203",
+          "orbit_number": "110451"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023038.1940.061.2023039114600",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-07T19:45:00.000Z",
+      "id": "G2605343585-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.29065",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-21.9448344 -74.7657647 -25.0847209 -97.9306409 -43.3021752 -95.9229052 -39.2510322 -67.813365 -21.9448344 -74.7657647"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023038.1940.061.2023039114600.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023038.1940.061.2023039114600/MYD14.A2023038.1940.061.2023039114600.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023038.1940.061.2023039114600/MYD14.A2023038.1940.061.2023039114600.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023038.1940.061.2023039114600.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023038.1940.061.2023039114600/MYD14.A2023038.1940.061.2023039114600.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023038.1940.061.2023039114600/MYD14.A2023038.1940.061.2023039114600.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023038.1940.061.2023039114600.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023038.1940.061.2023039114600/BROWSE.MYD14.A2023038.1940.061.2023039114600.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023038.1940.061.2023039114600/BROWSE.MYD14.A2023038.1940.061.2023039114600.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023039.0640.061.2023039142930",
+      "time_start": "2023-02-08T06:40:00.000Z",
+      "cloud_cover": "2.0",
+      "updated": "2023-02-08T22:19:12.785Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-08T06:34:05.637Z",
+          "equator_crossing_longitude": "-72.3646631648523",
+          "orbit_number": "110458"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023039.0640.061.2023039142930",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-08T06:45:00.000Z",
+      "id": "G2605404679-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.180733",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-36.7684994 -95.0266085 -40.9314758 -68.1825567 -22.6524868 -65.5460889 -19.3509304 -88.0827371 -36.7684994 -95.0266085"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023039.0640.061.2023039142930.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023039.0640.061.2023039142930/MYD14.A2023039.0640.061.2023039142930.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023039.0640.061.2023039142930/MYD14.A2023039.0640.061.2023039142930.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023039.0640.061.2023039142930.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023039.0640.061.2023039142930/MYD14.A2023039.0640.061.2023039142930.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023039.0640.061.2023039142930/MYD14.A2023039.0640.061.2023039142930.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023039.0640.061.2023039142930.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023039.0640.061.2023039142930/BROWSE.MYD14.A2023039.0640.061.2023039142930.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023039.0640.061.2023039142930/BROWSE.MYD14.A2023039.0640.061.2023039142930.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023039.1845.061.2023040103629",
+      "time_start": "2023-02-08T18:45:00.000Z",
+      "cloud_cover": "35.0",
+      "updated": "2023-02-09T11:42:54.126Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-08T18:06:01.299Z",
+          "equator_crossing_longitude": "114.656536927923",
+          "orbit_number": "110465"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023039.1845.061.2023040103629",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-08T18:50:00.000Z",
+      "id": "G2606068021-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.419583",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-17.8936178 -62.0522937 -20.9556716 -84.5099857 -39.1533642 -82.2627164 -35.3313326 -55.7859207 -17.8936178 -62.0522937"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023039.1845.061.2023040103629.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023039.1845.061.2023040103629/MYD14.A2023039.1845.061.2023040103629.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023039.1845.061.2023040103629/MYD14.A2023039.1845.061.2023040103629.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023039.1845.061.2023040103629.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023039.1845.061.2023040103629/MYD14.A2023039.1845.061.2023040103629.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023039.1845.061.2023040103629/MYD14.A2023039.1845.061.2023040103629.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023039.1845.061.2023040103630.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023039.1845.061.2023040103629/BROWSE.MYD14.A2023039.1845.061.2023040103630.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023039.1845.061.2023040103629/BROWSE.MYD14.A2023039.1845.061.2023040103630.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023040.0545.061.2023040103935",
+      "time_start": "2023-02-09T05:45:00.000Z",
+      "cloud_cover": "12.0",
+      "updated": "2023-02-09T11:46:56.971Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-09T05:37:56.810Z",
+          "equator_crossing_longitude": "-58.3196100439139",
+          "orbit_number": "110472"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023040.0545.061.2023040103935",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-09T05:50:00.000Z",
+      "id": "G2606068671-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.309332",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-40.5807782 -83.087206 -45.0322996 -54.4993331 -26.8173285 -52.049912 -23.4165148 -75.38407 -40.5807782 -83.087206"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023040.0545.061.2023040103935.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023040.0545.061.2023040103935/MYD14.A2023040.0545.061.2023040103935.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023040.0545.061.2023040103935/MYD14.A2023040.0545.061.2023040103935.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023040.0545.061.2023040103935.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023040.0545.061.2023040103935/MYD14.A2023040.0545.061.2023040103935.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023040.0545.061.2023040103935/MYD14.A2023040.0545.061.2023040103935.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023040.0545.061.2023040103935.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023040.0545.061.2023040103935/BROWSE.MYD14.A2023040.0545.061.2023040103935.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023040.0545.061.2023040103935/BROWSE.MYD14.A2023040.0545.061.2023040103935.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023040.1925.061.2023041110324",
+      "time_start": "2023-02-09T19:25:00.000Z",
+      "cloud_cover": "24.0",
+      "updated": "2023-02-10T11:40:47.868Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-09T18:48:43.115Z",
+          "equator_crossing_longitude": "103.991659734964",
+          "orbit_number": "110480"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023040.1925.061.2023041110324",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-09T19:30:00.000Z",
+      "id": "G2606996949-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.327582",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-27.2932381 -69.4058099 -30.5842978 -93.7917177 -48.815167 -92.1525882 -44.3753592 -61.2930425 -27.2932381 -69.4058099"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023040.1925.061.2023041110324.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023040.1925.061.2023041110324/MYD14.A2023040.1925.061.2023041110324.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023040.1925.061.2023041110324/MYD14.A2023040.1925.061.2023041110324.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023040.1925.061.2023041110324.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023040.1925.061.2023041110324/MYD14.A2023040.1925.061.2023041110324.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023040.1925.061.2023041110324/MYD14.A2023040.1925.061.2023041110324.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023040.1925.061.2023041110325.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023040.1925.061.2023041110324/BROWSE.MYD14.A2023040.1925.061.2023041110325.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023040.1925.061.2023041110324/BROWSE.MYD14.A2023040.1925.061.2023041110325.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023041.0630.061.2023041153518",
+      "time_start": "2023-02-10T06:30:00.000Z",
+      "cloud_cover": "23.0",
+      "updated": "2023-02-10T15:25:09.229Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-10T06:20:38.497Z",
+          "equator_crossing_longitude": "-68.9843560220806",
+          "orbit_number": "110487"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023041.0630.061.2023041153518",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-10T06:35:00.000Z",
+      "id": "G2607158540-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.282978",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-48.0880291 -98.943085 -53.2792598 -65.7118719 -35.0387028 -63.6897677 -31.360279 -89.1065155 -48.0880291 -98.943085"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023041.0630.061.2023041153518.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023041.0630.061.2023041153518/MYD14.A2023041.0630.061.2023041153518.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023041.0630.061.2023041153518/MYD14.A2023041.0630.061.2023041153518.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023041.0630.061.2023041153518.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023041.0630.061.2023041153518/MYD14.A2023041.0630.061.2023041153518.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023041.0630.061.2023041153518/MYD14.A2023041.0630.061.2023041153518.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023041.0630.061.2023041153518.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023041.0630.061.2023041153518/BROWSE.MYD14.A2023041.0630.061.2023041153518.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023041.0630.061.2023041153518/BROWSE.MYD14.A2023041.0630.061.2023041153518.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD14.A2023041.1830.061.2023042110133",
+      "time_start": "2023-02-10T18:30:00.000Z",
+      "cloud_cover": "13.0",
+      "updated": "2023-02-11T13:29:51.122Z",
+      "orbit_calculated_spatial_domains": [
+        {
+          "equator_crossing_date_time": "2023-02-10T17:52:33.886Z",
+          "equator_crossing_longitude": "118.037831739305",
+          "orbit_number": "110494"
+        }
+      ],
+      "dataset_id": "MODIS/Aqua Thermal Anomalies/Fire 5-Min L2 Swath 1km V061",
+      "data_center": "LPCLOUD",
+      "title": "MYD14.A2023041.1830.061.2023042110133",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-10T18:35:00.000Z",
+      "id": "G2608186832-LPCLOUD",
+      "original_format": "ECHO10",
+      "granule_size": "0.42408",
+      "browse_flag": true,
+      "polygons": [
+        [
+          "-23.2447037 -56.8731981 -26.4182414 -80.3177949 -44.7285871 -78.3937762 -40.584326 -49.6189901 -23.2447037 -56.8731981"
+        ]
+      ],
+      "collection_concept_id": "C2278858993-LPCLOUD",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "title": "Download MYD14.A2023041.1830.061.2023042110133.hdf",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "The Landing Page for this file may be accessed directly from this link (DOI)",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "Download MYD14.A2023041.1830.061.2023042110133.cmr.xml (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "This link provides direct download access via S3 to the granule (EXTENDED METADATA)",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-protected/MYD14.061/MYD14.A2023041.1830.061.2023042110133/MYD14.A2023041.1830.061.2023042110133.cmr.xml"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "title": "api endpoint to retrieve temporary credentials valid for same-region direct s3 access (VIEW RELATED INFORMATION)",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "Download BROWSE.MYD14.A2023041.1830.061.2023042110134.1.jpg",
+          "hreflang": "en-US",
+          "href": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/MYD14.061/MYD14.A2023041.1830.061.2023042110133/BROWSE.MYD14.A2023041.1830.061.2023042110134.1.jpg"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+          "title": "This link provides direct download access via S3 to the granule",
+          "hreflang": "en-US",
+          "href": "s3://lp-prod-public/MYD14.061/MYD14.A2023041.1830.061.2023042110133/BROWSE.MYD14.A2023041.1830.061.2023042110134.1.jpg"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD14.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://www.earthdata.nasa.gov/centers/lp-daac"
+        },
+        {
+          "inherited": true,
+          "length": "307.9KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/87/MOD14_ATBD.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://landweb.modaps.eosdis.nasa.gov"
+        }
+      ]
+    }
+  ],
+  "cmr_hits": 19
+}

@@ -1,0 +1,1955 @@
+{
+  "collection": {
+    "feed": {
+      "updated": "2026-11-15T01:59:42.052Z",
+      "id": "https://cmr.earthdata.nasa.gov:443/search/collections.json?concept_id=C1379841358-LAADS",
+      "title": "ECHO dataset metadata",
+      "entry": [
+        {
+          "processing_level_id": "1A",
+          "cloud_hosted": true,
+          "boxes": [
+            "-90 -180 90 180"
+          ],
+          "has_combine": false,
+          "time_start": "2002-07-03T23:55:00.000Z",
+          "version_id": "6.1",
+          "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+          "entry_id": "MYD03_6.1",
+          "has_spatial_subsetting": true,
+          "has_transforms": true,
+          "associations": {
+            "variables": [
+              "V3558939621-LAADS",
+              "V3558939627-LAADS",
+              "V3558939047-LAADS",
+              "V3558939112-LAADS",
+              "V3558939001-LAADS",
+              "V3558939590-LAADS",
+              "V3558939332-LAADS",
+              "V3558939362-LAADS",
+              "V3558939282-LAADS",
+              "V3558939384-LAADS",
+              "V3558939354-LAADS",
+              "V3558939263-LAADS",
+              "V3558939287-LAADS",
+              "V3558939483-LAADS",
+              "V3558939179-LAADS",
+              "V3558939202-LAADS",
+              "V3558939371-LAADS",
+              "V3558939092-LAADS",
+              "V3558939323-LAADS",
+              "V3558938960-LAADS",
+              "V3558939368-LAADS",
+              "V3558939171-LAADS",
+              "V3558939366-LAADS",
+              "V3558939439-LAADS",
+              "V3558939245-LAADS",
+              "V3558939188-LAADS",
+              "V3558939629-LAADS",
+              "V3558939237-LAADS",
+              "V3558939019-LAADS",
+              "V3558939229-LAADS",
+              "V3558939374-LAADS",
+              "V3558938983-LAADS",
+              "V3558939212-LAADS",
+              "V3558939308-LAADS",
+              "V3558939338-LAADS",
+              "V3558939318-LAADS",
+              "V3558939163-LAADS",
+              "V3558939133-LAADS",
+              "V3558939297-LAADS",
+              "V3558939168-LAADS",
+              "V3558939071-LAADS",
+              "V3558939539-LAADS",
+              "V3558939152-LAADS",
+              "V3558939185-LAADS",
+              "V3558939425-LAADS",
+              "V3558939194-LAADS"
+            ],
+            "services": [
+              "S2951645688-LAADS",
+              "S3269314724-LAADS"
+            ],
+            "citations": [
+              "CIT3804145008-ESDIS",
+              "CIT3804161184-ESDIS",
+              "CIT3857566508-ESDIS",
+              "CIT3804293898-ESDIS",
+              "CIT3804304438-ESDIS",
+              "CIT3804287872-ESDIS",
+              "CIT4321025865-ESDIS",
+              "CIT3857561981-ESDIS",
+              "CIT4321023329-ESDIS",
+              "CIT3804017647-ESDIS",
+              "CIT3963295651-ESDIS",
+              "CIT3963288936-ESDIS",
+              "CIT3804117834-ESDIS",
+              "CIT3804222523-ESDIS",
+              "CIT3804214568-ESDIS",
+              "CIT3804254768-ESDIS",
+              "CIT3804319139-ESDIS",
+              "CIT4321022808-ESDIS",
+              "CIT4201245424-ESDIS",
+              "CIT3803985044-ESDIS"
+            ]
+          },
+          "has_variables": true,
+          "data_center": "LAADS",
+          "short_name": "MYD03",
+          "organizations": [
+            "NASA/GSFC/SED/ESD/HBSL/BISB/LAADS",
+            "NASA/GSFC/SED/ESD/HBSL/BISB/MODAPS"
+          ],
+          "title": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+          "coordinate_system": "CARTESIAN",
+          "summary": "The MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km  are calculated for each 1 km MODIS Instantaneous Field of Views (IFOV) for all orbits daily (in Collection 6 and later, information is provided to calculate 500m geolocation fields).  The locations and ancillary information corresponds to the intersection of the centers of each IFOV from 10 detectors in an ideal 1 km band on the Earth's surface. A digital terrain model is used to model the Earth's surface. The main inputs are the spacecraft attitude and orbit, the instrument telemetry and the digital elevation model. The geolocation fields include geodetic Latitude, Longitude, surface height above geoid, solar zenith and azimuth angles, satellite zenith and azimuth angles, and a land/sea mask for each 1 km sample. Additional information is included in the header to enable the calculation of the approximate location of the center of the detectors of any of the 36 MODIS bands. This product is used as input by a large number of subsequent MODIS products, particularly the products produced by the Land team.\n\nThe short name for this product is MYD03. Each file is roughly 30 MB in size, and the total data volume is approximately 8 GB/day.\n\nSee the MODIS Science Team homepage for more [data set\ninformation](https://modis.gsfc.nasa.gov/data/dataprod/).",
+          "service_features": {
+            "harmony": {
+              "has_formats": false,
+              "has_variables": true,
+              "has_transforms": true,
+              "has_combine": false,
+              "has_spatial_subsetting": true,
+              "has_temporal_subsetting": false
+            },
+            "opendap": {
+              "has_formats": false,
+              "has_variables": false,
+              "has_transforms": false,
+              "has_combine": false,
+              "has_spatial_subsetting": false,
+              "has_temporal_subsetting": false
+            },
+            "esi": {
+              "has_formats": false,
+              "has_variables": false,
+              "has_transforms": false,
+              "has_combine": false,
+              "has_spatial_subsetting": false,
+              "has_temporal_subsetting": false
+            }
+          },
+          "orbit_parameters": {},
+          "id": "C1379841358-LAADS",
+          "has_formats": false,
+          "consortiums": [
+            "GEOSS",
+            "EOSDIS"
+          ],
+          "original_format": "UMM_JSON",
+          "collection_data_type": "SCIENCE_QUALITY",
+          "archive_center": "NASA/GSFC/SED/ESD/HBSL/BISB/LAADS",
+          "has_temporal_subsetting": false,
+          "browse_flag": false,
+          "platforms": [
+            "Aqua"
+          ],
+          "association_details": {
+            "variables": [
+              {
+                "concept_id": "V3558939621-LAADS"
+              },
+              {
+                "concept_id": "V3558939627-LAADS"
+              },
+              {
+                "concept_id": "V3558939047-LAADS"
+              },
+              {
+                "concept_id": "V3558939112-LAADS"
+              },
+              {
+                "concept_id": "V3558939001-LAADS"
+              },
+              {
+                "concept_id": "V3558939590-LAADS"
+              },
+              {
+                "concept_id": "V3558939332-LAADS"
+              },
+              {
+                "concept_id": "V3558939362-LAADS"
+              },
+              {
+                "concept_id": "V3558939282-LAADS"
+              },
+              {
+                "concept_id": "V3558939384-LAADS"
+              },
+              {
+                "concept_id": "V3558939354-LAADS"
+              },
+              {
+                "concept_id": "V3558939263-LAADS"
+              },
+              {
+                "concept_id": "V3558939287-LAADS"
+              },
+              {
+                "concept_id": "V3558939483-LAADS"
+              },
+              {
+                "concept_id": "V3558939179-LAADS"
+              },
+              {
+                "concept_id": "V3558939202-LAADS"
+              },
+              {
+                "concept_id": "V3558939371-LAADS"
+              },
+              {
+                "concept_id": "V3558939092-LAADS"
+              },
+              {
+                "concept_id": "V3558939323-LAADS"
+              },
+              {
+                "concept_id": "V3558938960-LAADS"
+              },
+              {
+                "concept_id": "V3558939368-LAADS"
+              },
+              {
+                "concept_id": "V3558939171-LAADS"
+              },
+              {
+                "concept_id": "V3558939366-LAADS"
+              },
+              {
+                "concept_id": "V3558939439-LAADS"
+              },
+              {
+                "concept_id": "V3558939245-LAADS"
+              },
+              {
+                "concept_id": "V3558939188-LAADS"
+              },
+              {
+                "concept_id": "V3558939629-LAADS"
+              },
+              {
+                "concept_id": "V3558939237-LAADS"
+              },
+              {
+                "concept_id": "V3558939019-LAADS"
+              },
+              {
+                "concept_id": "V3558939229-LAADS"
+              },
+              {
+                "concept_id": "V3558939374-LAADS"
+              },
+              {
+                "concept_id": "V3558938983-LAADS"
+              },
+              {
+                "concept_id": "V3558939212-LAADS"
+              },
+              {
+                "concept_id": "V3558939308-LAADS"
+              },
+              {
+                "concept_id": "V3558939338-LAADS"
+              },
+              {
+                "concept_id": "V3558939318-LAADS"
+              },
+              {
+                "concept_id": "V3558939163-LAADS"
+              },
+              {
+                "concept_id": "V3558939133-LAADS"
+              },
+              {
+                "concept_id": "V3558939297-LAADS"
+              },
+              {
+                "concept_id": "V3558939168-LAADS"
+              },
+              {
+                "concept_id": "V3558939071-LAADS"
+              },
+              {
+                "concept_id": "V3558939539-LAADS"
+              },
+              {
+                "concept_id": "V3558939152-LAADS"
+              },
+              {
+                "concept_id": "V3558939185-LAADS"
+              },
+              {
+                "concept_id": "V3558939425-LAADS"
+              },
+              {
+                "concept_id": "V3558939194-LAADS"
+              }
+            ],
+            "services": [
+              {
+                "concept_id": "S2951645688-LAADS"
+              },
+              {
+                "concept_id": "S3269314724-LAADS"
+              }
+            ],
+            "citations": [
+              {
+                "concept_id": "CIT3804145008-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804161184-ESDIS"
+              },
+              {
+                "concept_id": "CIT3857566508-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804293898-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804304438-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804287872-ESDIS"
+              },
+              {
+                "concept_id": "CIT4321025865-ESDIS"
+              },
+              {
+                "concept_id": "CIT3857561981-ESDIS"
+              },
+              {
+                "concept_id": "CIT4321023329-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804017647-ESDIS"
+              },
+              {
+                "concept_id": "CIT3963295651-ESDIS"
+              },
+              {
+                "concept_id": "CIT3963288936-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804117834-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804222523-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804214568-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804254768-ESDIS"
+              },
+              {
+                "concept_id": "CIT3804319139-ESDIS"
+              },
+              {
+                "concept_id": "CIT4321022808-ESDIS"
+              },
+              {
+                "concept_id": "CIT4201245424-ESDIS"
+              },
+              {
+                "concept_id": "CIT3803985044-ESDIS"
+              }
+            ]
+          },
+          "online_access_flag": true,
+          "links": [
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+              "hreflang": "en-US",
+              "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+              "hreflang": "en-US",
+              "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+            },
+            {
+              "length": "0KB",
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+              "hreflang": "en-US",
+              "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+            },
+            {
+              "length": "0KB",
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+              "hreflang": "en-US",
+              "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+            },
+            {
+              "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+              "hreflang": "en-US",
+              "href": "https://search.earthdata.nasa.gov/search/granules"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "granules": [
+    {
+      "producer_granule_id": "MYD03.A2023034.0625.061.2023034151728.hdf",
+      "time_start": "2023-02-03T06:25:00.000Z",
+      "updated": "2024-08-24T02:07:49.200Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7368086763",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-03T06:30:00.000Z",
+      "id": "G2607298817-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "29.8853435516357",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-39.636287 -92.662457 -44.014125 -64.529293 -25.802034 -62.037715 -22.430089 -85.169445 -39.636287 -92.662457"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023034.0625.061.2023034151728.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023034.0625.061.2023034151728.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/034/MYD03.A2023034.0625.061.2023034151728.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023034.1825.061.2023035171316.hdf",
+      "time_start": "2023-02-03T18:25:00.000Z",
+      "updated": "2024-08-24T02:08:05.360Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7370980718",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-03T18:30:00.000Z",
+      "id": "G2607322432-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "31.2188167572021",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-32.251024 -52.732695 -35.729985 -78.565525 -53.968965 -77.354662 -49.061739 -43.188998 -32.251024 -52.732695"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023034.1825.061.2023035171316.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023034.1825.061.2023035171316.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/034/MYD03.A2023034.1825.061.2023035171316.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023035.0530.061.2023035172232.hdf",
+      "time_start": "2023-02-04T05:30:00.000Z",
+      "updated": "2024-08-24T02:08:05.360Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7371001679",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-04T05:35:00.000Z",
+      "id": "G2607323245-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "31.8345546722412",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-43.354633 -80.898173 -48.046926 -50.819115 -29.820144 -48.508125 -26.331518 -72.514484 -43.354633 -80.898173"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023035.0530.061.2023035172232.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023035.0530.061.2023035172232.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/035/MYD03.A2023035.0530.061.2023035172232.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023035.1910.061.2023036150718.hdf",
+      "time_start": "2023-02-04T19:10:00.000Z",
+      "updated": "2024-08-24T02:08:17.470Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7373346664",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-04T19:15:00.000Z",
+      "id": "G2607334875-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "30.6969385147095",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-24.430057 -66.578698 -27.634891 -90.274143 -45.857816 -88.429086 -41.638485 -59.12816 -24.430057 -66.578698"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023035.1910.061.2023036150718.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023035.1910.061.2023036150718.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/035/MYD03.A2023035.1910.061.2023036150718.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023036.0610.061.2023036153428.hdf",
+      "time_start": "2023-02-05T06:10:00.000Z",
+      "updated": "2024-08-24T02:08:23.180Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7373415718",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-05T06:15:00.000Z",
+      "id": "G2607336328-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "31.5365266799927",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-34.243711 -86.489088 -38.254841 -60.583804 -20.069157 -57.867865 -16.828468 -80.014989 -34.243711 -86.489088"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023036.0610.061.2023036153428.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023036.0610.061.2023036153428.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/036/MYD03.A2023036.0610.061.2023036153428.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023036.0615.061.2023036152529.hdf",
+      "time_start": "2023-02-05T06:15:00.000Z",
+      "updated": "2024-08-24T02:08:17.470Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7373389078",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-05T06:20:00.000Z",
+      "id": "G2607335463-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "30.956202507019",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-50.76284 -97.357977 -56.304959 -61.893612 -37.968232 -60.065936 -34.160629 -86.44467 -50.76284 -97.357977"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023036.0615.061.2023036152529.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023036.0615.061.2023036152529.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/036/MYD03.A2023036.0615.061.2023036152529.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023036.1815.061.2023037151705.hdf",
+      "time_start": "2023-02-05T18:15:00.000Z",
+      "updated": "2024-08-24T02:08:23.180Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7375938580",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-05T18:20:00.000Z",
+      "id": "G2607344379-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "33.3660478591919",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-20.430192 -53.936867 -23.540217 -76.825068 -41.749256 -74.725663 -37.787599 -47.256745 -20.430192 -53.936867"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023036.1815.061.2023037151705.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023036.1815.061.2023037151705.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/036/MYD03.A2023036.1815.061.2023037151705.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023036.1950.061.2023037151539.hdf",
+      "time_start": "2023-02-05T19:50:00.000Z",
+      "updated": "2024-08-24T02:08:23.180Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7375936449",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-05T19:55:00.000Z",
+      "id": "G2607344355-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "28.4962072372437",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-33.683803 -73.410226 -37.228367 -99.732215 -55.467955 -98.668073 -50.399552 -63.368448 -33.683803 -73.410226"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023036.1950.061.2023037151539.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023036.1950.061.2023037151539.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/036/MYD03.A2023036.1950.061.2023037151539.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023037.0515.061.2023049041420.hdf",
+      "time_start": "2023-02-06T05:15:00.000Z",
+      "updated": "2024-08-24T02:10:46.680Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7401351264",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-06T05:20:00.000Z",
+      "id": "G2613801477-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "32.2810573577881",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-38.140344 -74.381073 -42.404903 -46.969768 -24.192206 -44.409652 -20.874989 -67.207137 -38.140344 -74.381073"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023037.0515.061.2023049041420.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023037.0515.061.2023049041420.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/037/MYD03.A2023037.0515.061.2023049041420.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023037.0655.061.2023049042352.hdf",
+      "time_start": "2023-02-06T06:55:00.000Z",
+      "updated": "2024-08-24T02:10:46.680Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7401374687",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-06T07:00:00.000Z",
+      "id": "G2613807357-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "26.4759454727173",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-41.974978 -101.35447 -46.537959 -72.05411 -28.321938 -69.671082 -24.874089 -93.320811 -41.974978 -101.35447"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023037.0655.061.2023049042352.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023037.0655.061.2023049042352.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/037/MYD03.A2023037.0655.061.2023049042352.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023037.1855.061.2023049043930.hdf",
+      "time_start": "2023-02-06T18:55:00.000Z",
+      "updated": "2024-08-24T02:10:54.030Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7401402803",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-06T19:00:00.000Z",
+      "id": "G2613812299-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "32.3913402557373",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-29.833947 -61.08221 -33.215126 -86.168181 -51.451063 -84.735374 -46.786542 -52.286963 -29.833947 -61.08221"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023037.1855.061.2023049043930.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023037.1855.061.2023049043930.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/037/MYD03.A2023037.1855.061.2023049043930.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023038.0600.061.2023039041915.hdf",
+      "time_start": "2023-02-07T06:00:00.000Z",
+      "updated": "2024-08-24T02:08:29.440Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7379699420",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-07T06:05:00.000Z",
+      "id": "G2607360979-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "31.7169857025146",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-45.680733 -89.804852 -50.60205 -58.288342 -32.367777 -56.108109 -28.792124 -80.759345 -45.680733 -89.804852"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023038.0600.061.2023039041915.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023038.0600.061.2023039041915.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/038/MYD03.A2023038.0600.061.2023039041915.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023038.1940.061.2023039153417.hdf",
+      "time_start": "2023-02-07T19:40:00.000Z",
+      "updated": "2024-08-24T02:08:36.160Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7380831485",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-07T19:45:00.000Z",
+      "id": "G2607367055-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "26.6653423309326",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-21.944834 -74.765765 -25.084721 -97.930641 -43.302175 -95.922905 -39.251032 -67.813365 -21.944834 -74.765765"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023038.1940.061.2023039153417.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023038.1940.061.2023039153417.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/038/MYD03.A2023038.1940.061.2023039153417.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023039.0640.061.2023039163015.hdf",
+      "time_start": "2023-02-08T06:40:00.000Z",
+      "updated": "2024-08-24T02:08:42.460Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7380977989",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-08T06:45:00.000Z",
+      "id": "G2607370945-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "27.8749809265137",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-36.768499 -95.026608 -40.931476 -68.182557 -22.652487 -65.546089 -19.35093 -88.082737 -36.768499 -95.026608"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023039.0640.061.2023039163015.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023039.0640.061.2023039163015.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/039/MYD03.A2023039.0640.061.2023039163015.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023039.1845.061.2023040151547.hdf",
+      "time_start": "2023-02-08T18:45:00.000Z",
+      "updated": "2024-08-24T02:08:48.890Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7383311830",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-08T18:50:00.000Z",
+      "id": "G2607382098-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "31.9740390777588",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-17.893618 -62.052294 -20.955672 -84.509986 -39.153364 -82.262716 -35.331333 -55.785921 -17.893618 -62.052294"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023039.1845.061.2023040151547.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023039.1845.061.2023040151547.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/039/MYD03.A2023039.1845.061.2023040151547.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023040.0545.061.2023040151837.hdf",
+      "time_start": "2023-02-09T05:45:00.000Z",
+      "updated": "2024-08-24T02:08:48.890Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7383314102",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-09T05:50:00.000Z",
+      "id": "G2607382296-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "32.7820882797241",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-40.580778 -83.087206 -45.0323 -54.499333 -26.817329 -52.049912 -23.416515 -75.38407 -40.580778 -83.087206"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023040.0545.061.2023040151837.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023040.0545.061.2023040151837.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/040/MYD03.A2023040.0545.061.2023040151837.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023040.1925.061.2023041151201.hdf",
+      "time_start": "2023-02-09T19:25:00.000Z",
+      "updated": "2024-08-24T02:09:00.520Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7385523907",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-09T19:30:00.000Z",
+      "id": "G2607402332-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "29.7177696228027",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-27.293238 -69.40581 -30.584298 -93.791718 -48.815167 -92.152588 -44.375359 -61.293043 -27.293238 -69.40581"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023040.1925.061.2023041151201.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023040.1925.061.2023041151201.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/040/MYD03.A2023040.1925.061.2023041151201.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023041.0630.061.2023041152237.hdf",
+      "time_start": "2023-02-10T06:30:00.000Z",
+      "updated": "2024-08-24T02:09:00.520Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7385835759",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "NIGHT",
+      "time_end": "2023-02-10T06:35:00.000Z",
+      "id": "G2607406013-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "29.6536474227905",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-48.088029 -98.943085 -53.27926 -65.711872 -35.038703 -63.689768 -31.360279 -89.106515 -48.088029 -98.943085"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023041.0630.061.2023041152237.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023041.0630.061.2023041152237.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/041/MYD03.A2023041.0630.061.2023041152237.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    },
+    {
+      "producer_granule_id": "MYD03.A2023041.1830.061.2023042152438.hdf",
+      "time_start": "2023-02-10T18:30:00.000Z",
+      "updated": "2024-08-24T02:09:12.680Z",
+      "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+      "data_center": "LAADS",
+      "title": "LAADS:7387657631",
+      "coordinate_system": "GEODETIC",
+      "day_night_flag": "DAY",
+      "time_end": "2023-02-10T18:35:00.000Z",
+      "id": "G2608045064-LAADS",
+      "original_format": "ECHO10",
+      "granule_size": "33.1559534072876",
+      "browse_flag": false,
+      "polygons": [
+        [
+          "-23.244704 -56.873198 -26.418241 -80.317795 -44.728587 -78.393776 -40.584326 -49.61899 -23.244704 -56.873198"
+        ]
+      ],
+      "collection_concept_id": "C1379841358-LAADS",
+      "online_access_flag": true,
+      "links": [
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2023041.1830.061.2023042152438.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+          "type": "application/x-hdfeos",
+          "hreflang": "en-US",
+          "href": "s3://prod-lads/MYD03/MYD03.A2023041.1830.061.2023042152438.hdf"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+          "type": "text/html",
+          "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/61/MYD03/2023/041/MYD03.A2023041.1830.061.2023042152438.hdf.html"
+        },
+        {
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "type": "text/html",
+          "title": "A link to Data set landing page (Data Set Landing Page)",
+          "hreflang": "en-US",
+          "href": "http://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+          "hreflang": "en-US",
+          "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+          "hreflang": "en-US",
+          "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+        },
+        {
+          "inherited": true,
+          "length": "0KB",
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+        },
+        {
+          "inherited": true,
+          "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+          "hreflang": "en-US",
+          "href": "https://search.earthdata.nasa.gov/search/granules"
+        }
+      ]
+    }
+  ],
+  "cmr_hits": 19
+}

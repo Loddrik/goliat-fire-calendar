@@ -1,0 +1,888 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Evidencia científica16–20A, decisiones de dos consejos y límites del piloto observacional G0/G1."><title>GOLIAT · Entender cómo observa cada satélite</title><style>
+:root{color-scheme:light;--ink:#18313a;--muted:#53666b;--paper:#f5f3ec;--card:#fff;--teal:#16796f;--orange:#b75a24;--line:#d5dfdc}*{box-sizing:border-box}body{margin:0;background:var(--paper);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}a{color:#075e91;text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #b75a24;outline-offset:4px}.skip{position:absolute;left:-200vw}.skip:focus{left:20px;top:12px;background:white;z-index:4;padding:10px}header{background:#18313a;color:#fff;padding:68px max(24px,calc((100vw - 1120px)/2)) 58px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:#b6e0d8;font-weight:750}h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.1;letter-spacing:-.04em;max-width:940px;margin:18px 0 24px}header p{max-width:850px;color:#e4eeeb;font-size:1.12rem}.tag{display:inline-block;padding:4px 12px;border:1px solid #65868b;border-radius:30px;font-size:.8rem;margin:4px 6px 0 0}nav{background:#fff;border-bottom:1px solid var(--line);padding:14px 24px;display:flex;flex-wrap:wrap;justify-content:center;gap:9px 23px;font-size:.85rem;position:sticky;top:0;z-index:2}main{max-width:1168px;margin:auto;padding:28px 24px 70px}section{padding:28px 0 18px;scroll-margin-top:100px}h2{font-size:2rem;line-height:1.2;margin:16px 0 24px;letter-spacing:-.03em}h3{font-size:1.18rem;line-height:1.4}p{max-width:950px}.lead{font-size:1.18rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,figure,details,.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:22px}.card .num{font-size:2rem;font-weight:750;line-height:1.2;display:block;color:var(--teal);margin:10px 0}.small,figcaption{font-size:.86rem;color:var(--muted)}.note{border-left:4px solid var(--orange);padding:14px 20px;background:#fff4e8;border-radius:0 12px 12px 0}.ok{border-left-color:var(--teal);background:#eaf4ef}figure{margin:24px 0}figure svg{width:100%;height:auto;display:block}figcaption{margin-top:12px}table{width:100%;border-collapse:collapse;font-size:.9rem;background:#fff}th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#eaf0ed}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px;margin:20px 0}caption{text-align:left;font-weight:650;padding:12px;background:white}details{margin:16px 0}summary{cursor:pointer;font-weight:700}details[open] summary{margin-bottom:14px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}.formula{font:15px/1.8 ui-monospace,SFMono-Regular,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#18313a;color:#f0f6f4;padding:22px;border-radius:12px}code{font-size:.86em;overflow-wrap:anywhere}.steps{padding-left:23px}.steps li{margin:12px 0}.status{display:inline-block;background:#fff0dc;color:#7d3b0c;border-radius:5px;padding:3px 8px;font-weight:650}.pill{background:#e9f2ef;color:#15594f}.source-list li{margin:10px 0;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted)}.svgscroll{overflow-x:auto}.diagram{min-width:760px}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.86rem}.dot{width:12px;height:12px;border-radius:3px;display:inline-block;margin-right:5px}.printonly{display:none}@media(max-width:760px){.grid,.cols{grid-template-columns:1fr}header{padding:45px 24px}nav{position:static;justify-content:flex-start}h2{font-size:1.7rem}figure{padding:12px}.card{padding:18px}body{font-size:16px}}@media print{nav{position:static}body{background:white}details{break-inside:avoid}header{background:white;color:var(--ink);padding:20px 0}header p,.eyebrow{color:var(--ink)}.printonly{display:block}section{break-before:auto}.card,figure{break-inside:avoid}a{color:inherit}}
+</style></head><body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header><div class="eyebrow">GOLIAT · Cuaderno de evidencia · 14 noviembre 2026, Santiago</div><h1>Comparar sensores exige entender qué observaron.</h1><p>De corregir cantidades mensuales a estudiar oportunidades de observación: qué propusieron los consejos, qué se probó, qué mejoró y qué sigue sin demostrarse.</p><span class="tag">16–20A · evaluación retrospectiva</span><span class="tag">G0 técnico documentado</span><span class="tag">G1 científico pendiente</span><span class="tag">Archivo autónomo · sin conexión</span></header>
+<nav aria-label="Secciones"><a href="#objetivo">Objetivo</a><a href="#consejos">Consejos</a><a href="#modelo">Modelo y decisiones</a><a href="#resultados">Evidencia16–19</a><a href="#contratos">Contratos20–20A</a><a href="#observacion">Observación G0/G1</a><a href="#caso2023">Caso adicional</a><a href="#plan">Plan</a><a href="#fuentes">Fuentes</a></nav>
+<main id="contenido">
+<section id="objetivo"><h2>El objetivo es una historia comparable, con incertidumbre visible.</h2><p class="lead">La aplicación busca describir actividad térmica histórica de un territorio sin confundir el cambio de instrumento con un cambio real del fuego. MODIS Aqua y VIIRS registran señales con distinta resolución, horario y sensibilidad. Un conteo mensual por sí solo no explica por qué discrepan.</p><div class="grid"><div class="card"><h3>Pregunta del modelo actual</h3><p>¿Qué cantidad de celdas-día registraría S-NPP, dado el conteo de Aqua y el contexto estacional?</p><span class="small">Es una aproximación a otro producto satelital.</span></div><div class="card"><h3>Pregunta nueva</h3><p>¿Ambos sensores tuvieron soporte espacial, tiempos y condiciones de observación comparables?</p><span class="small">Los puntos FIRMS no bastan para responder.</span></div><div class="card"><h3>Resultado que necesitamos</h3><p>Un calendario explicable que distinga ausencia de detección, información insuficiente y actividad registrada.</p><span class="small">El cero no certifica ausencia física de fuego.</span></div></div><p class="small">La documentación NASA describe omisiones por pasadas, nubes, humo y tamaño/sensibilidad: <a href="https://firms.modaps.eosdis.nasa.gov/alerts/notes.php">FIRMS · notas de interpretación</a>. Esa limitación motiva la investigación; no demuestra que sea la causa principal del error observado.</p></section>
+<section id="consejos"><h2>Dos consejos cambiaron la pregunta antes de cambiar el modelo.</h2><p>El consejo multifocal reunió observación satelital, inferencia y evaluación, e ingeniería/factibilidad. Acordó criterios antes de puntuar. Tres agentes adversarios independientes examinaron identificación y selección, física de medición y coste de oportunidad. La propuesta revisada volvió a ambos consejos y recibió ratificación condicionada; el acuerdo no constituye evidencia experimental.</p><div class="tablewrap"><table><thead><tr><th scope="col">Criterio acordado</th><th scope="col">Peso</th><th scope="col">Pregunta</th></tr></thead><tbody><tr><td>Validez e identificabilidad</td><td>30 %</td><td>¿Qué afirmación permite la comparación?</td></tr><tr><td>Información discriminante</td><td>25 %</td><td>¿Puede cambiar la siguiente decisión?</td></tr><tr><td>Acceso reproducible</td><td>20 %</td><td>¿Los datos y el proceso son obtenibles?</td></tr><tr><td>Transporte y selección</td><td>15 %</td><td>¿A quién representa la muestra?</td></tr><tr><td>Utilidad interpretativa</td><td>10 %</td><td>¿Se puede distinguir observado de desconocido?</td></tr></tbody></table></div><div class="cols"><div class="panel"><h3>Dirección multifocal</h3><p>Priorizar oportunidades de observación y adquisiciones próximas, con evidencia documentada. Separar presencia registrada y cantidad, y compartir información territorial, siguen siendo hipótesis útiles.</p></div><div class="panel"><h3>Corrección adversaria</h3><p>El acuerdo puede mejorar solo porque se excluyen casos difíciles. QA puede depender del fuego. Comparar únicamente positivos selecciona casos fáciles. Una pareja legible no representa un período.</p></div></div><p class="note">Síntesis conjunta: prioridad científica1+2; inversión inicial en auditoría de evidencia y acceso G0; piloto condicionado a G1. Las iteraciones16–20A aportan evidencia complementaria con datos ya disponibles, y no sustituyen ese piloto.</p><details><summary>Qué condiciones no se pueden compensar con una buena puntuación</summary><ul><li>Desconocido no se convierte en cero.</li><li>Incluir observaciones sin detección y ambos sentidos del desacuerdo.</li><li>Fijar tiempo, soporte, reglas y exclusiones antes de mirar concordancias.</li><li>Separar coincidencia entre productos de verdad física y de causalidad.</li><li>Mostrar qué observaciones se excluyen y qué población queda representada.</li></ul><p class="small">Fuente: <code>docs/reviews/2026-11-14-observation-councils.md</code> y votos archivados; los pesos son del consejo, no criterios oficiales NASA.</p></details></section>
+<section id="modelo"><h2>Una distribución; distintas decisiones.</h2><p>La iteración17 separa la probabilidad de detección positiva registrada por S-NPP de la cantidad cuando hay un registro positivo. Ambas partes comparten información entre grupos y conservan diferencias locales mediante pooling. La normalización depende de Aqua y del contexto estacional; el parámetro primario κ=10 se fijó antes de medir.</p><figure><div class="svgscroll" role="region" tabindex="0" aria-label="Diagrama desplazable"><svg class="diagram" viewBox="0 0 1100 515" role="img" aria-label="Flujo desde Aqua a probabilidad y distribución positiva, decisiones mediana/media y asignación bajo presupuesto B" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;fill:#18313a"><defs><marker id="diagram_8b42e41_a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8" fill="#557878"/></marker></defs><rect x="10" y="120" width="205" height="112" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="26" y="150" font-size="18" font-weight="700">Aqua + territorio</text><text x="26" y="177" font-size="14">Cantidad mensual A</text><text x="26" y="199" font-size="14">Contexto estacional g</text><rect x="270" y="30" width="235" height="115" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="286" y="60" font-size="18" font-weight="700">Probabilidad p</text><text x="286" y="87" font-size="14">P(S-NPP registra &gt; 0)</text><text x="286" y="109" font-size="14">Pooling entre territorios</text><rect x="270" y="235" width="235" height="115" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="286" y="265" font-size="18" font-weight="700">Distribución positiva</text><text x="286" y="292" font-size="14">Z = Y / (1 + rᵍ A)</text><text x="286" y="314" font-size="14">CDF empírica con pooling</text><rect x="560" y="120" width="230" height="130" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="576" y="150" font-size="18" font-weight="700">Mezcla de dos partes</text><text x="576" y="177" font-size="14">Masa 1−p en cero</text><text x="576" y="199" font-size="14">CDF+ reescalada</text><text x="576" y="221" font-size="14">κ=10 fijado</text><rect x="845" y="25" width="245" height="110" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="861" y="55" font-size="18" font-weight="700">Mediana</text><text x="861" y="82" font-size="14">Decisión para pérdida absoluta</text><text x="861" y="104" font-size="14">Puede perder volumen total</text><rect x="845" y="175" width="245" height="110" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="861" y="205" font-size="18" font-weight="700">Media</text><text x="861" y="232" font-size="14">Esperanza de la misma CDF</text><text x="861" y="254" font-size="14">No equivale a la mediana</text><rect x="590" y="385" width="500" height="110" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="606" y="415" font-size="18" font-weight="700">Asignación coherente de 54 comunas</text><text x="606" y="442" font-size="14">Minimiza pérdida absoluta esperada bajo la CDF</text><text x="606" y="464" font-size="14">Σ asignaciones = Σ B en cada mes; desempate cerca de B</text><path d="M215,150 L270,88" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M215,180 L270,292" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M505,88 L560,145" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M505,292 L560,210" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M790,155 L845,80" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M790,200 L845,230" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><path d="M675,250 L675,385" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_8b42e41_a)"/><text x="10" y="445" font-size="15">No entran etiquetas S-NPP del destino</text><text x="10" y="470" font-size="15">El presupuesto B no es un total verdadero conocido</text></svg></div><figcaption>Diagrama explicativo del algoritmo. El destino aporta Aqua y contexto; las etiquetas S-NPP del destino no se usan para ajustar o reconciliar. La consulta coherente necesita las 54 comunas del mes: sus predicciones quedan acopladas por el presupuesto.</figcaption></figure><div class="cols"><div><h3>Mediana y media responden pérdidas diferentes</h3><p>La mediana minimiza error absoluto esperado de una decisión local. La media minimiza error cuadrático esperado. Multiplicar una mediana positiva por p no produce la mediana de la mezcla. Tampoco la suma de medianas locales estima la media regional.</p><pre class="formula">p = P(Y &gt; 0 | Aqua, contexto)
+F = (1 − p) · masa_en_cero + p · F₊
+mediana(F) = 0 si p ≤ 0,5
+media(F) = p · E[Y | Y &gt; 0]</pre></div><div><h3>Reconciliar es una decisión restringida</h3><p>La iteración18 conserva la CDF de 17 y asigna cantidades no negativas minimizando su pérdida absoluta esperada, con el mismo total que B en cada mes. Los empates se resuelven con la asignación más próxima a B.</p><pre class="formula">min Σᵢ E_Fᵢ[|Yᵢ − aᵢ|]
+sujeto a: aᵢ ≥ 0
+          Σᵢ aᵢ = Σᵢ Bᵢ, i=1…54</pre><p class="small">La suma de pérdidas esperadas no exige independencia. El método tampoco aprende una distribución conjunta ni incertidumbre regional; ΣB es un presupuesto de referencia, no un total verdadero observado.</p></div></div></section>
+<section id="resultados"><h2>Menor error local; costes que hay que conservar a la vista.</h2><p>Desarrollo2012–2019: 5184 comuna-meses, con ajustes y máscaras dentro del origen y evaluación por temporadas reservadas. La historia de decisiones es adaptativa: estos resultados y los destinos posteriores no constituyen un nuevo holdout independiente. La variable objetivo es celda-día diurna registrada por S-NPP, agregada por comuna-mes.</p><div class="tablewrap"><table><thead><tr><th scope="col">Etapa</th><th scope="col">Decisión</th><th scope="col">MAE local</th><th scope="col">Lectura</th></tr></thead><tbody><tr><td>16 · cero aislado</td><td>B</td><td>1,903194</td><td>Referencia común</td></tr><tr><td>16 · cero aislado</td><td>Z con regularización de B</td><td>1,903515</td><td>Pequeño retroceso; no resuelve los ceros</td></tr><tr><td>17 · probabilidad + CDF</td><td>E11, κ=10</td><td>1,808210</td><td>Menor error local; subestima el total</td></tr><tr><td>18 · decisión bajo presupuesto</td><td>Coherente</td><td>1,797939</td><td>Mejora local; total B conservado por construcción</td></tr></tbody></table></div><div class="grid"><div class="card"><span class="small">17 · cambio frente a B</span><span class="num">4,99 %</span><p>Menor MAE local con mediana E11. El error regional sube de 31,55 a 49,54.</p></div><div class="card"><span class="small">18 · cambio frente al mismo B</span><span class="num">5,53 %</span><p>Menor MAE local con asignación coherente. Conserva total, sesgo global y error regional de B por construcción.</p></div><div class="card"><span class="small">Comparación correcta</span><span class="num">No se suman</span><p>Las mejoras de 17 y 18 comparten referencia y población. No representan dos porcentajes acumulables ni dos validaciones independientes.</p></div></div><figure><svg role="img" aria-label="Errores locales y regionales de cinco decisiones fijas; valores en tabla adyacente" xmlns:xlink="http://www.w3.org/1999/xlink" width="800.398445pt" height="325.19952pt" viewBox="0 0 800.398445 325.19952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="plot_68621e6_figure_1">
+  <g id="plot_68621e6_patch_1">
+   <path d="M 0 325.19952 
+L 800.398445 325.19952 
+L 800.398445 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="plot_68621e6_axes_1">
+   <g id="plot_68621e6_patch_2">
+    <path d="M 135.289375 284.558661 
+L 456.186236 284.558661 
+L 456.186236 30.318125 
+L 135.289375 30.318125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="plot_68621e6_matplotlib.axis_1">
+    <g id="plot_68621e6_xtick_1">
+     <g id="plot_68621e6_line2d_1">
+      <path d="M 135.289375 284.558661 
+L 135.289375 30.318125 
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_2">
+      <defs>
+       <path id="plot_68621e6_m57f53ae8ee" d="M 0 0 
+L 0 3.5 
+" style="stroke: #18313a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="135.289375" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="135.289375" y="299.916082" transform="rotate(-0 135.289375 299.916082)">0.0</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_2">
+     <g id="plot_68621e6_line2d_3">
+      <path d="M 199.564914 284.558661 
+L 199.564914 30.318125 
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_4">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="199.564914" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="199.564914" y="299.916082" transform="rotate(-0 199.564914 299.916082)">0.5</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_3">
+     <g id="plot_68621e6_line2d_5">
+      <path d="M 263.840453 284.558661 
+L 263.840453 30.318125 
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_6">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="263.840453" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="263.840453" y="299.916082" transform="rotate(-0 263.840453 299.916082)">1.0</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_4">
+     <g id="plot_68621e6_line2d_7">
+      <path d="M 328.115992 284.558661 
+L 328.115992 30.318125 
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_8">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="328.115992" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="328.115992" y="299.916082" transform="rotate(-0 328.115992 299.916082)">1.5</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_5">
+     <g id="plot_68621e6_line2d_9">
+      <path d="M 392.391531 284.558661 
+L 392.391531 30.318125 
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_10">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="392.391531" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="392.391531" y="299.916082" transform="rotate(-0 392.391531 299.916082)">2.0</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_text_6">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="295.737806" y="315.356942" transform="rotate(-0 295.737806 315.356942)">MAE de celdas-día</text>
+    </g>
+   </g>
+   <g id="plot_68621e6_matplotlib.axis_2">
+    <g id="plot_68621e6_ytick_1">
+     <g id="plot_68621e6_line2d_11">
+      <defs>
+       <path id="plot_68621e6_mab649327b5" d="M 0 0 
+L -3.5 0 
+" style="stroke: #18313a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="135.289375" y="57.383086" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="128.289375" y="61.562226" transform="rotate(-0 128.289375 61.562226)">B · referencia</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_2">
+     <g id="plot_68621e6_line2d_12">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="135.289375" y="107.410739" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="128.289375" y="111.58988" transform="rotate(-0 128.289375 111.58988)">Mediana E11</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_3">
+     <g id="plot_68621e6_line2d_13">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="135.289375" y="157.438393" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="128.289375" y="161.617533" transform="rotate(-0 128.289375 161.617533)">Media de la CDF</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_4">
+     <g id="plot_68621e6_line2d_14">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="135.289375" y="207.466046" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="128.289375" y="211.865187" transform="rotate(-0 128.289375 211.865187)">Asignación coherente</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_5">
+     <g id="plot_68621e6_line2d_15">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="135.289375" y="257.4937" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="128.289375" y="261.672841" transform="rotate(-0 128.289375 261.672841)">Reescala proporcional</text>
+     </g>
+    </g>
+   </g>
+   <g id="plot_68621e6_patch_3">
+    <path d="M 135.289375 41.874513 
+L 379.947009 41.874513 
+L 379.947009 72.891658 
+L 135.289375 72.891658 
+z
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: #889b9f"/>
+   </g>
+   <g id="plot_68621e6_patch_4">
+    <path d="M 135.289375 91.902167 
+L 367.736673 91.902167 
+L 367.736673 122.919312 
+L 135.289375 122.919312 
+z
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: #368e80"/>
+   </g>
+   <g id="plot_68621e6_patch_5">
+    <path d="M 135.289375 141.92982 
+L 398.319589 141.92982 
+L 398.319589 172.946965 
+L 135.289375 172.946965 
+z
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: #c4aa8b"/>
+   </g>
+   <g id="plot_68621e6_patch_6">
+    <path d="M 135.289375 191.957474 
+L 366.416395 191.957474 
+L 366.416395 222.974619 
+L 135.289375 222.974619 
+z
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: #18313a"/>
+   </g>
+   <g id="plot_68621e6_patch_7">
+    <path d="M 135.289375 241.985127 
+L 374.29049 241.985127 
+L 374.29049 273.002273 
+L 135.289375 273.002273 
+z
+" clip-path="url(#plot_68621e6_p06316da2c1)" style="fill: #a6bdb8"/>
+   </g>
+   <g id="plot_68621e6_patch_8">
+    <path d="M 135.289375 284.558661 
+L 135.289375 30.318125 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_68621e6_patch_9">
+    <path d="M 135.289375 284.558661 
+L 456.186236 284.558661 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_68621e6_text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="384.681553" y="59.980742" transform="rotate(-0 384.681553 59.980742)">1,903</text>
+   </g>
+   <g id="plot_68621e6_text_13">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="372.471216" y="110.008395" transform="rotate(-0 372.471216 110.008395)">1,808</text>
+   </g>
+   <g id="plot_68621e6_text_14">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="403.054133" y="160.036049" transform="rotate(-0 403.054133 160.036049)">2,046</text>
+   </g>
+   <g id="plot_68621e6_text_15">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="371.150939" y="210.063703" transform="rotate(-0 371.150939 210.063703)">1,798</text>
+   </g>
+   <g id="plot_68621e6_text_16">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="379.025034" y="260.091356" transform="rotate(-0 379.025034 260.091356)">1,859</text>
+   </g>
+   <g id="plot_68621e6_text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="135.289375" y="16.318125" transform="rotate(-0 135.289375 16.318125)">Error local: comuna–mes</text>
+   </g>
+  </g>
+  <g id="plot_68621e6_axes_2">
+   <g id="plot_68621e6_patch_10">
+    <path d="M 467.606236 284.558661 
+L 788.503097 284.558661 
+L 788.503097 30.318125 
+L 467.606236 30.318125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="plot_68621e6_matplotlib.axis_3">
+    <g id="plot_68621e6_xtick_6">
+     <g id="plot_68621e6_line2d_16">
+      <path d="M 467.606236 284.558661 
+L 467.606236 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_17">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="467.606236" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_18">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="467.606236" y="299.916082" transform="rotate(-0 467.606236 299.916082)">0</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_7">
+     <g id="plot_68621e6_line2d_18">
+      <path d="M 520.705146 284.558661 
+L 520.705146 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_19">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="520.705146" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_19">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="520.705146" y="299.916082" transform="rotate(-0 520.705146 299.916082)">10</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_8">
+     <g id="plot_68621e6_line2d_20">
+      <path d="M 573.804056 284.558661 
+L 573.804056 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_21">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="573.804056" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_20">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="573.804056" y="299.916082" transform="rotate(-0 573.804056 299.916082)">20</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_9">
+     <g id="plot_68621e6_line2d_22">
+      <path d="M 626.902965 284.558661 
+L 626.902965 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_23">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="626.902965" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_21">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="626.902965" y="299.916082" transform="rotate(-0 626.902965 299.916082)">30</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_10">
+     <g id="plot_68621e6_line2d_24">
+      <path d="M 680.001875 284.558661 
+L 680.001875 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_25">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="680.001875" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_22">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="680.001875" y="299.916082" transform="rotate(-0 680.001875 299.916082)">40</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_11">
+     <g id="plot_68621e6_line2d_26">
+      <path d="M 733.100785 284.558661 
+L 733.100785 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_27">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="733.100785" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_23">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="733.100785" y="299.916082" transform="rotate(-0 733.100785 299.916082)">50</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_xtick_12">
+     <g id="plot_68621e6_line2d_28">
+      <path d="M 786.199695 284.558661 
+L 786.199695 30.318125 
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_68621e6_line2d_29">
+      <g>
+       <use xlink:href="#plot_68621e6_m57f53ae8ee" x="786.199695" y="284.558661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_68621e6_text_24">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="786.199695" y="299.916082" transform="rotate(-0 786.199695 299.916082)">60</text>
+     </g>
+    </g>
+    <g id="plot_68621e6_text_25">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="628.054667" y="315.356942" transform="rotate(-0 628.054667 315.356942)">MAE de celdas-día</text>
+    </g>
+   </g>
+   <g id="plot_68621e6_matplotlib.axis_4">
+    <g id="plot_68621e6_ytick_6">
+     <g id="plot_68621e6_line2d_30">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="467.606236" y="57.383086" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_7">
+     <g id="plot_68621e6_line2d_31">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="467.606236" y="107.410739" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_8">
+     <g id="plot_68621e6_line2d_32">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="467.606236" y="157.438393" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_9">
+     <g id="plot_68621e6_line2d_33">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="467.606236" y="207.466046" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="plot_68621e6_ytick_10">
+     <g id="plot_68621e6_line2d_34">
+      <g>
+       <use xlink:href="#plot_68621e6_mab649327b5" x="467.606236" y="257.4937" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="plot_68621e6_patch_11">
+    <path d="M 467.606236 41.874513 
+L 635.117156 41.874513 
+L 635.117156 72.891658 
+L 467.606236 72.891658 
+z
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: #889b9f"/>
+   </g>
+   <g id="plot_68621e6_patch_12">
+    <path d="M 467.606236 91.902167 
+L 730.63645 91.902167 
+L 730.63645 122.919312 
+L 467.606236 122.919312 
+z
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: #368e80"/>
+   </g>
+   <g id="plot_68621e6_patch_13">
+    <path d="M 467.606236 141.92982 
+L 694.490514 141.92982 
+L 694.490514 172.946965 
+L 467.606236 172.946965 
+z
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: #c4aa8b"/>
+   </g>
+   <g id="plot_68621e6_patch_14">
+    <path d="M 467.606236 191.957474 
+L 635.117156 191.957474 
+L 635.117156 222.974619 
+L 467.606236 222.974619 
+z
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: #18313a"/>
+   </g>
+   <g id="plot_68621e6_patch_15">
+    <path d="M 467.606236 241.985127 
+L 635.117156 241.985127 
+L 635.117156 273.002273 
+L 467.606236 273.002273 
+z
+" clip-path="url(#plot_68621e6_pe4443d9245)" style="fill: #a6bdb8"/>
+   </g>
+   <g id="plot_68621e6_patch_16">
+    <path d="M 467.606236 284.558661 
+L 467.606236 30.318125 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_68621e6_patch_17">
+    <path d="M 467.606236 284.558661 
+L 788.503097 284.558661 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_68621e6_text_26">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="639.8517" y="59.980742" transform="rotate(-0 639.8517 59.980742)">31,547</text>
+   </g>
+   <g id="plot_68621e6_text_27">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="735.370994" y="110.008395" transform="rotate(-0 735.370994 110.008395)">49,536</text>
+   </g>
+   <g id="plot_68621e6_text_28">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="699.225057" y="160.036049" transform="rotate(-0 699.225057 160.036049)">42,729</text>
+   </g>
+   <g id="plot_68621e6_text_29">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="639.8517" y="210.063703" transform="rotate(-0 639.8517 210.063703)">31,547</text>
+   </g>
+   <g id="plot_68621e6_text_30">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="639.8517" y="260.091356" transform="rotate(-0 639.8517 260.091356)">31,547</text>
+   </g>
+   <g id="plot_68621e6_text_31">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="467.606236" y="16.318125" transform="rotate(-0 467.606236 16.318125)">Error de totales: 54 comunas–mes</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="plot_68621e6_p06316da2c1">
+   <rect x="135.289375" y="30.318125" width="320.896861" height="254.240536"/>
+  </clipPath>
+  <clipPath id="plot_68621e6_pe4443d9245">
+   <rect x="467.606236" y="30.318125" width="320.896861" height="254.240536"/>
+  </clipPath>
+ </defs>
+</svg>
+<figcaption>Resultados18 extraídos de JSON congelado. Los métodos aparecen en orden conceptual, sin ranking de producto. La igualdad regional de B, coherente y proporcional se impone mediante el presupuesto; no es un nuevo acierto regional.</figcaption></figure><details><summary>Valores exactos: error, sesgo, volumen y total regional</summary><div class="tablewrap"><table><thead><tr><th scope="col">Decisión</th><th scope="col">MAE local</th><th scope="col">Sesgo medio</th><th scope="col">Suma estimada</th><th scope="col">MAE regional</th></tr></thead><tbody><tr><td>B · referencia</td><td>1,903194</td><td>-0,087189</td><td>21.037,0</td><td>31,546960</td></tr><tr><td>Mediana E11</td><td>1,808210</td><td>-0,731078</td><td>17.699,1</td><td>49,535897</td></tr><tr><td>Media de la CDF</td><td>2,046114</td><td>0,272902</td><td>22.903,7</td><td>42,728613</td></tr><tr><td>Asignación coherente</td><td>1,797939</td><td>-0,087189</td><td>21.037,0</td><td>31,546960</td></tr><tr><td>Reescala proporcional</td><td>1,859192</td><td>-0,087189</td><td>21.037,0</td><td>31,546960</td></tr></tbody></table></div><p>Las cuatro pruebas de transporte temporal agregadas favorecen al candidato coherente; los ocho bloques anuales de desarrollo también. Son comparaciones retrospectivas y sus subgrupos no mejoran de forma uniforme.</p></details><h3>El adversario debe mirar lo que empeora.</h3><p>En las 14 comunas publicadas, temporadas 2020–2021, el MAE de B es 2,956713 y el coherente 2,979495: empeora. La conservación del total 54 puede desplazar sesgo entre las 14 y las 40 restantes.</p><div class="tablewrap"><table><thead><tr><th scope="col">Población</th><th scope="col">Comunas</th><th scope="col">Estrato</th><th scope="col">MAE B</th><th scope="col">MAE coherente</th></tr></thead><tbody><tr><td>Desarrollo 2012–2019</td><td>54</td><td>S-NPP registra cero</td><td>0,278038</td><td>0,326790</td></tr><tr><td>Desarrollo 2012–2019</td><td>54</td><td>Ambos registran cero</td><td>0,159746</td><td>0,201006</td></tr><tr><td>Desarrollo 2012–2019</td><td>14</td><td>S-NPP ≥50</td><td>19,376366</td><td>18,205585</td></tr><tr><td>Posterior, S-NPP</td><td>14</td><td>Referente ≥50</td><td>23,096126</td><td>25,007587</td></tr><tr><td>Posterior, NOAA-20</td><td>14</td><td>Referente ≥50</td><td>20,230034</td><td>21,229276</td></tr></tbody></table></div><p class="note">Los estratos se solapan: cero, ambos cero y meses intensos no son experimentos independientes. Una mejora global no demuestra mejor recuperación cuando Aqua registra cero ni mejor desempeño de extremos en las 14 comunas.</p><h3>19 · Cambiar de referente sin volver a ajustar</h3><p>Se tomaron las mismas3780 filas posteriores y las seis predicciones fijas de 18, con máscara 223 y solicitudes mensuales completas. Se reprodujo S-NPP exactamente antes de comparar también NOAA-20. No hubo nuevos ajustes ni selección con NOAA-20.</p><div class="tablewrap"><table><thead><tr><th scope="col">Referente</th><th scope="col">Grupo</th><th scope="col">MAE B</th><th scope="col">MAE coherente</th><th scope="col">Reducción frente a B</th></tr></thead><tbody><tr><td>S-NPP</td><td>54 comunas</td><td>2,244514</td><td>2,111721</td><td>5,92 %</td></tr><tr><td>S-NPP</td><td>14 publicadas</td><td>3,126108</td><td>3,062757</td><td>2,03 %</td></tr><tr><td>S-NPP</td><td>40 restantes</td><td>1,935956</td><td>1,778858</td><td>8,11 %</td></tr><tr><td>NOAA-20</td><td>54 comunas</td><td>2,237767</td><td>2,142587</td><td>4,25 %</td></tr><tr><td>NOAA-20</td><td>14 publicadas</td><td>3,000359</td><td>2,957323</td><td>1,43 %</td></tr><tr><td>NOAA-20</td><td>40 restantes</td><td>1,970860</td><td>1,857429</td><td>5,76 %</td></tr></tbody></table></div><p>La mejora local persiste al referente NOAA-20, aunque disminuye. En las 14 contra NOAA-20, el sesgo cambia de -0,370531 a -0,614921 y el error de subtotales mensuales de 24,540934 a 24,664720: ambos empeoran.</p><p class="small">S-NPP y NOAA-20 no son verdad física uno del otro. El puente entre plataformas ya se había explorado: esto es sensibilidad al referente, no una nueva validación externa independiente. No hay positivos NRT en estas filas; el grupo con NRT no permite un contraste SP/NRT. Las marcas provienen de detecciones y no certifican oportunidad en filas con cero.</p></section>
+<section id="contratos"><h2>20 falló correctamente. 20A comparó solo archivos disponibles.</h2><p>El NOAA-20 de investigación no reproduce automáticamente el contrato <code>observed</code> publicado: este aplica tipo 0, otra regla de cuadrícula y geografía DPA. El primer intento exigía las 3780 filas completas de 19, pero el archivo observado termina en diciembre 2025.</p><figure><div class="svgscroll" role="region" tabindex="0" aria-label="Diagrama desplazable"><svg class="diagram" viewBox="0 0 1100 405" role="img" aria-label="Calendario de temporadas2020–2025; observado termina diciembre2025 y seis meses2026 carecen de archivo" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;fill:#18313a"><defs><marker id="diagram_0a69a1c_a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8" fill="#557878"/></marker></defs><text x="10" y="28" font-size="20" font-weight="700">Temporada científica: julio → junio del año siguiente</text><text x="10" y="85" font-size="16">2020–21</text><rect x="115" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="83" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="60" width="72" height="35" rx="5" fill="#e3e0d9"/><text x="231" y="83" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="60" width="72" height="35" rx="5" fill="#e3e0d9"/><text x="311" y="83" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="83" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="83" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="83" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="631" y="83" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="711" y="83" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="791" y="83" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="871" y="83" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="951" y="83" text-anchor="middle" font-size="14">May</text><rect x="995" y="60" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="1031" y="83" text-anchor="middle" font-size="14">Jun</text><text x="10" y="135" font-size="16">2021–22</text><rect x="115" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="133" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="231" y="133" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="311" y="133" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="133" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="133" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="133" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="631" y="133" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="711" y="133" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="791" y="133" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="871" y="133" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="951" y="133" text-anchor="middle" font-size="14">May</text><rect x="995" y="110" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="1031" y="133" text-anchor="middle" font-size="14">Jun</text><text x="10" y="185" font-size="16">2022–23</text><rect x="115" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="183" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="231" y="183" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="311" y="183" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="183" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="183" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="183" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="631" y="183" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="711" y="183" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="791" y="183" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="871" y="183" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="951" y="183" text-anchor="middle" font-size="14">May</text><rect x="995" y="160" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="1031" y="183" text-anchor="middle" font-size="14">Jun</text><text x="10" y="235" font-size="16">2023–24</text><rect x="115" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="233" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="231" y="233" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="311" y="233" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="233" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="233" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="233" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="631" y="233" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="711" y="233" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="791" y="233" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="871" y="233" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="951" y="233" text-anchor="middle" font-size="14">May</text><rect x="995" y="210" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="1031" y="233" text-anchor="middle" font-size="14">Jun</text><text x="10" y="285" font-size="16">2024–25</text><rect x="115" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="283" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="231" y="283" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="311" y="283" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="283" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="283" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="283" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="631" y="283" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="711" y="283" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="791" y="283" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="871" y="283" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="951" y="283" text-anchor="middle" font-size="14">May</text><rect x="995" y="260" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="1031" y="283" text-anchor="middle" font-size="14">Jun</text><text x="10" y="335" font-size="16">2025–26</text><rect x="115" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="151" y="333" text-anchor="middle" font-size="14">Jul</text><rect x="195" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="231" y="333" text-anchor="middle" font-size="14">Ago</text><rect x="275" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="311" y="333" text-anchor="middle" font-size="14">Sep</text><rect x="355" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="391" y="333" text-anchor="middle" font-size="14">Oct</text><rect x="435" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="471" y="333" text-anchor="middle" font-size="14">Nov</text><rect x="515" y="310" width="72" height="35" rx="5" fill="#c7e4dc"/><text x="551" y="333" text-anchor="middle" font-size="14">Dic</text><rect x="595" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="631" y="333" text-anchor="middle" font-size="14">Ene</text><rect x="675" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="711" y="333" text-anchor="middle" font-size="14">Feb</text><rect x="755" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="791" y="333" text-anchor="middle" font-size="14">Mar</text><rect x="835" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="871" y="333" text-anchor="middle" font-size="14">Abr</text><rect x="915" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="951" y="333" text-anchor="middle" font-size="14">May</text><rect x="995" y="310" width="72" height="35" rx="5" fill="#f4d5b5"/><text x="1031" y="333" text-anchor="middle" font-size="14">Jun</text><path d="M590 303L590 360" stroke="#9b4d1b" stroke-width="3"/><text x="615" y="385" font-size="16">Último archivo O: diciembre 2025 · enero–junio 2026 no se rellena</text></svg></div><figcaption><span class="dot" style="background:#c7e4dc"></span>Archivo común · <span class="dot" style="background:#e3e0d9"></span>Exclusiones heredadas · <span class="dot" style="background:#f4d5b5"></span>2026 sin archivo observado. Fuente: gates20 y dominio20A, fijado por metadatos antes de medir diferencias.</figcaption></figure><p class="note"><strong>Control20: falso por disponibilidad.</strong> Las 324 filas de enero–junio 2026 siguen registradas como ausentes, sin imputación. Un protocolo adicional20A fijó la intersección de archivo: 64 meses ×54 comunas =3456 filas. La etapa 20 estricta no se sobrescribió para aparentar éxito.</p><figure><svg role="img" aria-label="Cascada de totales entre contratos, de14713 a14649; eje vertical acotado y valores exactos en tabla" xmlns:xlink="http://www.w3.org/1999/xlink" width="800.39952pt" height="325.19952pt" viewBox="0 0 800.39952 325.19952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="plot_5ffae8b_figure_1">
+  <g id="plot_5ffae8b_patch_1">
+   <path d="M 0 325.19952 
+L 800.39952 325.19952 
+L 800.39952 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="plot_5ffae8b_axes_1">
+   <g id="plot_5ffae8b_patch_2">
+    <path d="M 64.634609 299.998661 
+L 793.19952 299.998661 
+L 793.19952 34.229937 
+L 64.634609 34.229937 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="plot_5ffae8b_matplotlib.axis_1">
+    <g id="plot_5ffae8b_xtick_1">
+     <g id="plot_5ffae8b_line2d_1">
+      <defs>
+       <path id="plot_5ffae8b_m57f53ae8ee" d="M 0 0 
+L 0 3.5 
+" style="stroke: #18313a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="134.285509" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="134.285509" y="315.356083" transform="rotate(-0 134.285509 315.356083)">O0</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_xtick_2">
+     <g id="plot_5ffae8b_line2d_2">
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="252.138131" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="252.138131" y="315.356942" transform="rotate(-0 252.138131 315.356942)">Ogrid</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_xtick_3">
+     <g id="plot_5ffae8b_line2d_3">
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="369.990754" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="369.990754" y="315.356942" transform="rotate(-0 369.990754 315.356942)">Omask</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_xtick_4">
+     <g id="plot_5ffae8b_line2d_4">
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="487.843376" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="487.843376" y="315.356083" transform="rotate(-0 487.843376 315.356083)">Omap</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_xtick_5">
+     <g id="plot_5ffae8b_line2d_5">
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="605.695998" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="605.695998" y="315.356942" transform="rotate(-0 605.695998 315.356942)">C tipo 0</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_xtick_6">
+     <g id="plot_5ffae8b_line2d_6">
+      <g>
+       <use xlink:href="#plot_5ffae8b_m57f53ae8ee" x="723.54862" y="299.998661" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="723.54862" y="315.356942" transform="rotate(-0 723.54862 315.356942)">C todos</text>
+     </g>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_matplotlib.axis_2">
+    <g id="plot_5ffae8b_ytick_1">
+     <g id="plot_5ffae8b_line2d_7">
+      <path d="M 64.634609 276.343853 
+L 793.19952 276.343853 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_8">
+      <defs>
+       <path id="plot_5ffae8b_mab649327b5" d="M 0 0 
+L -3.5 0 
+" style="stroke: #18313a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="276.343853" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="280.522564" transform="rotate(-0 57.634609 280.522564)">14575</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_2">
+     <g id="plot_5ffae8b_line2d_9">
+      <path d="M 64.634609 241.557371 
+L 793.19952 241.557371 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_10">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="241.557371" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="245.736082" transform="rotate(-0 57.634609 245.736082)">14600</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_3">
+     <g id="plot_5ffae8b_line2d_11">
+      <path d="M 64.634609 206.770889 
+L 793.19952 206.770889 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_12">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="206.770889" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="210.9496" transform="rotate(-0 57.634609 210.9496)">14625</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_4">
+     <g id="plot_5ffae8b_line2d_13">
+      <path d="M 64.634609 171.984407 
+L 793.19952 171.984407 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_14">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="171.984407" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="176.163117" transform="rotate(-0 57.634609 176.163117)">14650</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_5">
+     <g id="plot_5ffae8b_line2d_15">
+      <path d="M 64.634609 137.197924 
+L 793.19952 137.197924 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_16">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="137.197924" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="141.376635" transform="rotate(-0 57.634609 141.376635)">14675</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_6">
+     <g id="plot_5ffae8b_line2d_17">
+      <path d="M 64.634609 102.411442 
+L 793.19952 102.411442 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_18">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="102.411442" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_12">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="106.590153" transform="rotate(-0 57.634609 106.590153)">14700</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_ytick_7">
+     <g id="plot_5ffae8b_line2d_19">
+      <path d="M 64.634609 67.62496 
+L 793.19952 67.62496 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.15; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="plot_5ffae8b_line2d_20">
+      <g>
+       <use xlink:href="#plot_5ffae8b_mab649327b5" x="64.634609" y="67.62496" style="fill: #18313a; stroke: #18313a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="plot_5ffae8b_text_13">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #18313a" x="57.634609" y="71.803671" transform="rotate(-0 57.634609 71.803671)">14725</text>
+     </g>
+    </g>
+    <g id="plot_5ffae8b_text_14">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="15.998281" y="167.114299" transform="rotate(-90 15.998281 167.114299)">Total de celdas-día · eje acotado</text>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_patch_3">
+    <path d="M 97.751196 20556.862908 
+L 170.819822 20556.862908 
+L 170.819822 84.322472 
+L 97.751196 84.322472 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #18313a"/>
+   </g>
+   <g id="plot_5ffae8b_patch_4">
+    <path d="M 215.603818 84.322472 
+L 288.672444 84.322472 
+L 288.672444 82.931012 
+L 215.603818 82.931012 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #16796f"/>
+   </g>
+   <g id="plot_5ffae8b_patch_5">
+    <path d="M 333.456441 217.902563 
+L 406.525066 217.902563 
+L 406.525066 82.931012 
+L 333.456441 82.931012 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #b75a24"/>
+   </g>
+   <g id="plot_5ffae8b_patch_6">
+    <path d="M 451.309063 223.4684 
+L 524.377689 223.4684 
+L 524.377689 217.902563 
+L 451.309063 217.902563 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #b75a24"/>
+   </g>
+   <g id="plot_5ffae8b_patch_7">
+    <path d="M 569.161685 223.4684 
+L 642.230311 223.4684 
+L 642.230311 197.030674 
+L 569.161685 197.030674 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #16796f"/>
+   </g>
+   <g id="plot_5ffae8b_patch_8">
+    <path d="M 687.014307 197.030674 
+L 760.082933 197.030674 
+L 760.082933 173.375866 
+L 687.014307 173.375866 
+z
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: #16796f"/>
+   </g>
+   <g id="plot_5ffae8b_line2d_21">
+    <path d="M 170.819822 84.322472 
+L 215.603818 84.322472 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #809290; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_line2d_22">
+    <path d="M 288.672444 82.931012 
+L 333.456441 82.931012 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #809290; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_line2d_23">
+    <path d="M 406.525066 217.902563 
+L 451.309063 217.902563 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #809290; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_line2d_24">
+    <path d="M 524.377689 223.4684 
+L 569.161685 223.4684 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #809290; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_line2d_25">
+    <path d="M 642.230311 197.030674 
+L 687.014307 197.030674 
+" clip-path="url(#plot_5ffae8b_p22237b94e2)" style="fill: none; stroke: #809290; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_patch_9">
+    <path d="M 64.634609 299.998661 
+L 64.634609 34.229938 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_patch_10">
+    <path d="M 64.634609 299.998661 
+L 793.19952 299.998661 
+" style="fill: none; stroke: #879a9b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="plot_5ffae8b_text_15">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="252.138131" y="69.01642" transform="rotate(-0 252.138131 69.01642)">+1</text>
+   </g>
+   <g id="plot_5ffae8b_PathCollection_1">
+    <defs>
+     <path id="plot_5ffae8b_mbb895b7440" d="M 0 2.12132 
+C 0.562581 2.12132 1.102195 1.897805 1.5 1.5 
+C 1.897805 1.102195 2.12132 0.562581 2.12132 0 
+C 2.12132 -0.562581 1.897805 -1.102195 1.5 -1.5 
+C 1.102195 -1.897805 0.562581 -2.12132 0 -2.12132 
+C -0.562581 -2.12132 -1.102195 -1.897805 -1.5 -1.5 
+C -1.897805 -1.102195 -2.12132 -0.562581 -2.12132 0 
+C -2.12132 0.562581 -1.897805 1.102195 -1.5 1.5 
+C -1.102195 1.897805 -0.562581 2.12132 0 2.12132 
+z
+" style="stroke: #18313a"/>
+    </defs>
+    <g clip-path="url(#plot_5ffae8b_p22237b94e2)">
+     <use xlink:href="#plot_5ffae8b_mbb895b7440" x="252.138131" y="82.931012" style="fill: #18313a; stroke: #18313a"/>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_text_16">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="252.138131" y="110.760198" transform="rotate(-0 252.138131 110.760198)">14714</text>
+   </g>
+   <g id="plot_5ffae8b_text_17">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="369.990754" y="69.01642" transform="rotate(-0 369.990754 69.01642)">-97</text>
+   </g>
+   <g id="plot_5ffae8b_PathCollection_2">
+    <g clip-path="url(#plot_5ffae8b_p22237b94e2)">
+     <use xlink:href="#plot_5ffae8b_mbb895b7440" x="369.990754" y="217.902563" style="fill: #18313a; stroke: #18313a"/>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_text_18">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="369.990754" y="245.731749" transform="rotate(-0 369.990754 245.731749)">14617</text>
+   </g>
+   <g id="plot_5ffae8b_text_19">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="487.843376" y="203.98797" transform="rotate(-0 487.843376 203.98797)">-4</text>
+   </g>
+   <g id="plot_5ffae8b_PathCollection_3">
+    <g clip-path="url(#plot_5ffae8b_p22237b94e2)">
+     <use xlink:href="#plot_5ffae8b_mbb895b7440" x="487.843376" y="223.4684" style="fill: #18313a; stroke: #18313a"/>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_text_20">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="487.843376" y="251.297586" transform="rotate(-0 487.843376 251.297586)">14613</text>
+   </g>
+   <g id="plot_5ffae8b_text_21">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="605.695998" y="183.116081" transform="rotate(-0 605.695998 183.116081)">+19</text>
+   </g>
+   <g id="plot_5ffae8b_PathCollection_4">
+    <g clip-path="url(#plot_5ffae8b_p22237b94e2)">
+     <use xlink:href="#plot_5ffae8b_mbb895b7440" x="605.695998" y="197.030674" style="fill: #18313a; stroke: #18313a"/>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_text_22">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="605.695998" y="224.859859" transform="rotate(-0 605.695998 224.859859)">14632</text>
+   </g>
+   <g id="plot_5ffae8b_text_23">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="723.54862" y="159.461273" transform="rotate(-0 723.54862 159.461273)">+17</text>
+   </g>
+   <g id="plot_5ffae8b_PathCollection_5">
+    <g clip-path="url(#plot_5ffae8b_p22237b94e2)">
+     <use xlink:href="#plot_5ffae8b_mbb895b7440" x="723.54862" y="173.375866" style="fill: #18313a; stroke: #18313a"/>
+    </g>
+   </g>
+   <g id="plot_5ffae8b_text_24">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="723.54862" y="201.205052" transform="rotate(-0 723.54862 201.205052)">14649</text>
+   </g>
+   <g id="plot_5ffae8b_text_25">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #18313a" x="134.285509" y="70.407879" transform="rotate(-0 134.285509 70.407879)">14713</text>
+   </g>
+   <g id="plot_5ffae8b_text_26">
+    <text style="font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18313a" x="64.634609" y="17.229937" transform="rotate(-0 64.634609 17.229937)">Recorrido fijo entre contratos: +1 −97 −4 +19 +17 = −64</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="plot_5ffae8b_p22237b94e2">
+   <rect x="64.634609" y="34.229937" width="728.564911" height="265.768723"/>
+  </clipPath>
+ </defs>
+</svg>
+<figcaption>Cascada calculada con Matplotlib a partir de <code>contract_gap_common_archive_audit/summary.json</code>. El eje vertical está acotado para hacer visibles diferencias pequeñas; los niveles y deltas están rotulados. No expresa pérdidas de área quemada ni atribución causal.</figcaption></figure><div class="tablewrap"><table><thead><tr><th scope="col">Componente fijo</th><th scope="col">Cambio neto</th><th scope="col">Diferencia absoluta</th><th scope="col">Filas idénticas /3456</th></tr></thead><tbody><tr><td>Cuadrícula</td><td>+1</td><td>1</td><td>3455</td></tr><tr><td>Máscara</td><td>-97</td><td>97</td><td>3388</td></tr><tr><td>Mapa y soporte</td><td>-4</td><td>92</td><td>3379</td></tr><tr><td>Residual entre cohortes</td><td>+19</td><td>19</td><td>3443</td></tr><tr><td>Tipo dentro de C</td><td>+17</td><td>17</td><td>3444</td></tr><tr><td>Brecha final</td><td>-64</td><td>220</td><td>3292</td></tr></tbody></table></div><details><summary>Cómo interpretar cuadrícula, máscara, mapa, tipo y residual</summary><ul><li>O0: conteo del CSV con cuadrícula y comuna observadas; Ogrid recalcula el piso literal científico conservando la comuna original.</li><li>Omask excluye223 coordenadas; Omap reasigna por el mapa científico y cuantifica explícitamente soporte ausente.</li><li>Una detección cambia de celda por redondeo; 50 están cerca de bordes. Después de máscara, 47 celdas-día cambian CUT y 4 carecen de mapa científico.</li><li>Ctype0 selecciona tipo 0 antes de deduplicar. Hay14627 días solo tipo 0,5 mixtos 0/otro y 17 solo otro. Los desconocidos no se reinterpretan como0; en este dominio no aparecen.</li><li>El residual Ctype0−Omap suma19 y sigue mezclando cohortes/archivos/versiones/selección previa. Los CSV prefiltrados no recuperan observaciones descartadas.</li></ul><pre class="formula">Ctodos − O0 = Δcuadrícula + Δmáscara + Δmapa/soporte
+            + residual_cohortes + Δtipo_dentro_C
+         −64 = +1 −97 −4 +19 +17
+Error de cierre por comuna-mes = 0</pre><p>La brecha neta −64 oculta 220 unidades de diferencia absoluta en 164 filas. En 14 comunas, O0=5993 y Ctodos=5987: diferencia neta −6, absoluta 70. La cancelación regional no vuelve intercambiables las series locales.</p></details></section>
+<section id="observacion"><h2>G0 técnico abre una puerta. G1 sigue pendiente.</h2><p>Se obtuvo y leyó una pareja técnica fijada antes de ver concordancias, Aqua y S-NPP del 3 de enero 2019, con sus archivos de geolocalización. Las asociaciones InputPointer y dimensiones coincidieron. El acceso supuso 184,77 MiB. Una pareja accesible no acredita representatividad del período ni observaciones comparables.</p><figure><div class="svgscroll" role="region" tabindex="0" aria-label="Diagrama desplazable"><svg class="diagram" viewBox="0 0 1100 365" role="img" aria-label="Separación entre G0 técnico demostrado y G1 científico pendiente; no permite declarar cobertura o ausencia de fuego" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;fill:#18313a"><defs><marker id="diagram_1da9aed_a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8" fill="#557878"/></marker></defs><rect x="10" y="25" width="480" height="165" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="26" y="55" font-size="18" font-weight="700">G0 · capacidad técnica demostrada</text><text x="26" y="82" font-size="14">Acceso y lectura de dos casos reales</text><text x="26" y="104" font-size="14">Máscara, QA y geolocalización con procedencia</text><text x="26" y="126" font-size="14">Centros y referencias de escaneo reproducibles</text><text x="26" y="148" font-size="14">Caso en cuarentena por flag Suspect</text><rect x="610" y="25" width="480" height="165" rx="12" fill="#fff0dc" stroke="#b6cbc5"/><text x="626" y="55" font-size="18" font-weight="700">G1 · sigue falso</text><text x="626" y="82" font-size="14">Footprints comunes no verificados</text><text x="626" y="104" font-size="14">Exposición temporal por píxel no acotada</text><text x="626" y="126" font-size="14">QA y flags globales no habilitan elegibilidad</text><text x="626" y="148" font-size="14">Sin denominador observado ni concordancia válida</text><path d="M495,108 L605,108" stroke="#557878" stroke-width="2" fill="none" marker-end="url(#diagram_1da9aed_a)"/><text x="501" y="85" font-size="14">no implica</text><rect x="10" y="230" width="1080" height="115" rx="12" fill="#eaf4ef" stroke="#b6cbc5"/><text x="26" y="260" font-size="18" font-weight="700">Siguiente pregunta científica</text><text x="26" y="287" font-size="14">En un universo fijo, ¿cómo cambian discordancias direccionales y retención bajo reglas de tiempo/soporte/QA?</text><text x="26" y="309" font-size="14">Conservar desconocidos, ambos sentidos del desacuerdo y observaciones sin detección. No atribuir causalidad.</text></svg></div><figcaption>El flag global <code>Suspect</code> de MYD14 se conserva como cuarentena. Ningún avance de acceso, decodificación o cercanía de centros lo convierte en elegibilidad científica.</figcaption></figure><div class="cols"><div class="panel"><h3>QA por producto, no una regla universal</h3><p>El decodificador distingue máscara, calidad de entradas, pruebas del detector, rellenos, bits reservados y superficie. No se impone <code>algorithm_QA==0</code> a todos los instrumentos. Baja confianza sigue siendo detección y desconocido conserva su propio estado.</p><p>Las 16 pruebas sintéticas del decodificador validan esa semántica de software. Incluso un candidato local devuelve <code>gate1_passed=false</code> y <code>scientific_eligibility_certified=false</code>. Los indicadores geográficos cero usados para seleccionar centros son una política técnica declarada, no un certificado NASA universal.</p></div><div class="panel"><h3>Geolocalización y referencias de escaneo</h3><p>En una AOI50×50 km en UTM18S se asociaron centros próximos con umbral500 m y margen predefinido. Se conservaron referencias nativas TAI93; no se convirtieron en tiempos exactos de adquisición por píxel.</p><div class="tablewrap"><table><thead><tr><th scope="col">Resultado técnico</th><th scope="col">Valor</th></tr></thead><tbody><tr><td>Asociaciones de centros</td><td>2280</td></tr><tr><td>Distancia mediana entre centros</td><td>153,99 m</td></tr><tr><td>Distancia máxima entre centros</td><td>273,80 m</td></tr><tr><td>Desfase mediano de referencias de escaneo</td><td>325,7686 s</td></tr><tr><td>Rango de desfase</td><td>323,9894–327,2458 s</td></tr><tr><td>Centros VIIRS reutilizados</td><td>0</td></tr><tr><td>Parejas con VIIRS fuera del cuadrado primario</td><td>8</td></tr><tr><td>Footprints comunes verificados</td><td>No</td></tr><tr><td>Tiempos de exposición por píxel verificados</td><td>No</td></tr><tr><td>G1 / elegibilidad científica</td><td>Falso / no certificada</td></tr></tbody></table></div></div></div><p class="note">Un desfase mediano de 325,77 s describe referencias de escaneo, no exposición por píxel. Centros próximos no prueban footprints comunes. No se calcularon aquí concordancias de fuego, fracción despejada ni denominador observado, y no se incorporaron estas variables al modelo mensual.</p><h3>QA nativa real: inventario separado por producto</h3><p>Una lectura posterior aplicó el decodificador a los centros nativos de cada producto dentro de la AOI fijada, manteniendo las poblaciones separadas. No se emparejaron clases de fuego ni se calculó una tabla de concordancia.</p><div class="tablewrap"><table><thead><tr><th scope="col">Producto</th><th scope="col">Centros en AOI</th><th scope="col">Clases de detección7–9</th><th scope="col">Clase5 terrestre</th><th scope="col">Glint de máscara</th></tr></thead><tbody><tr><td>MODIS Aqua</td><td>2280</td><td>0</td><td>2269</td><td>0</td></tr><tr><td>VIIRS S-NPP</td><td>16978</td><td>0</td><td>16947</td><td>3</td></tr></tbody></table></div><p>Hay cero clases 7–9 en cada producto por separado y tres glint VIIRS excluidos del screen local. Este caso sirve para ingeniería de lectura y semántica; no evalúa sensibilidad a fuego positivo ni cuánto desacuerdo desaparece. La clase5 es una clasificación registrada, no una garantía de ausencia física. Los 16978 centros VIIRS nativos dentro de la AOI no son los 17660 candidatos del análisis geográfico, que incorpora margen espacial.</p><p class="note"><strong>La semántica global de Suspect permanece sin resolver para MYD14 L2.</strong> La nota documental encontró una explicación de plantilla en MODIS L1B; no se transfiere automáticamente a MYD14. La cuarentena es política conservadora del piloto, no una prohibición NASA demostrada ni prueba de que el granule esté defectuoso. Aun resolviendo ese campo, siguen pendientes soporte común, tiempo y QA. Fuente: <code>docs/reviews/2026-11-14-modis-global-quality-note.md</code>.</p><details><summary>Qué falta antes de comparar detecciones del piloto</summary><ol class="steps"><li>Inventario de todo el universo temporal previsto, manteniendo productos ausentes y exclusiones visibles.</li><li>Soporte espacial defendible: footprints, bordes, geometría de vista y asociación definida antes de concordancia.</li><li>Exposición temporal por muestra con incertidumbre y escala justificadas.</li><li>QA nativa, calidad de escaneo y resolución documentada de la cuarentena global; conservar indeterminados.</li><li>Reglas bilaterales que incluyan no-detecciones observadas, ambas discordancias y retención, sin circularidad.</li></ol><p>La evidencia actual no permite decir cuánto desacuerdo desaparece al igualar oportunidades. Una comparación futura será condicionada a sus reglas y población retenida, no una descomposición causal automática.</p></details></section>
+<section id="caso2023"><h2>Un segundo caso prueba clases positivas y una tensión real de QA.</h2><p>El primer caso de 2019 se conserva aunque no registra clases de fuego. Antes de consultar actividad se fijó otra ventana por contexto regional de <a href="https://science.nasa.gov/earth/earth-observatory/fires-blaze-through-south-central-chile-150945/">NASA Earth Observatory</a>, la misma AOI y un orden por metadatos. El único par elegible fue el <strong>10 de febrero de 2023, 18:30 UTC</strong>. El contexto regional no acredita fuego en cada píxel.</p><div class="tablewrap"><table><caption>Conteos nativos separados: no son incendios individuales ni una comparación de áreas</caption><thead><tr><th scope="col">Producto</th><th scope="col">Centros AOI</th><th scope="col">Clase 7</th><th scope="col">Clase 8</th><th scope="col">Clase 9</th><th scope="col">Clases 7–9 tras screen local</th></tr></thead><tbody><tr><td>MODIS Aqua</td><td>1307</td><td>0</td><td>3</td><td>3</td><td>6</td></tr><tr><td>VIIRS S-NPP</td><td>15545</td><td>3</td><td>11</td><td>2</td><td>8</td></tr></tbody></table></div><p>Las referencias de escaneo difieren una mediana de <strong>7,174 segundos</strong>, con rango 5,093–8,953 s. No son tiempos físicos por píxel. No se emparejaron clases de fuego ni se calculó concordancia.</p><p class="note">El screen conservador excluye 12 centros VIIRS por M13 no nominal. Entre ellos hay 8 clasificaciones positivas, incluidas las dos de confianza alta. Eso <strong>no demuestra detecciones falsas ni que la causa sea saturación</strong>. Detección y disponibilidad de FRP requieren políticas distintas; la información se conserva como eje del resultado, no se convierte en cero.</p><p>G0 de acceso/esquema está comprobado; G1 sigue falso. Ambos casos, sus reglas y los límites anteriores quedan conservados. La descarga acumulada fue 371,07 MiB, bajo el límite fijado de 400 MiB.</p></section>
+<section id="plan"><h2>Plan sólido: conservar la evidencia y resolver observación.</h2><p>El horizonte autorizado se extendió hasta el domingo 15 de noviembre a las 08:30 de Santiago (11:30 UTC). Este archivo es un snapshot de evidencia, no un cierre anticipado de esa investigación.</p><ol class="steps"><li><strong>Congelar lo aprendido.</strong> Mantener los resultados negativos y costes por territorio/estrato, manifiestos y controles de reproducción. No promover el candidato por una reducción global del MAE.</li><li><strong>Completar G1 antes de concordancias.</strong> Inventario, soporte, exposición y QA deben producir criterios auditables y estados desconocidos explícitos; el flag global no se omite.</li><li><strong>Ejecutar un piloto acotado si supera los controles.</strong> Reportar marginales, ambos sentidos del desacuerdo y flujo de exclusiones. El período2019 pertenece al desarrollo y no se vuelve un test independiente por añadir variables nuevas.</li><li><strong>Volver al modelo solo con evidencia discriminante.</strong> Decidir si hacen falta mejores variables, otra unidad o contexto territorial. Reservar nuevas unidades temporales/territoriales antes de elegir modelos posteriores.</li></ol><p class="note ok">El criterio de avance es resolver una incertidumbre que pueda cambiar la decisión. Puede significar confirmar un límite, detener un contraste inválido o mantener un modelo anterior; no exige que cada etapa anuncie otra mejora.</p><h3>Revisión en el repositorio</h3><p><a href="https://github.com/Loddrik/goliat-fire-calendar/pull/32">PR32</a> · <a href="https://github.com/Loddrik/goliat-fire-calendar/pull/33">PR33</a> · <a href="https://github.com/Loddrik/goliat-fire-calendar/pull/34">PR34</a>. La auditoría de contratos 20/20A está en <a href="https://github.com/Loddrik/goliat-fire-calendar/pull/35">PR35</a>. Los enlaces no certifican aquí aprobación ni estado de merge; el estado de la siguiente entrega puede cambiar después del snapshot. No se solicitó desplegar este informe.</p></section>
+<section id="fuentes"><h2>Fuentes, trazabilidad y alcance del snapshot.</h2><p>Generado desde resúmenes congelados, sin abrir archivos satelitales crudos, ajustar modelos o recalcular predicciones. Las cifras del informe se leen de JSON reales. Los gráficos científicos se construyeron con Matplotlib y se incluyen como SVG; los diagramas explicativos son SVG propios. No se requiere CDN, JavaScript, Mermaid ni conexión para leerlo.</p><details><summary>JSON de origen y sus hashes de contenido</summary><ul class="source-list"><li><code>data/processed/zero_anchor_audit/summary.json</code><br><span class="small">SHA-256 b0e18ef0ff6c65c761f7fb4fb0a8113cbf54e08190b7d34d8e9510497a39b3d2</span></li><li><code>data/processed/hurdle_audit/summary.json</code><br><span class="small">SHA-256 9c42c2d0608f585359a9d0348689f4d46ebb23aac2d8aa7a73f8e51e10f8fc73</span></li><li><code>data/processed/coherent_audit/summary.json</code><br><span class="small">SHA-256 1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501</span></li><li><code>data/processed/platform_target_audit/summary.json</code><br><span class="small">SHA-256 23ce0fce98bb699bb72ae453abde3ec5a4d7c7cef2bfd8bee6097423809797f0</span></li><li><code>data/processed/contract_gap_audit/summary.json</code><br><span class="small">SHA-256 e2bbf0339c64b901abf95a20ac86f8c15ee57591ed271afcd1ff6ea4d468d47d</span></li><li><code>data/processed/contract_gap_common_archive_audit/summary.json</code><br><span class="small">SHA-256 3d38e851cfd18ce065c9d787424364252d27cff25314de3dbb5cf9d138c9b458</span></li><li><code>docs/reviews/evidence/observation-authenticated/inspection.json</code><br><span class="small">SHA-256 456ebceb316dc38f2d0bbb97a6c6157861dc22158c044d0409457c92a39e1bac</span></li><li><code>docs/reviews/evidence/observation-geotiming/summary.json</code><br><span class="small">SHA-256 2c13c9cde4183253db7e7cb81f67d459e0223d2eb290ce92bc87019c903eeec3</span></li><li><code>docs/reviews/evidence/observation-native-qa/counts.json</code><br><span class="small">SHA-256 c242fd9c1faf666dffaeddfba1a96edb7624d69de8190176f6f386c7e9e6bf1f</span></li><li><code>docs/reviews/evidence/observation-case2023/result.json</code><br><span class="small">SHA-256 b520dbf02ee7cb440c5caa8e47f4321eb090f8fb3df6cd12973f1cd863305c9e</span></li></ul></details><details><summary>Documentación y fuentes primarias</summary><ul><li><a href="https://firms.modaps.eosdis.nasa.gov/alerts/notes.php">NASA FIRMS · notas de interpretación, resolución y omisiones</a>.</li><li><a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MYD14/">NASA LAADS · MYD14</a> y <a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/VNP14IMG/">VNP14IMG</a>: identificar versión y compatibilidad antes de decodificar.</li><li>Consejos: <code>docs/reviews/2026-11-14-observation-councils.md</code>.</li><li>Protocolos/revisiones16,17,18,19,20 y 20A en <code>docs/reviews/</code>.</li><li>Acceso, QA y geotiming: <code>2026-11-14-observation-authenticated.md</code>, <code>2026-11-14-observation-qa.md</code> y <code>2026-11-14-observation-geotiming.md</code>.</li></ul></details><footer>Snapshot generado: <time datetime="2026-11-15T02:15:31+00:00">2026-11-15T02:15:31+00:00</time> (UTC). Sesión local: 14–15 noviembre 2026, America/Santiago. La evidencia posterior a este instante puede actualizar estados técnicos; G1 permanece falso en las fuentes incorporadas. Este documento no cambia indicadores publicados ni autoriza uso operacional.</footer></section>
+</main></body></html>
