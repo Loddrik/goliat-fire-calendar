@@ -16,7 +16,7 @@ Para una explicación visual del proceso, los consejos y los límites: [informe 
 |32A/B: puntos exactos y conflicto local|Propiedad nominal puntual verificada; último par tiene microárea positiva exacta, sin cota del error global. Nuevo estimando, no reparación del continuo.|[Revisión32A](2026-11-15-point-ownership-audit-review.md) · [32B](2026-11-15-exact-local-overlay-review.md)|
 |33: etiquetas sobre consultas prefijadas|898704 filas verificadas independientemente. Jaccard conocido 2023=15%; 2019 null. Muestreo 500 m pierde representación de positivos nativos. No superioridad de sensores.|[Reporte33](2026-11-15-discrete-state-comparison-report.md) · [Revisión independiente](2026-11-15-discrete-state-comparison-independent-review.md)|
 |35A: presupuestos separados|Primaria negativa:ΔMAE held R−G=+0,041975, mejora 1/4. Complemento separado completa diagnósticos B/C omitidos, sin editar original.|[Reporte35A](2026-11-15-group-budget-report.md) · [Revisión independiente](2026-11-15-group-budget-independent-review.md)|
-|36: adyacencia diaria y placebo|Protocolo autorizado para construir/auditar el cubo, todavía sin resultado ni modelo autorizado.|[Protocolo36](2026-11-15-daily-adjacency-protocol.md) · [Diseño](2026-11-15-daily-adjacency-design.md)|
+|36: adyacencia diaria y placebo|Cubo íntegro: 5184 claves, 10368 controles Aqua exactos; D real=1 en105meses y placebo en59,110discordantes. Integridad verificada, sin utilidad predictiva demostrada.|[Reporte36](2026-11-15-daily-adjacency-report.md) · [Revisión independiente](2026-11-15-daily-adjacency-independent-review.md)|
 
 ## Cómo se decide y revisa
 

@@ -1,0 +1,104 @@
+"""36 independent source/cube/full-calendar audit; no response or model reads."""
+from pathlib import Path
+from datetime import date,datetime,timezone
+from collections import defaultdict,Counter
+import calendar,csv,gzip,hashlib,json,sys,io,unittest,platform
+import pandas as pd
+import pyarrow.parquet as pq
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar');DATA=ROOT/'data/processed';PROD=DATA/'daily_adjacency_audit';PARENT=DATA/'cold_region_audit';OUT=ROOT/'docs/reviews/evidence/daily-adjacency-independent-review';END=datetime.fromisoformat('2026-11-15T08:33:23+00:00')
+COLS=['regime','cut','season','m','aqua'];DAYS=['sat','cut','cell_x','cell_y','acq_date','season','m'];PREFIX='goliat-daily-adjacency-v1|'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def now():return datetime.now(timezone.utc)
+def check():
+ if now()>=END:raise TimeoutError('Original36 review cap reached')
+def write(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+def rows(p):
+ with gzip.open(p,'rt',newline='') as f:yield from csv.DictReader(f)
+def freeze():
+ check();assert not OUT.exists();OUT.mkdir(parents=True);paths=[Path(__file__),ROOT/'pipeline/daily_adjacency_cube.py',ROOT/'tests/test_daily_adjacency_cube.py',ROOT/'docs/reviews/2026-11-15-daily-adjacency-protocol.md',ROOT/'docs/reviews/2026-11-15-daily-adjacency-design.md',DATA/'celldays.parquet',PARENT/'candidate_mask.csv',PARENT/'predictions.parquet',PARENT/'manifest.json']+[p for p in PROD.iterdir() if p.is_file()]
+ (OUT/'verifier-code.py.txt').write_bytes(Path(__file__).read_bytes());write(OUT/'freeze.json',{'created_utc':now().isoformat(),'cap_end_utc':END.isoformat(),'code_sha256':sha(Path(__file__)),'inputs_sha256':{str(p):sha(p) for p in paths},'method':'Independent per-cell day-bitmask adjacency versus producer adjacent daily-set intersections; full-calendar permutation and all monthly/source-regime support identities.','producer_manifest_sha256':sha(PROD/'manifest.json'),'response_columns_requested':[],'models_opened':False,'new_losses_or_fits':False,'new_solvers':0,'cube_features_recomputed_before_this_freeze':False});print('INDEPENDENT_FROZEN',sha(OUT/'freeze.json'),flush=True)
+def support_summary(r):return {'n':len(r),'D_real_1':sum(x['D_real'] for x in r),'D_placebo_1':sum(x['D_placebo'] for x in r),'D_discordant':sum(x['D_real']!=x['D_placebo'] for x in r),'pair_diagnostic_real':sum(x['n_pairs_real'] for x in r),'pair_diagnostic_placebo':sum(x['n_pairs_placebo'] for x in r)}
+def run():
+ check();fr=json.load(open(OUT/'freeze.json'))
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ manifest=json.load(open(PROD/'manifest.json'));s=json.load(open(PROD/'summary.json'));cp=json.load(open(PROD/'checkpoint.json'));f=json.load(open(PROD/'freeze.json'));parent=json.load(open(PARENT/'manifest.json'))
+ for n,v in manifest['files'].items():assert sha(PROD/n)==v['sha256'],n
+ for n,h in f['inputs_sha256'].items():assert sha(ROOT/n)==h,n
+ assert f['response_columns_requested']==[] and f['columns']['prediction_control']==COLS and f['columns']['celldays']==DAYS
+ assert cp['all_identity_gates_passed'] and datetime.fromisoformat(cp['completed_utc'])<datetime.fromisoformat('2026-11-15T08:03:23+00:00') and cp['D_or_permutations_computed'] is False
+ assert s['response_columns_read']==[] and s['model_fitted'] is False and s['loss_computed'] is False and s['stage37_authorized'] is False
+ assert sha(DATA/'celldays.parquet')==parent['protected_sha256']['data/processed/celldays.parquet']
+ control=pq.read_table(PARENT/'predictions.parquet',columns=COLS).to_pandas();assert len(control)==10368 and not control.duplicated(['regime','cut','season','m']).any()
+ cuts=sorted(control.cut.unique());keys={(c,y,m) for c in cuts for y in range(2012,2020) for m in range(1,13)};assert len(cuts)==54 and len(keys)==5184
+ references={};duplicates=Counter()
+ for r in control.itertuples(index=False):
+  key=r.cut,int(r.season),int(r.m);n=int(r.aqua);assert n==r.aqua and n>=0
+  if key in references:assert references[key]==n
+  references[key]=n;duplicates[key]+=1
+ assert set(references)==keys and set(duplicates.values())=={2}
+ mask_frame=pd.read_csv(PARENT/'candidate_mask.csv',usecols=['cell_x','cell_y']);mask={tuple(map(int,r)) for r in mask_frame.itertuples(index=False,name=None)};assert len(mask)==6 and sha(PROD/'mask6.csv')==sha(PARENT/'candidate_mask.csv')
+ source=pq.read_table(DATA/'celldays.parquet',columns=DAYS,filters=[('sat','=','Aqua')]).to_pandas(date_as_object=True);assert (source.sat=='Aqua').all();assert not source.duplicated(['sat','cut','cell_x','cell_y','acq_date']).any();assert source.groupby(['cell_x','cell_y']).cut.nunique().max()==1
+ events=defaultdict(dict);expected_support={}
+ for r in source.itertuples(index=False):
+  d=r.acq_date;assert type(d) is date and r.m==d.month and r.season==d.year-(d.month<7) and r.cut in cuts
+  if not 2012<=r.season<=2019 or (int(r.cell_x),int(r.cell_y)) in mask:continue
+  cell=int(r.cell_x),int(r.cell_y);key=r.cut,int(r.season),int(r.m);bit=1<<(d.day-1);assert not events[key].get(cell,0)&bit;events[key][cell]=events[key].get(cell,0)|bit
+  ident=r.cut,cell[0],cell[1],d.isoformat();assert ident not in expected_support;expected_support[ident]={'season':int(r.season),'m':int(r.m),'year':d.year,'day':d.day}
+ seen=set()
+ for r in rows(PROD/'canonical_Aqua_support.csv.gz'):
+  ident=r['cut'],int(r['cell_x']),int(r['cell_y']),r['acq_date_UTC'];assert ident not in seen;seen.add(ident);e=expected_support[ident]
+  for k,v in e.items():assert int(r[k])==v
+ assert seen==set(expected_support) and len(seen)==9902
+ projected=list(rows(PROD/'Aqua21_feature_projection.csv.gz'));assert len(projected)==10368
+ for r,original in zip(projected,control.itertuples(index=False)):
+  assert (r['regime'],r['cut'],int(r['season']),int(r['m']),int(r['aqua']))==tuple(original)
+ compare=list(rows(PROD/'monthly_identity_all10368.csv.gz'));assert len(compare)==10368
+ for r,original in zip(compare,control.itertuples(index=False)):
+  key=original.cut,int(original.season),int(original.m);A=sum(b.bit_count() for b in events[key].values());assert A==references[key]==int(original.aqua)==int(r['aqua21'])==int(r['aqua_rebuilt']) and r['equal']=='True'
+ calculated={};mapping_by_block={};origin_columns={};permuted_columns={}
+ for cut,season,m in sorted(keys):
+  check();year=season if m>=7 else season+1;L=calendar.monthrange(year,m)[1];cells=events[cut,season,m];A=sum(bits.bit_count() for bits in cells.values());assert A==references[cut,season,m]
+  # Sort hexadecimal digests; lexical hex order is the same as digest-byte order.
+  mapping=sorted(range(1,L+1),key=lambda d:(hashlib.sha256(f'{PREFIX}{cut}|{year:04d}{m:02d}|{d:02d}'.encode()).hexdigest(),d));assert set(mapping)==set(range(1,L+1))
+  placebo={}
+  for cell,bits in cells.items():
+   new=0
+   for i in range(L):
+    if bits&(1<<i):new|=1<<(mapping[i]-1)
+   assert new.bit_count()==bits.bit_count();placebo[cell]=new
+  pair_real=sum((bits&(bits>>1)).bit_count() for bits in cells.values());pair_perm=sum((bits&(bits>>1)).bit_count() for bits in placebo.values())
+  D=int(pair_real>0);P=int(pair_perm>0);assert not(D or P) or A>=2
+  oc=[frozenset(cell for cell,bits in cells.items() if bits&(1<<i)) for i in range(L)];pc=[frozenset(cell for cell,bits in placebo.items() if bits&(1<<i)) for i in range(L)]
+  assert Counter(oc)==Counter(pc) and sorted(map(len,oc))==sorted(map(len,pc))
+  for origin,dest in enumerate(mapping):assert oc[origin]==pc[dest-1]
+  key=cut,season,m;calculated[key]={'cut':cut,'season':season,'m':m,'year':year,'g':'JJA' if m in (6,7,8) else str(m),'aqua':A,'D_real':D,'D_placebo':P,'n_pairs_real':pair_real,'n_pairs_placebo':pair_perm,'calendar_days':L};mapping_by_block[cut,year,m]=mapping;origin_columns[cut,year,m]=oc;permuted_columns[cut,year,m]=pc
+ csvrows=list(rows(PROD/'cube.csv.gz'));assert len(csvrows)==5184
+ for r in csvrows:
+  expected=calculated[r['cut'],int(r['season']),int(r['m'])]
+  for k,v in expected.items():assert r[k]==str(v),(k,r[k],v)
+ expected_frame=pd.DataFrame([calculated[k] for k in sorted(keys)]);actual=pd.read_parquet(PROD/'cube.parquet');pd.testing.assert_frame_equal(expected_frame,actual)
+ seen_perms=set();total_days=0
+ for r in rows(PROD/'fullcalendar_permutations.csv.gz'):
+  block=r['cut'],int(r['year']),int(r['m']);origin=int(r['origin_day']);dest=int(r['destination_day']);ident=(*block,origin);assert ident not in seen_perms;seen_perms.add(ident);assert mapping_by_block[block][origin-1]==dest
+  assert int(r['origin_active_cells'])==len(origin_columns[block][origin-1]) and int(r['destination_active_cells'])==len(permuted_columns[block][dest-1]);total_days+=1
+ assert total_days==sum(len(m) for m in mapping_by_block.values())==157788
+ proofs=list(rows(PROD/'block_invariants.csv.gz'));assert len(proofs)==5184;seen_proofs=set()
+ for r in proofs:
+  key=r['cut'],int(r['season']),int(r['m']);assert key not in seen_proofs;seen_proofs.add(key);e=calculated[key];mp=mapping_by_block[e['cut'],e['year'],e['m']]
+  for name in ['fullcalendar_bijection','cell_month_counts_preserved','multiset_full_day_cell_sets_preserved','daily_count_multiset_preserved']:assert r[name]=='True'
+  assert r['mapping_sha256']==hashlib.sha256(bytes(mp)).hexdigest() and r['D_may_be_unchanged']==str(e['D_real']==e['D_placebo'])
+ full=list(calculated.values());assert support_summary(full)==s['overall'];groups=sorted({r['g'] for r in full})
+ for g in groups:
+  for positive in (False,True):assert support_summary([r for r in full if r['g']==g and (r['aqua']>0)==positive])==s['by_g_and_Apositive'][f'g={g}|Aqua>0={positive}']
+ regimes={f'{region}_{name}':[region,origin,dest] for region in ('08','16') for name,origin,dest in [('forward',[2012,2013,2014,2015],[2016,2017,2018,2019]),('backward',[2016,2017,2018,2019],[2012,2013,2014,2015])]};assert regimes==json.load(open(PROD/'regime_contract.json'))
+ for label,(region,origin,dest) in regimes.items():
+  for title,rr in [('future_fit_SOURCE_ORIGIN',[r for r in full if r['cut'].startswith(region) and r['season'] in origin]),('prediction_SOURCE_DEST',[r for r in full if r['cut'].startswith(region) and r['season'] in dest]),('prediction_held_DEST',[r for r in full if not r['cut'].startswith(region) and r['season'] in dest])]:
+   claim=s['regime_scope_support'][label][title];assert support_summary(rr)==claim['all']
+   for g in groups:
+    for positive in (False,True):assert support_summary([r for r in rr if r['g']==g and (r['aqua']>0)==positive])==claim['by_g_and_Apositive'][f'g={g}|Aqua>0={positive}']
+ sys.path.insert(0,str(ROOT/'pipeline'));sys.path.insert(0,str(ROOT/'tests'));buf=io.StringIO();test=unittest.TextTestRunner(stream=buf,verbosity=1).run(unittest.defaultTestLoader.loadTestsFromName('test_daily_adjacency_cube'));assert test.wasSuccessful() and test.testsRun==9
+ check()
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ record={'status':'independent_cube_integrity_verification_pass','completed_utc':now().isoformat(),'reviewer_freeze_sha256':sha(OUT/'freeze.json'),'producer_manifest_unchanged_sha256':sha(PROD/'manifest.json'),'producer_modified':False,'producer_manifest_extended':False,'source_projection_response_columns_requested':[],'models_opened':False,'new_fits':0,'new_target_losses':0,'solvers_called':0,'HDF_or_new_data_read':False,'verified':{'all_source_event_rows':9902,'unique_cube_keys':5184,'expanded_Aqua_identity_rows':10368,'fullcalendar_mapping_rows':157788,'block_invariant_rows':5184,'all_cube_CSV_and_Parquet_cells':True,'mask6_exact':True,'cell_to_CUT_assignment_unique':True,'same_cell_consecutive_days_within_month_bitmask_oracle':True,'leap_year_fullcalendar_days':True,'literal_hash_mapping_ORIGIN_to_DEST_not_inverse':True,'all_cell_month_counts_preserved':True,'all_multisets_of_daily_cell_sets_including_empty_days_preserved':True,'all_daily_count_multisets_preserved':True,'all_source_origin_vs_query_destination_scope_diagnostics':True,'D_implies_Aqua_at_least_two':True,'source_and_producer_hashes_verified':True},'overall_independently_reproduced':support_summary(full),'pure_tests':{'count':test.testsRun,'passed':True,'output':buf.getvalue()},'operator_limits':['Recorded Aqua adjacency only; D0 is not physical absence or observing opportunity.','Same-cell recorded pairs are not a count of independent fires or duration of a physical event.','The one full-calendar permutation may preserve D; no rereseeding or variation requirement is used.','Canonical derived integrity does not reconstruct missing acquisition originals.','The cube authorizes no model or stage37; G1 remains false and35A remains negative.'],'stage37_authorized':False,'G1_physical':False}
+ write(OUT/'summary.json',record);write(OUT/'manifest.json',{'files':{p.name:{'bytes':p.stat().st_size,'sha256':sha(p)} for p in OUT.iterdir() if p.is_file() and p.name!='manifest.json'},'producer_manifest_unchanged':True,'original_cap_end_utc':END.isoformat()});print('INDEPENDENT_ALL_PASS',json.dumps(record['verified']),flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()
