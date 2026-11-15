@@ -53,3 +53,6 @@ export interface MonthClimatology { m: number; n: number; median: number | null;
 export interface DerivedDoc { cut: string; comuna: string; region: string; cutoff: string; current_season: number; seasons: number[]; season_totals: SeasonTotal[]; month_climatology: MonthClimatology[] }
 export interface RegionCell { cut: string; x: number; y: number; n: number; d: number; s: number[] }
 export interface RegionDoc { cutoff: string; current_season: number; seasons: number[]; cells: RegionCell[] }
+// Celda × mes del año, solo temporadas completas (sin la en curso). ms[i] = temporadas con detección en el mes i; md[i] = días; índice 0 = enero.
+export interface RegionMonthCell { cut: string; x: number; y: number; ms: number[]; md: number[] }
+export interface RegionMonthsDoc { cutoff: string; seasons: number[]; cells: RegionMonthCell[] }

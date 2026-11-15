@@ -59,7 +59,7 @@ button.close { flex: none; padding: 0 10px; font-size: 13px; white-space: nowrap
 .chips button { border: 0; border-radius: 999px; padding: 5px 9px; font-size: 13px; white-space: nowrap; background: transparent; }
 .chips button.on { background: var(--accent); color: #fff; }
 .chips-label { margin: 0; padding: 3px 10px; background: rgba(255,255,255,.92); border-radius: 6px; font-size: 12px; color: var(--muted); text-align: center; pointer-events: auto; }
-.map-legend { position: absolute; z-index: 2; right: 16px; bottom: 112px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
+.map-legend { position: absolute; z-index: 2; right: 16px; bottom: 152px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
 .map-legend b { display: block; font-weight: 600; margin-bottom: 5px; }
 .map-legend .sw-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .map-legend span { display: inline-flex; align-items: center; gap: 4px; }
