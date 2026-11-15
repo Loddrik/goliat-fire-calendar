@@ -58,6 +58,8 @@ button.close { flex: none; padding: 0 10px; font-size: 13px; white-space: nowrap
 .chips { display: flex; gap: 2px; padding: 4px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; pointer-events: auto; }
 .chips button { border: 0; border-radius: 999px; padding: 5px 9px; font-size: 13px; white-space: nowrap; background: transparent; }
 .chips button.on { background: var(--accent); color: #fff; }
+/* Título visible de cada fila (prueba de usuario #47: sin él, «Abr» se leía como «abril de 26-27»). */
+.chips-title { align-self: center; padding: 0 6px 0 8px; font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap; }
 .chips-label { margin: 0; padding: 3px 10px; background: rgba(255,255,255,.92); border-radius: 6px; font-size: 12px; color: var(--muted); text-align: center; pointer-events: auto; }
 .map-legend { position: absolute; z-index: 2; right: 16px; bottom: 152px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
 .map-legend b { display: block; font-weight: 600; margin-bottom: 5px; }
@@ -232,6 +234,11 @@ footer { margin: 16px 20px 24px; font-size: 12px; color: var(--muted); border-to
   .tools button, .view-switch button, .tabs button, .acts button, button.close, .search-box input { min-height: 44px; }
   .tools button { min-width: 44px; }
   .chips button { min-height: 40px; padding: 6px 11px; font-size: 14px; }
+  /* Los 12 meses a la vista en celular (antes se cortaba en «Feb»): título arriba y dos filas de 6. */
+  .chips-months { display: grid; grid-template-columns: repeat(6, 1fr); overflow: visible; width: 100%; box-sizing: border-box; }
+  .map-legend .legend-note { max-width: none; }
+  .chips-months .chips-title { grid-column: 1 / -1; padding: 2px 6px 4px; }
+  .chips-months button { padding: 6px 0; }
   .maplibregl-ctrl-group button { width: 40px !important; height: 40px !important; }
   .fold summary, .legend-more summary, .observed-table summary { padding: 10px 0; }
   .links { line-height: 2.6; }

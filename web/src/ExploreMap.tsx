@@ -204,7 +204,16 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, month,
   }, [selected, ready, region]);
 
   const ms = months?.seasons ?? [];
-  const label = month != null ? (byMonth ? T.labelMonth(monthName(month, lang), ms.length, seasonLabel(ms[0]), seasonLabel(ms[ms.length - 1])) : T.monthLoading)
+  // En celular la fila de temporadas se desliza: la temporada elegida (por ejemplo, desde un enlace) queda a la vista.
+  const seasonRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const row = seasonRow.current, b = row?.querySelector<HTMLElement>("button.on");
+    if (row && b) row.scrollLeft += b.getBoundingClientRect().left - row.getBoundingClientRect().left - (row.clientWidth - b.offsetWidth) / 2;
+  }, [season, seasons.length]);
+
+  // Temporada s = julio s a junio s+1: los meses jul–dic caen en el año s y los de ene–jun en s+1.
+  const yearOf = (s: number) => (month != null && month >= 7 ? s : s + 1);
+  const label = month != null ? (byMonth ? T.labelMonth(monthName(month, lang), ms.length, yearOf(ms[0]), yearOf(ms[ms.length - 1])) : T.monthLoading)
     : season == null ? T.labelAll(seasons.length, cutoff)
     : season === current ? T.labelCurrent(seasonLabel(season), cutoff) : T.labelSeason(seasonLabel(season), season);
   const legend = byMonth ? T.legendMonth(monthName(month, lang), ms.length)
@@ -215,7 +224,8 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, month,
       <p className="map-notice" role="note">ⓘ {T.mapNotice}</p>
       {failed ? <p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p> : <div ref={el} className="xmap-canvas" aria-label={label} />}
       <div className="season-bar">
-        <div className="chips" role="group" aria-label={T.seasonGroup}>
+        <div ref={seasonRow} className="chips" role="group" aria-label={T.seasonGroup}>
+          <span className="chips-title" aria-hidden="true">{T.seasonGroup}</span>
           <button className={season == null && month == null ? "on" : ""} aria-pressed={season == null && month == null} onClick={() => setSeason(null)}>{T.all} 2012→</button>
           {seasons.map((s) => (
             <button key={s} className={season === s ? "on" : ""} aria-pressed={season === s} onClick={() => setSeason(s)}>
@@ -224,6 +234,7 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, month,
           ))}
         </div>
         <div className="chips chips-months" role="group" aria-label={T.monthGroup}>
+          <span className="chips-title" aria-hidden="true">{T.monthGroup}</span>
           {MONTHS_SEASON.map((m) => (
             <button key={m} className={month === m ? "on" : ""} aria-pressed={month === m} aria-label={monthName(m, lang)}
               onClick={() => setMonth(month === m ? null : m)}>{dict[lang].months[m - 1]}</button>
