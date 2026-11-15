@@ -1,0 +1,960 @@
+{
+  "scope": "Postprocessing of frozen independent ledgers; no cross-instrument activity join",
+  "gate1_passed": false,
+  "cases": {
+    "2019": {
+      "MYD14": {
+        "early": {
+          "ledger_sha256": "63c54626c8acf21d64efca52d3b586b35f27800913fa248fa82c02929b380353",
+          "positive_catalogue_sha256": "2a58724e22b799b25cebe845351f4c2fa3f080fd7239be4cbb6481f69f210923",
+          "max_pixel_partition_residual_m2": 0.0,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 4592,
+                "area_AOI_m2": 2085014099.4084933,
+                "area_owned_m2": 2085014099.4084933,
+                "area_common_m2": 2018491604.2574542,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 79,
+                "area_AOI_m2": 13235321.233065242,
+                "area_owned_m2": 13235321.233065242,
+                "area_common_m2": 12320265.327254841,
+                "unknown_owned_records": 0
+              },
+              "unknown_unknown": {
+                "records": 1,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 4592,
+                "area_AOI_m2": 2085014099.4084933,
+                "area_owned_m2": 2085014099.4084933,
+                "area_common_m2": 2018491604.2574542,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 46,
+                "area_AOI_m2": 7602612.3137464505,
+                "area_owned_m2": 7602612.3137464505,
+                "area_common_m2": 7055492.069735504,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 34,
+                "area_AOI_m2": 5632708.919318792,
+                "area_owned_m2": 5632708.919318792,
+                "area_common_m2": 5264773.257519336,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 4602,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 1,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              },
+              "unresolved": {
+                "records": 69,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 4672,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 4672,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 60,
+              "unknown_area_records": 60,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            }
+          }
+        },
+        "late": {
+          "ledger_sha256": "dd53583ac7e8a77924837f77c48b797de6f90314c670af7221d124e47176aee0",
+          "positive_catalogue_sha256": "988f4ba371b2963ab96bba367d8ecb33c1094fd493dd10f1e5fb4192113e46df",
+          "max_pixel_partition_residual_m2": 0.0,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 4592,
+                "area_AOI_m2": 2085014099.4084933,
+                "area_owned_m2": 2085014099.4084933,
+                "area_common_m2": 2018491604.2574542,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 79,
+                "area_AOI_m2": 13235321.233065242,
+                "area_owned_m2": 13235321.233065242,
+                "area_common_m2": 12320265.327254841,
+                "unknown_owned_records": 0
+              },
+              "unknown_unknown": {
+                "records": 1,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 4592,
+                "area_AOI_m2": 2085014099.4084933,
+                "area_owned_m2": 2085014099.4084933,
+                "area_common_m2": 2018491604.2574542,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 46,
+                "area_AOI_m2": 7602612.3137464505,
+                "area_owned_m2": 7602612.3137464505,
+                "area_common_m2": 7055492.069735504,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 34,
+                "area_AOI_m2": 5632708.919318792,
+                "area_owned_m2": 5632708.919318792,
+                "area_common_m2": 5264773.257519336,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 4602,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 1,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              },
+              "unresolved": {
+                "records": 69,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 4672,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 4672,
+                "area_AOI_m2": 2098249420.6415586,
+                "area_owned_m2": 2098249420.6415586,
+                "area_common_m2": 2030811869.5847087,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 60,
+              "unknown_area_records": 60,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            }
+          }
+        }
+      },
+      "VNP14IMG": {
+        "early": {
+          "ledger_sha256": "d121721b84f6a3479a653eac1f4f6f7236dd099aa3d58e34abf27fc1ea6de06e",
+          "positive_catalogue_sha256": "94947e0315121d807f6921a46f2237e88891bb37045f6434fe83e7dad9169734",
+          "max_pixel_partition_residual_m2": 1.4551915228366852e-11,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 40376,
+                "area_AOI_m2": 2409039107.961253,
+                "area_owned_m2": 2409039107.961253,
+                "area_common_m2": 2027031755.741161,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 322,
+                "area_AOI_m2": 3327165.862879008,
+                "area_owned_m2": 3327165.862879008,
+                "area_common_m2": 3327165.862879008,
+                "unknown_owned_records": 0
+              },
+              "unknown_sun_glint": {
+                "records": 5,
+                "area_AOI_m2": 452947.98066095193,
+                "area_owned_m2": 452947.9806609518,
+                "area_common_m2": 452947.98066095193,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 4,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 39927,
+                "area_AOI_m2": 2401748448.8373275,
+                "area_owned_m2": 2401748448.8373275,
+                "area_common_m2": 2019752251.8253882,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 464,
+                "area_AOI_m2": 7850947.614958897,
+                "area_owned_m2": 7850947.614958898,
+                "area_common_m2": 7839792.406805677,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 316,
+                "area_AOI_m2": 3219825.3525077826,
+                "area_owned_m2": 3219825.352507783,
+                "area_common_m2": 3219825.3525077826,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 40702,
+                "area_AOI_m2": 2412366273.8241315,
+                "area_owned_m2": 2412366273.8241315,
+                "area_common_m2": 2030358921.6040406,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 5,
+                "area_AOI_m2": 452947.98066095193,
+                "area_owned_m2": 452947.9806609518,
+                "area_common_m2": 452947.98066095193,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 40707,
+                "area_AOI_m2": 2412819221.8047924,
+                "area_owned_m2": 2412819221.8047924,
+                "area_common_m2": 2030811869.5847015,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 40707,
+                "area_AOI_m2": 2412819221.8047924,
+                "area_owned_m2": 2412819221.8047924,
+                "area_common_m2": 2030811869.5847015,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 128,
+              "unknown_area_records": 128,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 64,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 4,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 4,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            }
+          }
+        },
+        "late": {
+          "ledger_sha256": "7b071d50e754f996ca55fe6149357a517c87c62e1b73c4b9234b467907efe131",
+          "positive_catalogue_sha256": "60121d98c0be9e267b488d9375e9736121270de1e039b9ad850f0bfc9fe1f7ae",
+          "max_pixel_partition_residual_m2": 1.4551915228366852e-11,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 40376,
+                "area_AOI_m2": 2409039107.961253,
+                "area_owned_m2": 2409039107.961253,
+                "area_common_m2": 2027031755.741161,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 322,
+                "area_AOI_m2": 3327165.862879008,
+                "area_owned_m2": 3327165.862879008,
+                "area_common_m2": 3327165.862879008,
+                "unknown_owned_records": 0
+              },
+              "unknown_sun_glint": {
+                "records": 5,
+                "area_AOI_m2": 452947.98066095193,
+                "area_owned_m2": 452947.9806609518,
+                "area_common_m2": 452947.98066095193,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 4,
+                "area_AOI_m2": 0.0,
+                "area_owned_m2": 0.0,
+                "area_common_m2": 0.0,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 39927,
+                "area_AOI_m2": 2401748448.8373275,
+                "area_owned_m2": 2401748448.8373275,
+                "area_common_m2": 2019752251.8253882,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 464,
+                "area_AOI_m2": 7850947.614958897,
+                "area_owned_m2": 7850947.614958898,
+                "area_common_m2": 7839792.406805677,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 316,
+                "area_AOI_m2": 3219825.3525077826,
+                "area_owned_m2": 3219825.352507783,
+                "area_common_m2": 3219825.3525077826,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 40702,
+                "area_AOI_m2": 2412366273.8241315,
+                "area_owned_m2": 2412366273.8241315,
+                "area_common_m2": 2030358921.6040406,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 5,
+                "area_AOI_m2": 452947.98066095193,
+                "area_owned_m2": 452947.9806609518,
+                "area_common_m2": 452947.98066095193,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 40707,
+                "area_AOI_m2": 2412819221.8047924,
+                "area_owned_m2": 2412819221.8047924,
+                "area_common_m2": 2030811869.5847015,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 40707,
+                "area_AOI_m2": 2412819221.8047924,
+                "area_owned_m2": 2412819221.8047924,
+                "area_common_m2": 2030811869.5847015,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 128,
+              "unknown_area_records": 128,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 64,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 4,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 4,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            }
+          }
+        }
+      }
+    },
+    "2023": {
+      "MYD14": {
+        "early": {
+          "ledger_sha256": "d045a887f7619ca3486fefd4a6e85d7ef83d59ddc2b673b33c12e78b278769a5",
+          "positive_catalogue_sha256": "9bec1cfe6b06d927025114a3d3397242af973fd7b20af3c2ee6d2aa3e2ab11ce",
+          "max_pixel_partition_residual_m2": 2.3283064365386963e-10,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 2609,
+                "area_AOI_m2": 2705018253.9540334,
+                "area_owned_m2": 2472998492.845972,
+                "area_common_m2": 2468921816.529365,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 58,
+                "area_AOI_m2": 16704273.202678218,
+                "area_owned_m2": 16704273.202678218,
+                "area_common_m2": 16704273.202678155,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 7,
+                "area_AOI_m2": 10297233.951351458,
+                "area_owned_m2": 10297233.951351458,
+                "area_common_m2": 10297233.951351458,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 2616,
+                "area_AOI_m2": 2715315487.905385,
+                "area_owned_m2": 2483295726.797323,
+                "area_common_m2": 2479219050.4807158,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 43,
+                "area_AOI_m2": 9758373.009610461,
+                "area_owned_m2": 9758373.009610461,
+                "area_common_m2": 9758373.0096104,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 15,
+                "area_AOI_m2": 6945900.193067757,
+                "area_owned_m2": 6945900.193067757,
+                "area_common_m2": 6945900.193067757,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000001,
+                "area_common_m2": 2495923323.6833935,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000001,
+                "area_common_m2": 2495923323.6833935,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000001,
+                "area_common_m2": 2495923323.6833935,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 168,
+              "unknown_area_records": 168,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 3,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 3,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_AOI": {
+              "original_records": 6,
+              "unknown_area_records": 2,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 4,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 10297233.951351458,
+              "area_owned_m2": 10297233.951351458,
+              "area_common_m2": 10297233.951351458
+            }
+          }
+        },
+        "late": {
+          "ledger_sha256": "3e9611482a59c72f7f5db875c1941d02b73d86c3b282bf0bb70ff7d6b1486081",
+          "positive_catalogue_sha256": "013651322dfaa95267d628f351aa718918e3653b7de7edaff6f1a4b63f442025",
+          "max_pixel_partition_residual_m2": 2.3283064365386963e-10,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 2609,
+                "area_AOI_m2": 2705018253.9540334,
+                "area_owned_m2": 2472998492.845973,
+                "area_common_m2": 2463912251.604943,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 58,
+                "area_AOI_m2": 16704273.202678218,
+                "area_owned_m2": 16704273.202678218,
+                "area_common_m2": 16704273.202678122,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 7,
+                "area_AOI_m2": 10297233.951351458,
+                "area_owned_m2": 10297233.951351458,
+                "area_common_m2": 10297233.951351458,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 2616,
+                "area_AOI_m2": 2715315487.905385,
+                "area_owned_m2": 2483295726.797324,
+                "area_common_m2": 2474209485.5562935,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 43,
+                "area_AOI_m2": 9758373.009610461,
+                "area_owned_m2": 9758373.009610461,
+                "area_common_m2": 9758373.009610463,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 15,
+                "area_AOI_m2": 6945900.193067757,
+                "area_owned_m2": 6945900.193067757,
+                "area_common_m2": 6945900.1930676615,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000002,
+                "area_common_m2": 2490913758.758972,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000002,
+                "area_common_m2": 2490913758.758972,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 2674,
+                "area_AOI_m2": 2732019761.1080627,
+                "area_owned_m2": 2500000000.000002,
+                "area_common_m2": 2490913758.758972,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 168,
+              "unknown_area_records": 168,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 3,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 3,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_AOI": {
+              "original_records": 6,
+              "unknown_area_records": 2,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 4,
+              "M13_non_nominal_records": 0,
+              "area_AOI_m2": 10297233.951351458,
+              "area_owned_m2": 10297233.951351458,
+              "area_common_m2": 10297233.951351458
+            }
+          }
+        }
+      },
+      "VNP14IMG": {
+        "early": {
+          "ledger_sha256": "5a8476fae1581dd623c515b78cd896823dc3118cbfd0ecd73f9bb81135688765",
+          "positive_catalogue_sha256": "627651a2147323a6c1fd9f575098927aed4b0b733766f57bb1ef547777b86980",
+          "max_pixel_partition_residual_m2": 1.0913936421275139e-11,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 37061,
+                "area_AOI_m2": 2506628848.37698,
+                "area_owned_m2": 2491578390.789712,
+                "area_common_m2": 2487108652.3447733,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 309,
+                "area_AOI_m2": 4102544.670873572,
+                "area_owned_m2": 4102544.670873572,
+                "area_common_m2": 4102544.670873572,
+                "unknown_owned_records": 0
+              },
+              "unknown_sun_glint": {
+                "records": 5,
+                "area_AOI_m2": 170308.93951872125,
+                "area_owned_m2": 170308.93951872128,
+                "area_common_m2": 170308.93951872128,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 23,
+                "area_AOI_m2": 2728855.6485364186,
+                "area_owned_m2": 2728855.6485364186,
+                "area_common_m2": 2728855.6485364186,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 36683,
+                "area_AOI_m2": 2501649675.3253393,
+                "area_owned_m2": 2486772130.1199822,
+                "area_common_m2": 2482302391.675044,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 426,
+                "area_AOI_m2": 8105070.317575488,
+                "area_owned_m2": 7932157.935664618,
+                "area_common_m2": 7932157.935664618,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 289,
+                "area_AOI_m2": 3875811.9929910908,
+                "area_owned_m2": 3875811.9929910908,
+                "area_common_m2": 3875811.9929910908,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 37364,
+                "area_AOI_m2": 2511418505.338758,
+                "area_owned_m2": 2496368047.7514906,
+                "area_common_m2": 2491898309.3065524,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 34,
+                "area_AOI_m2": 2212052.2971497583,
+                "area_owned_m2": 2212052.297149758,
+                "area_common_m2": 2212052.2971497583,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 37398,
+                "area_AOI_m2": 2513630557.635907,
+                "area_owned_m2": 2498580100.0486393,
+                "area_common_m2": 2494110361.6037016,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 37366,
+                "area_AOI_m2": 2511588814.278277,
+                "area_owned_m2": 2496538356.691009,
+                "area_common_m2": 2492068618.2460713,
+                "unknown_owned_records": 0
+              },
+              "True": {
+                "records": 32,
+                "area_AOI_m2": 2041743.357631037,
+                "area_owned_m2": 2041743.3576310368,
+                "area_common_m2": 2041743.357631037,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 885,
+              "unknown_area_records": 885,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 305,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 7,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 7,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 7,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_AOI": {
+              "original_records": 16,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 16,
+              "M13_non_nominal_records": 8,
+              "area_AOI_m2": 2728855.6485364186,
+              "area_owned_m2": 2728855.6485364186,
+              "area_common_m2": 2728855.6485364186
+            }
+          }
+        },
+        "late": {
+          "ledger_sha256": "d01a8b4674b11620d6b36c832bf2d09615254cffc10d8f4734756d22f794eccd",
+          "positive_catalogue_sha256": "4d879ecef0159a397969ebf49ac8a0d4649961535525b8ecf3dee34ac1b37ef0",
+          "max_pixel_partition_residual_m2": 1.4495071809506044e-11,
+          "common_within_owned_1m2": true,
+          "independent_axes": {
+            "registered_state": {
+              "land_no_detection": {
+                "records": 37061,
+                "area_AOI_m2": 2506628848.37698,
+                "area_owned_m2": 2491709934.789449,
+                "area_common_m2": 2484534616.9950733,
+                "unknown_owned_records": 0
+              },
+              "water_no_detection": {
+                "records": 309,
+                "area_AOI_m2": 4102544.670873572,
+                "area_owned_m2": 3971000.6711344733,
+                "area_common_m2": 3971000.6711344733,
+                "unknown_owned_records": 0
+              },
+              "unknown_sun_glint": {
+                "records": 5,
+                "area_AOI_m2": 170308.93951872125,
+                "area_owned_m2": 170308.93951872128,
+                "area_common_m2": 170308.93951872128,
+                "unknown_owned_records": 0
+              },
+              "registered_positive": {
+                "records": 23,
+                "area_AOI_m2": 2728855.6485364186,
+                "area_owned_m2": 2728855.6485364186,
+                "area_common_m2": 2728855.6485364186,
+                "unknown_owned_records": 0
+              }
+            },
+            "surface": {
+              "land": {
+                "records": 36683,
+                "area_AOI_m2": 2501649675.3253393,
+                "area_owned_m2": 2486730761.737809,
+                "area_common_m2": 2479555443.9434347,
+                "unknown_owned_records": 0
+              },
+              "coast": {
+                "records": 426,
+                "area_AOI_m2": 8105070.317575488,
+                "area_owned_m2": 8105070.317575488,
+                "area_common_m2": 8105070.317575488,
+                "unknown_owned_records": 0
+              },
+              "water": {
+                "records": 289,
+                "area_AOI_m2": 3875811.9929910908,
+                "area_owned_m2": 3744267.993251992,
+                "area_common_m2": 3744267.993251992,
+                "unknown_owned_records": 0
+              }
+            },
+            "screen_sensitivity_state": {
+              "local_candidate": {
+                "records": 37364,
+                "area_AOI_m2": 2511418505.338758,
+                "area_owned_m2": 2496368047.751489,
+                "area_common_m2": 2489192729.957115,
+                "unknown_owned_records": 0
+              },
+              "excluded": {
+                "records": 34,
+                "area_AOI_m2": 2212052.2971497583,
+                "area_owned_m2": 2212052.297149758,
+                "area_common_m2": 2212052.2971497583,
+                "unknown_owned_records": 0
+              }
+            },
+            "geographic_flag": {
+              "0": {
+                "records": 37398,
+                "area_AOI_m2": 2513630557.635907,
+                "area_owned_m2": 2498580100.048638,
+                "area_common_m2": 2491404782.254264,
+                "unknown_owned_records": 0
+              }
+            },
+            "M13_non_nominal": {
+              "False": {
+                "records": 37366,
+                "area_AOI_m2": 2511588814.278277,
+                "area_owned_m2": 2496538356.6910076,
+                "area_common_m2": 2489363038.8966336,
+                "unknown_owned_records": 0
+              },
+              "True": {
+                "records": 32,
+                "area_AOI_m2": 2041743.357631037,
+                "area_owned_m2": 2041743.3576310368,
+                "area_common_m2": 2041743.357631037,
+                "unknown_owned_records": 0
+              }
+            }
+          },
+          "positives_by_scope": {
+            "outside_halo15": {
+              "original_records": 885,
+              "unknown_area_records": 885,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 305,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_halo15": {
+              "original_records": 7,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 7,
+              "owned_positive_area_records": 0,
+              "M13_non_nominal_records": 7,
+              "area_AOI_m2": 0.0,
+              "area_owned_m2": 0.0,
+              "area_common_m2": 0.0
+            },
+            "centre_AOI": {
+              "original_records": 16,
+              "unknown_area_records": 0,
+              "known_owned_zero_records": 0,
+              "owned_positive_area_records": 16,
+              "M13_non_nominal_records": 8,
+              "area_AOI_m2": 2728855.6485364186,
+              "area_owned_m2": 2728855.6485364186,
+              "area_common_m2": 2728855.6485364186
+            }
+          }
+        }
+      }
+    }
+  }
+}

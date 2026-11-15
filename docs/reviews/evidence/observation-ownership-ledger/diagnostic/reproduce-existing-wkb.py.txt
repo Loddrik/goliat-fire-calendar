@@ -1,0 +1,16 @@
+"""Minimal predicate/overlay contradiction; reads a saved GEO-only pair."""
+import gzip
+import json
+from pathlib import Path
+import shapely
+
+directory = Path(__file__).resolve().parent
+prefix = "VNP14IMG_early-2076-3864"
+p = shapely.from_wkb(gzip.decompress((directory / (prefix + "-pixel.wkb.gz")).read_bytes()))
+q = shapely.from_wkb(gzip.decompress((directory / (prefix + "-other_union.wkb.gz")).read_bytes()))
+print(json.dumps({"shapely": shapely.__version__, "GEOS": shapely.geos_version_string,
+                  "both_valid": p.is_valid and q.is_valid, "within": p.within(q),
+                  "covered_by": p.covered_by(q), "pixel_area_m2": p.area,
+                  "intersection_pq_m2": p.intersection(q).area,
+                  "intersection_qp_m2": q.intersection(p).area,
+                  "difference_m2": p.difference(q).area}))

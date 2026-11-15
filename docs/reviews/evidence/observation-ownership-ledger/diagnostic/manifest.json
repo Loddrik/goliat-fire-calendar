@@ -1,0 +1,70 @@
+{
+  "original_manifest_sha256": "f2894e76806722c744791e794613c5d5b96c801f4da620b0d20ce8ec61f42abf",
+  "original_outputs_unchanged": true,
+  "files": {
+    "MYD14_early-818-1166-other_union.wkb.gz": {
+      "bytes": 14028,
+      "sha256": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f"
+    },
+    "MYD14_early-818-1166-pixel.wkb.gz": {
+      "bytes": 96,
+      "sha256": "331d22b1444603b222b300baa1ae5019808f323455551064c1c04a8952447652"
+    },
+    "MYD14_late-833-1149-other_union.wkb.gz": {
+      "bytes": 13695,
+      "sha256": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e"
+    },
+    "MYD14_late-833-1149-pixel.wkb.gz": {
+      "bytes": 95,
+      "sha256": "c7a7bcfaebda644d5100566275a14058e07d62e64c8aec656dd1c726fe5f9b0d"
+    },
+    "MYD14_late-844-1161-other_union.wkb.gz": {
+      "bytes": 13695,
+      "sha256": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e"
+    },
+    "MYD14_late-844-1161-pixel.wkb.gz": {
+      "bytes": 97,
+      "sha256": "674ffc202cff0be13fb66fc75ae6524fb3ac8291c325c324b792bc32a914a2bb"
+    },
+    "VNP14IMG_early-2051-3869-other_union.wkb.gz": {
+      "bytes": 3432,
+      "sha256": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2"
+    },
+    "VNP14IMG_early-2051-3869-pixel.wkb.gz": {
+      "bytes": 93,
+      "sha256": "6e0482ccbb655292917649ce118696ec86a23e18c6c03e420183ff28c4e3661b"
+    },
+    "VNP14IMG_early-2076-3864-other_union.wkb.gz": {
+      "bytes": 3432,
+      "sha256": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2"
+    },
+    "VNP14IMG_early-2076-3864-pixel.wkb.gz": {
+      "bytes": 92,
+      "sha256": "b31b0db2e0400e7e023d260a90debefb78af0b119c59002b6d6b4c2495bbf8ff"
+    },
+    "diagnostic.json": {
+      "bytes": 13895,
+      "sha256": "c8ab12960556854722a92ef4d345ab5a74593982624538bb5f0de29efcbc852f"
+    },
+    "diagnostic.py.txt": {
+      "bytes": 3730,
+      "sha256": "a77fe2e90b4005b4c0ce93dd5034712324cbe527b8225f6d658600545a2a2054"
+    },
+    "failed-common-closure.json": {
+      "bytes": 3002,
+      "sha256": "26b3538bf7ac941c0949393928645fa45493c006210d5ccb67ce6b0509feb93e"
+    },
+    "operand-order.json": {
+      "bytes": 4309,
+      "sha256": "5a985ab47de2630ebd223419d8c6a7b2a8ca41011a6dcc6901e0c980ceb2a187"
+    },
+    "reproduce-existing-wkb.py.txt": {
+      "bytes": 843,
+      "sha256": "8a1d8d59e103a52801afc8568dfe67a3a8150a00b92e71df6a24bd24e5b408f5"
+    },
+    "retained-pairs.json": {
+      "bytes": 7436,
+      "sha256": "f71897186a086da56d1b7eef686a4f5f4cfde1530815f4d9e681f1aa960b7f35"
+    }
+  }
+}

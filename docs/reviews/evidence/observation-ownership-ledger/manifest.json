@@ -1,0 +1,161 @@
+{
+  "packing": "CSV gzip mtime0; empty CSV fields represent null, never a numeric zero",
+  "files": {
+    "2019-MYD14-early-geometry.csv.gz": {
+      "bytes": 88303,
+      "sha256": "f9317803c8b8a3f12727e3cc22de98ce31fbce9b56c6a974d78d64b3b5a9d9ed"
+    },
+    "2019-MYD14-early-ledger.csv.gz": {
+      "bytes": 169443,
+      "sha256": "63c54626c8acf21d64efca52d3b586b35f27800913fa248fa82c02929b380353"
+    },
+    "2019-MYD14-early-positive-originals.csv.gz": {
+      "bytes": 2051,
+      "sha256": "2a58724e22b799b25cebe845351f4c2fa3f080fd7239be4cbb6481f69f210923"
+    },
+    "2019-MYD14-geometry-states.csv.gz": {
+      "bytes": 19488,
+      "sha256": "7dab378cecac8ea9cd7840dd9ba57334914b696b9d0a1ea3282267018ec2edb3"
+    },
+    "2019-MYD14-late-geometry.csv.gz": {
+      "bytes": 88182,
+      "sha256": "83df31b6fdfd4214063940934addeed892296e9a7cc7a1cad97fef98deac21f8"
+    },
+    "2019-MYD14-late-ledger.csv.gz": {
+      "bytes": 169399,
+      "sha256": "dd53583ac7e8a77924837f77c48b797de6f90314c670af7221d124e47176aee0"
+    },
+    "2019-MYD14-late-positive-originals.csv.gz": {
+      "bytes": 2049,
+      "sha256": "988f4ba371b2963ab96bba367d8ecb33c1094fd493dd10f1e5fb4192113e46df"
+    },
+    "2019-VNP14IMG-early-geometry.csv.gz": {
+      "bytes": 725349,
+      "sha256": "0fdc5c502aceba3c337ca3315562e438389f50ce4e48af30a282f696ef6f6e05"
+    },
+    "2019-VNP14IMG-early-ledger.csv.gz": {
+      "bytes": 1410098,
+      "sha256": "d121721b84f6a3479a653eac1f4f6f7236dd099aa3d58e34abf27fc1ea6de06e"
+    },
+    "2019-VNP14IMG-early-positive-originals.csv.gz": {
+      "bytes": 3914,
+      "sha256": "94947e0315121d807f6921a46f2237e88891bb37045f6434fe83e7dad9169734"
+    },
+    "2019-VNP14IMG-geometry-states.csv.gz": {
+      "bytes": 128406,
+      "sha256": "d1f2f4f6adec3bb3213fe367433d8e442b853081d4acfa9b98aa31bfc5792ba4"
+    },
+    "2019-VNP14IMG-late-geometry.csv.gz": {
+      "bytes": 725632,
+      "sha256": "3c23061a414f02bc2cf29c5dc60c95a51deccfc5bec5529d4ed4990e611097b9"
+    },
+    "2019-VNP14IMG-late-ledger.csv.gz": {
+      "bytes": 1409576,
+      "sha256": "7b071d50e754f996ca55fe6149357a517c87c62e1b73c4b9234b467907efe131"
+    },
+    "2019-VNP14IMG-late-positive-originals.csv.gz": {
+      "bytes": 3908,
+      "sha256": "60121d98c0be9e267b488d9375e9736121270de1e039b9ad850f0bfc9fe1f7ae"
+    },
+    "2023-MYD14-early-geometry.csv.gz": {
+      "bytes": 54705,
+      "sha256": "5edb0c8bb46e02ebea5f7b49ff72572c591a8e0709fbf09734a70dbd3ca264ee"
+    },
+    "2023-MYD14-early-ledger.csv.gz": {
+      "bytes": 101678,
+      "sha256": "d045a887f7619ca3486fefd4a6e85d7ef83d59ddc2b673b33c12e78b278769a5"
+    },
+    "2023-MYD14-early-positive-originals.csv.gz": {
+      "bytes": 5077,
+      "sha256": "9bec1cfe6b06d927025114a3d3397242af973fd7b20af3c2ee6d2aa3e2ab11ce"
+    },
+    "2023-MYD14-geometry-states.csv.gz": {
+      "bytes": 11378,
+      "sha256": "bac65c70fcdafb6ad78afcad1de7662bc6681b6da8f8d3fb07f41ead3fa1c221"
+    },
+    "2023-MYD14-late-geometry.csv.gz": {
+      "bytes": 54482,
+      "sha256": "52308fc83ebde46a3f9b84b3e2a3ac9e56e5678e7d1e5748a27dd9d830145fb9"
+    },
+    "2023-MYD14-late-ledger.csv.gz": {
+      "bytes": 101674,
+      "sha256": "3e9611482a59c72f7f5db875c1941d02b73d86c3b282bf0bb70ff7d6b1486081"
+    },
+    "2023-MYD14-late-positive-originals.csv.gz": {
+      "bytes": 5080,
+      "sha256": "013651322dfaa95267d628f351aa718918e3653b7de7edaff6f1a4b63f442025"
+    },
+    "2023-VNP14IMG-early-geometry.csv.gz": {
+      "bytes": 668685,
+      "sha256": "aee2f5cd6f659bb9c3e4fa7cf5b7fe77279403899ad4a70c1ffa719cf95d4faa"
+    },
+    "2023-VNP14IMG-early-ledger.csv.gz": {
+      "bytes": 1297967,
+      "sha256": "5a8476fae1581dd623c515b78cd896823dc3118cbfd0ecd73f9bb81135688765"
+    },
+    "2023-VNP14IMG-early-positive-originals.csv.gz": {
+      "bytes": 22484,
+      "sha256": "627651a2147323a6c1fd9f575098927aed4b0b733766f57bb1ef547777b86980"
+    },
+    "2023-VNP14IMG-geometry-states.csv.gz": {
+      "bytes": 119677,
+      "sha256": "3b65500588b04358942db5e8bacc5d4798975fcd9656a80b56a03c07a8748a3a"
+    },
+    "2023-VNP14IMG-late-geometry.csv.gz": {
+      "bytes": 669417,
+      "sha256": "70b37d4b42e94152d63b2cbefe336cb62485e02a8637ad85a8449487f967154f"
+    },
+    "2023-VNP14IMG-late-ledger.csv.gz": {
+      "bytes": 1298067,
+      "sha256": "d01a8b4674b11620d6b36c832bf2d09615254cffc10d8f4734756d22f794eccd"
+    },
+    "2023-VNP14IMG-late-positive-originals.csv.gz": {
+      "bytes": 22477,
+      "sha256": "4d879ecef0159a397969ebf49ac8a0d4649961535525b8ecf3dee34ac1b37ef0"
+    },
+    "code.snapshot.py.txt": {
+      "bytes": 24256,
+      "sha256": "058a60986c28efe3b96fb10dbb2fb872e87b2f460e477c65077f784b515ff2d5"
+    },
+    "geometry-stage.json": {
+      "bytes": 7224,
+      "sha256": "19575d20eda642386194c4628f78aff3e81f208c5a5444ab00ac3b43ddff715b"
+    },
+    "initial-code.snapshot.py.txt": {
+      "bytes": 24196,
+      "sha256": "5bcce6dc3277df5372b2c7764eca9e382aac91c7c17504aba222eac836b88ffe"
+    },
+    "initial-freeze.json": {
+      "bytes": 3345,
+      "sha256": "95f166627eca28f59c1451d997e599bb048e60a14095960cbfc10f5589230115"
+    },
+    "native-axis-summary.json": {
+      "bytes": 36044,
+      "sha256": "353823d974ea0e1ee5da9e60eb0a1b878a3000fbb7887543fa0c4eeaf2db84ac"
+    },
+    "protocol.snapshot.md.txt": {
+      "bytes": 8667,
+      "sha256": "139bf266f38d91df6c263c5513e75079e2ad85f85ee64fbfb69747062a80f116"
+    },
+    "raw-stage.json": {
+      "bytes": 3129,
+      "sha256": "a1cefe1e736efe1c8121c14a013c7599c01dcf1affba1d89f0757dc218894afb"
+    },
+    "references.json": {
+      "bytes": 87905,
+      "sha256": "adeca520d3b1d17e4588d57bb8e092f838b36cc68adeb48915e6e0093591795a"
+    },
+    "serialization-fix-freeze.json": {
+      "bytes": 381,
+      "sha256": "c0e4a87201f285039c059688ca3c63d8f0fe85fa83814155f436de9e1d6b41ea"
+    },
+    "summary.json": {
+      "bytes": 19275,
+      "sha256": "dbdc24dac342000a84c35a138f50ddfe63916658f5466de4b46a62b3f4f63741"
+    },
+    "tests.snapshot.py.txt": {
+      "bytes": 4229,
+      "sha256": "9549ad0566e748f796d8c0eb75d9c1b1ab6a95b8db412866bd06b5b9b8435f29"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "scope": "Existing-output audit; original outputs immutable",
+  "all_common_closure_passed": false,
+  "gate1_passed": false,
+  "rows": [
+    {
+      "case": "2019",
+      "product": "MYD14",
+      "priority": "early",
+      "table_sha256": "f9317803c8b8a3f12727e3cc22de98ce31fbce9b56c6a974d78d64b3b5a9d9ed",
+      "sum_common_m2": 2030811869.584713,
+      "union_common_m2": 2030811869.5847125,
+      "residual_m2": 4.76837158203125e-07,
+      "tolerance_m2": 1.0,
+      "passed": true
+    },
+    {
+      "case": "2019",
+      "product": "MYD14",
+      "priority": "late",
+      "table_sha256": "83df31b6fdfd4214063940934addeed892296e9a7cc7a1cad97fef98deac21f8",
+      "sum_common_m2": 2030811869.584713,
+      "union_common_m2": 2030811869.5847125,
+      "residual_m2": 4.76837158203125e-07,
+      "tolerance_m2": 1.0,
+      "passed": true
+    },
+    {
+      "case": "2019",
+      "product": "VNP14IMG",
+      "priority": "early",
+      "table_sha256": "0fdc5c502aceba3c337ca3315562e438389f50ce4e48af30a282f696ef6f6e05",
+      "sum_common_m2": 2030811869.584714,
+      "union_common_m2": 2030811869.5847123,
+      "residual_m2": 1.6689300537109375e-06,
+      "tolerance_m2": 1.0,
+      "passed": true
+    },
+    {
+      "case": "2019",
+      "product": "VNP14IMG",
+      "priority": "late",
+      "table_sha256": "3c23061a414f02bc2cf29c5dc60c95a51deccfc5bec5529d4ed4990e611097b9",
+      "sum_common_m2": 2030811869.584714,
+      "union_common_m2": 2030811869.5847123,
+      "residual_m2": 1.6689300537109375e-06,
+      "tolerance_m2": 1.0,
+      "passed": true
+    },
+    {
+      "case": "2023",
+      "product": "MYD14",
+      "priority": "early",
+      "table_sha256": "5edb0c8bb46e02ebea5f7b49ff72572c591a8e0709fbf09734a70dbd3ca264ee",
+      "sum_common_m2": 2495923323.683396,
+      "union_common_m2": 2498580100.0486374,
+      "residual_m2": -2656776.3652415276,
+      "tolerance_m2": 1.0,
+      "passed": false
+    },
+    {
+      "case": "2023",
+      "product": "MYD14",
+      "priority": "late",
+      "table_sha256": "52308fc83ebde46a3f9b84b3e2a3ac9e56e5678e7d1e5748a27dd9d830145fb9",
+      "sum_common_m2": 2490913758.758973,
+      "union_common_m2": 2498580100.048638,
+      "residual_m2": -7666341.289664745,
+      "tolerance_m2": 1.0,
+      "passed": false
+    },
+    {
+      "case": "2023",
+      "product": "VNP14IMG",
+      "priority": "early",
+      "table_sha256": "aee2f5cd6f659bb9c3e4fa7cf5b7fe77279403899ad4a70c1ffa719cf95d4faa",
+      "sum_common_m2": 2494110361.6037107,
+      "union_common_m2": 2498580100.0486374,
+      "residual_m2": -4469738.444926739,
+      "tolerance_m2": 1.0,
+      "passed": false
+    },
+    {
+      "case": "2023",
+      "product": "VNP14IMG",
+      "priority": "late",
+      "table_sha256": "70b37d4b42e94152d63b2cbefe336cb62485e02a8637ad85a8449487f967154f",
+      "sum_common_m2": 2491404782.254278,
+      "union_common_m2": 2498580100.048638,
+      "residual_m2": -7175317.794359684,
+      "tolerance_m2": 1.0,
+      "passed": false
+    }
+  ]
+}
