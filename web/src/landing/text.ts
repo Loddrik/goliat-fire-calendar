@@ -36,8 +36,8 @@ const es = {
   hQuestion: "¿En qué meses se detecta fuego en tu comuna?",
 
 
-  sub: "Detecciones de fuego de NASA FIRMS en las 54 comunas, mes a mes: VIIRS desde 2012 y, donde la corrección pasa las pruebas, MODIS desde 2002, armonizados en una sola serie.",
-  eyebrow: "MODIS + VIIRS armonizados · NASA FIRMS · 2002–2026",
+  sub: (k: number, n: number) => `Detecciones de fuego de NASA FIRMS en las ${n} comunas de Biobío y Ñuble, mes a mes: VIIRS desde 2012 en todas y, en las ${k} donde la corrección pasa las pruebas, MODIS Aqua para 2002–2012, armonizados en una sola serie.`,
+  eyebrow: (k: number, n: number) => `NASA FIRMS · VIIRS 2012–2026 · MODIS armonizado desde 2002 en ${k} de ${n} comunas`,
   alert: "No es una alerta. Si ves fuego, llama al 130 (CONAF) o al 132 (Bomberos) y sigue los avisos de SENAPRED.",
   searchLabel: "Busca tu comuna",
   searchPlaceholder: "Escribe el nombre de tu comuna…",
@@ -81,10 +81,10 @@ const es = {
   q2note: (n: number) => `Es lo que ya pasó: no anticipa cómo seguirá. Con ${n} temporadas, compara con cuidado; las cifras recientes son preliminares.`,
   loading: "Cargando…",
 
-  seasonsTitle: "Temporada por temporada, desde 2002",
+  seasonsTitle: "Temporada por temporada, desde 2012",
   seasonsKey: ["Aproximado: desde MODIS Aqua", "Observado: VIIRS", "Sin estimación"],
-  seasonsNoteOn: (r: string) => `Celdas-día por temporada (julio a junio). Antes de 2012-13, aproximado desde MODIS Aqua × ${r}: la corrección pasó las pruebas en esta comuna y cada mes lleva su error típico (en Explorar). Desde 2012-13, observado por VIIRS. Solo temporadas completas.`,
-  seasonsNoteOff: "Celdas-día por temporada (julio a junio), observado por VIIRS desde 2012-13. Antes no damos cifra en esta comuna: la corrección desde MODIS no pasó las pruebas. No significa que no hubo fuego.",
+  seasonsNoteOn: "Celdas-día por temporada (julio a junio), observado por VIIRS; solo temporadas completas. En esta comuna la corrección desde MODIS pasó las pruebas: en Explorar está la serie desde 2002, mes a mes y con su error típico.",
+  seasonsNoteOff: "Celdas-día por temporada (julio a junio), observado por VIIRS; solo temporadas completas. Antes de 2012 no damos cifra en esta comuna: la corrección desde MODIS no pasó las pruebas. No significa que no hubo fuego.",
   seasonsAria: (c: string, a: string, b: string) => `Celdas-día por temporada en ${c}, de ${a} a ${b}`,
   seasonAria: (s: string, state: string, v: string | null) => `${s}: ${state}${v == null ? "" : `, ${v} celdas-día`}`,
   usesTitle: "Para qué sirve",
@@ -126,8 +126,8 @@ const en: typeof es = {
   hQuestion: "In which months is fire detected in your commune?",
 
 
-  sub: "NASA FIRMS fire detections for the 54 communes of Biobío and Ñuble, Chile, month by month: VIIRS since 2012 and, where the correction passes the tests, MODIS since 2002, harmonized into one series.",
-  eyebrow: "MODIS + VIIRS, harmonized · NASA FIRMS · 2002–2026",
+  sub: (k: number, n: number) => `NASA FIRMS fire detections for the ${n} communes of Biobío and Ñuble, Chile, month by month: VIIRS since 2012 in all of them and, in the ${k} where the correction passes the tests, MODIS Aqua for 2002–2012, harmonized into one series.`,
+  eyebrow: (k: number, n: number) => `NASA FIRMS · VIIRS 2012–2026 · MODIS harmonized from 2002 in ${k} of ${n} communes`,
   alert: "Not an alert. If you see fire in Chile, call 130 (CONAF) or 132 (Firefighters) and follow SENAPRED notices.",
   searchLabel: "Find your commune",
   searchPlaceholder: "Type your commune's name…",
@@ -170,10 +170,10 @@ const en: typeof es = {
   q2note: (n: number) => `This is what already happened: it does not anticipate what comes next. With ${n} seasons, compare with care; recent figures are preliminary.`,
   loading: "Loading…",
 
-  seasonsTitle: "Season by season, since 2002",
+  seasonsTitle: "Season by season, since 2012",
   seasonsKey: ["Approximate: from MODIS Aqua", "Observed: VIIRS", "No estimate"],
-  seasonsNoteOn: (r: string) => `Cell-days per season (July to June). Before 2012-13, approximated from MODIS Aqua × ${r}: the correction passed the tests in this commune and each month carries its typical error (in the explorer). From 2012-13, observed by VIIRS. Full seasons only.`,
-  seasonsNoteOff: "Cell-days per season (July to June), observed by VIIRS from 2012-13. Before that we give no figure for this commune: the correction from MODIS failed the tests. It does not mean there was no fire.",
+  seasonsNoteOn: "Cell-days per season (July to June), observed by VIIRS; full seasons only. In this commune the correction from MODIS passed the tests: the explorer has the series from 2002, month by month with its typical error.",
+  seasonsNoteOff: "Cell-days per season (July to June), observed by VIIRS; full seasons only. Before 2012 we give no figure for this commune: the correction from MODIS failed the tests. It does not mean there was no fire.",
   seasonsAria: (c: string, a: string, b: string) => `Cell-days per season in ${c}, ${a} to ${b}`,
   seasonAria: (s: string, state: string, v: string | null) => `${s}: ${state}${v == null ? "" : `, ${v} cell-days`}`,
   usesTitle: "What it is for",

@@ -208,7 +208,7 @@ body { margin: 0; background: #FCFBF7; }
 .lp-map-scope { font-weight: 600; color: var(--navy-fg); font-size: 13px; }
 .lp-peak { font-size: 15px; padding: 10px 12px; border-left: 3px solid var(--b5); background: #F2F6FA; }
 .lp-q-wide { grid-column: 1 / -1; }
-.lp-seasons { display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: 3px; align-items: end; }
+.lp-seasons { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 3px; align-items: end; }
 .lp-ss { display: grid; gap: 4px; min-width: 0; }
 .lp-ss-track { height: 110px; display: flex; align-items: flex-end; justify-content: center; border-bottom: 1px solid var(--fg); }
 .lp-ss-track b { display: block; width: 100%; border-radius: 2px 2px 0 0; }

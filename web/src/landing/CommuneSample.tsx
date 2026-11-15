@@ -3,8 +3,7 @@ import type { Text, Lang } from "./text";
 import { dateLong, seasonLabel } from "./text";
 
 // Las preguntas por comuna, en simple (#40): una tira de 12 meses con una frase, la temporada en curso
-// como puntos (una temporada por punto, al mismo día) y las temporadas desde 2002 con sus tres estados
-// (aproximado desde MODIS Aqua, observado VIIRS, sin estimación). Números leídos tal cual de
+// como puntos (una temporada por punto, al mismo día) y las temporadas observadas desde 2012. Números leídos tal cual de
 // web/public/data/ (regla 6): derived/<cut>.json (month_climatology, season_totals) y comunas/<cut>.json
 // (season_compare). El detalle (rango, error típico por mes) queda en Explorar. Se monta con key={cut}.
 
@@ -111,14 +110,16 @@ export function CommuneSample({ cut, t, lang }: { cut: string; t: Text; lang: La
         <p className="lp-note">{t.q2note(sc.n)}</p>
         <a className="lp-btn lp-btn-primary" href={`/explorar?cut=${cut}&lang=${lang}`}>{t.open(doc.comuna)} <span aria-hidden="true">→</span></a>
       </article>
-      <SeasonStrip totals={derived.season_totals} comuna={doc.comuna} enabled={doc.reconstruction_enabled} r={doc.r_const} t={t} lang={lang} />
+      <SeasonStrip totals={derived.season_totals} comuna={doc.comuna} enabled={doc.reconstruction_enabled} t={t} lang={lang} />
     </div>
   );
 }
 
-/** Temporadas completas desde 2002 con sus tres estados, sin cifra en las barras (el error típico es por mes). */
-function SeasonStrip({ totals, comuna, enabled, r, t, lang }: { totals: SeasonTotal[]; comuna: string; enabled: boolean; r: number; t: Text; lang: Lang }) {
-  const full = totals.filter(s => s.complete || s.state === "not_enabled");
+/** Temporadas completas observadas (VIIRS, 2012→). Sin el tramo 2002–2011: la revisión científica de #40
+ *  mostró que el total por temporada de la reconstrucción no está validado (la corrección se validó mes a
+ *  mes) y la tira dejaba ver un salto en 2012 que puede venir del método. Pedido a ciencia en el issue. */
+function SeasonStrip({ totals, comuna, enabled, t, lang }: { totals: SeasonTotal[]; comuna: string; enabled: boolean; t: Text; lang: Lang }) {
+  const full = totals.filter(s => s.complete && s.state === "observed");
   const vmax = Math.max(1, ...full.map(s => s.value ?? 0));
   const stateName = (s: SeasonTotal) => t.seasonsKey[s.state === "estimated" ? 0 : s.state === "observed" ? 1 : 2];
   const first = full[0]?.season, last = full[full.length - 1]?.season;
@@ -127,7 +128,7 @@ function SeasonStrip({ totals, comuna, enabled, r, t, lang }: { totals: SeasonTo
       <h3>{t.seasonsTitle}</h3>
       <div className="lp-seasons" role="list" aria-label={first != null && last != null ? t.seasonsAria(comuna, seasonLabel(first), seasonLabel(last)) : undefined}>
         {full.map(s => (
-          <div key={s.season} role="listitem" className={`lp-ss lp-ss-${s.state}${s.season === 2012 ? " lp-ss-start" : ""}`}>
+          <div key={s.season} role="listitem" className={`lp-ss lp-ss-${s.state}`}>
             <span className="lp-sr">{t.seasonAria(seasonLabel(s.season), stateName(s), s.state === "observed" ? num(s.value, lang) : null)}</span>
             <div className="lp-ss-track" aria-hidden="true" title={s.state === "observed" ? `${seasonLabel(s.season)}: ${num(s.value, lang)}` : seasonLabel(s.season)}>
               {s.state === "not_enabled" ? <i>∅</i> : <b style={{ height: `${Math.max(2, ((s.value ?? 0) / vmax) * 100)}%` }} />}
@@ -136,12 +137,7 @@ function SeasonStrip({ totals, comuna, enabled, r, t, lang }: { totals: SeasonTo
           </div>
         ))}
       </div>
-      <p className="lp-ss-key" aria-hidden="true">
-        {enabled && <span><i className="lp-ss-k lp-ss-k-est" />{t.seasonsKey[0]}</span>}
-        <span><i className="lp-ss-k lp-ss-k-obs" />{t.seasonsKey[1]}</span>
-        {!enabled && <span><i className="lp-ss-k lp-ss-k-ne">∅</i>{t.seasonsKey[2]}</span>}
-      </p>
-      <p className="lp-note">{enabled ? t.seasonsNoteOn(r.toLocaleString(lang === "es" ? "es-CL" : "en-US", { maximumFractionDigits: 2 })) : t.seasonsNoteOff}</p>
+      <p className="lp-note">{enabled ? t.seasonsNoteOn : t.seasonsNoteOff}</p>
     </article>
   );
 }

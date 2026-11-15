@@ -61,9 +61,9 @@ export default function Landing() {
         <section className="lp-hero">
           <div className="lp-wrap lp-hero-in">
             <div className="lp-hero-text">
-              <p className="lp-eyebrow lp-hero-eyebrow">{t.eyebrow}</p>
+              <p className="lp-eyebrow lp-hero-eyebrow">{index ? t.eyebrow(enabled, comunas.length) : "\u00a0"}</p>
               <h1 className="lp-h1">{t.hQuestion}</h1>
-              <p className="lp-sub">{t.sub}</p>
+              <p className="lp-sub">{index ? t.sub(enabled, comunas.length) : "\u00a0"}</p>
               <p className="lp-alert"><Icon name="telefono" size={20} /> <span>{t.alert}</span></p>
               <Search comunas={comunas} t={t} />
               <p className="lp-meta">
