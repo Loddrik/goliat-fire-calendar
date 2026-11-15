@@ -1,0 +1,472 @@
+{
+ "comun": {
+  "size": "1024x1024"
+ },
+ "clips": [
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c01-isotermas-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A flame silhouette made of five nested contour lines like a thermal isotherm map, warm steps from pale amber core to deep orange outer line, a tiny minimal satellite above right. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c02-barrido-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A small minimal satellite at the top emitting a narrow trapezoid scan swath made of thin horizontal scan lines that widens downward and lands on a single glowing amber ember dot at the bottom. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c03-g-llama-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A bold geometric letter G monogram whose inner terminal curls upward and becomes a flame tongue, amber and orange, with a tiny navy satellite dot. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c04-armonizacion-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. One flame split vertically into two halves: the left half drawn with fine horizontal hatch lines, the right half solid amber-orange, the two halves fit together perfectly into a single flame, symbol of merging two sensors. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c05-orbita-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. An open swooping arc like an orbit path, not closed, sweeping across the top, with a minimal satellite at its end, and below it a compact amber ember glowing, dynamic and calm. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c06-espectro-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A flame silhouette composed of vertical bars of different heights like a spectrum or histogram, bars stepping from amber to deep orange, data-visualization feel. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c07-estratos-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A flame silhouette composed of fourteen thin horizontal stripes with small gaps, like stacked seasons of data, gradient from amber at the bottom to orange-red at the tip. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c08-ojo-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. An almond-shaped eye seen from above whose iris is a small amber flame, the eye drawn with one clean navy stroke, satellite observation concept, calm not alarming. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c09-copihue-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A stylized Chilean copihue bell flower whose petals form the shape of a flame, amber and orange, elegant botanical-geometric. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c10-cordillera-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. Minimal Andes mountain peaks and a volcano silhouette in navy, a thin heat shimmer wave rising from a small amber glow in the valley up to a tiny satellite in the sky. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c11-pixel-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A single rounded square pixel tile in navy with a flame shape cut out as negative space, and a small amber dot in the flame core. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c12-termometro-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A minimal satellite whose solar panel is a thermometer scale and whose body ends in a round amber thermometer bulb, clever combination of satellite and thermometer. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c13-ironbow-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A clean flame silhouette rendered in a thermal-camera false-color palette, bands from deep indigo outer edge through magenta and orange to bright yellow core, like an infrared heat image. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 32,
+      "g": 10,
+      "b": 80
+     },
+     {
+      "r": 170,
+      "g": 30,
+      "b": 120
+     },
+     {
+      "r": 245,
+      "g": 110,
+      "b": 30
+     },
+     {
+      "r": 255,
+      "g": 230,
+      "b": 90
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c15-apertura-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. A hexagonal camera sensor aperture with six blades in navy, the opening in the center reveals a small amber flame, sensing heat from orbit. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  },
+  {
+   "model": "fal-ai/recraft/v3/text-to-image",
+   "kind": "image",
+   "out": "r1/c16-monolinea-recraft",
+   "prompt": "Logo for a satellite fire-activity calendar. One continuous single line drawing that starts as a small satellite, travels down as an infrared wave and ends forming a flame, navy line turning amber, elegant minimal monoline. Flat vector logo mark, simple geometric shapes, few elements, strong silhouette that reads at 32 pixels, centered with generous margin, plain white background, no text, no letters, no circle frame, no ring, no badge border.",
+   "params": {
+    "style": "vector_illustration",
+    "colors": [
+     {
+      "r": 11,
+      "g": 37,
+      "b": 69
+     },
+     {
+      "r": 253,
+      "g": 176,
+      "b": 34
+     },
+     {
+      "r": 240,
+      "g": 106,
+      "b": 29
+     },
+     {
+      "r": 199,
+      "g": 48,
+      "b": 42
+     }
+    ]
+   }
+  }
+ ]
+}

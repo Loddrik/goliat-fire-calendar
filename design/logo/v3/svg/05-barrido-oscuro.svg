@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="GOLIAT"><g transform="translate(64 18)">
+      <rect x="-7" y="-9" width="14" height="15" rx="2.6" fill="#E6F0F8"/>
+      <rect x="-31" y="-6" width="20" height="9" rx="1.2" fill="#E6F0F8"/>
+      <rect x="11" y="-6" width="20" height="9" rx="1.2" fill="#E6F0F8"/>
+      <rect x="-11" y="-2.5" width="22" height="2" fill="#E6F0F8"/>
+      <rect x="-3" y="6" width="6" height="3" rx="1" fill="#FFC24B"/>
+    </g><line x1="52" y1="40" x2="76" y2="40" stroke="#1F6F8B" stroke-width="8" stroke-linecap="round"/><line x1="42" y1="53" x2="86" y2="53" stroke="#9ECAE1" stroke-width="8" stroke-linecap="round"/><line x1="32" y1="66" x2="96" y2="66" stroke="#FFC24B" stroke-width="8" stroke-linecap="round"/><line x1="22" y1="79" x2="106" y2="79" stroke="#FF8A3D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="#FF8A3D" transform="translate(64 124) scale(.36) translate(-64 -116)"/>
+    <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="#FFC24B" transform="translate(64 124) scale(.2) translate(-64 -116)"/></svg>

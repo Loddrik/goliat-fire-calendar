@@ -1,0 +1,4 @@
+{"comun":{"size":"1024x1024"},"clips":[
+{"model":"fal-ai/ideogram/v3","kind":"image","out":"r2/i08-goliat-minuscula-ideogram",
+ "prompt":"Minimal modern wordmark logo that reads \"goliat\" in lowercase, bold geometric extended sans-serif, deep navy blue letters, the dot of the letter i is a small amber-orange flame, generous margin, plain off-white background, flat vector, professional brand identity, nothing else",
+ "params":{"rendering_speed":"BALANCED","style":"DESIGN","negative_prompt":"circle frame, badge, ring, emblem, gradient background, extra text, mockup"}}]}

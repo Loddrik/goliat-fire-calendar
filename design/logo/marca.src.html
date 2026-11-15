@@ -99,16 +99,14 @@ footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); borde
 
   <section>
     <span class="eyebrow">Qué dice el logo</span>
-    <h2>El calor sube desde el suelo y el satélite lo recibe</h2>
+    <h2>Dos sensores, una sola llama</h2>
     <div class="anat">
       <div class="tile light"><div id="anat"></div></div>
       <ol class="parts">
-        <li><span class="n">1</span><div><b>La llama, en paleta térmica</b><p>Va de ámbar en la base a rojo en la punta, como en una cámara térmica. No usa el rojo plano de una alerta: el logo dice "aquí se mide calor", no "hay una emergencia".</p></div></li>
-        <li><span class="n">2</span><div><b>El núcleo calado</b><p>Una llama chica vaciada dentro de la grande, donde el fuego es más caliente. En impresión en blanco y negro la llama queda negra y el núcleo, blanco.</p></div></li>
-        <li><span class="n">3</span><div><b>La onda infrarroja</b><p>Sube desde la punta de la llama hasta el sensor. Es el dibujo correcto: VIIRS y MODIS son sensores pasivos que <i>reciben</i> el calor en el infrarrojo medio (cerca de 4 µm); no envían ningún rayo hacia abajo.</p></div></li>
-        <li><span class="n">4</span><div><b>El sensor encendido</b><p>La lente del instrumento, en ámbar: el único punto cálido del satélite, porque es el que ve el calor.</p></div></li>
-        <li><span class="n">5</span><div><b>Un satélite de un solo panel</b><p>Como Suomi NPP y NOAA-20, los satélites que llevan VIIRS, de donde sale la serie desde 2012. Los paneles rectos lo alejan del anillo de Space Apps.</p></div></li>
-        <li><span class="n">6</span><div><b>El borde de la Tierra</b><p>Un arco abierto y bajo bajo la llama: la escena se ve desde la órbita. Nunca se cierra en un anillo. En tamaños chicos se quita.</p></div></li>
+        <li><span class="n">1</span><div><b>La mitad en líneas: MODIS</b><p>El registro largo, desde 2002. Las líneas de barrido recuerdan cómo un sensor lee la Tierra, franja por franja. Van en azul porque es el instrumento, no el fuego.</p></div></li>
+        <li><span class="n">2</span><div><b>La mitad sólida: VIIRS</b><p>La serie observada desde 2012, más fina (píxeles de 375 m). Va en paleta térmica, de ámbar en la base a rojo en la punta, como en una cámara térmica. No usa el rojo plano de una alerta: el logo dice "aquí se mide calor", no "hay una emergencia".</p></div></li>
+        <li><span class="n">3</span><div><b>La separación</b><p>Son dos sensores distintos y no se confunden: GOLIAT los pone en la misma escala, y la app siempre marca qué es observado, qué es estimado y qué no se pudo estimar.</p></div></li>
+        <li><span class="n">4</span><div><b>Una sola silueta</b><p>Las dos mitades forman una llama: una serie continua de actividad de fuego detectada. La lengua secundaria queda del lado sólido para que la forma se lea igual a 16 px.</p></div></li>
       </ol>
     </div>
   </section>
@@ -116,7 +114,7 @@ footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); borde
   <section>
     <span class="eyebrow">Sistema</span>
     <h2>Una marca, cuatro tamaños</h2>
-    <p>Igual que el logo de Space Apps, la marca se adapta al espacio. Bajo 48 px se usa la versión chica: sin borde de la Tierra, sin la grilla del panel ni la antena, y con una onda más gruesa y corta para que no desaparezca.</p>
+    <p>Igual que el logo de Space Apps, la marca se adapta al espacio. Bajo 48 px se usa la versión chica: menos líneas y más gruesas, para que la mitad de MODIS siga leyéndose como líneas y no como una mancha celeste. Los logotipos horizontales viven en cabeceras de 28 a 40 px, así que llevan siempre la versión chica.</p>
     <div class="sys">
       <div class="tile light wide"><span class="tag">HORIZONTAL · USO PRINCIPAL</span><div id="sys-h"></div></div>
       <div class="tile light"><span class="tag">VERTICAL</span><div id="sys-v"></div></div>
@@ -129,8 +127,8 @@ footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); borde
 
   <section>
     <span class="eyebrow">Color</span>
-    <h2>Lo cálido es el calor; lo azul, el instrumento</h2>
-    <p>La llama y la onda usan la paleta térmica; el satélite usa los azules de la app. Los colores cálidos se reservan para el logo: en la app no marcan estados ni alertas.</p>
+    <h2>Lo azul es el registro largo; lo cálido, el calor que se ve hoy</h2>
+    <p>La mitad de VIIRS usa la paleta térmica; las líneas de MODIS, un azul cercano al de la app. Los colores cálidos se reservan para el logo: en la app no marcan estados ni alertas.</p>
     <div class="swatches" id="swatches"></div>
   </section>
 
@@ -160,7 +158,7 @@ footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); borde
     <div class="rules" id="rules"></div>
   </section>
 
-  <footer>Marca C1 "Señal de calor" · geometría en design/logo/mark.js · logos de Space Apps: kit oficial 2026, sin modificar · Archivo e IBM Plex: licencia SIL OFL</footer>
+  <footer>Marca "Dos sensores, una llama" (15-11-2026; reemplaza a C1 "Señal de calor") · geometría en design/logo/mark.js · logos de Space Apps: kit oficial 2026, sin modificar · Archivo e IBM Plex: licencia SIL OFL</footer>
 </div>
 
 <script>
@@ -170,8 +168,13 @@ footer { color: var(--muted); font-size: 12.5px; font-family: var(--mono); borde
 const SA_BLACK = `%%SA_BLACK%%`;
 const SA_WHITE = `%%SA_WHITE%%`;
 const pick = (theme, size) => size < 48 ? small(theme, size) : mark(theme, size);
+// Ícono recortado al ancho visible de la llama (como en los logotipos exportados).
+function cropped(theme, h, thick) {
+  const w = (INK_X[1] - INK_X[0]) / 128 * h;
+  return `<svg viewBox="${INK_X[0]} 0 ${INK_X[1] - INK_X[0]} 128" width="${w.toFixed(1)}" height="${h}" role="img" aria-label="GOLIAT">${thick ? smallBody(theme) : markBody(theme)}</svg>`;
+}
 function lockup(theme, s, { tag = true, v = false } = {}) {
-  const ic = pick(theme, Math.round(s * (v ? 2.1 : 1.85)));
+  const ic = v ? pick(theme, Math.round(s * 2.1)) : cropped(theme, Math.round(s * 1.85), true);
   return `<div class="lockup${v ? ' v' : ''}" style="--s:${s}px">${ic}<div><div class="name">GOLIAT</div>${tag ? '<div class="tagl">Actividad de fuego · detectada por satélite</div>' : ''}</div></div>`;
 }
 const $ = id => document.getElementById(id);
@@ -179,7 +182,7 @@ $('hero-light').innerHTML = lockup('light', 56);
 $('hero-navy').innerHTML = lockup('navy', 56);
 
 // anatomía con marcadores numerados en el espacio de 128
-const marks = [[30, 72], [41, 104], [70, 33], [88.5, 37.5], [115, 30], [96, 126]];
+const marks = [[35, 89], [89, 100], [64, 71], [83, 40]];
 $('anat').innerHTML = `<svg class="big" viewBox="-4 -4 136 138" role="img" aria-label="Partes del logo">${markBody('light')}
   ${marks.map(([x, y], i) => `<g><circle cx="${x}" cy="${y}" r="4.6" fill="#1A1A1A" stroke="#FCFBF7" stroke-width="1"/><text x="${x}" y="${y + 2}" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="5.6" fill="#FFFFFF">${i + 1}</text></g>`).join('')}</svg>`;
 
@@ -191,11 +194,11 @@ $('sys-sizes').innerHTML = [128, 64, 48, 32, 24, 16].map(s => `<figure>${pick('l
 $('share').innerHTML = lockup('navy', 30);
 
 const SW = [
-  ['Rojo punta', '#C7302A', 'Punta de la llama e inicio de la onda'],
-  ['Naranjo', '#F06A1D', 'Cuerpo de la llama'],
-  ['Ámbar', '#FDB022', 'Base de la llama, fin de la onda y lente del sensor'],
-  ['Azul noche', '#0B2545', 'Cuerpo del satélite y borde de la Tierra'],
-  ['Azul panel', '#1F6F8B', 'Panel solar; es el acento de la app'],
+  ['Rojo punta', '#C7302A', 'Punta de la mitad de VIIRS'],
+  ['Naranjo', '#F06A1D', 'Cuerpo de la mitad de VIIRS'],
+  ['Ámbar', '#FDB022', 'Base de la mitad de VIIRS'],
+  ['Azul barrido', '#2B7BB9', 'Líneas de la mitad de MODIS'],
+  ['Azul de la app', '#1F6F8B', 'Acento de la app; no va en el logo'],
   ['Fondo oscuro', '#07173F', 'Fondo de la versión invertida'],
   ['Papel', '#FCFBF7', 'Fondo claro de la app'],
 ];
@@ -205,7 +208,7 @@ $('co-light').innerHTML = lockup('light', 30, { tag: false }) + '<span class="se
 $('co-navy').innerHTML = lockup('navy', 30, { tag: false }) + '<span class="sep"></span><span class="sa">' + SA_WHITE + '</span>';
 
 // reglas
-const bareFlame = `<svg viewBox="0 0 128 128" width="96" height="96" role="img" aria-label="Llama sola en rojo plano"><path d="${F_OUT} ${F_CORE}" fill-rule="evenodd" fill="#E0201B" transform="translate(24 -8)"/></svg>`;
+const bareFlame = `<svg viewBox="0 0 128 128" width="96" height="96" role="img" aria-label="Llama sola en rojo plano"><path d="${FL}" fill="#E0201B"/></svg>`;
 const ringed = `<svg viewBox="-10 -10 148 148" width="104" height="104" role="img" aria-label="Logo dentro de un anillo"><circle cx="64" cy="64" r="66" fill="none" stroke="#0B2545" stroke-width="5"/>${markBody('light')}</svg>`;
 const busy = `<div style="width:150px;height:96px;border-radius:4px;background:repeating-linear-gradient(45deg,#6b8f5e 0 8px,#a3b18a 8px 16px,#c9a66b 16px 24px);display:grid;place-items:center">${mark('light', 70)}</div>`;
 const RULES = [

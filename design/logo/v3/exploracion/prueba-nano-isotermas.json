@@ -1,0 +1,31 @@
+{
+  "file": "prueba-nano-isotermas.png",
+  "model": "fal-ai/nano-banana",
+  "prompt": "Professional minimal logo mark, flat vector design on a plain white background: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, stepping from pale yellow at the core to deep orange outside, a tiny simple satellite silhouette at the upper right, navy blue satellite, centered with generous margin, Swiss modernist identity design, no text, no letters, no gradients outside the flame",
+  "input": {
+    "prompt": "Professional minimal logo mark, flat vector design on a plain white background: a flame silhouette built from five nested concentric contour lines like a thermal isotherm map, stepping from pale yellow at the core to deep orange outside, a tiny simple satellite silhouette at the upper right, navy blue satellite, centered with generous margin, Swiss modernist identity design, no text, no letters, no gradients outside the flame",
+    "aspect_ratio": "1:1"
+  },
+  "imagenEntrada": null,
+  "seed": null,
+  "expandedPrompt": null,
+  "requestId": "01a1dd88-a278-7c22-9ed9-fa7442140467",
+  "medido": {
+    "ancho": 1024,
+    "alto": 1024,
+    "duracion": null
+  },
+  "pedido": {
+    "aspect": "1:1"
+  },
+  "problemas": [],
+  "costoEstimado": {
+    "usd": 0.0398,
+    "detalle": "1 × $0.0398/imagen, tabla del 2026-10-18"
+  },
+  "avisos": [
+    "fal-ai/nano-banana elige proporción, no resolución: sale a su tamaño (~1024 px) y se escala."
+  ],
+  "createdAt": "2026-11-15T04:48:08.694Z",
+  "sourceUrl": "https://v3b.fal.media/files/b/0ab285c0/4pMNR1m3gK1yCu4ekeifr_0SdmU4Oq.png"
+}

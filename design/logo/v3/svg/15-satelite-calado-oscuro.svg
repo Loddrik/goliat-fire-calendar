@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="GOLIAT"><defs><linearGradient id="g36" gradientUnits="userSpaceOnUse" x1="64" y1="116" x2="64" y2="14"><stop offset="0" stop-color="#FFC24B"/><stop offset="0.55" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F0553F"/></linearGradient>
+    <mask id="sc35" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><rect width="128" height="128" fill="#fff"/>
+      <g transform="translate(64 84) scale(1.28)" fill="#000">
+        <rect x="-5" y="-6" width="10" height="12" rx="1.8"/>
+        <rect x="7.5" y="-4.5" width="15" height="9" rx="1"/><rect x="-22.5" y="-4.5" width="15" height="9" rx="1"/>
+        <rect x="-8" y="-1" width="16" height="2"/>
+        <rect x="-2.6" y="6" width="5.2" height="3.4" rx=".8"/>
+      </g></mask></defs>
+    <path d="M64 14 C74 32 96 50 96 80 C96 101 81 116 64 116 C47 116 32 101 32 80 C32 64 41 54 48 44 C50 55 54 60 59 62 C56 47 57.5 30 64 14 Z" fill="url(#g36)" mask="url(#sc35)"/></svg>
