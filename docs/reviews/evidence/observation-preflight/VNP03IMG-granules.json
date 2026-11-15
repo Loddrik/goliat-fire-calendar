@@ -1,0 +1,4050 @@
+[
+  {
+    "producer_granule_id": "VNP03IMG.A2019001.0512.002.2021102024342.nc",
+    "time_start": "2019-01-01T05:12:00.000Z",
+    "updated": "2024-10-09T01:54:50.500Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017605491",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-01T05:18:00.000Z",
+    "id": "G2126402755-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.975969314575",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-34.156013 -45.724651 -29.160643 -78.182579 -48.068062 -90.966942 -54.942024 -46.000202 -34.156013 -45.724651"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019001.0512.002.2021102024342.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019001.0512.002.2021102024342.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/001/VNP03IMG.A2019001.0512.002.2021102024342.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019001.0654.002.2021102024714.nc",
+    "time_start": "2019-01-01T06:54:00.000Z",
+    "updated": "2024-10-09T01:54:50.500Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017617919",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-01T07:00:00.000Z",
+    "id": "G2126402928-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "129.259905815125",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-35.922169 -71.267616 -30.828386 -104.362183 -49.474091 -117.793129 -56.589127 -71.193047 -35.922169 -71.267616"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019001.0654.002.2021102024714.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019001.0654.002.2021102024714.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/001/VNP03IMG.A2019001.0654.002.2021102024714.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019001.1730.002.2021102024224.nc",
+    "time_start": "2019-01-01T17:30:00.000Z",
+    "updated": "2024-10-09T01:54:41.660Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017604108",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-01T17:36:00.000Z",
+    "id": "G2126402571-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "150.132460594177",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-50.192776 -72.862549 -44.008781 -31.888409 -24.790262 -42.935024 -29.465521 -73.886116 -50.192776 -72.862549"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019001.1730.002.2021102024224.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019001.1730.002.2021102024224.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/001/VNP03IMG.A2019001.1730.002.2021102024224.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019001.1912.002.2021102025446.nc",
+    "time_start": "2019-01-01T19:12:00.000Z",
+    "updated": "2024-10-09T01:54:50.500Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017621612",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-01T19:18:00.000Z",
+    "id": "G2126402983-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "141.971035957336",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-48.536156 -98.215378 -42.535637 -58.43285 -23.112598 -69.065384 -27.695 -99.455193 -48.536156 -98.215378"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019001.1912.002.2021102025446.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019001.1912.002.2021102025446.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/001/VNP03IMG.A2019001.1912.002.2021102025446.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019002.0454.002.2021102025459.nc",
+    "time_start": "2019-01-02T04:54:00.000Z",
+    "updated": "2024-10-09T01:54:50.500Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017627007",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-02T05:00:00.000Z",
+    "id": "G2126403197-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.81639289856",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-37.694542 -41.241486 -32.490662 -75.078629 -51.025074 -89.413483 -58.440746 -40.807018 -37.694542 -41.241486"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019002.0454.002.2021102025459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019002.0454.002.2021102025459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/002/VNP03IMG.A2019002.0454.002.2021102025459.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019002.0630.002.2021102025425.nc",
+    "time_start": "2019-01-02T06:30:00.000Z",
+    "updated": "2024-10-09T01:54:50.500Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017622382",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-02T06:36:00.000Z",
+    "id": "G2126403054-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "137.275394439697",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-18.814367 -64.558479 -14.403666 -93.106506 -34.263371 -101.389137 -39.591972 -66.728683 -18.814367 -64.558479"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019002.0630.002.2021102025425.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019002.0630.002.2021102025425.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/002/VNP03IMG.A2019002.0630.002.2021102025425.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019002.1854.002.2021102030808.nc",
+    "time_start": "2019-01-02T18:54:00.000Z",
+    "updated": "2024-10-09T01:55:07.330Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017649939",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-02T19:00:00.000Z",
+    "id": "G2126404380-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "145.549901008606",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-44.907921 -93.465897 -39.255295 -56.009315 -19.708702 -65.653893 -24.149445 -95.133804 -44.907921 -93.465897"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019002.1854.002.2021102030808.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019002.1854.002.2021102030808.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/002/VNP03IMG.A2019002.1854.002.2021102030808.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019003.0436.002.2021102030813.nc",
+    "time_start": "2019-01-03T04:36:00.000Z",
+    "updated": "2024-10-09T01:55:07.330Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017638876",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-03T04:42:00.000Z",
+    "id": "G2126404192-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.205636978149",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-41.331242 -36.687603 -35.878559 -72.187912 -53.861233 -88.328613 -61.925179 -35.36216 -41.331242 -36.687603"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019003.0436.002.2021102030813.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019003.0436.002.2021102030813.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/003/VNP03IMG.A2019003.0436.002.2021102030813.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019003.0612.002.2021102030943.nc",
+    "time_start": "2019-01-03T06:12:00.000Z",
+    "updated": "2024-10-09T01:55:07.330Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017649942",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-03T06:18:00.000Z",
+    "id": "G2126404365-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "142.361065864563",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-22.362436 -60.262375 -17.852581 -89.491402 -37.5327 -98.550728 -43.125839 -62.117832 -22.362436 -60.262375"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019003.0612.002.2021102030943.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019003.0612.002.2021102030943.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/003/VNP03IMG.A2019003.0612.002.2021102030943.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019003.1836.002.2021102033228.nc",
+    "time_start": "2019-01-03T18:36:00.000Z",
+    "updated": "2024-10-09T01:55:24.100Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017673462",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-03T18:42:00.000Z",
+    "id": "G2126407042-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "148.825805664062",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-41.37653 -88.823532 -36.012264 -53.285778 -16.240707 -61.976433 -20.604321 -90.858513 -41.37653 -88.823532"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/003/VNP03IMG.A2019003.1836.002.2021102033228.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019004.0554.002.2021102035143.nc",
+    "time_start": "2019-01-04T05:54:00.000Z",
+    "updated": "2024-10-09T01:55:40.510Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017703727",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-04T06:00:00.000Z",
+    "id": "G2126408961-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "145.039319038391",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-25.904995 -55.970001 -21.278866 -85.968102 -40.840012 -95.994415 -46.753986 -57.431339 -25.904995 -55.970001"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019004.0554.002.2021102035143.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019004.0554.002.2021102035143.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/004/VNP03IMG.A2019004.0554.002.2021102035143.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019004.1812.002.2021102033224.nc",
+    "time_start": "2019-01-04T18:12:00.000Z",
+    "updated": "2024-10-09T01:55:24.100Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017671457",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-04T18:18:00.000Z",
+    "id": "G2126406977-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.883295059204",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-58.360695 -84.67836 -51.04282 -36.107777 -32.600704 -50.401756 -37.712955 -84.256592 -58.360695 -84.67836"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019004.1812.002.2021102033224.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019004.1812.002.2021102033224.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/004/VNP03IMG.A2019004.1812.002.2021102033224.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019004.1818.002.2021102033424.nc",
+    "time_start": "2019-01-04T18:18:00.000Z",
+    "updated": "2024-10-09T01:55:32.230Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017681119",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-04T18:24:00.000Z",
+    "id": "G2126407621-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "155.5579662323",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-37.842155 -84.260262 -32.722427 -50.355675 -12.682545 -58.349617 -16.959585 -86.653954 -37.842155 -84.260262"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019004.1818.002.2021102033424.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019004.1818.002.2021102033424.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/004/VNP03IMG.A2019004.1818.002.2021102033424.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019005.0536.002.2021102034122.nc",
+    "time_start": "2019-01-05T05:36:00.000Z",
+    "updated": "2024-10-09T01:55:32.230Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017685443",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-05T05:42:00.000Z",
+    "id": "G2126407957-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "145.215710639954",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-29.549238 -51.630974 -24.776817 -82.594238 -43.992294 -93.633888 -50.273109 -52.628326 -29.549238 -51.630974"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019005.0536.002.2021102034122.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019005.0536.002.2021102034122.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/005/VNP03IMG.A2019005.0536.002.2021102034122.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019005.1754.002.2021102034915.nc",
+    "time_start": "2019-01-05T17:54:00.000Z",
+    "updated": "2024-10-09T01:55:32.230Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017695958",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-05T18:00:00.000Z",
+    "id": "G2126408672-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "148.849335670471",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-54.861858 -79.493294 -48.08675 -34.558792 -29.269526 -47.29718 -34.174622 -79.767433 -54.861858 -79.493294"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019005.1754.002.2021102034915.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019005.1754.002.2021102034915.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/005/VNP03IMG.A2019005.1754.002.2021102034915.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019005.1936.002.2021102034125.nc",
+    "time_start": "2019-01-05T19:36:00.000Z",
+    "updated": "2024-10-09T01:55:32.230Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017688129",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-05T19:42:00.000Z",
+    "id": "G2126408153-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "137.027221679688",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-53.111523 -104.727875 -46.574585 -61.384148 -27.596079 -73.446869 -32.407619 -105.302887 -53.111523 -104.727875"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019005.1936.002.2021102034125.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019005.1936.002.2021102034125.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/005/VNP03IMG.A2019005.1936.002.2021102034125.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019006.0518.002.2022024131813.nc",
+    "time_start": "2019-01-06T05:18:00.000Z",
+    "updated": "2024-10-09T07:59:36.400Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6832727252",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-06T05:24:00.000Z",
+    "id": "G2206756327-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.593935966492",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-33.090172 -47.220158 -28.149813 -79.300972 -47.069908 -91.583572 -53.785553 -47.691662 -33.090172 -47.220158"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019006.0518.002.2022024131813.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019006.0518.002.2022024131813.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/006/VNP03IMG.A2019006.0518.002.2022024131813.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019006.0700.002.2022024131816.nc",
+    "time_start": "2019-01-06T07:00:00.000Z",
+    "updated": "2024-10-09T07:59:36.400Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6832726902",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-06T07:06:00.000Z",
+    "id": "G2206756182-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "126.780230522156",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-34.753956 -72.742073 -29.725464 -105.412636 -48.577682 -118.4347 -55.53471 -72.903755 -34.753956 -72.742073"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019006.0700.002.2022024131816.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019006.0700.002.2022024131816.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/006/VNP03IMG.A2019006.0700.002.2022024131816.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019006.1736.002.2022024132127.nc",
+    "time_start": "2019-01-06T17:36:00.000Z",
+    "updated": "2024-10-09T07:59:44.180Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6832733638",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-06T17:42:00.000Z",
+    "id": "G2206758314-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "151.940624237061",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-51.351387 -74.496338 -45.031841 -32.617207 -25.80641 -44.091503 -30.530119 -75.356796 -51.351387 -74.496338"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019006.1736.002.2022024132127.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019006.1736.002.2022024132127.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/006/VNP03IMG.A2019006.1736.002.2022024132127.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019006.1918.002.2022024132036.nc",
+    "time_start": "2019-01-06T19:18:00.000Z",
+    "updated": "2024-10-09T07:59:36.400Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6832729578",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-06T19:24:00.000Z",
+    "id": "G2206756946-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "139.819871902466",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-49.594994 -99.815254 -43.47963 -59.280182 -24.224756 -70.17205 -28.86305 -100.905304 -49.594994 -99.815254"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019006.1918.002.2022024132036.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019006.1918.002.2022024132036.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/006/VNP03IMG.A2019006.1918.002.2022024132036.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019007.0500.002.2021102041555.nc",
+    "time_start": "2019-01-07T05:00:00.000Z",
+    "updated": "2024-10-09T01:55:49.220Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017755248",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-07T05:06:00.000Z",
+    "id": "G2126412099-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.75060749054",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-36.630566 -42.752293 -31.492773 -76.14695 -50.061684 -89.894592 -57.289154 -42.569511 -36.630566 -42.752293"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019007.0500.002.2021102041555.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019007.0500.002.2021102041555.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/007/VNP03IMG.A2019007.0500.002.2021102041555.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019007.0636.002.2021102041005.nc",
+    "time_start": "2019-01-07T06:36:00.000Z",
+    "updated": "2024-10-09T01:55:49.220Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017742195",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-07T06:42:00.000Z",
+    "id": "G2126411267-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "134.203422546387",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-17.642836 -65.987 -13.261338 -94.328842 -33.270569 -102.429604 -38.526695 -68.259819 -17.642836 -65.987"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019007.0636.002.2021102041005.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019007.0636.002.2021102041005.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/007/VNP03IMG.A2019007.0636.002.2021102041005.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019007.1900.002.2021102041248.nc",
+    "time_start": "2019-01-07T19:00:00.000Z",
+    "updated": "2024-10-09T01:55:49.220Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017745962",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-07T19:06:00.000Z",
+    "id": "G2126411706-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.636668205261",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-46.070099 -95.030502 -40.310741 -56.874695 -20.729904 -66.83374 -25.214348 -96.581573 -46.070099 -95.030502"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019007.1900.002.2021102041248.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019007.1900.002.2021102041248.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/007/VNP03IMG.A2019007.1900.002.2021102041248.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019008.0442.002.2021102042642.nc",
+    "time_start": "2019-01-08T04:42:00.000Z",
+    "updated": "2024-10-09T01:55:58.230Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017771015",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-08T04:48:00.000Z",
+    "id": "G2126413008-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "145.173573493958",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-40.166988 -38.222385 -34.795956 -73.157921 -53.024097 -88.751915 -60.880005 -37.189003 -40.166988 -38.222385"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019008.0442.002.2021102042642.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019008.0442.002.2021102042642.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/008/VNP03IMG.A2019008.0442.002.2021102042642.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019008.0618.002.2021102042820.nc",
+    "time_start": "2019-01-08T06:18:00.000Z",
+    "updated": "2024-10-09T01:56:07.420Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017776001",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-08T06:24:00.000Z",
+    "id": "G2126413230-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "141.427851676941",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-21.295902 -61.704483 -16.816372 -90.722969 -36.55431 -99.534492 -42.062916 -63.66782 -21.295902 -61.704483"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019008.0618.002.2021102042820.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019008.0618.002.2021102042820.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/008/VNP03IMG.A2019008.0618.002.2021102042820.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019008.1842.002.2021102043525.nc",
+    "time_start": "2019-01-08T18:42:00.000Z",
+    "updated": "2024-10-09T01:56:16.310Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017809695",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-08T18:48:00.000Z",
+    "id": "G2126415151-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "148.018018722534",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-42.438107 -90.363495 -36.991428 -54.283146 -17.272982 -63.205643 -21.66847 -92.291809 -42.438107 -90.363495"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019008.1842.002.2021102043525.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019008.1842.002.2021102043525.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/008/VNP03IMG.A2019008.1842.002.2021102043525.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019009.0600.002.2021102044423.nc",
+    "time_start": "2019-01-09T06:00:00.000Z",
+    "updated": "2024-10-09T01:56:16.310Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017808649",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-09T06:06:00.000Z",
+    "id": "G2126414987-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.395302772522",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-24.840254 -57.416927 -20.250654 -87.170723 -39.786659 -96.847015 -45.592785 -59.01157 -24.840254 -57.416927"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019009.0600.002.2021102044423.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019009.0600.002.2021102044423.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/009/VNP03IMG.A2019009.0600.002.2021102044423.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019009.1824.002.2021102050458.nc",
+    "time_start": "2019-01-09T18:24:00.000Z",
+    "updated": "2024-10-09T01:56:34.130Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017851145",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-09T18:30:00.000Z",
+    "id": "G2126417117-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "152.253131866455",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-38.903263 -85.776352 -33.713535 -51.410816 -13.822249 -59.586624 -18.124151 -88.055893 -38.903263 -85.776352"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019009.1824.002.2021102050458.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019009.1824.002.2021102050458.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/009/VNP03IMG.A2019009.1824.002.2021102050458.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019010.0542.002.2021102045732.nc",
+    "time_start": "2019-01-10T05:42:00.000Z",
+    "updated": "2024-10-09T01:56:25.120Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017831934",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-10T05:48:00.000Z",
+    "id": "G2126416151-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "145.25249004364",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-28.382307 -53.100956 -23.659496 -83.722534 -42.961994 -94.396301 -49.115448 -54.246979 -28.382307 -53.100956"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019010.0542.002.2021102045732.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019010.0542.002.2021102045732.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/010/VNP03IMG.A2019010.0542.002.2021102045732.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019010.1800.002.2021102050158.nc",
+    "time_start": "2019-01-10T18:00:00.000Z",
+    "updated": "2024-10-09T01:56:34.130Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017843251",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-10T18:06:00.000Z",
+    "id": "G2126416652-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "147.518907546997",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-55.912746 -81.180122 -48.984814 -35.226532 -30.270487 -48.400097 -35.235283 -81.262016 -55.912746 -81.180122"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019010.1800.002.2021102050158.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019010.1800.002.2021102050158.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/010/VNP03IMG.A2019010.1800.002.2021102050158.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019010.1942.002.2021102050954.nc",
+    "time_start": "2019-01-10T19:42:00.000Z",
+    "updated": "2024-10-09T01:56:34.130Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017853315",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-10T19:48:00.000Z",
+    "id": "G2126417281-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "137.005382537842",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-54.265095 -106.393608 -47.572918 -62.021259 -28.602484 -74.570145 -33.468719 -106.787949 -54.265095 -106.393608"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019010.1942.002.2021102050954.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019010.1942.002.2021102050954.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/010/VNP03IMG.A2019010.1942.002.2021102050954.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019011.0524.002.2021102050952.nc",
+    "time_start": "2019-01-11T05:24:00.000Z",
+    "updated": "2024-10-09T01:56:34.130Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017852984",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-11T05:30:00.000Z",
+    "id": "G2126417179-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.72550201416",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-31.925121 -48.698433 -27.043577 -80.387482 -46.155533 -92.319618 -52.733475 -49.351562 -31.925121 -48.698433"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019011.0524.002.2021102050952.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019011.0524.002.2021102050952.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/011/VNP03IMG.A2019011.0524.002.2021102050952.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019011.1742.002.2021102052658.nc",
+    "time_start": "2019-01-11T17:42:00.000Z",
+    "updated": "2024-10-09T01:56:52.180Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017878781",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-11T17:48:00.000Z",
+    "id": "G2126419380-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "151.043387413025",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-52.403217 -76.13765 -45.957264 -33.400005 -26.913778 -45.194431 -31.69244 -76.822021 -52.403217 -76.13765"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019011.1742.002.2021102052658.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019011.1742.002.2021102052658.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/011/VNP03IMG.A2019011.1742.002.2021102052658.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019011.1924.002.2021102052659.nc",
+    "time_start": "2019-01-11T19:24:00.000Z",
+    "updated": "2024-10-09T01:56:52.180Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017879558",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-11T19:30:00.000Z",
+    "id": "G2126419446-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "138.602538108826",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-50.648869 -101.429169 -44.414787 -60.104877 -25.227594 -71.294029 -29.923489 -102.372971 -50.648869 -101.429169"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019011.1924.002.2021102052659.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019011.1924.002.2021102052659.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/011/VNP03IMG.A2019011.1924.002.2021102052659.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019012.0506.002.2021102052903.nc",
+    "time_start": "2019-01-12T05:06:00.000Z",
+    "updated": "2024-10-09T01:57:01.340Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017883346",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-12T05:12:00.000Z",
+    "id": "G2126419664-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.309041976929",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-35.569672 -44.258156 -30.495705 -77.23008 -49.177246 -90.515388 -56.241898 -44.289246 -35.569672 -44.258156"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019012.0506.002.2021102052903.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019012.0506.002.2021102052903.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/012/VNP03IMG.A2019012.0506.002.2021102052903.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019012.0642.002.2021102052655.nc",
+    "time_start": "2019-01-12T06:42:00.000Z",
+    "updated": "2024-10-09T01:56:52.180Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017879570",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-12T06:48:00.000Z",
+    "id": "G2126419457-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "130.180968284607",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-16.581272 -67.393272 -12.222282 -95.593124 -32.182983 -103.439941 -37.363594 -69.79731 -16.581272 -67.393272"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019012.0642.002.2021102052655.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019012.0642.002.2021102052655.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/012/VNP03IMG.A2019012.0642.002.2021102052655.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019012.0648.002.2021102052656.nc",
+    "time_start": "2019-01-12T06:48:00.000Z",
+    "updated": "2024-10-09T01:56:52.180Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017876515",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-12T06:54:00.000Z",
+    "id": "G2126419118-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "132.827310562134",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-37.234913 -69.794823 -32.06115 -103.393959 -50.648701 -117.514473 -57.988552 -69.433678 -37.234913 -69.794823"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019012.0648.002.2021102052656.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019012.0648.002.2021102052656.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/012/VNP03IMG.A2019012.0648.002.2021102052656.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019012.1906.002.2021102054459.nc",
+    "time_start": "2019-01-12T19:06:00.000Z",
+    "updated": "2024-10-09T01:57:10.950Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017916263",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-12T19:12:00.000Z",
+    "id": "G2126421128-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "142.557988166809",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-47.124462 -96.607132 -41.264362 -57.783699 -21.85639 -68.018066 -26.37599 -98.020325 -47.124462 -96.607132"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019012.1906.002.2021102054459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019012.1906.002.2021102054459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/012/VNP03IMG.A2019012.1906.002.2021102054459.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019013.0448.002.2021102054500.nc",
+    "time_start": "2019-01-13T04:48:00.000Z",
+    "updated": "2024-10-09T01:57:19.360Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017950156",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-13T04:54:00.000Z",
+    "id": "G2126422451-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.233924865723",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-39.109241 -39.747662 -33.813087 -74.190681 -52.095772 -89.125511 -59.738262 -39.007557 -39.109241 -39.747662"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019013.0448.002.2021102054500.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019013.0448.002.2021102054500.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/013/VNP03IMG.A2019013.0448.002.2021102054500.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019013.0624.002.2021102054455.nc",
+    "time_start": "2019-01-13T06:24:00.000Z",
+    "updated": "2024-10-09T01:57:10.950Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017916272",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-13T06:30:00.000Z",
+    "id": "G2126421136-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "140.456928253174",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-20.131523 -63.137218 -15.685282 -91.92981 -35.482353 -100.485733 -40.903942 -65.211372 -20.131523 -63.137218"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019013.0624.002.2021102054455.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019013.0624.002.2021102054455.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/013/VNP03IMG.A2019013.0624.002.2021102054455.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019013.1848.002.2021102054459.nc",
+    "time_start": "2019-01-13T18:48:00.000Z",
+    "updated": "2024-10-09T01:57:10.950Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017918732",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-13T18:54:00.000Z",
+    "id": "G2126421429-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "147.055156707764",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-43.593479 -91.906555 -38.052666 -55.20269 -18.405655 -64.428879 -22.82835 -93.719604 -43.593479 -91.906555"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019013.1848.002.2021102054459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019013.1848.002.2021102054459.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/013/VNP03IMG.A2019013.1848.002.2021102054459.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019014.0606.002.2021102055700.nc",
+    "time_start": "2019-01-14T06:06:00.000Z",
+    "updated": "2024-10-09T01:57:19.360Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017945338",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-14T06:12:00.000Z",
+    "id": "G2126422305-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "143.684038162231",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-23.679411 -58.853836 -19.128893 -88.347282 -38.827999 -97.788445 -44.540203 -60.579052 -23.679411 -58.853836"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019014.0606.002.2021102055700.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019014.0606.002.2021102055700.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/014/VNP03IMG.A2019014.0606.002.2021102055700.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019014.1830.002.2021102060655.nc",
+    "time_start": "2019-01-14T18:30:00.000Z",
+    "updated": "2024-10-09T01:57:28.370Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6017966825",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-14T18:36:00.000Z",
+    "id": "G2126423634-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "151.331149101257",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-40.058178 -87.297729 -34.789886 -52.401535 -14.85078 -60.832211 -19.179811 -89.480278 -40.058178 -87.297729"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019014.1830.002.2021102060655.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019014.1830.002.2021102060655.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/014/VNP03IMG.A2019014.1830.002.2021102060655.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019015.0548.002.2021102062338.nc",
+    "time_start": "2019-01-15T05:48:00.000Z",
+    "updated": "2024-10-09T01:57:46.160Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6018011346",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "NIGHT",
+    "time_end": "2019-01-15T05:54:00.000Z",
+    "id": "G2126424803-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "144.825846672058",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-27.325905 -54.551273 -22.647177 -84.89817 -42.023643 -95.262009 -48.066971 -55.846939 -27.325905 -54.551273"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019015.0548.002.2021102062338.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019015.0548.002.2021102062338.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/015/VNP03IMG.A2019015.0548.002.2021102062338.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019015.1806.002.2021102062645.nc",
+    "time_start": "2019-01-15T18:06:00.000Z",
+    "updated": "2024-10-09T01:57:46.160Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6018009231",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-15T18:12:00.000Z",
+    "id": "G2126424785-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "146.870745658875",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-57.05402 -82.897522 -49.950436 -35.769077 -31.261862 -49.49395 -36.287601 -82.764488 -57.05402 -82.897522"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019015.1806.002.2021102062645.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019015.1806.002.2021102062645.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/015/VNP03IMG.A2019015.1806.002.2021102062645.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  },
+  {
+    "producer_granule_id": "VNP03IMG.A2019015.1948.002.2021102062543.nc",
+    "time_start": "2019-01-15T19:48:00.000Z",
+    "updated": "2024-10-09T01:57:37.460Z",
+    "dataset_id": "VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min L1 Swath 375 m ",
+    "data_center": "LAADS",
+    "title": "LAADS:6018005061",
+    "coordinate_system": "GEODETIC",
+    "day_night_flag": "DAY",
+    "time_end": "2019-01-15T19:54:00.000Z",
+    "id": "G2126424656-LAADS",
+    "original_format": "ECHO10",
+    "granule_size": "135.550253868103",
+    "browse_flag": false,
+    "polygons": [
+      [
+        "-55.307747 -108.072441 -48.469223 -62.715931 -29.694962 -75.639191 -34.623402 -108.271141 -55.307747 -108.072441"
+      ]
+    ],
+    "collection_concept_id": "C2105092163-LAADS",
+    "online_access_flag": true,
+    "links": [
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019015.1948.002.2021102062543.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/s3#",
+        "type": "application/x-netcdf",
+        "hreflang": "en-US",
+        "href": "s3://prod-lads/VNP03IMG/VNP03IMG.A2019015.1948.002.2021102062543.nc"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+        "type": "text/html",
+        "title": "This file may be accessed using OPeNDAP directly from this link (OPENDAP DATA)",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/opendap/RemoteResources/laads/allData/5200/VNP03IMG/2019/015/VNP03IMG.A2019015.1948.002.2021102062543.nc.html"
+      },
+      {
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "type": "text/html",
+        "title": "A link to Data set landing page (Data Set Landing Page)",
+        "hreflang": "en-US",
+        "href": "http://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+        "hreflang": "en-US",
+        "href": "https://doi.org/10.5067/VIIRS/VNP03IMG.002"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/VNP03IMG--5200"
+      },
+      {
+        "inherited": true,
+        "length": "0KB",
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/5200/VNP03IMG/"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASA_VIIRS_L1B_UG_August_2021.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+        "hreflang": "en-US",
+        "href": "https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/NASARevisedVIIRSGeolocationATBD2014.pdf"
+      },
+      {
+        "inherited": true,
+        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+        "hreflang": "en-US",
+        "href": "https://search.earthdata.nasa.gov/search/granules"
+      }
+    ]
+  }
+]

@@ -1,0 +1,392 @@
+{
+  "feed": {
+    "updated": "2026-11-15T00:51:14.932Z",
+    "id": "https://cmr.earthdata.nasa.gov:443/search/collections.json?concept_id=C1379841358-LAADS&page_size=10",
+    "title": "ECHO dataset metadata",
+    "entry": [
+      {
+        "processing_level_id": "1A",
+        "cloud_hosted": true,
+        "boxes": [
+          "-90 -180 90 180"
+        ],
+        "has_combine": false,
+        "time_start": "2002-07-03T23:55:00.000Z",
+        "version_id": "6.1",
+        "dataset_id": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+        "entry_id": "MYD03_6.1",
+        "has_spatial_subsetting": true,
+        "has_transforms": true,
+        "associations": {
+          "variables": [
+            "V3558939621-LAADS",
+            "V3558939627-LAADS",
+            "V3558939047-LAADS",
+            "V3558939112-LAADS",
+            "V3558939001-LAADS",
+            "V3558939590-LAADS",
+            "V3558939332-LAADS",
+            "V3558939362-LAADS",
+            "V3558939282-LAADS",
+            "V3558939384-LAADS",
+            "V3558939354-LAADS",
+            "V3558939263-LAADS",
+            "V3558939287-LAADS",
+            "V3558939483-LAADS",
+            "V3558939179-LAADS",
+            "V3558939202-LAADS",
+            "V3558939371-LAADS",
+            "V3558939092-LAADS",
+            "V3558939323-LAADS",
+            "V3558938960-LAADS",
+            "V3558939368-LAADS",
+            "V3558939171-LAADS",
+            "V3558939366-LAADS",
+            "V3558939439-LAADS",
+            "V3558939245-LAADS",
+            "V3558939188-LAADS",
+            "V3558939629-LAADS",
+            "V3558939237-LAADS",
+            "V3558939019-LAADS",
+            "V3558939229-LAADS",
+            "V3558939374-LAADS",
+            "V3558938983-LAADS",
+            "V3558939212-LAADS",
+            "V3558939308-LAADS",
+            "V3558939338-LAADS",
+            "V3558939318-LAADS",
+            "V3558939163-LAADS",
+            "V3558939133-LAADS",
+            "V3558939297-LAADS",
+            "V3558939168-LAADS",
+            "V3558939071-LAADS",
+            "V3558939539-LAADS",
+            "V3558939152-LAADS",
+            "V3558939185-LAADS",
+            "V3558939425-LAADS",
+            "V3558939194-LAADS"
+          ],
+          "services": [
+            "S2951645688-LAADS",
+            "S3269314724-LAADS"
+          ],
+          "citations": [
+            "CIT3804145008-ESDIS",
+            "CIT3804161184-ESDIS",
+            "CIT3857566508-ESDIS",
+            "CIT3804293898-ESDIS",
+            "CIT3804304438-ESDIS",
+            "CIT3804287872-ESDIS",
+            "CIT4321025865-ESDIS",
+            "CIT3857561981-ESDIS",
+            "CIT4321023329-ESDIS",
+            "CIT3804017647-ESDIS",
+            "CIT3963295651-ESDIS",
+            "CIT3963288936-ESDIS",
+            "CIT3804117834-ESDIS",
+            "CIT3804222523-ESDIS",
+            "CIT3804214568-ESDIS",
+            "CIT3804254768-ESDIS",
+            "CIT3804319139-ESDIS",
+            "CIT4321022808-ESDIS",
+            "CIT4201245424-ESDIS",
+            "CIT3803985044-ESDIS"
+          ]
+        },
+        "has_variables": true,
+        "data_center": "LAADS",
+        "short_name": "MYD03",
+        "organizations": [
+          "NASA/GSFC/SED/ESD/HBSL/BISB/LAADS",
+          "NASA/GSFC/SED/ESD/HBSL/BISB/MODAPS"
+        ],
+        "title": "MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km",
+        "coordinate_system": "CARTESIAN",
+        "summary": "The MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km  are calculated for each 1 km MODIS Instantaneous Field of Views (IFOV) for all orbits daily (in Collection 6 and later, information is provided to calculate 500m geolocation fields).  The locations and ancillary information corresponds to the intersection of the centers of each IFOV from 10 detectors in an ideal 1 km band on the Earth's surface. A digital terrain model is used to model the Earth's surface. The main inputs are the spacecraft attitude and orbit, the instrument telemetry and the digital elevation model. The geolocation fields include geodetic Latitude, Longitude, surface height above geoid, solar zenith and azimuth angles, satellite zenith and azimuth angles, and a land/sea mask for each 1 km sample. Additional information is included in the header to enable the calculation of the approximate location of the center of the detectors of any of the 36 MODIS bands. This product is used as input by a large number of subsequent MODIS products, particularly the products produced by the Land team.\n\nThe short name for this product is MYD03. Each file is roughly 30 MB in size, and the total data volume is approximately 8 GB/day.\n\nSee the MODIS Science Team homepage for more [data set\ninformation](https://modis.gsfc.nasa.gov/data/dataprod/).",
+        "service_features": {
+          "harmony": {
+            "has_formats": false,
+            "has_variables": true,
+            "has_transforms": true,
+            "has_combine": false,
+            "has_spatial_subsetting": true,
+            "has_temporal_subsetting": false
+          },
+          "opendap": {
+            "has_formats": false,
+            "has_variables": false,
+            "has_transforms": false,
+            "has_combine": false,
+            "has_spatial_subsetting": false,
+            "has_temporal_subsetting": false
+          },
+          "esi": {
+            "has_formats": false,
+            "has_variables": false,
+            "has_transforms": false,
+            "has_combine": false,
+            "has_spatial_subsetting": false,
+            "has_temporal_subsetting": false
+          }
+        },
+        "orbit_parameters": {},
+        "id": "C1379841358-LAADS",
+        "has_formats": false,
+        "consortiums": [
+          "GEOSS",
+          "EOSDIS"
+        ],
+        "original_format": "UMM_JSON",
+        "collection_data_type": "SCIENCE_QUALITY",
+        "archive_center": "NASA/GSFC/SED/ESD/HBSL/BISB/LAADS",
+        "has_temporal_subsetting": false,
+        "browse_flag": false,
+        "platforms": [
+          "Aqua"
+        ],
+        "association_details": {
+          "variables": [
+            {
+              "concept_id": "V3558939621-LAADS"
+            },
+            {
+              "concept_id": "V3558939627-LAADS"
+            },
+            {
+              "concept_id": "V3558939047-LAADS"
+            },
+            {
+              "concept_id": "V3558939112-LAADS"
+            },
+            {
+              "concept_id": "V3558939001-LAADS"
+            },
+            {
+              "concept_id": "V3558939590-LAADS"
+            },
+            {
+              "concept_id": "V3558939332-LAADS"
+            },
+            {
+              "concept_id": "V3558939362-LAADS"
+            },
+            {
+              "concept_id": "V3558939282-LAADS"
+            },
+            {
+              "concept_id": "V3558939384-LAADS"
+            },
+            {
+              "concept_id": "V3558939354-LAADS"
+            },
+            {
+              "concept_id": "V3558939263-LAADS"
+            },
+            {
+              "concept_id": "V3558939287-LAADS"
+            },
+            {
+              "concept_id": "V3558939483-LAADS"
+            },
+            {
+              "concept_id": "V3558939179-LAADS"
+            },
+            {
+              "concept_id": "V3558939202-LAADS"
+            },
+            {
+              "concept_id": "V3558939371-LAADS"
+            },
+            {
+              "concept_id": "V3558939092-LAADS"
+            },
+            {
+              "concept_id": "V3558939323-LAADS"
+            },
+            {
+              "concept_id": "V3558938960-LAADS"
+            },
+            {
+              "concept_id": "V3558939368-LAADS"
+            },
+            {
+              "concept_id": "V3558939171-LAADS"
+            },
+            {
+              "concept_id": "V3558939366-LAADS"
+            },
+            {
+              "concept_id": "V3558939439-LAADS"
+            },
+            {
+              "concept_id": "V3558939245-LAADS"
+            },
+            {
+              "concept_id": "V3558939188-LAADS"
+            },
+            {
+              "concept_id": "V3558939629-LAADS"
+            },
+            {
+              "concept_id": "V3558939237-LAADS"
+            },
+            {
+              "concept_id": "V3558939019-LAADS"
+            },
+            {
+              "concept_id": "V3558939229-LAADS"
+            },
+            {
+              "concept_id": "V3558939374-LAADS"
+            },
+            {
+              "concept_id": "V3558938983-LAADS"
+            },
+            {
+              "concept_id": "V3558939212-LAADS"
+            },
+            {
+              "concept_id": "V3558939308-LAADS"
+            },
+            {
+              "concept_id": "V3558939338-LAADS"
+            },
+            {
+              "concept_id": "V3558939318-LAADS"
+            },
+            {
+              "concept_id": "V3558939163-LAADS"
+            },
+            {
+              "concept_id": "V3558939133-LAADS"
+            },
+            {
+              "concept_id": "V3558939297-LAADS"
+            },
+            {
+              "concept_id": "V3558939168-LAADS"
+            },
+            {
+              "concept_id": "V3558939071-LAADS"
+            },
+            {
+              "concept_id": "V3558939539-LAADS"
+            },
+            {
+              "concept_id": "V3558939152-LAADS"
+            },
+            {
+              "concept_id": "V3558939185-LAADS"
+            },
+            {
+              "concept_id": "V3558939425-LAADS"
+            },
+            {
+              "concept_id": "V3558939194-LAADS"
+            }
+          ],
+          "services": [
+            {
+              "concept_id": "S2951645688-LAADS"
+            },
+            {
+              "concept_id": "S3269314724-LAADS"
+            }
+          ],
+          "citations": [
+            {
+              "concept_id": "CIT3804145008-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804161184-ESDIS"
+            },
+            {
+              "concept_id": "CIT3857566508-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804293898-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804304438-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804287872-ESDIS"
+            },
+            {
+              "concept_id": "CIT4321025865-ESDIS"
+            },
+            {
+              "concept_id": "CIT3857561981-ESDIS"
+            },
+            {
+              "concept_id": "CIT4321023329-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804017647-ESDIS"
+            },
+            {
+              "concept_id": "CIT3963295651-ESDIS"
+            },
+            {
+              "concept_id": "CIT3963288936-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804117834-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804222523-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804214568-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804254768-ESDIS"
+            },
+            {
+              "concept_id": "CIT3804319139-ESDIS"
+            },
+            {
+              "concept_id": "CIT4321022808-ESDIS"
+            },
+            {
+              "concept_id": "CIT4201245424-ESDIS"
+            },
+            {
+              "concept_id": "CIT3803985044-ESDIS"
+            }
+          ]
+        },
+        "online_access_flag": true,
+        "links": [
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+            "hreflang": "en-US",
+            "href": "https://doi.org/10.5067/MODIS/MYD03.061"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+            "hreflang": "en-US",
+            "href": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod28_v3.pdf"
+          },
+          {
+            "length": "0KB",
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://ladsweb.modaps.eosdis.nasa.gov/search/order/2/MYD03--61"
+          },
+          {
+            "length": "0KB",
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MYD03/"
+          },
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://search.earthdata.nasa.gov/search/granules"
+          }
+        ]
+      }
+    ]
+  }
+}

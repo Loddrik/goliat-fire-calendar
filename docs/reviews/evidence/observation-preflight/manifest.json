@@ -1,0 +1,18 @@
+{
+  "producer": "observation_preflight",
+  "source_head": "ef2ca85eb924875806c6e833bdf66067f98e6ecf",
+  "code_sha256": "55b72ca2fcce4d914e5cc3e3112786cb2620e505a6ef151992fb29b97b8f95e9",
+  "products_and_metadata_only": true,
+  "output_sha256": {
+    "MYD03-collections.json": "4c4f8e0cb49cacb657b1550e06de3ba90d77d30506be574cd199773989a4eef4",
+    "MYD03-granules.json": "27f704bf4ed3491e59cd261b84b4f95a1c3e9d6e0eda55302e064c09e4924345",
+    "MYD14-collections.json": "29949ff68600f78995ea6fbadaf5e01ec36aeb248d89534942e600fe73dd4f63",
+    "MYD14-granules.json": "d103c94ed48342ffa69eb0c1953000ffb6e2f2ce747af1e0af005376100fb36b",
+    "VNP03IMG-collections.json": "39d257db02e2d299a73e24cac13b94260c59813e6e6c906e94e8ef50c72bd616",
+    "VNP03IMG-granules.json": "0ece29284424a4a5f6f5c7bbe11e39e9f94f883764abf7f87306ee5d26f6136f",
+    "VNP14IMG-collections.json": "9c4190293f81cfa3f0362fdf00dc4fa677e7b452f23cb91660643166a15ddff5",
+    "VNP14IMG-granules.json": "34114e0f7f731d3c4e08b2876184ffc8f4c151edcebcb02a847dd43a90374f4c",
+    "candidate_pairs.json": "5b588f1d7af48c9070c0ebf5ae9a9586e1fe6c8147dd88782c5ba08f652cf4cb",
+    "summary.json": "fcc12bb2595f57d7f3c85882e3190712a2251e218929583e7e6fe067e06fda52"
+  }
+}
