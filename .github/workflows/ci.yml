@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Informe científico coincide con sus fuentes congeladas
+        run: |
+          python3 pipeline/build_joint_plan_report.py
+          git diff --exit-code -- docs/artifacts/science-observation-plan-2026-11-15.html
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
