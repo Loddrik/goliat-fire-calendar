@@ -1,5 +1,7 @@
 # GOLIAT: resumen técnico para la entrega
 
+**Estado al cierre, 15-11-2026 12:15 Santiago (15:15 UTC):** #64, #65 y #66 están fusionados en `dev` y publicados en `main` con #67. #31 se cerró sin fusionar: lo reemplazó #66, que estabiliza el mismo orden de la recurrencia. Las menciones a PR abiertos y la guía de merge quedan como registro histórico; no quedan merges pendientes de esta entrega.
+
 **Actualización de originales, 14:11 UTC:** la copia del otro desarrollador completó **1.071/1.071 CSV exactos**. El guard devuelve **COMPLETE, salida 0** en esta máquina. Los 956 recuperados y 115 faltantes citados en informes previos corresponden al corte anterior. No se repitieron ingestión, cartografía ni modelos; el fallo estricto histórico de una fila por lado sigue sin resolverse. [Recibo de la copia](evidence/peer-raw-recovery.json).
 
 **Actualización de integración:** `dev` avanzó a `2fa31b4` durante la preparación. La [consulta de cierre](evidence/repository-at-close.json) registra ahora **23 de los 24 PR científicos seleccionados fusionados y uno abierto (#64)**. El inventario de las 13:41 UTC se conserva como antecedente fechado. Se incorporan localmente la marca nueva y el método en inglés del otro desarrollador; esto no acredita despliegue ni promoción de los modelos de investigación.

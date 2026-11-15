@@ -1,5 +1,7 @@
 # Guía para integrar los PR pendientes
 
+**Estado al cierre, 15-11-2026 12:15 Santiago (15:15 UTC):** #64, #65 y #66 están fusionados en `dev` y publicados en `main` con #67. #31 se cerró sin fusionar: lo reemplazó #66, que estabiliza el mismo orden de la recurrencia. Las menciones a PR abiertos y la guía de merge quedan como registro histórico; no quedan merges pendientes de esta entrega.
+
 **Consulta del 15 de noviembre de 2026.** Orden recomendado: **#64 → #65 → #31 hacia `dev`**, seguido, si el responsable decide publicar, de un **PR separado `dev` → `main`**. Esta guía no ejecuta merges, cambios de base ni despliegues. El [recibo de estado](evidence/merge-guide-snapshot.json) conserva los heads y checks consultados; repetir la consulta antes de actuar.
 
 ## Qué queda abierto y por qué ese orden
@@ -23,7 +25,7 @@ git status --short
 git fetch origin dev main
 gh pr list --repo Loddrik/goliat-fire-calendar --state open
 git config user.name 'Daniel Quinteros'
-git config user.email 'daniel.quinterosc@gmail.com'
+git config user.email '<correo-del-mantenedor>'
 git config commit.gpgsign false
 ```
 

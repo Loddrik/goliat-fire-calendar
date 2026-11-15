@@ -1,6 +1,6 @@
 # Method — how GOLIAT harmonizes MODIS and VIIRS hotspots
 
-*Frozen on 2026-11-14 (hackathon day 1); gates revised the same day after an independent scientific review (`docs/reviews/`). The pipeline execution order is: `download_firms.py` → `inventory.py` → `comunas.py` → `build_detections.py` → `build_monthly.py` → `build_mask.py` → `experiment.py` → `publish.py`.* The processed-input experiments and their reproduction evidence are versioned. The 1,071 raw FIRMS CSVs listed in the inventory are absent from this checkout, so complete raw ingestion has not been reproduced here; see the [reconstruction audit](reviews/2026-11-14-baseline-reconstruction.md).
+*Frozen on 2026-11-14 (hackathon day 1); gates revised the same day after an independent scientific review (`docs/reviews/`). The pipeline execution order is: `download_firms.py` → `inventory.py` → `comunas.py` → `build_detections.py` → `build_monthly.py` → `build_mask.py` → `experiment.py` → `publish.py`.* The processed-input experiments and their reproduction evidence are versioned. The 1,071 raw FIRMS CSVs listed in the inventory are not versioned in Git; they were all recovered exactly into a separate archive on 2026-11-15 (see the 14:11 UTC update below), but complete raw ingestion and geographic assignment have not been reproduced; see the [reconstruction audit](reviews/2026-11-14-baseline-reconstruction.md).
 
 ## 1. The question
 

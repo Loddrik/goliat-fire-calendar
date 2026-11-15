@@ -44,7 +44,7 @@ def diagram(kind: str) -> str:
         steps = [("01 / #64", "Recuperación y guard", "Actualizar con dev, revisar entradas y pasar CI del head actualizado."),
                  ("02 / #65", "Entrega al equipo", "Conservar ascendencia, verificar informes y fusionar el diff restante."),
                  ("03 / #31", "Orden de publicación", "Llevar el fix a dev y probar su alcance antes del release separado.")]
-        note = "Secuencia recomendada. La publicación dev → main requiere una decisión de release aparte."
+        note = "Registro histórico: #64 y #65 se fusionaron y #31 fue reemplazado por #66; los tres llegaron a main con #67 el 15-11-2026."
     else:
         steps = [("P0 / RELATO", "Afirmaciones con fuente", "Un alcance defendible y respuestas claras sobre lo que se sabe."),
                  ("P0 / PAQUETE", "Una versión identificada", "Informes, evidencia, comandos y candidato de demo; revisión de integración aparte."),
