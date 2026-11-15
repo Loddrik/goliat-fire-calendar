@@ -1,0 +1,16 @@
+{
+  "id": "S2",
+  "url": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MYD14A1",
+  "publisher": "NASA LAADS",
+  "date_in_source": "Header specifies C6/PGE6.0.1; creation 2013-08-01; retrieved through C6.1 catalog link",
+  "locator": "Scientific Data Sets; FireMask; QA; MaxFRP; sample",
+  "facts": [
+    "FireMask uint8: at most eight daily 1200x1200 planes, class range0..9, missing fill0.",
+    "Daily class aggregation chooses maximum class, with clear water taking precedence over cloud over water.",
+    "QA uint8: bits0..1 water/coast/land/missing; bit2 0night/1day.",
+    "MaxFRP type declarations disagree between table and prose; do not build decoder from that ambiguity.",
+    "sample is fire-only uint16 sample position0..1353; nonfire sample0 does not identify a unique acquisition."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

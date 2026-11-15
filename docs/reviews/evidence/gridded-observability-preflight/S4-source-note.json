@@ -1,0 +1,14 @@
+{
+  "id": "S4",
+  "url": "https://data.nasa.gov/dataset/viirs-npp-thermal-anomalies-and-fire-daily-l3-global-1km-sin-grid-v002-af393",
+  "publisher": "NASA Open Data Portal / LP DAAC",
+  "date_in_source": "Modified 2026-11-02T22:15:58Z; catalog updated2026-11-05",
+  "locator": "description; resource links; DOI",
+  "facts": [
+    "VNP14A1.002 composites detections from750m bands into a1km grid over24hours.",
+    "Four documented layers are fire classification, QA, maximumFRP and scan sample.",
+    "The V2 catalog links the older V1 file specification and user guide; V2 bit semantics not established by an actual granule in this preflight."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "S3",
+  "url": "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf",
+  "publisher": "NASA LP DAAC / product science team",
+  "date_in_source": "Version1.0 May2021",
+  "locator": "sections5.2.1..5.2.5; printed pp27..29",
+  "facts": [
+    "A1 stores daily maximum-class composites, with water/cloud precedence adjustment. It is not one composite across eight days.",
+    "QA retains land/water state and day/night, not complete L2 algorithm QA or a per-pass count.",
+    "Dates metadata maps each retained daily plane; fewer planes can occur when observations are unavailable.",
+    "FirePix, CloudPix, UnknownPix and MissingPix summarize composited grid cells per day; they are not pass counts.",
+    "Fire-only scan sample and maximum FRP cannot reconstruct histories of nonfire observations."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}
