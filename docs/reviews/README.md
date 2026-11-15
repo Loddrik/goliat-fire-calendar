@@ -6,7 +6,7 @@ En las revisiones, **B** identifica políticas afines de investigación, **G/E_c
 
 La [decisión científica consolidada](2026-11-15-final-scientific-decision.md), su [revisión independiente](2026-11-15-final-scientific-decision-independent-review.md) y el [addendum documental 40](2026-11-15-final-scientific-decision-addendum.md) explican qué conservar y qué falta.
 
-Para una explicación visual del proceso, los consejos y los límites: [informe HTML hasta 40, con siete diagramas](../artifacts/science-observation-plan-2026-11-15.html). El [informe anterior](../artifacts/science-session-2026-11-14.html) conserva el snapshot 16–20A y los dos casos L2.
+Para una explicación visual del proceso, los consejos y los límites: [informe HTML hasta 42, con ocho diagramas](../artifacts/science-observation-plan-2026-11-15.html). El [informe anterior](../artifacts/science-session-2026-11-14.html) conserva el snapshot 16–20A y los dos casos L2.
 
 | Pregunta/etapa | Resultado y alcance | Evidencia principal |
 |---|---|---|
@@ -24,6 +24,8 @@ Para una explicación visual del proceso, los consejos y los límites: [informe 
 
 |40: contexto GOES documental|Catálogo M3/15 min y M6/10 min, cero bytes científicos. Factibilidad condicionada para contexto grueso; versiones, estados reales y exposición por píxel desconocidos. No adjudica 375 m.|[Reporte40](2026-11-15-goes-preflight-report.md) · [Revisión independiente](2026-11-15-goes-preflight-independent-review.md)|
 
+|42: totales julio–junio e issue48|M1 en 112 comuna-temporadas de las 14: mediana APE 20,34 % y media relativa firmada −11,46 %; diagnóstico aparente postselección. No valida 2002–2011 ni adjudica el salto de 2012.|[Reporte42](2026-11-15-season-total-report.md) · [Revisión independiente](2026-11-15-season-total-independent-review.md) · [Contrato de producto](2026-11-15-issue48-product-assessment.md)|
+
 ## Cómo se decide y revisa
 
 Los consejos conservan los criterios 30% validez, 25% información discriminante, 20% factibilidad/reproducción/coste, 15% transporte/selección y 10% interpretación, con límites no compensables. Sus rangos son juicios subjetivos solapados, no probabilidades o intervalos de confianza. Los [planes 24](2026-11-15-joint-plan-24.md), [31](2026-11-15-joint-plan-31.md), [35](2026-11-15-joint-plan-35.md) y [38](2026-11-15-joint-plan-38.md) preservan críticas adversarias, ratificaciones y disensos. No se presenta todo el consejo como ciego: 35 ingeniería había leído el voto estadístico.
@@ -34,7 +36,7 @@ G1 físico, tiempos de exposición por píxel, PSF y semántica específica MYD1
 
 ## Revisión incremental y reproducción
 
-Los PRs se dirigen a dev y se encadenan: [#55](https://github.com/Loddrik/goliat-fire-calendar/pull/55), [#56](https://github.com/Loddrik/goliat-fire-calendar/pull/56), [#57](https://github.com/Loddrik/goliat-fire-calendar/pull/57), [#58](https://github.com/Loddrik/goliat-fire-calendar/pull/58), [#59](https://github.com/Loddrik/goliat-fire-calendar/pull/59), [#60](https://github.com/Loddrik/goliat-fire-calendar/pull/60) y [#61](https://github.com/Loddrik/goliat-fire-calendar/pull/61). Cada descripción incluye comparación propia para revisar el incremento sin confundirlo con toda la cadena. Los enlaces no certifican merges futuros ni despliegues.
+Los PRs se dirigen a dev y se encadenan: [#55](https://github.com/Loddrik/goliat-fire-calendar/pull/55), [#56](https://github.com/Loddrik/goliat-fire-calendar/pull/56), [#57](https://github.com/Loddrik/goliat-fire-calendar/pull/57), [#58](https://github.com/Loddrik/goliat-fire-calendar/pull/58), [#59](https://github.com/Loddrik/goliat-fire-calendar/pull/59), [#60](https://github.com/Loddrik/goliat-fire-calendar/pull/60), [#61](https://github.com/Loddrik/goliat-fire-calendar/pull/61), [#62](https://github.com/Loddrik/goliat-fire-calendar/pull/62) y [#63](https://github.com/Loddrik/goliat-fire-calendar/pull/63). Cada descripción incluye comparación propia para revisar el incremento sin confundirlo con toda la cadena. Los enlaces no certifican merges futuros ni despliegues.
 
 Las pruebas puras se ejecutan con `.venv/bin/python -m unittest discover -s tests -q` tras instalar las dependencias bloqueadas. Los drivers de investigación tienen caps absolutos y fuentes congeladas: no se elude el reloj para repetirlos. Su replay necesita las entradas y condiciones declaradas, o un protocolo nuevo explícito. Algunos verificadores preservados contienen rutas locales; se guardan como evidencia de lo ejecutado, no como promesa de portabilidad. Los originales raw no están completos en este checkout: disponibilidad de derivados y reproducibilidad íntegra de adquisición son afirmaciones distintas. Credenciales y datos privados no forman parte de este índice.
 
