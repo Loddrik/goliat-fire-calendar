@@ -1,0 +1,375 @@
+{
+  "scope": "Technical read of one fixed candidate; no paired detection comparison, no G1 eligibility decision",
+  "started_utc": "2026-11-15T01:12:26.379795+00:00",
+  "downloaded_bytes": 193748806,
+  "files_sha256": {
+    "MYD14": "994f1a88fc5a2b5addf8447dc7d636a10e0f3bb6283f2090a601ad43243c9c30",
+    "MYD03": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c",
+    "VNP14IMG": "bcc1e3e30af850542f8ed0ce31e7aae4a6d46ee3d4c68e1898142f60d3f45bef",
+    "VNP03IMG": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7"
+  },
+  "platforms": {
+    "Aqua": {
+      "fire_file": "MYD14.A2019003.1840.061.2021351103810.hdf",
+      "geo_file": "MYD03.A2019003.1840.061.2019004162409.hdf",
+      "input_pointer_geolocation_basename": "MYD03.A2019003.1840.061.2019004162409.hdf",
+      "input_pointer_exact_match": true,
+      "same_shape": true,
+      "shape": [
+        2030,
+        1354
+      ],
+      "beginning_utc": "2019-01-03T18:40:00.000000Z",
+      "ending_utc": "2019-01-03T18:45:00.000000Z",
+      "automatic_quality_flag": "Suspect",
+      "quality_flag_explanation": "not being investigated",
+      "mask_attributes": {
+        "legend": "Classes:\n0 missing input data\n1 not processed (obsolete)\n2 not processed (obsolete)\n3 non-fire water\n4 cloud\n5 non-fire land\n6 unknown\n7 fire (low confidence)\n8 fire (nominal confidence)\n9 fire (high confidence)",
+        "valid_range": [
+          0,
+          9
+        ]
+      },
+      "qa_attributes": {
+        "units": "bit field"
+      },
+      "raster_read": {
+        "shape": [
+          2030,
+          1354
+        ],
+        "pixels_read": 2748620,
+        "mask_class_counts_entire_granule": {
+          "0": 5,
+          "3": 802380,
+          "4": 684462,
+          "5": 1261708,
+          "6": 5,
+          "7": 7,
+          "8": 26,
+          "9": 27
+        },
+        "mask_raw_array_sha256": "b86b81a28bb4b90633c2985205b13b8463fce0ae14665e31ab8abb58c9ce36e3",
+        "qa_raw_array_sha256": "51dc91dd83341b6802fb01dad0a0fe5c3032beacd8e50889fe935253285f3ecf",
+        "qa_bits_not_yet_interpreted": true
+      },
+      "coordinates": {
+        "shape": [
+          2030,
+          1354
+        ],
+        "centers_inside_catalog_aoi_envelope": 2294,
+        "inside_center_extent_lonlat": [
+          -72.78187561035156,
+          -37.22542190551758,
+          -72.21822357177734,
+          -36.77409362792969
+        ],
+        "not_exact_footprint_or_valid_quality_area": true
+      },
+      "geometry_fields": {
+        "SensorZenith": {
+          "shape": [
+            2030,
+            1354
+          ],
+          "attributes": {
+            "units": "degrees",
+            "valid_range": [
+              0,
+              18000
+            ],
+            "_FillValue": -32767,
+            "scale_factor": 0.01
+          }
+        },
+        "SensorAzimuth": {
+          "shape": [
+            2030,
+            1354
+          ],
+          "attributes": {
+            "units": "degrees",
+            "valid_range": [
+              -18000,
+              18000
+            ],
+            "_FillValue": -32767,
+            "scale_factor": 0.01
+          }
+        },
+        "SolarZenith": {
+          "shape": [
+            2030,
+            1354
+          ],
+          "attributes": {
+            "units": "degrees",
+            "valid_range": [
+              0,
+              18000
+            ],
+            "_FillValue": -32767,
+            "scale_factor": 0.01
+          }
+        },
+        "SolarAzimuth": {
+          "shape": [
+            2030,
+            1354
+          ],
+          "attributes": {
+            "units": "degrees",
+            "valid_range": [
+              -18000,
+              18000
+            ],
+            "_FillValue": -32767,
+            "scale_factor": 0.01
+          }
+        },
+        "gflags": {
+          "shape": [
+            2030,
+            1354
+          ],
+          "attributes": {
+            "_FillValue": 255
+          }
+        }
+      },
+      "EV start time": {
+        "values": 203,
+        "raw_min": 820694411.320996,
+        "raw_max": 820694709.697772,
+        "attributes": {
+          "units": "seconds",
+          "_FillValue": -2000000000.0
+        },
+        "epoch_not_assumed_from_seconds_alone": true
+      },
+      "EV center time": {
+        "values": 203,
+        "raw_min": 820694411.5515057,
+        "raw_max": 820694709.9282817,
+        "attributes": {
+          "units": "seconds",
+          "_FillValue": -2000000000.0
+        },
+        "epoch_not_assumed_from_seconds_alone": true
+      }
+    },
+    "SNPP": {
+      "fire_file": "VNP14IMG.A2019003.1836.002.2024086140848.nc",
+      "geo_file": "VNP03IMG.A2019003.1836.002.2021102033228.nc",
+      "input_pointer_geolocation_basenames": [
+        "VNP03IMG.A2019003.1836.002.2021102033228.nc"
+      ],
+      "input_pointer_exact_match": true,
+      "same_shape": true,
+      "shape": [
+        6464,
+        6400
+      ],
+      "beginning_utc": "2019-01-03T18:36:00.000Z",
+      "ending_utc": "2019-01-03T18:42:00.000Z",
+      "mask_attributes": {
+        "legend": [
+          "0 not-processed (non-zero QF)\n1 bowtie\n2 glint\n3 water\n4 clouds\n5 clear land\n6 unclassified pixel\n7 low confidence fire pixel\n8 nominal confidence fire pixel\n9 high confidence fire pixel"
+        ]
+      },
+      "qa_attributes": {
+        "units": [
+          "bit field"
+        ]
+      },
+      "raster_read": {
+        "shape": [
+          6464,
+          6400
+        ],
+        "pixels_read": 41369600,
+        "mask_class_counts_entire_granule": {
+          "0": 5,
+          "1": 5326336,
+          "2": 944360,
+          "3": 13667239,
+          "4": 12337970,
+          "5": 9093558,
+          "7": 35,
+          "8": 86,
+          "9": 11
+        },
+        "mask_raw_array_sha256": "4b60861fb651eca4a06e945008da9ee8365dfb7de65f13ea038010704b999d32",
+        "qa_raw_array_sha256": "127046f81e3f4489f997f063c329956fd66a882ddb0e017bd0a2a0cb0fc8bb7d",
+        "qa_bits_not_yet_interpreted": true
+      },
+      "coordinates": {
+        "shape": [
+          6464,
+          6400
+        ],
+        "centers_inside_catalog_aoi_envelope": 17113,
+        "inside_center_extent_lonlat": [
+          -72.78197479248047,
+          -37.22599792480469,
+          -72.21800994873047,
+          -36.77401351928711
+        ],
+        "not_exact_footprint_or_valid_quality_area": true
+      },
+      "geometry_fields": {
+        "sensor_zenith": {
+          "shape": [
+            6464,
+            6400
+          ],
+          "attributes": {
+            "units": "degrees",
+            "_FillValue": [
+              -32768
+            ],
+            "scale_factor": [
+              0.009999999776482582
+            ],
+            "add_offset": [
+              0.0
+            ],
+            "long_name": "Sensor zenith angle at pixel locations"
+          }
+        },
+        "sensor_azimuth": {
+          "shape": [
+            6464,
+            6400
+          ],
+          "attributes": {
+            "units": "degrees",
+            "_FillValue": [
+              -32768
+            ],
+            "scale_factor": [
+              0.009999999776482582
+            ],
+            "add_offset": [
+              0.0
+            ],
+            "long_name": "Sensor azimuth angle at pixel locations"
+          }
+        },
+        "solar_zenith": {
+          "shape": [
+            6464,
+            6400
+          ],
+          "attributes": {
+            "units": "degrees",
+            "_FillValue": [
+              -32768
+            ],
+            "scale_factor": [
+              0.009999999776482582
+            ],
+            "add_offset": [
+              0.0
+            ],
+            "long_name": "Solar zenith angle at pixel locations"
+          }
+        },
+        "solar_azimuth": {
+          "shape": [
+            6464,
+            6400
+          ],
+          "attributes": {
+            "units": "degrees",
+            "_FillValue": [
+              -32768
+            ],
+            "scale_factor": [
+              0.009999999776482582
+            ],
+            "add_offset": [
+              0.0
+            ],
+            "long_name": "Solar azimuth angle at pixel locations"
+          }
+        },
+        "quality_flag": {
+          "shape": [
+            6464,
+            6400
+          ],
+          "attributes": {
+            "flag_masks": [
+              1,
+              2,
+              4,
+              8
+            ],
+            "flag_meanings": "Input_invalid Pointing_bad Terrain_bad SolarAngle_bad",
+            "long_name": "Geolocation pixel quality flags"
+          }
+        }
+      },
+      "scan_start_time": {
+        "values": 202,
+        "raw_min": 820694170.971487,
+        "raw_max": 820694528.60463,
+        "attributes": {
+          "units": "seconds",
+          "_FillValue": [
+            -999.9
+          ],
+          "long_name": "Scan start time (TAI93)"
+        }
+      },
+      "scan_end_time": {
+        "values": 202,
+        "raw_min": 820694171.535294,
+        "raw_max": 820694529.168437,
+        "attributes": {
+          "units": "seconds",
+          "_FillValue": [
+            -999.9
+          ],
+          "long_name": "Scan end time (TAI93)"
+        }
+      },
+      "ev_mid_time": {
+        "values": 202,
+        "raw_min": 820694171.2533906,
+        "raw_max": 820694528.8865335,
+        "attributes": {
+          "units": "seconds",
+          "_FillValue": [
+            -999.9
+          ],
+          "long_name": "Earth view mid time (TAI93)"
+        }
+      }
+    }
+  },
+  "input_pointer_verified": true,
+  "native_masks_qa_and_geolocation_read": true,
+  "geolocation_center_extent_overlap": true,
+  "overlapping_center_extents_lonlat": [
+    -72.78187561035156,
+    -37.22542190551758,
+    -72.21822357177734,
+    -36.77409362792969
+  ],
+  "common_pixel_support_verified": false,
+  "full_algorithm_qa_bit_semantics_verified": false,
+  "gate1_passed": false,
+  "gate0_access_schema_passed": true,
+  "gate0_full_scientific_eligibility_passed": false,
+  "limitations": [
+    "Overlap refers to extents of native geolocated centers in the fixed AOI, not equal footprints or quality-eligible area",
+    "File-wide class counts are decoder checks, not AOI fire quantities or cross-sensor concordance",
+    "Algorithm QA bit semantics require version-specific interpretation before G1",
+    "MODIS automatic quality metadata is preserved; no favorable-quality decision is inferred from it"
+  ],
+  "code_sha256": "3132cfe2d12e1a261b98d342ee05b9f91678508a95042912ab4cf5f8f3c73726",
+  "completed_utc": "2026-11-15T01:12:29.312426+00:00"
+}

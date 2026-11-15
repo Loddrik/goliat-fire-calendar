@@ -1,0 +1,16 @@
+{
+  "source_head": "fb39a4774740f5f72bace1e56231e85304e24628",
+  "inspection_code_sha256": "3132cfe2d12e1a261b98d342ee05b9f91678508a95042912ab4cf5f8f3c73726",
+  "acquisition_code_sha256": "748b12b9b2b6946f690f50de36558b9b2f156820f887e84c908a5d2f28d201ec",
+  "tests_sha256": "6712f0ed7db1683dce144145a6a82d76bfe90cbd6d39f0f689e0a36d66cfa753",
+  "data_files_are_ignored_not_committed": true,
+  "gate0_access_schema_passed": true,
+  "gate0_full_scientific_eligibility_passed": false,
+  "gate1_passed": false,
+  "files_sha256": {
+    "acquisition.json": "5e42dc962a5d75f5e50033618cbeb2074c704d9c4ee6121d1906478a3b17ec7b",
+    "downloader-source.py.txt": "748b12b9b2b6946f690f50de36558b9b2f156820f887e84c908a5d2f28d201ec",
+    "environment.json": "3bd79615b669584c48cd9c7480c99023dc93362df16200606b2b9c46ee94177c",
+    "inspection.json": "456ebceb316dc38f2d0bbb97a6c6157861dc22158c044d0409457c92a39e1bac"
+  }
+}
