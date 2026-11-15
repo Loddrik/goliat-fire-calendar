@@ -7,9 +7,9 @@ import { download, seriesCsv } from "./csv";
 
 const MONTHS_SEASON = [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
 
-export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTable, method }: {
+export function CommunePanel({ doc, derived, season, lang, toggleTable, method }: {
   doc: ComunaDoc; derived: DerivedDoc | null; season: number | null; lang: Lang;
-  tableOpen: boolean; toggleTable: () => void; method: ReactNode;
+  toggleTable: () => void; method: ReactNode;
 }) {
   const T = UI[lang];
   const [copied, setCopied] = useState(false);
@@ -45,7 +45,6 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
   return (
     <div className="ficha">
       <div className="ficha-head">
-        <h2>{doc.comuna} <small>· {doc.region} · CUT {doc.cut}</small></h2>
         <p className="muted">{T.upTo} {cutoff}</p>
         <span className={`chip ${doc.reconstruction_enabled ? "on" : ""}`}>{doc.reconstruction_enabled ? T.serieOn : T.serieOff}</span>
       </div>
@@ -89,13 +88,17 @@ export function CommunePanel({ doc, derived, season, lang, tableOpen, toggleTabl
               </div>
             ))}
           </div>
-          <p className="muted small">{T.profileLegend(nSeasons)}</p>
           <p className="note small">{T.profileNote}</p>
+          <details className="legend-more no-print">
+            <summary>{T.howToRead}</summary>
+            <p className="muted small">{T.profileLegend(nSeasons)}</p>
+          </details>
+          <p className="muted small print-only">{T.profileLegend(nSeasons)}</p>
         </section>
       )}
 
       <div className="actions no-print">
-        <button className="primary" onClick={toggleTable} aria-expanded={tableOpen}>{tableOpen ? T.hideTable : T.table}</button>
+        <button className="primary" onClick={toggleTable}>{T.table}</button>
         <div className="share-preview">
           <b>{T.shareTitle}</b>
           <p>{shareText}</p>

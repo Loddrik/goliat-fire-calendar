@@ -46,9 +46,9 @@ function bbox(f: ComunaFeature): [[number, number], [number, number]] {
 const colorExpr = (prop: string): maplibregl.ExpressionSpecification =>
   ["step", ["get", prop], BLUES[0], MAP_BREAKS[1], BLUES[1], MAP_BREAKS[2], BLUES[2], MAP_BREAKS[3], BLUES[3], MAP_BREAKS[4], BLUES[4]];
 
-export function ExploreMap({ region, selected, onPick, season, setSeason, lang }: {
+export function ExploreMap({ region, selected, onPick, season, setSeason, lang, wide = false }: {
   region: RegionDoc | null; selected: string | null; onPick: (cut: string) => void;
-  season: number | null; setSeason: (s: number | null) => void; lang: Lang;
+  season: number | null; setSeason: (s: number | null) => void; lang: Lang; wide?: boolean;
 }) {
   const T = UI[lang];
   const el = useRef<HTMLDivElement>(null);
@@ -157,8 +157,11 @@ export function ExploreMap({ region, selected, onPick, season, setSeason, lang }
     if (!selected) return;
     m.setFeatureState({ source: "comunas", id: selected }, { selected: true });
     const f = geo.current.features.find((x: ComunaFeature) => x.properties.cut === selected);
-    if (f) m.fitBounds(bbox(f), { padding: { top: 40, bottom: 120, left: window.innerWidth > 860 ? 420 : 20, right: 40 }, duration: 700, maxZoom: 11 });
-  }, [selected, ready]);
+    // La card tapa el lado izquierdo del mapa y cambia de ancho al abrir la serie: el zoom deja la comuna en la parte visible.
+    const panel = document.querySelector(".panel");
+    const left = window.innerWidth > 860 && panel && el.current ? Math.max(20, Math.min(el.current.clientWidth - 260, panel.getBoundingClientRect().right - el.current.getBoundingClientRect().left + 24)) : 20;
+    if (f) m.fitBounds(bbox(f), { padding: { top: 50, bottom: 120, left, right: 60 }, duration: 700, maxZoom: 11 });
+  }, [selected, ready, wide]);
   useEffect(() => {
     const m = map.current;
     if (!m || !ready || !region) return;

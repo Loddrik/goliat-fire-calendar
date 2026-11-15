@@ -44,6 +44,21 @@ body { margin: 0; background: #FCFBF7; }
 .lp-alert { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border: 1px solid var(--fg); border-radius: 6px; background: var(--card); font-weight: 500; font-size: 15px; }
 .lp-alert svg { flex: none; margin-top: 1px; }
 .lp-meta { font-size: 14px; color: var(--muted); }
+/* título animado (#37): las frases se apilan en una sola celda para que el alto no cambie */
+.lp-h1-wrap { display: flex; align-items: flex-start; gap: 10px; }
+.lp-h1 { flex: 1; min-width: 0; }
+.lp-h1-stack { display: grid; }
+.lp-h1-frame { grid-area: 1 / 1; opacity: 0; transform: translateY(.22em); transition: opacity .5s ease, transform .5s ease; }
+.lp-h1-frame.on { opacity: 1; transform: none; }
+.lp-h1-words { display: inline-grid; }
+.lp-h1-word { grid-area: 1 / 1; color: var(--accent); opacity: 0; transform: translateY(.3em); transition: opacity .4s ease, transform .4s ease; }
+.lp-h1-word.on { opacity: 1; transform: none; }
+.lp-sub { font-size: 18px; color: var(--muted); max-width: 46ch; margin-top: -8px !important; }
+/* desplegables «¿Cómo se lee?» */
+.lp-more summary, .lp-ch-more summary { cursor: pointer; font-size: 13.5px; font-weight: 500; color: var(--accent); width: fit-content; }
+.lp-more[open] summary { margin-bottom: 8px; }
+.lp-ch-more summary { font-size: 15px; color: #9ECAE1; }
+.lp-ch-more[open] summary { margin-bottom: 12px; }
 
 /* buscador */
 .lp-search { position: relative; display: grid; gap: 8px; }
@@ -87,7 +102,6 @@ body { margin: 0; background: #FCFBF7; }
 @media (max-width: 920px) { .lp-sample { grid-template-columns: 1fr; } }
 .lp-q { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: grid; gap: 14px; align-content: start; }
 .lp-q h3 { font-size: 18px; font-weight: 600; }
-.lp-q3 { margin-top: 8px !important; }
 .lp-note { font-size: 13.5px; color: var(--muted); }
 .lp-fact { font-size: 19px; line-height: 1.45; font-weight: 500; }
 .lp-profile { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; align-items: end; }

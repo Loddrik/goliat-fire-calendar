@@ -61,8 +61,8 @@ export default function Landing() {
         <section className="lp-hero">
           <div className="lp-wrap lp-hero-in">
             <div className="lp-hero-text">
-              <p className="lp-eyebrow">{t.eyebrow}</p>
-              <h1>{index ? t.h1(enabled) : t.h1Loading}</h1>
+              <Headline key={lang} t={t} />
+              <p className="lp-sub">{t.sub}</p>
               <p className="lp-alert"><Icon name="telefono" size={20} /> <span>{t.alert}</span></p>
               <Search comunas={comunas} t={t} />
               <p className="lp-meta">
@@ -131,11 +131,14 @@ export default function Landing() {
             <div className="lp-ch-body">
               <p>MODIS (1 km pixels, since 2000) and VIIRS (375 m, since 2012) see fire differently. VIIRS picks up far more small, cool hot spots{index ? <> (here about {index.r_const.toFixed(2)}× as many cell-days)</> : null}, so stitching the two records together creates a false jump in 2012. Terra and Aqua are at the end of their missions, with drifting orbits; once MODIS stops, the years before 2012 can only be compared through a bridge like this one.</p>
               {index && (
+                <details className="lp-ch-more">
+                <summary>{t.challengeMore}</summary>
                 <p>
                   We fit one regional factor, <b>Aqua × {index.r_const.toFixed(2)}</b>, against S-NPP VIIRS on the {train[0]}–{train[train.length - 1]} seasons and test it leaving one season out at a time.
                   A commune gets a 2002–2012 estimate only if Aqua saw at least {index.params?.min_aqua ?? "—"} cell-days in {train[0]}–{train[train.length - 1]} and the corrected series beats both the VIIRS climatology and raw Aqua in at least {index.params?.min_wins ?? "—"} of {train.length} held-out seasons.
                   <b> {enabled} of {comunas.length} communes pass</b>; the rest show VIIRS observations from 2012 only, rather than an estimate that failed the test. Every estimate carries its typical error (the mean leave-one-season-out error){index.params?.band_coverage_1mae != null && index.params?.rel_err_median_active != null ? <>: in internal validation across all 54 communes, ±1 covers about {Math.round(index.params.band_coverage_1mae * 100)} % of active months and the median relative error is {Math.round(index.params.rel_err_median_active * 100)} %. It is not a confidence band nor a guarantee: coverage measured in the published communes and in later seasons was somewhat lower.</> : "."}
                 </p>
+                </details>
               )}
               <p>The harmonization lives in the monthly series from 2002. The regional map above is VIIRS only (2012 onward).</p>
               <p className="lp-ch-links">
@@ -161,6 +164,45 @@ export default function Landing() {
           <p><a href={REPO} target="_blank" rel="noreferrer">{t.repo} <Icon name="externo" size={14} /></a></p>
         </div>
       </footer>
+    </div>
+  );
+}
+
+// Título animado (#37): la pregunta, y después «Usa lo que vieron los satélites para» con la última
+// parte cambiando. Todas las frases se apilan en la misma celda para que el alto no salte.
+// Ciclo continuo; se pausa con el mouse encima. Con «reducir movimiento» queda la pregunta fija. El lector de pantalla lee hFull una sola vez.
+const Q_MS = 3200, WORD_MS = 2400;
+function Headline({ t }: { t: Text }) {
+  const [step, setStep] = useState(0); // 0 = pregunta; 1..n = palabra n
+  const [hover, setHover] = useState(false);
+  const [reduced, setReduced] = useState(() => matchMedia("(prefers-reduced-motion: reduce)").matches);
+  useEffect(() => {
+    const mq = matchMedia("(prefers-reduced-motion: reduce)");
+    const on = () => setReduced(mq.matches);
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+  const still = reduced || hover;
+  useEffect(() => {
+    if (still) return;
+    const id = setTimeout(() => setStep(s => (s + 1) % (t.hWords.length + 1)), step === 0 ? Q_MS : WORD_MS);
+    return () => clearTimeout(id);
+  }, [step, still, t.hWords.length]);
+  const shown = reduced ? 0 : step;
+  return (
+    <div className="lp-h1-wrap" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <h1 className="lp-h1">
+        <span className="lp-sr">{t.hFull}</span>
+        <span className="lp-h1-stack" aria-hidden="true">
+          <span className={`lp-h1-frame${shown === 0 ? " on" : ""}`}>{t.hQuestion}</span>
+          <span className={`lp-h1-frame${shown > 0 ? " on" : ""}`}>
+            {t.hLead}{" "}
+            <span className="lp-h1-words">
+              {t.hWords.map((w, i) => <span key={w} className={`lp-h1-word${shown === i + 1 ? " on" : ""}`}>{w}</span>)}
+            </span>
+          </span>
+        </span>
+      </h1>
     </div>
   );
 }
