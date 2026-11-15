@@ -1,0 +1,18 @@
+{
+  "policies": [
+    "M1",
+    "M1_B"
+  ],
+  "cohorts": [
+    "active",
+    "all_months"
+  ],
+  "shapes": [
+    "symmetric",
+    "asymmetric"
+  ],
+  "power": 0.5,
+  "alpha": 0.2,
+  "source_point_model_signature": "d199e3f7857de17cc8d3b70d392c6c7e60ea1694bb58163de27bf7135dcc5868",
+  "parameters_sha256": "c03466555f6486e5397f2b0175f43e8f92eae5efe4a85470549a2cfadbd83490"
+}

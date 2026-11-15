@@ -1,0 +1,32 @@
+import subprocess,os,time,json,hashlib,sys
+from pathlib import Path
+from datetime import datetime,timezone
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar');DEST=Path('/private/tmp/goliat-science-repro-20261114');LOG=ROOT/'.runtime/clean-repro';LOG.mkdir(exist_ok=True)
+DEADLINE=datetime.fromisoformat('2026-11-15T00:00:00+00:00').timestamp()
+STAGES=[('scientific_audit','scientific_audit'),('affine_experiment','affine_audit'),('robust_affine_experiment','robust_affine_audit'),('piecewise_experiment','piecewise_audit'),('geography_experiment','geography_audit'),('platform_bridge_audit','platform_bridge_audit'),('temporal_transport_audit','temporal_transport_audit'),('conaf_external_audit','conaf_external_audit'),('training_size_audit','training_size_audit'),('frozen_temporal_audit','frozen_temporal_audit'),('scaled_band_audit','scaled_band_audit'),('asymmetric_band_audit','asymmetric_band_audit'),('terra_feature_audit','terra_feature_audit'),('interval_loss_fit_audit','interval_loss_fit_audit')]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+raw=DEST/'data/raw/external/conaf-1985-2024.xlsx';assert sha(raw)=='1d92971eab0b8c73bae139f2d5228589370b72641917c630dde8eb0c9b16aad0'
+protected=[*ROOT.glob('web/public/data/**/*.json')]+[ROOT/'data/processed'/x for x in ['detections.parquet','celldays.parquet','static_mask.parquet','params.json','gates.csv','eval_loso.csv','eval_final.csv','inventory.csv']]
+before={str(p.relative_to(ROOT)):sha(p) for p in protected};baseline={str(p.relative_to(ROOT)):sha(p) for _,d in STAGES for p in (ROOT/'data/processed'/d).glob('*') if p.is_file()}
+record={'source_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=DEST,text=True).strip(),'runtime':str(ROOT/'.venv/bin/python'),'runtime_scope':'clean checkout, shared locked runtime; not an independent environment','raw_conaf_sha256':sha(raw),'started_utc':datetime.now(timezone.utc).isoformat(),'stages':[],'original_protected_sha256':before}
+env=dict(os.environ,GOLIAT_RESEARCH_DEADLINE_UTC='2026-11-15T00:00:00Z',MPLCONFIGDIR=str(LOG/'matplotlib'))
+for script,directory in STAGES:
+    remaining=DEADLINE-time.time()
+    if remaining<30:raise RuntimeError('Deadline reserve reached')
+    start=time.time();print('Starting',script,flush=True)
+    with (LOG/(script+'.log')).open('w') as stream:
+        result=subprocess.run([str(ROOT/'.venv/bin/python'),'pipeline/'+script+'.py'],cwd=DEST,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=remaining-20)
+    entry={'script':script,'exit_code':result.returncode,'seconds':round(time.time()-start,3),'matches':[],'differences':[]}
+    for p in sorted((DEST/'data/processed'/directory).glob('*')):
+        if not p.is_file():continue
+        key=str(p.relative_to(DEST));item={'path':key,'expected':baseline.get(key),'actual':sha(p)}
+        entry['matches' if item['expected']==item['actual'] else 'differences'].append(item)
+    record['stages'].append(entry);(LOG/'summary.json').write_text(json.dumps(record,indent=2)+'\n')
+    print('Finished',script,result.returncode,'matched',len(entry['matches']),'differences',[x['path'] for x in entry['differences']],flush=True)
+    if result.returncode:sys.exit(result.returncode)
+with (LOG/'tests.log').open('w') as stream:
+    result=subprocess.run([str(ROOT/'.venv/bin/python'),'-m','unittest','discover','-s','tests'],cwd=DEST,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=DEADLINE-time.time()-10)
+record['tests_exit_code']=result.returncode
+record['original_protected_unchanged']=before=={str(p.relative_to(ROOT)):sha(p) for p in protected}
+record['finished_utc']=datetime.now(timezone.utc).isoformat();(LOG/'summary.json').write_text(json.dumps(record,indent=2)+'\n')
+assert record['original_protected_unchanged'];print('Clean reproduction complete, test exit',result.returncode,flush=True)
