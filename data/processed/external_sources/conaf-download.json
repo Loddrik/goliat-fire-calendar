@@ -1,0 +1,10 @@
+{
+  "landing_url": "https://www.conaf.cl/centro-documental/resumen-de-ocurrencia-y-dano-por-comuna-1985-2023/",
+  "download_url": "https://www.conaf.cl/centro-documental/resumen-de-ocurrencia-y-dano-por-comuna-1985-2023/?filename=10.-Resumen-de-Ocurrencia-y-Dano-por-Comuna-1985-2024_octubre.xlsx&ind=1731080080984&refresh=06f0bf26&wpdmdl=56992",
+  "retrieved_at": "2026-11-14T20:24:56.157877+00:00",
+  "bytes": 2587710,
+  "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "sha256": "1d92971eab0b8c73bae139f2d5228589370b72641917c630dde8eb0c9b16aad0",
+  "local_path": "data/raw/external/conaf-1985-2024.xlsx",
+  "status": "downloaded-not-yet-analyzed"
+}

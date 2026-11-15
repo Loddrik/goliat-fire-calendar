@@ -1,0 +1,154 @@
+{
+  "status": "external-descriptive-seasonal-rank-contrast",
+  "harmonization_validated": false,
+  "model_fitted": false,
+  "seasons": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "primary": {
+    "balanced_cuts": [
+      "08101",
+      "08102",
+      "08104",
+      "08105",
+      "08106",
+      "08107",
+      "08108",
+      "08109",
+      "08110",
+      "08111",
+      "08112",
+      "08201",
+      "08202",
+      "08203",
+      "08204",
+      "08205",
+      "08206",
+      "08207",
+      "08301",
+      "08302",
+      "08303",
+      "08304",
+      "08305",
+      "08306",
+      "08307",
+      "08308",
+      "08309",
+      "08310",
+      "08311",
+      "08312",
+      "08313",
+      "16101",
+      "16102",
+      "16103",
+      "16104",
+      "16105",
+      "16106",
+      "16107",
+      "16108",
+      "16109",
+      "16201",
+      "16202",
+      "16203",
+      "16204",
+      "16205",
+      "16206",
+      "16207",
+      "16301",
+      "16302",
+      "16303",
+      "16304",
+      "16305"
+    ],
+    "excluded_cuts": [
+      "08103",
+      "08314"
+    ],
+    "statistics": {
+      "rho": 0.0979020979020979,
+      "blocks": 12,
+      "replicates": 5000,
+      "valid_replicates": 5000,
+      "degenerate_replicates": 0,
+      "seed": 20261114,
+      "interval_95_percentile": [
+        -0.6131386861313869,
+        0.743424459440848
+      ]
+    }
+  },
+  "sensitivity_all54": {
+    "seasons": [
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "statistics": {
+      "rho": -0.18333333333333335,
+      "blocks": 9,
+      "replicates": 5000,
+      "valid_replicates": 5000,
+      "degenerate_replicates": 0,
+      "seed": 20261114,
+      "interval_95_percentile": [
+        -0.8103692257644763,
+        0.7368421052631579
+      ]
+    }
+  },
+  "missing_counts": [
+    {
+      "cut": "08103",
+      "season": 2023,
+      "sheet": "2023-2024",
+      "excel_row": 208,
+      "value_state": "blank_unknown"
+    },
+    {
+      "cut": "08314",
+      "season": 2012,
+      "sheet": "2012-2013",
+      "excel_row": 165,
+      "value_state": "blank_unknown"
+    },
+    {
+      "cut": "08314",
+      "season": 2016,
+      "sheet": "2016-2017",
+      "excel_row": 188,
+      "value_state": "blank_unknown"
+    }
+  ],
+  "local": {
+    "defined": 54,
+    "positive": 33,
+    "nonpositive": 21,
+    "median_rho": 0.2054409451837304,
+    "q25_rho": -0.14579148960164828,
+    "q75_rho": 0.41553600982830574
+  },
+  "primary_leave_one_season_out": {
+    "min": -0.17272727272727276,
+    "max": 0.30000000000000004
+  },
+  "requested_source_windows_complete": true,
+  "observation_coverage_known": false,
+  "provisional_cell_days": 0
+}

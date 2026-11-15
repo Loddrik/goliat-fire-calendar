@@ -1,0 +1,649 @@
+{
+  "status": "development-sensitivity",
+  "external_validation": false,
+  "input_detections_before_july2020": 125740,
+  "existing_assignment_reproduced": true,
+  "scenarios": {
+    "published": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1081.6666666666665,
+          "mean_monthly_mae": 2.5038580246913575,
+          "mean_bias": -2.3719135802469133
+        },
+        "M1": {
+          "sum_commune_season_mae": 884.4096401651681,
+          "mean_monthly_mae": 2.0472445374193704,
+          "mean_bias": 0.014950375570626132
+        },
+        "M1_B": {
+          "sum_commune_season_mae": 822.1797857576776,
+          "mean_monthly_mae": 1.9031939485131426,
+          "mean_bias": -0.08718942174175401
+        },
+        "M1_B_P": {
+          "sum_commune_season_mae": 813.8569071952513,
+          "mean_monthly_mae": 1.8839280259149336,
+          "mean_bias": -0.16756665364547807
+        },
+        "M1_P": {
+          "sum_commune_season_mae": 825.9349445952528,
+          "mean_monthly_mae": 1.9118864458223443,
+          "mean_bias": -0.31331799033371815
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.75,
+          "mean_monthly_mae": 3.092013888888889,
+          "mean_bias": -1.376350308641975
+        }
+      },
+      "enabled_diagnostic": {
+        "M1": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08308",
+          "16102",
+          "16104",
+          "16108",
+          "16201",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_B": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16102",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_B_P": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16102",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_P": [
+          "08104",
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "08309",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ]
+      },
+      "detections_changing_cell": 0,
+      "unique_input_cells": 27731,
+      "assigned_cells": 16986,
+      "assignment_status": {
+        "published": 27731
+      },
+      "detections_changing_cut_or_membership": 0,
+      "detections_entering_territory": 0,
+      "detections_leaving_territory": 0,
+      "evaluated_target_cell_days": 21489,
+      "evaluated_aqua_cell_days": 9193,
+      "full_training_mask_cells": 223,
+      "relative_mae_improvement_vs_M1": {
+        "M1_B": 0.07036315705001661,
+        "M1_P": 0.0661172073599231,
+        "M1_B_P": 0.07977381720617693
+      },
+      "numerical_examples": []
+    },
+    "decimal_grid": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1081.75,
+          "mean_monthly_mae": 2.504050925925926,
+          "mean_bias": -2.3724922839506175
+        },
+        "M1": {
+          "sum_commune_season_mae": 884.5883307214117,
+          "mean_monthly_mae": 2.047658172966231,
+          "mean_bias": 0.015163387150086817
+        },
+        "M1_B": {
+          "sum_commune_season_mae": 821.1497430235002,
+          "mean_monthly_mae": 1.9008095903321762,
+          "mean_bias": -0.08475182627553059
+        },
+        "M1_B_P": {
+          "sum_commune_season_mae": 812.4519042239547,
+          "mean_monthly_mae": 1.8806757042221174,
+          "mean_bias": -0.1644008045364892
+        },
+        "M1_P": {
+          "sum_commune_season_mae": 826.7261293968833,
+          "mean_monthly_mae": 1.913717892122415,
+          "mean_bias": -0.3159225486082888
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.8333333333335,
+          "mean_monthly_mae": 3.0922067901234573,
+          "mean_bias": -1.376543209876543
+        }
+      },
+      "enabled_diagnostic": {
+        "M1": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08308",
+          "16104",
+          "16108",
+          "16201",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_B": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_B_P": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_P": [
+          "08104",
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "08309",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ]
+      },
+      "detections_changing_cell": 104,
+      "unique_input_cells": 27729,
+      "assigned_cells": 16984,
+      "assignment_status": {
+        "inside": 16984,
+        "outside": 10745
+      },
+      "detections_changing_cut_or_membership": 3,
+      "detections_entering_territory": 0,
+      "detections_leaving_territory": 0,
+      "evaluated_target_cell_days": 21490,
+      "evaluated_aqua_cell_days": 9191,
+      "full_training_mask_cells": 216,
+      "relative_mae_improvement_vs_M1": {
+        "M1_B": 0.07171537934055194,
+        "M1_P": 0.06541144543172983,
+        "M1_B_P": 0.08154801956140134
+      },
+      "numerical_examples": [
+        {
+          "lat": -36.59,
+          "lon": -71.8806,
+          "cell_x": -7189,
+          "cell_y": -3659,
+          "old_cell_x": -7189,
+          "old_cell_y": -3660
+        },
+        {
+          "lat": -38.52,
+          "lon": -72.1881,
+          "cell_x": -7219,
+          "cell_y": -3852,
+          "old_cell_x": -7219,
+          "old_cell_y": -3853
+        },
+        {
+          "lat": -38.2925,
+          "lon": -73.43,
+          "cell_x": -7343,
+          "cell_y": -3830,
+          "old_cell_x": -7344,
+          "old_cell_y": -3830
+        },
+        {
+          "lat": -38.34,
+          "lon": -73.0238,
+          "cell_x": -7303,
+          "cell_y": -3834,
+          "old_cell_x": -7303,
+          "old_cell_y": -3835
+        },
+        {
+          "lat": -37.0887,
+          "lon": -72.43,
+          "cell_x": -7243,
+          "cell_y": -3709,
+          "old_cell_x": -7244,
+          "old_cell_y": -3709
+        },
+        {
+          "lat": -37.5525,
+          "lon": -73.29,
+          "cell_x": -7329,
+          "cell_y": -3756,
+          "old_cell_x": -7330,
+          "old_cell_y": -3756
+        },
+        {
+          "lat": -38.27,
+          "lon": -72.58389,
+          "cell_x": -7259,
+          "cell_y": -3827,
+          "old_cell_x": -7259,
+          "old_cell_y": -3828
+        },
+        {
+          "lat": -37.9272,
+          "lon": -73.04,
+          "cell_x": -7304,
+          "cell_y": -3793,
+          "old_cell_x": -7305,
+          "old_cell_y": -3793
+        },
+        {
+          "lat": -36.09,
+          "lon": -71.845,
+          "cell_x": -7185,
+          "cell_y": -3609,
+          "old_cell_x": -7185,
+          "old_cell_y": -3610
+        },
+        {
+          "lat": -37.9454,
+          "lon": -71.18,
+          "cell_x": -7118,
+          "cell_y": -3795,
+          "old_cell_x": -7119,
+          "old_cell_y": -3795
+        }
+      ]
+    },
+    "dpa_legacy_grid": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1081.5,
+          "mean_monthly_mae": 2.5034722222222223,
+          "mean_bias": -2.3719135802469133
+        },
+        "M1": {
+          "sum_commune_season_mae": 886.4231169464927,
+          "mean_monthly_mae": 2.0519053633020663,
+          "mean_bias": 0.014972531815279445
+        },
+        "M1_B": {
+          "sum_commune_season_mae": 828.7941788178031,
+          "mean_monthly_mae": 1.9185050435597293,
+          "mean_bias": -0.10918924053128189
+        },
+        "M1_B_P": {
+          "sum_commune_season_mae": 821.8963696963913,
+          "mean_monthly_mae": 1.9025378928157206,
+          "mean_bias": -0.18779308818754487
+        },
+        "M1_P": {
+          "sum_commune_season_mae": 822.8803002760076,
+          "mean_monthly_mae": 1.9048155098981656,
+          "mean_bias": -0.3221952080417531
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.6666666666665,
+          "mean_monthly_mae": 3.091820987654321,
+          "mean_bias": -1.376543209876543
+        }
+      },
+      "enabled_diagnostic": {
+        "M1": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08308",
+          "16102",
+          "16104",
+          "16108",
+          "16201",
+          "16203",
+          "16301",
+          "16302"
+        ],
+        "M1_B": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16102",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_B_P": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16102",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_P": [
+          "08104",
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "08309",
+          "16101",
+          "16102",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ]
+      },
+      "detections_changing_cell": 0,
+      "unique_input_cells": 27731,
+      "assigned_cells": 16988,
+      "assignment_status": {
+        "single-cover": 16988,
+        "outside": 10743
+      },
+      "detections_changing_cut_or_membership": 286,
+      "detections_entering_territory": 35,
+      "detections_leaving_territory": 20,
+      "evaluated_target_cell_days": 21491,
+      "evaluated_aqua_cell_days": 9195,
+      "full_training_mask_cells": 223,
+      "relative_mae_improvement_vs_M1": {
+        "M1_B": 0.06501290075467248,
+        "M1_P": 0.07168452114535806,
+        "M1_B_P": 0.07279452218301807
+      },
+      "numerical_examples": []
+    },
+    "dpa_decimal_grid": {
+      "scores": {
+        "M0": {
+          "sum_commune_season_mae": 1081.6666666666667,
+          "mean_monthly_mae": 2.503858024691358,
+          "mean_bias": -2.372685185185185
+        },
+        "M1": {
+          "sum_commune_season_mae": 886.4855132261232,
+          "mean_monthly_mae": 2.0520497991345445,
+          "mean_bias": 0.015202091854533776
+        },
+        "M1_B": {
+          "sum_commune_season_mae": 829.2989832748465,
+          "mean_monthly_mae": 1.9196735723954779,
+          "mean_bias": -0.10499109218743827
+        },
+        "M1_B_P": {
+          "sum_commune_season_mae": 821.6269274640217,
+          "mean_monthly_mae": 1.9019141839444946,
+          "mean_bias": -0.18119476602467494
+        },
+        "M1_P": {
+          "sum_commune_season_mae": 824.1009489780924,
+          "mean_monthly_mae": 1.9076410855974362,
+          "mean_bias": -0.3236613324902693
+        },
+        "M2": {
+          "sum_commune_season_mae": 1335.75,
+          "mean_monthly_mae": 3.092013888888889,
+          "mean_bias": -1.3767361111111112
+        }
+      },
+      "enabled_diagnostic": {
+        "M1": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08308",
+          "16104",
+          "16108",
+          "16201",
+          "16203",
+          "16301",
+          "16302"
+        ],
+        "M1_B": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302"
+        ],
+        "M1_B_P": [
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "16101",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ],
+        "M1_P": [
+          "08104",
+          "08111",
+          "08202",
+          "08203",
+          "08207",
+          "08301",
+          "08305",
+          "08308",
+          "08309",
+          "16101",
+          "16106",
+          "16202",
+          "16203",
+          "16301",
+          "16302",
+          "16303"
+        ]
+      },
+      "detections_changing_cell": 104,
+      "unique_input_cells": 27729,
+      "assigned_cells": 16985,
+      "assignment_status": {
+        "single-cover": 16985,
+        "outside": 10744
+      },
+      "detections_changing_cut_or_membership": 289,
+      "detections_entering_territory": 35,
+      "detections_leaving_territory": 21,
+      "evaluated_target_cell_days": 21492,
+      "evaluated_aqua_cell_days": 9192,
+      "full_training_mask_cells": 216,
+      "relative_mae_improvement_vs_M1": {
+        "M1_B": 0.06450926619563369,
+        "M1_P": 0.07037290888262715,
+        "M1_B_P": 0.07316372889847522
+      },
+      "numerical_examples": [
+        {
+          "lat": -36.59,
+          "lon": -71.8806,
+          "cell_x": -7189,
+          "cell_y": -3659,
+          "old_cell_x": -7189,
+          "old_cell_y": -3660
+        },
+        {
+          "lat": -38.52,
+          "lon": -72.1881,
+          "cell_x": -7219,
+          "cell_y": -3852,
+          "old_cell_x": -7219,
+          "old_cell_y": -3853
+        },
+        {
+          "lat": -38.2925,
+          "lon": -73.43,
+          "cell_x": -7343,
+          "cell_y": -3830,
+          "old_cell_x": -7344,
+          "old_cell_y": -3830
+        },
+        {
+          "lat": -38.34,
+          "lon": -73.0238,
+          "cell_x": -7303,
+          "cell_y": -3834,
+          "old_cell_x": -7303,
+          "old_cell_y": -3835
+        },
+        {
+          "lat": -37.0887,
+          "lon": -72.43,
+          "cell_x": -7243,
+          "cell_y": -3709,
+          "old_cell_x": -7244,
+          "old_cell_y": -3709
+        },
+        {
+          "lat": -37.5525,
+          "lon": -73.29,
+          "cell_x": -7329,
+          "cell_y": -3756,
+          "old_cell_x": -7330,
+          "old_cell_y": -3756
+        },
+        {
+          "lat": -38.27,
+          "lon": -72.58389,
+          "cell_x": -7259,
+          "cell_y": -3827,
+          "old_cell_x": -7259,
+          "old_cell_y": -3828
+        },
+        {
+          "lat": -37.9272,
+          "lon": -73.04,
+          "cell_x": -7304,
+          "cell_y": -3793,
+          "old_cell_x": -7305,
+          "old_cell_y": -3793
+        },
+        {
+          "lat": -36.09,
+          "lon": -71.845,
+          "cell_x": -7185,
+          "cell_y": -3609,
+          "old_cell_x": -7185,
+          "old_cell_y": -3610
+        },
+        {
+          "lat": -37.9454,
+          "lon": -71.18,
+          "cell_x": -7118,
+          "cell_y": -3795,
+          "old_cell_x": -7119,
+          "old_cell_y": -3795
+        }
+      ]
+    }
+  }
+}

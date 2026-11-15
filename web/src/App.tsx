@@ -8,6 +8,7 @@ import { CommunePanel } from "./CommunePanel";
 import { ObservedHistory } from "./ObservedHistory";
 import { GoliatLogo } from "./brand/GoliatLogo";
 import { UI } from "./ui";
+import { download, seriesCsv } from "./csv";
 import "./App.css";
 
 const params = () => new URLSearchParams(location.search);
@@ -68,7 +69,6 @@ export default function App() {
   }, [lang, doc, cut, T.headline]);
 
   const current = doc?.cut === cut ? doc : null;
-  const enabledCount = index ? index.comunas.filter((c) => c.enabled).length : "…";
 
   const matches = useMemo(() => {
     // Sin tildes ni mayúsculas: "chillan" encuentra Chillán; también por CUT.
@@ -78,6 +78,8 @@ export default function App() {
     return (index?.comunas ?? []).filter((c) => fold(c.comuna).includes(n) || c.cut.startsWith(n)).slice(0, 8);
   }, [index, q]);
   const pick = (c: string) => { setCut(c); setQ(""); setSearching(false); };
+  const close = () => { setCut(null); setTableOpen(false); };
+  const wide = !!current && tableOpen;
 
   const search = (
     <div className="search-box no-print">
@@ -101,7 +103,7 @@ export default function App() {
       <ul className="gates">
         <li>{lang === "es" ? "Validación cruzada 2012–2019, error absoluto medio mensual" : "Cross-validation 2012–2019, monthly mean absolute error"}: Aqua {lang === "es" ? "crudo" : "raw"} <b>{current.gates.loso_mae_raw}</b> · Aqua × {current.r_const} <b>{current.gates.loso_mae_const}</b> · {lang === "es" ? "climatología" : "climatology"} <b>{current.gates.loso_mae_clim}</b></li>
         <li>{lang === "es" ? "Gana a la climatología en" : "Beats climatology in"} <b>{current.gates.wins_vs_clim}/{current.gates.of}</b> {t.seasons} {current.gates.gate_vs_clim ? "✓" : "✗"} · {lang === "es" ? "gana a Aqua crudo en" : "beats raw Aqua in"} <b>{current.gates.wins_vs_raw}/{current.gates.of}</b> {current.gates.gate_vs_raw ? "✓" : "✗"} · Aqua 2012–2019: <b>{current.gates.aqua_train}</b> (≥ {current.gates.min_aqua} {current.gates.gate_aqua ? "✓" : "✗"}) · S-NPP: {current.gates.snpp_train}</li>
-        {current.reconstruction_enabled && <li>{lang === "es" ? "Error típico del estimado" : "Typical error of estimates"}: ± {current.gates.band_mae} ({lang === "es" ? "cubre" : "covers"} {Math.round(current.gates.band_coverage_1 * 100)} % {lang === "es" ? "de los meses activos" : "of active months"}; {Math.round(current.gates.band_coverage_2 * 100)} % {lang === "es" ? "con" : "at"} ±2)</li>}
+        {current.reconstruction_enabled && <li>{lang === "es" ? "Error típico del estimado" : "Typical error of estimates"}: ± {current.gates.band_mae} ({lang === "es" ? "cubre" : "covers"} {Math.round(current.gates.band_coverage_1 * 100)} % {lang === "es" ? "de los meses activos" : "of active months"}; {Math.round(current.gates.band_coverage_2 * 100)} % {lang === "es" ? "con" : "at"} ±2 {lang === "es" ? "en la validación interna de las 54 comunas; no es una garantía" : "in internal validation across all 54 communes; not a guarantee"})</li>}
       </ul>
       {t.methodBody.map((p, i) => <p key={i}>{p}</p>)}
     </div>
@@ -114,7 +116,7 @@ export default function App() {
           <a href={`/?lang=${lang}`} className="logo" aria-label="GOLIAT"><GoliatLogo variant="horizontal" height={30} lang={lang} /></a>
           <div>
             <h1>{T.headline}</h1>
-            <p className="sub">{T.line(enabledCount)}</p>
+            <p className="sub">{T.line}</p>
           </div>
         </div>
         <div className="tools no-print">
@@ -134,23 +136,58 @@ export default function App() {
         </main>
       ) : (
         <>
-          <div className="explore">
+          {/* Una sola card a la izquierda: el resumen de la comuna o, al abrir la serie, el calendario completo (más ancha). El mapa queda al lado y la página no se desliza (issue #38). */}
+          <div className={`explore${wide ? " wide" : ""}`}>
             <div className="explore-map no-print">
               <MapBoundary fallback={<p className="map-unavailable" role="status">{MAP_UNAVAILABLE[lang]}</p>}>
-                <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} />
+                <ExploreMap region={region} selected={cut} onPick={pick} season={season} setSeason={setSeason} lang={lang} wide={wide} />
               </MapBoundary>
             </div>
             <aside className="panel">
-              {search}
-              {!cut ? <p className="muted hint">{T.searchHint}</p>
-                : error ? <p role="alert">{T.loadError}</p>
-                : current ? <CommunePanel doc={current} derived={derived} season={season} lang={lang} tableOpen={tableOpen} toggleTable={() => setTableOpen(!tableOpen)} method={method} />
-                : <p className="muted">{T.loading}</p>}
+              <div className="panel-head">
+                <div className="search-row">
+                  {search}
+                  {cut && <button className="close no-print" onClick={close} aria-label={T.close} title={T.close}>× {T.closeShort}</button>}
+                </div>
+                {current && (
+                  <div className="titlerow">
+                    <h2>{current.comuna} <small>· {current.region} · CUT {current.cut}</small></h2>
+                    <div className="tabs no-print" role="group" aria-label={t.calendar}>
+                      <button aria-pressed={!tableOpen} onClick={() => setTableOpen(false)}>{T.tabSummary}</button>
+                      <button aria-pressed={tableOpen} onClick={() => setTableOpen(true)}>{T.tabSeries}</button>
+                    </div>
+                    {tableOpen && (
+                      <span className="acts no-print">
+                        <button onClick={() => download(`goliat_${current.cut}_${current.comuna}.csv`, seriesCsv(current))}>CSV</button>
+                        <button onClick={() => window.print()}>{T.printShort}</button>
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="panel-body">
+                {!cut ? <p className="muted hint">{T.searchHint}</p>
+                  : error ? <p role="alert">{T.loadError}</p>
+                  : current ? (
+                    <>
+                      <div className="resumen">
+                        <CommunePanel doc={current} derived={derived} season={season} lang={lang} toggleTable={() => setTableOpen(true)} method={method} />
+                      </div>
+                      {tableOpen && (
+                        <section className="serie-panel no-print" id="serie" aria-label={`${t.calendar} · ${current.comuna} · 2002–2026`}>
+                          <Calendar series={current.series} totals={derived?.season_totals ?? []} bandMae={current.reconstruction_enabled ? current.gates.band_mae : undefined} lang={lang} cutoff={current.cutoff} compact />
+                        </section>
+                      )}
+                    </>
+                  )
+                  : <p className="muted">{T.loading}</p>}
+              </div>
             </aside>
           </div>
 
+          {/* Impresión: igual que antes (ficha + serie + método), desde el mismo JSON. */}
           {current && (
-            <section className={`card serie${tableOpen ? "" : " print-only"}`} id="serie">
+            <section className="card serie print-only">
               <h2>{t.calendar} · {current.comuna} · 2002–2026</h2>
               <p className="help">{t.calendarHelp}</p>
               <Calendar series={current.series} totals={derived?.season_totals ?? []} bandMae={current.reconstruction_enabled ? current.gates.band_mae : undefined} lang={lang} />

@@ -109,8 +109,9 @@ export function RegionMap({ t, lang, onPick }: { t: Text; lang: Lang; onPick: (c
     const r = cv.getBoundingClientRect();
     const x = e.clientX - r.left, y = e.clientY - r.top;
     const ctx = cv.getContext("2d")!;
-    const dpr = window.devicePixelRatio || 1;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    // isPointInPath transforma el trazado con la matriz vigente, pero no el punto: con la escala del
+    // dibujo (dpr) el acierto caía en (x/dpr, y/dpr). En identidad, trazado y punto quedan en píxeles CSS.
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
     const hit = paths.find(p => ctx.isPointInPath(p.path, x, y));
     return hit ? { cut: hit.cut, name: hit.name, x, y } : null;
   }

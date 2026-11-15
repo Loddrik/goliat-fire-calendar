@@ -4,3 +4,8 @@ data/processed/*.duckdb*
 node_modules
 web/node_modules
 .git
+# Auditorías científicas y evidencia (~45 MB): se versionan en git pero el servidor no las sirve.
+# server.mjs solo usa web/dist, web/public/data y data/processed/detections_csv.
+data/processed/*_audit
+data/processed/external_sources
+docs/reviews/evidence

@@ -1,0 +1,10 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+test_all_saved_endpoints_restore_and_ignore_destination_labels_and_order (test_saved_model_invariance.SavedModelInvarianceTests.test_all_saved_endpoints_restore_and_ignore_destination_labels_and_order) ... ok
+test_saved_points_restore_and_ignore_all_destination_labels_and_order (test_saved_model_invariance.SavedModelInvarianceTests.test_saved_points_restore_and_ignore_all_destination_labels_and_order) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 3.077s
+
+OK
