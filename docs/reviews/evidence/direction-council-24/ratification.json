@@ -1,0 +1,25 @@
+{
+  "ratified_at_utc": "2026-11-15T04:29:27.787159+00:00",
+  "plan_path": "docs/reviews/2026-11-15-joint-plan-24.md",
+  "plan_sha256": "d9eecf7407a4e5ff8b228ef398b0d846bc28893ae5120cc8a987a495b0eb98dc",
+  "members": {
+    "multifocal": [
+      "hurdle_design",
+      "observation_gate0",
+      "loco_observation"
+    ],
+    "adversarial": [
+      "independent_review_23",
+      "adversarial_council_measurement24",
+      "adversarial_council_feasibility24"
+    ]
+  },
+  "ratification": "all_six_sequence_agreed; no_unanimous_secondary_ranking",
+  "identification_conditions_incorporated": [
+    "tau_on_delta_difference",
+    "fixed_YC_50_stratum"
+  ],
+  "sequence": "C<=60min including review + B ledger parallel + E documentary<=30min if slot; A/D deferred",
+  "production_promotion": false,
+  "physical_gate1": false
+}

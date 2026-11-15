@@ -31,3 +31,7 @@ Notas de 1 a 5 por criterio, con evidencia y rango cuando corresponda. Lo descon
 Fuentes verificadas para E: [NASA MYD14A1](https://data.nasa.gov/dataset/modis-aqua-thermal-anomalies-fire-daily-l3-global-1km-sin-grid-v061-a6350), [guía MODIS C6 §5.2](https://www.earthdata.nasa.gov/s3fs-public/imported/MODIS_C6_Fire_User_Guide_B.pdf), [guía VIIRS](https://lpdaac.usgs.gov/documents/427/VNP14_User_Guide_V1.pdf). Ninguna compatibilidad adicional de campos ha sido demostrada todavía.
 
 La fase 2 solicita votos independientes sobre estas mismas opciones. Todavía no se ha elegido una opción ni ejecutado un nuevo experimento por sus notas.
+
+## Resultado de ambos consejos
+
+C recibió la mayor prioridad operativa de los tres miembros multifocales: media descriptiva86,33–89,33/100. B72–75,67,E69–76,A68,33–71,33,D49,67–73,67; los rangos son juicios, no intervalos de confianza ni réplicas independientes. Las posiciones secundarias no son un consenso estadístico. El adversario acotóC a60minincluidarevisión, exigiócontratospor significado yno porganador, cotasaplicables,estratosfijosyledgerpositivosexcluidos. Los seisratificaron el plan conjunto separado.
