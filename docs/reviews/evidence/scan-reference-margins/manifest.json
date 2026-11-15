@@ -1,0 +1,23 @@
+{
+  "artifacts_sha256": {
+    "code-snapshot.py.txt": "601b4c49566943fb968f2cb46d89b0038bb58329ce2aaeadfe385c03264e2ccb",
+    "conditional-margins.csv": "af7e0311e4b8bc28e30bc047579c75182e8465d3c8e7f78ac4978300af34b73b",
+    "helper-observation_qa.py.txt": "a2a654f6ec15b1e54e2e1398bc9ed0ff3ef9ed5a523b952a1be735188bf13a45",
+    "protocol-snapshot.md.txt": "ef3af05682508f5a6b9c9e38804afd12f702451ece91088733188b8710af84ef",
+    "result.json": "ef8b31bc1b4d218f636f2e245f8e16d2ae91e349bb0a72646f78a8c57bd0d672",
+    "tipping-requirements.csv": "f2e7ed89228a0b0979bb731ff34d7bf8423930d6f39721ffef2c6522ee009c50"
+  },
+  "gate1_passed": false,
+  "inputs_are_existing_json_only": true,
+  "physical_exposure_verified": false,
+  "raw_opened": false,
+  "reproduction": "python3 pipeline/scan_reference_margins.py (new evidence directory only)",
+  "scope": "conditional_requirements_for_existing_center_associations_only",
+  "source_sha256": {
+    "docs/reviews/2026-11-15-scan-reference-margin-protocol.md": "ef3af05682508f5a6b9c9e38804afd12f702451ece91088733188b8710af84ef",
+    "docs/reviews/evidence/observation-case2023/result.json": "b520dbf02ee7cb440c5caa8e47f4321eb090f8fb3df6cd12973f1cd863305c9e",
+    "docs/reviews/evidence/observation-geotiming/summary.json": "2c13c9cde4183253db7e7cb81f67d459e0223d2eb290ce92bc87019c903eeec3",
+    "pipeline/observation_qa.py": "a2a654f6ec15b1e54e2e1398bc9ed0ff3ef9ed5a523b952a1be735188bf13a45",
+    "pipeline/scan_reference_margins.py": "601b4c49566943fb968f2cb46d89b0038bb58329ce2aaeadfe385c03264e2ccb"
+  }
+}

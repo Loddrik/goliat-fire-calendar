@@ -1,0 +1,24 @@
+[
+  {
+    "title": "CMRcollection",
+    "url": "https://cmr.earthdata.nasa.gov/search/concepts/C2484079608-LPCLOUD.umm_json",
+    "local": "collection-umm.json"
+  },
+  {
+    "title": "OfficialC61guide2022",
+    "url": "https://lpdaac.usgs.gov/documents/1409/MCD12_User_Guide_V61.pdf",
+    "retrieval": "web text; no local PDF download"
+  },
+  {
+    "title": "NASALDOPEknownissue781",
+    "url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=781"
+  },
+  {
+    "title": "ESAGlobCover2009release",
+    "url": "https://www.esa.int/Applications/Observing_the_Earth/Envisat/ESA_unveils_latest_map_of_world_s_land_cover"
+  },
+  {
+    "title": "ESAGlobCovercatalog",
+    "url": "https://due.esrin.esa.int/page_globcover.php"
+  }
+]

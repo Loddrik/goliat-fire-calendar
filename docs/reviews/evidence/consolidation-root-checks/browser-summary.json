@@ -1,0 +1,19 @@
+{
+  "completed_utc": "2026-11-15T09:49:07.078563+00:00",
+  "status": "pass",
+  "artifact_sha256": "6b97c9b929c59f139d7125c185ce9f6ed7eb617a2d408943a924ef39598c8ddc",
+  "isolated_profile": true,
+  "browser_closed": true,
+  "viewports": [
+    [
+      390,
+      844
+    ],
+    [
+      1440,
+      1000
+    ]
+  ],
+  "visual_inspection": "Daily permutation diagram and surrounding prose inspected from screenshots at both viewports; wider diagram scrolls within its container on mobile.",
+  "scope": "Rendering, width, SVG text bounds, identifiers and resource loading; not a full accessibility certification."
+}

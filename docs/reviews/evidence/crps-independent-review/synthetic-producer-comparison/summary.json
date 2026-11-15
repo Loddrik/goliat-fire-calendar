@@ -1,0 +1,137 @@
+{
+  "completed_utc": "2026-11-15T08:53:56.398256+00:00",
+  "all_14_synthetic_oracle_comparisons_passed": true,
+  "real_response_reads": 0,
+  "fits": 0,
+  "solvers": 0,
+  "rows": [
+    {
+      "fixture": "delta_zero",
+      "expected": 0.0,
+      "producer_raw_score": 0.0,
+      "independent_integral": 0.0,
+      "absolute_error": 0.0,
+      "tau": 1e-10,
+      "passed": true
+    },
+    {
+      "fixture": "delta_left",
+      "expected": 5.0,
+      "producer_raw_score": 5.0,
+      "independent_integral": 5.0,
+      "absolute_error": 0.0,
+      "tau": 3e-10,
+      "passed": true
+    },
+    {
+      "fixture": "delta_equal",
+      "expected": 0.0,
+      "producer_raw_score": 0.0,
+      "independent_integral": 0.0,
+      "absolute_error": 0.0,
+      "tau": 2e-10,
+      "passed": true
+    },
+    {
+      "fixture": "delta_right",
+      "expected": 5.0,
+      "producer_raw_score": 5.0,
+      "independent_integral": 5.0,
+      "absolute_error": 0.0,
+      "tau": 7.000000000000001e-10,
+      "passed": true
+    },
+    {
+      "fixture": "two_at_zero",
+      "expected": 0.8888888888888888,
+      "producer_raw_score": 0.8888888888888888,
+      "independent_integral": 0.8888888888888891,
+      "absolute_error": 0.0,
+      "tau": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "fixture": "two_between",
+      "expected": 0.7222222222222222,
+      "producer_raw_score": 0.7222222222222223,
+      "independent_integral": 0.7222222222222223,
+      "absolute_error": 1.1102230246251565e-16,
+      "tau": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "fixture": "two_right",
+      "expected": 2.2222222222222223,
+      "producer_raw_score": 2.2222222222222223,
+      "independent_integral": 2.2222222222222223,
+      "absolute_error": 0.0,
+      "tau": 4e-10,
+      "passed": true
+    },
+    {
+      "fixture": "two_left",
+      "expected": 1.8888888888888888,
+      "producer_raw_score": 1.888888888888889,
+      "independent_integral": 1.888888888888889,
+      "absolute_error": 2.220446049250313e-16,
+      "tau": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "fixture": "ties_zero_mass",
+      "expected": 0.25,
+      "producer_raw_score": 0.25,
+      "independent_integral": 0.25,
+      "absolute_error": 0.0,
+      "tau": 1e-10,
+      "passed": true
+    },
+    {
+      "fixture": "ties_reordered",
+      "expected": 0.25,
+      "producer_raw_score": 0.25,
+      "independent_integral": 0.25,
+      "absolute_error": 0.0,
+      "tau": 1e-10,
+      "passed": true
+    },
+    {
+      "fixture": "split_mass",
+      "expected": 0.7222222222222222,
+      "producer_raw_score": 0.7222222222222223,
+      "independent_integral": 0.7222222222222223,
+      "absolute_error": 1.1102230246251565e-16,
+      "tau": 1.3333333333333334e-10,
+      "passed": true
+    },
+    {
+      "fixture": "all_equal",
+      "expected": 0.5,
+      "producer_raw_score": 0.5,
+      "independent_integral": 0.5,
+      "absolute_error": 0.0,
+      "tau": 3e-10,
+      "passed": true
+    },
+    {
+      "fixture": "floor_one_noninteger",
+      "expected": 0.415,
+      "producer_raw_score": 0.41500000000000004,
+      "independent_integral": 0.41500000000000004,
+      "absolute_error": 5.551115123125783e-17,
+      "tau": 1.7500000000000002e-10,
+      "passed": true
+    },
+    {
+      "fixture": "target_at_atom",
+      "expected": 0.415,
+      "producer_raw_score": 0.41500000000000004,
+      "independent_integral": 0.41500000000000004,
+      "absolute_error": 5.551115123125783e-17,
+      "tau": 1.55e-10,
+      "passed": true
+    }
+  ],
+  "producer_helper_sha256": "de59e7c482ea2e6ac3b192e9699ef8dd5eef6284861c5571301c76a6b6eb4e9e",
+  "independent_fixture_sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5"
+}

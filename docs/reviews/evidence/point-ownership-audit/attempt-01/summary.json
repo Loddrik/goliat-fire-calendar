@@ -1,0 +1,541 @@
+{
+  "QA_FIRE_positive_catalogue_read": false,
+  "RSS_native_units": "bytes on darwin; kilobytes multiplied1024 on other systems",
+  "all_GEO_gates_passed": true,
+  "candidate_tests_total": 482769,
+  "code_sha256": "b03a9c9e17dee5fef270b09d1f0c6f5996c37c6ac2741207a9b6925df315f607",
+  "completed_utc": "2026-11-15T06:27:06.594441+00:00",
+  "continuous_area30B_repaired": false,
+  "exact_segment_evaluations_total": 3143544,
+  "frame": {
+    "coordinate_frame": "local_exact_offsets",
+    "origin_xy": [
+      722459.8026976171,
+      5902205.764776958
+    ],
+    "parent_crs": "EPSG:32718",
+    "point_unit": "fixed query point; not physical fire point or area"
+  },
+  "freeze_sha256": "1f2e2fc462935444c1a8b0347d99d04b6e46081ca3af30052e900207cff4c19a",
+  "gate1_passed": false,
+  "geometry_certificate_sha256": "4f739acb312d156101642dc4071308dc9c0345615379d550975b660829a19fb0",
+  "groups": {
+    "2019-MYD14-phase0-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 6341,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 41804,
+      "indexed_quads": 4672,
+      "indexed_quads_without_interior_point": 2799,
+      "postings_sha256": "7009d3afa8a63cae5cd2e440fb103b62816aee76abc6dace9cf56f69c02f0158",
+      "queries": 39601,
+      "roster_quad_rows": 5456,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 33260,
+        "no_nominal_support": 6341,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-MYD14-phase0-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 1562,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 10343,
+      "indexed_quads": 4672,
+      "indexed_quads_without_interior_point": 2836,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 9801
+      },
+      "postings_sha256": "a7f5df25eac6dc15f07497c0de91d273a0ea22c07c7c32f0db5a5cebe73eb4f6",
+      "queries": 9801,
+      "roster_quad_rows": 5456,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 8239,
+        "no_nominal_support": 1562,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-MYD14-phase125-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 6430,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 42298,
+      "indexed_quads": 4672,
+      "indexed_quads_without_interior_point": 2781,
+      "postings_sha256": "15791243017e78bc895ad91237962e1005c800c7aee242cf49797dbe6c810bae",
+      "queries": 40000,
+      "roster_quad_rows": 5456,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 33570,
+        "no_nominal_support": 6430,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-MYD14-phase125-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 1607,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 10564,
+      "indexed_quads": 4672,
+      "indexed_quads_without_interior_point": 2802,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 10000
+      },
+      "postings_sha256": "1a2c7c64a61bb7f49dbc2b5fd2f91a0f1c285d5777fed97aa6c92372f7c48823",
+      "queries": 10000,
+      "roster_quad_rows": 5456,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 8393,
+        "no_nominal_support": 1607,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-VNP14IMG-phase0-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 1389,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 49536,
+      "indexed_quads": 40707,
+      "indexed_quads_without_interior_point": 24855,
+      "postings_sha256": "78fef48a44ff1fb477c9762ff00c26fb3245d5a4fc6cec77295a244af052d026",
+      "queries": 39601,
+      "roster_quad_rows": 48000,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 38212,
+        "no_nominal_support": 1389,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-VNP14IMG-phase0-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 342,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12261,
+      "indexed_quads": 40707,
+      "indexed_quads_without_interior_point": 31248,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 9801
+      },
+      "postings_sha256": "8c53e7b78520bb3fff8661374209590eda48cbb7774540be9db55e20f011fde4",
+      "queries": 9801,
+      "roster_quad_rows": 48000,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 9459,
+        "no_nominal_support": 342,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-VNP14IMG-phase125-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 1393,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 49972,
+      "indexed_quads": 40707,
+      "indexed_quads_without_interior_point": 24695,
+      "postings_sha256": "4d9e30aa4c43f8b737bcf23c53a79a624e72de16be248055497e24e34783336a",
+      "queries": 40000,
+      "roster_quad_rows": 48000,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 38607,
+        "no_nominal_support": 1393,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2019-VNP14IMG-phase125-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 345,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12489,
+      "indexed_quads": 40707,
+      "indexed_quads_without_interior_point": 31052,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 10000
+      },
+      "postings_sha256": "88e3eb6b4267660b105a149858b37ef722a77b8aa25773c4a41737fff57977e2",
+      "queries": 10000,
+      "roster_quad_rows": 48000,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 9655,
+        "no_nominal_support": 345,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-MYD14-phase0-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 0,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 50665,
+      "indexed_quads": 2674,
+      "indexed_quads_without_interior_point": 1577,
+      "postings_sha256": "bfd8108d6d0a23fe3506f6e8d8cebc3961bb3c64fe830da710a4c4954befe73a",
+      "queries": 39601,
+      "roster_quad_rows": 3272,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 39601,
+        "no_nominal_support": 0,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-MYD14-phase0-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 0,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12559,
+      "indexed_quads": 2674,
+      "indexed_quads_without_interior_point": 1602,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 9801
+      },
+      "postings_sha256": "e7f6b2e40864e97c472b04e508cbf1382e6ec6dd51e56e2ce4a621bf8a65ded0",
+      "queries": 9801,
+      "roster_quad_rows": 3272,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 9801,
+        "no_nominal_support": 0,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-MYD14-phase125-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 0,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 51202,
+      "indexed_quads": 2674,
+      "indexed_quads_without_interior_point": 1565,
+      "postings_sha256": "5ccb3844d7323f83bb3fbcbace7fd4db21df2346d6d9acc372f3ec45dd0d92fb",
+      "queries": 40000,
+      "roster_quad_rows": 3272,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 40000,
+        "no_nominal_support": 0,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-MYD14-phase125-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 0,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12816,
+      "indexed_quads": 2674,
+      "indexed_quads_without_interior_point": 1578,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 10000
+      },
+      "postings_sha256": "582ddc9fed75340cc6179d0efaf126fe6aee755ad4cfe1a8235f527c8aaa2752",
+      "queries": 10000,
+      "roster_quad_rows": 3272,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 10000,
+        "no_nominal_support": 0,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-VNP14IMG-phase0-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 22,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 50298,
+      "indexed_quads": 37398,
+      "indexed_quads_without_interior_point": 22814,
+      "postings_sha256": "835e7c3a05521db557c7dd5944f66d8f68a7e6b161acffca664e2393a29be730",
+      "queries": 39601,
+      "roster_quad_rows": 44310,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 39579,
+        "no_nominal_support": 22,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-VNP14IMG-phase0-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 6,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12450,
+      "indexed_quads": 37398,
+      "indexed_quads_without_interior_point": 27543,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 9801
+      },
+      "postings_sha256": "eb5496a852017a7bd5cf91c892ebb02b653c71b7edafdf12d43f2c279a42323a",
+      "queries": 9801,
+      "roster_quad_rows": 44310,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 9795,
+        "no_nominal_support": 6,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-VNP14IMG-phase125-h250": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 22,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 50809,
+      "indexed_quads": 37398,
+      "indexed_quads_without_interior_point": 22664,
+      "postings_sha256": "b6239d401f830ea7e6e82b57520f4bc4c8ab12e00f8459ccb074eb7f3277670f",
+      "queries": 40000,
+      "roster_quad_rows": 44310,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 39978,
+        "no_nominal_support": 22,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    },
+    "2023-VNP14IMG-phase125-h500": {
+      "all_bbox_ranges_independently_verified": true,
+      "all_causes_counts": {
+        "boundary": 0,
+        "no_interiors": 5,
+        "same_scan_multiple_interiors": 0,
+        "time_unknown": 0
+      },
+      "candidate_postings": 12703,
+      "indexed_quads": 37398,
+      "indexed_quads_without_interior_point": 27341,
+      "nested_validation": {
+        "all_passed": true,
+        "fine_postings_not_copied": true,
+        "independently_constructed_shared_points_checked": 10000
+      },
+      "postings_sha256": "7127f54f661b7e4d43e98a3c31d5f156a5bddedca5f6afe249bc56a3404f2586",
+      "queries": 10000,
+      "roster_quad_rows": 44310,
+      "state_partition": {
+        "boundary_unidentified": 0,
+        "identified_owner": 9995,
+        "no_nominal_support": 5,
+        "same_scan_ambiguous": 0,
+        "time_unidentified": 0
+      }
+    }
+  },
+  "native_columns": [
+    "native_row",
+    "native_col",
+    "scan",
+    "detector"
+  ],
+  "peak_RSS_bytes": 145870848,
+  "point_index_formula": "(j-j_min)*n+(k-j_min), n=j_max-j_min+1; j outer, k inner",
+  "postings_columns": [
+    "flat_point_id",
+    "quad_index",
+    "exact_relation_code"
+  ],
+  "queries_total": 198804,
+  "query_populations": {
+    "2019-phase0-h250": {
+      "j_max": 99,
+      "j_min": -99,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 39601
+    },
+    "2019-phase0-h500": {
+      "j_max": 49,
+      "j_min": -49,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 9801
+    },
+    "2019-phase125-h250": {
+      "j_max": 99,
+      "j_min": -100,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 40000
+    },
+    "2019-phase125-h500": {
+      "j_max": 49,
+      "j_min": -50,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 10000
+    },
+    "2023-phase0-h250": {
+      "j_max": 99,
+      "j_min": -99,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 39601
+    },
+    "2023-phase0-h500": {
+      "j_max": 49,
+      "j_min": -49,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 9801
+    },
+    "2023-phase125-h250": {
+      "j_max": 99,
+      "j_min": -100,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 40000
+    },
+    "2023-phase125-h500": {
+      "j_max": 49,
+      "j_min": -50,
+      "open_domain_m": [
+        -25000,
+        25000
+      ],
+      "point_formula": "origin_exact+phase+j*h; origin_exact+phase+k*h",
+      "queries": 10000
+    }
+  },
+  "ranges_columns": [
+    "quad_index",
+    "j_min",
+    "j_max",
+    "k_min",
+    "k_max",
+    "expected_postings"
+  ],
+  "relations_legend": {
+    "-1": "outside",
+    "0": "boundary",
+    "1": "interior"
+  },
+  "roster_columns": [
+    "bbox_candidates",
+    "strict_interior_points",
+    "boundary_points",
+    "owned_early_points",
+    "owned_late_points"
+  ],
+  "started_utc": "2026-11-15T06:26:46.618410+00:00",
+  "states_legend": {
+    "0": "identified_owner",
+    "1": "boundary_unidentified",
+    "2": "time_unidentified",
+    "3": "same_scan_ambiguous",
+    "4": "no_nominal_support"
+  },
+  "unknown_owner_sentinel": -1
+}

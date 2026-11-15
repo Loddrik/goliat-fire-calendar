@@ -1,0 +1,14 @@
+{
+  "id": "S6",
+  "url": "https://lpdaac.usgs.gov/documents/427/VNP14_User_Guide_V1.pdf",
+  "publisher": "NASA LP DAAC / VIIRS Land SIPS",
+  "date_in_source": "User guide1.4;June2018;GSFC copy cover saysJuly2018",
+  "locator": "section2.4/2.4.1 printedp11",
+  "facts": [
+    "DailyVNP14A1 is a maximum-class composite of750mVNP14 on1kmSIN grid, with cloud/water adjustment.",
+    "The guide assigns QA bit2 as0day/1night, opposite the linked LAADS specification. Treat the bit direction as unresolved for a V2 decoder.",
+    "The sample field is fire-only and provides no nonfire acquisition history."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

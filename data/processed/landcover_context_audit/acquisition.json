@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "year": 2010,
+      "path": ".runtime/landcover-context/raw/MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+      "bytes": 13764955,
+      "sha256": "877e069dfb6800d6b24e23747d9eb7cab54ed20398410087f152b0582bc1d53a",
+      "cache_reused": true,
+      "NASA_checksum_available": false,
+      "npz": ".runtime/landcover-context/arrays/2010.npz",
+      "metadata": ".runtime/landcover-context/arrays/2010-metadata.json"
+    },
+    {
+      "year": 2001,
+      "path": ".runtime/landcover-context/raw/MCD12Q1.A2001001.h12v12.061.2022146051151.hdf",
+      "bytes": 16769989,
+      "sha256": "06a5eaa6c25dfc3ad2018eed8b546a70a5775286f134f829ee80edec69d34d74",
+      "cache_reused": true,
+      "NASA_checksum_available": false,
+      "npz": ".runtime/landcover-context/arrays/2001.npz",
+      "metadata": ".runtime/landcover-context/arrays/2001-metadata.json"
+    }
+  ],
+  "transfer_ledger": {
+    "cap_bytes": 157286400,
+    "received_body_bytes": 30534944,
+    "attempts": [
+      {
+        "filename": "MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+        "year": 2010,
+        "started_utc": "2026-11-15T02:47:57.446854+00:00",
+        "bytes": 0,
+        "status": "failed_before_payload_redirect_guard",
+        "authorization_used": false,
+        "redirect_hosts": []
+      },
+      {
+        "filename": "MCD12Q1.A2010001.h12v12.061.2022160091628.hdf",
+        "year": 2010,
+        "started_utc": "2026-11-15T02:49:59.808389+00:00",
+        "bytes": 13764955,
+        "status": "complete",
+        "authorization_used": true,
+        "redirect_hosts": [
+          "d1nklfio7vscoe.cloudfront.net"
+        ],
+        "sha256": "877e069dfb6800d6b24e23747d9eb7cab54ed20398410087f152b0582bc1d53a",
+        "completed_utc": "2026-11-15T02:50:05.091686+00:00"
+      },
+      {
+        "filename": "MCD12Q1.A2001001.h12v12.061.2022146051151.hdf",
+        "year": 2001,
+        "started_utc": "2026-11-15T02:50:05.092405+00:00",
+        "bytes": 16769989,
+        "status": "complete",
+        "authorization_used": true,
+        "redirect_hosts": [
+          "d1nklfio7vscoe.cloudfront.net"
+        ],
+        "sha256": "06a5eaa6c25dfc3ad2018eed8b546a70a5775286f134f829ee80edec69d34d74",
+        "completed_utc": "2026-11-15T02:50:09.999100+00:00"
+      }
+    ]
+  },
+  "protocol_sha256": "c33a18b804355ebdf29119bc40235dde28f4bd97288813481ebc1b5b605563d7"
+}

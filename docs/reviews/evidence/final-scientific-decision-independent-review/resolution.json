@@ -1,0 +1,26 @@
+{
+  "status": "PASS_scientific_communication_on_named_versions",
+  "completed_utc": "2026-11-15T09:42:56.803161+00:00",
+  "main_document_sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934",
+  "README_sha256": "f74ea885501437c3ab7ee542eb5b7a19f1ee25d2faaa31402178f4bb0f259d6b",
+  "required_clarifications_resolved": {
+    "forecast_same_historical_month": true,
+    "not_future_seven_days": true,
+    "origin_fold_masks18": true,
+    "separate_LOSO_counts": true,
+    "adverse18_counterexample": true,
+    "README_same_month": true
+  },
+  "existing18_adverse_counterexample_added": true,
+  "local_links_checked_after_correction": 56,
+  "all_local_links_exist": true,
+  "minor_README_label_suggestion": "17–18 title says reconciliarCDF; prefer reconciliar asignaciones to avoid implying a reconciled probability law. Definitions and main document already distinguish point assignments, so this wording recommendation does not block the named main-document scientific verdict.",
+  "C40_addendum_excluded": "Any later documentary C40 conclusion or addendum is outside this named-version review and belongs to its dedicated peer review.",
+  "future_html_update_excluded": true,
+  "remote_PR_status_requeried": false,
+  "new_fits": 0,
+  "new_losses": 0,
+  "new_science": 0,
+  "GOES_queries": 0,
+  "source_review_initial_evidence_sha256": "babfdeb5d5cc954b6da954db802b2c4f2646efd3060b075ec3f3d044e9e0f0ef"
+}

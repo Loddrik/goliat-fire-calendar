@@ -1,0 +1,700 @@
+{
+  "audit_kind": "scientific_governance_goal_compliance_read_only",
+  "created_utc": "2026-11-15T10:06:07.384714+00:00",
+  "global_goal_complete": false,
+  "scientific_governance_not_equivalent_to_all_protocols_passing": true,
+  "actual_observed_noncompliance": [
+    "37 contemporaneous producer environment snapshot omitted; later reviewer metadata is not a retroactive repair.",
+    "35 first producer package omitted required B/C diagnostics; supplemented transparently after execution."
+  ],
+  "unproven_or_pending_not_asserted_violations": [
+    "Full historical active-agent event log is not persisted.",
+    "Current remote PR/base/head/CI verification belongs to engineering audit.",
+    "Protected final D window and11:30UTC objective remain future."
+  ],
+  "no_unjustified_criteria_change_or_primary_rescue_found": true,
+  "git_timing_observed": {
+    "24_criteria_options_commit": "299c0a7 at2026-11-15T04:20:44Z",
+    "24_votes_commit": "76a9229 at2026-11-15T04:26:13Z",
+    "24_plan_commit": "df536bb at2026-11-15T04:29:28Z",
+    "31_options_commit": "9e98a56 at2026-11-15T05:50:04Z",
+    "31_votes_commit": "c64b6f9 at2026-11-15T05:56:18Z",
+    "31_ratification_commit": "793ade7 at2026-11-15T06:14:02Z",
+    "35_joint_protocol_commit": "5f8960a at2026-11-15T07:23:00Z",
+    "38_joint_and39_protocol_commit": "0558831 at2026-11-15T08:50:06Z",
+    "40_resource_protocol_commit": "64b79f6 at2026-11-15T09:22:27Z",
+    "latest_inspected_commit": "b29d98f51f4416130811a1bfecd93b2c47847851",
+    "latest_inspected_author": "Daniel Quinteros <daniel.quinterosc@gmail.com>",
+    "latest_inspected_signature_status": "N: no signature"
+  },
+  "criteria_weights_preserved": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "historical_concurrency_scope": "Hard four-slot scheduler constraint and root-reported rejected excess followups are known session facts; no complete event log is manufactured.",
+  "matrix": [
+    {
+      "requirement": "Use multifocal and adversarial councils after stagnation, including a LOCO approach.",
+      "status": "met_for_documented_rounds",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-direction-council-24.md",
+          "sha256": "d751ed1f780930739e9c133aba38797525404bd9b04da0562354902167f13330"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-24/votes.json",
+          "sha256": "ad1026f3e308add19d1700bbc78996a31f98686740323d1d05d73a4ad3ba4f5f"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-24/ratification.json",
+          "sha256": "183d4a8c0e5e4b29b1319616e538b26f7da1da646bccec50879b72d2869136f8"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-direction-council-31.md",
+          "sha256": "6c0d2800242e2945af2996a23511e92c813edb4c9ce4874643c4564e61dfc9c4"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-31/votes.json",
+          "sha256": "6357f411244383be198c3ea02639aafce6a935808ac79c3335a344c48a5bb0c1"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-31/ratification.json",
+          "sha256": "5f91e7dcb26d0396a5808aa539341a6a3425fb393572d1aed01c439df5639646"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-joint-plan-35.md",
+          "sha256": "8018047c92c9b2a80c699e0bbdc2d4d1f738fe65d411ce2021c6506efd1786fb"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/aggregate.json",
+          "sha256": "2539942f2f2f7d4d1c46e53d1a6d7ed140f4f2563637d046465631d7b96bedf0"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/ratification.json",
+          "sha256": "d75f706064cff5eb3a134c2ccdb929666219aac16c68f8444a1c75d46b40437a"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-joint-plan-38.md",
+          "sha256": "af4031ace22074438e830013e21a164b72227f262e7b22c394196f1e36d747a1"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/aggregate.json",
+          "sha256": "fffc10bf51e12d7e2495c158fab4458ce727f1a148c7c8c5a19dc1feeaa9aa2d"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/ratification.json",
+          "sha256": "b37aa8be322c101b2cae480e32b47f942f121de7785ceba12a9d83e332484850"
+        }
+      ],
+      "finding": "Rounds24/31/35/38 preserve three multifocal approaches, three adversarial roles, proposals/votes and joint sequences after negative or blocked work. LOCO is explicit in24/31/38;35 labels its third approach engineering/cost rather than LOCO in the vote file. The same session agent handled that role, but the role-only35 artifact does not independently certify that canonical-agent mapping. Different priorities and ranges remain visible; no statistical independence is claimed.",
+      "limit_or_remaining_obligation": null
+    },
+    {
+      "requirement": "Six council members, with both councils reviewing the other side before joint ratification.",
+      "status": "met_as_recorded_ratifications",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/evidence/direction-council-24/ratification.json",
+          "sha256": "183d4a8c0e5e4b29b1319616e538b26f7da1da646bccec50879b72d2869136f8"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-31/ratification.json",
+          "sha256": "5f91e7dcb26d0396a5808aa539341a6a3425fb393572d1aed01c439df5639646"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/ratification.json",
+          "sha256": "d75f706064cff5eb3a134c2ccdb929666219aac16c68f8444a1c75d46b40437a"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/ratification.json",
+          "sha256": "b37aa8be322c101b2cae480e32b47f942f121de7785ceba12a9d83e332484850"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/engineering.json",
+          "sha256": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/identification-adversary.json",
+          "sha256": "857b1ca985b0ddbfd30c58737bd807ac4fb7bd5e955f6b96be09b6530f787fb1"
+        }
+      ],
+      "finding": "Six roles are named in24/31 and six role-specific acceptance records in35/38. Recorded plan hashes all match current joint plans; all role-vote hashes in35/38 match their files. Engineering35 disclosed reading the statistics vote, so this is not a blinded six-person panel.",
+      "limit_or_remaining_obligation": "Ratifications are preserved agent-process records, not externally authenticated human signatures."
+    },
+    {
+      "requirement": "Agree evaluation criteria before ranking; do not reweight to force a preferred winner.",
+      "status": "met_for_documented_process",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-direction-council-24.md",
+          "sha256": "d751ed1f780930739e9c133aba38797525404bd9b04da0562354902167f13330"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-direction-council-31.md",
+          "sha256": "6c0d2800242e2945af2996a23511e92c813edb4c9ce4874643c4564e61dfc9c4"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-24/votes.json",
+          "sha256": "ad1026f3e308add19d1700bbc78996a31f98686740323d1d05d73a4ad3ba4f5f"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-31/votes.json",
+          "sha256": "6357f411244383be198c3ea02639aafce6a935808ac79c3335a344c48a5bb0c1"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/statistics.json",
+          "sha256": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/engineering.json",
+          "sha256": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-35/observation.json",
+          "sha256": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/statistics.json",
+          "sha256": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/observation.json",
+          "sha256": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/loco-vote.json",
+          "sha256": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/aggregate.json",
+          "sha256": "fffc10bf51e12d7e2495c158fab4458ce727f1a148c7c8c5a19dc1feeaa9aa2d"
+        }
+      ],
+      "finding": "The same ordered criteria and weights30/25/20/15/10 persist. Git history freezes24 criteria/options before votes and31 options before votes;35/38 inherit them. Ineligible B38 is N/A in the aggregate despite a conditional numeric individual vote; no zero imputation or weight redistribution. No robust ranking is inferred from overlapping ranges.",
+      "limit_or_remaining_obligation": "Criteria ACKs are documented; the repository is not a complete wall-clock transcript of every message."
+    },
+    {
+      "requirement": "At most four agents active while retaining six council members.",
+      "status": "no_violation_observed_historical_proof_incomplete",
+      "epistemic_strength": "weak",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-joint-plan-35.md",
+          "sha256": "8018047c92c9b2a80c699e0bbdc2d4d1f738fe65d411ce2021c6506efd1786fb"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-joint-plan-38.md",
+          "sha256": "af4031ace22074438e830013e21a164b72227f262e7b22c394196f1e36d747a1"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json",
+          "sha256": "bbb4bb9d08908331a4c98e5e741d38bcf2bcf09c0d183fb731fc933e01fcfba4"
+        }
+      ],
+      "finding": "The session scheduler has a hard four-active-slot limit. Root reports attempted excess activation was rejected until a slot became free; plans explicitly avoid double-booking review. Six council members can vote across turns without six concurrent workers.",
+      "limit_or_remaining_obligation": "No persisted full historical activation/event log was available. Do not claim a complete independent reconstruction of all past concurrency from these documents; absence of that log is an evidence limit, not proof of a breach."
+    },
+    {
+      "requirement": "Evaluate marginal gains on a common endpoint; do not add alternative percentages or mix MAE and CRPS.",
+      "status": "met_in_final_reviewed_claims",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "data/processed/coherent_audit/summary.json",
+          "sha256": "1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501"
+        },
+        {
+          "path": "docs/reviews/2026-11-14-science-review-18.md",
+          "sha256": "b84acc6e468eecc7e6de6fa10126ebaeae6d466e30bede6b9fa956111d2ff6e9"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+          "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+        },
+        {
+          "path": "docs/reviews/evidence/final-scientific-decision-independent-review/evidence-points.json",
+          "sha256": "babfdeb5d5cc954b6da954db802b2c4f2646efd3060b075ec3f3d044e9e0f0ef"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-crps-protocol.md",
+          "sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38"
+        }
+      ],
+      "finding": "The composed18 improvement is calculated from the same-panel original endpoints, not summed increments.21 has a different masking contract and its absolute losses are not pooled with18.39 is a separately authorized distribution-score question, not an additive model gain or rescue of a point-MAE failure.",
+      "limit_or_remaining_obligation": "Retrospective targets and overlapping regimes do not establish fresh generalization. This audit reads existing results; it computes no new losses or gains."
+    },
+    {
+      "requirement": "Preserve negative decisions and prevent post-hoc criterion substitution.",
+      "status": "met_for_audited_branches",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-science-review-23.md",
+          "sha256": "04f9e08273e4d6a347bd87ae1dde78caffc3de525022390048aa7871717b7f82"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-group-budget-report.md",
+          "sha256": "5e899052ff563bde3f4fcb0d536fb71042940412413d369bf807e4bbb839968b"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-daily-context-independent-review.md",
+          "sha256": "4f06b2825d2f5af00a71c6731ac732bc987d75fa7396bb8c8fd8964118c6c478"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+          "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-centered-ledger-revalidation-review.md",
+          "sha256": "c63352e55597a298d1f0439c4232b827e98e37de996a95f69abe6b69280aed20"
+        }
+      ],
+      "finding": "23/35/37 failed their declared primary decisions and remain negative. Favorable alternate pooling, contracts, groupings, placebo contrasts or39 scores do not replace them. Continuous30B failure remains preserved; discrete32A/33 is a declared different estimand, not retrospective repair.",
+      "limit_or_remaining_obligation": null
+    },
+    {
+      "requirement": "Freeze hypotheses, code and predictions before actual evaluation, including39.",
+      "status": "met_for39_audited_sequence",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-crps-protocol.md",
+          "sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38"
+        },
+        {
+          "path": "data/processed/crps_audit/code-freeze.json",
+          "sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f"
+        },
+        {
+          "path": "data/processed/crps_audit/checkpoint.json",
+          "sha256": "f16b3c38c6c6226cc726758b3b73d3aa358a1b7752bd99442323ce3985dc7e19"
+        },
+        {
+          "path": "data/processed/crps_audit/summary.json",
+          "sha256": "1d8af62a1aab4e8b124dab92f4438cf158ac606aa97d13a85072b3682d306ad6"
+        },
+        {
+          "path": "docs/reviews/evidence/crps-independent-review/synthetic-preflight/fixtures.json",
+          "sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5"
+        },
+        {
+          "path": "docs/reviews/evidence/crps-independent-review/synthetic-producer-comparison/summary.json",
+          "sha256": "3500ce039c919c2cb0bed55a28f272e654003ba032898f75449ac49d8716a530"
+        },
+        {
+          "path": "docs/reviews/evidence/crps-independent-review/full-review/summary.json",
+          "sha256": "a96042e91f2e724d5a47e76da232076dfb2c60e7985a90aaa1ba04f006fe6aae"
+        }
+      ],
+      "finding": "39 protocol commit precedes code freeze; code freeze precedes full-CDF checkpoint and real-response join. Independent analytic synthetic checks precede real scoring. Full independent reconstruction/integral review completed inside the cap. No new fits, solvers or scientific acquisition were used.",
+      "limit_or_remaining_obligation": "A proper score supports only the fixed whole-forecast comparison; it does not certify calibration, isolated spread value, joint allocations or physical accuracy."
+    },
+    {
+      "requirement": "Change resource plans explicitly rather than silently extending a study after outcomes.",
+      "status": "met_for_C40_amendment",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/evidence/direction-council-38/ratification.json",
+          "sha256": "b37aa8be322c101b2cae480e32b47f942f121de7785ceba12a9d83e332484850"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json",
+          "sha256": "bbb4bb9d08908331a4c98e5e741d38bcf2bcf09c0d183fb731fc933e01fcfba4"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-goes-preflight-protocol.md",
+          "sha256": "8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2"
+        },
+        {
+          "path": "docs/reviews/evidence/goes-preflight/summary.json",
+          "sha256": "277991d089afeaf211ad6c471df0f2486ee980460ca8f0094c2d6e3947e29402"
+        },
+        {
+          "path": "docs/reviews/evidence/goes-preflight/querylog.json",
+          "sha256": "54637c0d3263a9935ed3b800b6bb690c9e9125009a7e89e52f2e9e156dbfb929"
+        },
+        {
+          "path": "docs/reviews/evidence/goes-preflight-independent-review/summary.json",
+          "sha256": "678221034e254f0c08d3aed189351d122fba74ee0d1dfeaf0cd8141025e71248"
+        }
+      ],
+      "finding": "Initial38 plan deferred C except a separately gated substitution after early A stop. The six-member resource amendment explicitly broadens this to early completed A, preserves D and authorizes a documentary-only cap.39 completion precedes that window;40 protocol commit precedes recorded direct HTTP requests. Dedicated peer review completed within its cap.",
+      "limit_or_remaining_obligation": "The amendment is a real plan change, not the original untouched sequence. It is justified by released time/review capacity, not the sign of CRPS. Some web-tool discovery timestamps are not a full persistent request transcript; the timed direct-HTTP log and explicit peer review provide the retained evidence."
+    },
+    {
+      "requirement": "Meet every preregistered producer deliverable without retroactively claiming missing metadata existed.",
+      "status": "partially_unmet_environment37",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-daily-context-model-protocol.md",
+          "sha256": "368134a10997832cc6f5a846aa5c27dc90771168b0f02528c1e71e2cd37a08cf"
+        },
+        {
+          "path": "data/processed/daily_context_audit/code-freeze.json",
+          "sha256": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-daily-context-independent-review.md",
+          "sha256": "4f06b2825d2f5af00a71c6731ac732bc987d75fa7396bb8c8fd8964118c6c478"
+        },
+        {
+          "path": "docs/reviews/evidence/daily-context-independent-review/freeze.json",
+          "sha256": "c76cf22910468efbc3955bf3c378f2a09d1969b3b8d4e939c72640b5ca65d011"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-crps-protocol.md",
+          "sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38"
+        },
+        {
+          "path": "data/processed/crps_audit/code-freeze.json",
+          "sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f"
+        }
+      ],
+      "finding": "37 required environment/version provenance but its producer freeze contains no such snapshot. Later reviewer-observed environment metadata is transparently separate and does not retroactively fulfill the contemporaneous producer requirement.39 corrected the workflow by recording producer environment at freeze.",
+      "limit_or_remaining_obligation": "This is an explicit documentary protocol deviation, still historical and not retrospectively repaired. It does not by itself refute the independently reproduced mathematics or the negative37 result."
+    },
+    {
+      "requirement": "Report all required controls/diagnostics, including unflattering ones.",
+      "status": "35_omission_completed_by_transparent_supplement",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-group-budget-protocol.md",
+          "sha256": "a1107de9e9c1256f8e6a502d868e9d536fca5a624d50257d514750e7a73f778c"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-group-budget-report.md",
+          "sha256": "5e899052ff563bde3f4fcb0d536fb71042940412413d369bf807e4bbb839968b"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-group-budget-independent-review.md",
+          "sha256": "351e82a1cb86d61935fc4baedbf324b5ae6deb5ecf134d93f4228e3091f6b54f"
+        },
+        {
+          "path": "docs/reviews/evidence/group-budget-independent-review/summary.json",
+          "sha256": "cf3f745f3cd525e1ce29c429c15d1c9427baf6a890260b3096d2d5079b4bd8af"
+        },
+        {
+          "path": "docs/reviews/evidence/group-budget-independent-review/all-method-decision-diagnostics.csv",
+          "sha256": "b38f7658f7e96a3a1da707faacf11d4579eed9851f6d05fc5247d0f5d145690e"
+        }
+      ],
+      "finding": "35 producer omitted required B/C diagnostic fields. Root authorized a pre-frozen independent postexecution complement without refits or changing the primary, and original producer outputs were retained. The supplemented scientific record is auditable; the first producer package was not complete as preregistered.",
+      "limit_or_remaining_obligation": "Do not rewrite this as every original producer artifact passed all deliverable requirements on first issue."
+    },
+    {
+      "requirement": "Keep scientific publication gates and unresolved observation limits intact.",
+      "status": "met_as_current_artifact_claims",
+      "epistemic_strength": "strong",
+      "evidence": [
+        {
+          "path": "docs/method.md",
+          "sha256": "da6d40e5a2d1d180043247102bf4d7541ba3e38c08edbe51a6f8e114181293a1"
+        },
+        {
+          "path": "data/processed/params.json",
+          "sha256": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd"
+        },
+        {
+          "path": "data/processed/gates.csv",
+          "sha256": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42"
+        },
+        {
+          "path": "web/public/data/index.json",
+          "sha256": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+          "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision-addendum.md",
+          "sha256": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-consolidation-independent-review.md",
+          "sha256": "05246f9594522a12900910a25866fd74034cea8f7bc865588f5698f4c2b4930a"
+        }
+      ],
+      "finding": "M1 and the existing enablement gates remain the published contract. G is a point allocation; F21 is a marginal distribution of registered SNP in the same historical month conditional on observed Aqua. Physical observability, PSF, exposure, bridge/local transport and raw-ingestion limits remain unresolved.40 is documentary, not a new science acquisition.",
+      "limit_or_remaining_obligation": "The original physical-comparability question remains incomplete. Passing an engineering review or producing another score does not fulfill that scientific question or authorize promotion."
+    },
+    {
+      "requirement": "Update the repository and provide incremental PRs targeting dev.",
+      "status": "delivery_in_progress_remote_check_delegated",
+      "epistemic_strength": "incomplete",
+      "evidence": [
+        {
+          "path": "docs/reviews/README.md",
+          "sha256": "faf04c72d12333f49e4f5cc8a9c5dd163b9784d5c2a3398112a92d8faecf4d79"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+          "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision-addendum.md",
+          "sha256": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167"
+        },
+        {
+          "path": "docs/reviews/evidence/consolidation-root-checks/portable-replay.json",
+          "sha256": "f39a3e4cc22c56d27816214af14ea4a27eaf4c5e8c8f577c3b03ff3a842fc4f3"
+        }
+      ],
+      "finding": "Local Git contains incremental committed studies and consolidation; current branch is ciencia/41-consolidacion. Linked PRs and stated dev bases document the intended chain. Latest inspected commit uses the requested Daniel Quinteros identity and no signature. No GitHub query was made in this governance audit.",
+      "limit_or_remaining_obligation": "Current remote PR heads/base/CI and final push of closing artifacts require the separate engineering/GitHub audit. Local documents and remote-tracking knowledge alone are insufficient to certify current remote delivery. This governance JSON itself is a new closing artifact pending root commit/push."
+    },
+    {
+      "requirement": "Continue authorized work until08:30 Santiago/11:30UTC; preserve protected D and the closing window.",
+      "status": "pending_future_not_achieved_yet",
+      "epistemic_strength": "incomplete",
+      "evidence": [
+        {
+          "path": "docs/reviews/2026-11-15-joint-plan-38.md",
+          "sha256": "af4031ace22074438e830013e21a164b72227f262e7b22c394196f1e36d747a1"
+        },
+        {
+          "path": "docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json",
+          "sha256": "bbb4bb9d08908331a4c98e5e741d38bcf2bcf09c0d183fb731fc933e01fcfba4"
+        },
+        {
+          "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+          "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+        }
+      ],
+      "finding": "At this audit time the protected D window and final horizon have not elapsed. Early technical completion permits consolidation and preservation work; it is not evidence that a future time-bound objective has already completed.",
+      "limit_or_remaining_obligation": "Root must preserve the protected final consolidation and verify final repository/PR/CI/preservation delivery. Do not mark the global goal complete from this audit snapshot or redefine scientific gates to obtain completion."
+    }
+  ],
+  "input_file_hashes": [
+    {
+      "path": "docs/reviews/2026-11-15-direction-council-24.md",
+      "sha256": "d751ed1f780930739e9c133aba38797525404bd9b04da0562354902167f13330"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-24/votes.json",
+      "sha256": "ad1026f3e308add19d1700bbc78996a31f98686740323d1d05d73a4ad3ba4f5f"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-24/ratification.json",
+      "sha256": "183d4a8c0e5e4b29b1319616e538b26f7da1da646bccec50879b72d2869136f8"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-direction-council-31.md",
+      "sha256": "6c0d2800242e2945af2996a23511e92c813edb4c9ce4874643c4564e61dfc9c4"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-31/votes.json",
+      "sha256": "6357f411244383be198c3ea02639aafce6a935808ac79c3335a344c48a5bb0c1"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-31/ratification.json",
+      "sha256": "5f91e7dcb26d0396a5808aa539341a6a3425fb393572d1aed01c439df5639646"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-joint-plan-35.md",
+      "sha256": "8018047c92c9b2a80c699e0bbdc2d4d1f738fe65d411ce2021c6506efd1786fb"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/aggregate.json",
+      "sha256": "2539942f2f2f7d4d1c46e53d1a6d7ed140f4f2563637d046465631d7b96bedf0"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/ratification.json",
+      "sha256": "d75f706064cff5eb3a134c2ccdb929666219aac16c68f8444a1c75d46b40437a"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-joint-plan-38.md",
+      "sha256": "af4031ace22074438e830013e21a164b72227f262e7b22c394196f1e36d747a1"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/aggregate.json",
+      "sha256": "fffc10bf51e12d7e2495c158fab4458ce727f1a148c7c8c5a19dc1feeaa9aa2d"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/ratification.json",
+      "sha256": "b37aa8be322c101b2cae480e32b47f942f121de7785ceba12a9d83e332484850"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/engineering.json",
+      "sha256": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/identification-adversary.json",
+      "sha256": "857b1ca985b0ddbfd30c58737bd807ac4fb7bd5e955f6b96be09b6530f787fb1"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/statistics.json",
+      "sha256": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/observation.json",
+      "sha256": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/statistics.json",
+      "sha256": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/observation.json",
+      "sha256": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/loco-vote.json",
+      "sha256": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json",
+      "sha256": "bbb4bb9d08908331a4c98e5e741d38bcf2bcf09c0d183fb731fc933e01fcfba4"
+    },
+    {
+      "path": "data/processed/coherent_audit/summary.json",
+      "sha256": "1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-18.md",
+      "sha256": "b84acc6e468eecc7e6de6fa10126ebaeae6d466e30bede6b9fa956111d2ff6e9"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+      "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+    },
+    {
+      "path": "docs/reviews/evidence/final-scientific-decision-independent-review/evidence-points.json",
+      "sha256": "babfdeb5d5cc954b6da954db802b2c4f2646efd3060b075ec3f3d044e9e0f0ef"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-crps-protocol.md",
+      "sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-science-review-23.md",
+      "sha256": "04f9e08273e4d6a347bd87ae1dde78caffc3de525022390048aa7871717b7f82"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-group-budget-report.md",
+      "sha256": "5e899052ff563bde3f4fcb0d536fb71042940412413d369bf807e4bbb839968b"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-daily-context-independent-review.md",
+      "sha256": "4f06b2825d2f5af00a71c6731ac732bc987d75fa7396bb8c8fd8964118c6c478"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-centered-ledger-revalidation-review.md",
+      "sha256": "c63352e55597a298d1f0439c4232b827e98e37de996a95f69abe6b69280aed20"
+    },
+    {
+      "path": "data/processed/crps_audit/code-freeze.json",
+      "sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f"
+    },
+    {
+      "path": "data/processed/crps_audit/checkpoint.json",
+      "sha256": "f16b3c38c6c6226cc726758b3b73d3aa358a1b7752bd99442323ce3985dc7e19"
+    },
+    {
+      "path": "data/processed/crps_audit/summary.json",
+      "sha256": "1d8af62a1aab4e8b124dab92f4438cf158ac606aa97d13a85072b3682d306ad6"
+    },
+    {
+      "path": "docs/reviews/evidence/crps-independent-review/synthetic-preflight/fixtures.json",
+      "sha256": "e76ad48ce135b0666305b038b9407e3ef4fb45baa7e08d6d446e98daebd66ba5"
+    },
+    {
+      "path": "docs/reviews/evidence/crps-independent-review/synthetic-producer-comparison/summary.json",
+      "sha256": "3500ce039c919c2cb0bed55a28f272e654003ba032898f75449ac49d8716a530"
+    },
+    {
+      "path": "docs/reviews/evidence/crps-independent-review/full-review/summary.json",
+      "sha256": "a96042e91f2e724d5a47e76da232076dfb2c60e7985a90aaa1ba04f006fe6aae"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-goes-preflight-protocol.md",
+      "sha256": "8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight/summary.json",
+      "sha256": "277991d089afeaf211ad6c471df0f2486ee980460ca8f0094c2d6e3947e29402"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight/querylog.json",
+      "sha256": "54637c0d3263a9935ed3b800b6bb690c9e9125009a7e89e52f2e9e156dbfb929"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight-independent-review/summary.json",
+      "sha256": "678221034e254f0c08d3aed189351d122fba74ee0d1dfeaf0cd8141025e71248"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-daily-context-model-protocol.md",
+      "sha256": "368134a10997832cc6f5a846aa5c27dc90771168b0f02528c1e71e2cd37a08cf"
+    },
+    {
+      "path": "data/processed/daily_context_audit/code-freeze.json",
+      "sha256": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6"
+    },
+    {
+      "path": "docs/reviews/evidence/daily-context-independent-review/freeze.json",
+      "sha256": "c76cf22910468efbc3955bf3c378f2a09d1969b3b8d4e939c72640b5ca65d011"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-group-budget-protocol.md",
+      "sha256": "a1107de9e9c1256f8e6a502d868e9d536fca5a624d50257d514750e7a73f778c"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-group-budget-independent-review.md",
+      "sha256": "351e82a1cb86d61935fc4baedbf324b5ae6deb5ecf134d93f4228e3091f6b54f"
+    },
+    {
+      "path": "docs/reviews/evidence/group-budget-independent-review/summary.json",
+      "sha256": "cf3f745f3cd525e1ce29c429c15d1c9427baf6a890260b3096d2d5079b4bd8af"
+    },
+    {
+      "path": "docs/reviews/evidence/group-budget-independent-review/all-method-decision-diagnostics.csv",
+      "sha256": "b38f7658f7e96a3a1da707faacf11d4579eed9851f6d05fc5247d0f5d145690e"
+    },
+    {
+      "path": "docs/method.md",
+      "sha256": "da6d40e5a2d1d180043247102bf4d7541ba3e38c08edbe51a6f8e114181293a1"
+    },
+    {
+      "path": "data/processed/params.json",
+      "sha256": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd"
+    },
+    {
+      "path": "data/processed/gates.csv",
+      "sha256": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42"
+    },
+    {
+      "path": "web/public/data/index.json",
+      "sha256": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-final-scientific-decision-addendum.md",
+      "sha256": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-consolidation-independent-review.md",
+      "sha256": "05246f9594522a12900910a25866fd74034cea8f7bc865588f5698f4c2b4930a"
+    },
+    {
+      "path": "docs/reviews/README.md",
+      "sha256": "faf04c72d12333f49e4f5cc8a9c5dd163b9784d5c2a3398112a92d8faecf4d79"
+    },
+    {
+      "path": "docs/reviews/evidence/consolidation-root-checks/portable-replay.json",
+      "sha256": "f39a3e4cc22c56d27816214af14ea4a27eaf4c5e8c8f577c3b03ff3a842fc4f3"
+    }
+  ],
+  "new_fits": 0,
+  "new_losses": 0,
+  "new_science": 0,
+  "new_web_queries": 0,
+  "root_files_modified_by_this_auditor": false
+}

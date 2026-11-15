@@ -1,0 +1,13 @@
+{
+  "completed_utc": "2026-11-15T09:54:52.138233+00:00",
+  "source_commit": "cc7a6f61261f3c32d7fc33d938ba3e5db2b07c7d",
+  "clean_local_git_clone": true,
+  "private_inputs_in_clone": false,
+  "command": "PYTHONDONTWRITEBYTECODE=1 <existing locked venv python> -O pipeline/verify_crps_evidence.py",
+  "dependency_environment": "Existing project virtual environment reused; no new installation claimed. GitHub CI separately installs uv.lock on Linux.",
+  "uv_lock_sha256": "99571ab41e1e7cc9b2857065668e3cf225d8c01465c6b679b22022f340967930",
+  "fits": 0,
+  "downloads": 0,
+  "no_new_scientific_evaluation": true,
+  "scope": "Exact replay of same frozen forecasts and loss definitions; source fitting and acquisition not reproduced."
+}

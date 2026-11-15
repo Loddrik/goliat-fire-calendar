@@ -1,0 +1,14 @@
+{
+  "id": "S1",
+  "url": "https://data.nasa.gov/dataset/modis-aqua-thermal-anomalies-fire-daily-l3-global-1km-sin-grid-v061-a6350",
+  "publisher": "NASA Open Data Portal / LP DAAC",
+  "date_in_source": "Modified 2026-11-02T22:15:58Z; catalog updated 2026-11-05",
+  "locator": "description; identifier; temporal",
+  "facts": [
+    "MYD14A1.061 is 1 km daily information in files grouping eight days.",
+    "Four layers document fire classification, QA, maximum FRP and fire scan sample.",
+    "Catalog temporal extent shown: 2002-07-04/2026-11-02; this is collection metadata, not AOI coverage."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

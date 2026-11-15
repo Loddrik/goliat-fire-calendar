@@ -1,0 +1,217 @@
+{
+  "role": "estadística y predicción",
+  "stage": "consejo35 multifocal; juicio de diseño, sin nueva evaluación de modelos",
+  "criteria_confirmation": "Se conservan criterios24/31:30/25/20/15/10, sin reponderar; rangos subjetivos no son intervalos de confianza ni nuevos scores científicos.",
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_reproducibility_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretive_utility": 10
+  },
+  "non_compensable": [
+    "Unknown no equivale a0; declarar operador/target/unidad/cohorte/pérdida.",
+    "No G1,truth físico,causalidad o holdout fresco inventado.",
+    "No rescatar primaria con secundario/año/contrato/grupo favorable.",
+    "Representación distinta requiere control equivalente o declarar otra pregunta.",
+    "Sin promoción/cambio de producción ni nuevas grillas de rescate."
+  ],
+  "read_scope": "Sólo summary33 existente y preflight35; no nuevas pérdidas, target values, refits, placebo, mezclas o código experimental. El cálculo Python se limita a ponderar estas notas subjetivas.",
+  "source_sha256": {
+    "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916",
+    "docs/reviews/2026-11-15-next-model-preflight.md": "232c23e63d8037b22575206ebb8ccc9daf7cabb46fbbdaddba0b6468ed897964"
+  },
+  "existing33_evidence_read": {
+    "G1_physical": false,
+    "all_final_data_rows": 898704,
+    "structural_gates_passed": true,
+    "2019_primary": {
+      "Ntotal": 39601,
+      "known_positive_union": 0,
+      "Jaccard_known": null
+    },
+    "2023_primary": {
+      "Ntotal": 39601,
+      "nine": {
+        "00": 39396,
+        "10": 135,
+        "01": 18,
+        "11": 27,
+        "0U": 25,
+        "1U": 0,
+        "U0": 0,
+        "U1": 0,
+        "UU": 0
+      },
+      "Jaccard_known": 0.15
+    },
+    "2023_other_existing_scenarios": {
+      "phase0_h500_early_Jaccard": 0.12244897959183673,
+      "phase125_h250_early_Jaccard": 0.12299465240641712
+    },
+    "retention_existing": "2023VIIRS16positiveownerIDs en250m frente a12 en fase0/500m; dosAquaAOIborde con geometríaNULL se conservaron. Sin inferir pérdida de fuegos.",
+    "interpretation": "33 demuestra un operador nominal auditable y aliasing/retención dependientes del muestreo. No proporciona labels verdaderas, áreas físicas, detección independiente o criterio para afinar la armonización mensual."
+  },
+  "options": {
+    "A": {
+      "name": "Presupuesto por regiones reales frente a partición artificial33/21 porhash fijo",
+      "evidence": "B yCDF congelados están disponibles sin refit. Ataca acoplamiento de la decisión y permite guardrails territoriales; la igualdad de totales regionales es construida. Una partición artificial no identifica ecología ni causalidad.",
+      "uncertainties": "Beneficio externo por comuna desconocido; grupos difieren también en actividad/espacio. Fechas/cohortes ya exploradas y partición artificial única.",
+      "reject_or_stop": "No promover si mejora únicamente el total regional construido, se elige elhash tras resultados, cambiaCDF/control/contrato o se oculta coste14/held/extremos. Cap prefijado45min con revisión; reproducción fallida o cap→inconcluso, sin otra partición.",
+      "first_artifact": "IdentidadCDF/B/panel y presupuestos, tres decisiones global54/real/artificial con método congelado, invariancia de labels y mismas métricas/guardrails. Sin refits ni cambio de target.",
+      "branches": [
+        "Si cambiar acoplamiento altera costes por comuna frente a ambos controles, documentar dependencia del presupuesto; no seleccionar geografía por ganador.",
+        "Si conserva resultados o reproduce el patrón con partición artificial, limitar explicación geográfica y cerrar hipótesis.",
+        "Si intervalos prácticos/guardrails se contradicen o falla reproducción, inconcluso; no explorar seeds."
+      ],
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 85,
+          "upper": 95
+        },
+        "discriminating_information": {
+          "lower": 70,
+          "upper": 85
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 75,
+          "upper": 90
+        },
+        "transport_selection": {
+          "lower": 60,
+          "upper": 75
+        },
+        "interpretive_utility": {
+          "lower": 80,
+          "upper": 90
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 75.0,
+        "upper": 88.0
+      }
+    },
+    "B": {
+      "name": "Persistencia diaria en la misma celdaAqua y placebo de días SOURCE-only",
+      "evidence": "celldays/detections derivados y hashes históricos disponibles sin1071CSV crudos; agrega información temporal que no tiene el conteo mensual. No prueba observabilidad ni continuidad del mismo fuego.",
+      "uncertainties": "Modelo/forma de incorporar la feature no fijados, coste de nuevosfits/controles alto; efecto podría ser sólo intensidad o fuentes persistentes. Semilla única no es inferencia por aleatorización.",
+      "reject_or_stop": "No abrir family si no cabe protocolo y revisión completos; fijar operador misma-celda UTC, bloques/permutación/celda vs comuna, máscara ySOURCE-only sin target. Ausencia de detección no es oportunidad0. Si hace falta grid o retocar placebo después, detener.",
+      "first_artifact": "Dentro45min, cuboAqua diario/feature y placebo prefijado con hashes, dominio/cobertura y reconciliación mensual del mismo contrato; sin nuevas pérdidas hasta protocolo de modelo.",
+      "branches": [
+        "Si eventual feature supera controles y placebo prefijados en estimando congelado, evidencia predictiva condicional, no persistencia física.",
+        "Si placebo reproduce la ventaja o feature no aporta, cerrar familia sin otra semilla.",
+        "Si faltan condiciones comparables/coverage o se agota cap, inconcluso, sin imputar ausencia."
+      ],
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 60,
+          "upper": 80
+        },
+        "discriminating_information": {
+          "lower": 70,
+          "upper": 90
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 35,
+          "upper": 60
+        },
+        "transport_selection": {
+          "lower": 55,
+          "upper": 75
+        },
+        "interpretive_utility": {
+          "lower": 65,
+          "upper": 80
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 57.25,
+        "upper": 77.75
+      }
+    },
+    "C": {
+      "name": "Mezcla fija H=(B+Ecoherent)/2",
+      "evidence": "Componentes congelados disponibles en18/21/24C. Cero refit y proporción fijada; fácil control de regularización paraA. ConvexidadL1 da L(H)≤[L(B)+L(E)]/2, pero no garantiza superar el mejor ni proteger cada subgrupo.",
+      "uncertainties": "Escasa información mecanística; reutiliza los mismos destinos. ConservaΣB global compartido, por lo que no resuelve el sesgo global construido ni observabilidad.",
+      "reject_or_stop": "No buscar otras proporciones ni rescatar promedio con otra unidad/target. Si guardrails14/held/extremos son adversos, conservar resultado y detener; ningúnpase físico. Cap20–25min con revisión.",
+      "first_artifact": "Identidad de componentes/keys, H fijo y contabilidad de presupuestos con reportes comparables del panel elegido, sinfit.",
+      "branches": [
+        "Si reduce costes territoriales preservando la comparación global, candidato descriptivo de compromiso que requiere revisión, no promoción automática.",
+        "Si sólo interpola sin resolver guardrails, cerrar como control de regularización.",
+        "Si contrato/cohorte no reproducen, inconcluso y sin completar con otropanel."
+      ],
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 90,
+          "upper": 98
+        },
+        "discriminating_information": {
+          "lower": 45,
+          "upper": 60
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 95,
+          "upper": 100
+        },
+        "transport_selection": {
+          "lower": 40,
+          "upper": 55
+        },
+        "interpretive_utility": {
+          "lower": 75,
+          "upper": 85
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 70.75,
+        "upper": 81.15
+      }
+    },
+    "D": {
+      "name": "Cerrar nuevas familias y consolidar evidencia, reproducibilidad y entrega",
+      "evidence": "Hay23primaria negativa,24Cglobal estable pero14frágil, fallos continuos conservados y33nominal aprobado. La entrega coherente permite una decisión auditable dentro del horizonte restante.",
+      "uncertainties": "No agrega discriminación empírica nueva ni resuelve observabilidad; requiere actualizar relato/artefactos sin reinterpretar resultados existentes.",
+      "reject_or_stop": "No convertir consolidación en claim de validación o limpiar negativos. Si encuentra incompatibilidad de contrato/procedencia, corregir relato y registrar bloqueo, sin reoptimizar.",
+      "first_artifact": "≤45min: mapa de evidencia y decisiones/limitaciones, protocolo de operación reproducible y actualización del artefacto final con33 y límites pendientes, sin nuevas pérdidas.",
+      "branches": [
+        "Si evidencias y hashes sostienen el relato, cerrar una entrega revisable y útil.",
+        "Si consolidación descubre afirmaciones incompatibles, retirar/precisar esas afirmaciones y preservar negativos.",
+        "Si falta evidencia de un claim, marcarlo pendiente en vez de completar con supuesto."
+      ],
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 90,
+          "upper": 100
+        },
+        "discriminating_information": {
+          "lower": 50,
+          "upper": 70
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 90,
+          "upper": 100
+        },
+        "transport_selection": {
+          "lower": 55,
+          "upper": 75
+        },
+        "interpretive_utility": {
+          "lower": 90,
+          "upper": 100
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 74.75,
+        "upper": 88.75
+      }
+    }
+  },
+  "recommended_sequence": [
+    "D como entrega obligatoria y checkpoint de consolidación antes de ampliar familias.",
+    "Si presupuesto real restante y revisión lo permiten, A como único contraste principal nuevo, conC control fijo barato bajo el mismo protocolo/cohorte; no campañas separadas elegidas por ganador.",
+    "B queda para un protocolo posterior: su primer artefacto posible es la featureAqua auditada, no abrir otra familia a última hora."
+  ],
+  "ordering_uncertainty": "A yD se solapan: no hay ganador robusto por notas. La secuenciaD→A(+Ccontrol) refleja coste de oportunidad y obligación de entregar dentro de4h20;C no superaA sólo por ser barato.",
+  "connection33_to_model": "Usar33 para limitar claims y exigir registrar unidad, máscara, ceros desconocidos y representatividad nativa. No transferir Jaccard/tierQA/retención del2023 fijo a coeficientesAqua→SNP, pesosCDF, probabilidades mensuales o elegir persistencia. La discrepancia puntual no adjudica cuál satélite tiene razón y no es target de entrenamiento. La sensibilidad de grilla advierte contra asumir que agregar en celdas iguala instrumentos; no prueba que el fallo23 sea causado por agregación.",
+  "additional_better_proposal_unscored": "Antes de A, comprobar algebraicamente que imponer presupuestos por grupos restringe el conjunto factible del problemaCDF global: su riesgoCDF óptimo no puede mejorar el óptimo global. Por eso cualquier mejora deMAEobservada sería regularización externa, no mejora del solver. Este guard analítico acompañaA, no es otra familia puntuada."
+}

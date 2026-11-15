@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-11-15T10:34:28.263406+00:00",
+  "code_freeze_sha256": "c5fb02bf5dcb09e5fbe5b081d30831e713637c42b00b465cedb436c17082e90d",
+  "protocol_sha256": "41734018c7a516444053c7042d08b4d813c87e01cb1f24d3cb6e998ad91d0646",
+  "output_sha256": {
+    "summary.json": "c02bd9e3614ebc2393d4c03039951a903d54b6fe79c43a459878d6f050c7e58d",
+    "monthly-controls.csv": "14291fef4bf41aa7de8c311727a2be3e4bafe06a8e433ab18b7fbd9d0b83e642",
+    "season-totals.csv": "5d20a8dd8177c1910cc3a1fc2f6212557fc38312c65b8e752f0885fdbfed4031",
+    "per-cut.csv": "e39b7bde3522517b7b505954f7fae2db06f5951bc486d35fef9463b035be8d74",
+    "code-freeze.json": "c5fb02bf5dcb09e5fbe5b081d30831e713637c42b00b465cedb436c17082e90d"
+  },
+  "production_unchanged": true,
+  "input_unchanged": true,
+  "fits": 0,
+  "solvers": 0,
+  "downloads": 0,
+  "output_bytes_before_manifest": 183939
+}

@@ -1,0 +1,37 @@
+{
+  "completed_utc": "2026-11-15T09:40:54.422116+00:00",
+  "scope": "documentary_and_catalogue_metadata_only",
+  "protocol_commit": "64b79f6",
+  "protocol_sha256": "8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2",
+  "cap_UTC": {
+    "start": "2026-11-15T09:15:00Z",
+    "end": "2026-11-15T10:00:00Z"
+  },
+  "primary_documents_selected": 9,
+  "selected_catalogue_URLs": 2,
+  "catalogue_objects_2019": 4,
+  "catalogue_objects_2023": 6,
+  "historical_cadence_from_filenames": {
+    "2019-01-03_hour18": "M3,15min starts",
+    "2023-02-10_hour18": "M6,10min starts"
+  },
+  "documentary_feasibility": "conditional_broad_temporal_context_only",
+  "fine375m_or_minute_adjudication_support": "not_established_not_general_physical_impossibility",
+  "historical_case_decoder": "unknown_not_validated",
+  "actual_case_projection_QA_software_attributes": "not_read",
+  "actual_case_scientific_signal": "not_read",
+  "actual_GetObject_access_and_terms": "not_tested_not_established_by_LIST_or_generic_PUG_license",
+  "independent_review": "no_blockers_for_documentary_conditioned_scope; evidence separate",
+  "temporal_filter_version_issue": "ReadMeDec2019samepixel_prior12h explicitlydiffersfromATBDneighbor; deployedrulesunknown",
+  "science_bytes_acquired": 0,
+  "scientific_product_GET_HEAD_Range_requests": 0,
+  "science_images_or_tiles": 0,
+  "credentials_or_account_actions": false,
+  "future_science_acquisition_authorized": false,
+  "old_L2_budget_reopened": false,
+  "new_features_models_fits_scores_or_solvers": 0,
+  "gate1_passed": false,
+  "report_sha256": "90709289859a6e05667371c541df77d44bef05b52d4677ac6dbc895408302c52",
+  "data_code_model_files_modified_by_producer": false,
+  "D_protected_schedule_unchanged": true
+}

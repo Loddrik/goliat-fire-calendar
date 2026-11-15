@@ -1,0 +1,118 @@
+{
+  "C1": {
+    "count": 4,
+    "truncated": false,
+    "consecutive_start_differences_seconds": [
+      900.0,
+      900.0,
+      900.0
+    ],
+    "objects": [
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031800362_e20190031811129_c20190031811247.nc",
+        "mode_from_name": "M3",
+        "declared_start_utc": "2019-01-03T18:00:36.200000+00:00",
+        "declared_end_utc": "2019-01-03T18:11:12.900000+00:00",
+        "metadata_size_bytes": 3708839,
+        "metadata_last_modified": "2019-12-18T15:23:43.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031815362_e20190031826129_c20190031826248.nc",
+        "mode_from_name": "M3",
+        "declared_start_utc": "2019-01-03T18:15:36.200000+00:00",
+        "declared_end_utc": "2019-01-03T18:26:12.900000+00:00",
+        "metadata_size_bytes": 3692698,
+        "metadata_last_modified": "2019-12-18T15:23:44.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031830362_e20190031841129_c20190031841245.nc",
+        "mode_from_name": "M3",
+        "declared_start_utc": "2019-01-03T18:30:36.200000+00:00",
+        "declared_end_utc": "2019-01-03T18:41:12.900000+00:00",
+        "metadata_size_bytes": 3654924,
+        "metadata_last_modified": "2019-12-18T15:23:43.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031845362_e20190031856129_c20190031856249.nc",
+        "mode_from_name": "M3",
+        "declared_start_utc": "2019-01-03T18:45:36.200000+00:00",
+        "declared_end_utc": "2019-01-03T18:56:12.900000+00:00",
+        "metadata_size_bytes": 3614040,
+        "metadata_last_modified": "2019-12-18T15:23:43.000Z",
+        "data_object_requested": false
+      }
+    ],
+    "meaning": "Naming/catalog metadata only, not verified pixel exposure or scientific variables"
+  },
+  "C2": {
+    "count": 6,
+    "truncated": false,
+    "consecutive_start_differences_seconds": [
+      600.0,
+      600.0,
+      600.0,
+      600.0,
+      600.0
+    ],
+    "objects": [
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411800205_e20230411809513_c20230411810065.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:00:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:09:51.300000+00:00",
+        "metadata_size_bytes": 3587524,
+        "metadata_last_modified": "2023-02-10T18:10:13.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411810205_e20230411819513_c20230411820096.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:10:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:19:51.300000+00:00",
+        "metadata_size_bytes": 3594010,
+        "metadata_last_modified": "2023-02-10T18:20:34.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411820205_e20230411829513_c20230411830079.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:20:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:29:51.300000+00:00",
+        "metadata_size_bytes": 3593931,
+        "metadata_last_modified": "2023-02-10T18:30:32.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411830205_e20230411839513_c20230411840062.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:30:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:39:51.300000+00:00",
+        "metadata_size_bytes": 3593628,
+        "metadata_last_modified": "2023-02-10T18:40:32.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411840205_e20230411849513_c20230411850080.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:40:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:49:51.300000+00:00",
+        "metadata_size_bytes": 3592363,
+        "metadata_last_modified": "2023-02-10T18:50:32.000Z",
+        "data_object_requested": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411850205_e20230411859513_c20230411900061.nc",
+        "mode_from_name": "M6",
+        "declared_start_utc": "2023-02-10T18:50:20.500000+00:00",
+        "declared_end_utc": "2023-02-10T18:59:51.300000+00:00",
+        "metadata_size_bytes": 3578174,
+        "metadata_last_modified": "2023-02-10T19:00:27.000Z",
+        "data_object_requested": false
+      }
+    ],
+    "meaning": "Naming/catalog metadata only, not verified pixel exposure or scientific variables"
+  }
+}

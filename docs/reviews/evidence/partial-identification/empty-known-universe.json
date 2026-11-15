@@ -1,0 +1,100 @@
+{
+  "G1": false,
+  "physical_validation": false,
+  "request": {
+    "coupling": "cartesian_across_units",
+    "positive_rule_id": "toy-positive-rule-v1",
+    "schema_version": 1,
+    "scope": {
+      "disjoint": true,
+      "status": "fixed_hypothetical",
+      "unit_weight": 1,
+      "universe_id": "toy-disjoint-v1"
+    },
+    "target": "registered_positive",
+    "units": []
+  },
+  "result": {
+    "computation": {
+      "backpointers": 0,
+      "limits": {
+        "backpointers": 200000,
+        "states_per_layer": 100000,
+        "transitions": 2000000,
+        "units": 200
+      },
+      "transitions": 0
+    },
+    "constraints": [],
+    "coupling": "cartesian_across_units",
+    "decision": {
+      "possible_actions": [
+        "no_review_from_this_rule"
+      ],
+      "status": "invariant"
+    },
+    "metrics": {
+      "A_only": {
+        "defined_possible": true,
+        "lower": 0,
+        "lower_witness": {},
+        "undefined_possible": false,
+        "upper": 0,
+        "upper_witness": {}
+      },
+      "A_only_fraction_of_A": {
+        "defined_possible": false,
+        "lower": null,
+        "lower_witness": null,
+        "undefined_possible": true,
+        "upper": null,
+        "upper_witness": null
+      },
+      "V_only": {
+        "defined_possible": true,
+        "lower": 0,
+        "lower_witness": {},
+        "undefined_possible": false,
+        "upper": 0,
+        "upper_witness": {}
+      },
+      "V_only_fraction_of_V": {
+        "defined_possible": false,
+        "lower": null,
+        "lower_witness": null,
+        "undefined_possible": true,
+        "upper": null,
+        "upper_witness": null
+      },
+      "disagreement_count": {
+        "defined_possible": true,
+        "lower": 0,
+        "lower_witness": {},
+        "undefined_possible": false,
+        "upper": 0,
+        "upper_witness": {}
+      },
+      "jaccard": {
+        "defined_possible": false,
+        "lower": null,
+        "lower_witness": null,
+        "undefined_possible": true,
+        "upper": null,
+        "upper_witness": null
+      }
+    },
+    "positive_rule_id": "toy-positive-rule-v1",
+    "qualifier": "sharp_only_within_declared_cartesian_hypothetical_model",
+    "reachable_states": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "status": "identified_set",
+    "unit_count": 0,
+    "universe_id": "toy-disjoint-v1"
+  },
+  "synthetic_only": true
+}

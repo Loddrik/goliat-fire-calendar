@@ -1,0 +1,198 @@
+{
+  "scope": "Technical center associations and scan-reference offsets only; no fire outcomes",
+  "started_utc": "2026-11-15T01:38:15.473156+00:00",
+  "protocol_sha256": "82d37e446ef6572a117f744e88c1a3db5931307182f60e30a04a794805023490",
+  "code_sha256": "1d39b74932ca5fa8dea788686e6439391219116da612161dfe0d3cc4032c4d61",
+  "input_sha256": {
+    "MYD03": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c",
+    "VNP03IMG": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7"
+  },
+  "input_bytes": {
+    "MYD03": 34098478,
+    "VNP03IMG": 156055168
+  },
+  "opened_products": [
+    "MYD03",
+    "VNP03IMG"
+  ],
+  "environment": {
+    "python": "3.10.0",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "packages": {
+      "numpy": "2.2.6",
+      "h5py": "3.16.0",
+      "pyhdf": "0.11.7",
+      "pyproj": "3.6.1"
+    },
+    "proj_version": "9.3.0"
+  },
+  "aoi": {
+    "epsg": 32718,
+    "center_lonlat": [
+      -72.5,
+      -37
+    ],
+    "center_xy": [
+      722459.8026976171,
+      5902205.764776958
+    ],
+    "half_side_m": 25000.0,
+    "VIIRS_guard_m": 500.0
+  },
+  "geo_policy": "coordinates finite/in range and geolocation QA exactly0; declared conservative policy",
+  "global_quality_flag_inherited": "Suspect",
+  "inherited_quality_metadata_sha256": "456ebceb316dc38f2d0bbb97a6c6157861dc22158c044d0409457c92a39e1bac",
+  "global_quality_quarantined": true,
+  "gate1_passed": false,
+  "scientific_eligibility_certified": false,
+  "common_footprints_verified": false,
+  "pixel_exposure_times_verified": false,
+  "native_shapes": {
+    "MYD03": [
+      2030,
+      1354
+    ],
+    "VNP03IMG": [
+      6464,
+      6400
+    ]
+  },
+  "scan_counts": {
+    "MYD03": 203,
+    "VNP03IMG": 202
+  },
+  "native_field_attributes": {
+    "MYD03": {
+      "EV start time": {
+        "units": "seconds",
+        "_FillValue": -2000000000.0
+      },
+      "EV center time": {
+        "units": "seconds",
+        "_FillValue": -2000000000.0
+      }
+    },
+    "VNP03IMG": {
+      "scan_start_time": {
+        "units": "seconds",
+        "long_name": "Scan start time (TAI93)",
+        "_FillValue": [
+          -999.9
+        ]
+      },
+      "scan_end_time": {
+        "units": "seconds",
+        "long_name": "Scan end time (TAI93)",
+        "_FillValue": [
+          -999.9
+        ]
+      },
+      "ev_mid_time": {
+        "units": "seconds",
+        "long_name": "Earth view mid time (TAI93)",
+        "_FillValue": [
+          -999.9
+        ]
+      }
+    }
+  },
+  "selection_counts": {
+    "Aqua": {
+      "native_centers_total": 2748620,
+      "coordinate_invalid": 0,
+      "geo_flag_fill": 0,
+      "geo_flag_nonzero_nonfill": 0,
+      "projection_invalid_among_valid_coordinates_geo0": 0,
+      "geo0_centers_selected": 2280
+    },
+    "VIIRS": {
+      "native_centers_total": 41369600,
+      "coordinate_invalid": 0,
+      "geo_flag_fill": 0,
+      "geo_flag_nonzero_nonfill": 0,
+      "projection_invalid_among_valid_coordinates_geo0": 0,
+      "geo0_centers_selected": 17660
+    }
+  },
+  "association_counts": {
+    "Aqua_seeds": 2280,
+    "VIIRS_candidates": 17660,
+    "matched_Aqua_seeds": 2280,
+    "unmatched_Aqua_seeds": 0,
+    "matched_VIIRS_outside_primary_square": 8,
+    "distinct_VIIRS_centers_used": 2280,
+    "VIIRS_centers_reused": 0,
+    "associations_beyond_first_use": 0,
+    "associations_time_unknown": 0
+  },
+  "nearest_distance_m": {
+    "count": 2280,
+    "quantiles": {
+      "0": 4.320792938654091,
+      "0.25": 107.53437626934567,
+      "0.5": 153.98513540451523,
+      "0.75": 188.74734360105947,
+      "1": 273.7994820812862
+    }
+  },
+  "scan_reference_offsets": {
+    "center_reference": {
+      "definition": "Aqua_minus_SNPP native TAI93 seconds; not pixel acquisition time",
+      "signed_seconds": {
+        "count": 2280,
+        "quantiles": {
+          "0": 323.9893615245819,
+          "0.25": 325.1643376350403,
+          "0.5": 325.7686376571655,
+          "0.75": 326.0708031654358,
+          "1": 327.24575567245483
+        }
+      },
+      "absolute_seconds": {
+        "count": 2280,
+        "quantiles": {
+          "0": 323.9893615245819,
+          "0.25": 325.1643376350403,
+          "0.5": 325.7686376571655,
+          "0.75": 326.0708031654358,
+          "1": 327.24575567245483
+        }
+      }
+    },
+    "start_reference": {
+      "definition": "Aqua_minus_SNPP native TAI93 seconds; not pixel acquisition time",
+      "signed_seconds": {
+        "count": 2280,
+        "quantiles": {
+          "0": 324.0407519340515,
+          "0.25": 325.2157310247421,
+          "0.5": 325.82002794742584,
+          "0.75": 326.1221970319748,
+          "1": 327.29714596271515
+        }
+      },
+      "absolute_seconds": {
+        "count": 2280,
+        "quantiles": {
+          "0": 324.0407519340515,
+          "0.25": 325.2157310247421,
+          "0.5": 325.82002794742584,
+          "0.75": 326.1221970319748,
+          "1": 327.29714596271515
+        }
+      }
+    }
+  },
+  "valid_reference_scans": {
+    "MYD03": 203,
+    "VNP03IMG": 202
+  },
+  "completed_utc": "2026-11-15T01:38:25.605940+00:00",
+  "limitations": [
+    "No fire product opened or detection class used",
+    "No surface coverage or physical opportunity denominator",
+    "Spatial nearest centers may not share footprint",
+    "Scan reference offsets do not bound per-pixel exposure",
+    "One quarantined candidate, not representative or independent observations"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "role": "adversarial identification and selection",
+  "criteria_ratified_before_judgment": true,
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_review_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretation": 10
+  },
+  "original_votes_read": [
+    "statistics.json",
+    "observation.json",
+    "loco-vote.json"
+  ],
+  "proposal_read": "loco-proposals.json",
+  "new_scores_targets_losses_fits_data_or_code_experiments": false,
+  "subjective_scores_added": false,
+  "criteria_or_weights_changed": false,
+  "verdict": "Conditionally agree with A as the only new quantitative study, D protected, and C documentary only if its review capacity is explicitly reserved. No robust ranking asserted.",
+  "mandatory_corrections": [
+    {
+      "id": "A_estimand_and_claim",
+      "issue": "A whole frozen CDF versus deltaB comparison changes both location and dispersion. It cannot isolate the value of uncertainty or chronology.",
+      "required": "State the primary as equal-weight mean over four held regimes of CRPS(F21 original) minus CRPS(deltaB), with unchanged queries, source-trained models, scale/floor, masks and registered SNP targets. Favorable means better retrospective distribution-forecast score than this particular deterministic reference, not a causal benefit of spread, Aqua information, calibration or physical truth.",
+      "deltaB_sufficiency": "Sufficient for this narrow whole-forecast comparison. No additional reference is required to identify it. A delta-median(F21) control would answer a stronger location-controlled spread question and must be preregistered if explicitly adopted; it must not be added after seeing CRPS or silently become another primary. I do not require that scope expansion."
+    },
+    {
+      "id": "A_negative_claim",
+      "issue": "Some original language suggests that failure against deltaB removes the CDF's probabilistic interpretation.",
+      "required": "A valid normalized CDF remains a mathematical probability forecast even if it loses this benchmark. Negative means no advantage under this fixed proper-score comparison; it does not invalidate all probabilistic modeling, all chronology or every downstream allocation. Positive does not establish calibration or calibrated intervals."
+    },
+    {
+      "id": "A_marginal_not_joint",
+      "issue": "F21 consists of marginal predictive laws, whereas G is a budget-coupled point decision.",
+      "required": "Do not fabricate a reconciled joint CDF or identify G with a distribution. Marginal CRPS does not validate dependence, coherent total uncertainty or the global allocation policy. E11 versus parent on held is structurally identical and must not be reported as a new contrast."
+    },
+    {
+      "id": "A_preserved_failures_and_selection",
+      "issue": "A new proper score could be used to recast previously failed point-model comparisons as success.",
+      "required": "Score only the original frozen21 CDF, not Qreal/Qplacebo37, no model selection and no refits. Preserve 23/35/37 negatives and the absence of fresh holdout. Four overlapping retrospective regimes are not independent replications. Keep count units and fixed raw-scale averaging; do not rescue results by normalizing after observing losses or selecting a favorable subgroup."
+    },
+    {
+      "id": "A_controls_stops_and_outcomes",
+      "required": "Freeze the complete scoring contract before new losses. Reconstruct all CDFs/keys and match old control values before scoring; check total finite nonnegative mass and normalization, raw-Z scale/floor and native target contract. Require CRPS(deltaB)=absolute error and agreement of a direct expectation/pairwise formula with an independent piecewise-CDF integral on analytic fixtures, including ties, zero mass, targets outside support and repeated atoms. No discrepancy repair by changing scientific inputs. Define favorable Delta<0, unfavorable Delta>=0, and inconclusive for any reconstruction/oracle/cohort/review gate failure. Show every regime and the frozen territorial/zero/positive/extreme guardrails. Heterogeneity limits claims; no new subgroup threshold may become an unannounced decision gate."
+    },
+    {
+      "id": "B_ineligible_not_zero",
+      "issue": "The statistics vote assigns a numeric range despite explicitly finding the missing action/cost contract non-compensable.",
+      "required": "Preserve that individual vote as recorded, but mark B ineligible and aggregate total N/A, not zero and not a low numeric rank. Do not redistribute criterion weights. No execution or target-dependent coverage selection without a separate action/cost contract."
+    },
+    {
+      "id": "C_operator_limits",
+      "required": "C remains documentary GOES16 FDCF on the two fixed 2019/2023 cases. Require primary-source temporal availability, projection/navigation, support/time meaning, QA/cloud/unknown versus no-detection semantics and access constraints. Instrument difference does not imply independent errors; coarse negative cannot refute fine-scale activity. Missing semantics or access yields negative/inconclusive preflight, never an invented zero. Zero science bytes, no reopening the closed L2 budget, no automatic acquisition after favorable documentation."
+    },
+    {
+      "id": "D_is_required_not_an_experiment",
+      "required": "D protects truthful delivery regardless of A/C outcome. Keep a ledger of unit/cohort/operator/reference/result/claim/falsifier for 18,21,23,24C,30B,33,35,36,37 and A/C if completed. Never add percentages across contracts or promote models from subjective council ranges. A negative is a useful completed result; an incomplete review is explicitly inconclusive."
+    }
+  ],
+  "resource_sequence": {
+    "horizon": "Root reports approximately174 minutes remaining at08:36UTC until11:30UTC.",
+    "serial_caps_do_not_fit": "A90+C45+D60=195 minutes exceeds that horizon, even before transition costs.",
+    "preferred": "Reserve the final60 minutes for D first. A90 is the sole quantitative study, with an early reconstruction/oracle checkpoint and its reviewer reserved for the entire cap. C45 may run in parallel only with a named documentary author and a separately scheduled review window that fits C's own cap without displacing A's required review. Root plus two authors plus one reviewer is the four-slot maximum; shared reviewer time must be sequenced explicitly, not double-booked.",
+    "fallback": "If no credible capacity schedule exists, omit C and run A+D. If A fails its early gate, preserve that inconclusive outcome and consolidate; do not open B or another metric/model as a rescue.",
+    "deadline_rule": "All caps include protocol, execution and independent review; no restart or extension. D closes by11:30UTC even if another branch remains unresolved."
+  },
+  "preserved_dissent": "The original observation vote places C ahead of D directionally, whereas loco prioritizes A+D. Their intervals and those of A/D overlap. I support C's documentary value conditionally, but do not claim a robust winner or let novelty displace final consolidation.",
+  "non_compensables": [
+    "Unknown is not zero.",
+    "Registered SNP activity is not physical fire truth or observation opportunity.",
+    "No fresh holdout, causal chronology conclusion, calibration or G1 promotion invented.",
+    "No new targets, references, models, grids or metrics selected after outcomes.",
+    "30B failure, 35 negative and 37 joint failure remain preserved.",
+    "Independent review and protected final consolidation cannot be offset by subjective scores."
+  ],
+  "original_input_sha256": {
+    "statistics.json": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0",
+    "observation.json": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823",
+    "loco-vote.json": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a",
+    "loco-proposals.json": "5548f5e39ff8d1f87ced06793fdbedb5660994294e7dc10cc981c94b47783e6d"
+  }
+}

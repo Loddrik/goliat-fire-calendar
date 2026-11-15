@@ -1,0 +1,184 @@
+"""37 independent SOURCE statistics, direct CDF mixtures, risk/KKT and all reports."""
+from pathlib import Path
+import sys,json,hashlib,math,datetime,resource,platform
+import pyarrow
+import numpy as np,pandas as pd,pyarrow.parquet as pq
+ROOT=Path('/Users/dquinteros/nasa/goliat-fire-calendar');P=ROOT/'data/processed/daily_context_audit';S=ROOT/'data/processed/cold_region_audit';C=ROOT/'data/processed/daily_adjacency_audit';O=ROOT/'docs/reviews/evidence/daily-context-independent-review'
+END=datetime.datetime.fromisoformat('2026-11-15T09:07:07+00:00');K=['cut','season','m'];F=K+['g','aqua'];METHODS=['B','G','Q_real','Q_placebo']
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def now():return datetime.datetime.now(datetime.timezone.utc)
+def check():assert now()<END,'37 original absolute cap'
+def write(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+def sig(v):return hashlib.sha256(json.dumps(v,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+def key(*v):return json.dumps(v,separators=(',',':'))
+def near(a,b,name='numeric'):
+ if a is None or b is None:assert a is b,(name,a,b)
+ else:assert math.isclose(float(a),float(b),rel_tol=1e-11,abs_tol=1e-9),(name,a,b)
+def freeze():
+ check();assert not O.exists();O.mkdir(parents=True)
+ paths=[Path(__file__),ROOT/'docs/reviews/2026-11-15-daily-context-model-protocol.md']+[ROOT/'pipeline'/n for n in ['daily_context_model.py','daily_context_audit.py','cold_region_audit.py','hurdle_model.py','coherent_allocation.py']]
+ paths += [p for p in P.iterdir() if p.is_file()]+[S/n for n in ['models.json','predictions.parquet','manifest.json','candidate_mask.csv']]+[C/n for n in ['cube.parquet','manifest.json']]
+ assert (P/'prediction-freeze.json').exists() and (P/'manifest.json').exists()
+ (O/'reviewer-code.py.txt').write_bytes(Path(__file__).read_bytes())
+ write(O/'freeze.json',{'created_utc':now().isoformat(),'cap_end_utc':END.isoformat(),'inputs_sha256':{str(p):sha(p) for p in paths},'producer_manifest_sha256':sha(P/'manifest.json'),'complete_candidate_reconstructions_planned':8,'reconcile_calls_planned':0,'synthetic_test_repeats_planned':0,'new_targets_or_model_family':False,'reviewer_environment_observed':{'executable':sys.executable,'python':sys.version,'platform':platform.platform(),'numpy':np.__version__,'pandas':pd.__version__,'pyarrow':pyarrow.__version__},'environment_scope':'Reviewer environment observed now, not a contemporaneous producer environment snapshot.'})
+ print('37_REVIEW_FROZEN',sha(O/'freeze.json'),flush=True)
+
+def stats(t):return {'n':len(t),'m':int((t.z>0).sum()),'positive':sorted(float(x) for x in t.z if x>0)}
+def reconstruct(t,b,variant):
+ # One full reconstruction per regime/variant, explicitly counted as a candidate fit.
+ t=t.copy();t['state']=(t.aqua>0).astype(int);t['z']=t.snpp/(1+t.aqua*t.g.map(b['regional_ratio']))
+ pools={};locals_={}
+ for g in sorted(b['regional_ratio']):
+  for s in [0,1]:
+   q=t[(t.g==g)&(t.state==s)];vals=sorted(int(d) for d in q.D.unique());active=len(vals)>1
+   pools[key(g,s)]={'active':active,'observed_D':vals,'n':len(q),'classes':{str(d):stats(q[q.D==d]) for d in [0,1]}}
+   if active:
+    for (cut,d),z in q.groupby(['cut','D'],sort=True):locals_[key(cut,g,s,int(d))]=stats(z)
+ return {'schema_version':1,'variant':variant,'kappa_parent':10,'kappa_local':10,'source_cuts':sorted(b['source_cuts']),'origin_seasons':sorted(b['origin_seasons']),'base_model_sha256':sig(b),'training_keys':t[K].sort_values(K).to_dict(orient='records'),'training_rows':len(t),'pools':pools,'locals':locals_}
+def oldcdf(b,cut,g,s,parent=False):
+ h=b['hurdle'];p=h['parents'][key(g,s)];prob=float(p['p']);z=list(p['positive']);w=[1.]*len(z)
+ l=h['locals'].get(key(cut,g,s),{'n':0,'m':0,'positive':[]})
+ if h['all_zero']:return np.array([0.]),np.array([1.])
+ if not parent and l['n']:
+  oldp=prob;prob=(l['m']+10*oldp)/(l['n']+10)
+  if l['m']:
+   z=list(l['positive'])+z;w=[1.]*l['m']+[10*oldp/len(p['positive'])]*len(p['positive'])
+ if not prob:return np.array([0.]),np.array([1.])
+ return np.array([0.]+z),np.array([1-prob]+[prob*x/math.fsum(w) for x in w])
+def mix(st,prior):
+ if not st['n']:return prior
+ v,w=prior;n=st['n'];emp=[0.]*(n-st['m'])+st['positive']
+ return np.array(emp+list(v)),np.array([1/(n+10)]*n+[float(x)*10/(n+10) for x in w])
+def cdf(model,b,cut,g,a,d):
+ s=int(a>0);pool=model['pools'][key(g,s)];meta={}
+ if not pool['active']:
+  v,w=oldcdf(b,cut,g,s);meta={'fallback':'original_full_CDF_no_SOURCE_D_variation','parent_n':pool['n'],'local_n':None}
+ else:
+  st=pool['classes'][str(d)];raw=mix(st,oldcdf(b,cut,g,s,True));local=model['locals'].get(key(cut,g,s,d),{'n':0,'m':0,'positive':[]}) if cut in model['source_cuts'] else {'n':0,'m':0,'positive':[]}
+  v,w=mix(local,raw);meta={'fallback':'contextual_local' if local['n'] else 'contextual_parent','parent_n':st['n'],'parent_m':st['m'],'local_n':local['n'],'local_m':local['m'],'parent_borrowed_mass':10/(st['n']+10),'local_borrowed_mass':10/(local['n']+10)}
+ return (np.where(v>0,np.maximum(1.,v*(1+a*b['regional_ratio'][g])),0.),w),meta
+
+def canonical(ds):
+ v,w=ds;ans={}
+ for a,b in zip(v,w):
+  if b:ans[float(a)]=ans.get(float(a),0.)+float(b)
+ return sorted(ans.items())
+def equalcdf(a,b):
+ aa=canonical(a);bb=canonical(b);assert len(aa)==len(bb)
+ for (v,w),(x,y) in zip(aa,bb):near(v,x,'CDFatom');near(w,y,'CDFmass')
+def median(ds):
+ items=canonical(ds);threshold=math.fsum(w for _,w in items)/2;acc=0.
+ for v,w in items:
+  acc+=w
+  if acc>=threshold:return v
+ return items[-1][0]
+def risk(ds,a):return math.fsum(math.fsum(float(w)/math.fsum(map(float,ww))*abs(float(v)-float(t)) for v,w in zip(vv,ww)) for (vv,ww),t in zip(ds,a))
+def kkt(ds,a):
+ low,high=-1.,1.
+ for (v,w),t in zip(ds,a):
+  den=math.fsum(map(float,w));eps=1e-10*np.maximum(1.,np.maximum(abs(v),abs(t)));lo=2*math.fsum(float(z)/den for z in w[v<t-eps])-1;hi=2*math.fsum(float(z)/den for z in w[v<=t+eps])-1
+  if t>1e-10*max(1.,abs(t)):low=max(low,lo)
+  high=min(high,hi)
+ return max(0.,low-high)
+def metrics(f):
+ out={'n':len(f),'target_sum':float(f.snpp.sum()),'methods':{}}
+ for m in METHODS:
+  e=f[m]-f.snpp;tot=f.groupby(['season','m'])[[m,'snpp']].sum()
+  out['methods'][m]={'mae':float(e.abs().mean()) if len(f) else None,'bias':float(e.mean()) if len(f) else None,'prediction_sum':float(f[m].sum()),'absolute_error_sum':float(e.abs().sum()),'regional_monthly_mae':float((tot[m]-tot.snpp).abs().mean()) if len(tot) else None}
+ return out
+
+def run():
+ check();fr=json.load(open(O/'freeze.json'))
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ manifest=json.load(open(P/'manifest.json'));cf=json.load(open(P/'code-freeze.json'));pf=json.load(open(P/'prediction-freeze.json'));cp=json.load(open(P/'checkpoint.json'));summary=json.load(open(P/'summary.json'))
+ for p,h in manifest['output_sha256'].items():assert sha(P/p)==h,p
+ for family in ['code_sha256','input_sha256','protected_sha256']:
+  for p,h in cf[family].items():assert sha(ROOT/p)==h,p
+ assert sha(P/'candidate-models.json')==pf['candidate_models_sha256'] and sha(P/'predictions-before-evaluation-labels.parquet')==pf['predictions_sha256']
+ assert datetime.datetime.fromisoformat(cp['completed_utc'])<datetime.datetime.fromisoformat('2026-11-15T08:32:07+00:00')
+ assert datetime.datetime.fromisoformat(pf['created_utc'])<datetime.datetime.fromisoformat(summary['first_evaluation_response_join_utc'])
+ assert pf['counts']=={'fit_calls':21,'solver_calls':768} and cp['counts']=={'fit_calls':9,'solver_calls':384}
+ proofs=json.load(open(P/'label-invariance.json'));assert len(proofs)==4 and all(z['same_parameters_after_forbidden_synthetic_NaN_or_999999'] and not z['actual_forbidden_Y_loaded'] for z in proofs)
+ assert manifest['peak_RSS_bytes']<=2*1024**3 and sum(z.stat().st_size for z in P.iterdir() if z.is_file())<=100*1024**2
+ pred=pd.read_parquet(P/'predictions-before-evaluation-labels.parquet');assert len(pred)==10368 and not pred.duplicated(['regime',*K]).any() and 'snpp' not in pred
+ bases=json.load(open(S/'models.json'));models=json.load(open(P/'candidate-models.json'));constants=json.load(open(P/'constant_models.json'));cube=pd.read_parquet(C/'cube.parquet')
+ ref=pd.read_parquet(S/'predictions.parquet',columns=['regime',*F,'B','E11_coherent']);control=pd.read_csv(P/'control_allocation_checks.csv').set_index(['regime','season','m','method']);audit=pd.read_csv(P/'candidate_allocation_checks.csv').set_index(['regime','season','m','method']);support=pd.read_csv(P/'query-support.csv',dtype={'cut':str,'g':str}).set_index(['regime','variant',*K]);logs=json.load(open(P/'source-selectors-fit.json'))
+ sys.path.insert(0,str(ROOT/'pipeline'));import cold_region_audit as cold, daily_context_model as author
+ def forbidden(*a,**k):raise AssertionError('Historical refit/driver forbidden')
+ cold.fit_source=forbidden;cold.predict_all=forbidden
+ reconstructions=0;cdfchecks=0;constantchecks=0;allocationchecks=0;maxkkt=0.;maxerr=0.;mechanics=[]
+ for regime,b in bases.items():
+  assert not any(z['active'] for z in constants[regime]['pools'].values())
+  check();filters=[('cut','in',b['source_cuts']),('season','in',b['origin_seasons'])]
+  labels=pq.read_table(S/'predictions.parquet',columns=K+['snpp'],filters=filters).to_pandas();gg=labels.groupby(K).snpp;assert gg.size().eq(2).all() and gg.nunique().eq(1).all()
+  labels=labels.drop_duplicates(K);train=cube[cube.cut.isin(b['source_cuts'])&cube.season.isin(b['origin_seasons'])].merge(labels,on=K,validate='one_to_one');assert len(train)==len(b['source_cuts'])*48
+  log=next(z for z in logs if z['regime']==regime);assert log['parquet_filters']==[['cut','in',b['source_cuts']],['season','in',b['origin_seasons']]] and log['filter_applied_before_materialization'] and log['duplicates_exact']
+  assert log['unique_rows']==len(train) and log['raw_rows']==2*len(train) and log['roster_sha256']==sig(train[K].sort_values(K).to_dict(orient='records'))
+  ff=pred[pred.regime==regime].reset_index(drop=True);old,oldds,_=cold.raw_predictions(ff[F],b);r=ref[ref.regime==regime].set_index(K).loc[pd.MultiIndex.from_frame(ff[K])]
+  assert np.array_equal(old.B,ff.B) and np.array_equal(ff.B,r.B) and np.array_equal(ff.G,r.E11_coherent)
+  assert ff.role.tolist()==['SOURCE' if c in b['source_cuts'] else 'held' for c in ff.cut]
+  variantds={}
+  for variant,col in [('real','D_real'),('placebo','D_placebo')]:
+   t=train[[*F,'snpp',col]].rename(columns={col:'D'});ours=reconstruct(t,b,variant);reconstructions+=1;assert ours==models[regime][variant],('model',regime,variant)
+   ds=[]
+   for i,row in ff.iterrows():
+    d=int(row[col]);our,meta=cdf(ours,b,str(row.cut),str(row.g),float(row.aqua),d);their,_=author.distribution(models[regime][variant],b,row.cut,row.g,float(row.aqua),d);equalcdf(our,their);cdfchecks+=1
+    near(median(our),row['median_'+variant],'median');near(sum(w for v,w in zip(*our) if v>0),row['p_'+variant],'probability')
+    sr=support.loc[(regime,variant,row.cut,row.season,row.m)]
+    for field,v in meta.items():
+     if v is None:assert pd.isna(sr[field])
+     elif isinstance(v,str):assert sr[field]==v
+     else:near(sr[field],v,'querysupport')
+    ds.append(our)
+   variantds[variant]=ds
+  for i,row in ff.iterrows():
+   for d in [0,1]:
+    d0,_=author.distribution(constants[regime],b,row.cut,row.g,float(row.aqua),d);assert np.array_equal(d0[0],oldds[i][0]) and np.array_equal(d0[1],oldds[i][1]);equalcdf(d0,oldds[i]);constantchecks+=1
+  for (season,month),group in ff.groupby(['season','m'],sort=True):
+   ix=group.index.to_numpy();B=group.B.to_numpy();assert len(ix)==54
+   for method,dsall in [('G',oldds),('G_constant',oldds),('Q_real',variantds['real']),('Q_placebo',variantds['placebo'])]:
+    ds=[dsall[i] for i in ix];a=group.G.to_numpy() if method=='G_constant' else group[method].to_numpy();rb=risk(ds,B);ra=risk(ds,a);kk=kkt(ds,a);err=math.fsum(map(float,a))-math.fsum(map(float,B));maxkkt=max(maxkkt,kk);maxerr=max(maxerr,abs(err))
+    assert kk<=1e-8 and abs(err)<=1e-10*max(1,math.fsum(map(float,B))) and ra<=rb+1e-8*max(1,rb)
+    ar=(control if method.startswith('G') else audit).loc[(regime,season,month,method)]
+    for field,v in [('budget',math.fsum(map(float,B))),('budget_error',err),('own_CDF_risk_baseline',rb),('own_CDF_risk_allocated',ra),('kkt_residual',kk)]:near(ar[field],v,field)
+    allocationchecks+=1
+  mechanics.append({'regime':regime,'source_rows':len(train),'B_G_exact':True,'models_rebuilt_from_source_only':2,'queries':len(ff)});print('37_MECHANICS_PASS',regime,flush=True)
+ # Actual evaluation responses requested only after frozen predictions and all independent mechanics.
+ y=pd.read_parquet(S/'predictions.parquet',columns=['regime',*K,'snpp']);joined=pred.merge(y,on=['regime',*K],validate='one_to_one');actual=pd.read_parquet(P/'evaluated_predictions.parquet');pd.testing.assert_frame_equal(joined,actual)
+ from frozen_temporal_audit import publication_metadata
+ enabled=set(publication_metadata(sorted(actual.cut.unique()))[0]);prim=[];reportcount=0;percut=pd.read_csv(P/'per_CUT.csv',dtype={'cut':str})
+ for regime,f in actual.groupby('regime',sort=True):
+  groups={'all54':f,'SOURCE':f[f.role=='SOURCE'],'held':f[f.role=='held'],'published14':f[f.cut.isin(enabled)],'remaining40':f[~f.cut.isin(enabled)]}
+  for role in ['SOURCE','held']:
+   for name,mask in [('published14',f.cut.isin(enabled)),('remaining40',~f.cut.isin(enabled))]:groups[role+'_'+name]=f[(f.role==role)&mask]
+  for name,g in groups.items():
+   strata={'all_months':g,'zero_reference':g[g.snpp==0],'positive_reference':g[g.snpp>0],'aqua_zero_reference_positive':g[(g.aqua==0)&(g.snpp>0)],'both_zero':g[(g.aqua==0)&(g.snpp==0)],'reference_50_plus':g[g.snpp>=50]}
+   for label,sub in strata.items():
+    ours=metrics(sub);claim=summary['reports'][regime][name][label];assert ours['n']==claim['n'];near(ours['target_sum'],claim['target_sum'])
+    for method in METHODS:
+     for field,v in ours['methods'][method].items():near(v,claim['methods'][method][field],field)
+    reportcount+=1
+  h=metrics(groups['held']);mae={m:h['methods'][m]['mae'] for m in METHODS};prim.append({'regime':regime,'n':h['n'],'delta_real_minus_placebo':mae['Q_real']-mae['Q_placebo'],'delta_real_minus_G':mae['Q_real']-mae['G']})
+  for cut,g in f.groupby('cut'):
+   row=percut[(percut.regime==regime)&(percut.cut==cut)];assert len(row)==1 and row.n.iloc[0]==len(g)
+   for method,v in metrics(g)['methods'].items():near(v['mae'],row[method+'_mae'].iloc[0])
+  old=f[f.role=='held'].groupby('cut').apply(lambda z:float((z.G-z.snpp).abs().mean()),include_groups=False);worst=min(old.index,key=lambda c:(-float(old[c]),c));claim=next(z for z in summary['worst_CUT_fixed_from_historical_G'] if z['regime']==regime);assert claim['cut']==worst
+  wm=metrics(f[f.cut==worst]);assert wm['n']==claim['metrics']['n']
+  for method in METHODS:
+   for field,v in wm['methods'][method].items():near(v,claim['metrics']['methods'][method][field])
+ rp=float(np.mean([z['delta_real_minus_placebo'] for z in prim]));rg=float(np.mean([z['delta_real_minus_G'] for z in prim]));near(rp,summary['primary']['equal_four_real_minus_placebo']);near(rg,summary['primary']['equal_four_real_minus_G']);assert summary['primary']['both_required_contrasts_negative']==(rp<0 and rg<0)
+ for name in ['delta_real_minus_placebo','delta_real_minus_G']:
+  near(sum(z[name]*z['n'] for z in prim)/sum(z['n'] for z in prim),summary['primary']['row_weighted_'+name.removeprefix('delta_')])
+ for z in prim:
+  claim=next(q for q in summary['primary']['regimes'] if q['regime']==z['regime'])
+  for field,v in z.items():
+   if field!='regime':near(v,claim[field])
+ primarycsv=pd.read_csv(P/'primary_contrasts.csv');assert len(primarycsv)==4
+ for z in prim:
+  row=primarycsv[primarycsv.regime==z['regime']];assert len(row)==1
+  for field in ['n','delta_real_minus_placebo','delta_real_minus_G']:near(z[field],row[field].iloc[0])
+ assert reconstructions==8 and cdfchecks==20736 and constantchecks==20736 and allocationchecks==768 and reportcount==216
+ for p,h in fr['inputs_sha256'].items():assert sha(Path(p))==h,p
+ check();report={'status':'independent_full_pass','completed_utc':now().isoformat(),'producer_manifest_sha256_before_and_after':sha(P/'manifest.json'),'reviewer_freeze_sha256':sha(O/'freeze.json'),'producer_artifacts_modified':False,'complete_candidate_reconstructions':reconstructions,'reconcile_calls':0,'repeated_synthetic_tests':0,'producer_fit_calls':pf['counts']['fit_calls'],'producer_solver_calls':pf['counts']['solver_calls'],'combined_fits_producer_plus_review':pf['counts']['fit_calls']+reconstructions,'scope_guarantee':'SOURCE filtering and no target leakage per regime; other regimes may legitimately use these same labels as SOURCE.','mechanics':mechanics,'candidate_CDF_query_checks':cdfchecks,'constant_CDF_query_checks':constantchecks,'own_CDF_risk_KKT_budget_checks':allocationchecks,'max_independent_KKT_residual':maxkkt,'max_absolute_budget_residual':maxerr,'population_reports_verified':reportcount,'method_report_sets_verified':reportcount*4,'all_per_CUT_and_historical_G_worst_verified':True,'prediction_evaluation_join_exact':True,'primary':{'regimes':prim,'equal_four_real_minus_placebo':rp,'equal_four_real_minus_G':rg,'both_required_contrasts_negative':bool(rp<0 and rg<0)},'limitations':['Retrospective known targets, overlapping regimes, no fresh holdout or IID uncertainty.','Conditional empirical CDFs reuse SOURCE observations also contained in old parent prior; not Bayesian posterior.','Own-CDF risk optimality cannot compare expected risks across different distributions.','Registered SNPP cell-days are reference, not physical fires or observation opportunity.','G1 physical false; 30B failed and 35 negative unchanged.'],'RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*(1 if sys.platform=='darwin' else 1024)}
+ write(O/'summary.json',report);write(O/'manifest.json',{'files':{p.name:{'bytes':p.stat().st_size,'sha256':sha(p)} for p in O.iterdir() if p.is_file() and p.name!='manifest.json'},'producer_manifest_unchanged':True,'cap_end_utc':END.isoformat()});print('37_INDEPENDENT_FULL_PASS',json.dumps(report['primary']),flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()

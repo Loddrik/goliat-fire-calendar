@@ -1,0 +1,121 @@
+{
+  "scope": "One fixed metadata candidate; authenticated files, not a fire accuracy experiment",
+  "started_utc": "2026-11-15T01:00:40.718700+00:00",
+  "token_configured": true,
+  "token_persisted_in_evidence": false,
+  "budget_bytes": 419430400,
+  "downloaded_bytes": 193748806,
+  "files": {
+    "MYD14": {
+      "status": "downloaded",
+      "bytes": 410942,
+      "sha256": "994f1a88fc5a2b5addf8447dc7d636a10e0f3bb6283f2090a601ad43243c9c30",
+      "file": ".runtime/observation-pilot/raw/MYD14.A2019003.1840.061.2021351103810.hdf",
+      "hdf_magic": "0e03130100100000",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/MYD14.061/MYD14.A2019003.1840.061.2021351103810/MYD14.A2019003.1840.061.2021351103810.hdf",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MYD14.061/MYD14.A2019003.1840.061.2021351103810/MYD14.A2019003.1840.061.2021351103810.hdf",
+          "to": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/MYD14.061/MYD14.A2019003.1840.061.2021351103810/MYD14.A2019003.1840.061.2021351103810.hdf",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 4.185,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "MYD03": {
+      "status": "downloaded",
+      "bytes": 34098478,
+      "sha256": "cdfc72d914450066bdddd7edbd2b9786214f41ce1d1c3cdcb1250f0db5a3004c",
+      "file": ".runtime/observation-pilot/raw/MYD03.A2019003.1840.061.2019004162409.hdf",
+      "hdf_magic": "0e03130100100003",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/MYD03/MYD03.A2019003.1840.061.2019004162409.hdf",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/MYD03/MYD03.A2019003.1840.061.2019004162409.hdf",
+          "to": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/MYD03/MYD03.A2019003.1840.061.2019004162409.hdf",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 6.28,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "VNP14IMG": {
+      "status": "downloaded",
+      "bytes": 3184218,
+      "sha256": "bcc1e3e30af850542f8ed0ce31e7aae4a6d46ee3d4c68e1898142f60d3f45bef",
+      "file": ".runtime/observation-pilot/raw/VNP14IMG.A2019003.1836.002.2024086140848.nc",
+      "hdf_magic": "894844460d0a1a0a",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/VNP14IMG.002/VNP14IMG.A2019003.1836.002.2024086140848/VNP14IMG.A2019003.1836.002.2024086140848.nc",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VNP14IMG.002/VNP14IMG.A2019003.1836.002.2024086140848/VNP14IMG.A2019003.1836.002.2024086140848.nc",
+          "to": "https://d1nklfio7vscoe.cloudfront.net/s3-2d2df3a34830d5223d1e9547cd713408/lp-prod-protected.s3.us-west-2.amazonaws.com/VNP14IMG.002/VNP14IMG.A2019003.1836.002.2024086140848/VNP14IMG.A2019003.1836.002.2024086140848.nc",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 4.865,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    },
+    "VNP03IMG": {
+      "status": "downloaded",
+      "bytes": 156055168,
+      "sha256": "611c5bcf7ff6c83747d7ea4c30231bb2610d2e0b87c223f686708776d83e83f7",
+      "file": ".runtime/observation-pilot/raw/VNP03IMG.A2019003.1836.002.2021102033228.nc",
+      "hdf_magic": "894844460d0a1a0a",
+      "http_status": 200,
+      "content_type": "binary/octet-stream",
+      "url": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc",
+      "hops": [
+        {
+          "http_status": 303,
+          "from": "https://data.laadsdaac.earthdatacloud.nasa.gov/prod-lads/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc",
+          "to": "https://d13j1jds5ybppo.cloudfront.net/s3-8d80a21348b33e9c2ee6e0a8ac41d7b1/prod-lads.s3.us-west-2.amazonaws.com/VNP03IMG/VNP03IMG.A2019003.1836.002.2021102033228.nc",
+          "authorization_on_request": true
+        }
+      ],
+      "seconds": 14.22,
+      "final_request_had_authorization": false,
+      "downloaded_now": true
+    }
+  },
+  "gate0_passed": false,
+  "geolocation_qa_read": false,
+  "input_pointer_verified": false,
+  "common_pixel_support_verified": false,
+  "source_anonymous_summary_sha256": "fcc12bb2595f57d7f3c85882e3190712a2251e218929583e7e6fe067e06fda52",
+  "candidate": {
+    "aqua_id": "MYD14.A2019003.1840.061.2021351103810",
+    "viirs_id": "VNP14IMG.A2019003.1836.002.2024086140848",
+    "aqua_concept_id": "G2298315182-LPCLOUD",
+    "viirs_concept_id": "G2923063887-LPCLOUD",
+    "aqua_start": "2019-01-03T18:40:00.000Z",
+    "aqua_end": "2019-01-03T18:45:00.000Z",
+    "viirs_start": "2019-01-03T18:36:00.000Z",
+    "viirs_end": "2019-01-03T18:42:00.000Z",
+    "minimum_possible_gap_minutes": 0.0,
+    "maximum_possible_gap_minutes": 9.0,
+    "time_states": {
+      "5": "uncertain",
+      "10": "definitely_within",
+      "15": "definitely_within",
+      "30": "definitely_within",
+      "60": "definitely_within"
+    }
+  },
+  "completed_utc": "2026-11-15T01:01:10.345450+00:00",
+  "all_four_files_acquired": true,
+  "code_sha256": "748b12b9b2b6946f690f50de36558b9b2f156820f887e84c908a5d2f28d201ec"
+}

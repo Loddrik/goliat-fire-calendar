@@ -1,0 +1,15 @@
+{
+  "scope": "Reviewer-only artifacts; separate from immutable producer manifest",
+  "files": {
+    "summary.json": {
+      "bytes": 34899,
+      "sha256": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf"
+    },
+    "verifier-executed.py.txt": {
+      "bytes": 14943,
+      "sha256": "92f7fba309703e801221f835f63d010041f3646819184b5b5f2b88e05159b694"
+    }
+  },
+  "producer_manifest_sha256": "1e770392e06160a79154e36b1aa3bf0f1f99ebcc436680ae7ff7c86b08fae122",
+  "producer_manifest_not_modified": true
+}

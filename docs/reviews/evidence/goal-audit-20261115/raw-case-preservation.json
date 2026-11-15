@@ -1,0 +1,27 @@
+{
+  "completed_utc": "2026-11-15T10:05:02.872112+00:00",
+  "status": "pass",
+  "cases": [
+    {
+      "case": "2019",
+      "archive_basename": "observation-pilot-20190103-raw.tar",
+      "source_evidence": "docs/reviews/evidence/observation-authenticated/acquisition.json",
+      "source_evidence_sha256": "5e42dc962a5d75f5e50033618cbeb2074c704d9c4ee6121d1906478a3b17ec7b",
+      "members_verified": 4,
+      "payload_bytes_verified": 193748806
+    },
+    {
+      "case": "2023",
+      "archive_basename": "observation-case2023-raw.tar",
+      "source_evidence": "docs/reviews/evidence/observation-case2023/result.json",
+      "source_evidence_sha256": "b520dbf02ee7cb440c5caa8e47f4321eb090f8fb3df6cd12973f1cd863305c9e",
+      "members_verified": 4,
+      "payload_bytes_verified": 195349494
+    }
+  ],
+  "raw_payload_bytes_verified": 389098300,
+  "scope": "Read-only backup-byte integrity versus frozen acquisition hashes. No scientific interpretation, no new observations, no physical opportunity certification.",
+  "new_downloads": 0,
+  "originals_modified": false,
+  "old_L2_budget_reopened": false
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_resource_amendment_scope",
+  "resource_envelope_sha256": "9841671a66e0b14d738634cb1acf5ac74ac6178dd3df16524c903cde6aa84d78",
+  "amendment_sha256": "d090eacca908b05bfa6652c70a631b1e808a473611c9c28643eb7643e9d9bd0d",
+  "attempt01_RSS_remains_unknown": true,
+  "attempt02_peak_RSS_bytes": 114757632,
+  "attempt02_below_original_cap": true,
+  "all_attempt_output_bytes": 375736,
+  "numeric_CSVs_independently_byte_identical": {
+    "season-totals.csv": true,
+    "per-cut.csv": true,
+    "monthly-controls.csv": true
+  },
+  "original_and_attempt02_code_freeze_identical": true,
+  "attempt02_manifest_matches_envelope": true,
+  "no_refit_or_parameter_change_or_timer_reset": true,
+  "wrapper_run_not_repeated_by_reviewer": true
+}

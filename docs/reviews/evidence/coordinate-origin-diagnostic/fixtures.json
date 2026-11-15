@@ -1,0 +1,88 @@
+[
+  {
+    "id": "MYD14_early-818-1166",
+    "kind": "selected_GEO_regression_counterexample",
+    "other_union": "MYD14_early-818-1166-other_union.wkb.gz",
+    "pixel": "MYD14_early-818-1166-pixel.wkb.gz"
+  },
+  {
+    "id": "MYD14_late-833-1149",
+    "kind": "selected_GEO_regression_counterexample",
+    "other_union": "MYD14_late-833-1149-other_union.wkb.gz",
+    "pixel": "MYD14_late-833-1149-pixel.wkb.gz"
+  },
+  {
+    "id": "MYD14_late-844-1161",
+    "kind": "selected_GEO_regression_counterexample",
+    "other_union": "MYD14_late-844-1161-other_union.wkb.gz",
+    "pixel": "MYD14_late-844-1161-pixel.wkb.gz"
+  },
+  {
+    "id": "VNP14IMG_early-2051-3869",
+    "kind": "selected_GEO_regression_counterexample",
+    "other_union": "VNP14IMG_early-2051-3869-other_union.wkb.gz",
+    "pixel": "VNP14IMG_early-2051-3869-pixel.wkb.gz"
+  },
+  {
+    "id": "VNP14IMG_early-2076-3864",
+    "kind": "selected_GEO_regression_counterexample",
+    "other_union": "VNP14IMG_early-2076-3864-other_union.wkb.gz",
+    "pixel": "VNP14IMG_early-2076-3864-pixel.wkb.gz"
+  },
+  {
+    "expected_areas_p_q_i_dp_dq_u": [
+      100,
+      100,
+      0,
+      100,
+      100,
+      200
+    ],
+    "id": "control_disjoint",
+    "kind": "synthetic_control",
+    "other_union": "control_disjoint-other_union.wkb",
+    "pixel": "control_disjoint-pixel.wkb"
+  },
+  {
+    "expected_areas_p_q_i_dp_dq_u": [
+      4,
+      100,
+      4,
+      0,
+      96,
+      100
+    ],
+    "id": "control_contained",
+    "kind": "synthetic_control",
+    "other_union": "control_contained-other_union.wkb",
+    "pixel": "control_contained-pixel.wkb"
+  },
+  {
+    "expected_areas_p_q_i_dp_dq_u": [
+      100,
+      100,
+      50,
+      50,
+      50,
+      150
+    ],
+    "id": "control_partial",
+    "kind": "synthetic_control",
+    "other_union": "control_partial-other_union.wkb",
+    "pixel": "control_partial-pixel.wkb"
+  },
+  {
+    "expected_areas_p_q_i_dp_dq_u": [
+      100,
+      100,
+      0,
+      100,
+      100,
+      200
+    ],
+    "id": "control_touch",
+    "kind": "synthetic_control",
+    "other_union": "control_touch-other_union.wkb",
+    "pixel": "control_touch-pixel.wkb"
+  }
+]

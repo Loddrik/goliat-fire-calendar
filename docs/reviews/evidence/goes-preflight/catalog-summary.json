@@ -1,0 +1,142 @@
+{
+  "C1": {
+    "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+    "http_status": 200,
+    "IsTruncated": "false",
+    "object_count": 4,
+    "objects": [
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031800362_e20190031811129_c20190031811247.nc",
+        "mode_from_filename": "M3",
+        "filename_start_UTC": "2019-01-03T18:00:36.200Z",
+        "filename_end_UTC": "2019-01-03T18:11:12.900Z",
+        "filename_creation_UTC": "2019-01-03T18:11:24.700Z",
+        "size_bytes_LIST_metadata_only": 3708839,
+        "LastModified_LIST_only": "2019-12-18T15:23:43.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031815362_e20190031826129_c20190031826248.nc",
+        "mode_from_filename": "M3",
+        "filename_start_UTC": "2019-01-03T18:15:36.200Z",
+        "filename_end_UTC": "2019-01-03T18:26:12.900Z",
+        "filename_creation_UTC": "2019-01-03T18:26:24.800Z",
+        "size_bytes_LIST_metadata_only": 3692698,
+        "LastModified_LIST_only": "2019-12-18T15:23:44.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031830362_e20190031841129_c20190031841245.nc",
+        "mode_from_filename": "M3",
+        "filename_start_UTC": "2019-01-03T18:30:36.200Z",
+        "filename_end_UTC": "2019-01-03T18:41:12.900Z",
+        "filename_creation_UTC": "2019-01-03T18:41:24.500Z",
+        "size_bytes_LIST_metadata_only": 3654924,
+        "LastModified_LIST_only": "2019-12-18T15:23:43.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2019/003/18/OR_ABI-L2-FDCF-M3_G16_s20190031845362_e20190031856129_c20190031856249.nc",
+        "mode_from_filename": "M3",
+        "filename_start_UTC": "2019-01-03T18:45:36.200Z",
+        "filename_end_UTC": "2019-01-03T18:56:12.900Z",
+        "filename_creation_UTC": "2019-01-03T18:56:24.900Z",
+        "size_bytes_LIST_metadata_only": 3614040,
+        "LastModified_LIST_only": "2019-12-18T15:23:43.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      }
+    ],
+    "science_bytes": 0,
+    "GetObject_access_tested": false
+  },
+  "C2": {
+    "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+    "http_status": 200,
+    "IsTruncated": "false",
+    "object_count": 6,
+    "objects": [
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411800205_e20230411809513_c20230411810065.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:00:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:09:51.300Z",
+        "filename_creation_UTC": "2023-02-10T18:10:06.500Z",
+        "size_bytes_LIST_metadata_only": 3587524,
+        "LastModified_LIST_only": "2023-02-10T18:10:13.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411810205_e20230411819513_c20230411820096.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:10:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:19:51.300Z",
+        "filename_creation_UTC": "2023-02-10T18:20:09.600Z",
+        "size_bytes_LIST_metadata_only": 3594010,
+        "LastModified_LIST_only": "2023-02-10T18:20:34.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411820205_e20230411829513_c20230411830079.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:20:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:29:51.300Z",
+        "filename_creation_UTC": "2023-02-10T18:30:07.900Z",
+        "size_bytes_LIST_metadata_only": 3593931,
+        "LastModified_LIST_only": "2023-02-10T18:30:32.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411830205_e20230411839513_c20230411840062.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:30:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:39:51.300Z",
+        "filename_creation_UTC": "2023-02-10T18:40:06.200Z",
+        "size_bytes_LIST_metadata_only": 3593628,
+        "LastModified_LIST_only": "2023-02-10T18:40:32.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411840205_e20230411849513_c20230411850080.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:40:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:49:51.300Z",
+        "filename_creation_UTC": "2023-02-10T18:50:08.000Z",
+        "size_bytes_LIST_metadata_only": 3592363,
+        "LastModified_LIST_only": "2023-02-10T18:50:32.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      },
+      {
+        "key": "ABI-L2-FDCF/2023/041/18/OR_ABI-L2-FDCF-M6_G16_s20230411850205_e20230411859513_c20230411900061.nc",
+        "mode_from_filename": "M6",
+        "filename_start_UTC": "2023-02-10T18:50:20.500Z",
+        "filename_end_UTC": "2023-02-10T18:59:51.300Z",
+        "filename_creation_UTC": "2023-02-10T19:00:06.100Z",
+        "size_bytes_LIST_metadata_only": 3578174,
+        "LastModified_LIST_only": "2023-02-10T19:00:27.000Z",
+        "object_requested": false,
+        "pixel_or_AOI_time_verified": false,
+        "software_or_product_attributes_verified": false
+      }
+    ],
+    "science_bytes": 0,
+    "GetObject_access_tested": false
+  }
+}

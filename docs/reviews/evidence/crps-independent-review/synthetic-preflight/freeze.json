@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-15T08:51:34.323451+00:00",
+  "code_sha256": "1b3d2a76c4713fcdc82fd31654f5b9b15eee72d050e3dda83e6652d88e21860f",
+  "protocol_sha256": "ef2be85264a1e91b334e4aabcc6e28feceeaf2556f002946a43f52737cc2bd38",
+  "actual_target_reads": 0,
+  "fits": 0,
+  "solvers": 0,
+  "purpose": "Independent analytic fixture oracle before any real39 CRPS scores."
+}

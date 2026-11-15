@@ -1,0 +1,107 @@
+{
+  "manifest_sha256": "ceadf5bfedbbb11ff7a98a6d58c7038aa4ae9ecf2edec131f65c62c2d624aeec",
+  "platform": "Suomi-NPP",
+  "instrument": "VIIRS",
+  "versions": [
+    "2"
+  ],
+  "filters": {
+    "daynight": "D",
+    "modis_min_confidence": 30,
+    "viirs_confidence": [
+      "n",
+      "h"
+    ],
+    "type": "0",
+    "type_meaning": "presumed vegetation fire, not confirmation",
+    "additional_static_mask": "not-applied"
+  },
+  "CSV_segments": 54,
+  "allowed_source_files": [
+    {
+      "filename": "viirs-snpp_2012_Chile.csv",
+      "year": 2012,
+      "sha256": "60e8d51b189a89c6aa8f4f46e2e8b7d280a0a8cfdab9562174af7cf53626b138",
+      "bytes": 1737573
+    },
+    {
+      "filename": "viirs-snpp_2013_Chile.csv",
+      "year": 2013,
+      "sha256": "59ca55abd316aaf13202affd64ac33fbc25bd7a5038c3d213e1c21c0883c5957",
+      "bytes": 1907758
+    },
+    {
+      "filename": "viirs-snpp_2014_Chile.csv",
+      "year": 2014,
+      "sha256": "129ff951cc85afd8e9de7e1d8b68d146f991dc462ff8ea6167d44b653cb0cbc8",
+      "bytes": 2009133
+    },
+    {
+      "filename": "viirs-snpp_2015_Chile.csv",
+      "year": 2015,
+      "sha256": "d9a2923f7eaa5ab65d7fea38c5001356023ae6e29cabdd15961de1b7b50f4190",
+      "bytes": 2766725
+    },
+    {
+      "filename": "viirs-snpp_2016_Chile.csv",
+      "year": 2016,
+      "sha256": "1189f8b200217b8cdbbbf14008b561242ef39c2fc56ece8eed663f4e3693dcde",
+      "bytes": 2004658
+    },
+    {
+      "filename": "viirs-snpp_2017_Chile.csv",
+      "year": 2017,
+      "sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc",
+      "bytes": 4398957
+    },
+    {
+      "filename": "viirs-snpp_2018_Chile.csv",
+      "year": 2018,
+      "sha256": "adbe875112d2cc6e51696133098c4c443806db755ca5682dbd9aff307f383b6f",
+      "bytes": 1849971
+    },
+    {
+      "filename": "viirs-snpp_2019_Chile.csv",
+      "year": 2019,
+      "sha256": "249d99a517ec826c81972e249869c654af0de39d65f084700b3ed35f8e0c9758",
+      "bytes": 1990774
+    },
+    {
+      "filename": "viirs-snpp_2020_Chile.csv",
+      "year": 2020,
+      "sha256": "b7fa9a8730acbedcbdac3afd9d92c5690004ff28e29ec3e3f3130147ac25304b",
+      "bytes": 2224611
+    },
+    {
+      "filename": "viirs-snpp_2021_Chile.csv",
+      "year": 2021,
+      "sha256": "6b6354496f5317eef183226dcc8ac01517f5e58c94e8d926a05c07ec3406185a",
+      "bytes": 1980639
+    },
+    {
+      "filename": "viirs-snpp_2022_Chile.csv",
+      "year": 2022,
+      "sha256": "6b5255b0f5f2cae3cb3a9fd4c71b2ea16b48b025f1352622c44ded794ab5f453",
+      "bytes": 2360998
+    },
+    {
+      "filename": "viirs-snpp_2023_Chile.csv",
+      "year": 2023,
+      "sha256": "ced287dac1f1dd4503a5649dbf92afb719595eefbb69e78f6cddd3a81cbc14af",
+      "bytes": 4409079
+    },
+    {
+      "filename": "viirs-snpp_2024_Chile.csv",
+      "year": 2024,
+      "sha256": "bbf8704aeeb4ca02a2a4ff8057bad2c524ccd7ffd8d4790ed558cc15b1a4ccc5",
+      "bytes": 1737186
+    },
+    {
+      "filename": "viirs-snpp_2025_Chile.csv",
+      "year": 2025,
+      "sha256": "c6ad5e85bcb65e7a49f3aa60446dcceedf835bcd3f0ee86769be7df79a3e89cf",
+      "bytes": 2078518
+    }
+  ],
+  "metadata_only_no_other_cohort_scores": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-11-15T10:34:28.372496+00:00",
+  "Darwin_peak_RSS_bytes": 114757632,
+  "RSS_cap_bytes": 1073741824,
+  "child_returncode": 0,
+  "wrapper_freeze_sha256": "5ad6747e71faa4d774f23dd72ed94bd59642a6446a3fbcc57c4f410a41ecac2d",
+  "attempt01_RSS_still_unknown": true,
+  "fits": 0,
+  "downloads": 0,
+  "numeric_CSV_byte_identity": true,
+  "summary_identity_except_completion_time": true,
+  "all_attempt_output_bytes": 375736,
+  "attempt02_manifest_sha256": "3870823331e085a76bc5289dd8b33d9560ef981c48cdb485c52dc2e9ae41d455"
+}

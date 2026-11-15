@@ -1,0 +1,12 @@
+{
+  "files": {
+    "summary.json": {
+      "sha256": "30de20406c2a6e28b68ad385af6db377f879561f2f4785c15e5a2267387cd588",
+      "bytes": 12457
+    },
+    "verifier-code.py.txt": {
+      "sha256": "ec47b12d0dbd40f42b5660e083e35638b3b86412b73e5eb3052dc9684baba6a9",
+      "bytes": 10323
+    }
+  }
+}

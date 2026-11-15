@@ -1,0 +1,9 @@
+{
+  "atoms_total": 50772,
+  "candidates_total": 468377,
+  "completed_cross": [
+    "2019-early",
+    "2019-late"
+  ],
+  "fire_or_QA_read": false
+}

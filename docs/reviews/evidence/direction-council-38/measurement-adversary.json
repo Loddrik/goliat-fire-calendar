@@ -1,0 +1,73 @@
+{
+  "role": "consejo38 adversario: medición y estimandos",
+  "stage": "posterior a los tres votos originales finales; diseño solamente",
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "criteria_unchanged": true,
+  "source_sha256": {
+    "docs/reviews/evidence/direction-council-38/statistics.json": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0",
+    "docs/reviews/evidence/direction-council-38/observation.json": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823",
+    "docs/reviews/evidence/direction-council-38/loco-vote.json": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a",
+    "docs/reviews/evidence/direction-council-38/loco-proposals.json": "5548f5e39ff8d1f87ced06793fdbedb5660994294e7dc10cc981c94b47783e6d"
+  },
+  "no_new_CRPS_losses_data_fits_or_model_code": true,
+  "non_compensable": [
+    "UNKNOWN no es0; estimando/unidad/target/operador/población explícitos.",
+    "No verdadfísica, causalidad, calibración oholdoutfresco inventados.",
+    "No rescatar23/35/37 ni30B conotroestimando osecundario favorable; G1 físico siguefalse.",
+    "Sin producción/refit/nuevosdatos o familias alternativas ante fallo.",
+    "Revisión y entrega final dentro del horizonte, sin reiniciar caps."
+  ],
+  "A_verdict": {
+    "admissibility": "Sí: un contraste propio y estrecho de calidad del forecastCDF marginal congelado21 frente al forecast degeneradoδB. No hace falta otrafamilia para que esa pregunta sea matemáticamente legítima.",
+    "primary": "Media igualpeso de los cuatro contrastesheld CRPS(F21original)−CRPS(δB), exactamente mismo panel/targets/máscara6/rosters; valores negativos favorecenF en esa pérdida. Regímenes y subgrupos visibles, sin IC IID ni elegir otraagregación.",
+    "reference": "δB es una distribuciónprobabilística válida aunque degenerada. CRPS(δB,Y)=|B−Y|. No representa una referencia de incertidumbre calibrada ni capacidad/modelo igualados.",
+    "interpretation_limit": "Una mejora puede combinar cambio de ubicación y dispersión frente aB. No aísla valor deAqua, aporte puro de incertidumbre o calibración. Favorable sólo sostiene evidencia comparativaCRPS bajo este benchmark; adverso sólo cierra esa defensa, no prueba que todas lasCDF/cronologías carezcan de valor.",
+    "integer_target_real_forecast": "Y son cantidades enteras registradasSNP; F21 puede tener átomos positivos reales por escala/floor. CRPS sobreR admite ambas cosas. Preservar sin redondear/interpolar los átomos y floor original; redondearlos produciría otraCDF. Score en unidades raw de celdas-díaSNP, no Znormalizada o transformaciones elegidas después.",
+    "marginal_not_joint": "CRPS se aplica aCDF marginales porfila; no requiere suponer independencia para promediar descriptivamente, pero tampoco evalúa dependencias conjuntas54, incertidumbre regional o coherencia de totales. G es una decisión puntual sinCDF conjunta reconciliada; no fabricarCDF oδG para cambiar la pregunta.",
+    "identity_arm": "E11=parent enheld es identidad estructural y no un brazo informativo. Verificarla en soporte/masas completos, no sólo mediana, sin puntuarla como mejora.",
+    "mandatory_controls": [
+      "Congelar reconstrucción completa de cuatro modelos21, máscaras/keys/pesos/escala/floor y preservar probabilidades/átomos originales. Mediana/media donde corresponda deben reproducir decisiones originales antes de scores; no imponer queG sea medianaF.",
+      "CDF válida con átomos/masas finitos, masa no negativa y normalización según la receta congelada; no reparar parámetros para lograr pase. Tolerancias numéricas previas.",
+      "CRPSδB=MAE(B) fila a fila y en agregaciones; fixtures exactos incluyendo delta, dosátomos, masas en0, ties, target fuera/dentro del soporte.",
+      "Oráculo independiente por integralCDF contra fórmula de esperanzas de distancias, sin importar helper del productor. Separar knots de átomos eY; las discontinuidades en puntos tienen medida0. No es necesario Fraction sobre todos los datos reales si dos algoritmos numéricos independientes y tolerancias están fijados.",
+      "Guardrails con mismasfilas:14/40, SOURCE/held si se reporta, ceros/positivos/>=50, cuatro regímenes; la primaria sigueigual4held y no se rescata con ungrupofavorable."
+    ],
+    "no_mandatory_extra_families": "No exigir nuevaCDFclimatológica, residualCDF,δmedianF o búsqueda deκ para validar este contraste estrecho. Tales controles responderían preguntas adicionales y no deben añadirse después de verCRPS.",
+    "stops": [
+      "ReconstrucciónCDF/población/oráculo no auditables temprano: bloquear antes de scores nuevos y entregaralcance.",
+      "Falla identidad/masas/keys o cap/revisión: conservarfallo, sin residualCDFsustituta ni otro panel.",
+      "CRPS favorable no rescataMAE37/35 ni habilita comunicar intervalos calibrados. Resultados mixtos delimitan el alcance, no son promoción."
+    ]
+  },
+  "B_verdict": "No ejecutable: acción y coste de abstenerse no definidos. Criterios decisorios no identificables se mantienenNA, sin0 ni pesos redistribuidos. No abrir como rescate siAnegativo.",
+  "C_documentary_obligations": [
+    "Sólo documentos/metadatos/acceso en dos fechas yAOI ya fijados:2019-01-03/2023-02-10.0bytes científicos nuevos; presupuestoL2cerrado no se reabre por preflight.",
+    "Documentar instrumento/productoversión, modo/cadencia histórica de cadafecha, proyección y definición de resolución enAOI. No trasladar cadencia o resoluciónnominal actual a amboscasos.",
+    "Distinguir ventana de archivo/referencia de scan de exposición real porpíxel. Documentación no certifica tiempos físicos exactos ni coincidencia con polarorbital.",
+    "Enumerar máscara/QA/no-detección/nube/no procesado/desconocido y qué representa cada estado; ausencia en listing o falta de documentación queda sinverificar, no negativo observacional.",
+    "La pregunta útil es si existe un operador grueso repetido que podría aportar contexto temporal a una señal espacial amplia en el intervalo fijado. No puede adjudicar ausencia375m, localizar fuego subpíxel ni cuál sensor tiene razón.",
+    "Operador/instrumento distinto no implica errores independientes overdadsuelo. Sin datos científicos, sólo puede demostrarse factibilidad documental potencial, no lectura/QA real enAOI.",
+    "Si documentación útil justifica ruta futura, crear entonces protocolo/budget separados: no download automático. Incompatible o no resuelto dentro45min cierra G0negativo/inconcluso sin otrafecha/caso."
+  ],
+  "D_obligations": [
+    "Reservar60min de consolidación real más buffer antes11:30UTC; preservar negativos23/35/37 yfallo30B, interpretación nominal33 y límites21/24C.",
+    "No sumar reduccionesMAE yCRPS ni porcentajes de contratos/poblaciones distintas; Aesotroestimando, no una corrección retrospectiva.",
+    "Cada claim debe enlazar unidad/target/población/protocolo/evidencia/decisión y próxima evidencia que podría cambiarla. Pendientes se declaran, no se completan con supuestos."
+  ],
+  "schedule_and_resources": {
+    "available_approx_minutes_at_brief": 174,
+    "serial_caps_minutes": 195,
+    "serial_plan_admissible": false,
+    "recommendation": "A como único estudio cuantitativo nuevo +D garantizado. C sólo paralelo si tiene autor/revisión propios o revisión de raíz que no desplace revisiónA niD; si no hay capacidad, diferirC, no recortarreview.",
+    "clock_rule": "Estampar inicio real del trabajo/protocolo y vencimientos absolutos sin reinicio. Reservarúltimos60min ybuffer de entrega; límiteA no puede empujarD fuera de11:30. Checkpoint temprano de reconstrucción independiente antes de pérdidas.",
+    "when_A_stops": "Conservarnegativo/inconcluso yconsolidar. C/B uotraCDF no se abren automáticamente como sustituto para conseguir resultado favorable."
+  },
+  "ratification": "Apoyo condicional A+D yCdocumental opcionalparalelo protegido; no ganador numérico robusto ni unanimidad de ranking. No nueva familia o adquisición por este dictamen.",
+  "additional_subjective_scores": null
+}

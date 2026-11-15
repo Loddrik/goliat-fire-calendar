@@ -1,0 +1,63 @@
+{
+  "completed_utc": "2026-11-15T09:40:54.422116+00:00",
+  "report_path": "docs/reviews/2026-11-15-goes-preflight-report.md",
+  "report_sha256": "90709289859a6e05667371c541df77d44bef05b52d4677ac6dbc895408302c52",
+  "protocol_sha256": "8f5df8704d9adc17e35b8e8c5e86309d8cf1cfedc626362e7e014ea6cd187fe2",
+  "files": {
+    "C1.xml": {
+      "bytes": 1490,
+      "sha256": "ce9248942289f995a1526c5581db7cf35d5ca73a1caaf3d66aba943eda0ec358"
+    },
+    "C2.xml": {
+      "bytes": 2102,
+      "sha256": "a0949dda13e71ecf8c51c7387756825ffbb25e89da3e950a3de42685441d23cf"
+    },
+    "D1modern.html": {
+      "bytes": 10052,
+      "sha256": "44eacec09f57657c89a9b10f14b7bdea32ac329fc5ad341826f1bb979a1fe388"
+    },
+    "catalog-summary.json": {
+      "bytes": 6491,
+      "sha256": "701cf33886d5bb4338e82d5f3402aeea7debe7e179656c05e714881e06a1c588"
+    },
+    "documented-schema-not-case-decoder.json": {
+      "bytes": 1881,
+      "sha256": "6b8939f9d780687c8f87ef7ec6141a6e77d164f8db140cfee8dc9765048c73bd"
+    },
+    "http-metadata-log-escalated.json": {
+      "bytes": 4169,
+      "sha256": "25b9b926e5d8336617f4d12d44ca7b554613f52dc31e09cd731f1727f3838564"
+    },
+    "http-metadata-log.json": {
+      "bytes": 3453,
+      "sha256": "7004f8247a2d81c7a8381385bd403159e137746b4be038c3a7aca317497affd7"
+    },
+    "known-unknown-matrix.json": {
+      "bytes": 2696,
+      "sha256": "83d99b240c3ba85711f80022e785b0842f355d655a1570f08f138fdf798843a8"
+    },
+    "querylog.json": {
+      "bytes": 5587,
+      "sha256": "54637c0d3263a9935ed3b800b6bb690c9e9125009a7e89e52f2e9e156dbfb929"
+    },
+    "sources.tsv": {
+      "bytes": 3879,
+      "sha256": "e5adca1740f6cfd46a6da2fae51a1e1b6b0a3d6dad442cc2d18ce511f638f489"
+    },
+    "summary.json": {
+      "bytes": 1741,
+      "sha256": "277991d089afeaf211ad6c471df0f2486ee980460ca8f0094c2d6e3947e29402"
+    },
+    "technical-document-cache.json": {
+      "bytes": 1315,
+      "sha256": "cc5464c4da001359039c50c86d826583551024011af2a3fa0b1f6bee6d6132fb"
+    },
+    "zero-science-counter.json": {
+      "bytes": 495,
+      "sha256": "beef71028fd291a3a7621f896e89de39944c628d7d270141a9ad943c21569029"
+    }
+  },
+  "scientific_bytes_acquired": 0,
+  "technical_document_PDF_cache_not_published": "technical-document-cache.json has URLs/bytes/SHA metadata; ignored runtime cache",
+  "independent_review_scope": "Documentary only; no historical decoder/science reading or future acquisition approved"
+}

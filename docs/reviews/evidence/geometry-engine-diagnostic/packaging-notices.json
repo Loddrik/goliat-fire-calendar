@@ -1,0 +1,8 @@
+{
+  "original_manifest_sha256": "9a88d49359a82d17f630d7129bc24717115a9c0960090af102e274fee5e6a2de",
+  "stage": "post-execution distribution notices only",
+  "added_sha256": {
+    "COPYING": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "THIRD_PARTY_NOTICE.md": "80092a5309e7ac7f44ca514d587e56c894e1f91d62634d2325825c98d52f9339"
+  }
+}

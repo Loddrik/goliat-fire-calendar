@@ -1,0 +1,23 @@
+{
+  "scope": "documentation_and_small_schema_fetch_only",
+  "science_download_attempts": 0,
+  "access_notes": [
+    {
+      "url": "https://www.earthdata.nasa.gov/data/catalog/lpcloud-vnp14a1-002",
+      "result": "web403;NASAOpenDataPortal used"
+    },
+    {
+      "url": "https://www.earthdata.nasa.gov/data/catalog/lpcloud-myd14a1-061",
+      "result": "web403;NASAOpenDataPortal used"
+    },
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/VIIRS/2/VNP14A1",
+      "result": "web404;V2cataloglinksV1spec;versionuncertaintyretained"
+    },
+    {
+      "url": "https://storage.googleapis.com/earthengine-stac/catalog/NASA/NASA_LANCE_SNPP_VIIRS_C2.json",
+      "result": "shellDNSunavailable;webtoolinaccessible;providerHTMLbandtableused;nooriginalSTACbyteshashed"
+    }
+  ],
+  "hash_limit": "hashes attest saved structured notes/schema/result, not bytes of remoteHTML/PDF or a downloaded science schema"
+}

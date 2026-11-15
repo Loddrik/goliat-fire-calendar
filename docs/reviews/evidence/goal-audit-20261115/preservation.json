@@ -1,0 +1,14 @@
+{
+  "completed_utc": "2026-11-15T10:02:36.543251+00:00",
+  "status": "pass",
+  "original_preservation_manifest_sha256": "b6ac6326c7f62627e7f1257502a25a768268a62f9f1714617bd5a369fa817380",
+  "original_raw_and_document_entries_verified": 50,
+  "original_raw_entries_verified": 47,
+  "original_documents_verified": 3,
+  "original_FireChronos_bundle_hash_matches": true,
+  "landcover_archive_members_verified": 2,
+  "landcover_manifest_sha256": "0e78704d19d788da151e307fdc44c3baa33a31098820b74a713fd0771449db1f",
+  "scope": "Local preservation of explicitly inventoried originals and backups. These are not the missing1071 canonical GOLIAT CSVs, not full acquisition reproduction, and not new scientific downloads.",
+  "originals_modified": false,
+  "new_downloads": 0
+}

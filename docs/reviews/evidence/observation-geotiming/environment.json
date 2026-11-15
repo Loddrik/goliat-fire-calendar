@@ -1,0 +1,15 @@
+{
+  "python": "3.10.0",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "packages": {
+    "numpy": "2.2.6",
+    "h5py": "3.16.0",
+    "pyhdf": "0.11.7",
+    "pyproj": "3.6.1"
+  },
+  "proj_version": "9.3.0",
+  "additional_installed_package": {
+    "certifi": "2026.10.23"
+  },
+  "installation_scope": ".runtime/obs-env only; project locks unchanged"
+}

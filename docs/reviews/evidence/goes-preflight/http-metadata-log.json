@@ -1,0 +1,93 @@
+[
+  {
+    "id": "D1modern",
+    "url": "https://www.ospo.noaa.gov/data/messages/2019/03/MSG_20190327_1424.html",
+    "method": "GET",
+    "kind": "official_document_only",
+    "access_utc": "2026-11-15T09:25:38.813974+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "D4",
+    "url": "https://www.ospo.noaa.gov/resources/documents/PUG/GS%20Series%20416-R-PUG-L2%20Plus-0349%20Vol%205%20v3.0%20final.pdf",
+    "method": "GET",
+    "kind": "official_document_only",
+    "access_utc": "2026-11-15T09:25:38.814800+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "D6",
+    "url": "https://www.ospo.noaa.gov/resources/documents/ATBD/ATBD_GOES-R_FIRE_v2.7_Oct2020.pdf",
+    "method": "GET",
+    "kind": "official_document_only",
+    "access_utc": "2026-11-15T09:25:38.815889+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "D7",
+    "url": "https://www.ospo.noaa.gov/operations/goes/product-quality-overview/ps-pvr/goes-16/ABI/Fires%20and%20Hot%20Spots%20Characterization/Provisional/GOES-16_ABI_L2_FHS_Provisional_ReadMe_v2.pdf",
+    "method": "GET",
+    "kind": "official_document_only",
+    "access_utc": "2026-11-15T09:25:38.816201+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "D8",
+    "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC01520",
+    "method": "GET",
+    "kind": "official_document_only",
+    "access_utc": "2026-11-15T09:25:38.816697+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "C1",
+    "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2019/003/18/&max-keys=1000",
+    "method": "GET",
+    "kind": "catalogue_XML_only",
+    "access_utc": "2026-11-15T09:25:38.817135+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  },
+  {
+    "id": "C2",
+    "url": "https://noaa-goes16.s3.amazonaws.com/?list-type=2&prefix=ABI-L2-FDCF/2023/041/18/&max-keys=1000",
+    "method": "GET",
+    "kind": "catalogue_XML_only",
+    "access_utc": "2026-11-15T09:25:38.817490+00:00",
+    "scientific_bytes": 0,
+    "credentials_used": false,
+    "error_type": "URLError",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "status": null,
+    "document_or_catalogue_bytes": null
+  }
+]

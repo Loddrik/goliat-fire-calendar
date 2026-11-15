@@ -1,0 +1,85 @@
+{
+  "weights": [
+    0.3,
+    0.25,
+    0.2,
+    0.15,
+    0.1
+  ],
+  "arithmetic_verified": true,
+  "original_votes_sha256": {
+    "statistics": "a43745bf9f37ccc30b153e59f629220654b4d02cc5cedcd45ff7938264cb9ef0",
+    "observation": "b6ec9111d3dfa43f74f14ef7a365d704513fc3217d2c8705173ce4804b291823",
+    "loco-vote": "c7fbf0927cb4c935b07ec4d00c42e4f25605c0704a46c332b60000e7a901238a"
+  },
+  "normalization": "1–5 notes multiplied20; statistical notes0–100; unchanged weights. No probabilities/CI/blind-panel claim.",
+  "options": {
+    "A": {
+      "original_ranges": {
+        "statistics": [
+          76.4,
+          88.8
+        ],
+        "observation": [
+          73.0,
+          88.0
+        ],
+        "loco-vote": [
+          80.0,
+          90.0
+        ]
+      },
+      "mean_subjective_range": [
+        76.46666666666667,
+        88.93333333333334
+      ]
+    },
+    "C": {
+      "original_ranges": {
+        "statistics": [
+          61.5,
+          82.0
+        ],
+        "observation": [
+          69.0,
+          77.0
+        ],
+        "loco-vote": [
+          59.0,
+          73.0
+        ]
+      },
+      "mean_subjective_range": [
+        63.166666666666664,
+        77.33333333333333
+      ]
+    },
+    "D": {
+      "original_ranges": {
+        "statistics": [
+          73.5,
+          87.5
+        ],
+        "observation": [
+          72.0,
+          72.0
+        ],
+        "loco-vote": [
+          81.0,
+          89.0
+        ]
+      },
+      "mean_subjective_range": [
+        75.5,
+        82.83333333333333
+      ]
+    }
+  },
+  "B": {
+    "eligible_now": false,
+    "aggregate": null,
+    "reason": "Action/cost unspecified; do not zero-impute or average conditional statistical score. Original vote retained."
+  },
+  "robust_winner": false,
+  "root_sequence": "A+D only; C deferred unless separately gated after earlyAstop and fullreview/capacity/timeprotectD; B not runnable."
+}

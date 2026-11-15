@@ -1,0 +1,16 @@
+{
+  "id": "S5",
+  "url": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/VIIRS/1/VNP14A1",
+  "publisher": "NASA LAADS",
+  "date_in_source": "V1.0.2 revision0;2018-07-18",
+  "locator": "SDS definitions FireMask/QA/MaxFRP/sample",
+  "facts": [
+    "Four1200x1200 arrays: FireMask uint8, QA uint8, MaxFRP int32 scale0.1MW, sample int16.",
+    "FireMask:0missing,1trim,2obsolete,3water,4cloud,5land,6unknown,7..9positive confidence classes.",
+    "QA bits0..1 identifywater/coast/land/missing; bit2 declares0night/1day.",
+    "sample0..3199 is fire-only, nonfire fill-1; no per-pass acquisition list documented.",
+    "Dimension labels contain MOD_Grid_500m despite title/grid describing1km; labels alone do not prove500m science resolution."
+  ],
+  "retrieved_utc_interval": "2026-11-15T04:30:06Z/2026-11-15T04:33:37Z",
+  "capture_kind": "analyst_structured_paraphrase_of_web_tool_retrieval_not_original_source_bytes"
+}

@@ -1,0 +1,290 @@
+{
+  "status": "PASS_complementary_scientific_communication",
+  "completed_utc": "2026-11-15T10:48:46.629049+00:00",
+  "input_sha256": {
+    "docs/artifacts/science-observation-plan-2026-11-15.html": "83ee67ce01ef84c4eaad479a0fb5197819dbcf7bec14199611ae360d244afc2c",
+    "docs/reviews/2026-11-15-final-scientific-decision-addendum.md": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167",
+    "pipeline/build_joint_plan_report.py": "a5896f08b39272a44cefb7774b622525e1da21db101a515d279056de71fa6a55",
+    "docs/reviews/2026-11-15-goes-preflight-report.md": "90709289859a6e05667371c541df77d44bef05b52d4677ac6dbc895408302c52",
+    "docs/reviews/2026-11-15-goes-preflight-independent-review.md": "d7044e78d9d5be644c125964ab8f593f165cc802dbc2a75d20a0652cbb560886"
+  },
+  "prior_main_document_unchanged_sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934",
+  "scope": "Read-only scope/number/provenance/diagram audit of addendum and final HTML including season42, without new scientific computation. No browser rendering, new web sources, scientific data or experiments.",
+  "C40_report_and_dedicated_peer_read": true,
+  "C40_new_web_queries_by_this_reviewer": 0,
+  "addendum_no_stronger_claim_than_C40_peer": true,
+  "CDF_same_historical_month_not_future_claim_checked": true,
+  "CRPS_location_spread_and_noncalibration_limits_checked": true,
+  "14_extreme_zero_costs_visible": true,
+  "SOURCE16_heldBiobio_not_conflated": true,
+  "G_point_not_CDF_or_joint54_checked": true,
+  "37_formulation_only_no_universal_chronology_null": true,
+  "science_bytes_zero_versus_document_bytes_distinguished": true,
+  "all_eight_SVG_XML_and_roles_valid": [
+    {
+      "aria_label": "Del territorio al registro: el operador media la observación",
+      "viewBox": "0 0 1000 175",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Los consejos acuerdan criterios, votan, objetan y ratifican un plan",
+      "viewBox": "0 0 1000 320",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Un cuadrado contenido en ambos polígonos fija una cota inferior de intersección",
+      "viewBox": "0 0 1000 315",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Tres tareas paralelas con entregables y límites propios",
+      "viewBox": "0 0 1000 360",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Un registro nativo puede asignar su misma etiqueta a varios puntos; no son incendios distintos",
+      "viewBox": "0 0 1000 300",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Las mismas distribuciones alimentan dos reglas de presupuesto, global y separada",
+      "viewBox": "0 0 1000 325",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Ejemplo conceptual de cuatro días: la misma permutación mueve columnas completas y vacías para todas las celdas",
+      "viewBox": "0 0 1000 445",
+      "XML_valid": true
+    },
+    {
+      "aria_label": "Dos meses con el mismo MAE mensual a pueden tener error absoluto de suma cero o dos a",
+      "viewBox": "0 0 1000 335",
+      "XML_valid": true
+    }
+  ],
+  "all_HTML_ids_unique": true,
+  "scripts_iframes_remote_graphic_resources": 0,
+  "local_or_fragment_links_checked": 24,
+  "source_hashes_verified": [
+    {
+      "path": "data/processed/season_total_audit/attempt-02/summary.json",
+      "sha256": "c02bd9e3614ebc2393d4c03039951a903d54b6fe79c43a459878d6f050c7e58d"
+    },
+    {
+      "path": "docs/reviews/evidence/season-total-independent-review/summary.json",
+      "sha256": "e2545a45c63b4512c0d129f8c9e084e656310f84ffd77361fab4cbfa28a28fb5"
+    },
+    {
+      "path": "docs/reviews/evidence/season-total-independent-review/resource-checks.json",
+      "sha256": "9b2760cae469d12f78c9753504cb5aafe59f9918b03111daee47e7f0327cdd66"
+    },
+    {
+      "path": "data/processed/season_total_audit/resource-attempt-01.json",
+      "sha256": "9651bc3490f346e92d6146ae6a5848e384bba5c3a77611e1897d778a3c6b01e9"
+    },
+    {
+      "path": "data/processed/season_total_audit/resource-attempt-02.json",
+      "sha256": "9841671a66e0b14d738634cb1acf5ac74ac6178dd3df16524c903cde6aa84d78"
+    },
+    {
+      "path": "docs/reviews/evidence/season-total-independent-review/method-disclosure-check.json",
+      "sha256": "83e137d2147b1645864a6c8e1511999c9068ffd2c44b6d371b314f1b6948ff3a"
+    },
+    {
+      "path": "data/processed/coherent_audit/summary.json",
+      "sha256": "1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501"
+    },
+    {
+      "path": "data/processed/daily_adjacency_audit/summary.json",
+      "sha256": "0adc140387f4e37c545f7f8c4cbe4de530caae4516c7cab8ee7b2015168a6b18"
+    },
+    {
+      "path": "docs/reviews/evidence/daily-adjacency-independent-review/summary.json",
+      "sha256": "8a9ddc67402a409d5b2c1bc5c55d10af2c6b6e902306c9e0aff26d32f29c3948"
+    },
+    {
+      "path": "data/processed/daily_context_audit/summary.json",
+      "sha256": "cd54d7484907afaeed0ea483380f5a8ef3f97d5ca5b61c6e1e2ce1f6a0409cd9"
+    },
+    {
+      "path": "docs/reviews/evidence/daily-context-independent-review/summary.json",
+      "sha256": "cc154cab853dfdbf7b050f57131c721f8d2254197b78817f7a492b938273efa9"
+    },
+    {
+      "path": "data/processed/crps_audit/summary.json",
+      "sha256": "1d8af62a1aab4e8b124dab92f4438cf158ac606aa97d13a85072b3682d306ad6"
+    },
+    {
+      "path": "docs/reviews/evidence/crps-independent-review/full-review/summary.json",
+      "sha256": "a96042e91f2e724d5a47e76da232076dfb2c60e7985a90aaa1ba04f006fe6aae"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight/summary.json",
+      "sha256": "277991d089afeaf211ad6c471df0f2486ee980460ca8f0094c2d6e3947e29402"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight/catalog-summary.json",
+      "sha256": "701cf33886d5bb4338e82d5f3402aeea7debe7e179656c05e714881e06a1c588"
+    },
+    {
+      "path": "docs/reviews/evidence/goes-preflight-independent-review/summary.json",
+      "sha256": "678221034e254f0c08d3aed189351d122fba74ee0d1dfeaf0cd8141025e71248"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/aggregate.json",
+      "sha256": "fffc10bf51e12d7e2495c158fab4458ce727f1a148c7c8c5a19dc1feeaa9aa2d"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/ratification.json",
+      "sha256": "b37aa8be322c101b2cae480e32b47f942f121de7785ceba12a9d83e332484850"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-38/C-resource-amendment-ratification.json",
+      "sha256": "bbb4bb9d08908331a4c98e5e741d38bcf2bcf09c0d183fb731fc933e01fcfba4"
+    },
+    {
+      "path": "data/processed/context_cdf_audit/summary.json",
+      "sha256": "0daf314fccd8ec4003306dab36d22456c2cf3acd39a03229ecec36c61d9a276f"
+    },
+    {
+      "path": "data/processed/cold_region_audit/summary.json",
+      "sha256": "5cb57b073ea4ddbe20f7dd586e16e157036cf52bb9b264ab175c44ca1c4c30ae"
+    },
+    {
+      "path": "docs/reviews/evidence/observation-mesh-validation/summary.json",
+      "sha256": "f88f92c7ba1749ed7de8bda6d4c1f4751adb123c025a272e0ee6d6a69cf910c8"
+    },
+    {
+      "path": "docs/reviews/evidence/viirs-dimension-consistency/summary.json",
+      "sha256": "118e6ba3e8bed477d1f62c6d644c2f1f8ec7b1733e8f0dd8f5bf086be48adf2c"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-24/votes.json",
+      "sha256": "ad1026f3e308add19d1700bbc78996a31f98686740323d1d05d73a4ad3ba4f5f"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-24/ratification.json",
+      "sha256": "183d4a8c0e5e4b29b1319616e538b26f7da1da646bccec50879b72d2869136f8"
+    },
+    {
+      "path": "data/processed/contract_model_sensitivity_audit/summary.json",
+      "sha256": "2ff16a1cf2240669469056a1c15538edae75de427825326478570227533d52d5"
+    },
+    {
+      "path": "docs/reviews/evidence/gridded-observability-preflight/result.json",
+      "sha256": "7ca1362fc951c4af30b25d13e09ae43d49d33e76d2381bdedfe815e0f38e979d"
+    },
+    {
+      "path": "docs/reviews/evidence/observation-ownership-ledger/summary.json",
+      "sha256": "dbdc24dac342000a84c35a138f50ddfe63916658f5466de4b46a62b3f4f63741"
+    },
+    {
+      "path": "docs/reviews/evidence/observation-ownership-ledger/diagnostic/failed-common-closure.json",
+      "sha256": "26b3538bf7ac941c0949393928645fa45493c006210d5ccb67ce6b0509feb93e"
+    },
+    {
+      "path": "docs/reviews/evidence/geometry-engine-diagnostic/comparison.json",
+      "sha256": "ae7a553463ec400e3d3d38abde87a33e79800087565c3be4375b2b68ea5a67b2"
+    },
+    {
+      "path": "docs/reviews/evidence/coordinate-origin-diagnostic/results.json",
+      "sha256": "b1176b44d7a45906e7ced73596a03c2a76a57a487f851d147409646386bc8ec5"
+    },
+    {
+      "path": "docs/reviews/evidence/coordinate-origin-diagnostic/exactness-certificate.json",
+      "sha256": "98052130f5138530b6dae95cc45967e183ece384089d4810a0aee96c944d5615"
+    },
+    {
+      "path": "docs/reviews/evidence/exact-geometry-witness/results.json",
+      "sha256": "4e74069a6c2164016f0a490144672ba2f5349c5f57c45bd6833c437a61fcaae5"
+    },
+    {
+      "path": "docs/reviews/evidence/centered-observation-ledger/attempt-01/failure-run.json",
+      "sha256": "e1b9a0e6b6f2d3558c68de72a4faa35f9727316adc31b6a76a51001866ac3f4b"
+    },
+    {
+      "path": "docs/reviews/evidence/point-ownership-audit/attempt-01/summary.json",
+      "sha256": "933f3c36ec771e6f0ac044bec64b19fbeb9074bfbc5e3c87f0b56c239f3a37f4"
+    },
+    {
+      "path": "docs/reviews/evidence/exact-local-overlay-audit/results.json",
+      "sha256": "5b565d5854636b7e6dd7f9d6bc05fe1d25abb13d6ac741ae9920fdccda6ca108"
+    },
+    {
+      "path": "docs/reviews/evidence/group-budget-independent-review/summary.json",
+      "sha256": "cf3f745f3cd525e1ce29c429c15d1c9427baf6a890260b3096d2d5079b4bd8af"
+    },
+    {
+      "path": "data/processed/group_budget_audit/summary.json",
+      "sha256": "6e2e9db1424f808a8c1c9831a5f7ba94624de40a5d85363d47e911e16529af0c"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/aggregate.json",
+      "sha256": "2539942f2f2f7d4d1c46e53d1a6d7ed140f4f2563637d046465631d7b96bedf0"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-35/ratification.json",
+      "sha256": "d75f706064cff5eb3a134c2ccdb929666219aac16c68f8444a1c75d46b40437a"
+    },
+    {
+      "path": "docs/reviews/evidence/discrete-state-comparison-independent-review/summary.json",
+      "sha256": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf"
+    },
+    {
+      "path": "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json",
+      "sha256": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916"
+    },
+    {
+      "path": "docs/reviews/evidence/direction-council-31/ratification.json",
+      "sha256": "5f91e7dcb26d0396a5808aa539341a6a3425fb393572d1aed01c439df5639646"
+    }
+  ],
+  "numeric_tables36_37_39_40_and_council38_checked": true,
+  "season42_table_fields_and_format_verified_without_new_metric_computation": true,
+  "median_APE_not_MARE_and_relative_mean_not_aggregate_bias_verified": true,
+  "primary112_all_positive_reference_postselection_declared": true,
+  "annual_band_and_2002_causal_validation_not_claimed": true,
+  "API_fields_still_proposal_not_public_JSON_changes": true,
+  "RSS_attempt02_does_not_retrocertify_attempt01": true,
+  "SVG8_conceptual_same_monthly_MAE_different_sum_absolute_error_verified": true,
+  "permutation_example": {
+    "source_day_sets": [
+      [
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "origin_to_destination": {
+      "1": 3,
+      "2": 1,
+      "3": 4,
+      "4": 2
+    },
+    "destination_day_sets": [
+      [
+        1,
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "empty_columns_and_shared_intraday_sets_preserved": true,
+    "conceptual_not_real_SHA_result": true
+  },
+  "council38_three_original_three_adversarial_limits_and_six_ratifications_checked": true,
+  "C_resource_change_due_early_A_completion_not_metric_sign": true,
+  "deterministic_footer_cutoff": "2026-11-15T10:39:20.629300+00:00",
+  "builder_not_executed_by_reviewer": true,
+  "rebuild_determinism_scope": "Root reported two matching builds; reviewer checked source reads maximum of fixed42 numeric-review/method-disclosure timestamps and no current-clock generation.",
+  "browser_mobile_desktop_rendering_scope": "Owned by root separately, not claimed here.",
+  "PR_metadata_not_requeried": true,
+  "fits": 0,
+  "new_losses": 0,
+  "solvers": 0,
+  "science_downloads": 0,
+  "remaining_blockers": []
+}

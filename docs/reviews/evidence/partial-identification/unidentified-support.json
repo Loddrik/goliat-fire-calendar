@@ -1,0 +1,25 @@
+{
+  "G1": false,
+  "physical_validation": false,
+  "request": {
+    "coupling": "cartesian_across_units",
+    "positive_rule_id": "toy-positive-rule-v1",
+    "schema_version": 1,
+    "scope": {
+      "reason": "common_support_unbounded",
+      "status": "unidentified"
+    },
+    "target": "registered_positive",
+    "units": []
+  },
+  "result": {
+    "decision": {
+      "reason": "unidentified_scope",
+      "status": "unknown"
+    },
+    "metrics": null,
+    "reason": "common_support_unbounded",
+    "status": "not_identified"
+  },
+  "synthetic_only": true
+}

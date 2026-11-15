@@ -1,0 +1,206 @@
+{
+  "audit": "operational_goal_coverage_read_only",
+  "completed_UTC": "2026-11-15T10:05:17.916594+00:00",
+  "repository": "Loddrik/goliat-fire-calendar",
+  "HEAD": "b29d98f51f4416130811a1bfecd93b2c47847851",
+  "independence": "Operational coverage audit by a contributor to the HTML, not an independent peer re-review of their own artifact. Existing external peer and root browser evidence distinguished.",
+  "new_science_data": 0,
+  "new_fits": 0,
+  "new_solvers": 0,
+  "new_loss_replays": 0,
+  "test_suites_repeated": 0,
+  "remote_updates": 0,
+  "secret_contents_read": false,
+  "only_new_file": "docs/reviews/evidence/goal-audit-20261115/operational.json",
+  "previous_reviewed_docs_or_manifests_edited": false,
+  "checks": {
+    "remote_base_update": {
+      "status": "proved",
+      "origin_dev": "52afe0d60fca3fb02063f3265f9892306dce14dd",
+      "origin_main": "e953924d89d6608b7dc9f597c2e7a6ffb5d86398",
+      "equal_tree": "e02c84e0e74dd49878130fe9e3d13804179ec32a",
+      "remote_refs_verified_read_only_via_GitHub_commit_metadata": true,
+      "fetch_head_mtime_UTC": "2026-11-15T09:40:26Z",
+      "note": "Local refs agree with live connector commit metadata at audit time; no fetch or remote mutation performed by auditor. git ls-remote fallback failed DNS; GitHub connector succeeded."
+    },
+    "PR_incremental_chain": {
+      "status": "proved",
+      "numbers": [
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "all_base": "dev",
+      "all_open_unmerged_at_audit": true,
+      "own_compare_chain_declared_in_bodies": true,
+      "local_ancestor_checks_57_to_62_all_true": true,
+      "heads": {
+        "58": "93240603cc70b43aabae5713781b68ac1dab728c",
+        "59": "535c2828124df8ad8a49e62cf5c09aa67650dded",
+        "60": "f2c3247edeec2d7d6d4134d28b8176e4ecf8a1be",
+        "61": "3faed099044881852d7b2dbae8592e01cdc1cd52",
+        "62": "b29d98f51f4416130811a1bfecd93b2c47847851"
+      },
+      "scope": "Base dev means each PR includes preceding chain; own compare links distinguish incremental change. No merge inferred from mergeability."
+    },
+    "identity_unsigned": {
+      "status": "proved",
+      "effective_repository_name": "Daniel Quinteros",
+      "effective_repository_email": "daniel.quinterosc@gmail.com",
+      "effective_commit_gpgsign": false,
+      "effective_tag_gpgsign": false,
+      "commits_checked_since_origin_dev": 89,
+      "all_authors_match": true,
+      "all_signature_status": "N",
+      "scope": "Actual local commits on current research history and local effective config; no claim about commits made by other GitHub users on original upstream history."
+    },
+    "frozen_inputs_and_publication": {
+      "status": "proved",
+      "current_rehash_matches": {
+        "protected_sha256": 448,
+        "input_sha256": 12,
+        "code_sha256": 8
+      },
+      "mismatches": [],
+      "reference": "data/processed/crps_audit/code-freeze.json",
+      "reference_sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f",
+      "no_diff_since_origin_dev_in": [
+        "web/public/data",
+        "observed/dist",
+        "data/processed/params.json",
+        "data/processed/gates.csv"
+      ],
+      "scope": "Named study39 inputs and production paths, not an assertion that all research outputs are scientifically valid."
+    },
+    "credential_storage": {
+      "status": "proved",
+      "known_secret_paths_ignored": true,
+      "tracked_secret_runtime_env_paths": 0,
+      "known_token_file_modes": "0600",
+      "secret_contents_read": false,
+      "note": "Only git tracking/ignore checks and filesystem mode/existence metadata for known secret files. No secret bytes or values printed, persisted or inspected. No claim of exhaustive historical secret scanning."
+    },
+    "artifact_builder": {
+      "status": "proved",
+      "artifact": "docs/artifacts/science-observation-plan-2026-11-15.html",
+      "artifact_sha256": "6b97c9b929c59f139d7125c185ce9f6ed7eb617a2d408943a924ef39598c8ddc",
+      "builder_sha256": "2aa8bd0e12c76d4228870f11f0bfcbcbf761ab25539cb2c220f7c610c5c23145",
+      "SVG_count": 7,
+      "all_SVG_XML_valid": true,
+      "wall_clock_timestamp_in_builder": false,
+      "snapshot_cutoff_source": "goes40 independent-review completed_utc, frozen source",
+      "read_only_in_memory_regeneration_byte_identical": true,
+      "file_writes_during_regeneration": 0,
+      "ROOT_derived_from_file": true,
+      "browser_evidence": "docs/reviews/evidence/consolidation-root-checks/browser-summary.json",
+      "browser_viewports": [
+        [
+          390,
+          844
+        ],
+        [
+          1440,
+          1000
+        ]
+      ],
+      "scope": "This auditor authored earlier HTML/builder sections. This is operational coverage checking, not independent scientific/visual peer review; separate consolidation peer and root browser records supply that role."
+    },
+    "portable_reader": {
+      "status": "proved",
+      "path": "pipeline/verify_crps_evidence.py",
+      "sha256": "85c33b9838839f85a8aadc26ee40894593a40e0803e274c77bb2db333e998f56",
+      "clean_clone_recorded_source": "cc7a6f61261f3c32d7fc33d938ba3e5db2b07c7d",
+      "root_evidence": "docs/reviews/evidence/consolidation-root-checks/portable-context.json",
+      "snapshot_CDF_rows": 10368,
+      "atom_elements": 444826,
+      "verified_method_sets": 432,
+      "private_runtime_or_clock_dependency": false,
+      "assert_not_used_for_guards": true,
+      "optimized_Python_negative_cases_recorded": [
+        "tampered snapshot hash",
+        "tampered CUT identity",
+        "tampered normalized weights"
+      ],
+      "reader_cli_paths_portable": true,
+      "oracle_shared_with_archived39_peer": true,
+      "not_a_third_independent_oracle": true,
+      "rerun_by_this_auditor": false,
+      "scope": "Existing root clean-clone evidence and current source reviewed, not another score evaluation, source-model fit reconstruction or full raw rebuild."
+    },
+    "CI": {
+      "status": "proved",
+      "commit": "b29d98f51f4416130811a1bfecd93b2c47847851",
+      "live_workflow_runs": [
+        {
+          "name": "CI",
+          "id": 43701590716,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Scientific regression tests",
+          "id": 43701590744,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "science_config": ".github/workflows/science.yml",
+      "science_installs_locked_dependencies": true,
+      "portable_step": "uv run --frozen python -O pipeline/verify_crps_evidence.py",
+      "tests_or_loss_replays_repeated_by_this_auditor": 0,
+      "note": "Combined commit statuses endpoint was empty for this commit; Actions workflow-run endpoint independently showed both successful runs. These endpoints are not interchangeable."
+    },
+    "backup_preservation": {
+      "status": "proved",
+      "bundle": "/Users/dquinteros/nasa/backups/goliat-science-20261115-0956.bundle",
+      "bytes": 116038267,
+      "sha256": "2a979417fa075815a4fe1bd21c93347e037a4d21f517002187c7d59ac69f1b06",
+      "git_bundle_verify_ok": true,
+      "complete_history_reported": true,
+      "refs": 60,
+      "includes_HEAD_and_branch": "b29d98f51f4416130811a1bfecd93b2c47847851",
+      "includes_known_prior_science_and_integration_branches": true,
+      "scope": "Proves preservation of recorded committed refs including known prior FireChronos integration/science branches, not arbitrary absent or untracked files. This newly authored audit is later than the bundle and not in it yet."
+    },
+    "no_lost_work_unqualified": {
+      "status": "not_proved",
+      "reason": "An absolute claim covering unknown/untracked/deleted historical files cannot be proved from current Git and bundle metadata. Known committed research chain and integration refs are retained; no destructive or remote write action was taken in this audit."
+    },
+    "full_acquisition_reproduction": {
+      "status": "incomplete",
+      "reason": "Previous audit documented1071missing raw FIRMS CSVs; no recount or acquisition replay here. Frozen derived outputs and same-snapshot reader do not reproduce original raw filtering/acquisition."
+    },
+    "future_goal_deadline": {
+      "status": "incomplete",
+      "deadline_UTC": "2026-11-15T11:30:00Z",
+      "has_elapsed": false,
+      "note": "At audit time deadline remains future. This report does not mark the goal complete, authorize another experiment or infer waiting work already happened."
+    }
+  },
+  "gaps": [
+    {
+      "severity": "non_blocking_coverage_limit",
+      "item": "Scientific CI paths do not trigger on documentation-only changes",
+      "evidence": ".github/workflows/science.yml includes pipeline/tests/data/environment paths but not docs/**. Current PR62 includes pipeline/config so the live scientific run did execute; future pure-doc HTML changes still need explicit review/browser/build checks.",
+      "action": "Document limitation; no workflow mutation authorized in this read-only audit."
+    },
+    {
+      "severity": "scope_limit",
+      "item": "Portable reader replays existing snapshots and shared39 integral semantics, not source fitting or complete raw acquisition",
+      "action": "Keep claims bounded; no new fit, download or loss replay."
+    }
+  ],
+  "overall": "No current material operational blocker identified within this audit scope. Absolute no-loss and complete acquisition claims remain unproved/incomplete, and11:30deadline is still future.",
+  "evidence_sha256": {
+    ".github/workflows/science.yml": "b10428f56a89bd933022fc4f72ed7c72ef6e40969e07b1252dd0dc61ee38ecc5",
+    ".github/workflows/ci.yml": "6d2394a1d06f1aac67058884d6d293a5c490eda92c31904fcad7f0221312e8f2",
+    "docs/reviews/evidence/consolidation-root-checks/protected-inputs.json": "5f2ceb4eaec9d072e106ebfe397ae6415d046cfbfb61fb05a19ea469d4e0629d",
+    "docs/reviews/evidence/consolidation-root-checks/portable-context.json": "d0991a1c0d6dbe9190804081b8d20d6b65e28c521c266116bf19fb4a0958987b",
+    "docs/reviews/evidence/consolidation-root-checks/portable-replay.json": "f39a3e4cc22c56d27816214af14ea4a27eaf4c5e8c8f577c3b03ff3a842fc4f3",
+    "docs/reviews/evidence/consolidation-root-checks/portable-negative-checks.json": "eae3ac8281d77934f10943236b7990faf8e955cdffe5ebe0578e561e8bce6f80",
+    "docs/reviews/evidence/consolidation-root-checks/browser-summary.json": "3b8115131f5f255013e46a0a6fd31da1abcdb538b5ba700ba4f00bf42fdfa678",
+    "docs/reviews/evidence/consolidation-root-checks/links.json": "b7415972bfc1c8f08828bc2967175b93342b82b7dc58fb4c57d515f9c49cad12"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "role": "estadística/predicción",
+  "criteria_ack": "Ratificados sin cambios30/25/20/15/10; tresACK originales confirmados porraíz antes de puntuar.",
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_review_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretation": 10
+  },
+  "non_compensables": [
+    "Unknown≠0; estimando/operador/target/unidad explícitos.",
+    "No truthfísico/G1/causalidad/holdoutfresco inventados.",
+    "No rescatarprimarias con otrocriterio,año,subgrupo,contrato,κ osemilla.",
+    "No producción ni nuevaevaluación sin protocolo yreview."
+  ],
+  "no_new_experiment": "Sólo documentos/resultados previos leídos. Sin nuevaCRPS/loss/target/fit/dato; script usado únicamente para ponderar estosjuicios subjetivos.",
+  "proposals_sha256": "5548f5e39ff8d1f87ced06793fdbedb5660994294e7dc10cc981c94b47783e6d",
+  "prior_evidence": "Reviews2–15: máscaras/afín/Huber/tramos/geografía/continuidadVIIRS/temporal/CONAF/intervalos/Terra;17Brier;18decisiónCDF;21regionesheld;23contextonegativo;35presupuestonegativo;37jointgateFAIL y14heldrealvsplacebopeor4/4conservados.",
+  "options": {
+    "A": {
+      "name": "CDF21fullCRPS frente aδB",
+      "eligibility": "Diseño ejecutable sólo tras protocolo/freeze propios; sin nuevosfits.",
+      "evidence": "Intervalos/IS ya evaluados11–15; Brier/bins17 ya existente. No encontré auditoríaCRPS deCDFcompleta en las revisiones nombradas, sin afirmar ausencia global. Responde a si laCDF merece interpretación probabilística investigadora, no a cambiar los fallosMAE37.",
+      "estimand": "Media igualpeso de cuatro diferenciasheld CRPS(F21original)−CRPS(δB), mismasclaves/targets/máscara6/normalización/floor21.",
+      "controls": "CRPS(δB)=|B−Y|; oráculo integralCDFindependiente yfixtures exactos. E11=parentenheld: contrasteexcluidoporidentidad. Gdecisiónpuntual,nodistribuciónreconciliada; nunca inventarCDFoδGpara cambiar pregunta.",
+      "falsifier": "Si laCDFno supera referenciafijada, o sólo un subgrupo/año favorable sostiene la conclusión, no atribuir utilidad probabilística general. Favorable sólo mantiene rama investigadora; no certifica calibración ni rescata37.",
+      "uncertainty": "Historial adaptativo yregímenes solapados;δBesreferencia degenerada, nootraCDFcalibrada;CRPSglobalpuedeocultarcostes14/extremos.",
+      "decision_change": "Favorable→mantenerCDFcomo objeto probabilístico investigable, conguardrails; adverso→mantenerla sóloheurística interna deasignación hasta evidencia nueva; mixto→alcancecondicional/inconcluso.",
+      "cap_minutes_including_review": 90,
+      "stop": "CDFfrozenincompleta,población/targetsnoidénticos o imposibilidad de revisión dentro90min:bloquear sin distribuciónresidualsustitutiva,refits o nuevosmétodos. Checkpointtemprano de reconstrucción antes de nuevaspérdidas.",
+      "subjective_criteria_0_100": {
+        "validity_identifiability": {
+          "lower": 88,
+          "upper": 96
+        },
+        "discriminating_information": {
+          "lower": 70,
+          "upper": 85
+        },
+        "feasibility_review_opportunity_cost": {
+          "lower": 75,
+          "upper": 90
+        },
+        "transport_selection": {
+          "lower": 60,
+          "upper": 75
+        },
+        "interpretation": {
+          "lower": 85,
+          "upper": 95
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 76.4,
+        "upper": 88.8
+      }
+    },
+    "B": {
+      "name": "Abstención selectiva condicionada a contrato de acción/coste",
+      "eligibility": "NOejecutable actualmente: acción/coste desconocidos son gate no compensable; notas describen factibilidad actual, no aprobación.",
+      "evidence": "No auditoría explícita risk-coverage encontrada en reviews nombradas;14compuertas y11–15bandas ya restringen qué comunica elproducto. Otroestimando de disponibilidad exige decidir quéocurre al abstenerse.",
+      "estimand": "MAEretenido y cobertura bajo política única, con pérdidas de rechazados yfullpopulation visibles; no igualdad con mejora de todoslosmeses.",
+      "controls": "Hashaceptación yordenAquaonly con igualconteo porestrato; fijar política/cobertura/coste antes de etiquetasdestino.",
+      "falsifier": "Si sólo elimina mesesintensos/territoriosdifíciles, no supera amboscontroles pareados o no respeta cobertura deextremos, cerrar; sin contrato no comenzar.",
+      "uncertainty": "Acción útil ytradeoffde pérdida/rechazo no definidos. Selección puede hacer bajarMAEtrivialmente ydejar sinrespuesta loimportante.",
+      "decision_change": "Sólo contrato ycontrolesfavorables justificarían diseñar reporteselectivo, nunca deploymentautomático; hoydiferir.",
+      "cap_minutes_including_review": 90,
+      "stop": "Noacción/coste explícitos, coberturaseleccionada tras pérdidas ocontrato ambiguo→no ejecutar; no pedir alpuntaje compensar ese gate.",
+      "subjective_criteria_0_100": {
+        "validity_identifiability": {
+          "lower": 55,
+          "upper": 80
+        },
+        "discriminating_information": {
+          "lower": 60,
+          "upper": 80
+        },
+        "feasibility_review_opportunity_cost": {
+          "lower": 15,
+          "upper": 35
+        },
+        "transport_selection": {
+          "lower": 40,
+          "upper": 65
+        },
+        "interpretation": {
+          "lower": 45,
+          "upper": 75
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 45.0,
+        "upper": 68.25
+      }
+    },
+    "C": {
+      "name": "PreflightdocumentalGOES16FDCF enfechasfijas2019/2023",
+      "eligibility": "DOCONLY45min;0bytescientíficos, no reabrirpresupuestoL2cerrado.",
+      "evidence": "Aporta posibilidad deun operador distinto;9CONAFtemporadasno valida celdas-día y33son doscasos nominales, no truth. Metadata/QA/proyección/tiempos podrían cerrar ruta por incompatibilidad, sin buscarpositivos.",
+      "estimand": "Factibilidad de corroboración temporalespacial aescalaGOES enfechas/AOIfijas, no tasa deaciertoMODIS/VIIRS.",
+      "controls": "InventarioUTC/proyección/huellatemporal ysemántica nube/no-detección/unknown; resolver antes de datos; conservar amboscasos.",
+      "falsifier": "Soporte temporal/espacial oestados interpretables no documentados→cerrarG0negativo. Coarse-negative nunca ausencia375m.",
+      "uncertainty": "Acceso,localización/QA ycapacidad discriminante desconocidos. Instrumentodistinto no hace errores independientes ni nueva verdadsuelo.",
+      "decision_change": "Operador documentado útil→solicitar a raíz protocolo/presupuesto nuevo separado; incompatible→cerrar ruta; desconocido→inconcluso, no descarga automática.",
+      "cap_minutes_including_review": 45,
+      "stop": "Cualquierbytecientífico,cuenta oadquisiciónL2noautorizada;sinprovecho operador documentado dentrocap→cerrar sin otrocaso/fecha.",
+      "subjective_criteria_0_100": {
+        "validity_identifiability": {
+          "lower": 75,
+          "upper": 90
+        },
+        "discriminating_information": {
+          "lower": 55,
+          "upper": 80
+        },
+        "feasibility_review_opportunity_cost": {
+          "lower": 65,
+          "upper": 85
+        },
+        "transport_selection": {
+          "lower": 35,
+          "upper": 60
+        },
+        "interpretation": {
+          "lower": 70,
+          "upper": 90
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 61.5,
+        "upper": 82.0
+      }
+    },
+    "D": {
+      "name": "Consolidaciónfinal ycongelación de decisiones",
+      "eligibility": "Obligación deentrega yfallback si otra rama bloquea.",
+      "evidence": "Hay resultados negativos23/35/37,gananciaasignación18,límitestransporte21,contratos24C yoperador33conlimitaciones; requierenrelatoconsistente yreproducible antes11:30.",
+      "estimand": "Registro de evidencia/decisiones reales sobrecontratos correctos, nootra mejora empírica.",
+      "controls": "Hashes/protocolos/negativos yreglasdepasepreservados; revisiónexterna delrelato antes de afirmarcompletitud.",
+      "falsifier": "Si consolida claimsincompatibles osuma mejoras de panelesdistintos, corregir antes de cerrar; faltantes explícitos, no supuestos.",
+      "uncertainty": "No añade evidencia independiente ni resuelve física; coste de integrar/reportar puede competirconA.",
+      "decision_change": "Entrega útil demuestraquéfunciona/cuándonose sabe; establece requisito de futura evidenciaindependiente envez de seguir optimizando destinos conocidos.",
+      "cap_minutes_including_review": 60,
+      "stop": "No promover familias/bandas/producción, inventarfreshholdout o convertir puntajes favorables en validación.",
+      "subjective_criteria_0_100": {
+        "validity_identifiability": {
+          "lower": 90,
+          "upper": 100
+        },
+        "discriminating_information": {
+          "lower": 45,
+          "upper": 65
+        },
+        "feasibility_review_opportunity_cost": {
+          "lower": 90,
+          "upper": 100
+        },
+        "transport_selection": {
+          "lower": 55,
+          "upper": 75
+        },
+        "interpretation": {
+          "lower": 90,
+          "upper": 100
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 73.5,
+        "upper": 87.5
+      }
+    }
+  },
+  "preferred_sequence": [
+    "A como únicoestudio cuantitativo nuevo, cap90mininclreview ycheckpoint de reconstrucción temprano.",
+    "C45min documental puede avanzar enparalelo sólo conrevisión/slots reservados y0bytescientíficos; no robarrevisorA.",
+    "D60min reservado para cerrar antes11:30, independientemente delresultadoA/C.",
+    "B noejecutable sincontrato deacción/coste; no abrirla comorescate trasAnegativo."
+  ],
+  "ordering_uncertainty": "A76.4–88.8 yD73.5–87.5 se solapan ampliamente: ningún ganadorestocástico/robusto. C tambiénse solapa porincertidumbre; priorizarA responde apregunta discriminante acotada ydatos congelados, no a una certeza de mejora.",
+  "guardrail_conclusion": "CRPSesotroestimando sobreCDF21original, no reinterpretación deMAEG ni mejora37. ResultadoCRPSfavorable no salva37,35,23 ni demuestra calibración. E11parentidénticosheldnoproducencontraste;δB es referencia explícitamentedegenerada yGnoCDF. SiAfracasaenreconstrucción, cerrar yconsolidar, no inventar distribuciónalternativa."
+}

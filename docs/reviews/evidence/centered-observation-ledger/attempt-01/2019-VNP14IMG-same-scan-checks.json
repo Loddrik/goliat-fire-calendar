@@ -1,0 +1,32 @@
+{
+  "28": {
+    "candidate_pairs": 5687,
+    "contact_zero_area_pairs": 5687,
+    "sum_overlap_m2": 0.0
+  },
+  "29": {
+    "candidate_pairs": 14807,
+    "contact_zero_area_pairs": 14807,
+    "sum_overlap_m2": 0.0
+  },
+  "30": {
+    "candidate_pairs": 14836,
+    "contact_zero_area_pairs": 14836,
+    "sum_overlap_m2": 0.0
+  },
+  "31": {
+    "candidate_pairs": 14856,
+    "contact_zero_area_pairs": 14856,
+    "sum_overlap_m2": 0.0
+  },
+  "32": {
+    "candidate_pairs": 12038,
+    "contact_zero_area_pairs": 12038,
+    "sum_overlap_m2": 0.0
+  },
+  "33": {
+    "candidate_pairs": 133,
+    "contact_zero_area_pairs": 133,
+    "sum_overlap_m2": 0.0
+  }
+}

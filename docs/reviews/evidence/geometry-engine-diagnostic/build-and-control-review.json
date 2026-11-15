@@ -1,0 +1,66 @@
+{
+  "all_inputs_valid_both_engines": true,
+  "build_command": "cmake --build .runtime/geometry-engine-diagnostic/build --parallel 2 --target geos_c",
+  "capi_error_messages_both_engines": [],
+  "cmake": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+  "cmake_cache_sha256": "e76a7db02a6442086b258e7a57c61508969c8c4ba7241744c7bd133b994705d5",
+  "cmake_install_executed": false,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.4.2)\nTarget: x86_64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "configure_command": "cmake -S .runtime/geometry-engine-diagnostic/geos-3.15.0 -B .runtime/geometry-engine-diagnostic/build -DBUILD_TESTING=OFF -DBUILD_BENCHMARKS=OFF -DBUILD_DOCUMENTATION=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<project>/.runtime/geometry-engine-diagnostic/install",
+  "control_predicates_and_intersection_types_verified": [
+    [
+      "baseline-capi",
+      "control_disjoint"
+    ],
+    [
+      "baseline-capi",
+      "control_contained"
+    ],
+    [
+      "baseline-capi",
+      "control_partial"
+    ],
+    [
+      "baseline-capi",
+      "control_touch"
+    ],
+    [
+      "baseline-shapely",
+      "control_disjoint"
+    ],
+    [
+      "baseline-shapely",
+      "control_contained"
+    ],
+    [
+      "baseline-shapely",
+      "control_partial"
+    ],
+    [
+      "baseline-shapely",
+      "control_touch"
+    ],
+    [
+      "comparator-capi",
+      "control_disjoint"
+    ],
+    [
+      "comparator-capi",
+      "control_contained"
+    ],
+    [
+      "comparator-capi",
+      "control_partial"
+    ],
+    [
+      "comparator-capi",
+      "control_touch"
+    ]
+  ],
+  "installed_into_main_environment": false,
+  "issue1499_exact_cause_demonstrated": false,
+  "platform": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "release_NEWS_contains_GH1499": true,
+  "review_utc": "2026-11-15T04:58:42.163935+00:00"
+}

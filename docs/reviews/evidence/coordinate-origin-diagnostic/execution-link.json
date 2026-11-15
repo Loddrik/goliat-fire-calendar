@@ -1,0 +1,10 @@
+{
+  "all_19_expected_entries_exact": true,
+  "all_translated_hashes_match": true,
+  "code_sha256": "52575983c1d5bc106bb5030c0f4a417c3f895a75ee43f0a7c1726d51d0139aca",
+  "exactness_certificate_sha256": "98052130f5138530b6dae95cc45967e183ece384089d4810a0aee96c944d5615",
+  "freeze_sha256": "fb52da253740d6cf36269009b923ee27de1b6c04f3c731daf5c1d2f166d43695",
+  "output_bytes_before_overlays": 229680,
+  "overlays_started": false,
+  "verified_utc": "2026-11-15T05:09:21.005100+00:00"
+}

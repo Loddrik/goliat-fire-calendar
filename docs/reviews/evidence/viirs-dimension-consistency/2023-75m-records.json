@@ -1,0 +1,548 @@
+[
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.8309,
+      -72.53397
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.8309,
+    "longitude": -72.53397,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34003,
+    "distance_m": 0.40365719621977475,
+    "association_state": "unique_center",
+    "native_row": 2117,
+    "native_col": 3812,
+    "native_scan": 66,
+    "detector": 5,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 434.6694464101813,
+    "mesh_track_m": 394.74761198235205,
+    "mesh_area_m2": 171570.0668982534,
+    "scan_relative_error": 0.03492725335757463,
+    "track_relative_error": 0.03880950521671589,
+    "area_relative_error": 0.07500041916198863
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.82116,
+      -72.57001
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.82116,
+    "longitude": -72.57001,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.43,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34786,
+    "distance_m": 0.5654940468397742,
+    "association_state": "unique_center",
+    "native_row": 2121,
+    "native_col": 3819,
+    "native_scan": 66,
+    "detector": 9,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 434.62313777550526,
+    "mesh_track_m": 394.905157269345,
+    "mesh_area_m2": 171626.71787989247,
+    "scan_relative_error": 0.010751483198849332,
+    "track_relative_error": 0.03922409807722382,
+    "area_relative_error": 0.05034711064805664
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.82054,
+      -72.56523
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.82054,
+    "longitude": -72.56523,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.43,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34785,
+    "distance_m": 0.19356514427610474,
+    "association_state": "unique_center",
+    "native_row": 2121,
+    "native_col": 3818,
+    "native_scan": 66,
+    "detector": 9,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 430.44315782991157,
+    "mesh_track_m": 394.825237414913,
+    "mesh_area_m2": 169948.5336698573,
+    "scan_relative_error": 0.0010305996044455146,
+    "track_relative_error": 0.03901378267082367,
+    "area_relative_error": 0.040076705445883265
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81932,
+      -72.55576
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81932,
+    "longitude": -72.55576,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.43,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34783,
+    "distance_m": 0.39847530063312053,
+    "association_state": "unique_center",
+    "native_row": 2121,
+    "native_col": 3816,
+    "native_scan": 66,
+    "detector": 9,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 428.6537063492907,
+    "mesh_track_m": 394.8491038218407,
+    "mesh_area_m2": 169253.01989904488,
+    "scan_relative_error": 0.0031309154667658046,
+    "track_relative_error": 0.0390765890048439,
+    "area_relative_error": 0.03582019522059299
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81826,
+      -72.57549
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81826,
+    "longitude": -72.57549,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.43,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34981,
+    "distance_m": 0.5127851449802222,
+    "association_state": "unique_center",
+    "native_row": 2122,
+    "native_col": 3820,
+    "native_scan": 66,
+    "detector": 10,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 436.1588591726991,
+    "mesh_track_m": 395.0670703425057,
+    "mesh_area_m2": 172298.7368084626,
+    "scan_relative_error": 0.0143229283086026,
+    "track_relative_error": 0.03965018511185714,
+    "area_relative_error": 0.05445983358912243
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81764,
+      -72.57067
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81764,
+    "longitude": -72.57067,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.43,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34980,
+    "distance_m": 0.2637996390877809,
+    "association_state": "unique_center",
+    "native_row": 2122,
+    "native_col": 3819,
+    "native_scan": 66,
+    "detector": 10,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 432.7181973487153,
+    "mesh_track_m": 395.01005416368855,
+    "mesh_area_m2": 170919.58933041268,
+    "scan_relative_error": 0.006321389183058912,
+    "track_relative_error": 0.03950014253602241,
+    "area_relative_error": 0.0460195185459773
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.8152,
+      -72.55173
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.8152,
+    "longitude": -72.55173,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34976,
+    "distance_m": 0.4121002955214094,
+    "association_state": "unique_center",
+    "native_row": 2122,
+    "native_col": 3815,
+    "native_scan": 66,
+    "detector": 10,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 431.2483321653677,
+    "mesh_track_m": 394.72380952909066,
+    "mesh_area_m2": 170222.6043893512,
+    "scan_relative_error": 0.026781743250875456,
+    "track_relative_error": 0.03874686718181741,
+    "area_relative_error": 0.06655767161247628
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81517,
+      -72.46836
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81517,
+    "longitude": -72.46836,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34377,
+    "distance_m": 0.399623654902884,
+    "association_state": "unique_center",
+    "native_row": 2119,
+    "native_col": 3798,
+    "native_scan": 66,
+    "detector": 7,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 431.106546534094,
+    "mesh_track_m": 393.6924332417719,
+    "mesh_area_m2": 169717.56148530895,
+    "scan_relative_error": 0.026444158414509422,
+    "track_relative_error": 0.03603271905729444,
+    "area_relative_error": 0.06339324238915389
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81458,
+      -72.54694
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81458,
+    "longitude": -72.54694,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 34975,
+    "distance_m": 0.3450070170482401,
+    "association_state": "unique_center",
+    "native_row": 2122,
+    "native_col": 3814,
+    "native_scan": 66,
+    "detector": 10,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 434.3114109634104,
+    "mesh_track_m": 394.6558447901001,
+    "mesh_area_m2": 171403.06134187515,
+    "scan_relative_error": 0.03407478800812003,
+    "track_relative_error": 0.03856801260552656,
+    "area_relative_error": 0.07395401843280158
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81169,
+      -72.55244
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81169,
+    "longitude": -72.55244,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 35170,
+    "distance_m": 0.42262746500092085,
+    "association_state": "unique_center",
+    "native_row": 2123,
+    "native_col": 3815,
+    "native_scan": 66,
+    "detector": 11,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 431.61194016434183,
+    "mesh_track_m": 394.62993709531406,
+    "mesh_area_m2": 170324.73121234437,
+    "scan_relative_error": 0.02764747658176625,
+    "track_relative_error": 0.038499834461352744,
+    "area_relative_error": 0.06719756398712007
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.81107,
+      -72.54763
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.81107,
+    "longitude": -72.54763,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 35169,
+    "distance_m": 0.4809807688074367,
+    "association_state": "unique_center",
+    "native_row": 2123,
+    "native_col": 3814,
+    "native_scan": 66,
+    "detector": 11,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 433.7927240329109,
+    "mesh_track_m": 394.5664485291487,
+    "mesh_area_m2": 171158.49284025817,
+    "scan_relative_error": 0.03283981912597822,
+    "track_relative_error": 0.038332759287233564,
+    "area_relative_error": 0.0724216343374573
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.79705,
+      -72.46716
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.79705,
+    "longitude": -72.46716,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 35346,
+    "distance_m": 0.28049856196232265,
+    "association_state": "unique_center",
+    "native_row": 2124,
+    "native_col": 3797,
+    "native_scan": 66,
+    "detector": 12,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 433.0717443834229,
+    "mesh_track_m": 393.8067922647779,
+    "mesh_area_m2": 170546.4832004179,
+    "scan_relative_error": 0.031123200912911653,
+    "track_relative_error": 0.03633366385467873,
+    "area_relative_error": 0.0685869874712901
+  },
+  {
+    "identity": [
+      "Suomi-NPP",
+      "2023-02-10",
+      "1831",
+      -36.79643,
+      -72.46237
+    ],
+    "acq_date": "2023-02-10",
+    "acq_time": "1831",
+    "latitude": -36.79643,
+    "longitude": -72.46237,
+    "source_files": [
+      "viirs-snpp_2023_Chile.csv"
+    ],
+    "duplicate_count": 1,
+    "source_csvs": [
+      "observed/dist/data/history/snpp-history/16107.csv"
+    ],
+    "scan_km": 0.42,
+    "track_km": 0.38,
+    "source_state": "reference_candidate",
+    "state": "eligible_selective_geometry_reference",
+    "center_index": 35345,
+    "distance_m": 0.21915749783675775,
+    "association_state": "unique_center",
+    "native_row": 2124,
+    "native_col": 3796,
+    "native_scan": 66,
+    "detector": 12,
+    "aggregation": {
+      "start": 2016,
+      "end": 4383,
+      "factor": 3
+    },
+    "mesh_scan_m": 432.8912300757828,
+    "mesh_track_m": 393.75329522794345,
+    "mesh_area_m2": 170452.318643072,
+    "scan_relative_error": 0.030693404942339964,
+    "track_relative_error": 0.03619288217879846,
+    "area_relative_error": 0.06799698397914788
+  }
+]

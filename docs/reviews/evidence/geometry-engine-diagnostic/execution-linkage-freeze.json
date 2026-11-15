@@ -1,0 +1,17 @@
+{
+  "binary_sha256": {
+    ".runtime/geometry-engine-diagnostic/build/lib/libgeos.3.15.0.dylib": "899116fcb65ba7d0c32809d4c157f348c7eabf12953b10e0a1367487473cd81c",
+    ".runtime/geometry-engine-diagnostic/build/lib/libgeos_c.1.21.0.dylib": "9906c58e7de5c80454139cea93d9cc03c32e6064201e680cf510990f52ecfa5c"
+  },
+  "dyld_geos_images": [
+    "/Users/dquinteros/nasa/goliat-fire-calendar/.runtime/geometry-engine-diagnostic/build/lib/libgeos_c.1.21.0.dylib",
+    "/Users/dquinteros/nasa/goliat-fire-calendar/.runtime/geometry-engine-diagnostic/build/lib/libgeos.3.15.0.dylib"
+  ],
+  "inspection_only_no_overlay": true,
+  "otool_L": {
+    ".runtime/geometry-engine-diagnostic/build/lib/libgeos.3.15.0.dylib": "/Users/dquinteros/nasa/goliat-fire-calendar/.runtime/geometry-engine-diagnostic/build/lib/libgeos.3.15.0.dylib:\n\t@rpath/libgeos.3.15.0.dylib (compatibility version 3.15.0, current version 3.15.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n",
+    ".runtime/geometry-engine-diagnostic/build/lib/libgeos_c.1.21.0.dylib": "/Users/dquinteros/nasa/goliat-fire-calendar/.runtime/geometry-engine-diagnostic/build/lib/libgeos_c.1.21.0.dylib:\n\t@rpath/libgeos_c.1.dylib (compatibility version 1.0.0, current version 1.21.0)\n\t@rpath/libgeos.3.15.0.dylib (compatibility version 3.15.0, current version 3.15.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n"
+  },
+  "shapely_imported": false,
+  "version_actual": "3.15.0-CAPI-1.21.0"
+}

@@ -1,0 +1,33 @@
+{
+  "completed_utc": "2026-11-15T10:50:07.674977+00:00",
+  "status": "pass",
+  "artifact_sha256": "83ee67ce01ef84c4eaad479a0fb5197819dbcf7bec14199611ae360d244afc2c",
+  "builder_sha256": "a5896f08b39272a44cefb7774b622525e1da21db101a515d279056de71fa6a55",
+  "byte_identical_regeneration": true,
+  "browser_closed": true,
+  "isolated_browser_profile": true,
+  "viewports": [
+    [
+      390,
+      844
+    ],
+    [
+      1440,
+      1000
+    ]
+  ],
+  "SVGs": 8,
+  "all_SVG_text_within_viewBox": true,
+  "page_overflow": false,
+  "local_links_checked": 72,
+  "documents_sha256": {
+    "docs/reviews/README.md": "2417cbdfcc72f610d861a1ab96bca98d565328d5a02d3a5fe3027b91721a213b",
+    "docs/method.md": "b944e2bec9f06a5d83edc8fa76e728f834c96caf001aa14fef5415555e0542de",
+    "docs/reviews/2026-11-15-season-total-report.md": "347c1b1a5b3d1d6af86da713fa6b403b94c879b9a7a2171d64895d3a03006cd9",
+    "docs/reviews/2026-11-15-season-total-independent-review.md": "39712a6e77c7d4c52760dc547e574421d76b9d777e1b27a8b4d367029bc08fb5",
+    "docs/reviews/2026-11-15-issue48-product-assessment.md": "8c14d3fc186da9dfcb8fc6242e27ff1373622c04c3dba5ae2eed2b3de65a2d23",
+    "docs/artifacts/science-observation-plan-2026-11-15.html": "83ee67ce01ef84c4eaad479a0fb5197819dbcf7bec14199611ae360d244afc2c"
+  },
+  "scope": "Presentation, frozen-summary links and deterministic generation; no additional model fit or scientific score evaluation. Diagram8 was visually inspected as conceptual algebra, not a statistical plot.",
+  "no_full_accessibility_certification_claim": true
+}

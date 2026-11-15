@@ -1,0 +1,120 @@
+"""39 independent JSON CDF restoration and direct piecewise-CDF integral audit."""
+from pathlib import Path
+import json,gzip,sys,hashlib,datetime,math,platform,resource
+import numpy as np,pandas as pd,pyarrow as pa
+R=Path('/Users/dquinteros/nasa/goliat-fire-calendar');P=R/'data/processed/crps_audit';S=R/'data/processed/cold_region_audit';O=R/'docs/reviews/evidence/crps-independent-review/full-review';END=datetime.datetime.fromisoformat('2026-11-15T10:13:00+00:00');K=['cut','season','m'];F=K+['g','aqua']
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def now():return datetime.datetime.now(datetime.timezone.utc)
+def check():assert now()<END,'39 original absolute cap'
+def dump(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+def key(*v):return json.dumps(v,separators=(',',':'))
+def near(a,b,name='numeric'):
+ if a is None or b is None:assert a is b,(name,a,b)
+ else:assert math.isclose(float(a),float(b),rel_tol=1e-11,abs_tol=1e-9),(name,a,b)
+def freeze():
+ check();assert not O.exists();assert (P/'manifest.json').exists();O.mkdir(parents=True)
+ paths=[Path(__file__),R/'docs/reviews/2026-11-15-crps-protocol.md']+[R/'pipeline'/n for n in ['crps_score.py','crps_audit.py','cold_region_audit.py','hurdle_model.py','affine_experiment.py']]+[p for p in P.iterdir() if p.is_file()]+[S/n for n in ['models.json','manifest.json','predictions.parquet','candidate_mask.csv']]
+ paths += list((O.parent/'synthetic-preflight').iterdir())+list((O.parent/'synthetic-producer-comparison').iterdir())
+ (O/'reviewer-code.py.txt').write_bytes(Path(__file__).read_bytes());dump(O/'freeze.json',{'created_utc':now().isoformat(),'cap_end_utc':END.isoformat(),'inputs_sha256':{str(p):sha(p) for p in paths if p.is_file()},'producer_manifest_sha256':sha(P/'manifest.json'),'algorithm':'Direct integral of squared CDF discrepancy between knots; CDF probabilities computed by fsum of weights at atoms <= knot. No expectation/pairwise prefix scorer.','fits':0,'solvers':0,'science_downloads':0,'environment':{'python':sys.version,'executable':sys.executable,'platform':platform.platform(),'numpy':np.__version__,'pandas':pd.__version__,'pyarrow':pa.__version__}});print('39_INDEPENDENT_FROZEN',sha(O/'freeze.json'),flush=True)
+def owncdf(b,cut,g,a,parent=False):
+ h=b['hurdle'];s=int(a>0);p=h['parents'][key(g,s)];prob=float(p['p']);z=list(p['positive']);w=[1.]*len(z);local=h['locals'].get(key(cut,g,s),{'n':0,'m':0,'positive':[]})
+ if h['all_zero']:return np.array([0.]),np.array([1.])
+ if not parent and local['n']:
+  oldprob=prob;prob=(local['m']+10*oldprob)/(local['n']+10)
+  if local['m']:
+   z=list(local['positive'])+z;w=[1.]*local['m']+[10*oldprob/len(p['positive'])]*len(p['positive'])
+ if not prob:return np.array([0.]),np.array([1.])
+ values=np.r_[0.,np.maximum(1.,(1+a*b['regional_ratio'][g])*np.asarray(z))];weights=np.array([1-prob]+[prob*ww/math.fsum(w) for ww in w]);return values,weights
+CACHE={}
+def integral(atoms,weights,y):
+ x=np.asarray(atoms,dtype=float);w=np.asarray(weights,dtype=float);token=hashlib.sha256(x.tobytes()+w.tobytes()).digest()
+ if token not in CACHE:
+  knots=np.unique(x);cdf=np.array([math.fsum(map(float,w[x<=v])) for v in knots]);CACHE[token]=(knots,cdf)
+ knots,cdf=CACHE[token];allknots=np.unique(np.r_[knots,float(y)]);parts=[]
+ for left,right in zip(allknots,allknots[1:]):
+  idx=int(np.searchsorted(knots,left,side='right'))-1;prob=float(cdf[idx]) if idx>=0 else 0.
+  parts.append(float(right-left)*(prob-int(y<=left))**2)
+ return math.fsum(parts)
+def metric(f):
+ return {'n':len(f),'forecasts':{m:{'sum_CRPS':math.fsum(map(float,f['CRPS_'+m])),'mean_CRPS':float(f['CRPS_'+m].mean()) if len(f) else None} for m in ['F21','delta_B']},'mean_difference_F21_minus_delta_B':float((f.CRPS_F21-f.CRPS_delta_B).mean()) if len(f) else None}
+def compare_metric(a,b):
+ assert a['n']==b['n'];near(a['mean_difference_F21_minus_delta_B'],b['mean_difference_F21_minus_delta_B'])
+ for m in ['F21','delta_B']:
+  for field,value in a['forecasts'][m].items():near(value,b['forecasts'][m][field],m+field)
+def run():
+ check();fr=json.load(open(O/'freeze.json'));cf=json.load(open(P/'code-freeze.json'));cp=json.load(open(P/'checkpoint.json'));man=json.load(open(P/'manifest.json'));summary=json.load(open(P/'summary.json'))
+ for name,h in fr['inputs_sha256'].items():assert sha(Path(name))==h,name
+ for name,h in man['output_sha256'].items():assert sha(P/name)==h,name
+ for group in ['code_sha256','input_sha256','protected_sha256']:
+  for name,h in cf[group].items():assert sha(R/name)==h,name
+ assert datetime.datetime.fromisoformat(cp['completed_utc'])<datetime.datetime.fromisoformat('2026-11-15T09:03:00+00:00')
+ assert datetime.datetime.fromisoformat(cp['completed_utc'])<datetime.datetime.fromisoformat(summary['first_real_response_join_utc'])
+ assert sha(P/'forecast-CDFs.jsonl.gz')==cp['CDF_snapshot_sha256'] and sha(P/'forecast-roster.parquet')==cp['roster_sha256']
+ assert cf['environment']['packages']['numpy']==np.__version__ and cf['environment']['packages']['pandas']==pd.__version__ and cf['environment']['packages']['pyarrow']==pa.__version__
+ assert all(man[n]==0 and summary[n]==0 for n in ['fits','solvers','science_downloads']) and man['peak_RSS_bytes']<=2*1024**3
+ assert sum(z.stat().st_size for z in P.iterdir() if z.is_file())<=100*1024**2
+ bases=json.load(open(S/'models.json'));ref=pd.read_parquet(S/'predictions.parquet',columns=['regime',*F,'role','B','E11','E11_mean']);roster=pd.read_parquet(P/'forecast-roster.parquet');assert len(roster)==10368 and 'snpp' not in roster and not roster.duplicated(['regime',*K]).any()
+ sys.path.insert(0,str(R/'pipeline'));import cold_region_audit as cold
+ def forbidden(*a,**k):raise AssertionError('Historical fit/solver driver forbidden')
+ cold.fit_source=forbidden;cold.predict_all=forbidden
+ original={}
+ for regime,b in bases.items():
+  selected=roster[roster.regime==regime];x,ds,parent=cold.raw_predictions(selected[F],b);rr=ref[ref.regime==regime].set_index(K).loc[pd.MultiIndex.from_frame(x[K])]
+  assert np.array_equal(x.B,rr.B) and np.array_equal(x.E11,rr.E11) and np.array_equal(x.E11_mean,rr.E11_mean)
+  for i,row in selected.reset_index(drop=True).iterrows():
+   assert (row.cut in b['source_cuts'])==(row.role=='SOURCE');original[int(row.row_id)]=(ds[i],parent[i],x.iloc[i])
+  for _,group in selected.groupby(['season','m']):assert len(group)==54 and group.cut.nunique()==54
+ # Reconstruct every emitted forecast before inspecting any real evaluation target.
+ records=[];atomcount=0;heldchecks=0;maxweightdiff=0.
+ with gzip.open(P/'forecast-CDFs.jsonl.gz','rt') as stream:
+  for line in stream:
+   row=json.loads(line);i=int(row['row_id']);assert i==len(records);base=bases[row['regime']];r=roster.iloc[i]
+   for field in ['regime',*F,'role']:assert row[field]==r[field],field
+   ds,parent,raw=original[i];own=owncdf(base,row['cut'],row['g'],float(row['aqua']));x=np.asarray(row['atoms']);w=np.asarray(row['original_weights']);wn=np.asarray(row['normalized_weights'])
+   assert np.array_equal(x,ds[0]) and np.array_equal(w,ds[1]) and np.array_equal(own[0],x)
+   assert own[1].shape==w.shape and np.allclose(own[1],w,atol=1e-14,rtol=0);maxweightdiff=max(maxweightdiff,float(np.max(abs(own[1]-w))))
+   assert np.isfinite(x).all() and np.isfinite(w).all() and (x>=0).all() and (w>=0).all();total=math.fsum(map(float,w));assert total>0 and abs(total-1)<=1e-12;near(total,row['original_weight_sum'])
+   expected=np.array([float(ww)/total for ww in w]);assert np.array_equal(expected,wn)
+   near(math.fsum(float(a)*float(b) for a,b in zip(x,wn)),row['F21_mean']);near(raw.E11,row['F21_median']);near(raw.E11_mean,row['original_E11_mean']);near(raw.B,row['B'])
+   if row['role']=='held':assert np.array_equal(x,parent[0]) and np.array_equal(w,parent[1]);heldchecks+=1
+   atomcount+=len(x);records.append(row)
+ assert len(records)==10368 and atomcount==cp['atom_elements'] and heldchecks==cp['held_E11_parent_exact_checks'];print('39_ALL_FROZEN_CDFS_INDEPENDENT_PASS',len(records),atomcount,flush=True)
+ # Y is first requested by this verifier after all forecast reconstruction checks.
+ labels=pd.read_parquet(S/'predictions.parquet',columns=['regime',*K,'snpp']);g=labels.groupby(K).snpp;assert g.size().eq(2).all() and g.nunique().eq(1).all()
+ joined=roster.merge(labels,on=['regime',*K],validate='one_to_one').sort_values('row_id').reset_index(drop=True);scored=pd.read_parquet(P/'scored-queries.parquet').sort_values('row_id').reset_index(drop=True);pd.testing.assert_frame_equal(joined,scored[joined.columns])
+ scores=[];maxdiff=0.;clamps=0;integral_values=[]
+ for i,row in enumerate(records):
+  if i%500==0:check();print('39_INTEGRAL_PROGRESS',i,flush=True)
+  r=scored.iloc[i];y=float(r.snpp);w=np.asarray(row['normalized_weights']);x=np.asarray(row['atoms']);our=integral(x,w,y);mae=abs(float(row['B'])-y);eabsx=math.fsum(float(ww)*abs(float(xx)) for xx,ww in zip(x,w));tau=1e-10*max(1,abs(y),eabsx);diff=abs(our-float(r.F21_raw_score));maxdiff=max(maxdiff,diff)
+  assert diff<=tau,(i,our,r.F21_raw_score,tau);assert abs(integral([row['B']],[1.],y)-mae)<=tau and float(r.CRPS_delta_B)==mae and float(r.delta_B_MAE)==mae
+  near(tau,r.F21_tolerance);near(eabsx,r.F21_EabsX);eabs=math.fsum(float(ww)*abs(float(xx)-y) for xx,ww in zip(x,w));near(eabs,r.F21_Eabs)
+  near(math.fsum([float(r.F21_Eabs),-float(r.F21_half_pair_term)]),r.F21_raw_score)
+  rawscore=float(r.F21_raw_score);assert rawscore>=-tau;clamped=rawscore<0;assert bool(r.F21_negative_roundoff_clamped)==clamped and float(r.CRPS_F21)==(0. if clamped else rawscore);clamps+=int(clamped)
+  integral_values.append(our)
+  scores.append({'row_id':i,'integral_CRPS':our,'producer_raw_CRPS':rawscore,'absolute_difference':diff,'tau':tau,'delta_B_MAE':mae})
+ assert clamps==summary['negative_roundoff_clamped_rows'];scored['independent_integral_F21']=integral_values
+ from frozen_temporal_audit import publication_metadata
+ enabled=set(publication_metadata(sorted(scored.cut.unique()))[0]);pops=0;prim=[];integral_primary=[];percut=pd.read_csv(P/'per-CUT.csv',dtype={'cut':str});primarycsv=pd.read_csv(P/'primary-contrasts.csv')
+ for regime,f in scored.groupby('regime',sort=True):
+  groups={'all54':f,'SOURCE':f[f.role=='SOURCE'],'held':f[f.role=='held'],'published14':f[f.cut.isin(enabled)],'remaining40':f[~f.cut.isin(enabled)]}
+  for role in ['SOURCE','held']:
+   for name,mask in [('published14',f.cut.isin(enabled)),('remaining40',~f.cut.isin(enabled))]:groups[role+'_'+name]=f[(f.role==role)&mask]
+  for name,group in groups.items():
+   strata={'all_months':group,'zero_reference':group[group.snpp==0],'positive_reference':group[group.snpp>0],'aqua_zero_reference_positive':group[(group.aqua==0)&(group.snpp>0)],'both_zero':group[(group.aqua==0)&(group.snpp==0)],'reference_50_plus':group[group.snpp>=50]}
+   for label,sub in strata.items():compare_metric(metric(sub),summary['reports'][regime][name][label]);pops+=1
+  ih=groups['held'];integral_delta=float((ih.independent_integral_F21-ih.CRPS_delta_B).mean());integral_primary.append({'regime':regime,'n':len(ih),'difference_F21_minus_delta_B':integral_delta})
+  h=metric(groups['held']);near(integral_delta,h['mean_difference_F21_minus_delta_B'],'independent integral primary');z={'regime':regime,'n':h['n'],'mean_CRPS_F21':h['forecasts']['F21']['mean_CRPS'],'mean_CRPS_delta_B':h['forecasts']['delta_B']['mean_CRPS'],'difference_F21_minus_delta_B':h['mean_difference_F21_minus_delta_B']};prim.append(z)
+  claim=next(q for q in summary['primary']['regimes'] if q['regime']==regime);csv=primarycsv[primarycsv.regime==regime];assert len(csv)==1
+  for field,v in z.items():
+   if field!='regime':near(v,claim[field]);near(v,csv[field].iloc[0])
+  for cut,sub in f.groupby('cut'):
+   q=percut[(percut.regime==regime)&(percut.cut==cut)];assert len(q)==1 and q.n.iloc[0]==len(sub);mm=metric(sub)
+   for forecast in ['F21','delta_B']:near(mm['forecasts'][forecast]['mean_CRPS'],q['mean_CRPS_'+forecast].iloc[0])
+   near(mm['mean_difference_F21_minus_delta_B'],q.difference.iloc[0])
+  old=f[f.role=='held'].groupby('cut').apply(lambda sub:float((sub.B-sub.snpp).abs().mean()),include_groups=False);worst=min(old.index,key=lambda c:(-float(old[c]),c));claim=next(q for q in summary['worst_CUT_fixed_from_original_B_MAE'] if q['regime']==regime);assert worst==claim['cut'];compare_metric(metric(f[f.cut==worst]),claim['metrics'])
+ equal=float(np.mean([q['difference_F21_minus_delta_B'] for q in prim]));weighted=sum(q['difference_F21_minus_delta_B']*q['n'] for q in prim)/sum(q['n'] for q in prim);near(equal,summary['primary']['equal_four_difference']);near(weighted,summary['primary']['row_weighted_difference']);assert pops==216
+ for name,h in fr['inputs_sha256'].items():assert sha(Path(name))==h,name
+ check();pd.DataFrame(scores).to_csv(O/'all-query-independent-integrals.csv',index=False)
+ report={'status':'independent_full_pass','completed_utc':now().isoformat(),'reviewer_freeze_sha256':sha(O/'freeze.json'),'producer_manifest_sha256_before_and_after':sha(P/'manifest.json'),'producer_artifacts_modified':False,'all_frozen_CDFs_reconstructed':len(records),'atom_elements':atomcount,'held_full_CDF_parent_exact_checks':heldchecks,'original_atoms_and_weights_exact_against_frozen21_restoration':True,'independent_JSON_weight_max_abs_difference':maxweightdiff,'normalized_weights_exact_single_fsum_division':True,'actual_CRPS_rows_independent_integral':len(scores),'max_abs_integral_vs_producer_raw_CRPS':maxdiff,'all_delta_B_scores_equal_MAE':True,'clamped_rows':clamps,'population_reports_verified':pops,'method_report_sets_verified':pops*2,'all_per_CUT_and_worst_original_B_CUT_verified':True,'independent_integral_primary':{'regimes':integral_primary,'equal_four_difference':float(np.mean([z['difference_F21_minus_delta_B'] for z in integral_primary]))},'primary':{'regimes':prim,'equal_four_difference':equal,'row_weighted_secondary':weighted,'negative_primary_favors_F21_over_delta_B':bool(equal<0)},'fits':0,'solvers':0,'science_downloads':0,'CDF_queries_are_not_new_model_fits':True,'limitations':['F21 versus deltaB is a whole-distribution forecast comparison, combining location and spread.','No calibration, marginal-to-joint54 coherence, pure uncertainty value, additional Aqua value or physical truth established.','Retrospective repeated targets and overlapping regimes, not fresh holdout or IID replicates.','37/35/23 negatives, 30B failure and G1physicalfalse unchanged.'],'RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*(1 if sys.platform=='darwin' else 1024)}
+ dump(O/'summary.json',report);dump(O/'manifest.json',{'files':{p.name:{'bytes':p.stat().st_size,'sha256':sha(p)} for p in O.iterdir() if p.is_file() and p.name!='manifest.json'},'producer_manifest_unchanged':True,'cap_end_utc':END.isoformat()});print('39_INDEPENDENT_ALL_PASS',json.dumps(report['primary']),flush=True)
+if __name__=='__main__':{'freeze':freeze,'run':run}[sys.argv[1]]()

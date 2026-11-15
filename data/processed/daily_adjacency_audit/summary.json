@@ -1,0 +1,2270 @@
+{
+  "RSS_platform": "darwin",
+  "all_cube_integrity_gates_passed": true,
+  "by_g_and_Apositive": {
+    "g=10|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 277,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=10|Aqua>0=True": {
+      "D_discordant": 6,
+      "D_placebo_1": 6,
+      "D_real_1": 2,
+      "n": 155,
+      "pair_diagnostic_placebo": 7,
+      "pair_diagnostic_real": 2
+    },
+    "g=11|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 290,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=11|Aqua>0=True": {
+      "D_discordant": 10,
+      "D_placebo_1": 8,
+      "D_real_1": 2,
+      "n": 142,
+      "pair_diagnostic_placebo": 10,
+      "pair_diagnostic_real": 2
+    },
+    "g=12|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 328,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=12|Aqua>0=True": {
+      "D_discordant": 5,
+      "D_placebo_1": 3,
+      "D_real_1": 2,
+      "n": 104,
+      "pair_diagnostic_placebo": 3,
+      "pair_diagnostic_real": 3
+    },
+    "g=1|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 294,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=1|Aqua>0=True": {
+      "D_discordant": 14,
+      "D_placebo_1": 9,
+      "D_real_1": 15,
+      "n": 138,
+      "pair_diagnostic_placebo": 21,
+      "pair_diagnostic_real": 57
+    },
+    "g=2|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 318,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=2|Aqua>0=True": {
+      "D_discordant": 7,
+      "D_placebo_1": 5,
+      "D_real_1": 12,
+      "n": 114,
+      "pair_diagnostic_placebo": 5,
+      "pair_diagnostic_real": 25
+    },
+    "g=3|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 263,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=3|Aqua>0=True": {
+      "D_discordant": 16,
+      "D_placebo_1": 10,
+      "D_real_1": 20,
+      "n": 169,
+      "pair_diagnostic_placebo": 20,
+      "pair_diagnostic_real": 39
+    },
+    "g=4|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 176,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=4|Aqua>0=True": {
+      "D_discordant": 28,
+      "D_placebo_1": 12,
+      "D_real_1": 30,
+      "n": 256,
+      "pair_diagnostic_placebo": 12,
+      "pair_diagnostic_real": 40
+    },
+    "g=5|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 175,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=5|Aqua>0=True": {
+      "D_discordant": 17,
+      "D_placebo_1": 4,
+      "D_real_1": 15,
+      "n": 257,
+      "pair_diagnostic_placebo": 5,
+      "pair_diagnostic_real": 17
+    },
+    "g=9|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 274,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=9|Aqua>0=True": {
+      "D_discordant": 1,
+      "D_placebo_1": 1,
+      "D_real_1": 2,
+      "n": 158,
+      "pair_diagnostic_placebo": 1,
+      "pair_diagnostic_real": 2
+    },
+    "g=JJA|Aqua>0=False": {
+      "D_discordant": 0,
+      "D_placebo_1": 0,
+      "D_real_1": 0,
+      "n": 1050,
+      "pair_diagnostic_placebo": 0,
+      "pair_diagnostic_real": 0
+    },
+    "g=JJA|Aqua>0=True": {
+      "D_discordant": 6,
+      "D_placebo_1": 1,
+      "D_real_1": 5,
+      "n": 246,
+      "pair_diagnostic_placebo": 1,
+      "pair_diagnostic_real": 5
+    }
+  },
+  "checkpoint_sha256": "c915c5dc2b8fd7f93cb2c6e91fafb3fa0a08ff0c142ad625821d39ee742f9fa3",
+  "completed_utc": "2026-11-15T07:58:25.296226+00:00",
+  "cube_rows": 5184,
+  "exported_rows": 203984,
+  "features": [
+    "D_real",
+    "D_placebo"
+  ],
+  "fullcalendar_mapping_rows": 157788,
+  "gate1_passed": false,
+  "loss_computed": false,
+  "model_fitted": false,
+  "no_registered_record_does_not_mean_physical_absence": true,
+  "operator": "same canonical Aqua cell on consecutive UTC days strictly inside one calendar month",
+  "overall": {
+    "D_discordant": 110,
+    "D_placebo_1": 59,
+    "D_real_1": 105,
+    "n": 5184,
+    "pair_diagnostic_placebo": 85,
+    "pair_diagnostic_real": 192
+  },
+  "pair_counts_are_diagnostic_only": true,
+  "peak_RSS_bytes": 163139584,
+  "permutation_direction": "ORIGIN d -> rankedDays[d-1] DEST",
+  "permutation_prefix_literal": "goliat-daily-adjacency-v1|",
+  "raw_acquisition_reproducibility": "not established; frozen derived integrity is separate",
+  "regime_scope_support": {
+    "08_backward": {
+      "future_fit_SOURCE_ORIGIN": {
+        "all": {
+          "D_discordant": 37,
+          "D_placebo_1": 25,
+          "D_real_1": 34,
+          "n": 1584,
+          "pair_diagnostic_placebo": 42,
+          "pair_diagnostic_real": 76
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 90,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 1,
+            "n": 42,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 83,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 49,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 45,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 81,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 10,
+            "D_placebo_1": 6,
+            "D_real_1": 10,
+            "n": 51,
+            "pair_diagnostic_placebo": 15,
+            "pair_diagnostic_real": 37
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 93,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 39,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 9
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 80,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 2,
+            "D_real_1": 7,
+            "n": 52,
+            "pair_diagnostic_placebo": 6,
+            "pair_diagnostic_real": 12
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 70,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 7,
+            "n": 62,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 11
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 3,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 61,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 3
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 82,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 50,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 343,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 53,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          }
+        }
+      },
+      "prediction_SOURCE_DEST": {
+        "all": {
+          "D_discordant": 26,
+          "D_placebo_1": 14,
+          "D_real_1": 26,
+          "n": 1584,
+          "pair_diagnostic_placebo": 16,
+          "pair_diagnostic_real": 37
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 54,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 45,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 98,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 2,
+            "n": 34,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 7,
+            "n": 44,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 13
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 1,
+            "D_real_1": 5,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 6
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 63,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 3,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 54,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 86,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 327,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      },
+      "prediction_held_DEST": {
+        "all": {
+          "D_discordant": 19,
+          "D_placebo_1": 5,
+          "D_real_1": 16,
+          "n": 1008,
+          "pair_diagnostic_placebo": 8,
+          "pair_diagnostic_real": 28
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 74,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 10,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 13,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 49,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 35,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 10
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 29,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 55,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 60,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 24,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 186,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      }
+    },
+    "08_forward": {
+      "future_fit_SOURCE_ORIGIN": {
+        "all": {
+          "D_discordant": 26,
+          "D_placebo_1": 14,
+          "D_real_1": 26,
+          "n": 1584,
+          "pair_diagnostic_placebo": 16,
+          "pair_diagnostic_real": 37
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 54,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 45,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 98,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 2,
+            "n": 34,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 7,
+            "n": 44,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 13
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 1,
+            "D_real_1": 5,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 6
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 63,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 3,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 54,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 86,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 327,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      },
+      "prediction_SOURCE_DEST": {
+        "all": {
+          "D_discordant": 37,
+          "D_placebo_1": 25,
+          "D_real_1": 34,
+          "n": 1584,
+          "pair_diagnostic_placebo": 42,
+          "pair_diagnostic_real": 76
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 90,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 1,
+            "n": 42,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 83,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 49,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 45,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 81,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 10,
+            "D_placebo_1": 6,
+            "D_real_1": 10,
+            "n": 51,
+            "pair_diagnostic_placebo": 15,
+            "pair_diagnostic_real": 37
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 93,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 39,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 9
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 80,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 2,
+            "D_real_1": 7,
+            "n": 52,
+            "pair_diagnostic_placebo": 6,
+            "pair_diagnostic_real": 12
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 70,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 7,
+            "n": 62,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 11
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 3,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 61,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 3
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 82,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 50,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 343,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 53,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          }
+        }
+      },
+      "prediction_held_DEST": {
+        "all": {
+          "D_discordant": 28,
+          "D_placebo_1": 15,
+          "D_real_1": 29,
+          "n": 1008,
+          "pair_diagnostic_placebo": 19,
+          "pair_diagnostic_real": 51
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 48,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 1,
+            "n": 36,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 59,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 25,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 56,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 4,
+            "n": 28,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 17
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 18,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 6,
+            "D_real_1": 7,
+            "n": 38,
+            "pair_diagnostic_placebo": 8,
+            "pair_diagnostic_real": 11
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 14,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 11,
+            "D_placebo_1": 4,
+            "D_real_1": 11,
+            "n": 70,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 15
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 11,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 0,
+            "D_real_1": 5,
+            "n": 73,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 6
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 38,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 194,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 58,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          }
+        }
+      }
+    },
+    "16_backward": {
+      "future_fit_SOURCE_ORIGIN": {
+        "all": {
+          "D_discordant": 28,
+          "D_placebo_1": 15,
+          "D_real_1": 29,
+          "n": 1008,
+          "pair_diagnostic_placebo": 19,
+          "pair_diagnostic_real": 51
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 48,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 1,
+            "n": 36,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 59,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 25,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 56,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 4,
+            "n": 28,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 17
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 18,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 6,
+            "D_real_1": 7,
+            "n": 38,
+            "pair_diagnostic_placebo": 8,
+            "pair_diagnostic_real": 11
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 14,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 11,
+            "D_placebo_1": 4,
+            "D_real_1": 11,
+            "n": 70,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 15
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 11,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 0,
+            "D_real_1": 5,
+            "n": 73,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 6
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 38,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 194,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 58,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          }
+        }
+      },
+      "prediction_SOURCE_DEST": {
+        "all": {
+          "D_discordant": 19,
+          "D_placebo_1": 5,
+          "D_real_1": 16,
+          "n": 1008,
+          "pair_diagnostic_placebo": 8,
+          "pair_diagnostic_real": 28
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 74,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 10,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 13,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 49,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 35,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 10
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 29,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 55,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 60,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 24,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 186,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      },
+      "prediction_held_DEST": {
+        "all": {
+          "D_discordant": 26,
+          "D_placebo_1": 14,
+          "D_real_1": 26,
+          "n": 1584,
+          "pair_diagnostic_placebo": 16,
+          "pair_diagnostic_real": 37
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 54,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 45,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 98,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 2,
+            "n": 34,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 3
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 7,
+            "n": 44,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 13
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 88,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 1,
+            "D_real_1": 5,
+            "n": 44,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 6
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 63,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 3,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 78,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 54,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 86,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 327,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      }
+    },
+    "16_forward": {
+      "future_fit_SOURCE_ORIGIN": {
+        "all": {
+          "D_discordant": 19,
+          "D_placebo_1": 5,
+          "D_real_1": 16,
+          "n": 1008,
+          "pair_diagnostic_placebo": 8,
+          "pair_diagnostic_real": 28
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 61,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 23,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 74,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 10,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 13,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 49,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 35,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 10
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 29,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 55,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 1,
+            "D_real_1": 6,
+            "n": 69,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 7
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 60,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 24,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 186,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 0,
+            "D_real_1": 2,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 2
+          }
+        }
+      },
+      "prediction_SOURCE_DEST": {
+        "all": {
+          "D_discordant": 28,
+          "D_placebo_1": 15,
+          "D_real_1": 29,
+          "n": 1008,
+          "pair_diagnostic_placebo": 19,
+          "pair_diagnostic_real": 51
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 48,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 1,
+            "n": 36,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 59,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 1,
+            "D_real_1": 0,
+            "n": 25,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 69,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 15,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 56,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 2,
+            "D_real_1": 4,
+            "n": 28,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 17
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 66,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 0,
+            "D_real_1": 1,
+            "n": 18,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 1
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 6,
+            "D_real_1": 7,
+            "n": 38,
+            "pair_diagnostic_placebo": 8,
+            "pair_diagnostic_real": 11
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 14,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 11,
+            "D_placebo_1": 4,
+            "D_real_1": 11,
+            "n": 70,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 15
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 11,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 0,
+            "D_real_1": 5,
+            "n": 73,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 6
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 46,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 38,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 194,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 58,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          }
+        }
+      },
+      "prediction_held_DEST": {
+        "all": {
+          "D_discordant": 37,
+          "D_placebo_1": 25,
+          "D_real_1": 34,
+          "n": 1584,
+          "pair_diagnostic_placebo": 42,
+          "pair_diagnostic_real": 76
+        },
+        "by_g_and_Apositive": {
+          "g=10|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 90,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=10|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 1,
+            "n": 42,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=11|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 83,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=11|Aqua>0=True": {
+            "D_discordant": 4,
+            "D_placebo_1": 3,
+            "D_real_1": 1,
+            "n": 49,
+            "pair_diagnostic_placebo": 5,
+            "pair_diagnostic_real": 1
+          },
+          "g=12|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 87,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=12|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 45,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 81,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=1|Aqua>0=True": {
+            "D_discordant": 10,
+            "D_placebo_1": 6,
+            "D_real_1": 10,
+            "n": 51,
+            "pair_diagnostic_placebo": 15,
+            "pair_diagnostic_real": 37
+          },
+          "g=2|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 93,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=2|Aqua>0=True": {
+            "D_discordant": 1,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 39,
+            "pair_diagnostic_placebo": 2,
+            "pair_diagnostic_real": 9
+          },
+          "g=3|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 80,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=3|Aqua>0=True": {
+            "D_discordant": 7,
+            "D_placebo_1": 2,
+            "D_real_1": 7,
+            "n": 52,
+            "pair_diagnostic_placebo": 6,
+            "pair_diagnostic_real": 12
+          },
+          "g=4|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 70,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=4|Aqua>0=True": {
+            "D_discordant": 5,
+            "D_placebo_1": 4,
+            "D_real_1": 7,
+            "n": 62,
+            "pair_diagnostic_placebo": 4,
+            "pair_diagnostic_real": 11
+          },
+          "g=5|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 71,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=5|Aqua>0=True": {
+            "D_discordant": 3,
+            "D_placebo_1": 2,
+            "D_real_1": 3,
+            "n": 61,
+            "pair_diagnostic_placebo": 3,
+            "pair_diagnostic_real": 3
+          },
+          "g=9|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 82,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=9|Aqua>0=True": {
+            "D_discordant": 0,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 50,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          },
+          "g=JJA|Aqua>0=False": {
+            "D_discordant": 0,
+            "D_placebo_1": 0,
+            "D_real_1": 0,
+            "n": 343,
+            "pair_diagnostic_placebo": 0,
+            "pair_diagnostic_real": 0
+          },
+          "g=JJA|Aqua>0=True": {
+            "D_discordant": 2,
+            "D_placebo_1": 1,
+            "D_real_1": 1,
+            "n": 53,
+            "pair_diagnostic_placebo": 1,
+            "pair_diagnostic_real": 1
+          }
+        }
+      }
+    }
+  },
+  "response_columns_read": [],
+  "stage37_authorized": false,
+  "support_rows": 9902
+}

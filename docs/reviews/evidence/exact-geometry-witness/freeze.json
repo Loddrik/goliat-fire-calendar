@@ -1,0 +1,43 @@
+{
+  "GEOS_oracle": false,
+  "cap_sha256": "97392e4ea464d9b061b74561e9c7cad9fd2227bd6f0145c06c2050b0f56ea0e3",
+  "code_sha256": "0760e2badaa335fa0d142cce8215ca42dbf2d58a57d1ed14da824b06b35b4ab9",
+  "design_sha256": "fc13b105ab12ad0470b967c0e94c84f29c4b08a055163de20d3db50eb641a4c6",
+  "files_sha256": {
+    "MYD14_early-818-1166-other_union.wkb.gz": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f",
+    "MYD14_early-818-1166-pixel.wkb.gz": "331d22b1444603b222b300baa1ae5019808f323455551064c1c04a8952447652",
+    "MYD14_late-833-1149-other_union.wkb.gz": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e",
+    "MYD14_late-833-1149-pixel.wkb.gz": "c7a7bcfaebda644d5100566275a14058e07d62e64c8aec656dd1c726fe5f9b0d",
+    "MYD14_late-844-1161-other_union.wkb.gz": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e",
+    "MYD14_late-844-1161-pixel.wkb.gz": "674ffc202cff0be13fb66fc75ae6524fb3ac8291c325c324b792bc32a914a2bb",
+    "VNP14IMG_early-2051-3869-other_union.wkb.gz": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2",
+    "VNP14IMG_early-2051-3869-pixel.wkb.gz": "6e0482ccbb655292917649ce118696ec86a23e18c6c03e420183ff28c4e3661b",
+    "VNP14IMG_early-2076-3864-other_union.wkb.gz": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2",
+    "VNP14IMG_early-2076-3864-pixel.wkb.gz": "b31b0db2e0400e7e023d260a90debefb78af0b119c59002b6d6b4c2495bbf8ff",
+    "cap.snapshot.json": "97392e4ea464d9b061b74561e9c7cad9fd2227bd6f0145c06c2050b0f56ea0e3",
+    "code.snapshot.py.txt": "0760e2badaa335fa0d142cce8215ca42dbf2d58a57d1ed14da824b06b35b4ab9",
+    "design.snapshot.md.txt": "fc13b105ab12ad0470b967c0e94c84f29c4b08a055163de20d3db50eb641a4c6",
+    "protocol.snapshot.md.txt": "2381c4d2229de82b777f6f6bd8c14556c82ad9d34c6aadd39e8e8af7ae2e2d63",
+    "tests.snapshot.py.txt": "68d1a4ce8f0586771788627b1275dc64511b138f51111eb6c4d087e285c46d6a"
+  },
+  "frozen_utc": "2026-11-15T05:27:26.669986+00:00",
+  "inputs": [
+    "MYD14_early-818-1166-pixel.wkb.gz",
+    "MYD14_early-818-1166-other_union.wkb.gz",
+    "MYD14_late-833-1149-pixel.wkb.gz",
+    "MYD14_late-833-1149-other_union.wkb.gz",
+    "MYD14_late-844-1161-pixel.wkb.gz",
+    "MYD14_late-844-1161-other_union.wkb.gz",
+    "VNP14IMG_early-2051-3869-pixel.wkb.gz",
+    "VNP14IMG_early-2051-3869-other_union.wkb.gz",
+    "VNP14IMG_early-2076-3864-pixel.wkb.gz",
+    "VNP14IMG_early-2076-3864-other_union.wkb.gz"
+  ],
+  "protocol_commit": "97dbd33",
+  "protocol_sha256": "2381c4d2229de82b777f6f6bd8c14556c82ad9d34c6aadd39e8e8af7ae2e2d63",
+  "results29_sha256": "b1176b44d7a45906e7ced73596a03c2a76a57a487f851d147409646386bc8ec5",
+  "search_started": false,
+  "source29_manifest_sha256": "377f387835672f8fcc928ac9fd9241658673b5f97ca03aa0200cf23874b4aba4",
+  "tests_passed_before_real": true,
+  "tests_sha256": "68d1a4ce8f0586771788627b1275dc64511b138f51111eb6c4d087e285c46d6a"
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Complete controlled35 call accounting; no new solver execution in this recording step",
+  "producer_original_synthetic_calls": 19,
+  "producer_real_calls": 960,
+  "producer_total": 979,
+  "independent_review_real_calls": 0,
+  "independent_review_synthetic_calls": 19,
+  "producer_plus_independent_review_subtotal": 998,
+  "root_full_regression_new35_fixture_calls": 19,
+  "controlled35_total": 1017,
+  "original_cap": 2000,
+  "root_regression_tests": 330,
+  "root_regression_passed": true,
+  "root_record_sha256": "a4db355f04fc221fa30e95cd895f4b50e4a1cd3672c123bb9cb02ee8bc2010c4",
+  "source_snapshot": "root-regression-solver-accounting.snapshot.json",
+  "clarification": "summary.json combined35_calls_so_far=998 is the producer-plus-independent-verifier subtotal from the executed verifier. This companion adds the separate root19 fixture calls; total1017. Unrelated legacy regression solver work is outside the new35 experiment, as declared by root.",
+  "producer_modified": false
+}

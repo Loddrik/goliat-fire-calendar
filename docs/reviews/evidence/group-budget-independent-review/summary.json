@@ -1,0 +1,108 @@
+{
+  "status": "independent_verification_pass_with_transparent_required_diagnostic_completion",
+  "completed_utc": "2026-11-15T07:34:30.453981+00:00",
+  "reviewer_freeze_sha256": "ef511c5ab7fee233aef00431a1e8b21efe645945b72a2b94c01a5b2b13a271fd",
+  "producer_manifest_sha256_before_and_after": "895b832d058b47e47c6d293841c6eb2a7227dcec4e84903b2a34227bac87b032",
+  "producer_outputs_modified": false,
+  "producer_manifest_extended": false,
+  "producer_code_changed": false,
+  "historical_fit_source_or_predict_all_called": false,
+  "new_fits": 0,
+  "new_downloads": 0,
+  "real_reconcile_calls": 0,
+  "independent_synthetic_solver_calls": 19,
+  "producer_solver_calls": 979,
+  "combined35_calls_so_far": 998,
+  "original_solver_cap": 2000,
+  "diagnostic_completion": "Postexecution reviewer complement of required B/C risk,transfer,L1 fields omitted by producer. Allfive methods emitted; no new primary or selection. Original producer artifacts unchanged.",
+  "independent_risk_implementation": "Direct probability-weighted absolute-loss sums and subgradient intervals from frozenCDF atoms; no solver reexecution.",
+  "identities": [
+    {
+      "regime": "08_forward",
+      "B_G_exact_original21": true,
+      "rows": 2592,
+      "CDF_model_unchanged": true
+    },
+    {
+      "regime": "08_backward",
+      "B_G_exact_original21": true,
+      "rows": 2592,
+      "CDF_model_unchanged": true
+    },
+    {
+      "regime": "16_forward",
+      "B_G_exact_original21": true,
+      "rows": 2592,
+      "CDF_model_unchanged": true
+    },
+    {
+      "regime": "16_backward",
+      "B_G_exact_original21": true,
+      "rows": 2592,
+      "CDF_model_unchanged": true
+    }
+  ],
+  "restored_CDF_sha256": "2546005002491a433bcee47b37b688585b4fb7cd2107211d2c5827f7b03dee09",
+  "allocation_group_checks_verified": 960,
+  "maximum_independent_group_KKT_residual": 4.440892098500626e-16,
+  "maximum_global_budget_absolute_residual": 2.2737367544323206e-13,
+  "G_le_R_P_le_B_risks_passed": true,
+  "G_le_C_le_average_B_G_risk_passed": true,
+  "all_group_budgets_transfers_and_C_half_transfer_verified": true,
+  "pointwise_C_observed_L1_convexity_passed": true,
+  "complete_evaluated_target_join_exact": true,
+  "population_reports_verified": 216,
+  "method_metric_reports_verified": 1080,
+  "all_per_CUT_and_historical_G_worst_CUT_verified": true,
+  "primary": {
+    "definition": "equal-four held MAE_R minus MAE_G",
+    "regimes": [
+      {
+        "regime": "08_backward",
+        "n_held": 1008,
+        "G_mae": 2.116246566603899,
+        "R_mae": 2.1366833327001227,
+        "delta_R_minus_G": 0.02043676609622347,
+        "absolute_error_delta": 20.600260224993235
+      },
+      {
+        "regime": "08_forward",
+        "n_held": 1008,
+        "G_mae": 2.864694026160487,
+        "R_mae": 2.9704155768016123,
+        "delta_R_minus_G": 0.1057215506411251,
+        "absolute_error_delta": 106.56732304625439
+      },
+      {
+        "regime": "16_backward",
+        "n_held": 1584,
+        "G_mae": 1.850046525211521,
+        "R_mae": 1.8384802082121312,
+        "delta_R_minus_G": -0.011566316999389814,
+        "absolute_error_delta": -18.321046127033696
+      },
+      {
+        "regime": "16_forward",
+        "n_held": 1584,
+        "G_mae": 2.113125307371809,
+        "R_mae": 2.1664318921368326,
+        "delta_R_minus_G": 0.05330658476502359,
+        "absolute_error_delta": 84.43763026779789
+      }
+    ],
+    "equal_four_delta_mae": 0.041974646125745585,
+    "row_weighted_delta_mae_secondary": 0.037284754516205984
+  },
+  "unit_test_run": {
+    "tests": 5,
+    "passed": true,
+    "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.018s\n\nOK\n"
+  },
+  "RSS_bytes": 152100864,
+  "scope_limits": [
+    "21 only, fixedCDFs and baselineB; no fresh holdout.",
+    "Real groups equalSOURCE/held; sensitivity of decision coupling, not ecology or sensor observability.",
+    "ExpectedCDF risk and group-total equality are mathematical properties, not physical accuracy.",
+    "G1 remains false;30B remains failed; no production promotion."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "Independent35 verification and explicit postexecution completion of omitted predeclared diagnostics; producer untouched",
+  "recorded_utc": "2026-11-15T07:37:55.300993+00:00",
+  "producer_manifest_sha256": "895b832d058b47e47c6d293841c6eb2a7227dcec4e84903b2a34227bac87b032",
+  "producer_manifest_not_extended": true,
+  "files": {
+    "all-method-decision-diagnostics.csv": {
+      "bytes": 99274,
+      "sha256": "b38f7658f7e96a3a1da707faacf11d4579eed9851f6d05fc5247d0f5d145690e"
+    },
+    "execution-notes.json": {
+      "bytes": 741,
+      "sha256": "d47b09ccb67e3b1307142fb29196eb4756fb029f7d77db4449c3bf8f4b4b6b8a"
+    },
+    "freeze.json": {
+      "bytes": 4611,
+      "sha256": "ef511c5ab7fee233aef00431a1e8b21efe645945b72a2b94c01a5b2b13a271fd"
+    },
+    "resource-accounting.json": {
+      "bytes": 1001,
+      "sha256": "750c5b124bb651daad29078a39bd79e6c1ad396195d332dae87303c44aabda8d"
+    },
+    "reviewer-code.py.txt": {
+      "bytes": 15177,
+      "sha256": "3395ac23ba8fc58bc4e522fc9b73c74bf29182e81778e3b50e6aba157ba72604"
+    },
+    "root-regression-solver-accounting.snapshot.json": {
+      "bytes": 210,
+      "sha256": "a4db355f04fc221fa30e95cd895f4b50e4a1cd3672c123bb9cb02ee8bc2010c4"
+    },
+    "summary.json": {
+      "bytes": 4098,
+      "sha256": "cf3f745f3cd525e1ce29c429c15d1c9427baf6a890260b3096d2d5079b4bd8af"
+    }
+  }
+}

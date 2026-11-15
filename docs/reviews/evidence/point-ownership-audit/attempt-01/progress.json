@@ -1,0 +1,24 @@
+{
+  "QA_read": false,
+  "candidates": 482769,
+  "completed_groups": [
+    "2019-MYD14-phase0-h250",
+    "2019-VNP14IMG-phase0-h250",
+    "2019-MYD14-phase0-h500",
+    "2019-VNP14IMG-phase0-h500",
+    "2019-MYD14-phase125-h250",
+    "2019-VNP14IMG-phase125-h250",
+    "2019-MYD14-phase125-h500",
+    "2019-VNP14IMG-phase125-h500",
+    "2023-MYD14-phase0-h250",
+    "2023-VNP14IMG-phase0-h250",
+    "2023-MYD14-phase0-h500",
+    "2023-VNP14IMG-phase0-h500",
+    "2023-MYD14-phase125-h250",
+    "2023-VNP14IMG-phase125-h250",
+    "2023-MYD14-phase125-h500",
+    "2023-VNP14IMG-phase125-h500"
+  ],
+  "queries": 198804,
+  "segment_evaluations": 3143544
+}

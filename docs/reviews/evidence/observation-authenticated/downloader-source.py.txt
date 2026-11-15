@@ -1,0 +1,138 @@
+"""Bounded authenticated acquisition of one fixed G0 candidate and auxiliaries.
+
+Read tokens only from ignored local files. Never persist bearer values, redirect
+queries or response bodies for errors. Authentication headers are recomputed at
+EVERY hop; non-NASA data/CDN redirects receive no Authorization header.
+"""
+from __future__ import annotations
+import argparse
+from datetime import datetime,timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import time
+from urllib.error import HTTPError,URLError
+from urllib.parse import urljoin,urlsplit,urlunsplit
+from urllib.request import Request,build_opener,HTTPRedirectHandler
+
+ROOT=Path(__file__).resolve().parents[1]
+NASA_AUTH_HOSTS=frozenset({'data.lpdaac.earthdatacloud.nasa.gov','data.laadsdaac.earthdatacloud.nasa.gov','urs.earthdata.nasa.gov'})
+CDN_HOSTS=frozenset({'d1nklfio7vscoe.cloudfront.net','d13j1jds5ybppo.cloudfront.net'})
+BUDGET=400*1024*1024
+
+
+def safe_url(url):
+ p=urlsplit(url);host=p.hostname or ''
+ if p.port:host+=':'+str(p.port)
+ return urlunsplit((p.scheme,host,p.path,'',''))
+
+
+def permitted(url):
+ p=urlsplit(url);host=p.hostname or ''
+ return p.scheme=='https' and p.username is None and p.password is None and p.port in (None,443) and (
+  host in NASA_AUTH_HOSTS or host in CDN_HOSTS or host.endswith('.s3.amazonaws.com') or ('.s3.' in host and host.endswith('.amazonaws.com')))
+
+
+def auth_headers(url,token):
+ if not permitted(url):raise ValueError('Unapproved data redirect host')
+ headers={'User-Agent':'GOLIAT-observation-G0/1.0'}
+ if urlsplit(url).hostname in NASA_AUTH_HOSTS:headers['Authorization']='Bearer '+token
+ return headers
+
+
+class NoRedirect(HTTPRedirectHandler):
+ def redirect_request(self,*args,**kwargs):return None
+
+
+def file_sha(path):
+ digest=hashlib.sha256()
+ with path.open('rb') as stream:
+  for chunk in iter(lambda:stream.read(1024*1024),b''):digest.update(chunk)
+ return digest.hexdigest()
+
+
+def download(url,destination,token,remaining_bytes,deadline):
+ if remaining_bytes<=0:raise ValueError('Download budget exhausted')
+ destination=Path(destination);destination.parent.mkdir(parents=True,exist_ok=True)
+ if destination.exists():
+  return {'status':'existing_file','bytes':destination.stat().st_size,'sha256':file_sha(destination),'file':str(destination.relative_to(ROOT)),
+          'hdf_magic':destination.read_bytes()[:8].hex(),'downloaded_now':False},0
+ opener=build_opener(NoRedirect());current=url;hops=[];started=time.monotonic()
+ for _ in range(8):
+  if time.time()>=deadline:raise TimeoutError('G0 deadline')
+  headers=auth_headers(current,token)
+  try:response=opener.open(Request(current,headers=headers),timeout=min(60,max(1,deadline-time.time())))
+  except HTTPError as error:
+   if error.code in (301,302,303,307,308) and error.headers.get('Location'):
+    target=urljoin(current,error.headers['Location'])
+    hops.append({'http_status':error.code,'from':safe_url(current),'to':safe_url(target),'authorization_on_request':'Authorization' in headers})
+    if not permitted(target):return {'status':'redirect_not_allowed','http_status':error.code,'hops':hops,'bytes':0},0
+    current=target;continue
+   return {'status':'http_error','http_status':error.code,'url':safe_url(current),'hops':hops,'bytes':0},0
+  except (URLError,OSError,TimeoutError) as error:
+   return {'status':'transport_error','error_class':type(error).__name__,'url':safe_url(current),'hops':hops,'bytes':0},0
+  with response:
+   content_type=response.headers.get('Content-Type','');length=response.headers.get('Content-Length')
+   if 'html' in content_type.lower() or 'json' in content_type.lower():
+    return {'status':'non_science_response','http_status':response.status,'content_type':content_type,'url':safe_url(current),'hops':hops,'bytes':0},0
+   if length and int(length)>remaining_bytes:
+    return {'status':'budget_exceeded_before_download','declared_bytes':int(length),'url':safe_url(current),'hops':hops,'bytes':0},0
+   part=destination.with_suffix(destination.suffix+'.part');written=0;digest=hashlib.sha256();magic=b''
+   try:
+    with part.open('wb') as stream:
+     while True:
+      if time.time()>=deadline:raise TimeoutError('G0 deadline')
+      chunk=response.read(min(1024*1024,remaining_bytes-written+1))
+      if not chunk:break
+      written+=len(chunk)
+      if written>remaining_bytes:raise ValueError('Download budget exceeded')
+      if not magic:magic=chunk[:8]
+      stream.write(chunk);digest.update(chunk)
+    if length and written!=int(length):raise ValueError('Incomplete data response')
+    if not (magic.startswith(b'\x0e\x03\x13\x01') or magic.startswith(b'\x89HDF\r\n\x1a\n')):
+     raise ValueError('Unexpected file magic')
+    part.replace(destination)
+   except Exception as error:
+    return {'status':'download_failed','error_class':type(error).__name__,'bytes':written,'url':safe_url(current),'hops':hops},written
+   return {'status':'downloaded','bytes':written,'sha256':digest.hexdigest(),'file':str(destination.relative_to(ROOT)),'hdf_magic':magic.hex(),
+    'http_status':response.status,'content_type':content_type,'url':safe_url(current),'hops':hops,'seconds':round(time.monotonic()-started,3),
+    'final_request_had_authorization':'Authorization' in headers,'downloaded_now':True},written
+ return {'status':'redirect_limit','hops':hops,'bytes':0},0
+
+
+def run(token_file,raw_dir,evidence_dir,deadline,budget=BUDGET):
+ token=Path(token_file).read_text().strip()
+ if not token:raise ValueError('Missing configured credential')
+ raw_dir=Path(raw_dir);evidence_dir=Path(evidence_dir);evidence_dir.mkdir(parents=True,exist_ok=True)
+ source=ROOT/'docs/reviews/evidence/observation-preflight/summary.json';anon=json.loads(source.read_text())
+ record={'scope':'One fixed metadata candidate; authenticated files, not a fire accuracy experiment','started_utc':datetime.now(timezone.utc).isoformat(),
+  'token_configured':True,'token_persisted_in_evidence':False,'budget_bytes':budget,'downloaded_bytes':0,'files':{},'gate0_passed':False,
+  'geolocation_qa_read':False,'input_pointer_verified':False,'common_pixel_support_verified':False,
+  'source_anonymous_summary_sha256':file_sha(source),'candidate':anon['chosen_probe_pair']}
+ def save():
+  (evidence_dir/'acquisition.json').write_text(json.dumps(record,indent=2,allow_nan=False)+'\n')
+ for name,item in anon['anonymous_probes'].items():
+  url=item['url'];filename=Path(urlsplit(url).path).name
+  result,spent=download(url,raw_dir/filename,token,budget-record['downloaded_bytes'],deadline)
+  record['files'][name]=result;record['downloaded_bytes']+=spent;save()
+  print(name,result['status'],'bytes',result.get('bytes',0),flush=True)
+ record['completed_utc']=datetime.now(timezone.utc).isoformat();record['all_four_files_acquired']=all(x.get('status') in {'downloaded','existing_file'} for x in record['files'].values()) and len(record['files'])==4
+ record['code_sha256']=file_sha(Path(__file__));save();return record
+
+
+if __name__=='__main__':
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--token-file',type=Path,default=ROOT/'.runtime/secrets/earthdata-token')
+ parser.add_argument('--raw-dir',type=Path,default=ROOT/'.runtime/observation-pilot/raw')
+ parser.add_argument('--evidence-dir',type=Path,default=ROOT/'docs/reviews/evidence/observation-authenticated')
+ parser.add_argument('--deadline-utc',required=True)
+ args=parser.parse_args()
+ try:
+  limit=datetime.fromisoformat(args.deadline_utc.replace('Z','+00:00')).timestamp()
+  result=run(args.token_file,args.raw_dir,args.evidence_dir,limit)
+  print(json.dumps({'all_four_files_acquired':result['all_four_files_acquired'],'downloaded_bytes':result['downloaded_bytes'],'gate0_passed':False}))
+ except Exception as error:
+  # Deliberately omit exception strings, which may contain signed URLs.
+  print(json.dumps({'status':'failed','error_class':type(error).__name__}))
+  raise SystemExit(1)

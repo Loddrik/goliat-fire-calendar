@@ -20,7 +20,9 @@ For whom: municipal emergency / planning officers who must characterize the wild
 
 ## How the harmonization works (short)
 
-Unit: 0.01° cells with ≥ 1 daytime detection per day, after a fixed mask of industrial/volcanic sources. Reference: VIIRS S-NPP. MODIS Aqua months are converted with a single regional factor (r = 2.35) fitted on 2012–2019. Four methods were compared on held-out seasons (raw Aqua, constant factor, VIIRS climatology without Aqua, monthly factor with shrinkage); the constant factor tied with the monthly one and reduces the error of the climatology, so the simplest method is published. Per commune, the estimate is **enabled only where Aqua has ≥ 50 cell-days and the constant factor beats both the VIIRS climatology and raw Aqua in ≥ 6 of 8 cross-validated seasons** (14 of 54 communes; the rest show observed VIIRS from 2012 only). Full details, numbers and disclosures: [`docs/method.md`](docs/method.md).
+Unit: 0.01° cells with ≥ 1 daytime detection per day, after a fixed mask of industrial/volcanic sources. Reference: VIIRS S-NPP. MODIS Aqua months are converted with a single regional factor (r = 2.35) fitted on 2012–2019. Four methods were compared on held-out seasons (raw Aqua, constant factor, VIIRS climatology without Aqua, monthly factor with shrinkage); the constant factor tied with the monthly one and reduces the error of the climatology, so the simplest method is published. Per commune, the estimate is **enabled only where Aqua has ≥ 50 cell-days and the constant factor beats the VIIRS climatology in ≥ 6 of 8 cross-validated seasons and beats raw Aqua in ≥ 6 of 8, evaluated as separate counts** (14 of 54 communes; the rest show observed VIIRS from 2012 only). Full details, numbers and disclosures: [`docs/method.md`](docs/method.md).
+
+[Scientific research evidence and review index](docs/reviews/README.md) — experimental results, negative findings and independent audits; these do not change the published model.
 
 ## Repository
 

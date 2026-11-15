@@ -1,0 +1,12 @@
+{
+  "status": "PASS_disclosure_scope",
+  "completed_utc": "2026-11-15T10:39:20.629300+00:00",
+  "method_sha256": "b944e2bec9f06a5d83edc8fa76e728f834c96caf001aa14fef5415555e0542de",
+  "producer_report_sha256": "347c1b1a5b3d1d6af86da713fa6b403b94c879b9a7a2171d64895d3a03006cd9",
+  "line_scope": "docs/method.md section6 Seasonal reconstructed totals added bullet only.",
+  "diagnostic_published14_112_postselection": true,
+  "median_APE_and_mean_signed_relative_distinguished": true,
+  "not_hindcast_or_band_or_causal_validation": true,
+  "monthly_gates_not_annual_certification": true,
+  "no_production_change_or_new_scientific_computation": true
+}

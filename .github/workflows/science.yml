@@ -44,3 +44,5 @@ jobs:
         run: uv sync --frozen
       - name: Run scientific and publication regression tests
         run: uv run --frozen python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Verify frozen CRPS evidence without private inputs
+        run: uv run --frozen python -O pipeline/verify_crps_evidence.py

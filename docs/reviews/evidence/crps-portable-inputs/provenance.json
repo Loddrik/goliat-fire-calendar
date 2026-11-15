@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-15T10:25:36.264168+00:00",
+  "purpose": "Historical published14 membership used by study39, copied byte-for-byte so future publication updates do not change this diagnostic population.",
+  "original_path": "data/processed/gates.csv",
+  "snapshot_path": "docs/reviews/evidence/crps-portable-inputs/gates39.csv",
+  "sha256": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+  "anchor_path": "data/processed/crps_audit/code-freeze.json",
+  "anchor_sha256": "aabdd82794dfe60d3bf21666553c4126771633e94f3bd23bc2e3eadc55468e5f",
+  "anchor_field": "protected_sha256.data/processed/gates.csv",
+  "current_source_matches_historical_anchor_at_capture": true,
+  "original_producer_snapshots_modified": false,
+  "publication_gates_modified": false,
+  "new_scientific_evaluation": false
+}

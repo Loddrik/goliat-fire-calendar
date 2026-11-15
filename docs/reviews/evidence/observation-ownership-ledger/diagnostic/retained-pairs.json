@@ -1,0 +1,197 @@
+{
+  "maximum_pairs": 5,
+  "retained": [
+    "MYD14_early-818-1166",
+    "MYD14_late-833-1149",
+    "MYD14_late-844-1161",
+    "VNP14IMG_early-2051-3869",
+    "VNP14IMG_early-2076-3864"
+  ],
+  "removed_extra_diagnostic_files": [
+    {
+      "file": "MYD14_early-833-1149-other_union.wkb.gz",
+      "sha256": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f"
+    },
+    {
+      "file": "MYD14_early-818-1166-difference.wkb.gz",
+      "sha256": "005d7b0fd886f8f8aa10f688f076f2ae0b1a7b85fc35a3673fa68d36832abab9"
+    },
+    {
+      "file": "VNP14IMG_late-2020-3853-pixel.wkb.gz",
+      "sha256": "955b6d09ea41f8aaf6ee3d2472fa2af7e2aab41c236f3ac6e997b1b6527889c8"
+    },
+    {
+      "file": "MYD14_late-844-1161-difference.wkb.gz",
+      "sha256": "0aa8ccb5c9c966bac0d7e592bc4bf3dad56fa0a35a3e5015831e6d2dde0af63e"
+    },
+    {
+      "file": "VNP14IMG_late-2076-3864-pixel.wkb.gz",
+      "sha256": "b31b0db2e0400e7e023d260a90debefb78af0b119c59002b6d6b4c2495bbf8ff"
+    },
+    {
+      "file": "MYD14_early-833-1149-intersection.wkb.gz",
+      "sha256": "ca3ebe8243e7d79f4911645bf83901597d76c6a2412bb7563b5e45494d0ca271"
+    },
+    {
+      "file": "MYD14_early-811-1154-other_union.wkb.gz",
+      "sha256": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f"
+    },
+    {
+      "file": "MYD14_early-833-1149-pixel.wkb.gz",
+      "sha256": "c7a7bcfaebda644d5100566275a14058e07d62e64c8aec656dd1c726fe5f9b0d"
+    },
+    {
+      "file": "MYD14_early-811-1154-pixel.wkb.gz",
+      "sha256": "803a4746df29a2c8e4852e39b1d3b19e6d5125261aaefa3a19cb5ff79ddc5281"
+    },
+    {
+      "file": "VNP14IMG_early-2076-3864-intersection.wkb.gz",
+      "sha256": "68cc366035f0224ee4ff295b2fc623c4bf4dd822e14ef4a818e7174e1f973dbd"
+    },
+    {
+      "file": "MYD14_early-818-1166-intersection.wkb.gz",
+      "sha256": "e02459efdc473702d43488d6a680b988703f88401bb0b0e3fb8eb0ef6f920c25"
+    },
+    {
+      "file": "VNP14IMG_late-2076-3864-intersection.wkb.gz",
+      "sha256": "68bab5674097b84320a50aae9fb9dcd4b900de75008e76c2c333c7f69d5ca559"
+    },
+    {
+      "file": "MYD14_late-811-1154-intersection.wkb.gz",
+      "sha256": "31bd3ed39e1e9e8c95ca1103ae6934f920cbb6ebd0a4a9569555ba9434e36d67"
+    },
+    {
+      "file": "VNP14IMG_late-2051-3869-other_union.wkb.gz",
+      "sha256": "95e1ac49afa138a8e01d53518aeb87addb40417116fd3f2a35f30045b6d59f7e"
+    },
+    {
+      "file": "VNP14IMG_early-2020-3853-pixel.wkb.gz",
+      "sha256": "955b6d09ea41f8aaf6ee3d2472fa2af7e2aab41c236f3ac6e997b1b6527889c8"
+    },
+    {
+      "file": "MYD14_late-833-1149-difference.wkb.gz",
+      "sha256": "c4f11fe54f70ffadbd0a78e0c526776a7033fe1c4a1f3c2a13e013e545526c28"
+    },
+    {
+      "file": "MYD14_late-811-1154-other_union.wkb.gz",
+      "sha256": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e"
+    },
+    {
+      "file": "MYD14_early-811-1154-difference.wkb.gz",
+      "sha256": "13108050cae1648a56e19a109cdf3d388611e572916bea5bd60206dc99c670a9"
+    },
+    {
+      "file": "VNP14IMG_early-2020-3853-intersection.wkb.gz",
+      "sha256": "652b17c600bc28ff7ff8cf579ae5218abeb2a931a90aeb0ecdb9129b00b348a9"
+    },
+    {
+      "file": "VNP14IMG_late-2020-3853-intersection.wkb.gz",
+      "sha256": "31fb59050535ac951853392b2ba8e2ca9a11198a7195fb3654b78f052867fd45"
+    },
+    {
+      "file": "VNP14IMG_early-2020-3853-other_union.wkb.gz",
+      "sha256": "5f22007fbce4915c11493f4baca945cce88b32c6f6001b3a22109c72466b86f2"
+    },
+    {
+      "file": "VNP14IMG_early-2051-3869-difference.wkb.gz",
+      "sha256": "dd80d17a71218ccac7791e94c2fb24a4dc8b02904aeca629a138bd274414042f"
+    },
+    {
+      "file": "MYD14_early-844-1161-intersection.wkb.gz",
+      "sha256": "df0fb61f93686ae1c6a164ae00892e0c470832c550e2d304999311d78925c59d"
+    },
+    {
+      "file": "MYD14_late-818-1166-other_union.wkb.gz",
+      "sha256": "6f3bef9cd345fddc833f7072c2fa1a457d43d1c9afa79be66fef64e82910006e"
+    },
+    {
+      "file": "VNP14IMG_late-2020-3853-difference.wkb.gz",
+      "sha256": "6bb6d5fdd3f5c1e8af510c4bc92407d029f1e1436874bb5f7fe46934dda0d288"
+    },
+    {
+      "file": "VNP14IMG_early-2076-3864-difference.wkb.gz",
+      "sha256": "3312f6d18dae6ff2057873deb6bb68e55b195e00b786e74c4ae3afd4aabd0648"
+    },
+    {
+      "file": "MYD14_late-833-1149-intersection.wkb.gz",
+      "sha256": "4f3e5031c43bf627ff87c0cd554eca1af496d7bfa808b6b9eeec7df579007660"
+    },
+    {
+      "file": "MYD14_early-844-1161-pixel.wkb.gz",
+      "sha256": "674ffc202cff0be13fb66fc75ae6524fb3ac8291c325c324b792bc32a914a2bb"
+    },
+    {
+      "file": "MYD14_early-811-1154-intersection.wkb.gz",
+      "sha256": "acc346a59a6f84f84fc5a786c7c28a1fb58a15bb7e1804c42d9beaa5e5a6c2ce"
+    },
+    {
+      "file": "MYD14_late-818-1166-difference.wkb.gz",
+      "sha256": "13108050cae1648a56e19a109cdf3d388611e572916bea5bd60206dc99c670a9"
+    },
+    {
+      "file": "MYD14_early-844-1161-difference.wkb.gz",
+      "sha256": "5de90e90d36106fcb83ebfc472163f9432d5e8296c8b969edcb3db7b4b6f7dcf"
+    },
+    {
+      "file": "MYD14_late-818-1166-intersection.wkb.gz",
+      "sha256": "0fbb88d9aef7df8b6997426a772eb448bd52f0f5cf890fda01c6990bc25e0efe"
+    },
+    {
+      "file": "VNP14IMG_early-2051-3869-intersection.wkb.gz",
+      "sha256": "eba0235c88cc26274afdf921ce8e02c6fe337fccafeb5353990e8dfd1c450a4d"
+    },
+    {
+      "file": "MYD14_early-844-1161-other_union.wkb.gz",
+      "sha256": "b9bdd9f18b5a7efc0933bfd9ef619db716a4251b1e6bc3861b550661ef75609f"
+    },
+    {
+      "file": "VNP14IMG_late-2051-3869-intersection.wkb.gz",
+      "sha256": "01df95b62e85d2161413bd171b5c6dfd2ea6d9309178912fb6aa2fbf8f77ccff"
+    },
+    {
+      "file": "VNP14IMG_late-2020-3853-other_union.wkb.gz",
+      "sha256": "95e1ac49afa138a8e01d53518aeb87addb40417116fd3f2a35f30045b6d59f7e"
+    },
+    {
+      "file": "VNP14IMG_late-2076-3864-other_union.wkb.gz",
+      "sha256": "95e1ac49afa138a8e01d53518aeb87addb40417116fd3f2a35f30045b6d59f7e"
+    },
+    {
+      "file": "MYD14_late-811-1154-pixel.wkb.gz",
+      "sha256": "c3e323abc3b762c919ced85cab83cbf28563740d1209f9a9e230cedbfd70a52d"
+    },
+    {
+      "file": "VNP14IMG_late-2051-3869-difference.wkb.gz",
+      "sha256": "13108050cae1648a56e19a109cdf3d388611e572916bea5bd60206dc99c670a9"
+    },
+    {
+      "file": "MYD14_early-833-1149-difference.wkb.gz",
+      "sha256": "d330f67e6d9953556cafbde6c4bd5855f39da12a25ee657c8a0ad2af2efdf49c"
+    },
+    {
+      "file": "VNP14IMG_early-2020-3853-difference.wkb.gz",
+      "sha256": "13108050cae1648a56e19a109cdf3d388611e572916bea5bd60206dc99c670a9"
+    },
+    {
+      "file": "MYD14_late-811-1154-difference.wkb.gz",
+      "sha256": "76133d307b8ca0db9a3d5a6de89422baad4566513cd2a3da27876bc0bba73fe0"
+    },
+    {
+      "file": "VNP14IMG_late-2051-3869-pixel.wkb.gz",
+      "sha256": "6e0482ccbb655292917649ce118696ec86a23e18c6c03e420183ff28c4e3661b"
+    },
+    {
+      "file": "MYD14_late-818-1166-pixel.wkb.gz",
+      "sha256": "c2c273f54d302767baccf8e1dd0ce7ef4c1bc6df282f90d820e362e75d810b8a"
+    },
+    {
+      "file": "MYD14_late-844-1161-intersection.wkb.gz",
+      "sha256": "2eaf92395fbdbdf727ed5ba096682b1b4d4514b29b05514942a4ab49c0d4feba"
+    },
+    {
+      "file": "VNP14IMG_late-2076-3864-difference.wkb.gz",
+      "sha256": "13108050cae1648a56e19a109cdf3d388611e572916bea5bd60206dc99c670a9"
+    }
+  ],
+  "reason": "Root cap5 received after diagnostic execution; original24Bfiles untouched; diagnostic numericalJSON retains full selected set; no precision changes"
+}

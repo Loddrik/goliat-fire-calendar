@@ -1,0 +1,6 @@
+{
+  "previous_freeze_sha256": "95f166627eca28f59c1451d997e599bb048e60a14095960cbfc10f5589230115",
+  "code_sha256": "058a60986c28efe3b96fb10dbb2fb872e87b2f460e477c65077f784b515ff2d5",
+  "fix": "HDF5 documentary time attributes only; DIMENSION_LIST is an object reference, not serializable; first reference attempt failed before outputs/ownership/FIRE",
+  "no_policy_change": true
+}

@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-15T08:18:45.259768+00:00",
+  "code_freeze_sha256": "ee9c5db21c8337248858f6707ce6d75e04118d7134a99cc05b4f570ff1eb7da6",
+  "checkpoint_sha256": "55b49922c7aa3d94ba0e27657f8e8e9d72af46f277e2f97a9538d09fa82773e3",
+  "candidate_models_sha256": "23adc102386526d1a6b84824f3ab45ed71624d4ed8dbb71bc0b9dca1bdf15fba",
+  "predictions_sha256": "f04f6bbd129ddb361d1775417aec8564e6732ed36d16c3562fb46b21d63093a7",
+  "counts": {
+    "fit_calls": 21,
+    "solver_calls": 768
+  },
+  "all_gates_before_evaluation_passed": true,
+  "no_evaluation_target_join_yet": true,
+  "source_labels_per_regime_guarantee_not_global_noheldclaim": true,
+  "rows": 10368,
+  "peak_RSS_bytes": 203411456
+}

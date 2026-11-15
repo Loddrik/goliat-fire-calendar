@@ -1,0 +1,104 @@
+{
+  "scope": "design_only_no_new_data_fits_losses_or_code",
+  "criteria_ratified": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_review_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretation": 10
+  },
+  "scores": null,
+  "criteria_ack": "root reports all three original members ratified",
+  "evidence_read": [
+    "reviews2-15",
+    "review18",
+    "review21",
+    "review23",
+    "review24C",
+    "report35A",
+    "independent_review37",
+    "reviewsREADME"
+  ],
+  "novelty_check": {
+    "full_CDF_CRPS": "no explicit CRPS/continuous-ranked audit found in named reviews; studies12-15 assessed intervals, not full CDF",
+    "selective_prediction": "no explicit abstention/risk-coverage audit found in named reviews; publication gates are distinct",
+    "not_a_global_absence_claim": true
+  },
+  "invariants": [
+    "unknown is not zero",
+    "registered SNP counts are not physical fire truth",
+    "no fresh holdout invented",
+    "37 remains negative; differing active pools prevent broad chronology-null inference",
+    "35A remains negative; no new partition, mixing ratio or kappa search",
+    "33 two cases supply no historical model feature or calibration labels",
+    "continuous ledger failure/G1 remain unchanged",
+    "all new evaluation requires own frozen protocol and independent review"
+  ],
+  "routes": [
+    {
+      "id": "A",
+      "title": "Audit full frozen CDFs using CRPS, not another point fit",
+      "estimand": "Equal-four-regime held mean full-distribution CRPS for registered monthly SNP cell-days on unchanged21 panels",
+      "primary_contrast": "Original frozen F21 full CDF versus degenerate deltaB, whose CRPS equals MAE(B); no refit",
+      "controls": [
+        "E11 equals E00 exactly in21 held, so local-parent contrast is excluded as structurally uninformative",
+        "deltaB is a point-derived degenerate probability forecast, not an uncertain or calibrated reference",
+        "G is only a point decision; never fabricate a reconciled joint CDF aroundG",
+        "tiny synthetic exact expectations plus independent CDF-integral oracle"
+      ],
+      "input_preflight": "Verify four21 origin models, held query rosters, scale/floor conventions and hashes; incomplete reconstruction blocks scoring",
+      "resource_minutes_including_independent_review": 90,
+      "decisions": {
+        "favorable": "Retain a distribution-quality research branch, without rescuing any failed point-MAE primary or claiming calibration",
+        "unfavorable": "Withhold probabilistic interpretation of full CDF and investigate misspecification before more downstream decisions",
+        "inconclusive": "Transport or subgroup tradeoffs prevent distributional promotion; preserve all contrasts"
+      },
+      "hard_stop": "Missing frozen CDF or mismatched unit/population; no substitute residual distribution aroundB/G"
+    },
+    {
+      "id": "B",
+      "title": "Can the frozen CDF identify when to withhold a point estimate?",
+      "estimand": "Selective MAE and retained coverage under a single frozen abstention policy; explicitly a changed availability contract",
+      "eligibility": "Not execution-ready without a concrete withholding action and cost agreed before losses; otherwise close this route",
+      "policy_proposal": "Potential difficulty ordering E_F|X-median(F)| with source-defined Aqua-intensity strata; no coverage or cost chosen pending action contract",
+      "controls": [
+        "Deterministic hash acceptance at identical per-stratum counts",
+        "Aqua-only difficulty ordering at matched coverage",
+        "Full-population B/G and rejected-row losses always visible"
+      ],
+      "resource_minutes_including_independent_review": 90,
+      "decisions": {
+        "favorable": "Investigate selective reporting only if uncertainty ordering beats both matched controls and preserves declared territorial/positive-retention safeguards",
+        "unfavorable": "Close uncertainty-driven abstention if it merely removes difficult/intense months or fails matched controls",
+        "inconclusive": "Insufficient accepted rows or unstable transported risk ordering; no deployment"
+      },
+      "hard_stop": "No decision/action/cost contract; policy uses destination labels, chooses coverage after losses, silently omits unknowns or presents selective MAE as all-month improvement"
+    },
+    {
+      "id": "C",
+      "title": "Independent-instrument G0 with a meaningful negative stopping rule",
+      "estimand": "Documentary/access feasibility of coarse temporal corroboration around the two fixed cases, not sensor accuracy or a monthly gain",
+      "first_artifact": "GOES16FDCF metadata/QA/projection/temporal-history contract for fixed dates, no scientific download during preflight",
+      "resource_minutes_including_independent_review": 45,
+      "decisions": {
+        "favorable": "Only a demonstrably informative documented operator could justify asking root for a distinct future source-acquisition budget",
+        "unfavorable": "Close if temporal/spatial support or usable unknown/non-detection states are not established",
+        "inconclusive": "Availability or semantics unresolved; do not treat absence as a negative observation"
+      },
+      "hard_stop": "Existing L2 budget is closed at389MB; any new science bytes require new root protocol/budget; no regionalNASAEO ground truth or375m absence inferred from coarse negative"
+    },
+    {
+      "id": "D",
+      "title": "Consolidate and freeze the scientific decision without further fitting",
+      "estimand": "Evidence ledger of demonstrated marginal gains and failed mechanisms on their actual contracts",
+      "first_artifact": "One decision table separating18 allocation gain, transport limits21, negatives23/35/37, contract sensitivity24C, descriptive33 and unresolved physical claims",
+      "resource_minutes_including_independent_review": 60,
+      "decisions": {
+        "favorable": "Close the session with defensible research candidates and a preregistered future independent-evidence requirement",
+        "unfavorable": "Any provenance or scientific overclaim found is corrected before claiming completion",
+        "inconclusive": "Record unresolved assertions instead of obtaining another score"
+      },
+      "hard_stop": "No promotion, summed percentages across panels, or conversion of prior consultation into a fresh holdout"
+    }
+  ]
+}

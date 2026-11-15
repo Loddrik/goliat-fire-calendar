@@ -1,0 +1,23 @@
+# Protocolo 21 — transporte de calibración entre región y período
+
+Fijado antes de nuevos scores. Objetivo: ¿transporta la distribución parental a comunas sincalibraciónSNPcuando también cambiaelperíodo? No identificaelvalor decontextosecológicos dehipótesis4. Es prueba retrospectivaadaptativa ennuevodominio deevaluación,noholdoutnuevode datos. Usuarioextendió horizontehasta2026-11-15T11:30Z(domingo08:30Santiago).
+
+## Cuatro regímenes fijos
+
+SOURCEBiobío(33CUT08)→heldÑuble(21CUT16),oSOURCEÑuble→heldBiobío; cruzarconorigen2012–2015→destino2016–2019 yreverso. Temporadasjulio–junio. NingúnSNPheldCUTencualquierañoparticipaenajuste/selección. No elegirregímenporresultado. Prediccióndelos54CUTendestinosantesdefiltrarheld/source.
+
+Unidad/mapa heredadosdecelldays. MáscaraNUEVAfijaenmemoria: replicarcriteriosA/B/CyradiosdeAuditData.fit_mask,pero entradasexclusivamente satTerra/Aqua yfechaUTC<2012-01-01. Nouseason<2012(puedeincluirSNPenero–junio2012). MáscarapuedeusarhistorialMODISprevioenterritorioheld; nosellamazero-shotabsoluto. Mapa legado/corpusdeceldasderivadodetodaslasobservacionesrevelasoporteespacial; esunidadfijaconocida,noafirmarausenciaabsolutadeinformaciónSNP. Nopublicarmáscaranueva,sobrescribirlade223nicompararMAE21directocon18: cambiaronsoporteyobjetivodetransporte.
+
+## Estimadores y controles
+
+Aprendertodoslosparámetros,rconst,r_g,normalizaciones,priors,CDF yregresiones SOLOenSOURCEcuts×añosorigen. PolíticaBoriginal:4λexistentes(.01,.1,1,10),elecciónsource-onlyleave-one-origin-season-out,ganancia>1%vsM1,tieλmayor. Nonewgrids. CDFE11κ10fijo yparentalE00. EnheldCUTdesconocidos, B=M1globalfactor aprendidoSOURCE yE11=E00porque localesfaltantes→padre, ambasidentidadesexactasANTESreconciliar. Noinventarclimatologíaconheldlabels; siclavesgrupocalendarioSOURCEfaltan,gatefalseexplícito.
+
+Métodos fijos: M1,B,E00mediana,E11mediana,E11mediaexacta,E11coherent,E00coherent,E11proportional. AmboscoherentminimizanriesgoL1bajoCDFcorrespondientesconmismopresupuestoΣBpor54CUT/temporada-mesydesempateaB;proporcionalmismocontrol18. Parentcoherentesecundario identificaacoplamientodesdeCDFsource: heldCDFrawesigualpero otrosCUTcompitenporelpresupuesto. Suventajanoaprenderíacontextolocalenheld.
+
+## Evaluación predefinida
+
+Primaria:ΔMAEheld E00−M1antesreconcile,cadauno delos4regímenesypromedioconpesoigual4;reportartambiénpromedioporfila(diferentepeso21/33). E11−E00held debe ser0, nohipótesisdeganancia. Secundarias: todosmétodosSOURCEvsheldantes/despuésreconcile,54/14/40;sesgo,MSE,MAEregional,activos/ceros,Aqua0/SNPpositivo,≥50. IgualdadregionalconBconstruidasolo54,nosubgrupos. Nodesignar4regímenescomoréplicasindependientesnicomputarCIIIDporcelda. Nopromociónni selecciónfinalusandodestinos.
+
+Pruebas:heldCUTdisjointSOURCE,origen/disjointdestino,maskfechas/SNPausente,identidadesfallbackexactas,modificar/eliminarSNPheldySNPdestinono cambiaajustes/elecciones/54predicciones;novelarlabelsamodeloinferencia. ReconcileconservatotalymodelCDFexpectedrisk≤B,standaloneguards54. VerificartambiénE00vsE11igualdistribuciónheldantesasignación,no sólo mediana.
+
+Salidasaisladas `data/processed/cold_region_audit/`,código/test/review21nuevos,modelos/selecciones/máscaracandidata/metadatoseinputsconhashes;protegerbase/publicación/todosresultadosanteriores. NingúnFIRMSrawnuevo nifit2020+. Si ventaja desaparece,conservarresultadoy priorizarevidenciadecontexto/observaciónantesdeotroajuste. ManteneractivoslosotrosplanesG0/G1; esteexperimento nointroduceobservabilidadalmodelo.
