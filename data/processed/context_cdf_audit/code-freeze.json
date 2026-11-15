@@ -1,0 +1,52 @@
+{
+  "status": "code-and-inputs-frozen-before-new23-metrics",
+  "frozen_utc": "2026-11-15T03:53:47.174921+00:00",
+  "deadline_utc": "2026-11-15T11:30:00+00:00",
+  "code_sha256": {
+    "pipeline/context_cdf_model.py": "2f27a6922faa74aede7440e684509931de96b1d4f995b563d082c6b2ca8e7118",
+    "pipeline/context_cdf_audit.py": "3dc581ae1b065f2eae3260be45a61933cd38626d6ce948b672754ceb46a7dfe5",
+    "pipeline/cold_region_audit.py": "5857e7cb2c569650fb0de3ad38e8ca30a28a4bfa1a5f5f56e9da3ba181abca29",
+    "pipeline/hurdle_model.py": "88726902da95114530a8bba8a6d75c675842385783f6412214a237ed494cb6fb",
+    "pipeline/coherent_allocation.py": "cf7fe59dbee50e4abf0536181a774ccfd8aafe033ae8cf335d9b8ea8afe12193",
+    "pipeline/scientific_audit.py": "f5b4dfcac376de518da9783c306f16f59d996e4380897dfaa2d05105ff0e9e32",
+    "pipeline/affine_experiment.py": "ec7fef07a9ece9ec965bc2d75fc1f9f39f510d50f674167178eb3f775ab72d10",
+    "tests/test_context_cdf_model.py": "d2f24ad03a122d92d57fd5569bc89b49f0141b39651f6a7da87f73ad65e57b5b",
+    "tests/test_context_cdf_audit.py": "1a36736c7319d2662d72841e5207024fdd3d5b0ab94ec73d607e33c527abd075"
+  },
+  "input_sha256": {
+    "docs/reviews/2026-11-15-science-protocol-23.md": "d9f99d7763ae4fdd8aad883acc44736339d643e486307b65710911a5df6bf9e3",
+    "docs/reviews/2026-11-14-science-protocol-21.md": "4259541d1e9c0a498b34e60f12ce7b7cca75a56728a91304294396af9c62d977",
+    "docs/reviews/2026-11-15-science-protocol-22.md": "c33a18b804355ebdf29119bc40235dde28f4bd97288813481ebc1b5b605563d7",
+    "data/processed/cold_region_audit/models.json": "3b049145d00c4e15aac84de7c8e24150a1895584798584945bae4cffc1eb8c6e",
+    "data/processed/cold_region_audit/predictions.parquet": "cfa801038afa21f777edad2b78f1edf1b801fcccad7aed846914ffbe189f60db",
+    "data/processed/cold_region_audit/candidate_mask.csv": "7758c87910d7d6ab010841e5fb5f2164c1a64fb5605d2a268c2926b66d3a8a93",
+    "data/processed/cold_region_audit/manifest.json": "beeabf68d60df0731092c59a0ad1ab611311cbe8d2c44ebf90659e80047d4ded",
+    "data/processed/landcover_context_audit/features.csv": "579a33a6bac33b81c29924197541ef2f27392befaa7a70ec2022064eaec11516",
+    "data/processed/landcover_context_audit/class_areas.csv": "8ee2b0e3fee0b9998e505b96e2affb675cb55cc2ae7151565c9eec909adc5e47",
+    "data/processed/landcover_context_audit/summary.json": "03647800562e81c4f935c201a969b5dc67ebbf05ffb8870198bb0b01a6bc4251",
+    "data/processed/landcover_context_audit/manifest.json": "e0b3b7590944176918cc1239ec92fa26640744b53998a607b627111c30d2de9d",
+    "data/processed/detections.parquet": "62bc2620e62067320d4ec9f6cca2f21c145363217586cb8518ff31c4912e1a96",
+    "data/processed/celldays.parquet": "8f0c93119162b11db5c6cd46aa9a6cf6391eba0baa250d1dbe7196bd1983318f",
+    "data/processed/cells_comuna.parquet": "44bf64ebf0c51437b5587eb6f16adb5f6157bb107fed81923e7b4df86eaf98cc"
+  },
+  "scenarios": [
+    [
+      "PRIMARY_2010_alltypes",
+      2010,
+      "alltypes"
+    ],
+    [
+      "SECONDARY_2001_alltypes",
+      2001,
+      "alltypes"
+    ],
+    [
+      "SECONDARY_2010_type0",
+      2010,
+      "type0"
+    ]
+  ],
+  "alpha": 0.5,
+  "bandwidth": 0.25,
+  "kappa": 10
+}
