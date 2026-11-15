@@ -1,0 +1,157 @@
+{
+  "role": "adversarial identification and selection",
+  "stage": "after all three original multifocal votes; before any new loss/refit",
+  "recorded_utc": "2026-11-15T07:20:38.804921+00:00",
+  "criteria_ratified": true,
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "new_subjective_scores_computed": false,
+  "reason_no_rescore": "The existing ranges overlap; a design sequence with non-compensable conditions is more defensible than a manufactured numerical winner.",
+  "sources_sha256": {
+    "docs/reviews/evidence/direction-council-35/statistics.json": "87e01eb1f41b4b3fe4ac343a48b3df9024f210c7ede8a245fdc0c97d446e75d4",
+    "docs/reviews/evidence/direction-council-35/engineering.json": "435c276fe36fc100044c81431efd788261ed883160f32b26a9c7a94558d671ea",
+    "docs/reviews/evidence/direction-council-35/observation.json": "3fb2f600cc922cc44ded80856c90e119c2bd086f8cf238f74ffc1da92e382b01"
+  },
+  "additional_sources_sha256": {
+    "docs/reviews/2026-11-15-next-model-preflight.md": "232c23e63d8037b22575206ebb8ccc9daf7cabb46fbbdaddba0b6468ed897964",
+    "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916",
+    "docs/reviews/evidence/discrete-state-comparison-independent-review/summary.json": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf"
+  },
+  "read_scope": "All three multifocal votes and preflight35; previously accepted33 result and its independent review. No new losses, feature values, target fitting, placebo construction, prediction mixtures or allocations were computed.",
+  "non_compensable": [
+    "Unknown is not zero; operator,target,unit,population,loss and available information must be fixed.",
+    "A new representation requires an equivalent control or an explicitly different estimand.",
+    "No physical truth, ecological causation, G1 or fresh holdout may be invented.",
+    "No rescue of a failed primary by selecting contract,seed,period,subgroup or secondary.",
+    "No production changes or new parameter grids."
+  ],
+  "original_disagreements_preserved": {
+    "statistics": "D checkpoint before one bounded A, C as fixed control; defer B model family.",
+    "engineering": "D parallel and mandatory; do not let consolidation block a valid bounded A; C secondary.",
+    "observation": "Directionally prefers new daily information B; operationally A21 bounded plus B feature-only audit in parallel, C control, D fallback.",
+    "blindness_note": "Engineering explicitly read statistics.json; these are not three blind or statistically independent replications."
+  },
+  "critical_findings": [
+    {
+      "id": "A1",
+      "severity": "mandatory interpretation limit",
+      "issue": "On panel21 the real08/16 partition coincides exactly with SOURCE versus held geography in every regime. Real versus one artificial33/21 partition confounds isolation of training-role budgets with administrative geography, activity and spatial structure.",
+      "required_change": "Call A a sensitivity of the frozen decision to coupling across SOURCE/held administrative groups. Do not call it identification of ecology, geographic causation or improved satellite calibration. Preserve this confounding even if real groups outperform the artificial partition.",
+      "falsifier_or_limit": "A similar pattern under the artificial partition weakens a geography-specific story; a different pattern still does not identify geographic causation."
+    },
+    {
+      "id": "A2",
+      "severity": "non-compensable data isolation",
+      "issue": "Group totals are model-imposed budgets, not observed target totals or validated physical priors. SOURCE labels used historically to fit frozen models are legitimate; every destination target, including SOURCE-territory target months at inference, is forbidden as a new input.",
+      "required_change": "Build all54 CDFs and B from the exact frozen21 models and current query Aqua/features only. Per scenario-month/group set total=sum B on that group; no Y, future-month quantity, observed target subtotal,33 Jaccard or QA-derived weight. Poison/remove all destination labels and require identical54 predictions and budgets.",
+      "falsifier_or_limit": "Any change of predictions/budgets after target removal is a failure, not a sensitivity result."
+    },
+    {
+      "id": "A3",
+      "severity": "mandatory mathematical control",
+      "issue": "Regional/artificial constraints restrict the feasible set of the same global-CDF risk problem. They cannot improve the true optimal global expected-CDF risk. Group-total equality with B is constructed.",
+      "required_change": "Use identical CDFs, tie rule,nonnegativity and B across global,real andartificial decisions. Check expected-risk(global)<=expected-risk(grouped) within fixed numerical tolerance, group sum B, KKT and complete54 domains before target losses. Treat any observed-MAE improvement as regularization/misspecification sensitivity, not a better solver or a new regional predictive distribution.",
+      "falsifier_or_limit": "A grouped expected-risk below the reproduced global optimum signals implementation/control incompatibility."
+    },
+    {
+      "id": "A4",
+      "severity": "mandatory selection control",
+      "issue": "18,21 and24C have different masks,targets,models and cohorts; all later dates were already examined. Trying each would invite post-result panel selection.",
+      "required_change": "Use21 as the sole primary and sole evaluation panel for this first study. Keep all four regimes, the original mask6,CDF family and source-only fitted parameters. Fix a single artificial partition by an exact hash rule/order and publish membership before losses. Do not add18/24C as rescue or independent replication. Primary loss aggregation should preserve equal weight of the four held-regime MAEs, with every regime and held/public14 plus held/remaining40,zeros/extremes/bias visible.",
+      "falsifier_or_limit": "Incomplete regime, failed reconstruction, mixed family/mask or cap closes A as inconclusive; no alternate partition or panel."
+    },
+    {
+      "id": "C1",
+      "severity": "mandatory fixed-control interpretation",
+      "issue": "H=(B+Eglobal)/2 is a point-decision shrinkage control. It is neither a mixture-CDF median nor an additional observing variable, and it was proposed after many outcomes were already known.",
+      "required_change": "C may be a secondary control inside the same A protocol/cap on21, using only the existing global E and fixed1/2. No H for each grouped variant, no weight grid, no promotion by the winning subgroup. Verify row/subgroup L1 convexity and budget identities; global bias stays B when B and E share a budget.",
+      "falsifier_or_limit": "L1(H) above the arithmetic mean of endpoint losses on identical fixed rows is an implementation error; beating one endpoint is not a new validation."
+    },
+    {
+      "id": "B1",
+      "severity": "mandatory operator and availability definition",
+      "issue": "Adjacent recorded detections in the same cell are not persistence of one fire or useful observing opportunity. Monthly borders, empty event dates and origin/destination roles can change the estimand.",
+      "required_change": "Freeze one same-cell UTC consecutive-day operator, its monthly credit/border rule, calendar domain and mask6 before computing values. A zero number of recorded pairs is a defined count, not physical absence; any ratio with zero denominator is null. Explicitly distinguish source-only fitting from features computed for destination queries, and state what Aqua information is available at each query. No future target or next-period variable may be silently borrowed.",
+      "falsifier_or_limit": "Missing provenance, mismatched monthly reconciliation or undefined boundary handling closes the cube; constant/zero variation is reported without changing feature."
+    },
+    {
+      "id": "B2",
+      "severity": "mandatory placebo interpretation",
+      "issue": "A joint day permutation per CUT/block and independent per-cell permutations destroy different relationships. A single seed gives no randomization distribution. The phrase SOURCE-only placebo is ambiguous about source fitting versus inference transformation.",
+      "required_change": "Before values freeze exact calendar block, one seed/hash, simultaneous whole-day mapping across all cells, handling of month/leap/boundary days and intended invariants. Preserve per-cell/block counts and intra-day co-occurrence if that is the chosen joint permutation. State explicitly whether the fixed transform is also applied to query features; if only source features are corrupted, call it a training-order corruption diagnostic, not a comparable held-feature placebo. No alternative seeds or block choices after results.",
+      "falsifier_or_limit": "Failure of any declared invariant blocks the placebo; a placebo replicating later predictive improvement limits temporal-order attribution rather than inviting another seed."
+    },
+    {
+      "id": "D1",
+      "severity": "mandatory delivery and provenance",
+      "issue": "Consolidation is necessary but is not new evidence that the physical observation problem was solved. It should not be scored as a superior new model or justify hiding negative branches.",
+      "required_change": "D begins now/in parallel: preserve23 negative,24C territorial fragility,24B/30B failures,32A discrete scope,32B local-only adjudication and33 conditional labels. State which acquisition originals remain missing and which replays are local/derived. Git/PRs target dev with existing identity rules; no production promotion.",
+      "falsifier_or_limit": "Any unsupported claim is corrected/marked pending; do not retune a model to repair the narrative."
+    },
+    {
+      "id": "33_to_model",
+      "severity": "non-compensable bridge limit",
+      "issue": "33query counts and Jaccard are weighted by a chosen nominal point operator; they are not monthly SNP labels, sensitivity estimates or true fire occurrences. Two fixed scenes do not identify a global sensor correction.",
+      "required_change": "Use33 to constrain language,units,retention and handling of unknowns only. Do not insert its Jaccard,tierQA,grid preference or selected2023 labels into monthlyCDF priors,loss weights,calibration targets or predictor choice. Do not infer that23 failed because of aggregation from33 alone.",
+      "falsifier_or_limit": "Any such numerical transfer would require a distinct estimand,additional evidence and preregistered evaluation; it is outside A/B/C."
+    }
+  ],
+  "recommended_joint_sequence": [
+    {
+      "step": "D",
+      "action": "Mandatory parallel evidence/checkpoint work starts immediately, without blocking a valid bounded study. It is delivery work, not an empirical winner."
+    },
+    {
+      "step": "A_with_C",
+      "action": "One45minute cap including implementation and independent review. Panel21 only; fixed global/real/artificial decisions. C is only the fixed global1/2 secondary control if it fits the same cap. Freeze primary contrasts,aggregation,guardrails and any practical margin before losses."
+    },
+    {
+      "step": "B_cube_only",
+      "action": "May run in parallel under its own<=45minute cap only when operators/placebo invariants,owner and reviewer capacity are concretely reserved. No new model fitting or target losses in this artifact; any later incorporation requires a new source-only protocol and time for review."
+    },
+    {
+      "step": "stop",
+      "action": "No automatic next model family,seed,geography orblend after an adverse result. Keep negative/inconclusive outputs and consolidate at the original horizon."
+    }
+  ],
+  "decision_branches": {
+    "A": [
+      "If group constraints materially alter held costs, report dependence on the imposed coupling and all territorial tradeoffs; do not select a physical geography by winner.",
+      "If effects are negligible or mirrored by the fixed artificial partition, close the corresponding narrow hypothesis; this does not exclude other observing-context information.",
+      "If risk/identity/complete-regime gates fail or cap expires, preserve partial failure, no substitution."
+    ],
+    "B": [
+      "If cube and placebo retain declared invariants and have nonconstant variation, the artifact is ready for a separately designed predictive test, not an improvement claim.",
+      "If variation is absent or declared invariants fail, retain that negative/failed artifact and close without another operator/seed.",
+      "If availability,borders or budget remain unresolved, inconclusive; no fitting to fill the gap."
+    ]
+  },
+  "disagreement": "I support A21 plus a strictly feature-only B audit in parallel with mandatory D, subject to actual review capacity. I do not ratify observation35 directional preference for B as demonstrated predictive superiority, nor a statistical requirement that D be fully finished before A starts. These are different operational choices with overlapping subjective ranges.",
+  "new_losses_refits_features_or_allocations_computed": false,
+  "not_yet_ratification_of_a_future_joint_draft": false,
+  "root_capacity_decision_acknowledged": {
+    "choice": "A plus fixed C first; B deferred, not parallel; D checkpoint already delivered",
+    "fixed_cap": "2026-11-15T07:19:05Z to2026-11-15T08:04:05Z, including protocol and independent review",
+    "primary": "Panel21 only; equal-four-held-regime mean MAE_R minus MAE_G",
+    "identification_position": "Accept this bounded sequence because reviewer capacity is an explicit prerequisite for parallel B. Preserve observation/measurement directional preference for new B information as dissent; no claim A scientifically outranks B. A identifies decision coupling sensitivity, not ecology.",
+    "new_B_model_or_cube_authorized_by_this_acknowledgement": false
+  },
+  "joint_plan_ratification": {
+    "status": "ratified_by_identification_adversary",
+    "plan_path": "docs/reviews/2026-11-15-joint-plan-35.md",
+    "plan_sha256": "78279450af37b801e61a5c9ba56404f0e0026836c95c5a28af0e2caa2bcf9035",
+    "recorded_utc": "2026-11-15T07:22:00.252541+00:00",
+    "scope": "Accept A plus fixed C first, sole panel21 equal-four-held R minus G; no parallel B; D checkpoint delivered. Preserve original directional dissent and criteria.",
+    "absolute_cap_utc": [
+      "2026-11-15T07:19:05Z",
+      "2026-11-15T08:04:05Z"
+    ],
+    "identity_checkpoint_utc": "2026-11-15T07:34:05Z",
+    "ecology_or_physical_claim_authorized": false
+  }
+}

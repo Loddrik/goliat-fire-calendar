@@ -1,0 +1,215 @@
+{
+  "role": "ingeniería/coste/reproducción; consejo35 MULTIFOCAL",
+  "criteria_confirmation": "Confirmo criterios24/31:30validez25información20factibilidad15transporte10interpretación; sin reponderación. Rangos subjetivos de diseño, no pérdidas ni intervalos de confianza.",
+  "weights_percent": {
+    "validity_identifiability": 30,
+    "discriminating_information": 25,
+    "feasibility_reproducibility_opportunity_cost": 20,
+    "transport_selection": 15,
+    "interpretive_utility": 10
+  },
+  "non_compensable": [
+    "Unknown no es0; operador/target/unidad/cohorte/pérdida explícitos.",
+    "NoG1/verdadfísica/causalidad/holdoutfresco inventados.",
+    "No rescatarprimary concontrato/subgrupo/período/semillafavorable.",
+    "Representación distintarequierecontrol equivalente opregunta distintadeclarada.",
+    "Sin cambios productivos ni grillas derescate."
+  ],
+  "read_scope": "Preflight35,summary33 yreviewindependiente PASSED; código de helpers congelados sin ejecutar experimentos. Se abrió statistics.json existente al inspeccionar carpeta: este voto no debe presentarse como ciego. Sólo se calculan ponderaciones de estas notas subjetivas.",
+  "source_sha256": {
+    "docs/reviews/2026-11-15-next-model-preflight.md": "232c23e63d8037b22575206ebb8ccc9daf7cabb46fbbdaddba0b6468ed897964",
+    "docs/reviews/evidence/discrete-state-comparison/attempt-01/summary.json": "20403c843beecd9a886a52268110a5d51065bfd9ab21178b5fab49e15af59916",
+    "docs/reviews/evidence/discrete-state-comparison-independent-review/summary.json": "15f5c48bb67aa733cb862c3f4cdd80a251d08d8d75bcb09f86d2e0dfc5ed27bf"
+  },
+  "existing33_scope": {
+    "structural_gates_passed": true,
+    "independent_review": "pass_no_blockers_for_reported_conditional_scope",
+    "gate1_physical": false,
+    "continuous30B_repaired": false,
+    "interpretation": "Operador discreto nominal auditable; doscasos ysensibilidades grilla/retención no observabilidad causal ni entrenamiento mensual."
+  },
+  "options": {
+    "A": {
+      "name": "Presupuestos por regiones reales y partición artificial33/21 prefijada",
+      "evidence": "Disponibles CDF/modelos yB congelados18/21. Reconcile ya acepta subconjuntos de distribuciones/baselines, aunque extend/predict_all exigen54 y requieren wrapper nuevo que conserve controles globales. No nuevosfits ni descargas.",
+      "first_artifact": "Dentro45min incluida revisión: identidad deB/CDF/decisión global54, particiones reales/hash congeladas, presupuestos y certificados porgrupo antes de pérdidas; salidas completas de las tres decisiones en un mismo panel.",
+      "critical_dependencies": [
+        "Elegir estudio/target/máscara yfamiliaCDF antes de reconstruir; no mezclar18/21/24C.",
+        "Obtener región delmappingterritorialCUT; g esgrupo calendario.",
+        "Hash/semilla/orden fijos antes de resultados; una partición33/21 artificial no iguala actividad ni geografía.",
+        "Reproducción global, invariancia al retirar labels y presupuestos/KKT/riesgo con mismos helpers."
+      ],
+      "branches": [
+        "Si cambia coste local/held/14 frente alcontrolglobal yartificial, documentar sensibilidad alacoplamiento; no seleccionar región porganador.",
+        "Si patrón similar aparece en particiónartificial, limitar explicación territorial; igualdadregional conB es construida.",
+        "Si identidad/cap falla, inconcluso sinotra partición/familiaCDF."
+      ],
+      "stop": "Cap absoluto45min incluida revisión; no CDF/modelo alternativo si falla control. Total regional mejor porconstrucción no es evidencia nueva.",
+      "main_risk": "Confundir regularización deuna decisión con evidencia ecológica o mejor solver. Restricciones porgrupos reducen elconjuntofactible frente alglobal: su riesgoCDF no debería mejorar elóptimoglobal bajo misma distribución.",
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 85,
+          "upper": 95
+        },
+        "discriminating_information": {
+          "lower": 70,
+          "upper": 85
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 75,
+          "upper": 90
+        },
+        "transport_selection": {
+          "lower": 50,
+          "upper": 65
+        },
+        "interpretive_utility": {
+          "lower": 80,
+          "upper": 90
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 73.5,
+        "upper": 86.5
+      }
+    },
+    "B": {
+      "name": "Persistencia diariaAqua con placebo SOURCE-only",
+      "evidence": "Datos celldays116413 ydetections274926 filas declaradas, mappingymáscaras derivadas verificables; no requiere1071CSVraw para construir rasgo. Actualmodelo no recibe esta feature: cubo no equivale a mejora.",
+      "first_artifact": "≤45min para cuboAqua yplacebo auditados, cierre exacto deconteosmensuales yproveniencia; sin nuevas pérdidas hasta protocolo de modelo separado.",
+      "critical_dependencies": [
+        "Fijar misma celda vs cualquiercelda comuna, díasUTC, lados delmes/temporada yunidad.",
+        "Elegir contrato/máscara porfold/regímenSOURCE-only; no sustituir máscara223 por6 oviceversa.",
+        "Permutación definida antes: conjunta porcomuna oindividualporcelda, bloque ysemilla única; qué invariantes conserva yqué destruye.",
+        "Forma de incorporar rasgo/funciónnueva, referenciaequivalente ypresupuestoderefit/revisión aún no definidos.",
+        "Aqua0 es no detección registrada, no observaciónausente0 ni persistenciafísica0."
+      ],
+      "branches": [
+        "Si cubo/placebo no preservan exactamente sus invariantes, detener sin scores niotra semilla.",
+        "Si eventualmodelo prefijado supera referencia yplacebo, evidencia predictiva condicional; no mecanismo físico.",
+        "Si placebo reproduce efecto o familia falla, conservarnegativo sin buscar otra permutación."
+      ],
+      "stop": "No prometer evaluacióncompleta dentrodelcap delcubo; aprobación/protocolo posterior para refits. No abrir si noqueda tiempo explícito para controles yrevisión.",
+      "main_risk": "Convertir disponibilidad defecha en observabilidad o entrenarotrafamilia bajo frontera temporal/aplicación placebo ambiguas. Coste principal es diseño/evaluación, noCPU.",
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 60,
+          "upper": 80
+        },
+        "discriminating_information": {
+          "lower": 65,
+          "upper": 85
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 35,
+          "upper": 55
+        },
+        "transport_selection": {
+          "lower": 55,
+          "upper": 70
+        },
+        "interpretive_utility": {
+          "lower": 65,
+          "upper": 80
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 56.0,
+        "upper": 74.75
+      }
+    },
+    "C": {
+      "name": "Mezcla fija1/2 deB yEcoherent",
+      "evidence": "Prediccionesya disponibles, cálculo ycontabilidad muybaratos. Identidad H=.5B+.5E verificable sin refit, siempre con mismo panel/contrato.",
+      "first_artifact": "≤20–25min incluida revisión: hashes/keys/componentes, mezclaúnica ypresupuestos; guardrails14/40/held/extremos sobre poblaciónfija.",
+      "critical_dependencies": [
+        "Fijar unpanel/target ydecisiónE antes devalores; no extender automáticamenteacadaestudio.",
+        "Mantenerλ=.5, sinbuscarotros pesos niadoptarcontrato favorable.",
+        "No es mediana/óptimoL1 ni esperanzadeuna mezclaCDF."
+      ],
+      "branches": [
+        "Si atenúacoste territorial sinocultarglobal, documentar compromiso descriptivo sinpromoción.",
+        "Si sólointerpola sinresolverguardrails, cerrarcomocontrol de regularización.",
+        "Si componentes/panelnoidentifican, inconcluso sinotrapoblación."
+      ],
+      "stop": "Una mezcla, sinotras proporciones; preferible controlsecundario dentrodeA, nofamilyseleccionada porganador.",
+      "main_risk": "Confundir facilidad con informaciónnueva. ConvexidadL1 acotaloss porpromediodelasdos, no garantiza vencermejorcomponente ni proteger subgrupos.",
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 90,
+          "upper": 98
+        },
+        "discriminating_information": {
+          "lower": 40,
+          "upper": 55
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 95,
+          "upper": 100
+        },
+        "transport_selection": {
+          "lower": 40,
+          "upper": 55
+        },
+        "interpretive_utility": {
+          "lower": 75,
+          "upper": 85
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 69.5,
+        "upper": 79.9
+      }
+    },
+    "D": {
+      "name": "Consolidar ycerrarnuevasfamilias",
+      "evidence": "33 pasó review estructural/semántico en scopecondicional. Hay resultados negativos yfallosnuméricos que deben integrarse conmodelo/contratos sinperdertrabajo.",
+      "first_artifact": "≤45min enparalelo: mapa deevidencia/decisiones/pendientes yreproducción mínima, artefactoHTML actualizado ycheckpointsGit/PRs dev, sin nuevaspérdidas.",
+      "critical_dependencies": [
+        "Separar nominal33 deobservabilidad/verdadfísica/modelomensual.",
+        "Conservar23negativo, fragilidad14de24C yfalloscontinuos; no limpiarhistoria.",
+        "Verificar fuentes/hashes deenlaces/cifras; congelarclaims si faltan evidencias."
+      ],
+      "branches": [
+        "Si relato coincide conevidencia, entregarresultadoauditable aun sinmejora.",
+        "Si aparececlaiminsostenible, corregirrelato yregistrarlímite sinretocarresultados.",
+        "Si faltareproducción parcial, declararsu alcance, nocompletarconpromesa."
+      ],
+      "stop": "No convertir consolidación en otra integración/despliegue amplio; primar evidencia yartefacto revisable.",
+      "main_risk": "No obtiene nueva discriminación empírica. Debe ser entregaobligatoria paralela, no argumento para abandonaruncontraste45min útil con4hrestantes.",
+      "criteria_subjective_0_100": {
+        "validity_identifiability": {
+          "lower": 90,
+          "upper": 100
+        },
+        "discriminating_information": {
+          "lower": 45,
+          "upper": 65
+        },
+        "feasibility_reproducibility_opportunity_cost": {
+          "lower": 90,
+          "upper": 100
+        },
+        "transport_selection": {
+          "lower": 55,
+          "upper": 70
+        },
+        "interpretive_utility": {
+          "lower": 90,
+          "upper": 100
+        }
+      },
+      "weighted_subjective_total_0_100": {
+        "lower": 73.5,
+        "upper": 86.75
+      }
+    }
+  },
+  "recommended_sequence": [
+    "D entregaobligatoria paralela, sinbloquearúnicocontrasteacotado.",
+    "A comoúnicocontrasteprincipal nuevo≤45min incluida revisión;Cmezcla1/2 controlsecundariobarato bajo mismoprotocolo/panel si cabe sinextendercap.",
+    "B materialmenteconstruible, pero cubo/operador auditados primero; decisión posterior deprotocolo/refits con tiempo reservado. No prometerotra familycompleta sobre preflight."
+  ],
+  "ordering_uncertainty": "A yD se solapan; C tiene coste bajo pero menordiscriminación; B amplio/desconocido por diseño/evaluación todavía no congelados. No superioridad científica demostrada.",
+  "horizon_note": "Aproximadamente4h15 hasta11:30UTC según encargo; cada cap empieza conprimera implementación e incluye revisión, sin reinicios. Reservar entrega/consolidación final antes deabrir refits nuevos."
+}

@@ -1,0 +1,169 @@
+{
+  "role": "observación/producto/validez",
+  "criteria_ratified": true,
+  "criteria_order": [
+    "validez_identificabilidad",
+    "informacion_discriminante",
+    "factibilidad_repro_coste",
+    "transporte_seleccion",
+    "interpretacion"
+  ],
+  "weights_percent": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "scores": "Juicios subjetivos de diseño, no probabilidades ni mejoras demostradas; rangos se solapan.",
+  "noncompensables": [
+    "UNKNOWN no es0; unidad/operador/target/contrato declarados",
+    "Jaccard33 no es verdad, señal de sensibilidad instrumental ni objetivo del modelo mensual",
+    "G1/PSF/exposición/Suspect permanecen pendientes; 30B fallido intacto",
+    "SOURCE-only y máscara porcontrato/fold; ninguna selección por target o escenario secundario",
+    "Negativos yplacebo único no rescatan primaria; fechas históricas exploradas no sonholdoutfresco",
+    "No producción ni nueva adquisición/refit/pérdidas autorizados por este voto"
+  ],
+  "options": {
+    "A": {
+      "criteria_ranges": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence": "CDF/modelos/predicciones congelados disponibles; grupo real versus un hash identifica dependencia de acoplamiento. Igualar sumas regionales a B es construcción, no habilidad ni ecología.",
+      "first_artifact_minutes": 45,
+      "first_artifact": "Sólo panel21 y sus dos direcciones SOURCE-held: manifiesto de CDF/regímenes, presupuesto real/hash33-21/global54 y auditoría de identidades, antes de pérdidas nuevas.",
+      "stop": "Incompatibilidad de CDF, máscara, SOURCE-held o presupuesto; no sustituir g temporal por región, no elegir otra partición. Un hash es control descriptivo, no prueba aleatoria.",
+      "weighted_score_range_100": [
+        72.0,
+        81.0
+      ]
+    },
+    "B": {
+      "criteria_ranges": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence": "celldays conserva fechas y celdas Aqua; puede añadir información temporal ausente de los totales mensuales. No demuestra oportunidad observable ni duración física. Modelo SOURCE-only posterior aún necesario.",
+      "first_artifact_minutes": 45,
+      "first_artifact": "Cubo SOURCE-ready de pares de detecciones Aqua en la misma celda y días UTC consecutivos; contrato21 y su máscara pre2012, más placebo de permutación conjunta de calendarios diarios porCUT/bloque prefijado y semilla única. Sin scores/refit en esta entrega.",
+      "stop": "No reproducir máscara/cohorte SOURCE, filtración temporal/destino o imposibilidad de conservar totales del placebo. Si variable constante/no aporta variación registrada, informar inconcluso; no cambiar operador/semilla tras verlo.",
+      "weighted_score_range_100": [
+        73.0,
+        85.0
+      ]
+    },
+    "C": {
+      "criteria_ranges": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence": "Mezcla fija1/2 usa predicciones existentes, bajo coste. No agrega evidencia observacional, no garantiza ganar aB/E ni es mediana/óptimoL1/CDF-mixture demostrados.",
+      "first_artifact_minutes": 25,
+      "first_artifact": "Contrato único21, H=(B+E_coherent)/2, claves/positividad/totales y endpoints congelados; secundarios adversos por dirección territorial y14/40 visibles.",
+      "stop": "Contratos o modelos de filas incompatibles, máscaras distintas, cambio de lambda o rescate mediante otro panel. Sin guardrail completo no promover.",
+      "weighted_score_range_100": [
+        71.0,
+        76.0
+      ]
+    },
+    "D": {
+      "criteria_ranges": [
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence": "Consolidar es íntegro y barato, pero hay datos/controles disponibles y cuatro horas; no discrimina una hipótesis nueva del modelo.",
+      "first_artifact_minutes": 30,
+      "first_artifact": "Handoff reproducible con baseline vigente, resultados negativos y deuda física; ninguna mejora prometida.",
+      "stop": "Elegirlo si los contratos/recursos impidenA/B o sus primeros artefactos quedan inconclusos; no continuar optimizando fechas ya exploradas sin pregunta distinta.",
+      "weighted_score_range_100": [
+        69.0,
+        69.0
+      ]
+    }
+  },
+  "directional_order": [
+    "B",
+    "A",
+    "C",
+    "D"
+  ],
+  "robust_winner": false,
+  "sequence": "A acotado a21 como prueba rápida de acoplamiento, en paralelo con cuboB si hay capacidad. Dirección de información preferidaB: sólo después de auditar cubo/placebo, protocolo SOURCE-only de incorporación/evaluación. C puede quedar control fijo secundario, sin búsqueda de lambda; D si no hay contraste válido. No abrir18/24C como rescate o replicaciones independientes.",
+  "panel_recommendation": "21 único primario paraA/C: direcciones SOURCE-held separadas.18 sólo posible estudio posterior preregistrado, no necesario para el primer artefacto. B adopta explícitamente el contrato/máscara21 antes de construir pares.",
+  "B_design_cautions": "Misma celda en días consecutivos, no cualquier celda de la comuna. Fijar crédito de pares/bordes mes/temporada/SOURCE antes de valores. Vacío de detecciones registrado no equivale a ausencia física u observación útil. Permutar días completos preserva coocurrencia intradía; no confundirlo con permutar cada celda.",
+  "33_implication": "162/45 querypositivos frente4/16 nativeIDs evidencia diferencia de operador, no fundamento para elegir predictor o entrenar contra etiquetas puntuales como verdad. Dos bordes AquaNULL y pérdida de nativos al500m requieren seguir visibles.",
+  "new_data_losses_fits_or_features_computed": false
+}
