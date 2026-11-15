@@ -1,0 +1,582 @@
+{
+  "G1": false,
+  "physical_validation": false,
+  "request": {
+    "coupling": "cartesian_across_units",
+    "positive_rule_id": "toy-positive-rule-v1",
+    "schema_version": 1,
+    "scope": {
+      "disjoint": true,
+      "status": "fixed_hypothetical",
+      "unit_weight": 1,
+      "universe_id": "toy-disjoint-v1"
+    },
+    "target": "registered_positive",
+    "units": [
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "allowed_pairs": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "unit_id": "u00"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "allowed_pairs": [
+          "00",
+          "11"
+        ],
+        "unit_id": "u01"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "allowed_pairs": [
+          "01",
+          "10"
+        ],
+        "unit_id": "u02"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0,
+            1
+          ]
+        },
+        "allowed_pairs": [
+          "00",
+          "01"
+        ],
+        "unit_id": "u03"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            1
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0
+          ]
+        },
+        "allowed_pairs": [
+          "10"
+        ],
+        "unit_id": "u04"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            1
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            1
+          ]
+        },
+        "allowed_pairs": [
+          "11"
+        ],
+        "unit_id": "u05"
+      },
+      {
+        "A": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0
+          ]
+        },
+        "V": {
+          "frp_status": {
+            "status": "not_assessed"
+          },
+          "policy_inclusion": {
+            "status": "undecided"
+          },
+          "qa_flags": [],
+          "recorded_values": [
+            0
+          ]
+        },
+        "allowed_pairs": [
+          "00"
+        ],
+        "unit_id": "u06"
+      }
+    ]
+  },
+  "result": {
+    "computation": {
+      "backpointers": 103,
+      "limits": {
+        "backpointers": 200000,
+        "states_per_layer": 100000,
+        "transitions": 2000000,
+        "units": 200
+      },
+      "transitions": 110
+    },
+    "constraints": [
+      {
+        "allowed_pairs": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "unit_id": "u00"
+      },
+      {
+        "allowed_pairs": [
+          "00",
+          "11"
+        ],
+        "unit_id": "u01"
+      },
+      {
+        "allowed_pairs": [
+          "01",
+          "10"
+        ],
+        "unit_id": "u02"
+      },
+      {
+        "allowed_pairs": [
+          "00",
+          "01"
+        ],
+        "unit_id": "u03"
+      },
+      {
+        "allowed_pairs": [
+          "10"
+        ],
+        "unit_id": "u04"
+      },
+      {
+        "allowed_pairs": [
+          "11"
+        ],
+        "unit_id": "u05"
+      },
+      {
+        "allowed_pairs": [
+          "00"
+        ],
+        "unit_id": "u06"
+      }
+    ],
+    "coupling": "cartesian_across_units",
+    "decision": {
+      "possible_actions": [
+        "review_human"
+      ],
+      "status": "invariant"
+    },
+    "metrics": {
+      "A_only": {
+        "defined_possible": true,
+        "lower": 1,
+        "lower_witness": {
+          "u00": "00",
+          "u01": "00",
+          "u02": "01",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": 3,
+        "upper_witness": {
+          "u00": "10",
+          "u01": "00",
+          "u02": "10",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      },
+      "A_only_fraction_of_A": {
+        "defined_possible": true,
+        "lower": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "lower_witness": {
+          "u00": "11",
+          "u01": "11",
+          "u02": "01",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "upper_witness": {
+          "u00": "10",
+          "u01": "00",
+          "u02": "10",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      },
+      "V_only": {
+        "defined_possible": true,
+        "lower": 0,
+        "lower_witness": {
+          "u00": "00",
+          "u01": "00",
+          "u02": "10",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": 3,
+        "upper_witness": {
+          "u00": "01",
+          "u01": "00",
+          "u02": "01",
+          "u03": "01",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      },
+      "V_only_fraction_of_V": {
+        "defined_possible": true,
+        "lower": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "lower_witness": {
+          "u00": "00",
+          "u01": "00",
+          "u02": "10",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "upper_witness": {
+          "u00": "01",
+          "u01": "00",
+          "u02": "01",
+          "u03": "01",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      },
+      "disagreement_count": {
+        "defined_possible": true,
+        "lower": 2,
+        "lower_witness": {
+          "u00": "00",
+          "u01": "00",
+          "u02": "01",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": 4,
+        "upper_witness": {
+          "u00": "01",
+          "u01": "00",
+          "u02": "01",
+          "u03": "01",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      },
+      "jaccard": {
+        "defined_possible": true,
+        "lower": {
+          "denominator": 5,
+          "numerator": 1
+        },
+        "lower_witness": {
+          "u00": "01",
+          "u01": "00",
+          "u02": "01",
+          "u03": "01",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        },
+        "undefined_possible": false,
+        "upper": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "upper_witness": {
+          "u00": "11",
+          "u01": "11",
+          "u02": "01",
+          "u03": "00",
+          "u04": "10",
+          "u05": "11",
+          "u06": "00"
+        }
+      }
+    },
+    "positive_rule_id": "toy-positive-rule-v1",
+    "qualifier": "sharp_only_within_declared_cartesian_hypothetical_model",
+    "reachable_states": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        1,
+        4,
+        3
+      ],
+      [
+        1,
+        4,
+        4
+      ],
+      [
+        1,
+        5,
+        2
+      ],
+      [
+        1,
+        5,
+        3
+      ],
+      [
+        1,
+        5,
+        4
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        2,
+        4,
+        4
+      ],
+      [
+        2,
+        5,
+        3
+      ],
+      [
+        2,
+        5,
+        4
+      ],
+      [
+        2,
+        5,
+        5
+      ],
+      [
+        2,
+        6,
+        3
+      ],
+      [
+        2,
+        6,
+        4
+      ],
+      [
+        2,
+        6,
+        5
+      ],
+      [
+        3,
+        5,
+        4
+      ],
+      [
+        3,
+        5,
+        5
+      ],
+      [
+        3,
+        6,
+        4
+      ],
+      [
+        3,
+        6,
+        5
+      ]
+    ],
+    "status": "identified_set",
+    "unit_count": 7,
+    "universe_id": "toy-disjoint-v1"
+  },
+  "synthetic_only": true
+}
