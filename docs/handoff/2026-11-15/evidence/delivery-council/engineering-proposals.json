@@ -1,0 +1,103 @@
+{
+  "council": "multifocal-delivery",
+  "role": "engineering-access-and-closure",
+  "criteria_commit": "903826d",
+  "method": "Ordered qualitative criteria; no synthetic numeric scores",
+  "status": "Independent engineering proposals; adversarial review and joint ratification pending",
+  "deadline_utc": "2026-11-15T15:30:00Z",
+  "execution_authorized_by_this_document": false,
+  "proposals": [
+    {
+      "id": "E1",
+      "priority": "P0",
+      "order": 1,
+      "title": "Fijar una hoja de claims de la entrega",
+      "owner_role": "Responsable científico + presentación",
+      "minutes": [15, 25],
+      "scope": "Conciliar resumen, guía técnica y guion con las revisiones: M1/14, alcance estacional aparente, raw956/1071, mapa comunal congelado y una diferencia estricta. Fechar el antecedente de method.md que aún menciona1071raw faltantes; no alterar evidencia histórica.",
+      "dependencies": ["Revisiones42 y recuperación/historical-core existentes", "Inventario PR observado13:41UTC"],
+      "done": "Diez afirmaciones de demo tienen fuente y alcance; no hay afirmaciones de merge/despliegue, G1, validación2002–2011, impacto o exactitud integral sin respaldo; revisión cruzada registrada.",
+      "value": "Permite responder preguntas y evita que el equipo presente investigación como producto publicado.",
+      "stop_or_fallback": "Retirar la afirmación que no pueda enlazarse; no producir nueva evidencia científica para salvarla.",
+      "reversibility": "Documento corregible, sin datos/modelos nuevos."
+    },
+    {
+      "id": "E2",
+      "priority": "P0",
+      "order": 2,
+      "title": "Congelar un candidato de demo y un plan de integración",
+      "owner_role": "Mantenedor de repositorio/release",
+      "minutes": [20, 40],
+      "scope": "Nombrar commit y rama de demo, documentar origen y checks, preparar corte/diff de la pila científica y responsable de integración. Distinguir PR64draft/dev,21PR científicosOPEN y3MERGED23–25, integración22MERGED y31OPEN/main como excepción a revisar.",
+      "dependencies": ["evidence/pr-inventory.json", "CI del commit candidato, no sólo de otra rama", "Dependencias bloqueadas existentes"],
+      "done": "Una ficha liga commit exacto, comandos, artefacto/localización, checks con estado y un responsable. La pila tiene base/orden y riesgos; ninguna casilla supone merge o despliegue automático.",
+      "value": "El equipo sabe qué versión presenta y puede abrirla sin depender de recuperar todo raw.",
+      "stop_or_fallback": "Si el corte no está claro, usar un candidato conocido y documentado o una captura atribuida a ese commit; no mergear toda la pila a contrarreloj.",
+      "reversibility": "Preparación de release y artefactos; no merge/publicación autorizados por esta propuesta."
+    },
+    {
+      "id": "E3",
+      "priority": "P0",
+      "order": 3,
+      "title": "Ensayar tres decisiones visibles y preparar fallback",
+      "owner_role": "Frontend/QA + presentador",
+      "minutes": [30, 45],
+      "scope": "Reproducir guion Tomé08111 habilitada, Concepción08101 no habilitada y comparación observada/estimada con CSV. Registrar versión y resultado; usar el producto actual, sin ejecutar ingestión ni ajustes.",
+      "dependencies": ["Candidato identificadoE2", "Guion con límitesE1", "Recursos de mapa externos o fallback preparado"],
+      "done": "Registro de ensayo con rutas, commit, resultado y captura; CSV descargable legible; se distingue tramo estimado/observado y no hay ranking anual reconstruido. Si falla mapa/red, tabla/calendario/capturas permiten terminar el relato sin fingir interacción.",
+      "value": "Entrega observable para jurado/equipo; valida el recorrido de presentación, no utilidad municipal o impacto.",
+      "stop_or_fallback": "No instalar infraestructura nueva ni reparar el modelo. Usar respaldo documentado; no decir que todo funciona offline porque el estilo del mapa usaOpenFreeMap.",
+      "reversibility": "Ensayo y capturas; ningún cambio de datos necesario."
+    },
+    {
+      "id": "E4",
+      "priority": "P1",
+      "order": 4,
+      "title": "Entregar el paquete raw y una lista exacta de faltantes",
+      "owner_role": "Ingeniería de datos + custodio del respaldo",
+      "minutes": [15, 30],
+      "scope": "Enlazar recibo de restauración, tar verificado y verificador de inventario; separar4NRTmismatch de111ventanas no consultadas. Preparar una solicitud de originales al custodio, con rutas/SHA/tamaños, sin enviar mensajes ni consultarNASA en esta tarea.",
+      "dependencies": ["raw-recovery-final/restoration-manifest.json", "backup-verification.json", "verify_raw_inventory.py"],
+      "done": "Un receptor puede localizar respaldo, comprobar hash y leer la lista115; el estado siguePARTIAL, no se reescribeinventory ni se lanza ingestión completa bloqueada.",
+      "value": "Preserva trabajo y hace reproducible el traspaso sin bloquear demo con derivados ya disponibles.",
+      "stop_or_fallback": "No reemplazar snapshotsNRT por respuestas distintas; si falta acceso al tar, entregar ruta/hash y responsable, sin declarar que se entregaron los bytes.",
+      "reversibility": "Sólo documentación de custodia; recuperar los115 es una tarea posterior con nueva ventana."
+    },
+    {
+      "id": "E5",
+      "priority": "P1",
+      "order": 5,
+      "title": "Cerrar contrato mínimo para metadatos estacionales",
+      "owner_role": "API/backend + revisor científico",
+      "minutes": [30, 45],
+      "scope": "Convertir diseñoissue48 y métricas42 revisadas en esquema/fixture de diagnostics.season_total_loso, separado de gates. Hoy sólo contrato y casos de aceptación; publicación y UI van enPR posterior.",
+      "dependencies": ["Contrato de productoissue48", "Manifest42 y per-cut auditado"],
+      "done": "Esquema declara fracciones, signos, N, período, máscara, procedencia y nullY0; fixture y lista de checks verifican valores congelados y fallbackausente. Queda explícito que aún no existe endpoint/JSON publicado.",
+      "value": "Resuelve ambigüedad de métricas antes de escribir producto y evita confundir habilitación mensual con anual.",
+      "stop_or_fallback": "Si no hay revisión disponible, conservar diseño existente como pendiente; no regenerarJSON ni habilitar2002enlanding.",
+      "reversibility": "Contrato/documentación; la implementación queda fuera del corte mínimo de demo."
+    },
+    {
+      "id": "E6",
+      "priority": "P1",
+      "order": 6,
+      "title": "Registrar una política futura de desempate determinista",
+      "owner_role": "Ingeniería de datos + revisión científica",
+      "minutes": [20, 30],
+      "scope": "PrepararRFC y fixture del empate de dos registros existente; declarar criterio total y preservación de procedencia sin elegir el ganador para copiar al canónico. No aplicar la política ni reconstruirParquets hoy.",
+      "dependencies": ["raw-ingestion-recovery/tie-diagnostic.json", "Regla de deduplicación actual y auditoría estricta fallida"],
+      "done": "RFC registra claves/redondeo/orden/filtro, prueba de independencia del orden propuesta y cambio esperado; conserva fallo de una fila por lado como antecedente no reparado.",
+      "value": "Desbloquea una corrección reproducible posterior sin confundir igualdad de celda-día con igualdad de detecciones.",
+      "stop_or_fallback": "No promover una regla física del fuego ni el ganador canónico como verdad; si hay desacuerdo, dejar política pendiente y no cambiar datos.",
+      "reversibility": "Diseño aislado; cero cambios a canónicos."
+    }
+  ],
+  "sequence": "E1 yE2 pueden avanzar en paralelo por roles distintos;E3 tras identificar candidato. Reservar15min finales al cierre. Si hay un solo operador, compactarE1/E2/E3 y omitirE4–E6hoy.",
+  "long_research_backlog_not_for_today": [
+    "Completar115originales con cuota/custodia y revisar adquisición cartográfica; no requisito de demo con derivados.",
+    "Reproducción estricta completa con política de desempate preregistrada e impacto evaluado.",
+    "Observabilidad físicaG1, soporte espacio-temporal/QA y evidencia independiente de fuego.",
+    "Transferencia histórica, validación anual/prospectiva y nuevas familias de modelo.",
+    "Piloto municipal con tarea de decisión y medición de comprensión/uso, sin impacto supuesto."
+  ]
+}

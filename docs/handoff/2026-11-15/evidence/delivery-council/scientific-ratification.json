@@ -1,0 +1,100 @@
+{
+  "role": "multifocal_scientific_accuracy",
+  "ratified_utc": "2026-11-15T13:55:46.638463+00:00",
+  "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+  "criteria_ACK": true,
+  "criteria_sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0",
+  "method": "Ordered qualitative delivery criteria, no synthetic scores or research-weight changes",
+  "plan_path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+  "plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f",
+  "counterpart_reviews_sha256": {
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-science.json": "9ee9c93a8b282342722ef88c3021fb0096ed76740dede7ee0efb433699bb3ab1",
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-product.json": "ddf32944eeda24cb021d77be571db02af496ae3ddd9264643fe2337a6e4fffe5",
+    "docs/handoff/2026-11-15/evidence/delivery-council/adversary-release.json": "db7c041a045832381e4811cdd8fc8b04d7cd9c8eba84b1c903cf42306a5240c9"
+  },
+  "ordered_actions": [
+    "P0 sourced claims and answers",
+    "P0 identified demo candidate and openable package",
+    "P0 bounded rehearsal with honest fallback",
+    "P1 raw custody and missing-file manifest",
+    "P1 seasonal metadata contract only",
+    "P1 deterministic dedup RFC only"
+  ],
+  "blocking_objections": [],
+  "response_to_adversaries": [
+    {
+      "ids": [
+        "AS1"
+      ],
+      "position": "ACCEPT_AND_CORRECTED",
+      "response": "Technical summary now explicitly says that the205-source differing rows were not individually attributed to the38-file native tie. No new diagnostic, data or canonical change was made."
+    },
+    {
+      "ids": [
+        "AS2",
+        "AP4"
+      ],
+      "position": "ACCEPT",
+      "response": "MAE is glossed as monthly mean absolute count error in cell-days; percent improvement remains same-panel retrospective and not impact."
+    },
+    {
+      "ids": [
+        "AS3",
+        "AP1"
+      ],
+      "position": "ACCEPT_WITH_COMPLETION_EVIDENCE",
+      "response": "Technical MD now has its complete26-entry selected PR appendix and source map, with local links checked. Final HTML/index/package must still be verified by the coordinator, not inferred from this vote."
+    },
+    {
+      "ids": [
+        "AR2",
+        "AP2"
+      ],
+      "position": "ACCEPT",
+      "response": "The358-test and portable-reader evidence are tied to the supplied6410fcb receipt/run; they do not prove another candidate passed or was deployed."
+    },
+    {
+      "ids": [
+        "AR1",
+        "AS4"
+      ],
+      "position": "ACCEPT_AS_EXECUTION_GATE",
+      "response": "Named operators, actual start time, candidate and rehearsal receipt remain necessary. P1 cannot consume the reserved close; use compact scope or honest incomplete-rehearsal fallback when required."
+    },
+    {
+      "ids": [
+        "AR3",
+        "AP5"
+      ],
+      "position": "ACCEPT",
+      "response": "Suggested routes are not a rehearsal. External map connectivity and table/calendar/capture fallback remain explicit."
+    },
+    {
+      "ids": [
+        "AR4"
+      ],
+      "position": "ACCEPT",
+      "response": "The verified raw archive is separate from Git and recipient access/transfer requires its own evidence;115 missing stays incomplete."
+    },
+    {
+      "ids": [
+        "AP3"
+      ],
+      "position": "ACCEPT",
+      "response": "This is only this scientific member’s ratification of the exact plan hash after reading the three counterpart reviews; final consensus and action completion are separate coordinator records."
+    }
+  ],
+  "execution_certified": false,
+  "new_scientific_computations": false,
+  "new_data_acquisition": false,
+  "merges_deployments_or_canonical_changes_authorized": false,
+  "technical_document_sha256": "e01e5af47ea8913eddd1af323d5e1bdd450429f6ead6aaeb374d211c14bb23a9",
+  "technical_source_map_sha256": "956c72d5625d7843c5d75ee7857f3107a4e47813d492d9d1d07f0087a9f4518f",
+  "remaining_final_delivery_gates": [
+    "Final navigable HTML/index and artifact opening record",
+    "Named release/demo owners and actual acceptance receipt",
+    "Time-protected closing and honest transfer/access status"
+  ],
+  "reviewed_plan_archived_path": "docs/handoff/2026-11-15/evidence/delivery-council/reviewed-priorities.md",
+  "final_text_correction": "Removed unintended whitespace inside decimal numerals; refreshed source hashes including current dated method disclosure. No scientific result recalculated."
+}

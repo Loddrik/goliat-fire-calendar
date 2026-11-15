@@ -1,0 +1,95 @@
+{
+  "scope": "Automated layout checks; not a full accessibility audit or human rehearsal",
+  "checks": [
+    {
+      "width": 390,
+      "doc": 390,
+      "external": 0,
+      "headerBG": "rgb(7, 57, 61)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "index.html"
+    },
+    {
+      "width": 390,
+      "doc": 390,
+      "external": 0,
+      "headerBG": "rgb(16, 47, 67)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "resumen-tecnico.html"
+    },
+    {
+      "width": 390,
+      "doc": 390,
+      "external": 0,
+      "headerBG": "rgb(34, 68, 60)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "resumen-negocio.html"
+    },
+    {
+      "width": 390,
+      "doc": 390,
+      "external": 0,
+      "headerBG": "rgb(65, 60, 48)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "pendientes-priorizados.html"
+    },
+    {
+      "width": 390,
+      "doc": 390,
+      "external": 0,
+      "headerBG": "rgb(7, 57, 61)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "guia-merge.html"
+    },
+    {
+      "width": 1440,
+      "doc": 1440,
+      "external": 0,
+      "headerBG": "rgb(7, 57, 61)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "index.html"
+    },
+    {
+      "width": 1440,
+      "doc": 1440,
+      "external": 0,
+      "headerBG": "rgb(16, 47, 67)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "resumen-tecnico.html"
+    },
+    {
+      "width": 1440,
+      "doc": 1440,
+      "external": 0,
+      "headerBG": "rgb(34, 68, 60)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "resumen-negocio.html"
+    },
+    {
+      "width": 1440,
+      "doc": 1440,
+      "external": 0,
+      "headerBG": "rgb(65, 60, 48)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "pendientes-priorizados.html"
+    },
+    {
+      "width": 1440,
+      "doc": 1440,
+      "external": 0,
+      "headerBG": "rgb(7, 57, 61)",
+      "missingAnchors": [],
+      "duplicateIDs": [],
+      "page": "guia-merge.html"
+    }
+  ]
+}

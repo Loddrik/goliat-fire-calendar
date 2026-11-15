@@ -1,0 +1,50 @@
+{
+  "observed_utc": "2026-11-15T13:45:41.701104+00:00",
+  "repository_snapshot": "6410fcb491e9a318419d7b142ddab52b1e483662",
+  "PR64": {
+    "baseRefName": "dev",
+    "headRefOid": "6410fcb491e9a318419d7b142ddab52b1e483662",
+    "isDraft": true,
+    "number": 64,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-15T13:30:34Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43719314908/job/132827649926",
+        "name": "Web (lint, tipos, build, datos, servidor)",
+        "startedAt": "2026-11-15T13:30:13Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-15T13:30:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43719314956/job/132827650194",
+        "name": "Python scientific regression tests (locked dependencies)",
+        "startedAt": "2026-11-15T13:30:12Z",
+        "status": "COMPLETED",
+        "workflowName": "Scientific regression tests"
+      }
+    ]
+  },
+  "science_CI_run": "https://github.com/Loddrik/goliat-fire-calendar/actions/runs/43719314956",
+  "science_log_selected_lines": [
+    "Python scientific regression tests (locked dependencies)\tRun scientific and publication regression tests\t2026-11-15T13:30:47.9183606Z Ran 358 tests in 15.662s",
+    "Python scientific regression tests (locked dependencies)\tVerify frozen CRPS evidence without private inputs\t2026-11-15T13:30:52.6247608Z {\"CDF_rows\": 10368, \"CRPS_integral_rows\": 10368, \"atom_elements\": 444826, \"deltaB_equals_MAE_rows\": 10368, \"downloads\": 0, \"fits\": 0, \"manifest_sha256\": \"aec1533e33b1d354c6102daf51d51d295d449f2afc15cf5ae50d2fe9719779ea\", \"max_abs_integral_vs_recorded_raw_CRPS\": 2.1316282072803006e-14, \"method_report_sets_verified\": 432, \"new_CDFs_or_predictions\": 0, \"new_loss_definitions\": 0, \"original_files_written\": 0, \"per_CUT_rows_verified\": 216, \"physical_G1_claim\": false, \"population_reports_verified\": 216, \"primary_equal_four_difference\": -0.6181638838629885, \"primary_regimes\": 4, \"private_runtime_or_absolute_clock_dependency\": false, \"same_frozen_loss_replay_only\": true, \"scope\": \"Replay frozen39 CDF loss snapshots plus historical anchored gate membership; no original fit reconstruction\", \"shared_oracle_provenance\": \"Archived39peer direct CDF-integral semantics; not a third independent oracle\", \"solvers\": 0, \"status\": \"PASS\", \"weights_single_normalization_verified\": true}"
+  ],
+  "python_regression_tests": 358,
+  "tests_are_software_evidence_not_physical_accuracy": true,
+  "live_upstream_dev": "52afe0d60fca3fb02063f3265f9892306dce14dd",
+  "live_upstream_main": "e953924d89d6608b7dc9f597c2e7a6ffb5d86398",
+  "selected_source_sha256": {
+    "data/processed/params.json": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd",
+    "data/processed/gates.csv": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42",
+    "docs/reviews/evidence/raw-recovery-final/restoration-manifest.json": "cbe7ba62c6c101612cabebc8744aadbf65293353a6e499a22fb0c6071a031232",
+    "docs/reviews/evidence/raw-historical-core-audit/summary.json": "0b73a3012110e709118036324fa21fb7dc8ef124f8b750a5204e59e6521987e9",
+    "docs/reviews/evidence/season-total-independent-review/summary.json": "e2545a45c63b4512c0d129f8c9e084e656310f84ffd77361fab4cbfa28a28fb5"
+  },
+  "no_deployment_inferred_from_merge_or_CI": true
+}

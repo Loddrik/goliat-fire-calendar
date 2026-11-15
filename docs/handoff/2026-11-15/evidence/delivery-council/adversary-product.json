@@ -1,0 +1,140 @@
+{
+  "role": "adversarial_product_clarity_and_overclaim",
+  "reviewed_utc": "2026-11-15T13:46:03.303119+00:00",
+  "criteria_ack": true,
+  "criteria_source": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+  "method": "Ordered qualitative delivery criteria accepted before review; no numeric scores or reweighting of scientific experiments.",
+  "verdict": "Business claims accepted and consolidated priority order ratified by this adversarial product reviewer. Final delivery execution remains separate and must verify the completed package.",
+  "inspected_inputs": [
+    {
+      "path": "docs/handoff/2026-11-15/resumen-negocio.md",
+      "sha256": "05694cad6104fa3eddfe2a21a1692bc5597cce6364f86875b38685aa6dec0ba0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/pr-inventory.json",
+      "sha256": "5c5aa441193d5e787f8c6d5be803bff13ce1dea246b2a72718c26e19565a830b"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/business-source-map.json",
+      "sha256": "9ca12c9a99a3fa211f7d07d7dcbb17fadc2577777d2d0b5dc3fe358c28820168"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+      "sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/business-proposals.json",
+      "sha256": "27c2fdb2eac1c27292f5760cb73a9317f39318bb36ad0e36a39da9dc106fd45e"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/engineering-proposals.json",
+      "sha256": "87b44817e9695f0ba29314a557ad7a7de99e61792142a8d2cc9e4c8cc831e7d8"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/scientific-proposals.json",
+      "sha256": "27d0fcdf558b9f1a787925ac17a208b470cd56c6e26efa83fd870cde891c0719"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
+      "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/pendientes-priorizados.md",
+      "sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/resumen-tecnico.md",
+      "sha256": "464b37857ddebc7d87b78cb25b5b531a8b855e1ff1d40905e9c51a3cf9c1fe9b"
+    }
+  ],
+  "cross_checked_primary_reports": [
+    "docs/reviews/2026-11-15-season-total-report.md",
+    "docs/reviews/2026-11-15-raw-historical-core-audit.md"
+  ],
+  "supported_claims": [
+    "Published M1 and 14/54 communes are visibly separated from research candidates; 24 science PRs comprise 3 merged and 21 open, separate from integration22 and fix31.",
+    "F21 describes a distribution of same-month historical S-NPP conditional on known Aqua; favorable CRPS is not promoted to future forecasting or calibration.",
+    "Season diagnostics preserve medianAPE20.34 versus MARE22.81, signed relative mean−11.46 versus ratio-of-sums−10.60, 112 apparent postselection cases and no validation of2002–2011.",
+    "Raw956/1071 and historical205-source mask/count reproduction are explicitly partial, use a frozen commune map and preserve strict detection FAIL with one row each way.",
+    "No clients, sales, measured ROI, prevention impact or deployed-candidate claim is invented.",
+    "Demo URLs are explicitly code-derived suggestions, not evidence of rehearsal or deployment."
+  ],
+  "must": [
+    {
+      "id": "AP1",
+      "finding": "At review time the requested technical summary, handoff HTML and prioritized backlog were absent; the business document alone cannot satisfy the requested package.",
+      "bounded_change": "Complete technical MD/HTML and a short navigable index, linking authoritative sources and prioritized next work.",
+      "acceptance": "Local files exist, links resolve in final package and root records delivery PR againstdev; no requirement for merge or deployment.",
+      "owner_role": "handoff coordinator and technical writer",
+      "status": "partially_resolved_technical_and_backlog_present_HTML_and_index_pending_final_packaging"
+    },
+    {
+      "id": "AP2",
+      "finding": "The358-test count is clearly attributed to coordination, but verification-snapshot.json is absent; it cannot yet be presented as inspected run evidence.",
+      "bounded_change": "Attach root verification receipt with exact checkout/commit, command, date, result and limitations, and align test count in MD/HTML. If unavailable retain explicitly reported-only wording.",
+      "acceptance": "Every statement of passed checks has an identified run; no software test count is described as scientific validation.",
+      "owner_role": "engineering verifier",
+      "status": "resolved_receipt_inspected",
+      "resolution": "Root receipt identifiesPR64 commit6410fcb491e9a318419d7b142ddab52b1e483662, bothCI checksSUCCESS,358tests and portable reader10368rows/432reportsets. No deployment or physical-accuracy inference. Align final documents to this identified run."
+    },
+    {
+      "id": "AP3",
+      "finding": "Priorities are still separate individual proposals and no consolidated draft exists; declaring final council ratification now would overstate evidence.",
+      "bounded_change": "Consolidate a short ordered list using frozen criteria; include owner role, dependencies, bounded acceptance and later-work boundary. Record adversarial review and actual joint ratification after review.",
+      "acceptance": "Draft exists and council record distinguishes individual proposals, adversarial review and final decision; no synthetic score or claim of blinded votes.",
+      "owner_role": "delivery council coordinator",
+      "status": "resolved_consolidated_plan_reviewed_and_this_role_ratifies",
+      "resolution": "Inspected pendientes-priorizados.md: P0 claims, identified candidate/package and bounded rehearsal precede optionalP1; named roles, dependencies, fallback and separate future research satisfy frozen criteria. This vote ratifies the ordered plan, not completion of actions or full council consensus."
+    }
+  ],
+  "should": [
+    {
+      "id": "AP4",
+      "finding": "The three-minute business pitch exposes exact floating-point factor, MAE and E_coherent without a plain-language acronym gloss.",
+      "bounded_change": "Gloss MAE as monthly mean absolute error in cell-days; use rounded headline values while keeping exact values in technical evidence.",
+      "acceptance": "A nontechnical reader can explain that12.18% concerns retrospective count error and is not loss reduction.",
+      "owner_role": "business writer"
+    },
+    {
+      "id": "AP5",
+      "finding": "An HTML fallback and code-derived routes are useful, but local map availability depends on external resources.",
+      "bounded_change": "Identify demo commit/version, record any actual rehearsal and specify table/calendar or attributed captures as fallback; keep non-rehearsed label if no browser run.",
+      "acceptance": "No offline or complete interactive demo guarantee beyond verified behavior.",
+      "owner_role": "presenter and engineering verifier"
+    },
+    {
+      "id": "AP6",
+      "finding": "The next municipal pilot is a hypothesis with appropriate limits; its decision task could be made more concrete.",
+      "bounded_change": "Describe one future task: compare two seasons using the same cutoff, identify observed versus estimated data and export a table; collect comprehension and completion evidence before estimating ROI.",
+      "acceptance": "Pilot remains future work; no contact, recruitment or external action is implied.",
+      "owner_role": "future product owner"
+    },
+    {
+      "id": "AP7",
+      "finding": "Technical summary contains joined words around abbreviations, names and figures, reducing readability.",
+      "bounded_change": "Proofread spacing in technicalMD and generatedHTML, e.g. yFireChronos, consultaGitHub, las54.",
+      "acceptance": "Continuous prose reads naturally; identifiers and frozen values remain unchanged.",
+      "owner_role": "technical writer and handoff coordinator"
+    }
+  ],
+  "recommended_priority_order": [
+    "MUST: defensible claims plus complete MD/HTML handoff and source map.",
+    "MUST: identify exact demo/verification candidate and attach check receipt.",
+    "SHOULD before presentation: bounded rehearsal with truthful fallback; no model or raw regeneration.",
+    "MUST for delivery: custodian/raw manifest location and honest115-missing guard, not completion of recovery.",
+    "Subsequent work: municipal comprehension pilot, seasonal metadata implementation, deterministic dedup policy and observability evidence; no automatic promotion."
+  ],
+  "limits": [
+    "No remote state mutations or person contact.",
+    "No browser rehearsal, new tests, model execution, downloads or physical-validation claim performed by this reviewer.",
+    "Consolidated priority draft and technicalMD inspected; finalHTML/index, root browser receipt and deliveryPR are outside the completed review and remain final coordinator checks."
+  ],
+  "final_ratification": {
+    "role": "adversarial_product_clarity_and_overclaim",
+    "decision": "RATIFY_CONSOLIDATED_PRIORITY_ORDER",
+    "utc": "2026-11-15T13:48:44.738385+00:00",
+    "conditions_of_scope": "Ratifies the ordered plan against frozen criteria, not action completion. No new scientific computation, promotion, merge or deployment. Final packageHTML/index and its links remain coordinator delivery checks.",
+    "consolidated_plan_sha256": "fbdf5ae695312934ae91b927fc6d7ff5f247efa72699ea9c3e8831ae880ec18f"
+  },
+  "followup_utc": "2026-11-15T13:48:44.738184+00:00"
+}

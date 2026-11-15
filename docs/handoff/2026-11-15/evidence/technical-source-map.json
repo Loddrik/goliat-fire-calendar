@@ -1,0 +1,282 @@
+{
+  "created_utc": "2026-11-15T13:53:33.763012+00:00",
+  "technical_document_path": "docs/handoff/2026-11-15/resumen-tecnico.md",
+  "technical_document_sha256": "48cb6d9392adc8144b17bcf74b2272d1dba5768a0dabd34f862baa565314d0b9",
+  "scientific_code_cutoff": "6410fcb491e9a318419d7b142ddab52b1e483662",
+  "main_body_words_approx": 2300,
+  "selected_PR_inventory_observed_utc": "2026-11-15T13:41:06.420134+00:00",
+  "selected_PR_counts": {
+    "total_selected": 26,
+    "scientific_total": 24,
+    "scientific_merged": 3,
+    "scientific_open_dev": 21,
+    "integration22_merged": true,
+    "publication_fix31_open_main": true
+  },
+  "CI_source": "evidence/verification-snapshot.json; source GitHub run metadata/log selected lines, not a rerun by this writer.",
+  "command_contract": "Current locked CI/readers/guard and npm scripts only; historical drivers not offered as portable executable recipes.",
+  "claim_boundaries": [
+    "Research results are distinct from published M1/14, PR merge and deployment.",
+    "Same-panel18 composed gain is not addition of alternative percentage gains.",
+    "39 whole-forecast CRPS is not calibration, pure spread/Aqua value, joint54 uncertainty or future operational prediction.",
+    "42 medianAPE, MARE, mean signed relative error and aggregate ratios are different; apparent selected112 cases do not validate2002–2011 or annual gates.",
+    "43 exact956-file availability is not full restoration; strict detection failure remains despite matching historical mask/counts with frozen map.",
+    "All source paths here are public tracked documents/code or metadata; no credentials or raw private payloads copied."
+  ],
+  "sources": [
+    {
+      "path": "docs/integracion-firechronos.md",
+      "sha256": "b848e9a1a3c79cb94757c01a7ae11095ebd013b6d5154cf99d6dfdb5f2aeaa43"
+    },
+    {
+      "path": "docs/method.md",
+      "sha256": "f7abbb55b2b04fc70beb0364a1ad7083e6aeb26f72c1b750df3c39085736a70a"
+    },
+    {
+      "path": "docs/reviews/README.md",
+      "sha256": "2417cbdfcc72f610d861a1ab96bca98d565328d5a02d3a5fe3027b91721a213b"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-research-decision.md",
+      "sha256": "6472d2a58ea0f914a1f1f666293d24fe418d6c7560dfbd3bfbae57b3bcdc2724"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+      "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-final-scientific-decision-addendum.md",
+      "sha256": "236208c4b407abc3c2228d99fcb3d5602f2c52c263ac7361793d6a6d646a4167"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-2.md",
+      "sha256": "5dc4fe49a5545d85ea325e5f0ed6f99e4ab2dbe604c4794cf683ab38cb4d7bcd"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-3.md",
+      "sha256": "d5eba492e149c61f309156b02712d4de44112fdb8cad40d4df4a0c1626b48811"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-4.md",
+      "sha256": "0d2c1b26601ffa05526c1fc5a0dbddf52f54333f9b77c1c480766e5d7a797057"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-5.md",
+      "sha256": "a44fb0096ebaa145434a50d6d4e79cb3be4562f163da92874a352697467f5b09"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-6.md",
+      "sha256": "d9af0cc42f7d0700d9aef43f56908ba026bae07b1f16edadda6927304faa1712"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-7.md",
+      "sha256": "5df8bb8063ae754fef543aecd3fdfbc86770b9bda175dd0d0d079df3becb3547"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-8.md",
+      "sha256": "09ed95ca1fd208460b172e4b20731b12973b7d122488ed6bc677d9c4e8e59f20"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-9.md",
+      "sha256": "0e0e0c92e3195bb8515896a3e2e69764cfc8f42a0709eb97d57c8f765da97ceb"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-10.md",
+      "sha256": "fe7a0f2839997bf087bec017232f0e8b4f2bc784be14896c895c8dd497bcb4e3"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-11.md",
+      "sha256": "34a4586869dfe658df694bded940c55dfd4c6b778ef1051b65be98107defe0d9"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-12.md",
+      "sha256": "1417be6bf65851499ca9cba3369a8463e53ecd67c1a34c631eefa92f24db186c"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-13.md",
+      "sha256": "ce32613ded042ee651517dcf87e9fc33f76e7b56894d2df9e0c19d21787ec47c"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-14.md",
+      "sha256": "39e0ae1f89e204f7406f43646662069e5440bdd7c12a359ad0a7d29efd638dbb"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-scientific-review-15.md",
+      "sha256": "2d6ccd0f8f73bbe0c8fea99898765330fa2bbddc5cee32534dd7f24e3cad2201"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-16.md",
+      "sha256": "8598b8d2a716c4cc1d1e3a857615f0976a44af494adceb04e5dc421ad7c8b8a6"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-17.md",
+      "sha256": "ebb465158351e5913ffd5af69676801f2289eed4dd400378af0f3bd28e9db598"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-18.md",
+      "sha256": "b84acc6e468eecc7e6de6fa10126ebaeae6d466e30bede6b9fa956111d2ff6e9"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-19.md",
+      "sha256": "82a98cbd6c2a9da8b1d3fd839c24883fc523f294539310f4d6c71738c8747ea6"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-20.md",
+      "sha256": "fb719a91061c1ca3f4ab88fbd142e654679417a5b60dc194928a4e1b76e7b262"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-20a.md",
+      "sha256": "15a1b3f8ba5b79555b9557a5f7c2485bda8f92cc8bd4410e54b4a8a14177f721"
+    },
+    {
+      "path": "docs/reviews/2026-11-14-science-review-21.md",
+      "sha256": "682f4cc6d16fef38246524a6819ddd2f3adfe710df9880feff999fd23919cfb2"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-science-review-23.md",
+      "sha256": "04f9e08273e4d6a347bd87ae1dde78caffc3de525022390048aa7871717b7f82"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-science-review-24c.md",
+      "sha256": "86bcae6f4e8dd47c2e09ffbf788bd15d5e32400643e61b0fda5959b4452a0e1d"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-centered-ledger-revalidation-review.md",
+      "sha256": "c63352e55597a298d1f0439c4232b827e98e37de996a95f69abe6b69280aed20"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-point-ownership-audit-review.md",
+      "sha256": "9ea34c31deb9eb633a76da8e296a178cb3b1bee5081bb368d069fa4af06a2fae"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-discrete-state-comparison-report.md",
+      "sha256": "eddf38c8f3d4ef6cdbf9e0c623bf8790f6c1791d43b01f12ac956165f94be3ca"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-group-budget-report.md",
+      "sha256": "5e899052ff563bde3f4fcb0d536fb71042940412413d369bf807e4bbb839968b"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-daily-adjacency-report.md",
+      "sha256": "ffc09389e1b18e7c67cdf1f8be45a542a17dd6aa8ff52bd82dc16b93922c444c"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-daily-context-independent-review.md",
+      "sha256": "4f06b2825d2f5af00a71c6731ac732bc987d75fa7396bb8c8fd8964118c6c478"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-crps-independent-review.md",
+      "sha256": "77a65ce17487d7b69d9f025352f8a9db8f49591182496230135b55a15f7072cb"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-goes-preflight-independent-review.md",
+      "sha256": "d7044e78d9d5be644c125964ab8f593f165cc802dbc2a75d20a0652cbb560886"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-season-total-report.md",
+      "sha256": "347c1b1a5b3d1d6af86da713fa6b403b94c879b9a7a2171d64895d3a03006cd9"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-season-total-independent-review.md",
+      "sha256": "39712a6e77c7d4c52760dc547e574421d76b9d777e1b27a8b4d367029bc08fb5"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-raw-ingestion-recovery-review.md",
+      "sha256": "a12536e9f6241c26500cc73a9d2d365f7ef46c235bdfc7a3d107a10b63199843"
+    },
+    {
+      "path": "docs/reviews/2026-11-15-raw-historical-core-audit.md",
+      "sha256": "c46fa3aee19da591e8594f3336df4525fb6ba3b2e72d105dc9c7972fc8cac789"
+    },
+    {
+      "path": "docs/reviews/evidence/raw-recovery-final/inventory-verification.json",
+      "sha256": "e7cf8130885077b1d91bd77bb6f2ad1babe0e34a4720e9699baee6db5eecb160"
+    },
+    {
+      "path": "data/processed/coherent_audit/summary.json",
+      "sha256": "1728f846bd8de37fbda0989abc476f631b7254a6f3c8d13635284d7de3a47501"
+    },
+    {
+      "path": "data/processed/params.json",
+      "sha256": "c1335d43bb5276168b53fbfbe950f84873c6d4f21a320532118f025084bbb3bd"
+    },
+    {
+      "path": "data/processed/gates.csv",
+      "sha256": "218627f14acfc4834ac3d92360df4ee15d64354c8f49ef07428901e58d23ae42"
+    },
+    {
+      "path": "pipeline/verify_crps_evidence.py",
+      "sha256": "77517e47513689fcee33985ecd0e9addf37e13126fcffbc5fdb43a28cb1ab346"
+    },
+    {
+      "path": "pipeline/verify_raw_inventory.py",
+      "sha256": "caf52f142b3835f811c72ccff3627abd6dba948539c0ad03f047ec20495b3c14"
+    },
+    {
+      "path": "pipeline/build_detections.py",
+      "sha256": "83d2846812425add3ab36d6266ca693697ce3319d98c769f40e64da208297389"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6c428b23702562d25f90e512f4c82565d2d3c672a4a8daa6345cb9d4c3575346"
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "bb07c3d555afca5f5c607015c24013c12fa4c63e95d6c1fdf94961bd8114b797"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "2c9a582dd1644bccbde3929e6cfa4b397ad7ab98d7f4209dfac896a5b2fca909"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "99571ab41e1e7cc9b2857065668e3cf225d8c01465c6b679b22022f340967930"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "b11e83c792ff1b1d8d9d6be127574d7fd7d46156fa66fba34486f6bdfc694ee4"
+    },
+    {
+      "path": ".github/workflows/science.yml",
+      "sha256": "b10428f56a89bd933022fc4f72ed7c72ef6e40969e07b1252dd0dc61ee38ecc5"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/pr-inventory.json",
+      "sha256": "5c5aa441193d5e787f8c6d5be803bff13ce1dea246b2a72718c26e19565a830b"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
+      "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/artifacts/science-observation-plan-2026-11-15.html",
+      "sha256": "83ee67ce01ef84c4eaad479a0fb5197819dbcf7bec14199611ae360d244afc2c"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-raw-recovery.json",
+      "sha256": "ff33d3a9ac9459db845656a8f88459b563c3b10880c426a9c8b93c24774dab4f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-verification.json",
+      "sha256": "3630662620afb9b814ec79d3990aeadac172f8e235eb6814d7be2b96f7789b3f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/repository-at-close.json",
+      "sha256": "af385374b89a23336946690694cc033fde60e340b9800f14e06689955a7e6b4f"
+    }
+  ],
+  "new_fits_or_metrics_or_source_acquisition_by_writer": false,
+  "final_source_refresh_utc": "2026-11-15T13:59:20.595990+00:00",
+  "final_source_refresh_changes": [
+    {
+      "path": "docs/method.md",
+      "previous_sha256": "b944e2bec9f06a5d83edc8fa76e728f834c96caf001aa14fef5415555e0542de",
+      "current_sha256": "7a56c167dbd1a5c2d536d6bb341ca32caae061e78e24ba305ab7b20e5b0fce00"
+    }
+  ],
+  "local_link_check": {
+    "checked": 25,
+    "missing": []
+  },
+  "coordinator_closing_addendum": "Dated upstream state and complete peer raw recovery appended after council priority vote; no change to scientific results or model publication."
+}

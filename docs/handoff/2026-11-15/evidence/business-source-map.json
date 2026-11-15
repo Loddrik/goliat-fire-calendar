@@ -1,0 +1,95 @@
+{
+  "prepared_utc": "2026-11-15T13:43:07.027261+00:00",
+  "scope": "Consolidación documental para presentadores; sin mediciones nuevas, ensayo de navegador ni verificación remota propia",
+  "document": {
+    "path": "docs/handoff/2026-11-15/resumen-negocio.md",
+    "sha256": "2a524afd63efd80d7ce8b45f3b635b1ce0b6055031d7c425b3ef421da5c41108"
+  },
+  "sources": [
+    {
+      "claim_group": "producto_y_gates",
+      "path": "docs/method.md",
+      "sha256": "f7abbb55b2b04fc70beb0364a1ad7083e6aeb26f72c1b750df3c39085736a70a"
+    },
+    {
+      "claim_group": "indice_54_y_habilitacion",
+      "path": "web/public/data/index.json",
+      "sha256": "fdad4cdb99f9fb394a9fd704f51088defba1d2c21265f485025dccd1ef774174"
+    },
+    {
+      "claim_group": "ruta_app",
+      "path": "web/src/App.tsx",
+      "sha256": "bcd726e8460a03eb37c799a9038a51d3d8a118fdb5b86bdf8f92ee4a2a8cc68e"
+    },
+    {
+      "claim_group": "ruta_landing",
+      "path": "web/src/landing/Landing.tsx",
+      "sha256": "2b3da76a2a5bf8378a426bdf185a68947b8e535311593f72441f076d2d2b11f9"
+    },
+    {
+      "claim_group": "decisiones_cientificas",
+      "path": "docs/reviews/2026-11-15-final-scientific-decision.md",
+      "sha256": "d996f6ad6d19db63abff8fb22e9eaf99f7dab168adaf5dfe6db0102d5c759934"
+    },
+    {
+      "claim_group": "estacional112",
+      "path": "docs/reviews/2026-11-15-season-total-report.md",
+      "sha256": "347c1b1a5b3d1d6af86da713fa6b403b94c879b9a7a2171d64895d3a03006cd9"
+    },
+    {
+      "claim_group": "recuperacion956",
+      "path": "docs/reviews/2026-11-15-raw-recovery-report.md",
+      "sha256": "22ce5b4133a2c59aee3947ccd2db0ab1d9820a982dc4c6685fc4b3ef7eed877b"
+    },
+    {
+      "claim_group": "historico205",
+      "path": "docs/reviews/2026-11-15-raw-historical-core-audit.md",
+      "sha256": "c46fa3aee19da591e8594f3336df4525fb6ba3b2e72d105dc9c7972fc8cac789"
+    },
+    {
+      "claim_group": "raw_peer",
+      "path": "docs/reviews/evidence/raw-ingestion-recovery/root-recovery-final-review.json",
+      "sha256": "8f4127f9db886c633777669f8ce665056a0942c99f08f9b78fd48a883427277d"
+    },
+    {
+      "claim_group": "estadosPR",
+      "path": "docs/handoff/2026-11-15/evidence/pr-inventory.json",
+      "sha256": "5c5aa441193d5e787f8c6d5be803bff13ce1dea246b2a72718c26e19565a830b"
+    },
+    {
+      "claim_group": "criterios_entrega",
+      "path": "docs/handoff/2026-11-15/evidence/delivery-council/criteria-frozen.json",
+      "sha256": "501c5fbbc7061c8e97373e24d6d6d61e4ae1402f8e497d38f13b90ab30115ed0"
+    },
+    {
+      "claim_group": "README_url_reportada",
+      "path": "README.md",
+      "sha256": "d329a8c819ca3b5faee49b3b61ff0454b78b9ee1cccfde715fdcd0fb71b42fbe"
+    },
+    {
+      "claim_group": "358_tests_CI_commit6410fcb",
+      "path": "docs/handoff/2026-11-15/evidence/verification-snapshot.json",
+      "sha256": "94f9d83b80f072d008c77e75ebf19e252bdb8e07063729bd63a5aaeb273e4f17"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-raw-recovery.json",
+      "sha256": "ff33d3a9ac9459db845656a8f88459b563c3b10880c426a9c8b93c24774dab4f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/peer-verification.json",
+      "sha256": "3630662620afb9b814ec79d3990aeadac172f8e235eb6814d7be2b96f7789b3f"
+    },
+    {
+      "path": "docs/handoff/2026-11-15/evidence/repository-at-close.json",
+      "sha256": "af385374b89a23336946690694cc033fde60e340b9800f14e06689955a7e6b4f"
+    }
+  ],
+  "uncertainties": [
+    "El método conserva una fotografía antigua de 1071 ausentes; el reporte de recuperación13:29 actualiza ese estado a956exactos/115pendientes.",
+    "La ruta sugerida de demo se obtuvo del código; no se ensayó navegador en esta tarea.",
+    "El estado dePR es snapshot13:41, no evidencia de despliegue."
+  ],
+  "verification_scope": "Se inspeccionó el recibo primario:358tests enCIrun43719314956 delcommit6410fcb; no se reejecutó suite ni navegador para esta redacción.",
+  "coordinator_addendum": "Local browser receipt linked after writer completion; human rehearsal and public deployment remain unverified.",
+  "coordinator_closing_addendum": "Dated upstream state and complete peer raw recovery appended after council priority vote; no change to scientific results or model publication."
+}

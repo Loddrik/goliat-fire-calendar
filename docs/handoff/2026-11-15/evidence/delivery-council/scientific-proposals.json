@@ -1,0 +1,54 @@
+{
+  "role": "multifocal_scientific_accuracy",
+  "criteria_ACK": "Accepted the jointly frozen ordered qualitative delivery criteria before proposing priorities; no research-weight changes or numeric scores.",
+  "criteria_source": "criteria-frozen.json",
+  "status": "individual_proposals_for_consolidation_not_final_consensus",
+  "new_scientific_computations": false,
+  "priorities": [
+    {
+      "id": "S1",
+      "individual_priority": 1,
+      "deliverable": "Scientific handoff and presentation claim sheet with source map",
+      "observable_value": "A teammate can explain what is published, what was demonstrated retrospectively, what failed and what remains unknown without turning a PR or score into physical validation.",
+      "scope_before_1230_Santiago": "Main technical summary3–5pages plus exhaustive selected-PR appendix, and a short list of defensible figures for the demo. Draft by14:05UTC, review before handoff. No new models or data.",
+      "dependencies_unblocked": "Reliable pitch, shared vocabulary, reviewer onboarding and integration decisions.",
+      "owner_role": "Scientific writer plus independent scientific reviewer",
+      "DONE": ["Each headline number has same-panel denominator and a linked frozen source.", "M1/14 remains separate from candidate E_coherent, marginal F21, nominal operators and annual diagnostics.", "The two failures of exact raw13-column equality and all prior negative primaries remain explicit.", "PR counts, bases and states derive from the timestamped official inventory; merge is not deployment."],
+      "reversibility": "Documentation only; preserve earlier evidence and add corrections transparently."
+    },
+    {
+      "id": "S2",
+      "individual_priority": 2,
+      "deliverable": "A small reproducibility acceptance path on the current locked checkout",
+      "observable_value": "The receiving team can verify a real frozen result and detect incomplete raw inputs without credentials or executing expired research drivers.",
+      "scope_before_1230_Santiago": "Document and demonstrate current pure tests/readers and expected status. Use the existing CI snapshot and portable CRPS reader; raw inventory should honestly report INCOMPLETE while sources are missing. Avoid redundant scientific experiment reruns.",
+      "dependencies_unblocked": "Safe local setup, CI confidence and the first reproducible team exercise.",
+      "owner_role": "Engineering owner, with scientific interpretation check",
+      "DONE": ["Python/Node versions and locks match current CI.", "A colleague can run the portable frozen39 verifier without private runtime files.", "Raw guard status is shown as a data-availability contract, not a failed model or full recovery.", "Demo requirements distinguish local execution from offline-map availability; external map styles need connectivity or an explicit fallback."],
+      "reversibility": "Read-only checks and presentation instructions; no publication changes."
+    },
+    {
+      "id": "S3",
+      "individual_priority": 3,
+      "deliverable": "Raw-source handoff with manifest and failure preserved",
+      "observable_value": "Recovered originals and their limitations survive transfer; the team does not mistake a clean clone for having the private raw corpus.",
+      "scope_before_1230_Santiago": "Package or point to the already verified exact raw backup and manifest, including missing-file inventory. Do not download more, manufacture CSVs from Parquet or fix dedup implicitly during handoff.",
+      "dependencies_unblocked": "Future independent ingestion work and controlled resolution of the non-deterministic rounded-coordinate key.",
+      "owner_role": "Repository/data custodian plus independent hash reviewer",
+      "DONE": ["Recovery counts and hashes match the final restoration manifest.", "Data ignored by Git and the separately transferred backup are distinguished.", "Historical205-source mask/count reproduction is qualified by reuse of the frozen commune map.", "Exact detections comparison remains failed despite matching cell-day projections; tie candidates and their FRP/coordinate difference remain inspectable."],
+      "reversibility": "Copy verified bytes and retain manifests; leave canonical scientific outputs untouched."
+    },
+    {
+      "id": "S4",
+      "individual_priority": 4,
+      "deliverable": "Explicit next-work contracts rather than another winner",
+      "observable_value": "The team can choose its next work based on evidence needed and decision consequences, rather than repeating searches on known targets.",
+      "scope_before_1230_Santiago": "Write concise future acceptance conditions for dedup determinism, annual-use policy and observation opportunities. Execution belongs to subsequent separately budgeted work.",
+      "dependencies_unblocked": "Future model/publication proposals with an agreed operator, population, cost and genuinely reserved destination.",
+      "owner_role": "Scientific and product owners jointly",
+      "DONE": ["A dedup RFC distinguishes reproducibility from deciding which native record is scientifically preferable, before touching canonical outputs.", "Any annual gate defines action/cost and a later evaluation; the apparent112-case summary does not create a new gate.", "A future observability study names valid non-detection/unknown states and compatible geometry/time; GOES catalogue existence is not its denominator.", "No prospective future task is portrayed as completed today."],
+      "reversibility": "Planning only, with no automatic merge, deployment or scientific-data mutation."
+    }
+  ],
+  "non_compensables": ["Do not turn whole-forecast CRPS into calibration or pure-spread benefit.", "Do not call a medianAPE a MARE or claim annual/historical validation.", "Do not infer causality of the2012 jump or independent physical truth from sensor agreement.", "Do not claim six blinded votes or a robust winner from subjective overlapping ranges."]
+}
